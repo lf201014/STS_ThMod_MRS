@@ -1,0 +1,132 @@
+{
+	"AsteroidBeltPower": {
+    "NAME": "Asteroid Belt",
+    "DESCRIPTIONS": [
+      "Keep all block if not attacked this turn.",
+      ""
+    ]
+  },
+  	"ExtraDraw": {
+    "NAME": "Escape Velocity",
+    "DESCRIPTIONS": [
+      "Add ",
+      " Burn(s) to your hand at each start of your turn."
+    ]
+  },
+  	"EventHorizonPower": {
+    "NAME": "Event Horizon",
+    "DESCRIPTIONS": [
+      "You now deal ",
+      " times damage."
+    ]
+  },
+  	"IllusionStarPower": {
+    "NAME": "Illusion Star",
+    "DESCRIPTIONS": [
+      "At the start of your turn , transform ",
+      "card(s) of your hand."
+    ]
+  },
+  	"MilliPulsaPower": {
+    "NAME": "Millisecond Pulsars",
+    "DESCRIPTIONS": [
+      "Amplify no longer need extra energy to activate.",
+      ""
+    ]
+  },
+  	"SatellIllusPower": {
+    "NAME": "Satellite Illusion",
+    "DESCRIPTIONS": [
+      "Innate. NL When you use a card that doesn't exist in your master deck,gain ",
+      " [B]."
+    ]
+  },
+  	"TempStrength": {
+    "NAME": "Temproy Strength",
+    "DESCRIPTIONS": [
+      "Your next blow deals additional ",
+      " damage."
+    ]
+  },
+  	"TempStrengthLoss": {
+    "NAME": "Temproy Strength Loss",
+    "DESCRIPTIONS": [
+      "The damage of this creature is lowered by ",
+      " this turn."
+    ]
+  },
+    "ExtraEnergyPower": {
+    "NAME": "Extra Energy",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " energy in addition each turn."
+    ]
+  },
+    "ChargeUpPower": {
+    "NAME": "Charge Up",
+    "DESCRIPTIONS": [
+      "You have ",
+      " stacks of Charge-up",
+      "granting you ",
+      " times damage."
+    ]
+  },
+    "PolarisUniquePower": {
+    "NAME": "Guiding Star",
+    "DESCRIPTIONS": [
+      "Gain extra [B] at the start of your turn,if GuidingStar is in your draw pile."
+    ]
+  },
+    "OrrerysSunPower": {
+    "NAME": "Orrerys Sun",
+    "DESCRIPTIONS": [
+      "For each stack of Charge-up you cost,deal ",
+      " damage to all enemies."
+    ]
+  },
+    "Charged": {
+    "NAME": "Charged!",
+    "DESCRIPTIONS": [
+      "Your next blow will do ",
+      " times damage"
+    ]
+  },
+    "BlazeAwayPower": {
+    "NAME": "Blaze Away",
+    "DESCRIPTIONS": [
+      "Will add ",
+      " copy(copies) of the next attack card you use."
+    ]
+  },
+    "MPPower": {
+    "NAME": "Max Power",
+    "DESCRIPTIONS": [
+      "Your damage is multipled by ",
+      " this turn."
+    ]
+  },
+    "EnergyFlowPower": {
+    "NAME": "Energy Flow",
+    "DESCRIPTIONS": [
+      "At the end of your turn ,gain ",
+      " Charge-up."
+    ]
+  },
+    "WWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWW",
+      "WWWWWWWWWWW"
+    ]
+  },
+    "WWWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWW",
+      "WWWWWWWWWWW"
+    ]
+  }
+
+
+
+}

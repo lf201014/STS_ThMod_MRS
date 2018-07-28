@@ -1,0 +1,237 @@
+{
+	"Strike_MRS": {
+		"NAME": "简易火花",
+		"DESCRIPTION": "造成 !D! 点伤害."
+	},
+	"Defend_MRS": {
+		"NAME": "防御",
+		"DESCRIPTION": "获得 !B! 点 格挡 ."
+	},
+	"AsteroidBelt": {
+		"NAME": "小行星带",
+		"DESCRIPTION": "获得 !B!  格挡 。 NL 如果你这回合没有遭受攻击，则保留 格挡 到下一回合。"
+	},
+	"BigCrunch": {
+		"NAME": "大坍缩",
+		"DESCRIPTION": "选择任意张牌丢弃，每丢一张牌获得 1 点能量和 !M! 点 蓄力  . NL 消耗 ."
+	},
+	"BlazingStar": {
+		"NAME": "彗星",
+		"DESCRIPTION": "造成 !D! 点伤害，将一张 灼伤 加入手牌. NL 增幅  [B] :伤害变为 !B! 点,给与1层 虚弱 与2层 易伤 ,再将一张 灼伤 加入手牌. "
+	},
+	"DarkSpark": {
+		"NAME": "暗色火花",
+		"DESCRIPTION": "造成 !D! 点伤害,抽两张卡，将一张 灼伤 加入手牌. NL 之后手牌中所有的“火花”牌伤害增加 !M! 点。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
+	},
+	"DeepEcologicalBomb": {
+		"NAME": "重生态炸弹",
+		"DESCRIPTION": "对随机敌人造成 !D! 点伤害，使其本回合内攻击力下降3点. NL 增幅  [B] :再发动一次."
+	}, 
+	"DoubleSpark": {
+		"NAME": "双重火花",
+		"DESCRIPTION": "造成 !D! 点伤害,将一张 火花 加入手牌。",
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害,将一张升过级的 火花 加入手牌。"
+	},
+	"EarthLightRay": {
+		"NAME": "地球光",
+		"DESCRIPTION": "恢复 !M! 点生命。 NL  消耗 。 NL 增幅  [B]  [B]  :选择弃牌堆的一张卡加入手牌，再抽一张卡。",
+		"UPGRADE_DESCRIPTION": "恢复 !M! 点生命。 NL  消耗 。 NL 增幅  [B]  :选择弃牌堆的一张卡加入手牌，再抽一张卡。"
+	},
+	"EscapeVelocity": {
+		"NAME": "第二宇宙速度",
+		"DESCRIPTION": "每回合抽卡数+2，在回合开始时将一张 灼伤 加入手牌。"
+	},
+	"EventHorizon": {
+		"NAME": "Event Horizon",
+		"DESCRIPTION": "Draw 2 less cards and gain !M! extra  [B]  each turn,add 1 cost to all your cards. NL Double your damage."
+	},
+	"FinalSpark": {
+		"NAME": "究极火花",
+		"DESCRIPTION": "本回合你每打出一张 “火花”牌，此卡的费用-1。 NL 对所有敌人造成 !D! 点伤害。 NL 增幅  [B]  [B]  :伤害变为 !B! 点。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWW"
+	},
+	"GrandCross": {
+		"NAME": "大十字",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果你这回合发动过 增幅 此卡费用变为0."
+	},
+	"GravityBeat": {
+		"NAME": "重力一击",
+		"DESCRIPTION": "对所有敌人造成 !D! 点伤害并给与 !M! 层 虚弱 。"
+	},
+	"IllusionStar": {
+		"NAME": "幻像之星",
+		"DESCRIPTION": "将 !M! 张随机卡片加入手牌。",
+		"UPGRADE_DESCRIPTION": "At the start of your turn,Transform and Upgrade a card in your hand."
+	},
+	"MachineGunSpark": {
+		"NAME": "机枪火花",
+		"DESCRIPTION": "造成 !D! 点伤害6次。" ,
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害8次。"
+	},
+	"MagicAbsorber": {
+		"NAME": "魔法吸收器",
+		"DESCRIPTION": "获得 !B!  格挡 ，移除你身上的一个负面状态."
+	},
+	"MasterSpark": {
+		"NAME": "极限火花",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 增幅  [B]  :伤害变为 !B! 点。",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Amplify  [B]  :add 9 to base damage."
+	},
+	"MeteonicShower": {
+		"NAME": "流星雨",
+		"DESCRIPTION": " 消耗 2张手牌，随机对敌人造成 !D! 点伤害 !M! 次。 NL 增幅  [B]  :  消耗  所有手牌，伤害变为 消耗 手牌数的两倍加上其中 灼伤 的数目（ !B! 点)。"
+	},
+	"MilkyWay": {
+		"NAME": "银河",
+		"DESCRIPTION": "获得 !B! 点 格挡 。增加你手中所有“火花”牌 !M! 点伤害。"
+	},
+	"NonDirectionalLaser": {
+		"NAME": "非定向激光",
+		"DESCRIPTION": "随机造成 !D! 点伤害两次。"
+	},
+	"Occultation": {
+		"NAME": "掩星",
+		"DESCRIPTION": "将抽牌堆的卡全部放入弃牌堆，每一张使你获得1点 格挡 。",
+		"UPGRADE_DESCRIPTION": "将抽牌堆的卡全部放入弃牌堆，每一张使你获得1点 格挡 。 NL 获得3点 格挡 。"
+	},
+	"OortCloud": {
+		"NAME": "奥尔特云",
+		"DESCRIPTION": "获得 !M! 层多层护甲。 NL 增幅  [B]  :获得额外2层。",
+		"UPGRADE_DESCRIPTION": "获得 !M! 层多层护甲。 NL 增幅  [B]  :获得额外3层。"
+	},
+	"PolarisUnique": {
+		"NAME": "唯一的北极星",
+		"DESCRIPTION": "将1张 北极星 洗入抽卡堆。在你的回合开始时如果 北极星 在你的抽卡堆中，获得1点能量。",
+		"UPGRADE_DESCRIPTION": "将1张升过级的 北极星 洗入抽卡堆。在你的回合开始时如果 北极星 在你的抽卡堆中，获得1点能量。"
+	},
+	"SatelliteIllusion": {
+		"NAME": "卫星幻觉",
+		"DESCRIPTION": " 固有 . NL 每当你打出一张你主卡组里不存在的卡，获得1点能量。"
+	},
+	"ShootTheMoon": {
+		"NAME": "射月",
+		"DESCRIPTION": "造成 !D! 点伤害。如果目标不是boss，移除它身上的一个状态效果。 NL 增幅  [B]  :伤害变为 !B! 点，移除所有状态效果。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWW"
+	},
+	"StarDustReverie": {
+		"NAME": "星屑幻想",
+		"DESCRIPTION": "将你的手牌放回抽排堆，然后将放回的卡数+1张随机卡片加入手牌。",
+		"UPGRADE_DESCRIPTION": "将你的手牌放回抽排堆，然后将放回的卡数+1张升过级的随机卡片加入手牌。"
+	},
+	"UltraShortWave": {
+		"NAME": "终极短波",
+		"DESCRIPTION": "获得 !M! 能量与 !B! 层 蓄力 。使你本局中的所有终极短波能量与 蓄力 获得量+1。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"MillisecondPulsars": {
+		"NAME": "毫秒脉冲星",
+		"DESCRIPTION": "不再需要支付额外能量来发动 增幅 。",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 不再需要支付额外能量来发动 增幅 。"
+	},
+	"Spark": {
+		"NAME": "火花",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。 NL 虚无 。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"UpSweep": {
+		"NAME": "623B",
+		"DESCRIPTION": "造成 !D! 点伤害， 获得 !M! 层 蓄力 。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"GuidingStar": {
+		"NAME": "北极星",
+		"DESCRIPTION": "将此卡的一张复制洗入抽排堆。 NL  消耗 。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"OrrerysSun": {
+		"NAME": "太阳仪",
+		"DESCRIPTION": "每当你使用掉 蓄力 的层数，对所有敌人造成 !M! 点伤害。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"ChargingUp": {
+		"NAME": "魔炮准备",
+		"DESCRIPTION": "获得 !M! 层 蓄力 。 NL 增幅  [B]  :获得层数翻倍。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"LuminesStrike": {
+		"NAME": "声光冲击",
+		"DESCRIPTION": "造成 !D! 点伤害 (3点基础伤害 × 你手中的卡牌数)。 NL 增幅  [B]  :伤害变为 !B! 点(5点基础伤害 × 你现在的能量数)。",
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害 (4点基础伤害 × 你手中的卡牌数)。 NL 增幅  [B]  :伤害变为 !B! 点(7点基础伤害 × 你现在的能量数)。"
+	},
+	"OpenUniverse": {
+		"NAME": "开放宇宙",
+		"DESCRIPTION": "将五张随机卡牌洗入抽排堆。 NL  增幅  [B]  :加入的卡牌基础费用变为0.",
+		"UPGRADE_DESCRIPTION": "将五张升过级的随机卡牌洗入抽排堆。 NL  增幅  [B]  :加入的卡牌基础费用变为0."
+	},
+	"BlazeAway": {
+		"NAME": "Blaze Away",
+		"DESCRIPTION": "将你接下来使用的攻击卡的复制加入手牌，该复制在回合内的费用为0. NL 增幅  [B]  :复制两张。 NL  消耗 。",
+		"UPGRADE_DESCRIPTION": "将你接下来使用的攻击卡的复制加入手牌，该复制在回合内的费用为0. NL 增幅  [B]  :复制两张。"
+	},
+	"MaximisePower": {
+		"NAME": "火力全开!",
+		"DESCRIPTION": "将你的 蓄力 层数转化为能量,抽 !M! 张卡，使你本回合内攻击力翻倍。",
+		"UPGRADE_DESCRIPTION": "Convert your Charge-up stacks into energy,you no longer gain Charge-up. NL Draw 2 less cards each turn.add 1 cost to all your attack cards. NL Double your damage."
+	},
+	"StarlightTyphoon": {
+		"NAME": "星光台风",
+		"DESCRIPTION": " 消耗 手牌中所有的非攻击牌，然后将 消耗 掉的牌的数量张的 火花 加入手牌。",
+		"UPGRADE_DESCRIPTION": " 消耗 手牌中所有的非攻击牌，然后将 消耗 掉的牌的数量张的升过级的 火花 加入手牌。"
+	},
+	"SuperPerseids": {
+		"NAME": "超级英仙座",
+		"DESCRIPTION": "无法被打出。 NL 被丢弃或被 消耗 时，对所有敌人造成 !D! 点伤害。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"MysteriousBeam": {
+		"NAME": "神秘光束",
+		"DESCRIPTION": "将一张随机的攻击卡加入手牌，使这张卡的攻击力等于前者的攻击力。",
+		"UPGRADE_DESCRIPTION": "将一张升过级的随机攻击卡加入手牌，使这张卡的攻击力等于前者的攻击力。"
+	},
+	"ShootingEcho": {
+		"NAME": "Shooting Echo",
+		"DESCRIPTION": " 消耗 一张卡，将此卡的一张复制加入手牌。 NL 造成 !D! 点伤害。 NL  消耗 。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"EnergyFlow": {
+		"NAME": "能量涌动",
+		"DESCRIPTION": "在你的回合结束时，获得 !M! 层  蓄力  。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"PowerUp": {
+		"NAME": "强化！",
+		"DESCRIPTION": "手牌中所有攻击卡伤害增加 !M! 点。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"WitchLeyline": {
+		"NAME": "魔女射线",
+		"DESCRIPTION": "造成 !D! 点伤害，将2张 灼伤 加入手牌。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"JA": {
+		"NAME": "JA",
+		"DESCRIPTION": "造成 !D! 点伤害，将一张“623C”,两张 火花 ,一张“魔女射线”加入手牌。",
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害，将一张“623C”,两张 火花 ,一张“魔女射线”加入手牌并将他们升级。"
+	},
+	"AbsoluteMagnitude": {
+		"NAME": "绝对星等",
+		"DESCRIPTION": "造成 !D! 点伤害，你每有一层 蓄力 会使本卡攻击力增加 !M! 点。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"DragonMeteor": {
+		"NAME": "龙陨星",
+		"DESCRIPTION": "造成 !D! 点伤害.此卡的基础伤害为 你的 消耗 堆的卡数 × !M! 点。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"WWWWWWWWWWW": {
+		"NAME": "WWWWWWWWWWW",
+		"DESCRIPTION": "WWWWWWWWWWW",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"WWWWWWWWWWWW": {
+		"NAME": "WWWWWWWWWWW",
+		"DESCRIPTION": "WWWWWWWWWWW",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	}
+}

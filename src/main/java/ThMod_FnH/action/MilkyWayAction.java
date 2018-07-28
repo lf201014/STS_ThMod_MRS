@@ -1,0 +1,35 @@
+package ThMod_FnH.action;
+
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import ThMod_FnH.ThMod;
+
+public class MilkyWayAction
+	extends AbstractGameAction {
+	
+	public MilkyWayAction(int amount){
+		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
+	    this.duration = Settings.ACTION_DUR_FAST;
+	    this.amount = amount;
+	}
+
+	public void update() {
+	    if (this.duration == Settings.ACTION_DUR_FAST) {
+	    	for (AbstractCard c:AbstractDungeon.player.hand.group) {
+			if ((c.cardID=="Strike_MRS")||(c.cardID=="DarkSpark")
+					||(c.cardID=="MachineGunSpark")||(c.cardID=="Spark")
+					||(c.cardID=="DoubleSpark")||(c.cardID=="FinalSpark")
+					||(c.cardID=="MasterSpark")){
+				ThMod.logger.info(("Milky Way Action : add "+this.amount+" damage to "+c.cardID));
+				c.baseDamage += this.amount;
+				c.applyPowers();
+				}
+	    	}
+	    }
+	    tickDuration();
+		return;
+	}
+}
