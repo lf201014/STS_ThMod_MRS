@@ -20,24 +20,33 @@ public class UltraShortWave extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int ENGY_GAIN = 1;
+	private static final int GAIN = 1;
+	private static final int UPG_CHG = 2;
 	
 
 
 	public UltraShortWave() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
 
-		this.baseMagicNumber = this.magicNumber = ENGY_GAIN;
-		this.block = this.baseBlock = this.magicNumber+1;
+		this.baseMagicNumber = this.magicNumber = GAIN;
+		this.block = this.baseBlock  = GAIN;
 	}
+	
+	@Override
+	public void applyPowers(){
+	}
+	
+	@Override
+	public void calculateCardDamage(AbstractMonster mo){}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.magicNumber));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p,p,new ChargeUpPower(p,this.magicNumber+1),this.magicNumber+1));
 		AbstractDungeon.actionManager.addToBottom(new UltraShortWaveAction());
 		this.upgradeMagicNumber(1);
-		this.block = this.baseBlock = this.magicNumber+1;
+		this.upgradeBlock(1);
+		this.applyPowers();
 	}
 
 	public AbstractCard makeCopy() {
@@ -47,7 +56,8 @@ public class UltraShortWave extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBaseCost(0);
+			upgradeBlock(UPG_CHG);
+			this.applyPowers();
 		}
 	}
 }

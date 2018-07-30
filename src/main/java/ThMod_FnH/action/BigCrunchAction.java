@@ -2,17 +2,22 @@ package ThMod_FnH.action;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
+import ThMod_FnH.powers.Marisa.ChargeUpPower;
+
 public class BigCrunchAction extends AbstractGameAction{
+	private boolean upgraded = false;
   
 	public BigCrunchAction(AbstractCreature source,boolean upgraded) {
 		setValues(AbstractDungeon.player, source, -1);
 		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
+		this.upgraded = upgraded;
 	}
   
 	public void update() {
@@ -25,8 +30,11 @@ public class BigCrunchAction extends AbstractGameAction{
 		}
 		if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved){
 			if (!AbstractDungeon.handCardSelectScreen.selectedCards.group.isEmpty()){
+				int cnt = AbstractDungeon.handCardSelectScreen.selectedCards.group.size();
+				AbstractDungeon.actionManager.addToTop(new GainEnergyAction(cnt));
+				//if (this.upgraded) cnt *= 2;
 				AbstractDungeon.actionManager.addToTop(
-						new GainEnergyAction(AbstractDungeon.handCardSelectScreen.selectedCards.group.size()));
+						new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ChargeUpPower(AbstractDungeon.player, cnt), cnt));
 				for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group){
 					AbstractDungeon.player.hand.moveToDiscardPile(c);
 					GameActionManager.incrementDiscard(false);

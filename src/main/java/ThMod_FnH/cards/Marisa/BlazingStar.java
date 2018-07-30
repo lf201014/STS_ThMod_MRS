@@ -28,13 +28,12 @@ public class BlazingStar
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	
 	private static final int COST = 2;
-	private static final int ATK_DMG = 24;
-	private static final int UPG_DMG = 6;
-	private static final int AMP_DMG = 8;
+	private static final int ATK_DMG = 20;
+	private static final int UPG_DMG = 7;
+	private static final int AMP_DMG = 6;
 	private static final int UPG_AMP = 2;
 	private static final int AMP = 1;
 	
-
 	public BlazingStar() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,

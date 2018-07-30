@@ -35,7 +35,6 @@ public class MysteriousBeam
 	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
 		
 		AbstractCard c = AbstractDungeon.returnTrulyRandomCard(AbstractCard.CardType.ATTACK, AbstractDungeon.cardRandomRng).makeCopy();
-		c.misc = 1;
 		if (this.upgraded)
 			c.upgrade();
 	    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, true));

@@ -25,7 +25,7 @@ public class ChargingUp extends CustomCard {
 	
 	public ChargingUp() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 
 		this.baseMagicNumber = this.magicNumber = STC;
 	}
@@ -33,7 +33,7 @@ public class ChargingUp extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		int stack = this.magicNumber;
 			if (ThMod.Amplified(this.costForTurn+AMP, AMP)) {
-				stack *= 2;
+				stack = stack * 2 - 1;
 			}
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ChargeUpPower(p, stack), stack));
 	}

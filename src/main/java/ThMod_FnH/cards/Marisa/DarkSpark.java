@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.actions.common.*;
 
 import basemod.abstracts.CustomCard;
 import ThMod_FnH.action.DarkSparkUpgAction;
+import ThMod_FnH.action.SparkCostAction;
 import ThMod_FnH.patches.AbstractCardEnum;
 
 public class DarkSpark 
@@ -48,6 +49,7 @@ public class DarkSpark
     	AbstractDungeon.actionManager.addToBottom(new DarkSparkUpgAction(this.upgraded));
 
 	    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Burn(), 1));
+		AbstractDungeon.actionManager.addToBottom(new SparkCostAction());
 	}
 
 	public AbstractCard makeCopy() {

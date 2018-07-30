@@ -23,8 +23,8 @@ public class ShootingEcho
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 11;
-	private static final int UPGRADE_PLUS_DMG = 4;
+	private static final int ATTACK_DMG = 8;
+	private static final int UPGRADE_PLUS_DMG = 3;
 
 	public ShootingEcho() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -42,10 +42,9 @@ public class ShootingEcho
 		ThMod.logger.info("ShootingEcho : Player now have "+p.hand.size()+" card(s) in hand.");
 		
 		if (p.hand.size()>1) {
-			AbstractCard c = this.makeStatEquivalentCopy();
-			c.misc = 1;
+			AbstractCard c = this.makeCopy();
 			AbstractDungeon.actionManager.addToBottom(
-	    		new MakeTempCardInHandAction(this.makeStatEquivalentCopy(), 1));
+	    		new MakeTempCardInHandAction(c, 1));
 	    
 		}
 			

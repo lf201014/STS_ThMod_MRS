@@ -1,14 +1,16 @@
 package ThMod_FnH.powers.Marisa;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+
+import ThMod_FnH.ThMod;
 
 public class SatelliteIllusionPower extends AbstractPower{
 	public static final String POWER_ID = "SatellIllusPower";
@@ -28,8 +30,10 @@ public class SatelliteIllusionPower extends AbstractPower{
 	}
 
 	public void onUseCard(AbstractCard card, UseCardAction action) {
-		if (card.misc > 0)
-			AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));
+		if (card.misc <= 0) {
+			ThMod.logger.info("SatelliteIllusionPower : Gaining energy for using "+card.cardID);
+			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner,this.amount));
+		}
 	}
  
 	public void updateDescription(){

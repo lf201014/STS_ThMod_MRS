@@ -42,8 +42,6 @@ public class StarDustReverieAction
 				
 			if (this.upgraded)
 				c.upgrade();
-
-			c.misc = 1;
 	        	
 			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 1));
 			}

@@ -2,8 +2,10 @@ package ThMod_FnH.cards.Marisa;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -22,7 +24,7 @@ public class UpSweep
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	private static final int COST = 0;
 	private static final int ATTACK_DMG = 4;
-	private static final int UPGRADE_PLUS_DMG = 2;
+	private static final int UPGRADE_PLUS_DMG = 1;
 	private static final int CHG_GAIN = 1;
 	private static final int UPG_CHG = 1;
 
@@ -35,8 +37,8 @@ public class UpSweep
 		this.magicNumber = this.baseMagicNumber = CHG_GAIN;
 	}
 
-	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
+	public void use(AbstractPlayer p, AbstractMonster m) {
+		AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
 				new DamageInfo(p, this.damage, this.damageTypeForTurn),
 					AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p,p,new ChargeUpPower(p,this.magicNumber),this.magicNumber));

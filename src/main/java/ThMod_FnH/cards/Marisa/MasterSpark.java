@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 
 import ThMod_FnH.ThMod;
 import ThMod_FnH.abstracts.AmplifiedAttack;
+import ThMod_FnH.action.SparkCostAction;
 import ThMod_FnH.patches.AbstractCardEnum;
 
 public class MasterSpark 
@@ -27,7 +28,7 @@ public class MasterSpark
 	private static final int COST = 1;
 	private static final int ATK_DMG = 10;
 	private static final int UPG_DMG = 4;
-	private static final int AMP_DMG = 8;
+	private static final int AMP_DMG = 6;
 	private static final int UPG_AMP = 2;
 	private static final int AMP = 1;
 	
@@ -45,7 +46,8 @@ public class MasterSpark
 	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
 		
 	    AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY), 0.1F));
-		
+
+		AbstractDungeon.actionManager.addToBottom(new SparkCostAction());
 		if ( ThMod.Amplified(AMP+this.costForTurn,AMP) )
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
 					new DamageInfo(p, this.block, this.damageTypeForTurn),AbstractGameAction.AttackEffect.SLASH_DIAGONAL));

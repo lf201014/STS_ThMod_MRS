@@ -22,7 +22,7 @@ public class EscapeVelocityPower
 	 this.ID = POWER_ID;
 	 this.owner = owner;
 	 this.amount = amount;
-	 this.type = AbstractPower.PowerType.BUFF;
+	 this.type = AbstractPower.PowerType.DEBUFF;
 	 updateDescription();
 	 this.img = new Texture("img/powers/drawCard.png");
   	}

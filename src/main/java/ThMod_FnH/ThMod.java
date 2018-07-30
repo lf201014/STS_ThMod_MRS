@@ -87,17 +87,22 @@ public class ThMod implements PostExhaustSubscriber,
   	}
 	
 	//For Amplify cards
-	public static boolean Amplified(int AMP,int COS) {
+	public static boolean Amplified(int COS,int AMP) {
+		AbstractPlayer p = AbstractDungeon.player;
 		boolean res=false;
-		if (AbstractDungeon.player.hasPower("MilliPulsaPower")) {
+		if ((p.hasPower("MilliPulsaPower"))||(p.hasPower("PulseMagicPower"))) {
 			res = true;
 		} else
-		if  (EnergyPanel.totalCount >=AMP ){
-			AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(-COS));
+		if  (EnergyPanel.totalCount >=COS ){
+			AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(-AMP));
 			res = true;
 		}
-		if (res)
+		if (res) {
 			AbstractDungeon.actionManager.addToTop(new GrandCrossAction());
+			if (AbstractDungeon.player.hasPower("EventHorizonPower"))
+				AbstractDungeon.player.getPower("EventHorizonPower").onSpecificTrigger();
+		}
+			
 		return res;
 	}
 	
@@ -147,17 +152,17 @@ public class ThMod implements PostExhaustSubscriber,
 		logger.info("begin editting cards");
 
 		logger.info("add cards for MARISA");
-		//starter£º4
+		//starter£º2
 		BaseMod.addCard(new Strike_MRS());
 		UnlockTracker.unlockCard("Strike_MRS");
 		BaseMod.addCard(new Defend_MRS());
 		UnlockTracker.unlockCard("Defend_MRS");
+		//attack£º23
+		//Common: 9
 		BaseMod.addCard(new MasterSpark());
 		UnlockTracker.unlockCard("MasterSpark");
 		BaseMod.addCard(new UpSweep());
 		UnlockTracker.unlockCard("UpSweep");
-		//attack£º18
-		//Common: 5
 		BaseMod.addCard(new DoubleSpark());
 		UnlockTracker.unlockCard("DoubleSpark");
 		BaseMod.addCard(new NonDirectionalLaser());
@@ -168,17 +173,17 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("MysteriousBeam");
 		BaseMod.addCard(new WitchLeyline());
 		UnlockTracker.unlockCard("WitchLeyline");
-		BaseMod.addCard(new ShootingEcho());
-		UnlockTracker.unlockCard("ShootingEcho");
-		//Uncommon: 9
+		BaseMod.addCard(new D6C());
+		UnlockTracker.unlockCard("D6C");
+		BaseMod.addCard(new FluorensentBeam());
+		UnlockTracker.unlockCard("FluorensentBeam");
+		//Uncommon: 10
 		BaseMod.addCard(new MachineGunSpark());
 		UnlockTracker.unlockCard("MachineGunSpark");
 		BaseMod.addCard(new DarkSpark());
 		UnlockTracker.unlockCard("DarkSpark");
 		BaseMod.addCard(new BlazingStar());
 		UnlockTracker.unlockCard("BlazingStar");
-		BaseMod.addCard(new ShootTheMoon());
-		UnlockTracker.unlockCard("ShootTheMoon");
 		BaseMod.addCard(new DeepEcologicalBomb());
 		UnlockTracker.unlockCard("DeepEcologicalBomb");
 		BaseMod.addCard(new MeteonicShower());
@@ -189,7 +194,13 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("GrandCross");
 		BaseMod.addCard(new DragonMeteor());
 		UnlockTracker.unlockCard("DragonMeteor");
-		//Rare:  3
+		BaseMod.addCard(new PulseMagic());
+		UnlockTracker.unlockCard("PulseMagic");
+		BaseMod.addCard(new ShootingEcho());
+		UnlockTracker.unlockCard("ShootingEcho");
+		//Rare:  4
+		BaseMod.addCard(new ShootTheMoon());
+		UnlockTracker.unlockCard("ShootTheMoon");
 		BaseMod.addCard(new FinalSpark());
 		UnlockTracker.unlockCard("FinalSpark");
 		BaseMod.addCard(new JA());
@@ -197,17 +208,17 @@ public class ThMod implements PostExhaustSubscriber,
 		BaseMod.addCard(new AbsoluteMagnitude());
 		UnlockTracker.unlockCard("AbsoluteMagnitude");
 		
-		//skill£º17
+		//skill£º18
 		//Common : 4
 		BaseMod.addCard(new MilkyWay());
 		UnlockTracker.unlockCard("MilkyWay");
 		BaseMod.addCard(new AsteroidBelt());
 		UnlockTracker.unlockCard("AsteroidBelt");
-		BaseMod.addCard(new ChargingUp());
-		UnlockTracker.unlockCard("ChargingUp");
 		BaseMod.addCard(new PowerUp());
 		UnlockTracker.unlockCard("PowerUp");
-		//Uncommon : 9
+		BaseMod.addCard(new SporeBomb());
+		UnlockTracker.unlockCard("SporeBomb");
+		//Uncommon : 10
 		BaseMod.addCard(new StarDustReverie());
 		UnlockTracker.unlockCard("StarDustReverie");
 		BaseMod.addCard(new MagicAbsorber());
@@ -226,6 +237,8 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("IllusionStar");
 		BaseMod.addCard(new EnergyFlow());
 		UnlockTracker.unlockCard("EnergyFlow");
+		BaseMod.addCard(new ChargingUp());
+		UnlockTracker.unlockCard("ChargingUp");
 		//Rare : 4
 		BaseMod.addCard(new BigCrunch());
 		UnlockTracker.unlockCard("BigCrunch");
@@ -236,9 +249,11 @@ public class ThMod implements PostExhaustSubscriber,
 		BaseMod.addCard(new MaximisePower());
 		UnlockTracker.unlockCard("MaximisePower");
 		
-		//power£º7
-		//common:
-		//uncommon: 4
+		//power£º10
+		//common:1
+		BaseMod.addCard(new WitchOfGreed());
+		UnlockTracker.unlockCard("WitchOfGreed");
+		//uncommon: 6
 		BaseMod.addCard(new SatelliteIllusion());
 		UnlockTracker.unlockCard("SatelliteIllusion");
 		BaseMod.addCard(new OortCloud());
@@ -247,8 +262,10 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("OrrerysSun");
 		BaseMod.addCard(new EnergyFlow());
 		UnlockTracker.unlockCard("EnergyFlow");
-		//BaseMod.addCard(new EventHorizon());
-		//UnlockTracker.unlockCard("EventHorizon");
+		BaseMod.addCard(new EventHorizon());
+		UnlockTracker.unlockCard("EventHorizon");
+		BaseMod.addCard(new Singualrity());
+		UnlockTracker.unlockCard("Singualrity");
 		//rare: 3
 		BaseMod.addCard(new PolarisUnique());
 		UnlockTracker.unlockCard("PolarisUnique");

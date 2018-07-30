@@ -1,0 +1,45 @@
+v0.0.2 - 2018.7.29
+*Corrected the description of some cards
+*Fixed a bug that make Mysterious Beam can't get the correct damage number of some cards
+*Charging UP is RARE card now
+*Milky Way will increase the damage of all cards in your hand now
+*Energy Flow 's Charge-Up gain reduced from 3(4) to 2(3)
+*The function of Satellite Illusion now depend on starter relic Mini-Hakkero;Cards add by means like potions , colorless cards etc will trigger the power of Satellite Illusion now.
+*Added Common Attack card 66C
+*Added Uncommon Atttack card Pulse Magic
+*Added Uncommon Power card Event Horizon
+*Added Uncommon Power card Singularity
+v0.0.3\v0.0.4 - 2018.7.30 ¡ùdamage info : before Amplify(upgraded)/after Amplify(upgraded)
+*Corrected the description of some cards
+*Satellite Illusion no longer conflit with Rutial Dagger
+*Fixed a bug that causes the game crash when upgrading Event Horizon
+*Shoot The Moon : damage when upgraded increased from 10/15 to 10/16
+*Shoot The Moon is RARE card now
+*Meteonic Shower : reworked.Now it exhaust your hand and deal small amount of damage to random enemy multiple times.
+*Final Spark : reworked.Now it deal 40(50) damage to all enemies,with the cost of 8,and for each "spark" themed card played ,it reduce its cost by 1.
+*Blazing Star :damage reduced from 24(30)/32(40) to 20(26)/27(35)
+*Satellite Illusion : cost reduced from 2(1) to 1 ; it now need to be upgraded to be Innate.
+*Satellite Illusion : its effect changed to When you play a card that dosenot exist in your master deck,draw a card,rather than energy gain
+*Asteroid Belt : Block gain reduce from 8(12) to 7(10)
+*Ultimate ShortWave : cost adjusted from 1(0) to 1,base Charge-up gain increased from 2 to 1(3)
+*Ultimate ShortWave : is RARE card now
+*Fixed the issue that Big Crunch 's actual effect doesn't match its description
+*Oort Cloud : Plated-Armor gain reduce from 4(6) / 6(9) to 4(5) / 5(8)
+*Super Perseids : damage reduce from 14(18) to 12(16) 
+*Charging-Up : Charge-Up gain after Amplify reduced from 6(8) to 5(7)
+*Charging-Up is Uncommon card now
+*Abusolute Magnitude : base damage reduce from 4(5) to 3(4)
+*JA : now adds 1 Spark into hand rather than 2
+*Dragon Meteor : now deal multple times damage to random enemy
+*Machine-Gun Spark : now will Exhaust
+*Lumines Strike : damage reduce from 3(4) x the size of your hand / 5(7) x your current energy to 2(3) x your hand size / 4(5) x your energy
+*Shooting Echo : damage reduce from 11(15) to 8(11)
+*Magic Absorber : Block gain when upgraded reduce from 12 to 11
+*Fixed the issue that Grand Cross will never appear in normal runs due to incorrect rarity settting
+*Grand Cross is Uncommon card now
+*623B : damage when upgraded reduce from 6 to 5
+*Pulse Magic : damage increased from 4(6) to 5(8)
+*Milliseconds Pulsar is Rare card now
+*Added Common Power card Witch Of Greed
+*Added Common Attack card Fluoresent Beam
+*Added Common Skill card Spore Crump

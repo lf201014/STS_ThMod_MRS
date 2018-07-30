@@ -50,7 +50,7 @@ public class JA
 	    c = new Spark();
 		if (this.upgraded)
 			c.upgrade();
-	    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 2));
+	    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 1));
 	    
 	    c = new WitchLeyline();
 		if (this.upgraded)

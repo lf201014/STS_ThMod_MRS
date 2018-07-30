@@ -48,8 +48,6 @@ public class OpenUniverse extends CustomCard {
 	        	card.updateCost(0);
 	        	card.applyPowers();
 	        }
-	        card.misc = 1;
-
 			ThMod.logger.info("SuperPerseids : adding : "+card.cardID);
 			
 	        AbstractDungeon.effectList.add(new ShowCardAndAddToDrawPileEffect(card, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, true));

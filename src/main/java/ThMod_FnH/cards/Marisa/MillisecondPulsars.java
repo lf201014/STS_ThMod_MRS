@@ -25,7 +25,7 @@ public class MillisecondPulsars extends CustomCard{
     public MillisecondPulsars() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
         		AbstractCard.CardType.POWER, AbstractCardEnum.MARISA_COLOR,
-        		AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+        		AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
     }
   
     public void use(AbstractPlayer p, AbstractMonster m){

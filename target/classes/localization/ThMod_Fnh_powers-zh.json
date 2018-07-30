@@ -2,7 +2,7 @@
   "AsteroidBeltPower": {
     "NAME": "小行星带",
     "DESCRIPTIONS": [
-      "如果你这回合没有遭受攻击，则保留格挡到下一回合。",
+      "如果你这回合没有遭受攻击，则保留 格挡 到下一回合。",
       ""
     ]
   },
@@ -10,14 +10,14 @@
     "NAME": "第二宇宙速度",
     "DESCRIPTIONS": [
       "回合开始时，将",
-      "张灼伤加入手牌。"
+      "张 灼伤 加入手牌。"
     ]
   },
     "EventHorizonPower": {
-    "NAME": "Event Horizon",
+    "NAME": "黑洞边缘",
     "DESCRIPTIONS": [
-      "You now deal ",
-      " times damage."
+      "当你发动 增幅 时，可以选一张弃牌堆的卡加入手牌。本效果每回合只能发动",
+      "次。"
     ]
   },
     "IllusionStarPower": {
@@ -30,7 +30,7 @@
     "MilliPulsaPower": {
     "NAME": "毫秒脉冲星",
     "DESCRIPTIONS": [
-      "你不在需要支付额外的能量来发动增幅。",
+      "你不在需要支付额外的能量来发动 增幅 。",
       ""
     ]
   },
@@ -63,10 +63,10 @@
     ]
   },
     "ChargeUpPower": {
-    "NAME": "蓄力",
+    "NAME": " 蓄力 ",
     "DESCRIPTIONS": [
       "你现在有",
-      "层蓄力",
+      "层 蓄力 ",
       "你的下一次攻击会造成",
       "倍伤害。"
     ]
@@ -80,7 +80,7 @@
     "OrrerysSunPower": {
     "NAME": "太阳仪",
     "DESCRIPTIONS": [
-      "每次消耗蓄力层数，都会对所有敌人造成",
+      "每次消耗 蓄力 层数，都会对所有敌人造成",
       "点伤害。"
     ]
   },
@@ -109,17 +109,38 @@
     "NAME": "能量涌动",
     "DESCRIPTIONS": [
       "在你的回合结束时，获得",
-      "层蓄力。"
+      "层 蓄力 。"
     ]
   },
-    "WWWWWWWWWWWWW": {
-    "NAME": "WWWWWWWWWWW",
+    "PulseMagicPower": {
+    "NAME": "脉冲魔术",
     "DESCRIPTIONS": [
-      "WWWWWWWWWWW",
+      "本回合内你不再需要支付额外能量来发动 增幅 效果。",
       "WWWWWWWWWWW"
     ]
   },
-    "WWWWWWWWWWWWWW": {
+    "SingualrityPower": {
+    "NAME": "奇点",
+    "DESCRIPTIONS": [
+      "每当你使用一张费用为0的卡时，使你手中所有攻击牌攻击力增加",
+      "点。"
+    ]
+  },
+    "WitchOfGreedGold": {
+    "NAME": "强欲魔女",
+    "DESCRIPTIONS": [
+      "战斗结束时获得",
+      " 金币 。"
+    ]
+  },
+    "WitchOfGreedPotion": {
+    "NAME": "强欲魔女",
+    "DESCRIPTIONS": [
+      "战斗结束时获得",
+      "瓶随机药剂。"
+    ]
+  },
+    "WWWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [
       "WWWWWWWWWWW",

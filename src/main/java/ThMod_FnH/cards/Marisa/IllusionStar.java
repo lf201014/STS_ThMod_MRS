@@ -31,8 +31,6 @@ public class IllusionStar extends CustomCard{
 
 			AbstractCard c = AbstractDungeon.getCard(AbstractDungeon.rollRarity(AbstractDungeon.miscRng), AbstractDungeon.miscRng).makeStatEquivalentCopy();
 
-			c.misc = 1;
-        	
 			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 1));
 		}
     }

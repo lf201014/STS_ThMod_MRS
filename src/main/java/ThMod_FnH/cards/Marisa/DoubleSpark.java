@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import ThMod_FnH.action.SparkCostAction;
 import ThMod_FnH.cards.special.Spark;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
@@ -46,6 +47,7 @@ public class DoubleSpark
 		if (this.upgraded)
 			c.upgrade();
 	    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 1));
+		AbstractDungeon.actionManager.addToBottom(new SparkCostAction());
 	}
 
 	public AbstractCard makeCopy() {

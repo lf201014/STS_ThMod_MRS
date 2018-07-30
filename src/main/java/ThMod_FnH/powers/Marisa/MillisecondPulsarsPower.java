@@ -19,7 +19,7 @@ public class MillisecondPulsarsPower
 	this.name = NAME;
 	this.ID = POWER_ID;
 	this.owner = owner;
-	this.amount = 1;
+	this.amount = -1;
 	this.type = AbstractPower.PowerType.BUFF;
 	updateDescription();
 	this.img = new Texture("img/powers/steadyPulse.png");

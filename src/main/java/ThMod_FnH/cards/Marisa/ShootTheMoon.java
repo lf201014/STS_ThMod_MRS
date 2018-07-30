@@ -30,12 +30,12 @@ public class ShootTheMoon
 	private static final int ATK_DMG = 7;
 	private static final int UPG_DMG = 3;
 	private static final int AMP_DMG = 4;
-	private static final int UPG_AMP = 1;
+	private static final int UPG_AMP = 2;
 	private static final int AMP = 1;
 	
 	public ShootTheMoon() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE,
+				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.ENEMY);
 
 		this.baseDamage = ATK_DMG;

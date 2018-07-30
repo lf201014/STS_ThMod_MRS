@@ -48,7 +48,6 @@ public class StarlightTyphoon extends CustomCard {
 			AbstractCard tmp = new Spark();
 			if (this.upgraded)
 				tmp.upgrade();
-			tmp.misc = 1;
 			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(tmp, 1));
 			cnt--;
 			ThMod.logger.info("StarlightTyphoon : adding Spark : counter : "+cnt);

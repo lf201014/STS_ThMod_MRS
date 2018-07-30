@@ -25,7 +25,6 @@ public class GuidingStar extends CustomCard {
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.SPECIAL,
 				AbstractCard.CardTarget.SELF);
 		this.exhaust = true;
-		this.misc = 1;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

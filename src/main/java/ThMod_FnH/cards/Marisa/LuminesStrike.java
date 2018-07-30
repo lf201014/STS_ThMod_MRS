@@ -26,10 +26,10 @@ public class LuminesStrike
 	public static final String IMG_PATH = "img/cards/Strike.png";
 
 	private static final int COST = 0;
-	private static final int D0 = 3;
-	private static final int D1 = 4;
-	private static final int A0 = 5;
-	private static final int A1 = 7;
+	private static final int D0 = 2;
+	private static final int D1 = 3;
+	private static final int A0 = 3;
+	private static final int A1 = 4;
 	private static final int AMP = 1;
 
 	public LuminesStrike() {

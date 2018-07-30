@@ -40,7 +40,6 @@ public class PolarisUnique extends CustomCard {
 		AbstractCard c = new GuidingStar();
 		if (this.upgraded)
 			c.upgrade();
-		c.misc = 1;
 		AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(c, 1, true, true));
 		
 		ThMod.logger.info("Shuffling.");

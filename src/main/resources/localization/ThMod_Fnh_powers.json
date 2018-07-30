@@ -16,8 +16,8 @@
   	"EventHorizonPower": {
     "NAME": "Event Horizon",
     "DESCRIPTIONS": [
-      "You now deal ",
-      " times damage."
+      "You can pick a card from your discard pile to your hand ",
+      " time(s) each turn when you activate Amplify ."
     ]
   },
   	"IllusionStarPower": {
@@ -80,7 +80,7 @@
     "OrrerysSunPower": {
     "NAME": "Orrerys Sun",
     "DESCRIPTIONS": [
-      "For each stack of Charge-up you cost,deal ",
+      "When you cost Charge-up stacks,deal ",
       " damage to all enemies."
     ]
   },
@@ -112,7 +112,42 @@
       " Charge-up."
     ]
   },
-    "WWWWWWWWWWWWW": {
+    "PulseMagicPower": {
+    "NAME": "Pulse Magic",
+    "DESCRIPTIONS": [
+      "You don't need to pay extra  [B]  to activate Amplify this turn.",
+      "WWWWWWWWWWW"
+    ]
+  },
+    "SingualrityPower": {
+    "NAME": "Singualrity",
+    "DESCRIPTIONS": [
+      "When you play a card that cost 0 ,increase the damage of all attack cards in your hand by",
+      " ."
+    ]
+  },
+    "WitchOfGreedGold": {
+    "NAME": "Witch Of Greed",
+    "DESCRIPTIONS": [
+      "At the end of combat,gain ",
+      " gold ."
+    ]
+  },
+    "WitchOfGreedPotion": {
+    "NAME": "Witch Of Greed",
+    "DESCRIPTIONS": [
+      "At the end of combat,gain ",
+      " random potion."
+    ]
+  },
+    "WWWWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWW",
+      "WWWWWWWWWWW"
+    ]
+  },
+    "WWWWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [
       "WWWWWWWWWWW",
@@ -120,6 +155,13 @@
     ]
   },
     "WWWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWW",
+      "WWWWWWWWWWW"
+    ]
+  },
+    "WWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [
       "WWWWWWWWWWW",

@@ -25,7 +25,7 @@ public class GrandCross
 
 	public GrandCross() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.BASIC,
+				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.ENEMY);
 
 		this.baseDamage = this.damage = ATTACK_DMG;
