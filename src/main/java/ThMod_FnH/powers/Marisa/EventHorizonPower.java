@@ -59,9 +59,9 @@ public class EventHorizonPower
 	public void updateDescription(){
 		if (this.cnt>0)
 			this.description = 
-					(DESCRIPTIONS[0]+this.amount+DESCRIPTIONS[1]+","+DESCRIPTIONS[2]+(int)Math.pow(2,this.cnt)+DESCRIPTIONS[3]);
+					(DESCRIPTIONS[0]+this.amount+DESCRIPTIONS[1]);
 		else	
-			this.description = (DESCRIPTIONS[0]+this.amount+DESCRIPTIONS[1]+".");
+			this.description = (DESCRIPTIONS[0]+this.amount+DESCRIPTIONS[1]);
 	}
 	
 }

@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import ThMod_FnH.ThMod;
+//import ThMod_FnH.ThMod;
 import basemod.abstracts.CustomCard;
 
 public abstract class AmplifiedAttack extends CustomCard  {
@@ -49,12 +49,12 @@ public abstract class AmplifiedAttack extends CustomCard  {
 		
 		this.isDamageModified = false;
 		this.isBlockModified = false;
-		
+		/*
 		ThMod.logger.info(
 				"AmplifiedAttack :"+this.cardID+ ": applyPowers : baseDamage :"+
 				this.baseDamage +"; damage :"+this.damage+"; ampNumber : "+this.ampNumber+
 				"; ampDamage :"+this.ampDamage+"; baseBlock :"+this.baseBlock+"; block :"+this.block);
-		
+		*/
 		if (!this.isMultiDamage){
 			float tmp = this.damage;
 			float amp = this.block;
@@ -92,12 +92,12 @@ public abstract class AmplifiedAttack extends CustomCard  {
 			}
 			this.damage = MathUtils.floor(tmp);
 			this.block = MathUtils.floor(amp);
-			
+			/*
 			ThMod.logger.info(
 					"AmplifiedAttack :"+this.cardID+": done applyPowers : baseDamage :"+
 					this.baseDamage+"; damage :"+this.damage+"; ampNumber : "+this.ampNumber+
 					"; ampDamage :"+this.ampDamage+"; baseBlock :"+this.baseBlock+"; block :"+this.block);
-			
+			*/
 		}
 		else{
 			ArrayList<AbstractMonster> m = AbstractDungeon.getCurrRoom().monsters.monsters;
@@ -194,10 +194,10 @@ public abstract class AmplifiedAttack extends CustomCard  {
 		
 		this.isDamageModified = false;
 		this.isBlockModified = false;
-	
+		/*
 		ThMod.logger.info("AmplifiedAttack : calculateCardDamage : baseDamage :"+this.baseDamage +"; damage :"+this.damage+"; ampNumber : "+this.ampNumber+
 				"; ampDamage :"+this.ampDamage+"; baseBlock :"+this.baseBlock+"; block :"+this.block);
-		
+		*/
 		if ((!this.isMultiDamage) && (mo != null)){
 			float tmp = this.damage;
 			float amp = this.block;
@@ -260,10 +260,10 @@ public abstract class AmplifiedAttack extends CustomCard  {
 			}
 			this.damage = MathUtils.floor(tmp);
 			this.block = MathUtils.floor(amp);
-			
+			/*
 			ThMod.logger.info("AmplifiedAttack : done calculateCardDamage : baseDamage :"+this.baseDamage +"; damage :"+this.damage+"; ampNumber : "+this.ampNumber+
 					"; ampDamage :"+this.ampDamage+"; baseBlock :"+this.baseBlock+"; block :"+this.block);
-			
+			*/
 		}else{
 			ArrayList<AbstractMonster> m = AbstractDungeon.getCurrRoom().monsters.monsters;
 			float[] tmp = new float[m.size()];

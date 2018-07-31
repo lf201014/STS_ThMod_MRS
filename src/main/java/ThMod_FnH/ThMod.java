@@ -152,17 +152,17 @@ public class ThMod implements PostExhaustSubscriber,
 		logger.info("begin editting cards");
 
 		logger.info("add cards for MARISA");
-		//starter£º2
+		//starter£º4
 		BaseMod.addCard(new Strike_MRS());
 		UnlockTracker.unlockCard("Strike_MRS");
 		BaseMod.addCard(new Defend_MRS());
 		UnlockTracker.unlockCard("Defend_MRS");
-		//attack£º23
-		//Common: 9
 		BaseMod.addCard(new MasterSpark());
 		UnlockTracker.unlockCard("MasterSpark");
 		BaseMod.addCard(new UpSweep());
 		UnlockTracker.unlockCard("UpSweep");
+		//attack£º25
+		//Common: 8
 		BaseMod.addCard(new DoubleSpark());
 		UnlockTracker.unlockCard("DoubleSpark");
 		BaseMod.addCard(new NonDirectionalLaser());
@@ -177,7 +177,9 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("D6C");
 		BaseMod.addCard(new FluorensentBeam());
 		UnlockTracker.unlockCard("FluorensentBeam");
-		//Uncommon: 10
+		BaseMod.addCard(new _6A());
+		UnlockTracker.unlockCard("6A");
+		//Uncommon: 12
 		BaseMod.addCard(new MachineGunSpark());
 		UnlockTracker.unlockCard("MachineGunSpark");
 		BaseMod.addCard(new DarkSpark());
@@ -198,7 +200,11 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("PulseMagic");
 		BaseMod.addCard(new ShootingEcho());
 		UnlockTracker.unlockCard("ShootingEcho");
-		//Rare:  4
+		BaseMod.addCard(new MuscleSpark());
+		UnlockTracker.unlockCard("MuscleSpark");
+		BaseMod.addCard(new Robbery());
+		UnlockTracker.unlockCard("Robbery");
+		//Rare:  5
 		BaseMod.addCard(new ShootTheMoon());
 		UnlockTracker.unlockCard("ShootTheMoon");
 		BaseMod.addCard(new FinalSpark());
@@ -207,8 +213,10 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("JA");
 		BaseMod.addCard(new AbsoluteMagnitude());
 		UnlockTracker.unlockCard("AbsoluteMagnitude");
+		BaseMod.addCard(new TreasureHunter());
+		UnlockTracker.unlockCard("TreasureHunter");
 		
-		//skill£º18
+		//skill£º19
 		//Common : 4
 		BaseMod.addCard(new MilkyWay());
 		UnlockTracker.unlockCard("MilkyWay");
@@ -218,7 +226,7 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("PowerUp");
 		BaseMod.addCard(new SporeBomb());
 		UnlockTracker.unlockCard("SporeBomb");
-		//Uncommon : 10
+		//Uncommon : 11
 		BaseMod.addCard(new StarDustReverie());
 		UnlockTracker.unlockCard("StarDustReverie");
 		BaseMod.addCard(new MagicAbsorber());
@@ -239,6 +247,8 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("EnergyFlow");
 		BaseMod.addCard(new ChargingUp());
 		UnlockTracker.unlockCard("ChargingUp");
+		BaseMod.addCard(new CircumpolarStar());
+		UnlockTracker.unlockCard("CircumpolarStar");
 		//Rare : 4
 		BaseMod.addCard(new BigCrunch());
 		UnlockTracker.unlockCard("BigCrunch");

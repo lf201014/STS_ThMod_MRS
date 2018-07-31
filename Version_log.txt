@@ -9,10 +9,10 @@ v0.0.2 - 2018.7.29
 *Added Uncommon Atttack card Pulse Magic
 *Added Uncommon Power card Event Horizon
 *Added Uncommon Power card Singularity
-v0.0.3\v0.0.4 - 2018.7.30 ¡ùdamage info : before Amplify(upgraded)/after Amplify(upgraded)
+v0.0.3\v0.0.4 - 2018.7.31 ¡ùdamage info : before Amplify(upgraded)/after Amplify(upgraded)
 *Corrected the description of some cards
 *Satellite Illusion no longer conflit with Rutial Dagger
-*Fixed a bug that causes the game crash when upgrading Event Horizon
+*Fixed a bug that causes the game to crash when upgrading Event Horizon
 *Shoot The Moon : damage when upgraded increased from 10/15 to 10/16
 *Shoot The Moon is RARE card now
 *Meteonic Shower : reworked.Now it exhaust your hand and deal small amount of damage to random enemy multiple times.
@@ -40,6 +40,13 @@ v0.0.3\v0.0.4 - 2018.7.30 ¡ùdamage info : before Amplify(upgraded)/after Amplify
 *623B : damage when upgraded reduce from 6 to 5
 *Pulse Magic : damage increased from 4(6) to 5(8)
 *Milliseconds Pulsar is Rare card now
-*Added Common Power card Witch Of Greed
-*Added Common Attack card Fluoresent Beam
-*Added Common Skill card Spore Crump
+*Fixed a bug that causes the game to crunsh when stacking Event Horizon Power
+*Fixed the issue that Event Match And Keep have only 10 cards instead of 12
+*Added Common Power Witch Of Greed
+*Added Common Attack Fluoresent Beam
+*Added Common Skill Spore Crump
+*Added Common Atttack 6A
+*Added UnCommon Attack Muscle Spark
+*Added Uncommon Attack Robbery
+*Added Rare Attack Treasure Hunter
+*Added Uncommon Skill Circumpolar Star

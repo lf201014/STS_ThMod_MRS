@@ -2,15 +2,15 @@ package ThMod_FnH.cards.Marisa;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.ThrowDaggerEffect;
+import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 import ThMod_FnH.ThMod;
 import ThMod_FnH.abstracts.AmplifiedAttack;
@@ -36,23 +36,24 @@ public class FluorensentBeam
 	public FluorensentBeam() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON,
-				AbstractCard.CardTarget.ENEMY);
+				AbstractCard.CardTarget.ALL_ENEMY);
 
 		this.baseDamage = ATK_DMG;
 		this.ampNumber = AMP_DMG;
 		this.baseBlock = this.baseDamage + this.ampNumber;
+		this.isMultiDamage = true;
 	}
 
-	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
-		
-		AbstractDungeon.actionManager.addToBottom(new VFXAction(new ThrowDaggerEffect(m.hb.cX, m.hb.cY)));
+	public void use(AbstractPlayer p, AbstractMonster m) {
+
+	    AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.1F));
 		
 		if ( ThMod.Amplified(AMP+this.costForTurn,AMP) )
-			AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-					new DamageInfo(p, this.block, DamageType.HP_LOSS ),AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+			AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p,
+					this.multiAmpDamage,this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 		else
-			AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-					new DamageInfo(p, this.damage, DamageType.HP_LOSS ),AbstractGameAction.AttackEffect.SLASH_DIAGONAL));		
+			AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p,
+					this.multiDamage, DamageType.HP_LOSS ,AbstractGameAction.AttackEffect.SLASH_DIAGONAL));		
 	}
 
 	public AbstractCard makeCopy() {

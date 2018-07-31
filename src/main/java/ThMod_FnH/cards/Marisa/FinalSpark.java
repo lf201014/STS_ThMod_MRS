@@ -12,8 +12,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 
-import ThMod_FnH.ThMod;
-import ThMod_FnH.abstracts.AmplifiedAttack;
 import ThMod_FnH.action.SparkCostAction;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
@@ -50,6 +48,7 @@ public class FinalSpark
 		AbstractDungeon.actionManager.addToBottom(new SparkCostAction());
 		this.upgradeBaseCost(COST);
 		this.setCostForTurn(COST);
+		this.isCostModified = false;
 	}
 
 	public AbstractCard makeCopy() {

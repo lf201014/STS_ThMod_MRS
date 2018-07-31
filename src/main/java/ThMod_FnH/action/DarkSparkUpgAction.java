@@ -31,7 +31,7 @@ public class DarkSparkUpgAction
 				if ((c.cardID=="Strike_MRS")||(c.cardID=="DarkSpark")
 						||(c.cardID=="MachineGunSpark")||(c.cardID=="Spark")
 						||(c.cardID=="DoubleSpark")||(c.cardID=="FinalSpark")
-						||(c.cardID=="MasterSpark")){
+						||(c.cardID=="MasterSpark")||(c.cardID=="MusleSpark")){
 					c.baseDamage += UPG;
 					c.flash();
 					c.applyPowers();

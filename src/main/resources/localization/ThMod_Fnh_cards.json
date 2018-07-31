@@ -80,7 +80,7 @@
 	},
 	"MilkyWay": {
 		"NAME": "Milky Way",
-		"DESCRIPTION": "Gain !B!  block  .Increase the damage of all attack cards in your hand by !M!."
+		"DESCRIPTION": "Gain !B!  block  .Increase the damage of all Attack in your hand by !M!."
 	},
 	"NonDirectionalLaser": {
 		"NAME": "Non-Directional Laser",
@@ -103,8 +103,8 @@
 	},
 	"SatelliteIllusion": {
 		"NAME": "Satellite Illusion",
-		"DESCRIPTION": "Gain  [B]  whenever you play a card that doesn't exist in your master deck.",
-		"UPGRADE_DESCRIPTION": "Innate. NL Gain  [B]  whenever you play a card that doesn't exist in your master deck."
+		"DESCRIPTION": "Draw a card whenever you play a card that doesn't exist in your master deck.",
+		"UPGRADE_DESCRIPTION": "Innate. NL GDraw a card whenever you play a card that doesn't exist in your master deck."
 	},
 	"ShootTheMoon": {
 		"NAME": "Shoot The Moon",
@@ -163,8 +163,8 @@
 	},
 	"BlazeAway": {
 		"NAME": "Blaze Away",
-		"DESCRIPTION": "Add a copy of the next attack card you play,it cost 0 for the turn. NL Amplify  [B]  :add one more. NL  Exhaust .",
-		"UPGRADE_DESCRIPTION": "Add a copy of the next attack card you play,it cost 0 for the turn. NL Amplify  [B]  :add one more. NL  Exhaust ."
+		"DESCRIPTION": "Add a copy of the next Attack you play,it cost 0 for the turn. NL Amplify  [B]  :add one more. NL  Exhaust .",
+		"UPGRADE_DESCRIPTION": "Add a copy of the next Attack you play,it cost 0 for the turn. NL Amplify  [B]  :add one more. NL  Exhaust ."
 	},
 	"MaximisePower": {
 		"NAME": "Max Power!",
@@ -173,8 +173,8 @@
 	},
 	"StarlightTyphoon": {
 		"NAME": "Starlight Typhoon",
-		"DESCRIPTION": " Exhaust  all non-attack cards in your hand,add a Spark to your hand for each card  Exhaust ed.",
-		"UPGRADE_DESCRIPTION": " Exhaust  all non-attack cards in your hand,add an upgraded Spark to your hand for each card  Exhaust ed."
+		"DESCRIPTION": " Exhaust  all non-Attack cards in your hand,add a Spark to your hand for each card  Exhaust ed.",
+		"UPGRADE_DESCRIPTION": " Exhaust  all non-Attack cards in your hand,add an upgraded Spark to your hand for each card  Exhaust ed."
 	},
 	"SuperPerseids": {
 		"NAME": "Super Perseids",
@@ -198,7 +198,7 @@
 	},
 	"PowerUp": {
 		"NAME": "Upgrade!",
-		"DESCRIPTION": "Add !M! damage to all attack cards in your hand.",
+		"DESCRIPTION": "Add !M! damage to all Attack in your hand.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"WitchLeyline": {
@@ -238,7 +238,7 @@
 	},
 	"Singualrity": {
 		"NAME": "Singualrity",
-		"DESCRIPTION": "When you play a card that cost 0 ,increase the damage of all attack cards in your hand by !M! .",
+		"DESCRIPTION": "When you play a card that cost 0 ,increase the damage of all Attack in your hand by !M! .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"SporeBomb": {
@@ -256,7 +256,42 @@
 		"DESCRIPTION": "At the end of combat,gain !M! gold.  NL  Amplify  [B]  :Gain a random potion in addition.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
+	"TreasureHunter": {
+		"NAME": "TreasureHunter",
+		"DESCRIPTION": "Deal !D! damage. NL If this kills an elite/a boss,gain a random rare/boss relic. NL Exhaust .",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"Robbery": {
+		"NAME": "Robbery",
+		"DESCRIPTION": "Deal !D! damage,gain gold for unblocked damage dealt. NL Amplify [B] :Double gold.",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"6A": {
+		"NAME": "6A",
+		"DESCRIPTION": "Deal !D! damage,gain block for damage dealt.",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"CircumpolarStar": {
+		"NAME": "Circumpolar Star",
+		"DESCRIPTION": "Gain !B! block , draw !D! card(s).Increase its draw amount by 1 for this combat. NL Amplify  [B]  :gain !M! more block .",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"MuscleSpark": {
+		"NAME": "Muscle Spark",
+		"DESCRIPTION": "Deal !D! damage,then increase the damage of all Attack in your hand for damage dealt. NL Amplify  [B]  :Deal !B! damage instead.",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"WWWWWWWWWWWWWW": {
+		"NAME": "WWWWWWWWWWW",
+		"DESCRIPTION": "WWWWWWWWWWW",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
 	"WWWWWWWWWWWWW": {
+		"NAME": "WWWWWWWWWWW",
+		"DESCRIPTION": "WWWWWWWWWWW",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"WWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWW",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"

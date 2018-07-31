@@ -107,8 +107,8 @@
 	},
 	"SatelliteIllusion": {
 		"NAME": "卫星幻觉",
-		"DESCRIPTION": "每当你打出一张你主卡组里不存在的卡，获得1点能量。",
-		"UPGRADE_DESCRIPTION": " 固有 . NL 每当你打出一张你主卡组里不存在的卡，获得1点能量。"
+		"DESCRIPTION": "每当你打出一张你主卡组里不存在的卡，抽一张卡。",
+		"UPGRADE_DESCRIPTION": " 固有 . NL 每当你打出一张你主卡组里不存在的卡，抽一张卡。"
 	},
 	"ShootTheMoon": {
 		"NAME": "射月",
@@ -166,7 +166,7 @@
 		"UPGRADE_DESCRIPTION": "将五张已 升级 的随机卡牌洗入抽排堆。 NL  增幅  [B]  :加入的卡牌基础费用变为0."
 	},
 	"BlazeAway": {
-		"NAME": "Blaze Away",
+		"NAME": "连续发射",
 		"DESCRIPTION": "将你接下来使用的攻击卡的复制加入手牌，该复制在回合内的费用为0. NL 增幅  [B]  :复制两张。 NL  消耗 。",
 		"UPGRADE_DESCRIPTION": "将你接下来使用的攻击卡的复制加入手牌，该复制在回合内的费用为0. NL 增幅  [B]  :复制两张。"
 	},
@@ -191,7 +191,7 @@
 		"UPGRADE_DESCRIPTION": "将一张已 升级 的随机攻击卡加入手牌，使这张卡的攻击力等于前者的攻击力。"
 	},
 	"ShootingEcho": {
-		"NAME": "Shooting Echo",
+		"NAME": "星弹连射",
 		"DESCRIPTION": " 消耗 一张卡，将此卡的一张复制加入手牌。 NL 造成 !D! 点伤害。 NL  消耗 。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
@@ -253,6 +253,31 @@
 	"WitchOfGreed": {
 		"NAME": "强欲魔女",
 		"DESCRIPTION": "战斗结束时，获得 !M!  金币 。 NL  增幅  [B]  :额外获得一瓶随机的药剂。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"TreasureHunter": {
+		"NAME": "宝物猎人",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张卡杀死一名精英/boss，则获得一个随机的精英/boss遗物。 NL 消耗 。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"Robbery": {
+		"NAME": "强取豪夺",
+		"DESCRIPTION": "造成 !D! 点伤害。获得造成伤害数量的金币。 NL 增幅  [B]  :获得双倍的金币。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"6A": {
+		"NAME": "6A",
+		"DESCRIPTION": "造成 !D! 点伤害，获得造成伤害数量的 格挡 。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"CircumpolarStar": {
+		"NAME": "拱极星",
+		"DESCRIPTION": "获得 !B! 点 格挡 ，抽 !D! 张卡。使这张牌在本场战斗中抽卡数+1。 NL  增幅  [B]  :获得 !M! 点额外的 格挡 。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"MuscleSpark": {
+		"NAME": "筋肉火花",
+		"DESCRIPTION": "造成 !D! 点伤害，之后手牌中所有攻击牌伤害增加造成伤害的数值。 NL  增幅  [B]  :伤害变为 !B! 点。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"WWWWWWWWWWW": {
