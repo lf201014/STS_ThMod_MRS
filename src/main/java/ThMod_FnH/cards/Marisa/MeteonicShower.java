@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -12,6 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import ThMod_FnH.ThMod;
+import ThMod_FnH.cards.special.Burn_MRS;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
@@ -25,7 +27,7 @@ public class MeteonicShower
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	
 	private static final int COST = 1;
-	private static final int ATK_DMG = 3;
+	private static final int ATK_DMG = 2;
 	private static final int UPG_DMG = 1;
 	
 
@@ -47,7 +49,7 @@ public class MeteonicShower
 		ThMod.logger.info("MeteonicShower : looking for burn");
 				
 		for (AbstractCard c:p.hand.group)
-			if (c.cardID == "Burn")
+			if ((c instanceof Burn)||(c instanceof Burn_MRS))
 				count++;
 
 		ThMod.logger.info("MeteonicShower : count : "+count);

@@ -26,6 +26,7 @@ public class MaximisePower extends CustomCard{
         		AbstractCard.CardType.SKILL, AbstractCardEnum.MARISA_COLOR,
         		AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 2;
+        this.exhaust = true;
     }
   
     public void use(AbstractPlayer p, AbstractMonster m){

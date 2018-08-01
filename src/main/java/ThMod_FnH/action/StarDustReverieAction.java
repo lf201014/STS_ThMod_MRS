@@ -36,7 +36,7 @@ public class StarDustReverieAction
 
 		for (int i=0;i<=cnt;i++) {
 
-			AbstractCard c = AbstractDungeon.getCard(AbstractDungeon.rollRarity(AbstractDungeon.miscRng), AbstractDungeon.miscRng).makeStatEquivalentCopy();
+			AbstractCard c = AbstractDungeon.getCard(ThMod.RollRarity()).makeStatEquivalentCopy();
 	        	
 			ThMod.logger.info("StarDustReverieAction : adding "+c.cardID);
 				

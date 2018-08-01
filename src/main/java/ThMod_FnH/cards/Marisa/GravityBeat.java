@@ -38,9 +38,10 @@ public class GravityBeat extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(
 			new DamageAllEnemiesAction(p, this.multiDamage,this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 		
-		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-			AbstractDungeon.actionManager.addToBottom(
-					new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+		if (!AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead())
+			for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+				AbstractDungeon.actionManager.addToBottom(
+						new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 		}
 	}
 

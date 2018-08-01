@@ -122,7 +122,7 @@
 	},
 	"UltraShortWave": {
 		"NAME": "极超短波",
-		"DESCRIPTION": "获得 !M! 能量与 !B! 层 蓄力 。使你本局中的所有终极短波能量与 蓄力 获得量+1。",
+		"DESCRIPTION": "获得 !M! 能量与 !B! 层 蓄力 。使你本局中的所有极超短波能量与 蓄力 获得量+1。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MillisecondPulsars": {
@@ -157,13 +157,13 @@
 	},
 	"LuminesStrike": {
 		"NAME": "声光冲击",
-		"DESCRIPTION": "造成 !D! 点伤害 (3点基础伤害 × 你手中的卡牌数)。 NL 增幅  [B]  :伤害变为 !B! 点(5点基础伤害 × 你现在的能量数)。",
-		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害 (4点基础伤害 × 你手中的卡牌数)。 NL 增幅  [B]  :伤害变为 !B! 点(7点基础伤害 × 你现在的能量数)。"
+		"DESCRIPTION": "造成 !D! 点伤害 (2 × 你手中的卡牌数)。 NL 增幅  [B]  :伤害变为 !B! 点(3 × 你现在的能量数)。",
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害 (3点基础伤害 × 你手中的卡牌数)。 NL 增幅  [B]  :伤害变为 !B! 点(4点基础伤害 × 你现在的能量数)。"
 	},
 	"OpenUniverse": {
 		"NAME": "开放宇宙",
-		"DESCRIPTION": "将五张随机卡牌洗入抽排堆。 NL  增幅  [B]  :加入的卡牌基础费用变为0.",
-		"UPGRADE_DESCRIPTION": "将五张已 升级 的随机卡牌洗入抽排堆。 NL  增幅  [B]  :加入的卡牌基础费用变为0."
+		"DESCRIPTION": "将五张随机卡牌洗入抽排堆。 消耗 。 NL  增幅  [B]  :加入的卡牌基础费用变为0.",
+		"UPGRADE_DESCRIPTION": "将五张已 升级 的随机卡牌洗入抽排堆。消耗 。 NL  增幅  [B]  :加入的卡牌基础费用变为0."
 	},
 	"BlazeAway": {
 		"NAME": "连续发射",
@@ -172,7 +172,7 @@
 	},
 	"MaximisePower": {
 		"NAME": "火力全开!",
-		"DESCRIPTION": "将你的 蓄力 层数转化为能量,抽 !M! 张卡，使你本回合内攻击力翻倍。",
+		"DESCRIPTION": "将你的 蓄力 层数转化为能量,抽 !M! 张卡，使你本回合内攻击力翻倍。NL 消耗 。",
 		"UPGRADE_DESCRIPTION": "Convert your Charge-up stacks into energy,you no longer gain Charge-up. NL Draw 2 less cards each turn.add 1 cost to all your attack cards. NL Double your damage."
 	},
 	"StarlightTyphoon": {
@@ -192,7 +192,7 @@
 	},
 	"ShootingEcho": {
 		"NAME": "星弹连射",
-		"DESCRIPTION": " 消耗 一张卡，将此卡的一张复制加入手牌。 NL 造成 !D! 点伤害。 NL  消耗 。",
+		"DESCRIPTION": " 消耗 一张卡，将一张 星弹连射 加入手牌。 NL 造成 !D! 点伤害。 NL  消耗 。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"EnergyFlow": {
@@ -213,11 +213,11 @@
 	"JA": {
 		"NAME": "JA",
 		"DESCRIPTION": "造成 !D! 点伤害，将一张“623C”,一张 火花 ,一张“魔女射线”加入手牌。",
-		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害，将一张“623C”,两张 火花 ,一张“魔女射线”加入手牌并将他们 升级 。"
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害，将一张“623C”,一张 火花 ,一张“魔女射线”加入手牌并将他们 升级 。"
 	},
 	"AbsoluteMagnitude": {
 		"NAME": "绝对星等",
-		"DESCRIPTION": "造成 !D! 点伤害，你每有一层 蓄力 会使本卡攻击力增加 !M! 点。",
+		"DESCRIPTION": "造成 !D! 点伤害( !M! × 你的 蓄力 层数)",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"DragonMeteor": {
@@ -242,8 +242,8 @@
 	},
 	"SporeBomb": {
 		"NAME": "孢子炸弹",
-		"DESCRIPTION": "给与所有敌人 !M! 层易伤。 NL  增幅  [B]  :再加1层。",
-		"UPGRADE_DESCRIPTION": "给与所有敌人 !M! 层易伤。 NL  增幅  [B]  :再加1层。"
+		"DESCRIPTION": "给与 !M! 层 易伤 。 NL  增幅  [B]  :改为给与所有敌人 易伤 。",
+		"UPGRADE_DESCRIPTION": "给与所有敌人 !M! 层 易伤 。 NL  增幅  [B]  :再加1层。"
 	},
 	"FluorensentBeam": {
 		"NAME": "荧光射线",
@@ -262,7 +262,7 @@
 	},
 	"Robbery": {
 		"NAME": "强取豪夺",
-		"DESCRIPTION": "造成 !D! 点伤害。获得造成伤害数量的金币。 NL 增幅  [B]  :获得双倍的金币。",
+		"DESCRIPTION": "造成 !D! 点伤害。获得造成伤害数量的金币。 NL 消耗 。 NL 增幅  [B]  :获得双倍的金币。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"6A": {
@@ -272,12 +272,42 @@
 	},
 	"CircumpolarStar": {
 		"NAME": "拱极星",
-		"DESCRIPTION": "获得 !B! 点 格挡 ，抽 !D! 张卡。使这张牌在本场战斗中抽卡数+1。 NL  增幅  [B]  :获得 !M! 点额外的 格挡 。",
+		"DESCRIPTION": "获得 !B! 点 格挡 ，抽 !D! 张卡。使这张牌在本场战斗中抽卡数+1。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MuscleSpark": {
 		"NAME": "筋肉火花",
 		"DESCRIPTION": "造成 !D! 点伤害，之后手牌中所有攻击牌伤害增加造成伤害的数值。 NL  增幅  [B]  :伤害变为 !B! 点。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"MagicChant": {
+		"NAME": "咏唱",
+		"DESCRIPTION": "选择 !M! 张卡 保留 到下一回合。获得所选卡片费用总和的 格挡 。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"UnstableBomb": {
+		"NAME": "不稳定爆弹",
+		"DESCRIPTION": "对随机敌人造成 !D! 到 !B! 点伤害 4次。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"SuperNova": {
+		"NAME": "超新星",
+		"DESCRIPTION": "每打出一张非攻击卡，向手牌加入一张 灼伤 。 NL 在回合结束时 消耗 所有的手牌，其中每有一张 灼伤 ，获得一点 力量 。",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 每打出一张非攻击卡，向手牌加入一张 灼伤 。 NL 在回合结束时 消耗 所有的手牌，其中每有一张 灼伤 ，获得一点 力量 。"
+	},
+	"MoraleDepletion": {
+		"NAME": "战意枯竭",
+		"DESCRIPTION": "获得 !B! 点 格挡  ，这回合你将不再触发 增幅 效果。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"DarkMatter": {
+		"NAME": "暗物质",
+		"DESCRIPTION": "将两张 暗物质 洗入抽卡堆。被消耗时获得 !B! 点 格挡 。 NL 虚无 。",
+		"UPGRADE_DESCRIPTION": "将两张 升级 过的 暗物质 洗入抽卡堆。被消耗时获得 !B! 点 格挡 。 NL 虚无 。"
+	},
+	"GasGiant": {
+		"NAME": "气态巨行星",
+		"DESCRIPTION": "获得 !B! 点格挡和 !M! 层 易伤 。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"WWWWWWWWWWW": {

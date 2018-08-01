@@ -140,6 +140,20 @@
       "瓶随机药剂。"
     ]
   },
+    "MoraleDepletionPower": {
+    "NAME": "战意丧失",
+    "DESCRIPTIONS": [
+      "这回合你将不再触发 增幅 效果。",
+      "WWWWWWWWWWW"
+    ]
+  },
+    "SuperNovaPower": {
+    "NAME": "超新星",
+    "DESCRIPTIONS": [
+      "你每打出一张非攻击卡，向你手牌加入一张 灼伤 。 NL 在你的回合结束时， 消耗 你所有的手牌，其中每有一张 灼伤 ，获得一点 力量 。",
+      "WWWWWWWWWWW"
+    ]
+  },
     "WWWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [

@@ -1,6 +1,7 @@
 package ThMod_FnH.cards.Marisa;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,46 +10,43 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
-import ThMod_FnH.ThMod;
-import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
+import ThMod_FnH.patches.AbstractCardEnum;
 
-public class SporeBomb extends CustomCard {
-	public static final String ID = "SporeBomb";
+public class GasGiant extends CustomCard {
+	public static final String ID = "GasGiant";
 	public static final String IMG_PATH = "img/cards/Defend.png";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 0;
-	private static final int AMP = 1;
-	private static final int STC = 2;
-	private static final int UPG_STC = 1;
+	private static final int COST = 1;
+	private static final int BLOCK_AMT = 18;
+	private static final int UPGRADE_PLUS_BLOCK = 6;
+	private static final int VUL_GAIN = 2;
 	
-	public SporeBomb() {
+	public GasGiant() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
-		this.magicNumber = this.baseMagicNumber = STC;
+				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+
+		this.baseBlock = BLOCK_AMT;
+		this.magicNumber = this.baseMagicNumber = VUL_GAIN;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if (ThMod.Amplified(this.costForTurn+AMP, AMP)) {
-			for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
-			AbstractDungeon.actionManager.addToBottom(
-					new ApplyPowerAction(mo, p, new VulnerablePower(mo, this.magicNumber, false), this.magicNumber, true));
-		}
-		else 
-			AbstractDungeon.actionManager.addToBottom(
-					new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber, true));
+		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+		
+		AbstractDungeon.actionManager.addToBottom(
+				new ApplyPowerAction(p, p, new VulnerablePower(p, this.magicNumber, false), this.magicNumber));
 	}
 
 	public AbstractCard makeCopy() {
-		return new SporeBomb();
+		return new GasGiant();
 	}
 	
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(UPG_STC);
+			upgradeBlock(UPGRADE_PLUS_BLOCK);
 		}
 	}
 }

@@ -140,17 +140,17 @@
       " random potion."
     ]
   },
-    "WWWWWWWWWWWWWWW": {
-    "NAME": "WWWWWWWWWWW",
+    "MoraleDepletionPower": {
+    "NAME": "Morale Depletion",
     "DESCRIPTIONS": [
-      "WWWWWWWWWWW",
+      "You won't trigger Amplify this turn.",
       "WWWWWWWWWWW"
     ]
   },
-    "WWWWWWWWWWWWWWWW": {
-    "NAME": "WWWWWWWWWWW",
+    "SuperNovaPower": {
+    "NAME": "SuperNova",
     "DESCRIPTIONS": [
-      "WWWWWWWWWWW",
+      "Whenever you play a non-Attack card ,add a Burn to your hand. NL Exhaust you hand when your turn ends,Gain 1 Strength for each Burn exhausted.",
       "WWWWWWWWWWW"
     ]
   },

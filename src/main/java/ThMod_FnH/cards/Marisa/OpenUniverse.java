@@ -31,6 +31,7 @@ public class OpenUniverse extends CustomCard {
 	public OpenUniverse() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
+		this.exhaust =true;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m){
@@ -39,7 +40,7 @@ public class OpenUniverse extends CustomCard {
 		ThMod.logger.info("SuperPerseids : generationg cards");
 		
 	    for (int i = 0; i < 5; i++){
-	        AbstractCard card = AbstractDungeon.getCard(AbstractDungeon.rollRarity(AbstractDungeon.miscRng), AbstractDungeon.miscRng).makeStatEquivalentCopy();
+	        AbstractCard card = AbstractDungeon.getCard(ThMod.RollRarity()).makeStatEquivalentCopy();
 	        if (this.upgraded)
 	        	card.upgrade();
 	        if (amp) {

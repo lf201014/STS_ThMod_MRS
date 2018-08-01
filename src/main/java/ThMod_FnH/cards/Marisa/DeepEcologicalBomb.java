@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -24,7 +25,7 @@ public class DeepEcologicalBomb
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	
 	private static final int COST = 1;
-	private static final int ATK_DMG = 8;
+	private static final int ATK_DMG = 7;
 	private static final int UPG_DMG = 3;
 	private static final int AMP = 1;
 	
@@ -38,23 +39,26 @@ public class DeepEcologicalBomb
 		
 	}
 
-	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
+	public void use(AbstractPlayer p, AbstractMonster m) {
 		
 		AbstractMonster mon = AbstractDungeon.getMonsters().getRandomMonster(true);
-		AbstractDungeon.actionManager.addToBottom(new DamageAction(mon,
+		if (mon != null) {
+			AbstractDungeon.actionManager.addToBottom(new DamageAction(mon,
 				new DamageInfo(p, this.damage, this.damageTypeForTurn),
 					AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-	    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mon, p, new TempStrengthLoss(mon, 3), 3));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mon, p, new TempStrengthLoss(mon, 3), 3));
+		}
+		
 		
 	    if ( ThMod.Amplified(AMP+this.costForTurn,AMP) ) {
 	    	mon = AbstractDungeon.getMonsters().getRandomMonster(true);
-	    	while ((mon.isDying)||(mon.isDeadOrEscaped())) {
-	    		mon = AbstractDungeon.getMonsters().getRandomMonster(true);
+	    	if (mon != null) {
+	    		AbstractDungeon.actionManager.addToBottom(new DamageAction(mon,
+	    			new DamageInfo(p, this.damage, this.damageTypeForTurn),
+	    			AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+	    		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mon, p, new TempStrengthLoss(mon, 3), 3));
 	    	}
-			AbstractDungeon.actionManager.addToBottom(new DamageAction(mon,
-					new DamageInfo(p, this.damage, this.damageTypeForTurn),
-						AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-		    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mon, p, new TempStrengthLoss(mon, 3), 3));
+	    	
 	    }
 	}
 

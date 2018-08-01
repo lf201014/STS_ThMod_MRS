@@ -28,7 +28,8 @@ public class AbsoluteMagnitude
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE,
 				AbstractCard.CardTarget.ENEMY);
 
-		this.magicNumber = this.baseMagicNumber = this.baseDamage = ATTACK_DMG;
+		this.magicNumber = this.baseMagicNumber = ATTACK_DMG;
+		this.damage = this.baseDamage = 0;
 	}
 	
 	public void applyPowers(){

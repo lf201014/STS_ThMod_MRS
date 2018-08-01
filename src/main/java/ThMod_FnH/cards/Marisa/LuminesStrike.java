@@ -36,17 +36,17 @@ public class LuminesStrike
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON,
 				AbstractCard.CardTarget.ENEMY);
-		this.baseDamage = D0;
+		this.baseMagicNumber = D0;
 		this.baseBlock = A0;
-		
+		this.baseDamage = 0;
 	}
 	
 	@Override
 	public void applyPowers(){
 		AbstractPlayer player = AbstractDungeon.player;
 		ThMod.logger.info("LuminesStrike : applyPowers : player hand size :"+player.hand.size());
-		this.damage = player.hand.size() * this.baseDamage;
-		this.block = EnergyPanel.totalCount * this.baseBlock;
+		this.damage = player.hand.size() * this.baseMagicNumber + this.baseDamage;
+		this.block = EnergyPanel.totalCount * this.baseBlock + this.baseDamage;
 		super.applyPowers();
 	}
 	
@@ -59,8 +59,8 @@ public class LuminesStrike
 	public void calculateCardDamage(AbstractMonster mo){
 		AbstractPlayer player = AbstractDungeon.player;
 		ThMod.logger.info("LuminesStrike : calculateCardDamage : player hand size :"+player.hand.size());
-		this.damage = player.hand.size() * this.baseDamage;
-		this.block = EnergyPanel.totalCount * this.baseBlock;
+		this.damage = player.hand.size() * this.baseMagicNumber + this.baseDamage;
+		this.block = EnergyPanel.totalCount * this.baseBlock + this.baseDamage;
 		super.calculateCardDamage(mo);
 	}
 
@@ -84,7 +84,7 @@ public class LuminesStrike
 		if (!this.upgraded) {
 			upgradeName();
 			this.baseBlock = A1;
-			this.baseDamage = D1;
+			this.baseMagicNumber = D1;
 			this.rawDescription = DESCRIPTION_UPG;
 			initializeDescription();
 		}

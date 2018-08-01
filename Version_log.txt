@@ -50,3 +50,39 @@ v0.0.3\v0.0.4 - 2018.7.31 ¡ùdamage info : before Amplify(upgraded)/after Amplify
 *Added Uncommon Attack Robbery
 *Added Rare Attack Treasure Hunter
 *Added Uncommon Skill Circumpolar Star
+v0.0.5 ¡ùdamage info : before Amplify(upgraded)/after Amplify(upgraded)
+*Corrected descriptions of some cards
+*Lumines Strike will recieve all attack modifications AFTER caculated its damage
+*Cards added by Open Universe ,Star Dust Reveries and Illusion Star will be truly random
+*Fixed the bug that 6A and Musle Spark may return negative number when caculating damage dealt
+*Blazing Star : damage adjusted from 20(27) / 26(35) to 21(27) / 28(36)
+*Blazing Star is Rare card now
+*DeepEcologicalBomb : damage reduced from 8(11) to 7(10)
+*MeteonicShower : base damage reduced from 3(4) to 2(3)
+*Fixed the issue that Blaze Away will never appear in normal runs due to incorrect rarity settting
+*Blaze Away is Uncommon card now
+*Fixed the issue that Earth Light Ray will never appear in normal runs due to incorrect rarity settting
+*Earth Light Ray is Uncommon card now
+*Open Universe will Exhaust now
+*Grand Cross : damage adjusted from 14(18) to 14(20)
+*Mysterious Beam : cost increased from 0 to 1
+*Robbery : damage reduced from 9(12) to 7(10)
+*Robbery will Exhaust now
+*Circumpolar Star no longer have Amplify effect
+*Max Power! will Exhaust now
+*Trying to fix the bug that cause the game to crush due to null action or what under certain circumstances
+*Spore Crump : effect reworked, now it will apply 2(3) Vulnerable to one enermy;and if Amplified (cost 1) ,it will apply to all enemies instead
+*Added Common Skill Gas Giant
+*Added Common Attack Unstable Bomb
+*Added Uncommon Skill Magic Chant
+*Added Uncommon Skill Dark Matter
+*Added Uncommon Skill Morale Depletion
+*Added Rare Power Supernova
+
+
+
+
+
+
+
+

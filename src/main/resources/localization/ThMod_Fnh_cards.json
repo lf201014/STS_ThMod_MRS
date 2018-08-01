@@ -118,7 +118,7 @@
 	},
 	"UltraShortWave": {
 		"NAME": "Ultimate Shortwave",
-		"DESCRIPTION": "Gain !M!  [B]  and !B! Charge-up , increase the energy and Charge-up gain of all Ultra-Short Wave by 1 this battle.",
+		"DESCRIPTION": "Gain !M!  [B]  and !B! Charge-up , increase the energy and Charge-up gain of all Ultimate Shortwave by 1 this battle.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MillisecondPulsars": {
@@ -153,13 +153,13 @@
 	},
 	"LuminesStrike": {
 		"NAME": "Luminous Strike",
-		"DESCRIPTION": "Deal !D! damage (3 × the size of your hand). NL Amplify  [B]  : !B! damage (5 × your current energy) instead.",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage (4 × the size of your hand). NL Amplify  [B]  : !B! damage (7 × your current energy) instead."
+		"DESCRIPTION": "Deal !D! damage (2 × the size of your hand). NL Amplify  [B]  : !B! damage (3 × your current energy) instead.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage (3 × the size of your hand). NL Amplify  [B]  : !B! damage (4 × your current energy) instead."
 	},
 	"OpenUniverse": {
 		"NAME": "Open Universe",
-		"DESCRIPTION": "Add 5 random cards to draw pile. NL  Amplify  [B]  :Set their base cost to 0.",
-		"UPGRADE_DESCRIPTION": "Add 5 random upgraded cards to draw pile. NL  Amplify  [B]  :Set their base cost to 0."
+		"DESCRIPTION": "Add 5 random cards to draw pile. Exhaust . NL  Amplify  [B]  :Set their base cost to 0.",
+		"UPGRADE_DESCRIPTION": "Add 5 random upgraded cards to draw pile. exhausted . NL  Amplify  [B]  :Set their base cost to 0."
 	},
 	"BlazeAway": {
 		"NAME": "Blaze Away",
@@ -168,7 +168,7 @@
 	},
 	"MaximisePower": {
 		"NAME": "Max Power!",
-		"DESCRIPTION": "Convert your Charge-up stacks into energy. NL Draw !M! cards. NL Double your damage in this turn.",
+		"DESCRIPTION": "Convert your Charge-up stacks into energy. NL Draw !M! cards. NL Double your damage in this turn. NL Exhaust .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWW"
 	},
 	"StarlightTyphoon": {
@@ -188,7 +188,7 @@
 	},
 	"ShootingEcho": {
 		"NAME": "Shooting Echo",
-		"DESCRIPTION": " Exhaust  an card,add a copy of this card to your hand. NL deal !D! damage. NL Exhaust .",
+		"DESCRIPTION": " Exhaust  a card,add a Shooting Echo to your hand. NL deal !D! damage. NL Exhaust .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"EnergyFlow": {
@@ -209,11 +209,11 @@
 	"JA": {
 		"NAME": "JA",
 		"DESCRIPTION": "Deal !D! damage,add 1 '623C',1 ' Spark ', 1 'WitchLeyline' to your hand.",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage,add 1 'UpSweep',2 'Spark', 1 'WitchLeyline' to your hand and upgrade them."
+		"UPGRADE_DESCRIPTION": "Deal !D! damage,add 1 'UpSweep',1 'Spark', 1 'WitchLeyline' to your hand and upgrade them."
 	},
 	"AbsoluteMagnitude": {
 		"NAME": "Absolute Magnitude",
-		"DESCRIPTION": "Deal !D! damage,each stack of Charge-up will increase the damage of this card damage by !M!." ,
+		"DESCRIPTION": "Deal !D! damage(!M! × your Charge-up stacks)." ,
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"DragonMeteor": {
@@ -243,7 +243,7 @@
 	},
 	"SporeBomb": {
 		"NAME": "Spore Crump",
-		"DESCRIPTION": "apply !M! Vulnerable to all enemies. NL Amplify  [B]  : 1 more stack.",
+		"DESCRIPTION": "apply !M! Vulnerable to an enemies. NL Amplify  [B]  : Apply to all enemies instead.",
 		"UPGRADE_DESCRIPTION": "apply !M! Vulnerable to all enemies. NL Amplify  [B]  : 1 more stack."
 	},
 	"FluorensentBeam": {
@@ -263,7 +263,7 @@
 	},
 	"Robbery": {
 		"NAME": "Robbery",
-		"DESCRIPTION": "Deal !D! damage,gain gold for unblocked damage dealt. NL Amplify [B] :Double gold.",
+		"DESCRIPTION": "Deal !D! damage,gain gold for unblocked damage dealt. NL Exhaust . NL Amplify [B] :Double gold.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"6A": {
@@ -273,7 +273,7 @@
 	},
 	"CircumpolarStar": {
 		"NAME": "Circumpolar Star",
-		"DESCRIPTION": "Gain !B! block , draw !D! card(s).Increase its draw amount by 1 for this combat. NL Amplify  [B]  :gain !M! more block .",
+		"DESCRIPTION": "Gain !B! block , draw !D! card(s).Increase its draw amount by 1 for this combat.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MuscleSpark": {
@@ -281,7 +281,37 @@
 		"DESCRIPTION": "Deal !D! damage,then increase the damage of all Attack in your hand for damage dealt. NL Amplify  [B]  :Deal !B! damage instead.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
-	"WWWWWWWWWWWWWW": {
+	"MagicChant": {
+		"NAME": "Magic Chant",
+		"DESCRIPTION": "Choose !M! to retain this turn,gain block equals to total cost of cards you chose.",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"UnstableBomb": {
+		"NAME": "Unstable Bomb",
+		"DESCRIPTION": "Deal random damage ( !D! to !B! ) to random enemy 4 times.",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"SuperNova": {
+		"NAME": "Supernova",
+		"DESCRIPTION": "Add a Burn to hand whenever you play a non-Attack card . NL Exhaust your hand when your turn ends,Gain 1 Strength for each Burn exhausted.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Add a Burn to hand whenever you play a non-Attack card . NL Exhaust your hand when your turn ends,Gain 1 Strength for each Burn exhausted."
+	},
+	"MoraleDepletion": {
+		"NAME": "Morale Depletion",
+		"DESCRIPTION": "Gain !B! block , you can't use Amplify until this turn ends.",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"DarkMatter": {
+		"NAME": "Dark Matter",
+		"DESCRIPTION": "Shuffle 2 Dark Matter into your deck,gain !B! block when exhausted. NL Ethereal .",
+		"UPGRADE_DESCRIPTION": "Shuffle 2 Upgraded Dark Matter into your deck,gain !B! block when exhausted. NL Ethereal ."
+	},
+	"GasGiant": {
+		"NAME": "Gas Giant",
+		"DESCRIPTION": "Gain !B! block ,gain !M! Vulnerable .",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"WWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWW",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
@@ -291,12 +321,7 @@
 		"DESCRIPTION": "WWWWWWWWWWW",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
-	"WWWWWWWWWWWW": {
-		"NAME": "WWWWWWWWWWW",
-		"DESCRIPTION": "WWWWWWWWWWW",
-		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
-	},
-	"WWWWWWWWWWW": {
+	"WWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWW",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"

@@ -45,6 +45,7 @@ public abstract class AmplifiedAttack extends CustomCard  {
 			this.damage = this.baseDamage;
 			this.ampDamage = this.baseDamage + this.ampNumber;
 			this.block = this.baseBlock = this.ampDamage;
+			break;
 		}
 		
 		this.isDamageModified = false;

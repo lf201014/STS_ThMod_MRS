@@ -36,6 +36,8 @@ public class MusleSparkAction
 	        if (tmp > mon.currentHealth) {
 	        	tmp = mon.currentHealth;
 	        }
+	        if (tmp<0)
+	        	tmp = 0;
 	        
 	       ThMod.logger.info("MusleSparkAction : increasing damage : "+tmp);
 	        

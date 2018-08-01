@@ -86,10 +86,10 @@ public class Marisa extends CustomPlayer {
 		String flavor;
 		if (Settings.language == Settings.GameLanguage.ZHS) {
 			title = "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f";
-			flavor = "\u4f4f\u5728\u9b54\u6cd5\u68ee\u6797\u7684\u9b54\u6cd5\u4f7f\u3002 NL \u5584\u957f\u4e8e\u5149\u548c\u70ed\u7684\u9b54\u6cd5\u3002";
+			flavor = "\u4f4f\u5728\u9b54\u6cd5\u68ee\u6797\u7684\u9b54\u6cd5\u4f7f\u3002 NL \u5584\u957f\u4e8e\u5149\u548c\u70ed\u7684\u9b54\u6cd5\u3002 \u203b\u0020\u8bf7\u4e0d\u8981\u79fb\u9664\u521d\u59cb\u9057\u7269";
 		}else {
 			title = "The Ordinary Magician";
-			flavor = "The 'ordinay' magician lives in the magic forest. NL Specialized in light and heat magic.";
+			flavor = "The 'ordinay' magician lives in the magic forest. NL Specialized in light and heat magic. \u203b Please Don't remove the Starter Relic.";
 		}
 		return new CharSelectInfo(
 				title, flavor,

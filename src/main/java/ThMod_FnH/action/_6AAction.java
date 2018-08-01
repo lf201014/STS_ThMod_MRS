@@ -30,6 +30,8 @@ public class _6AAction
 	        if (tmp > mon.currentHealth) {
 	        	tmp = mon.currentHealth;
 	        }
+	        if (tmp<0)
+	        	tmp = 0;
 	        
 	        AbstractDungeon.player.addBlock(tmp);
 	        

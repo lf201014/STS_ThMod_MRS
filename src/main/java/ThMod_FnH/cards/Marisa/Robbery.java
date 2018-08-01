@@ -23,7 +23,7 @@ public class Robbery
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 9;
+	private static final int ATTACK_DMG = 7;
 	private static final int UPGRADE_PLUS_DMG = 3;
 	private static final int AMP = 1;
 
@@ -33,6 +33,7 @@ public class Robbery
 				AbstractCard.CardTarget.ENEMY);
 
 		this.baseDamage = ATTACK_DMG;
+		this.exhaust = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

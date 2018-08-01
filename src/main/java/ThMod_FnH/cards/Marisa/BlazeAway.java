@@ -28,7 +28,7 @@ public class BlazeAway extends CustomCard {
 	
 	public BlazeAway() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
+				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 
 		this.baseMagicNumber = this.magicNumber = STC;
 	}

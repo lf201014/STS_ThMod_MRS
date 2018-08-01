@@ -31,7 +31,7 @@ public class SatelliteIllusionPower extends AbstractPower{
 
 	public void onUseCard(AbstractCard card, UseCardAction action) {
 		if (card.misc <= 0) {
-			ThMod.logger.info("SatelliteIllusionPower : Gaining energy for using "+card.cardID);
+			ThMod.logger.info("SatelliteIllusionPower : Drawing card for using "+card.cardID);
 			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner,this.amount));
 		}
 	}
