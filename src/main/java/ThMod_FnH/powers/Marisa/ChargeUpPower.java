@@ -67,12 +67,14 @@ public class ChargeUpPower
 	@Override
 	public void onPlayCard(AbstractCard card, AbstractMonster m){
 		if ((this.cnt>0)&&(card.type == CardType.ATTACK)) {
-			ThMod.logger.info("ChargeUpPower : using stacks;");
+			ThMod.logger.info("ChargeUpPower : using stacks for :"+card.cardID);
 			if ( owner.hasPower("OrrerysSunPower") )
 				owner.getPower("OrrerysSunPower").onSpecificTrigger();
 			flash();
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner,owner,new ChargeUpPower(owner,-cnt*6),-cnt*6));
-			
+			AbstractDungeon.actionManager.addToBottom(
+					new ApplyPowerAction(owner,owner,
+							new ChargeUpPower(owner,-cnt*6),-cnt*6)
+					);
 		}
 	}
 	

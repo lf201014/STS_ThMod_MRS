@@ -148,8 +148,8 @@
 	},
 	"ChargingUp": {
 		"NAME": "Charging Up",
-		"DESCRIPTION": "Gain !M! Charge-up. NL Amplify  [B]  :Gain double.",
-		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+		"DESCRIPTION": "Gain !M! Charge-up. NL Amplify  [B]  :Gain extra 2 stacks.",
+		"UPGRADE_DESCRIPTION": "Gain !M! Charge-up. NL Amplify  [B]  :Gain extra 3 stacks."
 	},
 	"LuminesStrike": {
 		"NAME": "Luminous Strike",
@@ -273,7 +273,7 @@
 	},
 	"CircumpolarStar": {
 		"NAME": "Circumpolar Star",
-		"DESCRIPTION": "Gain !B! block , draw !D! card(s).Increase its draw amount by 1 for this combat.",
+		"DESCRIPTION": "Gain !B! block , draw !M! card(s).Increase its draw amount by 1 for this combat.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MuscleSpark": {
@@ -311,9 +311,39 @@
 		"DESCRIPTION": "Gain !B! block ,gain !M! Vulnerable .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
-	"WWWWWWWWWWWW": {
-		"NAME": "WWWWWWWWWWW",
-		"DESCRIPTION": "WWWWWWWWWWW",
+	"CasketOfStar": {
+		"NAME": "Casket Of Star",
+		"DESCRIPTION": "Add a Spark to your hand whenever you gain Block .",
+		"UPGRADE_DESCRIPTION": "Add a Upgraded Spark to your hand whenever you gain Block ."
+	},
+	"ChargeUpSpray": {
+		"NAME": "Charge-Up Spray",
+		"DESCRIPTION": "Deal !D! damage. NL If this card is affected by Charge-up ,gain [B] and draw !M! card(s).",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"EnergyRecoil": {
+		"NAME": "Energy Recoil",
+		"DESCRIPTION": "Gain !B! block . NL Deplete your Charge-up until its stacks less than 4. Gain !D! block for every 4 Charge-up cost.",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"GalacticHalo": {
+		"NAME": "Galactic Halo",
+		"DESCRIPTION": "At the end of your turn,gain !M! block for each Attack you played this turn.",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"ManaConvection": {
+		"NAME": "Mana Convection",
+		"DESCRIPTION": "Draw !M! cards,then exhaust 2. NL If your Charge-up stacks equals to or more than 6,lose 6 Charge-up and gain  [B]  [B]  .",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"ManaRampage": {
+		"NAME": "Mana Rampage",
+		"DESCRIPTION": "This turn,your next attack will be played X times.",
+		"UPGRADE_DESCRIPTION": "This turn,your next attack will be played X+1 times."
+	},
+	"StarBarrage": {
+		"NAME": "Star Barrage",
+		"DESCRIPTION": "Deal !D! damage. NL If your deck has 15 or more cards,apply 1 Weak. NL If your discard pile has 15 or more cards ,apply 1 Vulnerable .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"WWWWWWWWWWWWW": {

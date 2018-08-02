@@ -30,7 +30,7 @@ public class SuperNova extends CustomCard{
     public void use(AbstractPlayer p, AbstractMonster m){
     	AbstractDungeon.actionManager.addToBottom(
     		new ApplyPowerAction(p , p , 
-    				new SuperNovaPower(p), 1));
+    				new SuperNovaPower(p , 1), 1));
     }
   
     public AbstractCard makeCopy(){

@@ -1,0 +1,111 @@
+
+Marisa.png
+size: 512,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+08
+  rotate: false
+  xy: 318, 425
+  size: 158, 135
+  orig: 159, 143
+  offset: 0, 5
+  index: -1
+05
+  rotate: false
+  xy: 1, 563
+  size: 158, 132
+  orig: 159, 143
+  offset: 0, 6
+  index: -1
+07
+  rotate: false
+  xy: 1, 830
+  size: 157, 131
+  orig: 159, 143
+  offset: 0, 7
+  index: -1
+00
+  rotate: false
+  xy: 319, 1
+  size: 158, 140
+  orig: 159, 143
+  offset: 0, 2
+  index: -1
+12
+  rotate: false
+  xy: 317, 143
+  size: 154, 141
+  orig: 159, 143
+  offset: 2, 2
+  index: -1
+03
+  rotate: false
+  xy: 157, 426
+  size: 158, 135
+  orig: 159, 143
+  offset: 0, 5
+  index: -1
+04
+  rotate: false
+  xy: 317, 562
+  size: 158, 133
+  orig: 159, 143
+  offset: 0, 6
+  index: -1
+10
+  rotate: false
+  xy: 1, 145
+  size: 156, 140
+  orig: 159, 143
+  offset: 1, 2
+  index: -1
+13
+  rotate: false
+  xy: 1, 287
+  size: 154, 140
+  orig: 159, 143
+  offset: 2, 2
+  index: -1
+09
+  rotate: false
+  xy: 159, 286
+  size: 157, 138
+  orig: 159, 143
+  offset: 0, 3
+  index: -1
+06
+  rotate: false
+  xy: 1, 697
+  size: 158, 131
+  orig: 159, 143
+  offset: 0, 7
+  index: -1
+01
+  rotate: false
+  xy: 159, 1
+  size: 158, 140
+  orig: 159, 143
+  offset: 0, 2
+  index: -1
+02
+  rotate: false
+  xy: 318, 286
+  size: 158, 137
+  orig: 159, 143
+  offset: 0, 4
+  index: -1
+14
+  rotate: false
+  xy: 159, 143
+  size: 156, 140
+  orig: 159, 143
+  offset: 1, 2
+  index: -1
+11
+  rotate: false
+  xy: 1, 1
+  size: 156, 142
+  orig: 159, 143
+  offset: 1, 1
+  index: -1

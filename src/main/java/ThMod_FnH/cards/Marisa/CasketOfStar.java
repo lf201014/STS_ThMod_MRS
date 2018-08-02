@@ -7,45 +7,47 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import basemod.abstracts.CustomCard;
-import ThMod_FnH.patches.AbstractCardEnum;
-import ThMod_FnH.powers.Marisa.SingualrityPower;
 
-public class Singualrity extends CustomCard{
-    public static final String ID = "Singualrity";
+import ThMod_FnH.patches.AbstractCardEnum;
+import ThMod_FnH.powers.Marisa.CasketOfStarPlusPower;
+import ThMod_FnH.powers.Marisa.CasketOfStarPower;
+import basemod.abstracts.CustomCard;
+
+public class CasketOfStar extends CustomCard{
+    public static final String ID = "CasketOfStar";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
     public static final String IMG_PATH = "img/cards/feelNoPain.png";
     private static final int COST = 2;
-    private static final int STC = 2;
-    private static final int UPG_STC = 1;
 
-    public Singualrity() {
+    public CasketOfStar() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
         		AbstractCard.CardType.POWER, AbstractCardEnum.MARISA_COLOR,
         		AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = STC;
     }
   
-  public void use(AbstractPlayer p, AbstractMonster m)
-  {
-	  AbstractDungeon.actionManager.addToBottom(
-			  new ApplyPowerAction(p , p , 
-					  new SingualrityPower(p, this.magicNumber), this.magicNumber));
-  }
-  
-  public AbstractCard makeCopy()
-  {
-    return new Singualrity();
-  }
-  
-  public void upgrade()
-  {
-    if (!this.upgraded)
-    {
-        upgradeName();
-        upgradeMagicNumber(UPG_STC);
+    public void use(AbstractPlayer p, AbstractMonster m){
+    	if (this.upgraded) {
+    		AbstractDungeon.actionManager.addToBottom(
+    				new ApplyPowerAction(p , p , new CasketOfStarPlusPower(p,1), 1));
+    	}else {
+    		AbstractDungeon.actionManager.addToBottom(
+    				new ApplyPowerAction(p , p , new CasketOfStarPower(p,1), 1));
+    	}
+    	
     }
-  }
+  
+    public AbstractCard makeCopy(){
+    	return new CasketOfStar();
+    }
+  
+    public void upgrade(){
+    	if (!this.upgraded){
+    		upgradeName();
+			this.rawDescription = DESCRIPTION_UPG;
+			initializeDescription();
+    	}
+    }
 }

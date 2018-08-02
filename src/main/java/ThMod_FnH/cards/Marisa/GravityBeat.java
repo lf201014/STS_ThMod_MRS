@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -21,8 +22,9 @@ public class GravityBeat extends CustomCard {
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	private static final int COST = 2;
 	private static final int ATTACK_DMG = 12;
-	private static final int UPGRADE_PLUS_DMG = 4;
+	private static final int UPGRADE_PLUS_DMG = 3;
 	private static final int WK = 1;
+	private static final int UPG_WK = 1;
 
 	public GravityBeat() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -34,7 +36,7 @@ public class GravityBeat extends CustomCard {
 		this.magicNumber = this.baseMagicNumber = WK;
 	}
 
-	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
+	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(
 			new DamageAllEnemiesAction(p, this.multiDamage,this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 		
@@ -52,7 +54,7 @@ public class GravityBeat extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(0);
+			upgradeMagicNumber(UPG_WK);
 			upgradeDamage(UPGRADE_PLUS_DMG);
 		}
 	}

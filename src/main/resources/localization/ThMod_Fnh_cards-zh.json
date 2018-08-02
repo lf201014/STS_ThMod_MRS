@@ -152,8 +152,8 @@
 	},
 	"ChargingUp": {
 		"NAME": "魔炮准备",
-		"DESCRIPTION": "获得 !M! 层 蓄力 。 NL 增幅  [B]  :获得层数翻倍。",
-		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+		"DESCRIPTION": "获得 !M! 层 蓄力 。 NL 增幅  [B]  :获得额外2层。",
+		"UPGRADE_DESCRIPTION": "获得 !M! 层 蓄力 。 NL 增幅  [B]  :获得额外3层。"
 	},
 	"LuminesStrike": {
 		"NAME": "声光冲击",
@@ -172,7 +172,7 @@
 	},
 	"MaximisePower": {
 		"NAME": "火力全开!",
-		"DESCRIPTION": "将你的 蓄力 层数转化为能量,抽 !M! 张卡，使你本回合内攻击力翻倍。NL 消耗 。",
+		"DESCRIPTION": "将你的 蓄力 层数转化为能量,抽 !M! 张卡， NL 使你本回合内攻击力翻倍。NL 消耗 。",
 		"UPGRADE_DESCRIPTION": "Convert your Charge-up stacks into energy,you no longer gain Charge-up. NL Draw 2 less cards each turn.add 1 cost to all your attack cards. NL Double your damage."
 	},
 	"StarlightTyphoon": {
@@ -272,7 +272,7 @@
 	},
 	"CircumpolarStar": {
 		"NAME": "拱极星",
-		"DESCRIPTION": "获得 !B! 点 格挡 ，抽 !D! 张卡。使这张牌在本场战斗中抽卡数+1。",
+		"DESCRIPTION": "获得 !B! 点 格挡 ，抽 !M! 张卡。使这张牌在本场战斗中抽卡数+1。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MuscleSpark": {
@@ -308,6 +308,41 @@
 	"GasGiant": {
 		"NAME": "气态巨行星",
 		"DESCRIPTION": "获得 !B! 点格挡和 !M! 层 易伤 。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"CasketOfStar": {
+		"NAME": "星之器",
+		"DESCRIPTION": "每当你获得 格挡 ，将一张 火花 加入手牌。",
+		"UPGRADE_DESCRIPTION": "每当你获得 格挡 ，将一张 升级 过的 火花 加入手牌。"
+	},
+	"ChargeUpSpray": {
+		"NAME": "蓄力喷射",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张卡受到了 蓄力 的影响，获得  [B]  并抽 !M! 张卡。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"EnergyRecoil": {
+		"NAME": "能量反冲",
+		"DESCRIPTION": "获得 !B!  格挡 。 NL 消耗掉你的 蓄力 直到其层数小于4，每用掉4层 蓄力 ，获得额外 !D!  格挡。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"GalacticHalo": {
+		"NAME": "星晕",
+		"DESCRIPTION": "本回合内，你每打出一张攻击牌，回合结束时获得 !M! 格挡。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"ManaConvection": {
+		"NAME": "魔力对流",
+		"DESCRIPTION": "抽 !M! 张卡，然后消耗2张卡。 NL 如果你的 蓄力 层数大于或等于6层，则消耗6层蓄力，获得  [B]  [B]  。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"ManaRampage": {
+		"NAME": "魔力暴走",
+		"DESCRIPTION": "本回合内，你的下一张攻击牌将被打出X次。",
+		"UPGRADE_DESCRIPTION": "本回合内，你的下一张攻击牌将被打出X+1次。"
+	},
+	"StarBarrage": {
+		"NAME": "星星弹幕",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果你的抽排堆有15张或以上的卡，施加一层 虚弱 。 NL 如果你的弃牌堆有15张或以上的卡，施加一层 易伤 。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"WWWWWWWWWWW": {

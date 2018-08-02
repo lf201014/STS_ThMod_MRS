@@ -150,7 +150,42 @@
     "SuperNovaPower": {
     "NAME": "超新星",
     "DESCRIPTIONS": [
-      "你每打出一张非攻击卡，向你手牌加入一张 灼伤 。 NL 在你的回合结束时， 消耗 你所有的手牌，其中每有一张 灼伤 ，获得一点 力量 。",
+      "你每 消耗 一张 灼伤 ，获得",
+      "层 力量 。 NL 你每打出一张非攻击卡，向你手牌加入一张 灼伤 。 NL 在你的回合结束时， 消耗 你所有的手牌"
+    ]
+  },
+    "CasketOfStarPlusPower": {
+    "NAME": "星之器",
+    "DESCRIPTIONS": [
+      "每当你获得 格挡 ，将",
+      "张 升级 过的 火花 加入手牌。"
+    ]
+  },
+    "CasketOfStarPower": {
+    "NAME": "星之器",
+    "DESCRIPTIONS": [
+      "每当你获得 格挡 ，将",
+      "张 火花 加入手牌。"
+    ]
+  },
+    "GalacticHaloPower": {
+    "NAME": "星晕",
+    "DESCRIPTIONS": [
+      "你每打出一张攻击牌，回合结束时获得",
+      "格挡。"
+    ]
+  },
+    "ManaRampagePower": {
+    "NAME": "魔力暴走",
+    "DESCRIPTIONS": [
+      "你的下一张攻击牌将被打出",
+      "次。"
+    ]
+  },
+    "WWWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWW",
       "WWWWWWWWWWW"
     ]
   },

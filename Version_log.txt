@@ -78,10 +78,24 @@ v0.0.5 ¡ùdamage info : before Amplify(upgraded)/after Amplify(upgraded)
 *Added Uncommon Skill Dark Matter
 *Added Uncommon Skill Morale Depletion
 *Added Rare Power Supernova
-
-
-
-
+v0.0.6
+*Corrected some descriptions
+*now the model and motion of Marisa is a short frame animation rather than a single floating picture previously
+*Gravity Beat : damage adjusted from 12(16) to 12(15) ,weak apply increased from 1 to 1(2)
+*Singularity : cost increased from 1 to 2
+*Dragon Meteor : cost increased from 1 to 2
+*Event Horizon : can only add Attack to your hand now
+*Supernova : Burn exhausted by any means will provide Strength now
+*Fixed the issue that Morale Depletion will never appear in normal runs due to incorrect rarity settting
+*Morale Depletion is Uncommon card now
+*Shooting Echo is Uncommon card now
+*Added Common Attack Star Barrage
+*Added Uncommon Attack Charge-Up Spray
+*Added Common Skill Energy Recoil
+*Added Uncommon Skill Mana Convection
+*Added RARE Skill Mana Rampage
+*Added Uncommon Power Casket Of Star
+*Added Uncommon Power Galactic Halo
 
 
 

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import ThMod_FnH.ThMod;
+import ThMod_FnH.action.DiscToHandATKOnly;
 
 import com.megacrit.cardcrawl.localization.PowerStrings;
 
@@ -49,7 +50,7 @@ public class EventHorizonPower
 		AbstractPlayer p = AbstractDungeon.player;
 		if (!p.discardPile.isEmpty()) {
 			flash();
-			AbstractDungeon.actionManager.addToBottom(new DiscardPileToHandAction(1));
+			AbstractDungeon.actionManager.addToBottom(new DiscToHandATKOnly(1));
 			this.cnt--;
 		}
 
@@ -57,11 +58,7 @@ public class EventHorizonPower
 	}
 	
 	public void updateDescription(){
-		if (this.cnt>0)
-			this.description = 
-					(DESCRIPTIONS[0]+this.amount+DESCRIPTIONS[1]);
-		else	
-			this.description = (DESCRIPTIONS[0]+this.amount+DESCRIPTIONS[1]);
+		this.description = (DESCRIPTIONS[0]+this.amount+DESCRIPTIONS[1]);
 	}
 	
 }

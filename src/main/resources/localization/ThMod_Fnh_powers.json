@@ -150,8 +150,36 @@
     "SuperNovaPower": {
     "NAME": "SuperNova",
     "DESCRIPTIONS": [
-      "Whenever you play a non-Attack card ,add a Burn to your hand. NL Exhaust you hand when your turn ends,Gain 1 Strength for each Burn exhausted.",
-      "WWWWWWWWWWW"
+      "Gain ",
+      " Strength for each Burn exhausted. NL Whenever you play a non-Attack card ,add a Burn to your hand. NL Exhaust you hand when your turn ends."
+    ]
+  },
+    "CasketOfStarPlusPower": {
+    "NAME": "Casket Of Star",
+    "DESCRIPTIONS": [
+      "Add ",
+      " upgraded Spark to your hand whenever you gain Block ."
+    ]
+  },
+    "CasketOfStarPower": {
+    "NAME": "Casket Of Star",
+    "DESCRIPTIONS": [
+      "Add ",
+      " Spark to your hand whenever you gain Block ."
+    ]
+  },
+    "GalacticHaloPower": {
+    "NAME": "Galactic Halo",
+    "DESCRIPTIONS": [
+      "At the end of your turn,gain ",
+      " block for each Attack you played this turn."
+    ]
+  },
+    "ManaRampagePower": {
+    "NAME": "Mana Rampage",
+    "DESCRIPTIONS": [
+      "Your next attack will be played X",
+      " times this turn."
     ]
   },
     "WWWWWWWWWWWWWW": {

@@ -21,7 +21,7 @@ public class MoraleDepletionPower extends AbstractPower{
 			this.amount = -1;
 			this.type = AbstractPower.PowerType.BUFF;
 			updateDescription();
-			this.img = new Texture("img/powers/steadyPulse.png");
+			this.img = new Texture("img/powers/darkEmbrace.png");
 		}
  
 		@Override

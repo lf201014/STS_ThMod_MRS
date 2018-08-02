@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.cards.status.Burn;
-import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -27,38 +26,34 @@ public class SuperNovaPower extends AbstractPower{
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+	private AbstractPlayer p;
   
-	public SuperNovaPower(AbstractCreature owner){
+	public SuperNovaPower(AbstractCreature owner,int amount){
 		this.name = NAME;
 		this.ID = POWER_ID;
 		this.owner = owner;
-		this.amount = -1;
+		this.amount = amount;
 		this.type = AbstractPower.PowerType.BUFF;
 		updateDescription();
 		this.img = new Texture("img/powers/impulse.png");
-	
-	}
-
-	@Override
-	public void stackPower(int stackAmount) {
-		 
+		this.p = AbstractDungeon.player;
 	}
 	
 	public void atEndOfTurn(boolean isPlayer) {
-		AbstractPlayer p = AbstractDungeon.player;
-		if (!p.hand.isEmpty()) {
+		if (!this.p.hand.isEmpty()) {
 			flash();
-			int cnt = 0;
-			for (AbstractCard c:p.hand.group) {
-				if ((c instanceof Burn)||(c instanceof Burn_MRS))
-					cnt++;
+			for (AbstractCard c:this.p.hand.group) {
 				AbstractDungeon.actionManager.addToBottom(
-						new ExhaustSpecificCardAction(c, p.hand));
+						new ExhaustSpecificCardAction(c,this.p.hand));
 			}
-			if (cnt>0)
-				AbstractDungeon.actionManager.addToBottom(
-						new ApplyPowerAction(p, p, new StrengthPower(p, cnt), cnt));
+				
 		}
+	}
+	
+	public void onExhaust(AbstractCard card) {
+		if ((card instanceof Burn)||(card instanceof Burn_MRS))
+			AbstractDungeon.actionManager.addToBottom(
+					new ApplyPowerAction(p, p, new StrengthPower(p, this.amount), this.amount));
 	}
 	
 	public void onUseCard(AbstractCard card, UseCardAction action) {
@@ -82,12 +77,12 @@ public class SuperNovaPower extends AbstractPower{
 	}
 	@Override
 	public void onInitialApplication() {
-		ThMod.logger.info("SuperNovaPower : onApplyPower : replaceBurn");
+		ThMod.logger.info("SuperNovaPower : onInitialApplication : replaceBurn");
 		replaceBurn();
 	}
  
 	public void updateDescription(){
-		this.description = (DESCRIPTIONS[0]);
+		this.description = (DESCRIPTIONS[0]+this.amount+DESCRIPTIONS[1]);
  	}
 	
 	private void replaceBurn() {

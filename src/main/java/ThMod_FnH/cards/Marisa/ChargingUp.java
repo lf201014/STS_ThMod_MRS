@@ -18,6 +18,7 @@ public class ChargingUp extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 0;
 	private static final int STC = 3;
 	private static final int AMP = 1;
@@ -46,6 +47,8 @@ public class ChargingUp extends CustomCard {
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeMagicNumber(UPG_STC);
+			this.rawDescription = DESCRIPTION_UPG;
+			initializeDescription();
 		}
 	}
 }

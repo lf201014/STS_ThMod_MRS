@@ -7,19 +7,14 @@ import org.apache.logging.log4j.Logger;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
-import com.megacrit.cardcrawl.actions.utility.ExhaustAllEtherealAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
-import basemod.abstracts.CustomPlayer;
-import basemod.animations.SpriterAnimation;
 import ThMod_FnH.ThMod;
 import ThMod_FnH.patches.ThModClassEnum;
+import basemod.abstracts.CustomPlayer;
 
 public class Marisa extends CustomPlayer {
 	
@@ -29,12 +24,13 @@ public class Marisa extends CustomPlayer {
 	public static final String MY_CHARACTER_CORPSE = "img/char/MyCharacter/corpse.png"; // dead corpse
 	public static final Logger logger = LogManager.getLogger(ThMod.class.getName());
 	//private static final float[] layerSpeeds = { 20.0F, 0.0F, -40.0F, 0.0F, 0.0F, 5.0F, 0.0F, -8.0F, 0.0F, 8.0F };
-    //public static final String MY_CHARACTER_SKELETON_ATLAS = "img/char/MyCharacter/idle/skeleton.atlas"; // spine animation atlas
-    //public static final String MY_CHARACTER_SKELETON_JSON = "img/char/MyCharacter/idle/skeleton.json"; // spine animation json
-    public static final String SPRITER_ANIM_FILEPATH = "img/char/MyCharacter/marisa_test.scml"; // spriter animation scml
+    public static final String MY_CHARACTER_SKELETON_ATLAS = "img/char/Marisa/Marisa_v0.atlas"; // spine animation atlas
+    public static final String MY_CHARACTER_SKELETON_JSON = "img/char/Marisa/Marisa_v0.json"; // spine animation json
+    //public static final String SPRITER_ANIM_FILEPATH = "img/char/MyCharacter/marisa_test.scml"; // spriter animation scml
 
 	public Marisa (String name, PlayerClass setClass) {
-		super(name, setClass, null, null , null ,new SpriterAnimation(SPRITER_ANIM_FILEPATH));
+		//super(name, setClass, null, null , null ,new SpriterAnimation(SPRITER_ANIM_FILEPATH));
+		super(name, setClass, null, null, (String)null,(String) null);
 		//public CustomPlayer(String name, PlayerClass playerClass, String[] orbTextures, String orbVfxPath, float[] layerSpeeds, AbstractAnimation animation)
 		
 		this.dialogX = (this.drawX + 0.0F * Settings.scale); // set location for text bubbles
@@ -47,11 +43,12 @@ public class Marisa extends CustomPlayer {
 				MY_CHARACTER_CORPSE, 
 				getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
 		
-		//loadAnimation(MY_CHARACTER_SKELETON_ATLAS, MY_CHARACTER_SKELETON_JSON, 1.0F); 
+		loadAnimation(MY_CHARACTER_SKELETON_ATLAS, MY_CHARACTER_SKELETON_JSON, 1.0F); 
 		// if you're using modified versions of base game animations or made animations in spine make sure to include this bit and the following lines
-		//AnimationState.TrackEntry e = this.state.setAnimation(0, "animation", true);
+		AnimationState.TrackEntry e = this.state.setAnimation(0, "Sprite", true);
+		e.setTime(e.getEndTime() * MathUtils.random());
+	    e.setTimeScale(0.9F);
 		logger.info("init finish");
-		
 	}
 
 	public static ArrayList<String> getStartingDeck() { // starting deck 'nuff said

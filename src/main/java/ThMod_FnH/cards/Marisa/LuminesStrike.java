@@ -65,7 +65,7 @@ public class LuminesStrike
 	}
 
 
-	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
+	public void use(AbstractPlayer p, AbstractMonster m) {
 		
 		if (ThMod.Amplified(this.costForTurn+AMP, AMP))
 			AbstractDungeon.actionManager.addToBottom(
