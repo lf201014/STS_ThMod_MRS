@@ -223,7 +223,7 @@
 	},
 	"EventHorizon": {
 		"NAME": "Event Horizon",
-		"DESCRIPTION": "!M! time(s) each turn,when you activate Amplify ,you can pick a card from your discard pile to your hand.",
+		"DESCRIPTION": "!M! time(s) each turn,when you activate Amplify ,you can pick a Attack from your discard pile to your hand.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"PulseMagic": {
@@ -344,6 +344,46 @@
 	"StarBarrage": {
 		"NAME": "Star Barrage",
 		"DESCRIPTION": "Deal !D! damage. NL If your deck has 15 or more cards,apply 1 Weak. NL If your discard pile has 15 or more cards ,apply 1 Vulnerable .",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"AFriendsGift": {
+		"NAME": "A Friend's Gift",
+		"DESCRIPTION": "This card will be retained at end of turn. NL Deal !D! damage, Exhaust . NL Amplify  [B]  :Deal !B! damage instead, don't Exhaust .",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"BinaryStars": {
+		"NAME": "Binary Stars",
+		"DESCRIPTION": "Choose 1 card from Black Flare Star and White Dwarf to add to your hand. Exhaust . NL Amplify  [B]  :Add both to your hand instead.",
+		"UPGRADE_DESCRIPTION": "Choose 1 card from Upgraded Black Flare Star and upgraded White Dwarf to add to your hand. Exhaust . NL Amplify  [B]  :Add both to your hand instead."
+	},
+	"CollectingQuirk": {
+		"NAME": "Collecting Quirk",
+		"DESCRIPTION": "For each relic you have ,deal !D! damage to random enemy.",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"FungusSplash": {
+		"NAME": "Fungus Splash",
+		"DESCRIPTION": " Exhaust a card,throw a potion at your target. NL The type of potion depends on the type of the card you exhausted. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": " Exhaust a card,throw a potion at your target. NL The type of potion depends on the type of the card you exhausted ."
+	},
+	"PropBag": {
+		"NAME": "Portable Prop Bag",
+		"DESCRIPTION": "Grant you a random relic from Orichacum,Red Skull and Art Of War. NL When the battle ends,you lose that relic. NL Exhaust .",
+		"UPGRADE_DESCRIPTION": " Innate . NL Grant you a random relic from Orichacum,Red Skull and Art Of War. NL When the battle ends,you lose that relic. NL Exhaust ."
+	},
+	"BlackFlareStar": {
+		"NAME": "Black Flare Star",
+		"DESCRIPTION": "Can only be played when you have 3 or more cards in your hand. NL Discard any number of your hand,gain !B! block for each.",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"WhiteDwarf": {
+		"NAME": "White Dwarf",
+		"DESCRIPTION": "Can only be played when you have 3 or less cards in your hand. NL Deal !D! damage (1.5 × the size of your discard pile).",
+		"UPGRADE_DESCRIPTION": "Can only be played when you have 3 or less cards in your hand. NL Deal !D! damage (2 × the size of your discard pile)."
+	},
+	"WWWWWWWWWWWW": {
+		"NAME": "WWWWWWWWWWW",
+		"DESCRIPTION": "WWWWWWWWWWW",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"WWWWWWWWWWWWW": {

@@ -1,36 +1,40 @@
 package ThMod_FnH.action;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.LocalizedStrings;
-import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
-import java.util.ArrayList;
+
+import ThMod_FnH.cards.special.BlackFlareStar;
+import ThMod_FnH.cards.special.WhiteDwarf;
 
 public class BinaryStarsAction extends AbstractGameAction{
 	private AbstractPlayer p;
+	private boolean upg;
   
-	public BinaryStarsAction(int amount){
+	public BinaryStarsAction(boolean upgraded){
 		this.p = AbstractDungeon.player;
-		setValues(this.p, AbstractDungeon.player, amount);
+		setValues(this.p, AbstractDungeon.player, 1);
 		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
 		this.duration = Settings.ACTION_DUR_MED;
+		this.upg = upgraded;
 	}
   
 	public void update(){
 		CardGroup tmp;
 		if (this.duration == Settings.ACTION_DUR_MED){
 			tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-			
-			AbstractDungeon.gridSelectScreen.open(tmp, this.amount, "Choose", false);
+			AbstractCard c = new BlackFlareStar();
+			if (this.upg)
+				c.upgrade();
+			tmp.addToTop(c);
+			c = new WhiteDwarf();
+			if (this.upg)
+				c.upgrade();
+			tmp.addToTop(c);
+			AbstractDungeon.gridSelectScreen.open(tmp, 1, "Choose", false);
 			tickDuration();
 			return;
 		}
@@ -39,9 +43,9 @@ public class BinaryStarsAction extends AbstractGameAction{
 				c.unhover();
 				if (this.p.hand.size() == 10){
 					this.p.createHandIsFullDialog();
+					this.p.discardPile.addToTop(c);
 				}
 				else{
-					this.p.discardPile.removeCard(c);
 					this.p.hand.addToTop(c);
 				}
 				this.p.hand.refreshHandLayout();

@@ -44,7 +44,7 @@
 	},
 	"EventHorizon": {
 		"NAME": "黑洞边缘",
-		"DESCRIPTION": "每回合 !M! 次，当你发动 增幅 时，可以选择弃牌堆的一张卡加入手牌。"
+		"DESCRIPTION": "每回合 !M! 次，当你发动 增幅 时，可以选择弃牌堆的一张攻击加入手牌。"
 	},
 	"FinalSpark": {
 		"NAME": "究极火花",
@@ -136,13 +136,13 @@
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"UpSweep": {
-		"NAME": "623B",
+		"NAME": "升龙帚",
 		"DESCRIPTION": "造成 !D! 点伤害， 获得 !M! 层 蓄力 。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"GuidingStar": {
 		"NAME": "北极星",
-		"DESCRIPTION": "将此卡的一张复制洗入抽排堆。 NL  消耗 。",
+		"DESCRIPTION": "将此卡的一张复制洗入抽牌堆。 NL  消耗 。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"OrrerysSun": {
@@ -211,9 +211,9 @@
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"JA": {
-		"NAME": "JA",
-		"DESCRIPTION": "造成 !D! 点伤害，将一张“623C”,一张 火花 ,一张“魔女射线”加入手牌。",
-		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害，将一张“623C”,一张 火花 ,一张“魔女射线”加入手牌并将他们 升级 。"
+		"NAME": "连段起手",
+		"DESCRIPTION": "造成 !D! 点伤害，将一张“升龙帚”,一张 火花 ,一张“魔女射线”加入手牌。",
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害，将一张“升龙帚”,一张 火花 ,一张“魔女射线”加入手牌并将他们 升级 。"
 	},
 	"AbsoluteMagnitude": {
 		"NAME": "绝对星等",
@@ -266,7 +266,7 @@
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"6A": {
-		"NAME": "6A",
+		"NAME": "尻击",
 		"DESCRIPTION": "造成 !D! 点伤害，获得造成伤害数量的 格挡 。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
@@ -342,8 +342,43 @@
 	},
 	"StarBarrage": {
 		"NAME": "星星弹幕",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果你的抽排堆有15张或以上的卡，施加一层 虚弱 。 NL 如果你的弃牌堆有15张或以上的卡，施加一层 易伤 。",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果你的抽牌堆有15张或以上的卡，施加一层 虚弱 。 NL 如果你的弃牌堆有15张或以上的卡，施加一层 易伤 。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"AFriendsGift": {
+		"NAME": "友人之赠",
+		"DESCRIPTION": "这张卡不会因为回合结束而进入弃牌堆。 NL 造成 !D! 伤害， 消耗 。 NL 增幅  [B]  :伤害变为 !B! ， 不再 消耗 。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"BinaryStars": {
+		"NAME": "双星",
+		"DESCRIPTION": "从 黑耀星 和 白矮星 中选择一张卡加入手牌。 消耗 。 NL 增幅  [B]  :将两张都加入手牌。",
+		"UPGRADE_DESCRIPTION": "从 升级 过的 黑耀星 和 白矮星 中选择一张卡加入手牌。 消耗 。 NL 增幅  [B]  :将两张都加入手牌。"
+	},
+	"CollectingQuirk": {
+		"NAME": "收集癖",
+		"DESCRIPTION": "你每有一个遗物，随机造成 !D! 点伤害。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"FungusSplash": {
+		"NAME": "蘑菇投掷",
+		"DESCRIPTION": " 消耗 一张卡，对你的目标使用一瓶 药剂 。 NL 药剂 的种类 取决于所消耗卡的种类 。 NL 消耗 。",
+		"UPGRADE_DESCRIPTION": " 消耗 一张卡，对你的目标使用一瓶 药剂 。 NL 药剂 的种类 取决于所消耗卡的种类 。"
+	},
+	"PropBag": {
+		"NAME": "便携道具包",
+		"DESCRIPTION": "从 奥利哈钢、孙子兵法和红骷髅中随机给与你一个 遗物 。 NL 战斗结束后失去该 遗物 。 NL 消耗 。",
+		"UPGRADE_DESCRIPTION": " 固有 。 从 奥利哈钢、孙子兵法和红骷髅中随机给与你一个 遗物 。 NL 战斗结束后失去该 遗物 。 NL 消耗 。"
+	},
+	"BlackFlareStar": {
+		"NAME": "黑耀星",
+		"DESCRIPTION": "只有你手牌数大于等于3时才能被打出。 NL 丢弃任意张牌，每丢一张获得 !B!  格挡 。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"WhiteDwarf": {
+		"NAME": "白矮星",
+		"DESCRIPTION": "只有在你手牌数小于等于3时才能被打出。 NL 造成 !D! 伤害 (1.5 × 你的弃卡堆的卡数).",
+		"UPGRADE_DESCRIPTION": "只有在你手牌数小于等于3时才能被打出。 NL 造成 !D! 伤害 (2 × 你的弃卡堆的卡数)."
 	},
 	"WWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWW",

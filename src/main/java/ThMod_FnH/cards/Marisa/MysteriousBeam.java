@@ -23,7 +23,7 @@ public class MysteriousBeam
 	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	
-	private static final int COST = 0;
+	private static final int COST = 1;
 
 	public MysteriousBeam() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,

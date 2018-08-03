@@ -58,4 +58,10 @@ public class BlazeAwayPower
 	public void updateDescription(){
 		this.description = (DESCRIPTIONS[0]+ this.amount +DESCRIPTIONS[1]);
 	}
+	
+	public void atEndOfTurn(boolean isPlayer){
+		if (isPlayer) {
+			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+		}
+	}
 }

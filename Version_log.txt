@@ -96,7 +96,14 @@ v0.0.6
 *Added RARE Skill Mana Rampage
 *Added Uncommon Power Casket Of Star
 *Added Uncommon Power Galactic Halo
-
+v0.0.6
+*Corrected some descriptions
+*Added Rare Skill BinaryStars
+*Added Rare Attack CollectingQuirk
+*Added Uncommon Skill FungusSpray
+*Added Uncommon Skill Portable Prop Bag
+*Added Special Skill Black Flare Star
+*Added Special Attack White Dwarf
 
 
 

@@ -28,9 +28,17 @@ public class TreasureHunterDamageAction
   
 	public void update(){
 		if ((this.duration == 0.1F) && (this.target != null)){
-			AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+			AbstractDungeon.effectList.add(
+					new FlashAtkImgEffect(
+							this.target.hb.cX, this.target.hb.cY,
+							AbstractGameAction.AttackEffect.BLUNT_HEAVY
+							)
+					);
 			
-			ThMod.logger.info("TreasureHunterDamageAction : target : "+this.target.id+" ; damage : "+this.info.base); 
+			ThMod.logger.info(
+					"TreasureHunterDamageAction : target : "+this.target.id
+					+" ; damage : "+this.info.base
+					); 
 			
 			this.target.damage(this.info);
 			AbstractMonster mon = (AbstractMonster) this.target;
@@ -42,14 +50,18 @@ public class TreasureHunterDamageAction
 			
 			ThMod.logger.info("TreasureHunterDamageAction : Checking : Tier :"+mon.type.toString()); 
 			
-			if ((mon.type != AbstractMonster.EnemyType.NORMAL)||(mon.id == "Orb Walker")) {
+			if ((mon.type != AbstractMonster.EnemyType.NORMAL)
+					||(mon.id == "Orb Walker")) {
 				
 				ThMod.logger.info("TreasureHunterDamageAction : Checking : isDying :"+mon.isDying+" ; Current hp : "+mon.currentHealth); 
 				
-				if (((((AbstractMonster)this.target).isDying) || (this.target.currentHealth <= 0)) && (!this.target.halfDead)){
+				if (((((AbstractMonster)this.target).isDying)
+						|| (this.target.currentHealth <= 0)) && (!this.target.halfDead)){
 					AbstractRelic r = AbstractDungeon.returnRandomRelic(this.tier);
 					ThMod.logger.info("TreasureHunterDamageAction : Granting relic :"+r.relicId);
-					AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, r);
+					AbstractDungeon.getCurrRoom().spawnRelicAndObtain(
+							Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, r
+							);
 					r.flash();
 				}
 			}

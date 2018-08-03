@@ -12,12 +12,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import ThMod_FnH.powers.Marisa.ChargeUpPower;
 
 public class BigCrunchAction extends AbstractGameAction{
-	private boolean upgraded = false;
-  
 	public BigCrunchAction(AbstractCreature source,boolean upgraded) {
 		setValues(AbstractDungeon.player, source, -1);
 		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
-		this.upgraded = upgraded;
 	}
   
 	public void update() {
