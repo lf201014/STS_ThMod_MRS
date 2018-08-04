@@ -56,6 +56,8 @@ public class BinaryStars extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
+			this.rawDescription = cardStrings.DESCRIPTION;
+			initializeDescription();
 		}
 	}
 }

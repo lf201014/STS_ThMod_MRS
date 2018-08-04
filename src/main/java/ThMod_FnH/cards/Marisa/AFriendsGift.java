@@ -61,9 +61,18 @@ public class AFriendsGift
 			
 	}
 	
-	public void triggerWhenDrawn() {
-		if (!this.isEthereal)
-			this.retain = true;
+	@Override
+	public void applyPowers(){
+		super.applyPowers();
+		this.retain = true;
+	}
+	
+	@Override
+	public void triggerOnEndOfPlayerTurn(){
+		if (this.isEthereal) {
+			AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand));
+		}
+		this.upgradeDamage(2);
 	}
 
 	public AbstractCard makeCopy() {

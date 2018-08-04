@@ -39,7 +39,7 @@ public class MagicChant extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBlock(UPG_RTN);
+			upgradeMagicNumber(UPG_RTN);
 		}
 	}
 }

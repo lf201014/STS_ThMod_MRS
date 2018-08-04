@@ -24,10 +24,10 @@ public class ChargeUpSpray
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 7;
-	private static final int UPGRADE_PLUS_DMG = 2;
-	private static final int DRAW = 1;
-	private static final int UPG_DRAW = 1;
+	private static final int ATTACK_DMG = 8;
+	private static final int UPGRADE_PLUS_DMG = 12;
+	private static final int DRAW = 2;
+	//private static final int UPG_DRAW = 0;
 
 	public ChargeUpSpray() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -56,7 +56,7 @@ public class ChargeUpSpray
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeDamage(UPGRADE_PLUS_DMG);
-			upgradeMagicNumber(UPG_DRAW);
+			//upgradeMagicNumber(UPG_DRAW);
 		}
 	}
 }

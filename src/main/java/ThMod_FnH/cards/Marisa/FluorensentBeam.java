@@ -28,7 +28,7 @@ public class FluorensentBeam
 	private static final int COST = 0;
 	private static final int ATK_DMG = 4;
 	private static final int UPG_DMG = 2;
-	private static final int AMP_DMG = 6;
+	private static final int AMP_DMG = 8;
 	private static final int UPG_AMP = 3;
 	private static final int AMP = 2;
 	
@@ -50,7 +50,7 @@ public class FluorensentBeam
 		
 		if ( ThMod.Amplified(AMP+this.costForTurn,AMP) )
 			AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p,
-					this.multiAmpDamage,this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+					this.multiAmpDamage,DamageType.HP_LOSS, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 		else
 			AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p,
 					this.multiDamage, DamageType.HP_LOSS ,AbstractGameAction.AttackEffect.SLASH_DIAGONAL));		

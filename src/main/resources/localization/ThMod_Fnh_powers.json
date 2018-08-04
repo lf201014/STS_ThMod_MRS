@@ -37,8 +37,8 @@
   	"SatellIllusPower": {
     "NAME": "Satellite Illusion",
     "DESCRIPTIONS": [
-      "Innate. NL When you use a card that doesn't exist in your master deck,gain ",
-      " [B]."
+      "Innate. NL When you use a card that doesn't exist in your master deck,draw ",
+      " card."
     ]
   },
   	"TempStrength": {

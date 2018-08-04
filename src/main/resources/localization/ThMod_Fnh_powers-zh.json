@@ -37,8 +37,8 @@
     "SatellIllusPower": {
     "NAME": "卫星幻觉",
     "DESCRIPTIONS": [
-      "每当你使用一张不在你卡组中的卡时，获得",
-      " 能量。"
+      "每当你使用一张不在你卡组中的卡时，抽",
+      " 张卡。"
     ]
   },
     "TempStrength": {

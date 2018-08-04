@@ -5,7 +5,9 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,6 +16,7 @@ import com.megacrit.cardcrawl.core.Settings.*;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
@@ -105,13 +108,29 @@ public class ThMod implements PostExhaustSubscriber,
 			res = true;
 		} else
 		if  (EnergyPanel.totalCount >=COS ){
-			AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(-AMP));
+			AbstractDungeon.actionManager.addToBottom(
+					new GainEnergyAction(-AMP)
+					);
 			res = true;
 		}
 		if (res) {
-			AbstractDungeon.actionManager.addToTop(new GrandCrossAction());
-			if (AbstractDungeon.player.hasPower("EventHorizonPower"))
-				AbstractDungeon.player.getPower("EventHorizonPower").onSpecificTrigger();
+			AbstractDungeon.actionManager.addToTop(
+					new GrandCrossAction()
+					);
+			if (p.hasPower("EventHorizonPower"))
+				p.getPower("EventHorizonPower").onSpecificTrigger();
+			if (p.hasRelic("AMDumbbell")) {
+				AbstractRelic r = p.getRelic("AMDumbbell");
+				AbstractDungeon.actionManager.addToTop(
+						new RelicAboveCreatureAction(AbstractDungeon.player, r) 
+						);
+				AbstractDungeon.actionManager.addToTop(
+						new ApplyPowerAction(
+								p, p,
+								new StrengthPower(p, 1),
+								1)
+						);
+			}
 		}
 			
 		return res;
@@ -155,6 +174,10 @@ public class ThMod implements PostExhaustSubscriber,
 		logger.info("Begin editting relics.");
   	
 		BaseMod.addRelicToCustomPool(new MiniHakkero(), AbstractCardEnum.MARISA_COLOR.toString());
+		BaseMod.addRelicToCustomPool(new EnhancedHakkero(), AbstractCardEnum.MARISA_COLOR.toString());
+		BaseMod.addRelicToCustomPool(new EnhancedBroom(), AbstractCardEnum.MARISA_COLOR.toString());
+		BaseMod.addRelicToCustomPool(new MagicArmor(), AbstractCardEnum.MARISA_COLOR.toString());
+		BaseMod.addRelicToCustomPool(new AMDumbbell(), AbstractCardEnum.MARISA_COLOR.toString());
   	
 		logger.info("Relics editting finished.");
   	}
@@ -237,7 +260,7 @@ public class ThMod implements PostExhaustSubscriber,
 		BaseMod.addCard(new CollectingQuirk());
 		UnlockTracker.unlockCard("CollectingQuirk");
 		
-		//skill£º29
+		//skill£º28
 		//Common : 7
 		BaseMod.addCard(new MilkyWay());
 		UnlockTracker.unlockCard("MilkyWay");
@@ -253,7 +276,7 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("IllusionStar");
 		BaseMod.addCard(new EnergyRecoil());
 		UnlockTracker.unlockCard("EnergyRecoil");
-		//Uncommon : 15
+		//Uncommon : 14
 		BaseMod.addCard(new StarDustReverie());
 		UnlockTracker.unlockCard("StarDustReverie");
 		BaseMod.addCard(new MagicAbsorber());
@@ -266,8 +289,6 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("SuperPerseids");
 		BaseMod.addCard(new BlazeAway());
 		UnlockTracker.unlockCard("BlazeAway");
-		BaseMod.addCard(new EnergyFlow());
-		UnlockTracker.unlockCard("EnergyFlow");
 		BaseMod.addCard(new ChargingUp());
 		UnlockTracker.unlockCard("ChargingUp");
 		BaseMod.addCard(new CircumpolarStar());
@@ -381,7 +402,7 @@ public class ThMod implements PostExhaustSubscriber,
 		BaseMod.addKeyword(new String[] {"\u706b\u82b1"},
 				"\u706b\u82b1\u662f\u4e00\u5f20\u6d88\u8017\u4e3a\u0030\u7684\u653b\u51fb\u724c");
 		BaseMod.addKeyword(new String[] {"\u84c4\u529b"},
-				"\u6bcf\u0036\u5c42\u84c4\u529b\u4f1a\u4f7f\u4f60\u7684\u4e0b\u4e00\u6b21\u653b\u51fb\u4f24\u5bb3\u7ffb\u4e00\u500d\u3002");
+				"\u6bcf8\u5c42\u84c4\u529b\u4f1a\u4f7f\u4f60\u7684\u4e0b\u4e00\u6b21\u653b\u51fb\u4f24\u5bb3\u7ffb\u4e00\u500d\u3002");
 		BaseMod.addKeyword(new String[] {"\u589e\u5e45"},
 				"\u5f53\u4f60\u7684\u8d39\u7528\u8db3\u591f\u4f7f\u7528\u8fd9\u5f20\u724c\u66f4\u9ad8\u7ea7\u7684\u6548\u679c\u65f6\uff0c\u4f7f\u7528\u66f4\u9ad8\u7ea7\u7684\u6548\u679c\u3002");
 		BaseMod.addKeyword(new String[] {"amplify", "Amplify"},
@@ -389,10 +410,10 @@ public class ThMod implements PostExhaustSubscriber,
 		BaseMod.addKeyword(new String[] {"Spark","spark"},
 				"Spark is an attack card cost 0 energy.");
 		BaseMod.addKeyword(new String[] {"Charge-up", "charge-up","chargeup","ChargeUp"},
-				"For every 6 stacks,double your damage once.");
+				"For every 8 stacks,double your damage.");
 		BaseMod.addKeyword(new String[] {
-				"depends on the type of the card you exhausted",
-				"Depends On The Type Of The Card You Exhausted"
+				"depends on the type of the card exhausted",
+				"Depends On The Type Of The Card Exhausted"
 				}, "Attack : Poison Potion ; NL Skill : Weak Potion ; NL Power : Fear Potion ; Status : Fire Potion ; Curse : Smoke Bomb .");
 		logger.info("Keywords setting finished.");
 	}

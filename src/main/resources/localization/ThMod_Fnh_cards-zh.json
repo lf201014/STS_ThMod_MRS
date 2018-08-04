@@ -171,8 +171,8 @@
 		"UPGRADE_DESCRIPTION": "将你接下来使用的攻击卡的复制加入手牌，该复制在回合内的费用为0. NL 增幅  [B]  :复制两张。"
 	},
 	"MaximisePower": {
-		"NAME": "火力全开!",
-		"DESCRIPTION": "将你的 蓄力 层数转化为能量,抽 !M! 张卡， NL 使你本回合内攻击力翻倍。NL 消耗 。",
+		"NAME": "火力全开！",
+		"DESCRIPTION": "将你的 蓄力 层数转化为能量,抽  !M!  张牌。使你本回合内攻击力翻倍。   消耗   。",
 		"UPGRADE_DESCRIPTION": "Convert your Charge-up stacks into energy,you no longer gain Charge-up. NL Draw 2 less cards each turn.add 1 cost to all your attack cards. NL Double your damage."
 	},
 	"StarlightTyphoon": {
@@ -276,13 +276,13 @@
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MuscleSpark": {
-		"NAME": "筋肉火花",
+		"NAME": "折射火花",
 		"DESCRIPTION": "造成 !D! 点伤害，之后手牌中所有攻击牌伤害增加造成伤害的数值。 NL  增幅  [B]  :伤害变为 !B! 点。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MagicChant": {
 		"NAME": "咏唱",
-		"DESCRIPTION": "选择 !M! 张卡 保留 到下一回合。获得所选卡片费用总和的 格挡 。",
+		"DESCRIPTION": "选择 !M! 张卡 保留 到下一回合。获得所选卡片费用总和的2倍的 格挡 。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"UnstableBomb": {
@@ -347,7 +347,7 @@
 	},
 	"AFriendsGift": {
 		"NAME": "友人之赠",
-		"DESCRIPTION": "这张卡不会因为回合结束而进入弃牌堆。 NL 造成 !D! 伤害， 消耗 。 NL 增幅  [B]  :伤害变为 !B! ， 不再 消耗 。",
+		"DESCRIPTION": " 保留 。回合结束时伤害上升2点。 NL 造成 !D! 伤害， 消耗 。 NL 增幅  [B]  :伤害变为 !B! ， 不再 消耗 。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"BinaryStars": {

@@ -5,7 +5,31 @@
     "DESCRIPTIONS": [
       "When you play a card,gain 1  Charge-up ."
     ]
-  }, "WWWWWWWWWWW": {
+  }, "EnhancedHakkero": {
+    "NAME": "Enhanced Hakkero",
+    "FLAVOR": "At Marisa's request,Rinosuke repaired and upgraded the Hakkero once.Now its flame burns brighter.",
+    "DESCRIPTIONS": [
+      "When you play a card,gain 2  Charge-up ."
+    ]
+  }, "MagicArmor": {
+    "NAME": "Magic Armor",
+    "FLAVOR": "In fact I don't know what the hell is this,but since the Designer put it in the Plan,here it is.-programmer",
+    "DESCRIPTIONS": [
+      "When you draw a Status or Curse,gain 4 Block ."
+    ]
+  }, "EnhancedBroom": {
+    "NAME": "Enhanced Broom",
+    "FLAVOR": "Marisa always travels with her flying broom,and now it is upgraded.",
+    "DESCRIPTIONS": [
+      "For every 3 cards that cost 0 you played,draw a card."
+    ]
+  }, "AMDumbbell": {
+    "NAME": "Amplitude Modulation Dumbbell",
+    "FLAVOR": "This thing sounds really stupid.I really don't understand.-programmer",
+    "DESCRIPTIONS": [
+      "Whenever you activate Amplify effect ,gain 1 Strength."
+    ]
+  }, "WWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWW",
     "FLAVOR": "WWWWWWWWWWWWWWW",
     "DESCRIPTIONS": [

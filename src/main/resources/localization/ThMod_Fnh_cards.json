@@ -167,7 +167,7 @@
 		"UPGRADE_DESCRIPTION": "Add a copy of the next Attack you play,it cost 0 for the turn. NL Amplify  [B]  :add one more. NL  Exhaust ."
 	},
 	"MaximisePower": {
-		"NAME": "Max Power!",
+		"NAME": "Max Power",
 		"DESCRIPTION": "Convert your Charge-up stacks into energy. NL Draw !M! cards. NL Double your damage in this turn. NL Exhaust .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWW"
 	},
@@ -277,13 +277,13 @@
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MuscleSpark": {
-		"NAME": "Muscle Spark",
+		"NAME": "Refraction Spark",
 		"DESCRIPTION": "Deal !D! damage,then increase the damage of all Attack in your hand for damage dealt. NL Amplify  [B]  :Deal !B! damage instead.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MagicChant": {
 		"NAME": "Magic Chant",
-		"DESCRIPTION": "Choose !M! to retain this turn,gain block equals to total cost of cards you chose.",
+		"DESCRIPTION": "Choose !M! to retain this turn,gain block equals to total twice the cost of cards you chose.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"UnstableBomb": {
@@ -348,9 +348,9 @@
 	},
 	"AFriendsGift": {
 		"NAME": "A Friend's Gift",
-		"DESCRIPTION": "This card will be retained at end of turn. NL Deal !D! damage, Exhaust . NL Amplify  [B]  :Deal !B! damage instead, don't Exhaust .",
+		"DESCRIPTION": " Retain . NL Deal !D! damage.Increase its damage by 2 when your turn ends. Exhaust . NL Amplify  [B]  :Deal !B! damage instead, don't Exhaust .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
-	},
+	}, 
 	"BinaryStars": {
 		"NAME": "Binary Stars",
 		"DESCRIPTION": "Choose 1 card from Black Flare Star and White Dwarf to add to your hand. Exhaust . NL Amplify  [B]  :Add both to your hand instead.",

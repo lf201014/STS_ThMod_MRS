@@ -13,12 +13,12 @@ import ThMod_FnH.ThMod;
 import ThMod_FnH.powers.Marisa.ChargeUpPower;
 import basemod.abstracts.CustomRelic;
 
-public class MiniHakkero extends CustomRelic {
-    public static final String ID = "MiniHakkero";
-    private static final String IMG = "img/relics/test1.png";
+public class EnhancedHakkero extends CustomRelic {
+    public static final String ID = "EnhancedHakkero";
+    private static final String IMG = "img/relics/test2.png";
 	
-    public MiniHakkero() {
-        super(ID, new Texture(IMG), RelicTier.STARTER, LandingSound.MAGICAL);
+    public EnhancedHakkero() {
+        super(ID, new Texture(IMG), RelicTier.BOSS, LandingSound.MAGICAL);
     }
     
     public String getUpdatedDescription() {
@@ -26,42 +26,52 @@ public class MiniHakkero extends CustomRelic {
     }
     
     public AbstractRelic makeCopy() {
-        return new MiniHakkero();
+        return new EnhancedHakkero();
     }
+    
+    public void obtain(){
+    	if (AbstractDungeon.player.hasRelic("MiniHakkero")) {
+    		instantObtain(AbstractDungeon.player, 0, false);
+    	} else {
+    		super.obtain();
+    	}
+    }
+    
     public void onUseCard(AbstractCard card, UseCardAction action) {
     	flash();
     	ThMod.logger.info("Applying ChargeUpPower");
 		AbstractDungeon.actionManager.addToTop(
-				new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new ChargeUpPower(AbstractDungeon.player,1),1));
+				new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new ChargeUpPower(AbstractDungeon.player,2),2));
     	AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
     }
+    
     public void atBattleStartPreDraw() {
     	
-    	ThMod.logger.info("MiniHakkero : Start Marking");
+    	ThMod.logger.info("EnhancedHakkero : Start Marking");
     	AbstractPlayer p = AbstractDungeon.player;
     	
-    	ThMod.logger.info("MiniHakkero : Checking DiscardPile");
+    	ThMod.logger.info("EnhancedHakkero : Checking DiscardPile");
     	if (!p.discardPile.isEmpty())
     		for (AbstractCard c : p.discardPile.group) {
     			if (c.cardID != "RitualDagger")
     				c.misc = 1;
-    			ThMod.logger.info("MiniHakkero : Marking "+c.cardID);
+    			ThMod.logger.info("EnhancedHakkero : Marking "+c.cardID);
     		}
     	
-    	ThMod.logger.info("MiniHakkero : Checking Draw Pile");
+    	ThMod.logger.info("EnhancedHakkero : Checking Draw Pile");
     	if (!p.drawPile.isEmpty())
     		for (AbstractCard c : p.drawPile.group) {
     			if (c.cardID != "RitualDagger")
     				c.misc = 1;
-    			ThMod.logger.info("MiniHakkero : Marking "+c.cardID);
+    			ThMod.logger.info("EnhancedHakkero : Marking "+c.cardID);
     		}
 
-    	ThMod.logger.info("MiniHakkero : Checking Hand");
+    	ThMod.logger.info("EnhancedHakkero : Checking Hand");
     	if (!p.hand.isEmpty())
     		for (AbstractCard c : p.hand.group) {
     			if (c.cardID != "RitualDagger")
     				c.misc = 1;
-    			ThMod.logger.info("MiniHakkero : Marking "+c.cardID);
+    			ThMod.logger.info("EnhancedHakkero : Marking "+c.cardID);
     		}
     }
 }

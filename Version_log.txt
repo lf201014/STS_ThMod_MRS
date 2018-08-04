@@ -52,7 +52,7 @@ v0.0.3\v0.0.4 - 2018.7.31 ¡ùdamage info : before Amplify(upgraded)/after Amplify
 *Added Uncommon Skill Circumpolar Star
 v0.0.5 ¡ùdamage info : before Amplify(upgraded)/after Amplify(upgraded)
 *Corrected descriptions of some cards
-*Lumines Strike will recieve all attack modifications AFTER caculated its damage
+*Lumines Strike will recieve all attack modifications AFTER caculated its base damage
 *Cards added by Open Universe ,Star Dust Reveries and Illusion Star will be truly random
 *Fixed the bug that 6A and Musle Spark may return negative number when caculating damage dealt
 *Blazing Star : damage adjusted from 20(27) / 26(35) to 21(27) / 28(36)
@@ -64,7 +64,7 @@ v0.0.5 ¡ùdamage info : before Amplify(upgraded)/after Amplify(upgraded)
 *Fixed the issue that Earth Light Ray will never appear in normal runs due to incorrect rarity settting
 *Earth Light Ray is Uncommon card now
 *Open Universe will Exhaust now
-*Grand Cross : damage adjusted from 14(18) to 14(20)
+*Grand Cross : damage adjusted from 14(18) to 14(20)s
 *Mysterious Beam : cost increased from 0 to 1
 *Robbery : damage reduced from 9(12) to 7(10)
 *Robbery will Exhaust now
@@ -96,7 +96,7 @@ v0.0.6
 *Added RARE Skill Mana Rampage
 *Added Uncommon Power Casket Of Star
 *Added Uncommon Power Galactic Halo
-v0.0.6
+v0.0.7
 *Corrected some descriptions
 *Added Rare Skill BinaryStars
 *Added Rare Attack CollectingQuirk
@@ -104,6 +104,20 @@ v0.0.6
 *Added Uncommon Skill Portable Prop Bag
 *Added Special Skill Black Flare Star
 *Added Special Attack White Dwarf
-
-
-
+v0.0.8
+*Corrected some descriptions
+*Charge-up now need 8 rather than 6 stacks to multiple your damage *And i hate this
+*Dark Spark no longer add burn to your hand
+*Blazing Star : damage increased from 21(27)/28(36) to 24(30)/30(40)
+*Fluoresent Beam : Amplified damage increased from 10(15) to 12(17)
+*FungusSplash : card ->potion : Attack :change from Poison Potion to Fear Potion; Power : from Fear Potion to Poison Potion
+*Charge-Up Spray:damage increased from 7(10) to 8(12),card draw adjusted from 1(2) to 2
+*Magic Chant : block gain changed from total cost of chosen cards to twice the total cost of chosen cards
+*Muscle Spark : name changed to Refraction Spark
+*A Friend's Gift : Amplified damage decreased from 14(20) to 12(18)
+*A Friend's Gift :damage will increase by 2 when your turn ends
+*Collecting Quirk : cost increased from 1 to 2
+*Added Boss Relic Enhanced Hakkero
+*Added Uncommon Relic Magic Armor
+*Added Uncommon Relic Enhanced Broom
+*Added Shop Relic Amplitude Modulation Dumbbell

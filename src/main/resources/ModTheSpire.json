@@ -4,7 +4,7 @@
 	"author_list": ["Flynn", "Hell"],
 	"description": "Adds Marisa from Touhou Project as a new playable character.",
 	"dependencies": ["basemod"], 
-	"version": "0.0.5",
-	"sts_version": "07-26-2018",
+	"version": "0.0.8",
+	"sts_version": "08-02-2018",
 	"mts_version": "2.9.0"
 }

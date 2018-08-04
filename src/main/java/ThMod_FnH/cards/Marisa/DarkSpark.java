@@ -1,19 +1,20 @@
 package ThMod_FnH.cards.Marisa;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.status.Burn;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.actions.common.*;
 
-import basemod.abstracts.CustomCard;
 import ThMod_FnH.action.DarkSparkUpgAction;
 import ThMod_FnH.action.SparkCostAction;
 import ThMod_FnH.patches.AbstractCardEnum;
+import basemod.abstracts.CustomCard;
 
 public class DarkSpark 
 	extends CustomCard {
@@ -38,7 +39,7 @@ public class DarkSpark
 		this.baseMagicNumber = this.magicNumber = DMG_ADD;
 	}
 
-	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
+	public void use(AbstractPlayer p, AbstractMonster m) {
 		
 		AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
 				new DamageInfo(p, this.baseDamage, this.damageTypeForTurn),
@@ -48,7 +49,6 @@ public class DarkSpark
     	
     	AbstractDungeon.actionManager.addToBottom(new DarkSparkUpgAction(this.upgraded));
 
-	    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Burn(), 1));
 		AbstractDungeon.actionManager.addToBottom(new SparkCostAction());
 	}
 

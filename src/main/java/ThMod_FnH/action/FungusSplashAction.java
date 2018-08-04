@@ -60,7 +60,7 @@ public class FungusSplashAction extends AbstractGameAction{
 		AbstractPotion p;
 		switch (type) {
 		case ATTACK:
-			p = new PoisonPotion();
+			p = new FearPotion();
 			p.use(target);
 			break;
 		case SKILL:
@@ -68,7 +68,7 @@ public class FungusSplashAction extends AbstractGameAction{
 			p.use(target);
 			break;
 		case POWER:
-			p = new FearPotion();
+			p = new PoisonPotion();
 			p.use(target);
 			break;
 		case STATUS:
