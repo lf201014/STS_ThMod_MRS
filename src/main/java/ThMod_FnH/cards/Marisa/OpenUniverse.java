@@ -1,21 +1,19 @@
 package ThMod_FnH.cards.Marisa;
 
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDrawPileEffect;
 
-import basemod.abstracts.CustomCard;
 import ThMod_FnH.ThMod;
 import ThMod_FnH.patches.AbstractCardEnum;
+import basemod.abstracts.CustomCard;
 
-@SuppressWarnings("unused")
 public class OpenUniverse extends CustomCard {
 	public static final String ID = "OpenUniverse";
 	public static final String IMG_PATH = "img/cards/Defend.png";
@@ -37,19 +35,17 @@ public class OpenUniverse extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m){
 		boolean amp = ThMod.Amplified(this.costForTurn+AMP , AMP);
 
-		ThMod.logger.info("SuperPerseids : generationg cards");
+		ThMod.logger.info("OpenUniverse : generationg cards");
 		
 	    for (int i = 0; i < 5; i++){
 	        AbstractCard card = AbstractDungeon.getCard(ThMod.RollRarity()).makeStatEquivalentCopy();
 	        if (this.upgraded)
 	        	card.upgrade();
 	        if (amp) {
-	        	card.cost = 0;
-	        	card.costForTurn = 0;
-	        	card.updateCost(0);
-	        	card.applyPowers();
-	        }
-			ThMod.logger.info("SuperPerseids : adding : "+card.cardID);
+		    	card.freeToPlayOnce = true;
+		    	card.applyPowers();
+		    }
+			ThMod.logger.info("OpenUniverse : adding : "+card.cardID);
 			
 	        AbstractDungeon.effectList.add(new ShowCardAndAddToDrawPileEffect(card, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, true));
 	        
@@ -58,14 +54,14 @@ public class OpenUniverse extends CustomCard {
 	        //p.drawPile.addToRandomSpot(card);
 	    }
 	    
-		ThMod.logger.info("SuperPerseids : shuffling");
+		ThMod.logger.info("OpenUniverse : shuffling");
 	    
 	    p.drawPile.shuffle();
 	    for (AbstractRelic r : p.relics)
 	    	r.onShuffle();
 	    
 	     
-		ThMod.logger.info("SuperPerseids : done");
+		ThMod.logger.info("OpenUniverse : done");
 	}
 
 	public AbstractCard makeCopy() {

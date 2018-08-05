@@ -25,7 +25,7 @@ public class ChargeUpSpray
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 8;
-	private static final int UPGRADE_PLUS_DMG = 12;
+	private static final int UPGRADE_PLUS_DMG = 3;
 	private static final int DRAW = 2;
 	//private static final int UPG_DRAW = 0;
 

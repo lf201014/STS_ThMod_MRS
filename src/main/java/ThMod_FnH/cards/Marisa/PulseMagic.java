@@ -1,8 +1,10 @@
 package ThMod_FnH.cards.Marisa;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -29,17 +31,20 @@ public class PulseMagic
 	public PulseMagic() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,
-				AbstractCard.CardTarget.ENEMY);
+				AbstractCard.CardTarget.ALL_ENEMY);
 
 		this.baseDamage = this.damage = ATTACK_DMG;
+		this.isMultiDamage = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-				new DamageInfo(p, this.damage, this.damageTypeForTurn),
-					AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+		AbstractDungeon.actionManager.addToBottom(
+				new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AttackEffect.BLUNT_LIGHT)
+				);
 		
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p,p,new PulseMagicPower(p)));
+		AbstractDungeon.actionManager.addToBottom(
+				new ApplyPowerAction(p,p,new PulseMagicPower(p))
+				);
 	}
 
 	public AbstractCard makeCopy() {

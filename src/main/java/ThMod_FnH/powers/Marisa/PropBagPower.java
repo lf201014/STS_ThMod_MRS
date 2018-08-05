@@ -37,6 +37,7 @@ public class PropBagPower extends AbstractPower{
 		AbstractDungeon.getCurrRoom().spawnRelicAndObtain(
 				Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, r
 				);
+		r.atBattleStart();
 		updateDescription();
 	}
 	

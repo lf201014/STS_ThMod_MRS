@@ -21,7 +21,7 @@
 	},
 	"DarkSpark": {
 		"NAME": "Dark Spark",
-		"DESCRIPTION": "Deal !D! damage,draw 2 cards. NL Add a Burn to your hand. NL Add !M! damage to all 'Spark' cards in your hand.",
+		"DESCRIPTION": "Deal !D! damage,draw 2 cards. NL Add !M! damage to all 'Spark' cards in your hand.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
 	},
 	"DeepEcologicalBomb": {
@@ -158,7 +158,7 @@
 	},
 	"OpenUniverse": {
 		"NAME": "Open Universe",
-		"DESCRIPTION": "Add 5 random cards to draw pile. Exhaust . NL  Amplify  [B]  :Set their base cost to 0.",
+		"DESCRIPTION": "Add 5 random cards to draw pile. Exhaust . NL  Amplify  [B]  :Cards added can be played for free once.",
 		"UPGRADE_DESCRIPTION": "Add 5 random upgraded cards to draw pile. exhausted . NL  Amplify  [B]  :Set their base cost to 0."
 	},
 	"BlazeAway": {
@@ -228,7 +228,7 @@
 	},
 	"PulseMagic": {
 		"NAME": "Pulse Magic",
-		"DESCRIPTION": "Deal !D! damage,you don't need to pay extra [B] to activate Amplify this turn.",
+		"DESCRIPTION": "Deal !D! damage to all enemies,you don't need to pay extra [B] to activate Amplify this turn.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"D6C": {

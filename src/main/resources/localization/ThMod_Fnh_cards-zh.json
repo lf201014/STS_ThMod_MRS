@@ -21,7 +21,7 @@
 	},
 	"DarkSpark": {
 		"NAME": "暗色火花",
-		"DESCRIPTION": "造成 !D! 点伤害,抽两张卡，将一张 灼伤 加入手牌. NL 之后手牌中所有的“火花”牌伤害增加 !M! 点。",
+		"DESCRIPTION": "造成 !D! 点伤害,抽两张卡。 NL 之后手牌中所有的“火花”牌伤害增加 !M! 点。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
 	},
 	"DeepEcologicalBomb": {
@@ -122,7 +122,7 @@
 	},
 	"UltraShortWave": {
 		"NAME": "极超短波",
-		"DESCRIPTION": "获得 !M! 能量与 !B! 层 蓄力 。使你本局中的所有极超短波能量与 蓄力 获得量+1。",
+		"DESCRIPTION": "获得 !M! 能量与 !B! 层 蓄力 。使你本局中的所有 极超短波 能量与 蓄力 获得量+1。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MillisecondPulsars": {
@@ -162,8 +162,8 @@
 	},
 	"OpenUniverse": {
 		"NAME": "开放宇宙",
-		"DESCRIPTION": "将五张随机卡牌洗入抽排堆。 消耗 。 NL  增幅  [B]  :加入的卡牌基础费用变为0.",
-		"UPGRADE_DESCRIPTION": "将五张已 升级 的随机卡牌洗入抽排堆。消耗 。 NL  增幅  [B]  :加入的卡牌基础费用变为0."
+		"DESCRIPTION": "将五张随机卡牌洗入抽排堆。 消耗 。 NL  增幅  [B]  :加入的卡牌可以免费使用一次.",
+		"UPGRADE_DESCRIPTION": "将五张已 升级 的随机卡牌洗入抽排堆。消耗 。 NL  增幅  [B]  :加入的卡牌可以免费使用一次."
 	},
 	"BlazeAway": {
 		"NAME": "连续发射",
@@ -227,7 +227,7 @@
 	},
 	"PulseMagic": {
 		"NAME": "脉冲魔术",
-		"DESCRIPTION": "造成 !D! 点伤害，本回合内你不再需要支付额外能量来发动 增幅 效果。",
+		"DESCRIPTION": "对所有敌人造成 !D! 点伤害，本回合内你不再需要支付额外能量来发动 增幅 效果。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"D6C": {

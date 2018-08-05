@@ -1,19 +1,16 @@
 package ThMod_FnH.cards.Marisa;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import basemod.abstracts.CustomCard;
+
 import ThMod_FnH.ThMod;
+import ThMod_FnH.action.WasteBombAction;
 import ThMod_FnH.patches.AbstractCardEnum;
-import ThMod_FnH.powers.Marisa.TempStrengthLoss;
+import basemod.abstracts.CustomCard;
 
 public class DeepEcologicalBomb 
 	extends CustomCard {
@@ -41,24 +38,15 @@ public class DeepEcologicalBomb
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		
-		AbstractMonster mon = AbstractDungeon.getMonsters().getRandomMonster(true);
-		if (mon != null) {
-			AbstractDungeon.actionManager.addToBottom(new DamageAction(mon,
-				new DamageInfo(p, this.damage, this.damageTypeForTurn),
-					AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mon, p, new TempStrengthLoss(mon, 3), 3));
-		}
+		AbstractDungeon.actionManager.addToBottom(
+				new WasteBombAction(this.damage)
+				);
 		
 		
 	    if ( ThMod.Amplified(AMP+this.costForTurn,AMP) ) {
-	    	mon = AbstractDungeon.getMonsters().getRandomMonster(true);
-	    	if (mon != null) {
-	    		AbstractDungeon.actionManager.addToBottom(new DamageAction(mon,
-	    			new DamageInfo(p, this.damage, this.damageTypeForTurn),
-	    			AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-	    		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mon, p, new TempStrengthLoss(mon, 3), 3));
-	    	}
-	    	
+	    	AbstractDungeon.actionManager.addToBottom(
+					new WasteBombAction(this.damage)
+					);
 	    }
 	}
 

@@ -23,6 +23,7 @@ public class ChargeUpPower
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	private int cnt;
+	private int ACT_STACK = 8;
   
 	public ChargeUpPower(AbstractCreature owner, int amount){
 		this.name = NAME;
@@ -51,7 +52,7 @@ public class ChargeUpPower
 		
 		ThMod.logger.info("ChargeUpPower : checking counter");
 
-		this.cnt = (int) Math.floor(this.amount/6);
+		this.cnt = (int) Math.floor(this.amount/ACT_STACK);
 		
 		ThMod.logger.info("ChargeUpPower : Done StackPower ; cnt : "+this.cnt);
 	}
@@ -73,7 +74,7 @@ public class ChargeUpPower
 			flash();
 			AbstractDungeon.actionManager.addToBottom(
 					new ApplyPowerAction(owner,owner,
-							new ChargeUpPower(owner,-cnt*6),-cnt*6)
+							new ChargeUpPower(owner,-cnt*ACT_STACK),-cnt*ACT_STACK)
 					);
 		}
 	}

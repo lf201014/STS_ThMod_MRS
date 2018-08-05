@@ -19,7 +19,7 @@ public class BlackFlareStar extends CustomCard {
 	public static final String IMG_PATH = "img/cards/pride.png";
 	private static final int COST = 0;
 	private static final int BLC_AMT = 5;
-	private static final int UPG_BLC = 7;
+	private static final int UPG_BLC = 2;
 
 	public BlackFlareStar() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
