@@ -30,22 +30,21 @@ public class MagicAbsorber extends CustomCard {
 
 		this.baseBlock = BLOCK_AMT;
 		this.magicNumber = this.baseMagicNumber = 1;
+		this.exhaust = true;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		
 		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-		
 		if (!p.powers.isEmpty()){
-			
 			ArrayList<AbstractPower> pows = new ArrayList<AbstractPower>();
 			for (AbstractPower pow : p.powers)
 				if (pow.type == AbstractPower.PowerType.DEBUFF)
 					pows.add(pow);
-			
 			if (!pows.isEmpty()) {
 				AbstractPower po = pows.get((int)Math.random()*pows.size());
-				AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,po));
+				AbstractDungeon.actionManager.addToBottom(
+						new RemoveSpecificPowerAction(p,p,po)
+						);
 			}
 		}
 	}

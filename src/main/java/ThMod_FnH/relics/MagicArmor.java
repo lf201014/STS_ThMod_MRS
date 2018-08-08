@@ -32,7 +32,7 @@ public class MagicArmor extends CustomRelic {
         		  new RelicAboveCreatureAction(AbstractDungeon.player, this)
         		  );
     		AbstractDungeon.actionManager.addToBottom(
-          		  new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 4)
+          		  new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 5)
           		  );
     	}
     }

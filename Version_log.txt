@@ -121,3 +121,42 @@ v0.0.8
 *Added Uncommon Relic Magic Armor
 *Added Uncommon Relic Enhanced Broom
 *Added Shop Relic Amplitude Modulation Dumbbell
+v0.0.9
+*Corrected some descriptions
+*Fixed the issue that Amplified Deep Ecological Bomb may not tigger the second time if it kills a target in the first blow
+*Fixed the issue that Black Flare Star and Charge-Up Spray has too high stats when upgraded due to incorrect number input
+*Orrey's Sun : Damage 7 ( 10 ) to 8 ( 11 )
+*Energy Recoil : base Block 7 ( 10 ) -> 7 ( 9 ),extra Block 5 -> 4 ( 5 )
+*Energy Convection : extra effect Charge-up consume 6 -> 8
+*Ultimate Shortwave now use a power to achieve enhance effect
+*Enhanced Hakkero : will add a Burn to your hand at the start of turn
+*Enhanced Hakkero : name changed to Bewitched Hakkero
+*Re-added Ascension Patch
+*Fixed the issue that Witch of Greed will never appear in normal runs due to incorrect rarity settting
+*Witch of Greed is Common Card now
+*Fixed the issue that the actual damage of Dark Spark don't affected by any damage modifier due to incorrect Var name input
+*Dark Matter : Add to deck -> add to discard pile
+*Dark Matter : No longer shuffles deck
+*Magic Armor : Block Gain 4 -> 5
+*Magic Armor : name changed to Black Magic Shield
+*Open Universe : Amplify : set base cost to 0 -> can be played for free once
+*Pulse Magic : Damage chosen target -> Damage all enemies
+*Max Power! : will discard all none-attack while your damage is doubled
+*Amplitude Modulation Dumbbell : Gain 1 strength on trigger -> increase the damage of all Attacks in your hand by 2
+*Amplitude Modulation Dumbbell : name changed to Amplify Wand
+*StarDustReverie : effect changed to "Put all cards in your hand back to draw pile,then add same number plus one random cards to your hand. These cards gain Exhaust and Ethereal "; and when upgraded ,Cards added won't gain Ehereal
+*Blazing Star : Damage 24 ( 30 ) / 30 ( 40 ) -> 15 ( 21 ) / 20 ( 28 )
+*Blazing Star : Now will Apply 1 Weak and 2 Vulnerable to target , and both apply 1 more stack when Amplified
+*Magic Absorber : Now will Exhaust
+*Earth Light Ray : Heal 5 ( 7 ) -> 4 ( 6 )
+*Starlight Typhoon : Number of Sparks to add + 1
+*Starlight Typhoon : Cost : 1 -> 2
+*Portable Prop Bag : Cost : 1 -> 0
+*Portable Prop Bag : Relics to add : Red Skull , Art of War , Orichalcum -> Amplify Wand , Art of War , Orichalcum
+*Treasure Hunter : now depends on room type ( if current room is a elite/Boss room ) and if target have "Minion" power to decide if grant bonus relic
+*Treasure Hunter : Bonus relic will be added to Battle Reward of current room ( means you'll get your bonus after battle )
+*Treasure Hunter : Bonus : Boss Slain : Boss relic -> Rare relic ; Elite Slain : Rare relic -> Common or Uncommon relic
+*Added Boss Relic Rampaging Magic Tools
+*Added Boss Relic Experimental Familiar
+*Added Uncommon Relic Bread of A Washoku Lover
+*Added Shop Relic Simple Charger

@@ -17,7 +17,7 @@
 	},
 	"BlazingStar": {
 		"NAME": "Blazing Star",
-		"DESCRIPTION": "Deal !D! damage,add an Burn to your hand. NL Amplify  [B] : !B! damage,apply 1 Weak and 2 Vulnerable,add one more Burn. "
+		"DESCRIPTION": "Deal !D! damage,apply !M! Weak and !M+1! Vulnerable ,add an Burn to your hand. NL Amplify  [B] : !B! damage,apply 1 additional Weak and Vulnerable stack,add one more Burn. "
 	},
 	"DarkSpark": {
 		"NAME": "Dark Spark",
@@ -67,7 +67,7 @@
 	},
 	"MagicAbsorber": {
 		"NAME": "Magic Absorber",
-		"DESCRIPTION": "Gain !B!  block  ,remove a random debuff."
+		"DESCRIPTION": "Gain !B!  block  ,remove a random debuff. NL Exhaust ."
 	},
 	"MasterSpark": {
 		"NAME": "Master Spark",
@@ -113,8 +113,8 @@
 	},
 	"StarDustReverie": {
 		"NAME": "Star Dust Reverie",
-		"DESCRIPTION": "Put all cards in your hand back to draw pile,then add same number plus one random cards to your hand.",
-		"UPGRADE_DESCRIPTION": "Put all cards in your hand back to draw pile,then add same number plus one upgraded random cards to your hand.."
+		"DESCRIPTION": "Put all cards in your hand back to draw pile,then add same number plus one random cards to your hand. These cards gain Exhaust and Ethereal .",
+		"UPGRADE_DESCRIPTION": "Put all cards in your hand back to draw pile,then add same number plus one random cards to your hand.These cards gain Exhaust ."
 	},
 	"UltraShortWave": {
 		"NAME": "Ultimate Shortwave",
@@ -128,7 +128,7 @@
 	},
 	"Spark": {
 		"NAME": "Spark",
-		"DESCRIPTION": "Deal !D! damage. NL  Exhaust . NL Ethereal.",
+		"DESCRIPTION": "Deal !D! damage. NL  Exhaust .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"UpSweep": {
@@ -159,7 +159,7 @@
 	"OpenUniverse": {
 		"NAME": "Open Universe",
 		"DESCRIPTION": "Add 5 random cards to draw pile. Exhaust . NL  Amplify  [B]  :Cards added can be played for free once.",
-		"UPGRADE_DESCRIPTION": "Add 5 random upgraded cards to draw pile. exhausted . NL  Amplify  [B]  :Set their base cost to 0."
+		"UPGRADE_DESCRIPTION": "Add 5 random upgraded cards to draw pile. Exhaust . NL  Amplify  [B]  :Cards added can be played for free once."
 	},
 	"BlazeAway": {
 		"NAME": "Blaze Away",
@@ -168,13 +168,13 @@
 	},
 	"MaximisePower": {
 		"NAME": "Max Power",
-		"DESCRIPTION": "Convert your Charge-up stacks into energy. NL Draw !M! cards. NL Double your damage in this turn. NL Exhaust .",
+		"DESCRIPTION": "Convert your Charge-up stacks into energy. NL Draw !M! cards. NL Double your damage and discard any non-Attack in your hand this turn. NL Exhaust .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWW"
 	},
 	"StarlightTyphoon": {
 		"NAME": "Starlight Typhoon",
-		"DESCRIPTION": " Exhaust  all non-Attack cards in your hand,add a Spark to your hand for each card  Exhaust ed.",
-		"UPGRADE_DESCRIPTION": " Exhaust  all non-Attack cards in your hand,add an upgraded Spark to your hand for each card  Exhaust ed."
+		"DESCRIPTION": " Exhaust  all non-Attack cards in your hand,add the same number plus 1 Spark to your hand.",
+		"UPGRADE_DESCRIPTION": " Exhaust  all non-Attack cards in your hand,add add the same number plus 1 upgraded Spark to your hand."
 	},
 	"SuperPerseids": {
 		"NAME": "Super Perseids",
@@ -258,7 +258,7 @@
 	},
 	"TreasureHunter": {
 		"NAME": "TreasureHunter",
-		"DESCRIPTION": "Deal !D! damage. NL If this kills an elite/a boss,gain a random rare/boss relic. NL Exhaust .",
+		"DESCRIPTION": "Deal !D! damage. NL If this kills an elite/a boss,gain a random rare/boss relic on victory. NL Exhaust .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"Robbery": {
@@ -303,8 +303,8 @@
 	},
 	"DarkMatter": {
 		"NAME": "Dark Matter",
-		"DESCRIPTION": "Shuffle 2 Dark Matter into your deck,gain !B! block when exhausted. NL Ethereal .",
-		"UPGRADE_DESCRIPTION": "Shuffle 2 Upgraded Dark Matter into your deck,gain !B! block when exhausted. NL Ethereal ."
+		"DESCRIPTION": "Shuffle 2 Dark Matter into your Discard Pile,gain !B! block when exhausted. NL Ethereal .",
+		"UPGRADE_DESCRIPTION": "Shuffle 2 Upgraded Dark Matter into your Discard Pile,gain !B! block when exhausted. NL Ethereal ."
 	},
 	"GasGiant": {
 		"NAME": "Gas Giant",
@@ -333,7 +333,7 @@
 	},
 	"ManaConvection": {
 		"NAME": "Mana Convection",
-		"DESCRIPTION": "Draw !M! cards,then exhaust 2. NL If your Charge-up stacks equals to or more than 6,lose 6 Charge-up and gain  [B]  [B]  .",
+		"DESCRIPTION": "Draw !M! cards,then exhaust 2. NL If your Charge-up stacks equals to or more than 8,lose 8 Charge-up and gain  [B]  [B]  .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"ManaRampage": {
@@ -368,8 +368,8 @@
 	},
 	"PropBag": {
 		"NAME": "Portable Prop Bag",
-		"DESCRIPTION": "Grant you a random relic from Orichacum,Red Skull and Art Of War. NL When the battle ends,you lose that relic. NL Exhaust .",
-		"UPGRADE_DESCRIPTION": " Innate . NL Grant you a random relic from Orichacum,Red Skull and Art Of War. NL When the battle ends,you lose that relic. NL Exhaust ."
+		"DESCRIPTION": "Grant you a random relic from Orichacum,Amplify Wand and Art Of War. NL When the battle ends,you lose that relic. NL Exhaust .",
+		"UPGRADE_DESCRIPTION": " Innate . NL Grant you a random relic from Orichacum,Amplify Wand and Art Of War. NL When the battle ends,you lose that relic. NL Exhaust ."
 	},
 	"BlackFlareStar": {
 		"NAME": "Black Flare Star",
@@ -378,8 +378,8 @@
 	},
 	"WhiteDwarf": {
 		"NAME": "White Dwarf",
-		"DESCRIPTION": "Can only be played when you have 3 or less cards in your hand. NL Deal !D! damage (1.5 × the size of your discard pile).",
-		"UPGRADE_DESCRIPTION": "Can only be played when you have 3 or less cards in your hand. NL Deal !D! damage (2 × the size of your discard pile)."
+		"DESCRIPTION": "Can only be played when you have 3 or less cards in your hand. NL Deal !D! damage (1.5 × size of your discard pile).Add 2 Burn to your hand.",
+		"UPGRADE_DESCRIPTION": "Can only be played when you have 3 or less cards in your hand. NL Deal !D! damage (2 × size of your discard pile).Add 2 Burn to your hand."
 	},
 	"WWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWW",

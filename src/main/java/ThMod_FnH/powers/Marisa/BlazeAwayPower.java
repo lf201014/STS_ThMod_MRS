@@ -50,7 +50,7 @@ public class BlazeAwayPower
 		
 		ThMod.logger.info("BlazeWayPower : removing power");
 		
-		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, "BlazeAwayPower"));
+		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, this));
 		
 		ThMod.logger.info("BlazeWayPower : all done");
 	}

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.Burn;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -28,11 +29,12 @@ public class BlazingStar
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	
 	private static final int COST = 2;
-	private static final int ATK_DMG = 24;
-	private static final int UPG_DMG = 7;
+	private static final int ATK_DMG = 15;
+	private static final int UPG_DMG = 5;
 	private static final int AMP_DMG = 6;
-	private static final int UPG_AMP = 4;
+	private static final int UPG_AMP = 2;
 	private static final int AMP = 1;
+	private static final int PW_APL = 1;
 	
 	public BlazingStar() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -42,29 +44,41 @@ public class BlazingStar
 		this.baseDamage = ATK_DMG;
 		this.ampNumber = AMP_DMG;
 		this.baseBlock = this.baseDamage + this.ampNumber;
+		this.magicNumber = this.baseMagicNumber = PW_APL;
 	}
 
-	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
-		
+	public void use(AbstractPlayer p, AbstractMonster m) {
+		int tmp = this.magicNumber;
 		if (ThMod.Amplified(AMP+this.costForTurn,AMP)) {
-			
-			AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-					new DamageInfo(p, this.block, this.damageTypeForTurn),AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-			
+			tmp++;
+			AbstractDungeon.actionManager.addToBottom(
+					new DamageAction(
+							m,
+							new DamageInfo(p, this.block, this.damageTypeForTurn),
+							AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+							)
+					);
 	    	AbstractDungeon.actionManager.addToBottom(
+	    			new MakeTempCardInHandAction(new Burn(), 1)
+	    			);
+		} else {
+			AbstractDungeon.actionManager.addToBottom(
+					new DamageAction(
+							m,
+							new DamageInfo(p, this.damage, this.damageTypeForTurn),
+							AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+							)
+					);
+		}
+	    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Burn(), 1));
+	    AbstractDungeon.actionManager.addToBottom(
 	    			new ApplyPowerAction(m, p, 
-	    					new VulnerablePower(m, 2, false), 2, true, AbstractGameAction.AttackEffect.NONE));	
-	    	
+	    					new VulnerablePower(m, tmp+1, false), tmp+1, true)
+	    			);	
 	    	AbstractDungeon.actionManager.addToBottom(
 	    	    	new ApplyPowerAction(m, p, 
-	    	    			new WeakPower(m, 1, false), 1, true, AbstractGameAction.AttackEffect.NONE));
-	    	
-	    	AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Burn(), 1));
-		}else		
-			AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-					new DamageInfo(p, this.damage, this.damageTypeForTurn),AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-		
-	    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Burn(), 1));
+	    	    			new WeakPower(m, tmp, false), tmp, true)
+	    	    	);
 	}
 
 	public AbstractCard makeCopy() {

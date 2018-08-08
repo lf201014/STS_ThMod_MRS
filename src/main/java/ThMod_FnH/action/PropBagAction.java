@@ -10,10 +10,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.ArtOfWar;
 import com.megacrit.cardcrawl.relics.Orichalcum;
-import com.megacrit.cardcrawl.relics.RedSkull;
 
 import ThMod_FnH.ThMod;
 import ThMod_FnH.powers.Marisa.PropBagPower;
+import ThMod_FnH.relics.AMDumbbell;
 
 public class PropBagAction
 	extends AbstractGameAction{
@@ -28,8 +28,8 @@ public class PropBagAction
 		
 		AbstractPlayer p = AbstractDungeon.player;
 		Boolean hasOri = false,
-				hasArt = false,
-				hasRed = false;
+				hasWand = false,
+				hasArt = false;
 		ThMod.logger.info("PropBagAction : Checking for relics");
 		
 		for (AbstractRelic r:p.relics) {
@@ -37,19 +37,19 @@ public class PropBagAction
 			case "Orichalcum":
 				hasOri = true;
 				break;
-			case "Red Skull":
-				hasRed = true;
-				break;
 			case "Art of War":
 				hasArt = true;
+				break;
+			case "AMDumbbell":
+				hasWand = true;
 				break;
 			}
 		}
 		ThMod.logger.info(
 				"PropBagAction : done checking :"
 				+ "has Orichalcum :"+hasOri
-				+ " ; has RedSkull : "+hasRed
-				+ " ; has Art of War : "+hasArt
+				+ " ; has ArtOfWar : "+hasArt
+				+ " ; has AMDumbbell : "+hasWand
 				);
 		ArrayList<AbstractRelic> rs = new ArrayList<AbstractRelic>();
 		AbstractRelic r;
@@ -57,12 +57,12 @@ public class PropBagAction
 			r = new Orichalcum();
 			rs.add(r);
 		}
-		if (!hasArt) {
-			r = new ArtOfWar();
+		if (!hasWand) {
+			r = new AMDumbbell();
 			rs.add(r);
 		}
-		if (!hasRed) {
-			r = new RedSkull();
+		if (!hasArt) {
+			r = new ArtOfWar();
 			rs.add(r);
 		}
 		if (rs.size()<=0) {

@@ -63,5 +63,6 @@ public class MiniHakkero extends CustomRelic {
     				c.misc = 1;
     			ThMod.logger.info("MiniHakkero : Marking "+c.cardID);
     		}
+    	
     }
 }

@@ -80,10 +80,6 @@ public class SuperNovaPower extends AbstractPower{
 		ThMod.logger.info("SuperNovaPower : onInitialApplication : replaceBurn");
 		replaceBurn();
 	}
- 
-	public void updateDescription(){
-		this.description = (DESCRIPTIONS[0]+this.amount+DESCRIPTIONS[1]);
- 	}
 	
 	private void replaceBurn() {
 		ArrayList<AbstractCard> temp = new ArrayList<AbstractCard>();
@@ -99,4 +95,9 @@ public class SuperNovaPower extends AbstractPower{
 			AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(new Burn_MRS(), 1));
 		}
 	}
+ 
+	public void updateDescription(){
+		this.description = (DESCRIPTIONS[0]+this.amount+DESCRIPTIONS[1]);
+ 	}
+	
 }

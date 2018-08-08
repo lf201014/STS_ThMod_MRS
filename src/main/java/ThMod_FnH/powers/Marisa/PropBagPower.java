@@ -32,7 +32,7 @@ public class PropBagPower extends AbstractPower{
 		this.img = new Texture("img/powers/diminish.png");
 		this.r = r;
 		this.p = AbstractDungeon.player;
-		this.rName = r.relicId;
+		this.rName = r.name;
 		ThMod.logger.info("PropBagPower : Granting relic : "+this.rName);
 		AbstractDungeon.getCurrRoom().spawnRelicAndObtain(
 				Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, r

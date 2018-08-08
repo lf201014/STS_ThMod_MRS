@@ -6,28 +6,52 @@
       "每打出一张卡，获得一层 蓄力 。"
     ]
   }, "EnhancedHakkero": {
-    "NAME": "增幅八卦炉",
-    "FLAVOR": "霖之助曾经在魔理沙的请求下修复并改进了迷你八卦炉。现在八卦炉的火更旺了。",
+    "NAME": "妖器八卦炉",
+    "FLAVOR": "受到万宝槌魔力影响的八卦炉的火力前所未有地强大；当然，使用这样的道具也是有代价的……",
     "DESCRIPTIONS": [
-      "每打出一张卡，获得两层  蓄力 。"
+      "每打出一张卡，获得两层  蓄力 。 NL 在你的回合开始时，向手牌里加入一张 灼伤 。"
     ]
   }, "MagicArmor": {
-    "NAME": "魔力护甲",
+    "NAME": "黑魔法盾",
     "FLAVOR": "说实话我也不知道这是个啥玩意儿，不过策划案里有这个，我就做了。——程序",
     "DESCRIPTIONS": [
-      "每当你抽到一张 诅咒 或 状态 ，获得4 格挡 。"
+      "每当你抽到一张 诅咒 或 状态 ，获得 5 格挡 。"
     ]
   }, "EnhancedBroom": {
-    "NAME": "魔力笤帚",
+    "NAME": "魔法笤帚",
     "FLAVOR": "魔理沙用来骑着飞来飞去的魔力法帚。",
     "DESCRIPTIONS": [
       "每使用3张0费牌抽一张卡。"
     ]
   }, "AMDumbbell": {
-    "NAME": "调幅哑铃",
-    "FLAVOR": "我得说这玩意的名字蠢爆了。不过反正也不是我的主意。——程序",
+    "NAME": "增幅魔杖",
+    "FLAVOR": "“这个遗物简介咋写啊”“中午给你吧，现在手里有点事儿”",
     "DESCRIPTIONS": [
-      "每当你使用 增幅 效果，获得1 力量 。"
+      "每当你使用 增幅 效果，手牌中的所有攻击卡 基础伤害 增加 2 。"
+    ]
+  }, "RampagingMagicTools": {
+    "NAME": "失控的魔法道具",
+    "FLAVOR": "It's been so long since anyone last used them,who knows what could happen?",
+    "DESCRIPTIONS": [
+      "每回合开始获得 [B] 。在每场战斗的第一回合获得3层随机DEBUFF（ 虚弱 、 脆弱 、 易伤 、 中毒 ）。"
+    ]
+  }, "ExperimentalFamiliar": {
+    "NAME": "试验型使魔",
+    "FLAVOR": "像个光球一样的使魔，虽然不太强但是绝对能帮上忙。",
+    "DESCRIPTIONS": [
+      "在回合开始时，将一张 火花 和一张随机卡片加入手卡。"
+    ]
+  }, "BreadOfAWashokuLover": {
+    "NAME": "和食主义者的面包",
+    "FLAVOR": "“你能记得清楚到今天为止自己吃过的面包的数量吗？”“13块。我是和食主义者。”",
+    "DESCRIPTIONS": [
+      "每当你 消耗 一张 状态 或 诅咒，恢复 1 点 生命 。累计触发13次后获得13点最大生命值，同时此遗物失效。"
+    ]
+  }, "SimpleLauncher": {
+    "NAME": "简易发射器",
+    "FLAVOR": "简单易上手，但是很好用。",
+    "DESCRIPTIONS": [
+      "现在你只需要6层蓄力来发动攻击力翻倍效果了。"
     ]
   }, "WWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWW",

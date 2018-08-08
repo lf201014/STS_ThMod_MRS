@@ -21,7 +21,7 @@ public class EarthLightRay extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 0;
-	private static final int HEAL_AMT = 5;
+	private static final int HEAL_AMT = 4;
 	private static final int UPG_HEAL = 2;
 	private int AMP = 2;
 	public static final boolean isAmp =true;

@@ -3,11 +3,12 @@ package ThMod_FnH.action;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.AbstractRelic.RelicTier;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
+import com.megacrit.cardcrawl.rooms.MonsterRoomElite;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 import ThMod_FnH.ThMod;
@@ -43,26 +44,33 @@ public class TreasureHunterDamageAction
 			this.target.damage(this.info);
 			AbstractMonster mon = (AbstractMonster) this.target;
 			
-			ThMod.logger.info("TreasureHunterDamageAction : Checking : type :"+mon.type.toString()); 
+			AbstractRoom curRoom = AbstractDungeon.getCurrRoom();
 			
-			if (mon.type == AbstractMonster.EnemyType.BOSS)
-				this.tier = RelicTier.BOSS;
-			
-			ThMod.logger.info("TreasureHunterDamageAction : Checking : Tier :"+mon.type.toString()); 
-			
-			if ((mon.type != AbstractMonster.EnemyType.NORMAL)
-					||(mon.id == "Orb Walker")) {
-				
-				ThMod.logger.info("TreasureHunterDamageAction : Checking : isDying :"+mon.isDying+" ; Current hp : "+mon.currentHealth); 
-				
-				if (((((AbstractMonster)this.target).isDying)
-						|| (this.target.currentHealth <= 0)) && (!this.target.halfDead)){
-					AbstractRelic r = AbstractDungeon.returnRandomRelic(this.tier);
-					ThMod.logger.info("TreasureHunterDamageAction : Granting relic :"+r.relicId);
-					AbstractDungeon.getCurrRoom().spawnRelicAndObtain(
-							Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, r
-							);
-					r.flash();
+			if (!(curRoom instanceof MonsterRoomBoss)){
+				while (this.tier == RelicTier.RARE)
+					this.tier = AbstractDungeon.returnRandomRelicTier();
+			}
+			ThMod.logger.info(
+					"TreasureHunterDamageAction : Checking : MonsterRoomElite :"
+							+((curRoom instanceof MonsterRoomElite))
+							+" ; MonsterRoomBoss :"
+							+(curRoom instanceof MonsterRoomBoss)
+							); 
+			if (
+					(curRoom instanceof MonsterRoomElite)||
+					(curRoom instanceof MonsterRoomBoss)
+					) {
+				ThMod.logger.info(
+						"TreasureHunterDamageAction : Checking : isDying :"+mon.isDying+
+						" ; Current hp : "+mon.currentHealth
+						); 
+				if (
+						((((AbstractMonster)this.target).isDying)|| (this.target.currentHealth <= 0)) && 
+						(!this.target.halfDead) &&
+						(!this.target.hasPower("Minion"))
+						){
+					ThMod.logger.info("TreasureHunterDamageAction : Granting relic tier :"+this.tier);
+					AbstractDungeon.getCurrRoom().addRelicToRewards(this.tier);
 				}
 			}
 			if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {

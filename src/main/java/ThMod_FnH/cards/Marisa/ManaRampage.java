@@ -19,6 +19,7 @@ public class ManaRampage extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = -1;
 	
 	public ManaRampage() {
@@ -26,7 +27,7 @@ public class ManaRampage extends CustomCard {
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
 
 	}
-	
+
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		int cnt = EnergyPanel.totalCount;
 		if (this.upgraded)
@@ -47,7 +48,7 @@ public class ManaRampage extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.rawDescription = cardStrings.DESCRIPTION;
+			this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;;
 			initializeDescription();
 		}
 	}

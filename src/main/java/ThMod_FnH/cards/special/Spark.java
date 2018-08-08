@@ -28,7 +28,6 @@ public class Spark extends CustomCard {
 				AbstractCard.CardTarget.ENEMY);
 
 	    this.exhaust = true;
-	    this.isEthereal = true;
 		this.baseDamage = ATTACK_DMG;
 		
 	}

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import ThMod_FnH.patches.AbstractCardEnum;
 import ThMod_FnH.powers.Marisa.ChargeUpPower;
+import ThMod_FnH.powers.Marisa.UltraShortWavePower;
 import basemod.abstracts.CustomCard;
 
 public class UltraShortWave extends CustomCard {
@@ -21,41 +22,56 @@ public class UltraShortWave extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int UPG_CHG = 2;
-	protected static int ene_gain;
-	protected static int chrg_gain;
+	private static final int GAIN = 1;
 	
 
 
 	public UltraShortWave() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
-		if (ene_gain <= 0)
-			ene_gain = 1;
-		if (chrg_gain <= 0)
-			chrg_gain = 1;
+		this.magicNumber = this.baseMagicNumber = GAIN;
+		this.block = this.baseBlock = GAIN;
 	}
 	
 	@Override
 	public void applyPowers(){
-		this.magicNumber = UltraShortWave.ene_gain;
-		this.block = UltraShortWave.chrg_gain;
-		if (this.upgraded)
-			this.block += UltraShortWave.UPG_CHG;
+		if (AbstractDungeon.player.hasPower("UltraShortWavePower")) {
+			int cnt = AbstractDungeon.player.getPower("UltraShortWavePower").amount;
+			this.magicNumber = cnt + this.baseMagicNumber;
+			this.block = cnt + this.baseBlock;
+			this.isMagicNumberModified =true;
+			this.isBlockModified = true;
+		} else {
+			this.magicNumber = this.baseMagicNumber;
+			this.block = this.baseBlock;
+		}
 	}
 	
 	@Override
 	public void calculateCardDamage(AbstractMonster mo){
-		this.magicNumber = UltraShortWave.ene_gain;
-		this.block = UltraShortWave.chrg_gain;
-		if (this.upgraded)
-			this.block += UltraShortWave.UPG_CHG;
+		if (AbstractDungeon.player.hasPower("UltraShortWavePower")) {
+			int cnt = AbstractDungeon.player.getPower("UltraShortWavePower").amount;
+			this.magicNumber = cnt + this.baseMagicNumber;
+			this.block = cnt + this.baseBlock;
+			this.isMagicNumberModified =true;
+			this.isBlockModified = true;
+		} else {
+			this.magicNumber = this.baseMagicNumber;
+			this.block = this.baseBlock;
+		}
+		
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p,p,new ChargeUpPower(p,this.magicNumber+1),this.magicNumber+1));
-		UltraShortWave.ene_gain++;
-		UltraShortWave.chrg_gain++;
+		AbstractDungeon.actionManager.addToBottom(
+				new GainEnergyAction(this.magicNumber)
+				);
+		AbstractDungeon.actionManager.addToBottom(
+				new ApplyPowerAction(p,p,new ChargeUpPower(p,this.block),this.block)
+				);
+		AbstractDungeon.actionManager.addToBottom(
+				new ApplyPowerAction(p,p,new UltraShortWavePower(p,1),1)
+				);
 		this.applyPowers();
 	}
 
@@ -66,7 +82,7 @@ public class UltraShortWave extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.applyPowers();
+			upgradeMagicNumber(UPG_CHG);
 		}
 	}
 }

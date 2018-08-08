@@ -6,16 +6,16 @@
       "When you play a card,gain 1  Charge-up ."
     ]
   }, "EnhancedHakkero": {
-    "NAME": "Enhanced Hakkero",
-    "FLAVOR": "At Marisa's request,Rinosuke repaired and upgraded the Hakkero once.Now its flame burns brighter.",
+    "NAME": "Bewitched Hakkero",
+    "FLAVOR": "The firepower came to a new level when Hakkero was affected by the power of the Miracle Mallet,but is it ok to use a bewitched tool?",
     "DESCRIPTIONS": [
-      "When you play a card,gain 2  Charge-up ."
+      "When you play a card,gain 2  Charge-up . NL Add a Burn to your hand when your turn starts."
     ]
   }, "MagicArmor": {
-    "NAME": "Magic Armor",
+    "NAME": "Black Magic Shield",
     "FLAVOR": "In fact I don't know what the hell is this,but since the Designer put it in the Plan,here it is.-programmer",
     "DESCRIPTIONS": [
-      "When you draw a Status or Curse,gain 4 Block ."
+      "When you draw a Status or Curse,gain 5 Block ."
     ]
   }, "EnhancedBroom": {
     "NAME": "Enhanced Broom",
@@ -24,12 +24,36 @@
       "For every 3 cards that cost 0 you played,draw a card."
     ]
   }, "AMDumbbell": {
-    "NAME": "Amplitude Modulation Dumbbell",
-    "FLAVOR": "This thing sounds really stupid.I really don't understand.-programmer",
+    "NAME": "Amplify Wand",
+    "FLAVOR": "'Well ,Flavor of this relic...''I'm busy now,let's discus this later.",
     "DESCRIPTIONS": [
-      "Whenever you activate Amplify effect ,gain 1 Strength."
+      "Whenever you activate Amplify effect ,increase base damage of all Attack in your hand by 2."
     ]
-  }, "WWWWWWWWWWWWWW": {
+  }, "RampagingMagicTools": {
+    "NAME": "Rampaging Magic Tools",
+    "FLAVOR": "It's been so long since anyone last used them,who knows what could happen?",
+    "DESCRIPTIONS": [
+      "Gain [B] at the start of each turn.Apply 3 stacks of a random debuff( Frail , Weak , Vulerable , Poison )to you on the first turn of each combat."
+    ]
+  }, "ExperimentalFamiliar": {
+    "NAME": "Experimental Familiar",
+    "FLAVOR": "A Familiar looks just like a shiny orb,not very powerful but will surely help you alot.",
+    "DESCRIPTIONS": [
+      "At the start of each turn,add a Spark and a random card to your hand."
+    ]
+  }, "BreadOfAWashokuLover": {
+    "NAME": "Bread Of A Washoku Lover",
+    "FLAVOR": "'Can you remember how many slices of bread you have eaten until now?''Thirteen.I prefer Japanese food.'",
+    "DESCRIPTIONS": [
+      "Heal 1 hp you exhaust a Status or Curse. NL When triggered 13 times,you gain 13 max HP,and this relic no longer works."
+    ]
+  }, "SimpleLauncher": {
+    "NAME": "Simple Charger",
+    "FLAVOR": "Simple and handy,but surprisingly useful.",
+    "DESCRIPTIONS": [
+      "You now only need 6 stack of Charge-up to double your damage."
+    ]
+  }, "WWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWW",
     "FLAVOR": "WWWWWWWWWWWWWWW",
     "DESCRIPTIONS": [

@@ -1,27 +1,41 @@
 package ThMod_FnH;
 
+import java.nio.charset.StandardCharsets;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.badlogic.gdx.Gdx;
 //cd:E:\STSmod worktable\example_mod
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+//import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.*;
-import com.megacrit.cardcrawl.core.Settings.*;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.*;
-import com.megacrit.cardcrawl.localization.*;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.localization.RelicStrings;
+//import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
+import ThMod_FnH.action.GrandCrossAction;
+import ThMod_FnH.action.MilkyWayAction;
+import ThMod_FnH.cards.Marisa.*;
+import ThMod_FnH.cards.special.*;
+import ThMod_FnH.characters.Marisa;
+import ThMod_FnH.patches.AbstractCardEnum;
+import ThMod_FnH.patches.ThModClassEnum;
+import ThMod_FnH.relics.*;
 import basemod.BaseMod;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditCharactersSubscriber;
@@ -35,16 +49,6 @@ import basemod.interfaces.PostDrawSubscriber;
 import basemod.interfaces.PostDungeonInitializeSubscriber;
 import basemod.interfaces.PostExhaustSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
-import ThMod_FnH.characters.*;
-import ThMod_FnH.action.GrandCrossAction;
-import ThMod_FnH.cards.Marisa.*;
-import ThMod_FnH.cards.special.*;
-import ThMod_FnH.patches.*;
-import ThMod_FnH.relics.*;
-import java.nio.charset.StandardCharsets;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 @SpireInitializer
 public class ThMod implements PostExhaustSubscriber,
@@ -124,11 +128,16 @@ public class ThMod implements PostExhaustSubscriber,
 				AbstractDungeon.actionManager.addToTop(
 						new RelicAboveCreatureAction(AbstractDungeon.player, r) 
 						);
+				/*
 				AbstractDungeon.actionManager.addToTop(
 						new ApplyPowerAction(
 								p, p,
 								new StrengthPower(p, 1),
 								1)
+						);
+				*/
+				AbstractDungeon.actionManager.addToBottom(
+						new MilkyWayAction(2)
 						);
 			}
 		}
@@ -178,6 +187,10 @@ public class ThMod implements PostExhaustSubscriber,
 		BaseMod.addRelicToCustomPool(new EnhancedBroom(), AbstractCardEnum.MARISA_COLOR.toString());
 		BaseMod.addRelicToCustomPool(new MagicArmor(), AbstractCardEnum.MARISA_COLOR.toString());
 		BaseMod.addRelicToCustomPool(new AMDumbbell(), AbstractCardEnum.MARISA_COLOR.toString());
+		BaseMod.addRelicToCustomPool(new ExperimentalFamiliar(), AbstractCardEnum.MARISA_COLOR.toString());
+		BaseMod.addRelicToCustomPool(new RampagingMagicTools(), AbstractCardEnum.MARISA_COLOR.toString());
+		BaseMod.addRelicToCustomPool(new BreadOfAWashokuLover(), AbstractCardEnum.MARISA_COLOR.toString());
+		BaseMod.addRelicToCustomPool(new SimpleLauncher(), AbstractCardEnum.MARISA_COLOR.toString());
   	
 		logger.info("Relics editting finished.");
   	}
@@ -398,7 +411,7 @@ public class ThMod implements PostExhaustSubscriber,
 		logger.info("Setting up custom keywords");
 		
 		BaseMod.addKeyword(new String[] {"\u53d6\u51b3\u4e8e\u6240\u6d88\u8017\u5361\u7684\u79cd\u7c7b"},
-				"\u653b\u51fb\uff1a\u6bd2\u7d20\u836f\u6c34\uff1b\u6280\u80fd\uff1a\u865a\u5f31\u836f\u6c34\uff1b\u80fd\u529b\uff1a\u6050\u60e7\u836f\u6c34\uff1b\u72b6\u6001\uff1a\u7130\u836f\u6c34\uff1b\u8bc5\u5492\uff1a\u70df\u96fe\u0020\u5f39\u0020\u3002");
+				"\u653b\u51fb\uff1a\u6050\u60e7\u836f\u6c34\uff1b\u6280\u80fd\uff1a\u865a\u5f31\u836f\u6c34\uff1b\u80fd\u529b\uff1a\u6bd2\u7d20\u836f\u6c34\uff1b\u72b6\u6001\uff1a\u7130\u836f\u6c34\uff1b\u8bc5\u5492\uff1a\u70df\u96fe\u0020\u5f39\u0020\u3002");
 		BaseMod.addKeyword(new String[] {"\u706b\u82b1"},
 				"\u706b\u82b1\u662f\u4e00\u5f20\u6d88\u8017\u4e3a\u0030\u7684\u653b\u51fb\u724c");
 		BaseMod.addKeyword(new String[] {"\u84c4\u529b"},
@@ -414,7 +427,7 @@ public class ThMod implements PostExhaustSubscriber,
 		BaseMod.addKeyword(new String[] {
 				"depends on the type of the card exhausted",
 				"Depends On The Type Of The Card Exhausted"
-				}, "Attack : Poison Potion ; NL Skill : Weak Potion ; NL Power : Fear Potion ; Status : Fire Potion ; Curse : Smoke Bomb .");
+				}, "Attack : Fear Potion ; NL Skill : Weak Potion ; NL Power : Poison Potion ; Status : Fire Potion ; Curse : Smoke Bomb .");
 		logger.info("Keywords setting finished.");
 	}
 
@@ -443,25 +456,25 @@ public class ThMod implements PostExhaustSubscriber,
         	logger.info("lang == zhs");
         	
             relicStrings = Gdx.files.internal("localization/ThMod_Fnh_relics-zh.json").readString(String.valueOf(StandardCharsets.UTF_8));
-            BaseMod.loadCustomStrings((Class)RelicStrings.class, relicStrings);
+            BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
             
             cardStrings = Gdx.files.internal("localization/ThMod_Fnh_cards-zh.json").readString(String.valueOf(StandardCharsets.UTF_8));
-            BaseMod.loadCustomStrings((Class)CardStrings.class, cardStrings);
+            BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
             
             powerStrings = Gdx.files.internal("localization/ThMod_Fnh_powers-zh.json").readString(String.valueOf(StandardCharsets.UTF_8));
-            BaseMod.loadCustomStrings((Class)PowerStrings.class, powerStrings);
+            BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
         }
         else {
         	logger.info("lang == eng");
         	
             relicStrings = Gdx.files.internal("localization/ThMod_Fnh_relics.json").readString(String.valueOf(StandardCharsets.UTF_8));
-            BaseMod.loadCustomStrings((Class)RelicStrings.class, relicStrings);
+            BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
             
             cardStrings = Gdx.files.internal("localization/ThMod_Fnh_cards.json").readString(String.valueOf(StandardCharsets.UTF_8));
-            BaseMod.loadCustomStrings((Class)CardStrings.class, cardStrings);
+            BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
             
             powerStrings = Gdx.files.internal("localization/ThMod_Fnh_powers.json").readString(String.valueOf(StandardCharsets.UTF_8));
-            BaseMod.loadCustomStrings((Class)PowerStrings.class, powerStrings);
+            BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
         }
 
         logger.info(("relics :"+ relicStrings.length()));

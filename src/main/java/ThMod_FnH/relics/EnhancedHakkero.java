@@ -2,9 +2,11 @@ package ThMod_FnH.relics;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -45,6 +47,12 @@ public class EnhancedHakkero extends CustomRelic {
     	AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
     }
     
+    public void atTurnStart() {
+    	AbstractDungeon.actionManager.addToTop(
+    			new MakeTempCardInHandAction(new Burn(), 1)
+    			);
+    }
+    
     public void atBattleStartPreDraw() {
     	
     	ThMod.logger.info("EnhancedHakkero : Start Marking");
@@ -73,5 +81,6 @@ public class EnhancedHakkero extends CustomRelic {
     				c.misc = 1;
     			ThMod.logger.info("EnhancedHakkero : Marking "+c.cardID);
     		}
+    	
     }
 }

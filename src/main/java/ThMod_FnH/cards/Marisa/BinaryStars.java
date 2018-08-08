@@ -21,6 +21,7 @@ public class BinaryStars extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 1;
 	private static final int AMP = 1;
 	
@@ -56,7 +57,7 @@ public class BinaryStars extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.rawDescription = cardStrings.DESCRIPTION;
+			this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;;
 			initializeDescription();
 		}
 	}

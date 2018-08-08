@@ -1,14 +1,15 @@
 package ThMod_FnH.cards.Marisa;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+//import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
+//import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomCard;
 import ThMod_FnH.patches.AbstractCardEnum;
@@ -44,11 +45,12 @@ public class DarkMatter extends CustomCard {
 		if (this.upgraded)
 			c.upgrade();
 		AbstractDungeon.actionManager.addToBottom(
-				new MakeTempCardInDrawPileAction(c, 2, true, true));
-		
+				new MakeTempCardInDiscardAction(c, 2));
+		/*
 		p.drawPile.shuffle();
 	    for (AbstractRelic r : p.relics)
 	        r.onShuffle();
+	        */
 	}
 
 	public AbstractCard makeCopy() {

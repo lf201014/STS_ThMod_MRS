@@ -1,5 +1,6 @@
 package ThMod_FnH.cards.Marisa;
 
+//import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -47,8 +48,14 @@ public class OpenUniverse extends CustomCard {
 		    }
 			ThMod.logger.info("OpenUniverse : adding : "+card.cardID);
 			
-	        AbstractDungeon.effectList.add(new ShowCardAndAddToDrawPileEffect(card, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, true));
-	        
+	        AbstractDungeon.effectList.add(
+	        		new ShowCardAndAddToDrawPileEffect(card, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, true)
+	        		);
+	        /*
+	        AbstractDungeon.actionManager.addToBottom(
+	        		new DrawCardAction(p,1)
+	        		);
+	        */
 	        //AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(card, 1, true, true));
 	        
 	        //p.drawPile.addToRandomSpot(card);
@@ -71,7 +78,7 @@ public class OpenUniverse extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.rawDescription = DESCRIPTION_UPG;
+			this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;;
 			initializeDescription();
 		}
 	}

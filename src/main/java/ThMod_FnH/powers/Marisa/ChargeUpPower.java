@@ -23,7 +23,9 @@ public class ChargeUpPower
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	private int cnt;
+	private int stc;
 	private int ACT_STACK = 8;
+	private int IMPR_STACK = 6;
   
 	public ChargeUpPower(AbstractCreature owner, int amount){
 		this.name = NAME;
@@ -38,22 +40,22 @@ public class ChargeUpPower
 	
 	@Override
 	public void stackPower(int stackAmount){
-
 		ThMod.logger.info("ChargeUpPower : StackPower");
-
 		ThMod.logger.info("ChargeUpPower : adding");
-
+		
 	    this.fontScale = 8.0F;
 	    this.amount += stackAmount;
 		if (this.amount <= 0){
 			this.amount = 0;
 			return;
 	    }
-		
 		ThMod.logger.info("ChargeUpPower : checking counter");
-
-		this.cnt = (int) Math.floor(this.amount/ACT_STACK);
-		
+		if (AbstractDungeon.player.hasRelic("SimpleLauncher"))
+			this.stc = IMPR_STACK;
+		else
+			this.stc = ACT_STACK;
+		ThMod.logger.info("ChargeUpPower : Checking stack number :"+this.stc);
+		this.cnt = (int) Math.floor(this.amount/this.stc);
 		ThMod.logger.info("ChargeUpPower : Done StackPower ; cnt : "+this.cnt);
 	}
 	
@@ -72,9 +74,15 @@ public class ChargeUpPower
 			if ( owner.hasPower("OrrerysSunPower") )
 				owner.getPower("OrrerysSunPower").onSpecificTrigger();
 			flash();
+			
+			if (AbstractDungeon.player.hasRelic("SimpleLauncher"))
+				this.stc = IMPR_STACK;
+			else
+				this.stc = ACT_STACK;
+			ThMod.logger.info("ChargeUpPower : Checking stack number :"+this.stc);
 			AbstractDungeon.actionManager.addToBottom(
 					new ApplyPowerAction(owner,owner,
-							new ChargeUpPower(owner,-cnt*ACT_STACK),-cnt*ACT_STACK)
+							new ChargeUpPower(owner,-cnt*this.stc),-cnt*this.stc)
 					);
 		}
 	}

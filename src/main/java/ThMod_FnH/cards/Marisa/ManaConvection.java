@@ -26,6 +26,7 @@ public class ManaConvection extends CustomCard {
 	private static final int UPG_DRAW = 1;
 	private static final int EXHT = 2;
 	private static final int ENEG_GAIN = 2;
+	private static final int CHRG_DRAIN = 8;
 	
 	public ManaConvection() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
@@ -41,13 +42,13 @@ public class ManaConvection extends CustomCard {
 				new ExhaustAction(p, p, EXHT, false));
 		
 		if (p.hasPower("ChargeUpPower"))
-			if (p.getPower("ChargeUpPower").amount >= 6) {
+			if (p.getPower("ChargeUpPower").amount >= CHRG_DRAIN) {
 				AbstractDungeon.actionManager.addToBottom(
 						new GainEnergyAction(ENEG_GAIN)
 						);
 				AbstractDungeon.actionManager.addToBottom(
 						new ApplyPowerAction(p,p,
-								new ChargeUpPower(p,-6),-6)
+								new ChargeUpPower(p,-CHRG_DRAIN),-CHRG_DRAIN)
 						);
 			}
 	}

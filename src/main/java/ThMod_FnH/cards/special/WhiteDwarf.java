@@ -2,8 +2,10 @@ package ThMod_FnH.cards.special;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -66,6 +68,9 @@ public class WhiteDwarf extends CustomCard {
 				new DamageAction(m,
 						new DamageInfo(p, this.damage, this.damageTypeForTurn),
 						AttackEffect.SLASH_DIAGONAL)
+				);
+		AbstractDungeon.actionManager.addToBottom(
+				new MakeTempCardInHandAction(new Burn(),2)
 				);
 	}
 

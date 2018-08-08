@@ -18,7 +18,7 @@ public class OrrerysSun extends CustomCard{
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String IMG_PATH = "img/cards/feelNoPain.png";
     private static final int COST = 1;
-    private static final int STACKS = 7;
+    private static final int STACKS = 8;
     private static final int UPG_STC = 3;
 
     public OrrerysSun(){

@@ -31,6 +31,7 @@ public class BlazeAway extends CustomCard {
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 
 		this.baseMagicNumber = this.magicNumber = STC;
+		this.exhaust = true;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -51,8 +52,9 @@ public class BlazeAway extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
+			this.rawDescription = DESCRIPTION_UPG;
+			initializeDescription();
+			this.exhaust = false;
 		}
-		this.rawDescription = DESCRIPTION_UPG;
-		initializeDescription();
 	}
 }

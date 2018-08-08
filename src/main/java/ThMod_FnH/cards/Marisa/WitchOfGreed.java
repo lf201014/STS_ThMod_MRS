@@ -16,7 +16,7 @@ import ThMod_FnH.powers.Marisa.WitchOfGreedPotion;
 
 public class WitchOfGreed extends CustomCard {
 	public static final String ID = "WitchOfGreed";
-	public static final String IMG_PATH = "img/cards/Defend.png";
+	public static final String IMG_PATH = "img/cards/feelNoPain.png";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -27,8 +27,8 @@ public class WitchOfGreed extends CustomCard {
 	private static final int AMP = 1;
 	
 	public WitchOfGreed() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
+		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.POWER,
+				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
 
 		this.baseMagicNumber = this.magicNumber = STC;
 	}

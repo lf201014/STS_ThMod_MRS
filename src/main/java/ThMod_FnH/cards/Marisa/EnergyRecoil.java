@@ -23,9 +23,10 @@ public class EnergyRecoil extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int BLOCK_AMT = 7;
-	private static final int UPGRADE_PLUS_BLOCK = 3;
-	private static final int BLC_CHRG = 5;
-	
+	private static final int UPG_PLUS_BLC = 9;
+	private static final int BLC_CHRG = 4;
+	private static final int UPG_PULS_CHRG = 1;
+
 	public EnergyRecoil() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
@@ -33,7 +34,7 @@ public class EnergyRecoil extends CustomCard {
 		this.baseBlock = BLOCK_AMT;
 		this.baseDamage = BLC_CHRG;
 	}
-	
+
 	@Override
 	public void applyPowers() {
 		this.isBlockModified = false;
@@ -58,17 +59,17 @@ public class EnergyRecoil extends CustomCard {
 	    this.block = MathUtils.floor(tmp);
 	    this.damage = MathUtils.floor(amp);
 	}
-	
+
 	@Override
 	public void calculateDamageDisplay(AbstractMonster mo) {
 		calculateCardDamage(mo);
 	}
-	
+
 	@Override
 	public void calculateCardDamage(AbstractMonster mo) {
 		this.applyPowers();
 	}
-	
+
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
 		if (p.hasPower("ChargeUpPower"))
@@ -91,7 +92,8 @@ public class EnergyRecoil extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBlock(UPGRADE_PLUS_BLOCK);
+			upgradeBlock(UPG_PLUS_BLC);
+			upgradeDamage(UPG_PULS_CHRG);
 		}
 	}
 }

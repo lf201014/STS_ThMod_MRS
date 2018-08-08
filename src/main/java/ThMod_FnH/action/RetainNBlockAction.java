@@ -31,7 +31,7 @@ public class RetainNBlockAction extends AbstractGameAction{
 				if (!c.isEthereal) {
 					c.retain = true;
 				}
-				if (c.costForTurn != 0)
+				if (c.costForTurn > 0)
 					blc += c.costForTurn+2;
 				AbstractDungeon.player.hand.addToTop(c);
 			}
