@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
-import ThMod_FnH.ThMod;
 import ThMod_FnH.cards.special.Spark;
 import basemod.abstracts.CustomRelic;
 
@@ -35,7 +34,7 @@ public class ExperimentalFamiliar extends CustomRelic {
     			);
     	AbstractDungeon.actionManager.addToBottom(
     			new MakeTempCardInHandAction(
-    					AbstractDungeon.getCard(ThMod.RollRarity()).makeCopy(),
+    					AbstractDungeon.returnTrulyRandomCard().makeCopy(),
     					1
     					)
     			);

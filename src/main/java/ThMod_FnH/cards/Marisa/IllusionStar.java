@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import ThMod_FnH.ThMod;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
@@ -17,7 +16,7 @@ public class IllusionStar extends CustomCard{
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards/Defend.png";
+    public static final String IMG_PATH = "img/cards/IllusionStar.png";
     private static final int COST = 0;
 
     public IllusionStar() {
@@ -30,7 +29,7 @@ public class IllusionStar extends CustomCard{
     public void use(AbstractPlayer p, AbstractMonster m){
     	for (int i=0;i<this.magicNumber;i++) {
 
-			AbstractCard c = AbstractDungeon.getCard(ThMod.RollRarity()).makeStatEquivalentCopy();
+			AbstractCard c = AbstractDungeon.returnTrulyRandomCard().makeStatEquivalentCopy();
 
 			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 1));
 		}

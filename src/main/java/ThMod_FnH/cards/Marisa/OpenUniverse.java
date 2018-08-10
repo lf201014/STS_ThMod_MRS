@@ -39,7 +39,7 @@ public class OpenUniverse extends CustomCard {
 		ThMod.logger.info("OpenUniverse : generationg cards");
 		
 	    for (int i = 0; i < 5; i++){
-	        AbstractCard card = AbstractDungeon.getCard(ThMod.RollRarity()).makeStatEquivalentCopy();
+	        AbstractCard card = AbstractDungeon.returnTrulyRandomCard().makeStatEquivalentCopy();
 	        if (this.upgraded)
 	        	card.upgrade();
 	        if (amp) {
@@ -51,14 +51,6 @@ public class OpenUniverse extends CustomCard {
 	        AbstractDungeon.effectList.add(
 	        		new ShowCardAndAddToDrawPileEffect(card, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, true)
 	        		);
-	        /*
-	        AbstractDungeon.actionManager.addToBottom(
-	        		new DrawCardAction(p,1)
-	        		);
-	        */
-	        //AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(card, 1, true, true));
-	        
-	        //p.drawPile.addToRandomSpot(card);
 	    }
 	    
 		ThMod.logger.info("OpenUniverse : shuffling");

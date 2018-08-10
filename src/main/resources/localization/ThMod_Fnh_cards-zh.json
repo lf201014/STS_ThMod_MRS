@@ -122,7 +122,7 @@
 	},
 	"UltraShortWave": {
 		"NAME": "极超短波",
-		"DESCRIPTION": "获得 !M! 能量与 !B! 层 蓄力 。使你本局中的所有 极超短波 能量与 蓄力 获得量+1。",
+		"DESCRIPTION": "获得 !B! 能量与 !M! 层 蓄力 。使你本局中的所有 极超短波 能量与 蓄力 获得量+1。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MillisecondPulsars": {
@@ -158,7 +158,7 @@
 	"LuminesStrike": {
 		"NAME": "声光冲击",
 		"DESCRIPTION": "造成 !D! 点伤害 (2 × 你手中的卡牌数)。 NL 增幅  [B]  :伤害变为 !B! 点(3 × 你现在的能量数)。",
-		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害 (3点基础伤害 × 你手中的卡牌数)。 NL 增幅  [B]  :伤害变为 !B! 点(4点基础伤害 × 你现在的能量数)。"
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害 (3点基础伤害 × 你手中的卡牌数)。 NL 增幅  [B]  :伤害变为 !B! 点(4 × 你现在的能量数)。"
 	},
 	"OpenUniverse": {
 		"NAME": "开放宇宙",
@@ -193,7 +193,7 @@
 	"ShootingEcho": {
 		"NAME": "流星共鸣",
 		"DESCRIPTION": " 消耗 一张卡，将一张 流星共鸣 加入手牌。 NL 造成 !D! 点伤害。 NL  消耗 。",
-		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+		"UPGRADE_DESCRIPTION": " 消耗 一张卡，将一张 升级 过的 流星共鸣 加入手牌。 NL 造成 !D! 点伤害。 NL  消耗 。"
 	},
 	"EnergyFlow": {
 		"NAME": "能量涌动",
@@ -347,7 +347,7 @@
 	},
 	"AFriendsGift": {
 		"NAME": "友人之赠",
-		"DESCRIPTION": " 保留 。回合结束时伤害上升2点。 NL 造成 !D! 伤害， 消耗 。 NL 增幅  [B]  :伤害变为 !B! ， 不再 消耗 。",
+		"DESCRIPTION": " 保留 。回合开始时伤害上升2点。 NL 造成 !D! 伤害， 消耗 。 NL 增幅  [B]  :伤害变为 !B! ， 不再 消耗 。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"BinaryStars": {

@@ -32,7 +32,7 @@ public class RetainNBlockAction extends AbstractGameAction{
 					c.retain = true;
 				}
 				if (c.costForTurn > 0)
-					blc += c.costForTurn+2;
+					blc += c.costForTurn*2;
 				AbstractDungeon.player.hand.addToTop(c);
 			}
 			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(source, source, blc));

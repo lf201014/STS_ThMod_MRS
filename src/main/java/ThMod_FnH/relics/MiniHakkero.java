@@ -1,12 +1,12 @@
 package ThMod_FnH.relics;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import ThMod_FnH.ThMod;
@@ -15,10 +15,17 @@ import basemod.abstracts.CustomRelic;
 
 public class MiniHakkero extends CustomRelic {
     public static final String ID = "MiniHakkero";
-    private static final String IMG = "img/relics/test1.png";
+    private static final String IMG = "img/relics/Hakkero_s.png";
+    private static final String IMG_OTL = "img/relics/outline/Hakkero_s.png";
 	
     public MiniHakkero() {
-        super(ID, new Texture(IMG), RelicTier.STARTER, LandingSound.MAGICAL);
+        super(
+        		ID,
+        		ImageMaster.loadImage(IMG),
+        		ImageMaster.loadImage(IMG_OTL),
+        		RelicTier.STARTER,
+        		LandingSound.MAGICAL
+        		);
     }
     
     public String getUpdatedDescription() {

@@ -8,7 +8,7 @@ import org.apache.logging.log4j.Logger;
 import com.badlogic.gdx.Gdx;
 //cd:E:\STSmod worktable\example_mod
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 //import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -30,12 +30,101 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import ThMod_FnH.action.GrandCrossAction;
 import ThMod_FnH.action.MilkyWayAction;
-import ThMod_FnH.cards.Marisa.*;
-import ThMod_FnH.cards.special.*;
+import ThMod_FnH.cards.Marisa.AFriendsGift;
+import ThMod_FnH.cards.Marisa.AbsoluteMagnitude;
+import ThMod_FnH.cards.Marisa.AsteroidBelt;
+import ThMod_FnH.cards.Marisa.BigCrunch;
+import ThMod_FnH.cards.Marisa.BinaryStars;
+import ThMod_FnH.cards.Marisa.BlazeAway;
+import ThMod_FnH.cards.Marisa.BlazingStar;
+import ThMod_FnH.cards.Marisa.CasketOfStar;
+import ThMod_FnH.cards.Marisa.ChargeUpSpray;
+import ThMod_FnH.cards.Marisa.ChargingUp;
+import ThMod_FnH.cards.Marisa.CircumpolarStar;
+import ThMod_FnH.cards.Marisa.CollectingQuirk;
+import ThMod_FnH.cards.Marisa.D6C;
+import ThMod_FnH.cards.Marisa.DarkMatter;
+import ThMod_FnH.cards.Marisa.DarkSpark;
+import ThMod_FnH.cards.Marisa.DeepEcologicalBomb;
+import ThMod_FnH.cards.Marisa.Defend_MRS;
+import ThMod_FnH.cards.Marisa.DoubleSpark;
+import ThMod_FnH.cards.Marisa.DragonMeteor;
+import ThMod_FnH.cards.Marisa.EarthLightRay;
+import ThMod_FnH.cards.Marisa.EnergyFlow;
+import ThMod_FnH.cards.Marisa.EnergyRecoil;
+import ThMod_FnH.cards.Marisa.EscapeVelocity;
+import ThMod_FnH.cards.Marisa.EventHorizon;
+import ThMod_FnH.cards.Marisa.FinalSpark;
+import ThMod_FnH.cards.Marisa.FluorensentBeam;
+import ThMod_FnH.cards.Marisa.FungusSplash;
+import ThMod_FnH.cards.Marisa.GalacticHalo;
+import ThMod_FnH.cards.Marisa.GasGiant;
+import ThMod_FnH.cards.Marisa.GrandCross;
+import ThMod_FnH.cards.Marisa.GravityBeat;
+import ThMod_FnH.cards.Marisa.IllusionStar;
+import ThMod_FnH.cards.Marisa.JA;
+import ThMod_FnH.cards.Marisa.LuminesStrike;
+import ThMod_FnH.cards.Marisa.MachineGunSpark;
+import ThMod_FnH.cards.Marisa.MagicAbsorber;
+import ThMod_FnH.cards.Marisa.MagicChant;
+import ThMod_FnH.cards.Marisa.ManaConvection;
+import ThMod_FnH.cards.Marisa.ManaRampage;
+import ThMod_FnH.cards.Marisa.MasterSpark;
+import ThMod_FnH.cards.Marisa.MaximisePower;
+import ThMod_FnH.cards.Marisa.MeteonicShower;
+import ThMod_FnH.cards.Marisa.MilkyWay;
+import ThMod_FnH.cards.Marisa.MillisecondPulsars;
+import ThMod_FnH.cards.Marisa.MoraleDepletion;
+import ThMod_FnH.cards.Marisa.MuscleSpark;
+import ThMod_FnH.cards.Marisa.MysteriousBeam;
+import ThMod_FnH.cards.Marisa.NonDirectionalLaser;
+import ThMod_FnH.cards.Marisa.Occultation;
+import ThMod_FnH.cards.Marisa.OortCloud;
+import ThMod_FnH.cards.Marisa.OpenUniverse;
+import ThMod_FnH.cards.Marisa.OrrerysSun;
+import ThMod_FnH.cards.Marisa.PolarisUnique;
+import ThMod_FnH.cards.Marisa.PowerUp;
+import ThMod_FnH.cards.Marisa.PropBag;
+import ThMod_FnH.cards.Marisa.PulseMagic;
+import ThMod_FnH.cards.Marisa.Robbery;
+import ThMod_FnH.cards.Marisa.SatelliteIllusion;
+import ThMod_FnH.cards.Marisa.ShootTheMoon;
+import ThMod_FnH.cards.Marisa.ShootingEcho;
+import ThMod_FnH.cards.Marisa.Singualrity;
+import ThMod_FnH.cards.Marisa.SporeBomb;
+import ThMod_FnH.cards.Marisa.StarBarrage;
+import ThMod_FnH.cards.Marisa.StarDustReverie;
+import ThMod_FnH.cards.Marisa.StarlightTyphoon;
+import ThMod_FnH.cards.Marisa.Strike_MRS;
+import ThMod_FnH.cards.Marisa.SuperNova;
+import ThMod_FnH.cards.Marisa.SuperPerseids;
+import ThMod_FnH.cards.Marisa.TreasureHunter;
+import ThMod_FnH.cards.Marisa.UltraShortWave;
+import ThMod_FnH.cards.Marisa.UnstableBomb;
+import ThMod_FnH.cards.Marisa.UpSweep;
+import ThMod_FnH.cards.Marisa.WitchLeyline;
+import ThMod_FnH.cards.Marisa.WitchOfGreed;
+import ThMod_FnH.cards.Marisa._6A;
+import ThMod_FnH.cards.special.BlackFlareStar;
+import ThMod_FnH.cards.special.Burn_MRS;
+import ThMod_FnH.cards.special.GuidingStar;
+import ThMod_FnH.cards.special.Parasite_MRS;
+import ThMod_FnH.cards.special.Spark;
+import ThMod_FnH.cards.special.WhiteDwarf;
 import ThMod_FnH.characters.Marisa;
 import ThMod_FnH.patches.AbstractCardEnum;
 import ThMod_FnH.patches.ThModClassEnum;
-import ThMod_FnH.relics.*;
+import ThMod_FnH.relics.AMDumbbell;
+import ThMod_FnH.relics.BreadOfAWashokuLover;
+import ThMod_FnH.relics.EnhancedBroom;
+import ThMod_FnH.relics.EnhancedHakkero;
+import ThMod_FnH.relics.ExperimentalFamiliar;
+import ThMod_FnH.relics.HandmadeGrimoire;
+import ThMod_FnH.relics.MagicArmor;
+import ThMod_FnH.relics.MiniHakkero;
+import ThMod_FnH.relics.RampagingMagicTools;
+import ThMod_FnH.relics.ShroomBag;
+import ThMod_FnH.relics.SimpleLauncher;
 import basemod.BaseMod;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditCharactersSubscriber;
@@ -71,19 +160,12 @@ public class ThMod implements PostExhaustSubscriber,
   	private static final String ENERGY_ORB_CC_PORTRAIT = "1024/card_orb.png";
   
   	private static final String ASSETS_FOLDER = "img";
-  
-  	private static final String FPC_RELIC = "relics/blueberries.png";
 
   	private static final Color STARLIGHT = CardHelper.getColor(0f, 0f, 255.0f);
  
   	private static final String MY_CHARACTER_BUTTON = "img/charSelect/testButton.png";
 	
-
   	private static final String MARISA_PORTRAIT = "img/charSelect/marisaPortrait.jpg";
-	
-	public static Texture getFPCRelicTexture() {
-		return new Texture(makePath(FPC_RELIC));
-	}
 	
 	/**
    * Makes a full path for a resource path
@@ -95,7 +177,7 @@ public class ThMod implements PostExhaustSubscriber,
   	}
 	//For Generate random Card Rarity
 	public static CardRarity RollRarity () {
-		double rd = Math.random() * 75;
+		double rd = MathUtils.random(1,75);
 		if (rd <= 20)
 			return CardRarity.COMMON;
 		if (rd >= 55)
@@ -189,8 +271,10 @@ public class ThMod implements PostExhaustSubscriber,
 		BaseMod.addRelicToCustomPool(new AMDumbbell(), AbstractCardEnum.MARISA_COLOR.toString());
 		BaseMod.addRelicToCustomPool(new ExperimentalFamiliar(), AbstractCardEnum.MARISA_COLOR.toString());
 		BaseMod.addRelicToCustomPool(new RampagingMagicTools(), AbstractCardEnum.MARISA_COLOR.toString());
-		BaseMod.addRelicToCustomPool(new BreadOfAWashokuLover(), AbstractCardEnum.MARISA_COLOR.toString());
+		//BaseMod.addRelicToCustomPool(new BreadOfAWashokuLover(), AbstractCardEnum.MARISA_COLOR.toString());
 		BaseMod.addRelicToCustomPool(new SimpleLauncher(), AbstractCardEnum.MARISA_COLOR.toString());
+		BaseMod.addRelicToCustomPool(new HandmadeGrimoire(), AbstractCardEnum.MARISA_COLOR.toString());
+		BaseMod.addRelicToCustomPool(new ShroomBag(), AbstractCardEnum.MARISA_COLOR.toString());
   	
 		logger.info("Relics editting finished.");
   	}
@@ -372,6 +456,8 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("GuidingStar");
 		BaseMod.addCard(new Burn_MRS());
 		UnlockTracker.unlockCard("Burn_MRS");
+		BaseMod.addCard(new Parasite_MRS());
+		UnlockTracker.unlockCard("Parasite_MRS");
 		BaseMod.addCard(new BlackFlareStar());
 		UnlockTracker.unlockCard("BlackFlareStar");
 		BaseMod.addCard(new WhiteDwarf());
@@ -411,7 +497,7 @@ public class ThMod implements PostExhaustSubscriber,
 		logger.info("Setting up custom keywords");
 		
 		BaseMod.addKeyword(new String[] {"\u53d6\u51b3\u4e8e\u6240\u6d88\u8017\u5361\u7684\u79cd\u7c7b"},
-				"\u653b\u51fb\uff1a\u6050\u60e7\u836f\u6c34\uff1b\u6280\u80fd\uff1a\u865a\u5f31\u836f\u6c34\uff1b\u80fd\u529b\uff1a\u6bd2\u7d20\u836f\u6c34\uff1b\u72b6\u6001\uff1a\u7130\u836f\u6c34\uff1b\u8bc5\u5492\uff1a\u70df\u96fe\u0020\u5f39\u0020\u3002");
+				"\u653b\u51fb\uff1a\u6050\u60e7\u836f\u6c34\uff1b\u6280\u80fd\uff1a\u865a\u5f31\u836f\u6c34\uff1b\u80fd\u529b\uff1a\u6bd2\u7d20\u836f\u6c34\uff1b\u72b6\u6001\uff1a\u706b\u7130\u836f\u6c34\uff1b\u8bc5\u5492\uff1a\u70df\u96fe\u0020\u5f39\u0020\u3002");
 		BaseMod.addKeyword(new String[] {"\u706b\u82b1"},
 				"\u706b\u82b1\u662f\u4e00\u5f20\u6d88\u8017\u4e3a\u0030\u7684\u653b\u51fb\u724c");
 		BaseMod.addKeyword(new String[] {"\u84c4\u529b"},

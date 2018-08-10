@@ -1,24 +1,27 @@
 package ThMod_FnH.relics;
 
-import com.badlogic.gdx.graphics.Texture;
 //import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
+import ThMod_FnH.cards.special.Parasite_MRS;
 import basemod.abstracts.CustomRelic;
 
 public class BreadOfAWashokuLover extends CustomRelic {
     public static final String ID = "BreadOfAWashokuLover";
-    private static final String IMG = "img/relics/vCore.png";
-    private static final String USED_IMG = "img/relics/usedvCore.png";
+    private static final String IMG = "img/relics/bread_s.png";
+    private static final String IMG_OTL = "img/relics/outline/bread_s.png";
+    private static final String USED_IMG = "img/relics/usedBread_s.png";
 	
     public BreadOfAWashokuLover(){
         super(
         		ID,
-        		new Texture(IMG),
+        		ImageMaster.loadImage(IMG),
+        		ImageMaster.loadImage(IMG_OTL),
         		RelicTier.UNCOMMON,
         		LandingSound.FLAT
         		);
@@ -37,9 +40,9 @@ public class BreadOfAWashokuLover extends CustomRelic {
     }
     
     public void onExhaust(AbstractCard card){
-    	if (this.usedUp)
+    	if ((this.usedUp)||(this.counter == -2))
     		return;
-    	if ((card.type == CardType.CURSE)||(card.type == CardType.STATUS)) {
+    	if ((card.type == CardType.CURSE)||(card.type == CardType.STATUS)||(card instanceof Parasite_MRS)) {
     		this.counter++;
     		this.flash();
     		AbstractDungeon.actionManager.addToBottom(
@@ -48,7 +51,7 @@ public class BreadOfAWashokuLover extends CustomRelic {
     	}
     	if (counter >= 13){
     		this.flash();
-    		setTexture(new Texture(USED_IMG));
+    		setTexture(ImageMaster.loadImage(USED_IMG));
     		AbstractDungeon.player.increaseMaxHp(13, true);
     		this.counter = -2;
     		usedUp();

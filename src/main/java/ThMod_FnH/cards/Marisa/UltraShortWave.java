@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import ThMod_FnH.ThMod;
 import ThMod_FnH.patches.AbstractCardEnum;
 import ThMod_FnH.powers.Marisa.ChargeUpPower;
 import ThMod_FnH.powers.Marisa.UltraShortWavePower;
@@ -36,11 +37,23 @@ public class UltraShortWave extends CustomCard {
 	@Override
 	public void applyPowers(){
 		if (AbstractDungeon.player.hasPower("UltraShortWavePower")) {
+			ThMod.logger.info(
+					"UltraShortWave : applyPowers : UltraShortWavePower detected: baseMagicNumber"+this.baseMagicNumber+
+					" ; baseBlock : "+this.baseBlock+
+					" ; MagicNumber : "+this.magicNumber+
+					" ; Block : "+this.block
+					);
 			int cnt = AbstractDungeon.player.getPower("UltraShortWavePower").amount;
 			this.magicNumber = cnt + this.baseMagicNumber;
 			this.block = cnt + this.baseBlock;
 			this.isMagicNumberModified =true;
 			this.isBlockModified = true;
+			ThMod.logger.info(
+					"UltraShortWave : applyPowers finished baseMagicNumber"+this.baseMagicNumber+
+					" ; baseBlock : "+this.baseBlock+
+					" ; MagicNumber : "+this.magicNumber+
+					" ; Block : "+this.block
+					);
 		} else {
 			this.magicNumber = this.baseMagicNumber;
 			this.block = this.baseBlock;
@@ -50,11 +63,23 @@ public class UltraShortWave extends CustomCard {
 	@Override
 	public void calculateCardDamage(AbstractMonster mo){
 		if (AbstractDungeon.player.hasPower("UltraShortWavePower")) {
+			ThMod.logger.info(
+					"UltraShortWave : calculateCardDamage : UltraShortWavePower detected: baseMagicNumber"+this.baseMagicNumber+
+					" ; baseBlock : "+this.baseBlock+
+					" ; MagicNumber : "+this.magicNumber+
+					" ; Block : "+this.block
+					);
 			int cnt = AbstractDungeon.player.getPower("UltraShortWavePower").amount;
 			this.magicNumber = cnt + this.baseMagicNumber;
 			this.block = cnt + this.baseBlock;
 			this.isMagicNumberModified =true;
 			this.isBlockModified = true;
+			ThMod.logger.info(
+					"UltraShortWave : calculateCardDamage finished baseMagicNumber"+this.baseMagicNumber+
+					" ; baseBlock : "+this.baseBlock+
+					" ; MagicNumber : "+this.magicNumber+
+					" ; Block : "+this.block
+					);
 		} else {
 			this.magicNumber = this.baseMagicNumber;
 			this.block = this.baseBlock;
@@ -64,10 +89,10 @@ public class UltraShortWave extends CustomCard {
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(
-				new GainEnergyAction(this.magicNumber)
+				new GainEnergyAction(this.block)
 				);
 		AbstractDungeon.actionManager.addToBottom(
-				new ApplyPowerAction(p,p,new ChargeUpPower(p,this.block),this.block)
+				new ApplyPowerAction(p,p,new ChargeUpPower(p,this.magicNumber),this.magicNumber)
 				);
 		AbstractDungeon.actionManager.addToBottom(
 				new ApplyPowerAction(p,p,new UltraShortWavePower(p,1),1)

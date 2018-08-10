@@ -32,22 +32,25 @@ public class MusleSparkAction
 			ThMod.logger.info("MusleSparkAction : calculating damage : "+this.info.base);
 			
 	        float tmp = this.info.base;
-	        tmp -= mon.currentBlock;
+	        if (mon.currentBlock > 0)
+	        	tmp -= mon.currentBlock;
 	        if (tmp > mon.currentHealth) {
 	        	tmp = mon.currentHealth;
 	        }
 	        if (tmp<0)
 	        	tmp = 0;
 	        
-	       ThMod.logger.info("MusleSparkAction : increasing damage : "+tmp);
+	        if (tmp > 0) {
+	        	ThMod.logger.info("MusleSparkAction : increasing damage : "+tmp);
 	        
-	        for (AbstractCard c:AbstractDungeon.player.hand.group)
-	        	if (c.type == CardType.ATTACK) {
-	        		ThMod.logger.info("MusleSparkAction : increasing damage for : "+c.cardID);
-	        		c.baseDamage += tmp;
-	        		c.flash();
-	        		c.applyPowers();
-	        	}
+	        	for (AbstractCard c:AbstractDungeon.player.hand.group)
+	        		if (c.type == CardType.ATTACK) {
+	        			ThMod.logger.info("MusleSparkAction : increasing damage for : "+c.cardID);
+	        			c.baseDamage += tmp;
+	        			c.flash();
+	        			c.applyPowers();
+	        		}
+	        }
 	        
 	        ThMod.logger.info("MusleSparkAction : dealing damage : "+tmp);
 	        

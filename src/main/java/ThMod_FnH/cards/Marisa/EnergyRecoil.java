@@ -23,7 +23,7 @@ public class EnergyRecoil extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int BLOCK_AMT = 7;
-	private static final int UPG_PLUS_BLC = 9;
+	private static final int UPG_PLUS_BLC = 2;
 	private static final int BLC_CHRG = 4;
 	private static final int UPG_PULS_CHRG = 1;
 
@@ -72,17 +72,16 @@ public class EnergyRecoil extends CustomCard {
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-		if (p.hasPower("ChargeUpPower"))
+		if (p.hasPower("ChargeUpPower")) {
 			if (p.getPower("ChargeUpPower").amount >= 4){
-				int cnt = p.getPower("ChargeUpPower").amount;
-				while (cnt>=4) {
+				int cnt = p.getPower("ChargeUpPower").amount/4;
 					AbstractDungeon.actionManager.addToBottom(
-							new GainBlockAction(p ,p , this.damage));
+							new GainBlockAction(p ,p , cnt*this.damage));
 					AbstractDungeon.actionManager.addToBottom(
-							new ApplyPowerAction(p,p,new ChargeUpPower(p,-4),-4));
-					cnt -= 4;
-				}
+							new ApplyPowerAction(p,p,new ChargeUpPower(p,-cnt*4),-cnt*4));
 			}
+		}
+			
 	}
 
 	public AbstractCard makeCopy() {

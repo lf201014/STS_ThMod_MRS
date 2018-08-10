@@ -39,8 +39,12 @@ public class ChargeUpSpray
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
+		int cnt = 8;
+		if (p.hasRelic("SimpleLauncher")) {
+			cnt = 6;
+		}
 		if (p.hasPower("ChargeUpPower"))
-			if (p.getPower("ChargeUpPower").amount >= 6){
+			if (p.getPower("ChargeUpPower").amount >= cnt){
 				AbstractDungeon.actionManager.addToTop(new DrawCardAction(AbstractDungeon.player, this.magicNumber));
 				AbstractDungeon.actionManager.addToTop(new GainEnergyAction(1));
 			}

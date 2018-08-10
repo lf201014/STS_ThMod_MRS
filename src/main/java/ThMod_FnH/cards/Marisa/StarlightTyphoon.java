@@ -28,7 +28,7 @@ public class StarlightTyphoon extends CustomCard {
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		int cnt = 1;
+		int cnt = 0;
 		ThMod.logger.info("StarlightTyphoon : onUse");
 		for (AbstractCard c:p.hand.group) {
 			if (c.type != CardType.ATTACK) {

@@ -16,7 +16,7 @@ import basemod.abstracts.CustomRelic;
 
 public class RampagingMagicTools extends CustomRelic {
     public static final String ID = "RampagingMagicTools";
-    private static final String IMG = "img/relics/test6.png";
+    private static final String IMG = "img/relics/test1.png";
     private static final int STCS = 3;
 	
     public RampagingMagicTools() {

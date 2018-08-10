@@ -48,10 +48,22 @@
       "Heal 1 hp you exhaust a Status or Curse. NL When triggered 13 times,you gain 13 max HP,and this relic no longer works."
     ]
   }, "SimpleLauncher": {
-    "NAME": "Simple Charger",
-    "FLAVOR": "Simple and handy,but surprisingly useful.",
+    "NAME": "Simple Launcher",
+    "FLAVOR": "Simple but useful...Perhaps...",
     "DESCRIPTIONS": [
       "You now only need 6 stack of Charge-up to double your damage."
+    ]
+  }, "HandmadeGrimoire": {
+    "NAME": "Handmade Grimoire",
+    "FLAVOR": "A notebook full of experiment records and magic material recipes,and just how Marisa develop her Magics.",
+    "DESCRIPTIONS": [
+      "At the start of battle,for every 15 cards in your master deck,gain [B] and draw a card."
+    ]
+  }, "ShroomBag": {
+    "NAME": "Shroom Bag",
+    "FLAVOR": "All witches have abnormal ethusiasm for mushrooms... NL Or it's just Marisa...?",
+    "DESCRIPTIONS": [
+      "Add 2 Parasite to your deck on pick up.You can now play Parasite to exhaust it and heal 3 HP."
     ]
   }, "WWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWW",

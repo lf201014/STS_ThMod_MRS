@@ -49,9 +49,21 @@
     ]
   }, "SimpleLauncher": {
     "NAME": "简易发射器",
-    "FLAVOR": "简单易上手，但是很好用。",
+    "FLAVOR": "从香霖那里淘来的东西，看起来很好用……大概吧……",
     "DESCRIPTIONS": [
       "现在你只需要6层蓄力来发动攻击力翻倍效果了。"
+    ]
+  }, "HandmadeGrimoire": {
+    "NAME": "自制魔导书",
+    "FLAVOR": "其实是个写满了实验记录和魔法材料配方的笔记本。",
+    "DESCRIPTIONS": [
+      "战斗开始是，你的卡组每有15张卡，获得 [B] 并抽一张卡。"
+    ]
+  }, "ShroomBag": {
+    "NAME": "蘑菇袋",
+    "FLAVOR": "所有的魔女都对蘑菇有异样的热情……或者只是魔理沙有？",
+    "DESCRIPTIONS": [
+      "拾取时向卡组中加入2张 寄生 。使你可以将 寄生 打出，从而将其消耗，并回复3点生命值。"
     ]
   }, "WWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWW",

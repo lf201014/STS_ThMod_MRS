@@ -108,7 +108,7 @@
 	},
 	"ShootTheMoon": {
 		"NAME": "Shoot The Moon",
-		"DESCRIPTION": "Deal !D! damage and remove a random buff from your target if it is not a boss. NL Amplify  [B]  : !B! damage,remove all buff.",
+		"DESCRIPTION": "Deal !D! damage and remove a random buff from your target if it is not a boss. NL Amplify  [B]  : !B! damage instead,remove all buff.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWW"
 	},
 	"StarDustReverie": {
@@ -118,7 +118,7 @@
 	},
 	"UltraShortWave": {
 		"NAME": "Ultimate Shortwave",
-		"DESCRIPTION": "Gain !M!  [B]  and !B! Charge-up , increase the energy and Charge-up gain of all Ultimate Shortwave by 1 this battle.",
+		"DESCRIPTION": "Gain !B!  [B]  and !M! Charge-up , increase the energy and Charge-up gain of all Ultimate Shortwave by 1 this battle.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MillisecondPulsars": {
@@ -189,7 +189,7 @@
 	"ShootingEcho": {
 		"NAME": "Shooting Echo",
 		"DESCRIPTION": " Exhaust  a card,add a Shooting Echo to your hand. NL deal !D! damage. NL Exhaust .",
-		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+		"UPGRADE_DESCRIPTION": "Exhaust  a card,add a upgraded Shooting Echo to your hand. NL deal !D! damage. NL Exhaust ."
 	},
 	"EnergyFlow": {
 		"NAME": "Energy Flow",
@@ -348,7 +348,7 @@
 	},
 	"AFriendsGift": {
 		"NAME": "A Friend's Gift",
-		"DESCRIPTION": " Retain . NL Deal !D! damage.Increase its damage by 2 when your turn ends. Exhaust . NL Amplify  [B]  :Deal !B! damage instead, don't Exhaust .",
+		"DESCRIPTION": " Retain . NL Deal !D! damage.Increase damage by 2 when your turn starts. Exhaust . NL Amplify  [B]  :Deal !B! damage instead, don't Exhaust .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	}, 
 	"BinaryStars": {
@@ -362,7 +362,7 @@
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"FungusSplash": {
-		"NAME": "Fungus Splash",
+		"NAME": "Fungus Brew",
 		"DESCRIPTION": " Exhaust a card,throw a potion at your target. NL The type of potion depends on the type of the card you exhausted. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": " Exhaust a card,throw a potion at your target. NL The type of potion depends on the type of the card you exhausted ."
 	},

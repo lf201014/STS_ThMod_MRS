@@ -2,7 +2,6 @@ package ThMod_FnH.cards.Marisa;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -50,8 +49,7 @@ public class AFriendsGift
 					new DamageInfo(p, this.block, this.damageTypeForTurn),
 					AbstractGameAction.AttackEffect.SLASH_DIAGONAL)
 					);
-		}
-			
+		}		
 		else {
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
 					new DamageInfo(p, this.damage, this.damageTypeForTurn),
@@ -66,12 +64,20 @@ public class AFriendsGift
 		this.retain = true;
 	}
 	
-	@Override
-	public void triggerOnEndOfPlayerTurn(){
-		if (this.isEthereal) {
-			AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand));
-		}
+	public void atTurnStart(){
+		ThMod.logger.info(
+				"AFriendsGift : atTurnStart : Upgrading damage : base :"+this.baseDamage+
+				" ; damage : "+this.damage+
+				" ; Amplified base : "+this.baseBlock+
+				" ; AMplified damage : "+this.block
+				);
 		this.upgradeDamage(2);
+		ThMod.logger.info(
+				"AFriendsGift : atTurnStart : upgraded damage : base :"+this.baseDamage+
+				" ; damage : "+this.damage+
+				" ; Amplified base : "+this.baseBlock+
+				" ; AMplified damage : "+this.block
+				);
 	}
 
 	public AbstractCard makeCopy() {

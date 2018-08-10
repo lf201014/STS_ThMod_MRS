@@ -160,3 +160,21 @@ v0.0.9
 *Added Boss Relic Experimental Familiar
 *Added Uncommon Relic Bread of A Washoku Lover
 *Added Shop Relic Simple Charger
+v0.0.10
+*Corrected some descriptions
+*Updated illustration of cards : defend , Illusion Star , Magic Absorber , Spore Crump , Fungus Splash
+*Updated icon of relics : Mini-Hakkero , Bewitched Hakkero , Bread of A Washoku Lover , Enhanced Broom
+*Fungus Splash : name changed to Fungus Brew
+*Removed relic Bread of A Washoku Lover temporarily due to a unfixed bug
+*Fixed the issu that Magic Chant's block grant not 
+*Changed the method that Illusion Star , Star Dust Reveries , Open Universe and Experimental Familiar use to decide which card to add;now save/load doesn't affect the result of card adding effect (perhaps)
+*Trying to fix that Unstable Bomb may stop damage dealing action instantly when one target died
+*A Friend's Gift : now damage increase effect will trigger at the start of your turn
+*Fix the issue that Charge-up Spray would always triggers its extra effect when you have just 6 Charge-up stacks
+*Fix the issue that Energy Recoil have too high stats when upgraded due to incorrect data input
+*Energy Recoil : extra Block gain and Charge-up consumption will be done in a single action
+*Shooting Echo : now will add an upgraged Shooting Echo when it is upgraded upon use
+*Fix the issue that Starlight Typhoon always give one more Spark than it should
+*Ultimate Shortwave : now will increase Charge-up gain rather than energy gain when upgraded
+*Added Uncommon Relic Handmade Grimoire
+*Added Uncommon Relic Shroom Bag

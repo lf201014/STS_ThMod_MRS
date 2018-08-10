@@ -1,6 +1,5 @@
 package ThMod_FnH.relics;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
@@ -9,6 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import ThMod_FnH.ThMod;
@@ -17,10 +17,11 @@ import basemod.abstracts.CustomRelic;
 
 public class EnhancedHakkero extends CustomRelic {
     public static final String ID = "EnhancedHakkero";
-    private static final String IMG = "img/relics/test2.png";
+    private static final String IMG = "img/relics/Hakkero_1_s.png";
+    private static final String IMG_OTL = "img/relics/outline/Hakkero_1_s.png";
 	
     public EnhancedHakkero() {
-        super(ID, new Texture(IMG), RelicTier.BOSS, LandingSound.MAGICAL);
+        super(ID, ImageMaster.loadImage(IMG),ImageMaster.loadImage(IMG_OTL), RelicTier.BOSS, LandingSound.MAGICAL);
     }
     
     public String getUpdatedDescription() {

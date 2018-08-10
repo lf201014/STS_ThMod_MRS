@@ -19,8 +19,11 @@ public class Burn_MRS extends CustomCard {
 
 	public Burn_MRS() {
 		super(ID, NAME, "img/cards/burn.png", COST, DESCRIPTION,
-				AbstractCard.CardType.STATUS,  AbstractCard.CardColor.COLORLESS,
-				CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+				AbstractCard.CardType.STATUS,
+				AbstractCard.CardColor.COLORLESS,
+				CardRarity.COMMON,
+				AbstractCard.CardTarget.SELF
+				);
 
 		this.damage = 5;
 		this.magicNumber = 2;

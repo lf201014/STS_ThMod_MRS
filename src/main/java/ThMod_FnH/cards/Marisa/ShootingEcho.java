@@ -21,6 +21,7 @@ public class ShootingEcho
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 8;
@@ -42,7 +43,10 @@ public class ShootingEcho
 		ThMod.logger.info("ShootingEcho : Player now have "+p.hand.size()+" card(s) in hand.");
 		
 		if (p.hand.size()>1) {
-			AbstractCard c = new ShootingEcho();
+			AbstractCard c = this.makeCopy();
+			if (this.upgraded) {
+				c.update();
+			}
 			AbstractDungeon.actionManager.addToBottom(
 	    		new MakeTempCardInHandAction(c, 1));
 	    
@@ -60,6 +64,8 @@ public class ShootingEcho
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeDamage(UPGRADE_PLUS_DMG);
+			this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;;
+			initializeDescription();
 		}
 	}
 }

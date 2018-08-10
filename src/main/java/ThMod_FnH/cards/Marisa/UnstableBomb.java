@@ -1,17 +1,14 @@
 package ThMod_FnH.cards.Marisa;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import ThMod_FnH.ThMod;
 import ThMod_FnH.abstracts.AmplifiedAttack;
+import ThMod_FnH.action.UnstableBombAction;
 import ThMod_FnH.patches.AbstractCardEnum;
 
 public class UnstableBomb 
@@ -42,11 +39,9 @@ public class UnstableBomb
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 			for (int i = 0;i < 4;i++) {
-				double rng = this.block - this.damage + 1;
-				int dmg = (int) Math.floor(this.damage + Math.random()*rng);
-				ThMod.logger.info("UnstableBomb : Random damage :"+dmg);
 				AbstractDungeon.actionManager.addToBottom(
-						new DamageRandomEnemyAction(new DamageInfo(p, dmg, this.damageTypeForTurn),AbstractGameAction.AttackEffect.FIRE));
+						new UnstableBombAction(this.damage,this.block)
+						);
 			}
 	}
 
@@ -60,7 +55,7 @@ public class UnstableBomb
 			upgradeDamage(UPG_DMG);
 			this.ampNumber += UPG_AMP;
 			this.block = this.baseDamage + this.ampNumber;
-			this.isBlockModified = true;
+			//this.isBlockModified = true;
 		}
 	}
 }
