@@ -3,16 +3,17 @@ package ThMod_FnH.cards.Marisa;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
+
 import ThMod_FnH.ThMod;
 import ThMod_FnH.patches.AbstractCardEnum;
+import basemod.abstracts.CustomCard;
 
 public class ShootingEcho 
 	extends CustomCard {
@@ -47,9 +48,9 @@ public class ShootingEcho
 			if (this.upgraded) {
 				c.update();
 			}
-			AbstractDungeon.actionManager.addToBottom(
-	    		new MakeTempCardInHandAction(c, 1));
-	    
+			AbstractDungeon.effectList.add(
+					new ShowCardAndAddToHandEffect(c)
+					);
 		}
 			
 		AbstractDungeon.actionManager.addToBottom(

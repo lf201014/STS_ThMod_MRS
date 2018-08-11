@@ -19,8 +19,7 @@ public class Singualrity extends CustomCard{
     public static final String IMG_PATH = "img/cards/feelNoPain.png";
     private static final int COST = 2;
     private static final int STC = 1;
-    private static final int UPG_STC = 1;
-
+    
     public Singualrity() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
         		AbstractCard.CardType.POWER, AbstractCardEnum.MARISA_COLOR,
