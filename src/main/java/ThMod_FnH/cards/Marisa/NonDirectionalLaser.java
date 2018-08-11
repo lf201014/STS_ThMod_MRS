@@ -1,7 +1,9 @@
 package ThMod_FnH.cards.Marisa;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,7 +24,7 @@ public class NonDirectionalLaser
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	private static final int COST = 1;
-	private static final int ATK_DMG = 6;
+	private static final int ATK_DMG = 5;
 	private static final int UPG_DMG = 2;
   
 public NonDirectionalLaser()
@@ -31,17 +33,20 @@ public NonDirectionalLaser()
 			AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON,
 			AbstractCard.CardTarget.ALL_ENEMY);
     this.baseDamage = ATK_DMG;
+    this.isMultiDamage = true;
   }
   
-  public void use(AbstractPlayer p, AbstractMonster m){
-	  AbstractMonster mon = AbstractDungeon.getMonsters().getRandomMonster(true);
-	  
+  public void use(AbstractPlayer p, AbstractMonster m){	  
 	  AbstractDungeon.actionManager.addToBottom(
-			  new DamageAction(mon, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+			  new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AttackEffect.SLASH_HORIZONTAL)
+			  );
     
-	  mon = AbstractDungeon.getMonsters().getRandomMonster(true);
 	  AbstractDungeon.actionManager.addToBottom(
-			  new DamageAction(mon, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+			  new DamageRandomEnemyAction(
+					  new DamageInfo(p, this.damage, this.damageTypeForTurn),
+					  AbstractGameAction.AttackEffect.SLASH_VERTICAL
+					  )
+			  );
 
   }
   

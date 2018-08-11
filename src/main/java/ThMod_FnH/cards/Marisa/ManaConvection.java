@@ -17,7 +17,7 @@ import basemod.abstracts.CustomCard;
 
 public class ManaConvection extends CustomCard {
 	public static final String ID = "ManaConvection";
-	public static final String IMG_PATH = "img/cards/Defend.png";
+	public static final String IMG_PATH = "img/cards/ManaConvection.png";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -30,7 +30,7 @@ public class ManaConvection extends CustomCard {
 	
 	public ManaConvection() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = DRAW;
 
 	}

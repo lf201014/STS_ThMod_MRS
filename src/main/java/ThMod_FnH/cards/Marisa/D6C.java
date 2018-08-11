@@ -31,6 +31,7 @@ public class D6C
 				AbstractCard.CardTarget.ENEMY);
 
 		this.baseDamage = ATTACK_DMG;
+		this.isInnate = true;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {

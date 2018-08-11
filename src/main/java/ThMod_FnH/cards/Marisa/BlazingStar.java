@@ -12,15 +12,18 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 import ThMod_FnH.ThMod;
 import ThMod_FnH.abstracts.AmplifiedAttack;
+import ThMod_FnH.cards.special.Burn_MRS;
 import ThMod_FnH.patches.AbstractCardEnum;
+import basemod.abstracts.CustomCard;
 
 public class BlazingStar 
-	extends AmplifiedAttack {
+	extends CustomCard {
 	
 	public static final String ID = "BlazingStar";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -29,12 +32,11 @@ public class BlazingStar
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	
 	private static final int COST = 2;
-	private static final int ATK_DMG = 15;
-	private static final int UPG_DMG = 5;
-	private static final int AMP_DMG = 6;
+	private static final int ATK_DMG = 14;
+	private static final int UPG_DMG = 4;
+	private static final int AMP_DMG = 7;
 	private static final int UPG_AMP = 2;
 	private static final int AMP = 1;
-	private static final int PW_APL = 1;
 	
 	public BlazingStar() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -42,43 +44,35 @@ public class BlazingStar
 				AbstractCard.CardTarget.ENEMY);
 
 		this.baseDamage = ATK_DMG;
-		this.ampNumber = AMP_DMG;
-		this.baseBlock = this.baseDamage + this.ampNumber;
-		this.magicNumber = this.baseMagicNumber = PW_APL;
+		this.magicNumber = this.baseMagicNumber = AMP_DMG;
+	}
+	
+	public void applyPowers(){
+		AbstractPlayer p = AbstractDungeon.player;
+		this.baseDamage = ATK_DMG;
+		if (this.upgraded) {
+			this.baseDamage += UPG_DMG;
+		}
+		for (AbstractCard c:p.hand.group) {
+			if ((c instanceof Burn)||(c instanceof Burn_MRS)) {
+				this.baseDamage += this.magicNumber;
+			}
+		}
+		super.applyPowers();
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		int tmp = this.magicNumber;
 		if (ThMod.Amplified(AMP+this.costForTurn,AMP)) {
-			tmp++;
-			AbstractDungeon.actionManager.addToBottom(
-					new DamageAction(
-							m,
-							new DamageInfo(p, this.block, this.damageTypeForTurn),
-							AbstractGameAction.AttackEffect.SLASH_DIAGONAL
-							)
-					);
-	    	AbstractDungeon.actionManager.addToBottom(
-	    			new MakeTempCardInHandAction(new Burn(), 1)
-	    			);
-		} else {
-			AbstractDungeon.actionManager.addToBottom(
-					new DamageAction(
-							m,
-							new DamageInfo(p, this.damage, this.damageTypeForTurn),
-							AbstractGameAction.AttackEffect.SLASH_DIAGONAL
-							)
-					);
+			this.damage *=2;
 		}
-	    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Burn(), 1));
-	    AbstractDungeon.actionManager.addToBottom(
-	    			new ApplyPowerAction(m, p, 
-	    					new VulnerablePower(m, tmp+1, false), tmp+1, true)
-	    			);	
-	    	AbstractDungeon.actionManager.addToBottom(
-	    	    	new ApplyPowerAction(m, p, 
-	    	    			new WeakPower(m, tmp, false), tmp, true)
-	    	    	);
+		AbstractDungeon.actionManager.addToBottom(
+				new DamageAction(
+						m,
+						new DamageInfo(p, this.damage, this.damageTypeForTurn),
+						AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+						)
+				);
+	    
 	}
 
 	public AbstractCard makeCopy() {
@@ -89,9 +83,7 @@ public class BlazingStar
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeDamage(UPG_DMG);
-			this.ampNumber += UPG_AMP;
-			this.block = this.baseDamage + this.ampNumber;
-			this.isBlockModified = true;
+			upgradeMagicNumber(UPG_AMP);
 		}
 	}
 }

@@ -10,28 +10,28 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import ThMod_FnH.ThMod;
 import ThMod_FnH.abstracts.AmplifiedAttack;
-import ThMod_FnH.action.MusleSparkAction;
+import ThMod_FnH.action.RefractionSparkAction;
 import ThMod_FnH.action.SparkCostAction;
 import ThMod_FnH.patches.AbstractCardEnum;
 
-public class MuscleSpark 
+public class RefractionSpark 
 	extends AmplifiedAttack {
 	
-	public static final String ID = "MuscleSpark";
+	public static final String ID = "RefractionSpark";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	
 	private static final int COST = 1;
-	private static final int ATK_DMG = 3;
+	private static final int ATK_DMG = 4;
 	private static final int UPG_DMG = 1;
 	private static final int AMP_DMG = 2;
 	private static final int UPG_AMP = 1;
 	private static final int AMP = 1;
 	
 
-	public MuscleSpark() {
+	public RefractionSpark() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.ENEMY);
@@ -45,15 +45,15 @@ public class MuscleSpark
 		AbstractDungeon.actionManager.addToBottom(new SparkCostAction());
 		
 		if ( ThMod.Amplified(AMP+this.costForTurn,AMP) )
-			AbstractDungeon.actionManager.addToBottom(new MusleSparkAction(m,
+			AbstractDungeon.actionManager.addToBottom(new RefractionSparkAction(m,
 					new DamageInfo(p, this.block, this.damageTypeForTurn)));
 		else
-			AbstractDungeon.actionManager.addToBottom(new MusleSparkAction(m,
+			AbstractDungeon.actionManager.addToBottom(new RefractionSparkAction(m,
 					new DamageInfo(p, this.damage, this.damageTypeForTurn)));		
 	}
 
 	public AbstractCard makeCopy() {
-		return new MuscleSpark();
+		return new RefractionSpark();
 	}
 
 	public void upgrade() {

@@ -18,7 +18,7 @@ public class Singualrity extends CustomCard{
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String IMG_PATH = "img/cards/feelNoPain.png";
     private static final int COST = 2;
-    private static final int STC = 2;
+    private static final int STC = 1;
     private static final int UPG_STC = 1;
 
     public Singualrity() {
@@ -45,7 +45,7 @@ public class Singualrity extends CustomCard{
     if (!this.upgraded)
     {
         upgradeName();
-        upgradeMagicNumber(UPG_STC);
+		upgradeBaseCost(1);
     }
   }
 }

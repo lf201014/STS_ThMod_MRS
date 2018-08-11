@@ -23,7 +23,9 @@ public class CollectingQuirk
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	private static final int COST = 2;
-	private static final int ATK_DMG = 3;
+	private static final int DVID = 4;
+	private static final int UPG_DVID = -1;
+	private static final int ATK_DMG = 4;
 	private static final int UPG_DMG = 1;
 
 	public CollectingQuirk() {
@@ -31,16 +33,20 @@ public class CollectingQuirk
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE,
 				AbstractCard.CardTarget.ALL_ENEMY);
 		this.baseDamage = ATK_DMG;
+		this.magicNumber = this.baseMagicNumber = DVID;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		int cnt = p.relics.size();
-		for (int i = 0;i < cnt ;i++)
-			AbstractDungeon.actionManager.addToBottom(
+		int cnt = p.relics.size()/this.magicNumber;
+		if (cnt > 0) {
+			for (int i = 0;i < cnt ;i++) {
+				AbstractDungeon.actionManager.addToBottom(
 					new DamageRandomEnemyAction(
 							new DamageInfo(p, this.damage, this.damageTypeForTurn),
 							AbstractGameAction.AttackEffect.SLASH_DIAGONAL)
 					);
+			}
+		}
 	}
 
 	public AbstractCard makeCopy() {
@@ -51,7 +57,8 @@ public class CollectingQuirk
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeDamage(UPG_DMG);
+			//upgradeDamage(UPG_DMG);
+			upgradeMagicNumber(UPG_DVID);
 		}
 	}
 }

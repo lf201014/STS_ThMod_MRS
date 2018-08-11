@@ -17,7 +17,7 @@
 	},
 	"BlazingStar": {
 		"NAME": "Blazing Star",
-		"DESCRIPTION": "Deal !D! damage,apply !M! Weak and !M+1! Vulnerable ,add an Burn to your hand. NL Amplify  [B] : !B! damage,apply 1 additional Weak and Vulnerable stack,add one more Burn. "
+		"DESCRIPTION": "Deal !D! damage.Increase damage by !M! for each Burn in your hand. NL Amplify  [B] : Deal double damage. "
 	},
 	"DarkSpark": {
 		"NAME": "Dark Spark",
@@ -76,7 +76,7 @@
 	},
 	"MeteonicShower": {
 		"NAME": "Meteonic Shower",
-		"DESCRIPTION": " Exhaust  your hand. NL For each card exhausted deal !D! damage twice,and for each Burn exhausted,deal the damage once more."
+		"DESCRIPTION": " Exhaust X+1 cards at most. NL For each card exhausted deal !D! damage twice,and for each Burn exhausted,deal damage once more."
 	},
 	"MilkyWay": {
 		"NAME": "Milky Way",
@@ -84,7 +84,7 @@
 	},
 	"NonDirectionalLaser": {
 		"NAME": "Non-Directional Laser",
-		"DESCRIPTION": "Deal !D! damage to random enemy twice."
+		"DESCRIPTION": "Deal !D! damage to all enemies ,then deal !D! damage to random enemy."
 	},
 	"Occultation": {
 		"NAME": "Occultation",
@@ -114,7 +114,7 @@
 	"StarDustReverie": {
 		"NAME": "Star Dust Reverie",
 		"DESCRIPTION": "Put all cards in your hand back to draw pile,then add same number plus one random cards to your hand. These cards gain Exhaust and Ethereal .",
-		"UPGRADE_DESCRIPTION": "Put all cards in your hand back to draw pile,then add same number plus one random cards to your hand.These cards gain Exhaust ."
+		"UPGRADE_DESCRIPTION": "Put all cards in your hand back to draw pile,then add same number plus one random cards to your hand."
 	},
 	"UltraShortWave": {
 		"NAME": "Ultimate Shortwave",
@@ -153,8 +153,8 @@
 	},
 	"LuminesStrike": {
 		"NAME": "Luminous Strike",
-		"DESCRIPTION": "Deal !D! damage (2 × the size of your hand). NL Amplify  [B]  : !B! damage (3 × your current energy) instead.",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage (3 × the size of your hand). NL Amplify  [B]  : !B! damage (4 × your current energy) instead."
+		"DESCRIPTION": "Deal !D! damage (2 × the size of your hand). NL Amplify  [B]  : !B! damage (4 × your current energy) instead.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage (3 × the size of your hand). NL Amplify  [B]  : !B! damage (5 × your current energy) instead."
 	},
 	"OpenUniverse": {
 		"NAME": "Open Universe",
@@ -233,7 +233,7 @@
 	},
 	"D6C": {
 		"NAME": "66C",
-		"DESCRIPTION": "Deal !D! damage. NL if there is no card in your discard pile,deal double the damage.",
+		"DESCRIPTION": " Innate . NL Deal !D! damage. NL if there is no card in your discard pile,deal double the damage.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"Singualrity": {
@@ -276,9 +276,9 @@
 		"DESCRIPTION": "Gain !B! block , draw !M! card(s).Increase its draw amount by 1 for this combat.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
-	"MuscleSpark": {
+	"RefractionSpark": {
 		"NAME": "Refraction Spark",
-		"DESCRIPTION": "Deal !D! damage,then increase the damage of all Attack in your hand for damage dealt. NL Amplify  [B]  :Deal !B! damage instead.",
+		"DESCRIPTION": "Deal !D! damage,then increase the damage of all 'Spark' cards in your hand for damage dealt. NL Amplify  [B]  :Deal !B! damage instead.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MagicChant": {
@@ -303,12 +303,12 @@
 	},
 	"DarkMatter": {
 		"NAME": "Dark Matter",
-		"DESCRIPTION": "Shuffle 2 Dark Matter into your Discard Pile,gain !B! block when exhausted. NL Ethereal .",
-		"UPGRADE_DESCRIPTION": "Shuffle 2 Upgraded Dark Matter into your Discard Pile,gain !B! block when exhausted. NL Ethereal ."
+		"DESCRIPTION": "Shuffle 2 Dark Matter into your Draw Pile,gain !B! block when exhausted. NL Ethereal .",
+		"UPGRADE_DESCRIPTION": "Shuffle 2 Upgraded Dark Matter into your Draw Pile,gain !B! block when exhausted. NL Ethereal ."
 	},
 	"GasGiant": {
 		"NAME": "Gas Giant",
-		"DESCRIPTION": "Gain !B! block ,gain !M! Vulnerable .",
+		"DESCRIPTION": "Gain !B! block ,add !M! Burn to hand .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"CasketOfStar": {
@@ -358,7 +358,7 @@
 	},
 	"CollectingQuirk": {
 		"NAME": "Collecting Quirk",
-		"DESCRIPTION": "For each relic you have ,deal !D! damage to random enemy.",
+		"DESCRIPTION": "For each !M! relic you have ,deal !D! damage to random enemy.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"FungusSplash": {

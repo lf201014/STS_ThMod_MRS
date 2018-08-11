@@ -11,12 +11,12 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 import ThMod_FnH.ThMod;
 
-public class MusleSparkAction
+public class RefractionSparkAction
 	extends AbstractGameAction{
 	private DamageInfo info;
 	private static final float DURATION = 0.1F;
   
-	public MusleSparkAction(AbstractCreature target,DamageInfo info ){
+	public RefractionSparkAction(AbstractCreature target,DamageInfo info ){
 		this.info = info;
 		setValues(target, info);
 		this.actionType = AbstractGameAction.ActionType.DAMAGE;
@@ -44,7 +44,7 @@ public class MusleSparkAction
 	        	ThMod.logger.info("MusleSparkAction : increasing damage : "+tmp);
 	        
 	        	for (AbstractCard c:AbstractDungeon.player.hand.group)
-	        		if (c.type == CardType.ATTACK) {
+	        		if ((isSpark(c))) {
 	        			ThMod.logger.info("MusleSparkAction : increasing damage for : "+c.cardID);
 	        			c.baseDamage += tmp;
 	        			c.flash();
@@ -61,5 +61,19 @@ public class MusleSparkAction
 			}
 		}
 		tickDuration();
+	}
+	
+	private boolean isSpark(AbstractCard card) {
+		if (
+				(card.cardID == "Spark")||
+				(card.cardID == "DarkSpark")||
+				(card.cardID == "Strike_MRS")||
+				(card.cardID == "FinalSpark")||
+				(card.cardID == "DoubleSpark")||
+				(card.cardID == "MuscleSpark")
+				) {
+			return true;
+		}
+		return false;
 	}
 }

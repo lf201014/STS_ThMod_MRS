@@ -40,8 +40,8 @@ public class ChargeUpPower
 	
 	@Override
 	public void stackPower(int stackAmount){
-		ThMod.logger.info("ChargeUpPower : StackPower");
-		ThMod.logger.info("ChargeUpPower : adding");
+		//ThMod.logger.info("ChargeUpPower : StackPower");
+		//ThMod.logger.info("ChargeUpPower : adding");
 		
 	    this.fontScale = 8.0F;
 	    this.amount += stackAmount;
@@ -49,7 +49,7 @@ public class ChargeUpPower
 			this.amount = 0;
 			return;
 	    }
-		ThMod.logger.info("ChargeUpPower : checking counter");
+		//ThMod.logger.info("ChargeUpPower : checking counter");
 		if (AbstractDungeon.player.hasRelic("SimpleLauncher"))
 			this.stc = IMPR_STACK;
 		else
@@ -70,7 +70,7 @@ public class ChargeUpPower
 	@Override
 	public void onPlayCard(AbstractCard card, AbstractMonster m){
 		if ((this.cnt>0)&&(card.type == CardType.ATTACK)) {
-			ThMod.logger.info("ChargeUpPower : using stacks for :"+card.cardID);
+			ThMod.logger.info("ChargeUpPower : consuming stacks for :"+card.cardID);
 			if ( owner.hasPower("OrrerysSunPower") )
 				owner.getPower("OrrerysSunPower").onSpecificTrigger();
 			flash();

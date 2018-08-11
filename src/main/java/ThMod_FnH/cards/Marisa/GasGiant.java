@@ -2,7 +2,9 @@ package ThMod_FnH.cards.Marisa;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -34,9 +36,13 @@ public class GasGiant extends CustomCard {
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-		
+		/*
 		AbstractDungeon.actionManager.addToBottom(
 				new ApplyPowerAction(p, p, new VulnerablePower(p, this.magicNumber, false), this.magicNumber));
+				*/
+		AbstractDungeon.actionManager.addToBottom(
+				new MakeTempCardInHandAction(new Burn(), this.magicNumber)
+				);
 	}
 
 	public AbstractCard makeCopy() {

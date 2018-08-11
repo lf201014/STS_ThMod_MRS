@@ -41,9 +41,8 @@ public class StarDustReverieAction
 	        	
 			ThMod.logger.info("StarDustReverieAction : adding "+c.cardID);
 			
-			c.exhaust = true;
-			
 			if (!this.upgraded){
+				c.exhaust = true;
 				c.isEthereal = true;
 			}
 			

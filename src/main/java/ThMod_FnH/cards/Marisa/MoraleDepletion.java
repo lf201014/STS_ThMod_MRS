@@ -14,7 +14,7 @@ import ThMod_FnH.powers.Marisa.MoraleDepletionPower;
 
 public class MoraleDepletion extends CustomCard {
 	public static final String ID = "MoraleDepletion";
-	public static final String IMG_PATH = "img/cards/Defend.png";
+	public static final String IMG_PATH = "img/cards/MoraleDelpletion.png";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

@@ -178,3 +178,20 @@ v0.0.10
 *Ultimate Shortwave : now will increase Charge-up gain rather than energy gain when upgraded
 *Added Uncommon Relic Handmade Grimoire
 *Added Uncommon Relic Shroom Bag
+v0.0.101
+*Corrected some descriptions
+*Updated illustration of cards :Morale Depletion , Mana Convection
+*Re-added Relic Bread of A Washaoku Lover
+*Star Dust Reveries : Cards added no longer gain Exhaust and Ethereal when upgraded
+*Blazing Star : Reworked : cost 2 : deal 14 ( 18 ) damage,increase damage by 7( 9 ) for each Burn in your hand ; Amplify cost 1: deal double damage;
+*Meteonic Shower : Reworked : cost X : exhaust X+1 cards at most , deal 3 ( 4 ) damage to random enemy twice for each card exhausted ; deal damage one more time for each Burn among cards exhausted
+*Collecting Quirk : effect changed to for every 3 ( 4 ) relics you have ,deal 4 damage to random enemy
+*D2C : is Innate now
+*Dark Matter : will shuffle copies to draw pile now
+*Gas Giant : Vulnerable gain changed to add Burn to hand
+*Lumines Strike : Amplified base damage increased from 3 ( 4 ) to 4 ( 5 )
+*Non-Directional Laser : Reworked : cost 1 : deal 5 ( 7 ) damage to all enemies ,then deal 5 ( 7 ) damage to random enemy
+*Singulariy : cost : 2 -> 2 ( 1 ) ;damage increase : 2 -> 1
+*Refraction Spark : damage from 3 ( 4 ) / 5 ( 7 ) increased to 4 ( 5 ) / 6 ( 8 )
+*Refraction Spark : damage increase will only apply to Cards with "Spark" in their name
+*Mana Convection is Common card now
