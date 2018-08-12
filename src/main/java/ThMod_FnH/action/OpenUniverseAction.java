@@ -33,7 +33,7 @@ public class OpenUniverseAction
 		ArrayList<AbstractCard> cl = new ArrayList<AbstractCard>();
 		
 	    for (int i = 0; i < 5; i++){
-	        AbstractCard card = AbstractDungeon.getCard(ThMod.RollRarity()).makeStatEquivalentCopy();
+	        AbstractCard card = AbstractDungeon.returnTrulyRandomCard().makeStatEquivalentCopy();
 	    	ThMod.logger.info("OpenUniverse : generationg : "+card.cardID);
 	        if (this.upgraded)
 	        	card.upgrade();

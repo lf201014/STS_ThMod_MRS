@@ -196,6 +196,13 @@
       " times."
     ]
   },
+    "DarkSparkPower": {
+    "NAME": "Dark Spark",
+    "DESCRIPTIONS": [
+      "Each card with 'Spark' in its name you play will grant you ",
+      " additional Charge-up this turn."
+    ]
+  },
     "WWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [

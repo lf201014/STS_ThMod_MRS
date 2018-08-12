@@ -25,9 +25,7 @@ public class CollectingQuirk
 	private static final int COST = 2;
 	private static final int DVID = 4;
 	private static final int UPG_DVID = -1;
-	private static final int ATK_DMG = 4;
-	private static final int UPG_DMG = 1;
-
+	private static final int ATK_DMG = 7;
 	public CollectingQuirk() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE,

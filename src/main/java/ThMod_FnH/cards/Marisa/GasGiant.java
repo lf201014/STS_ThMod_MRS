@@ -1,6 +1,5 @@
 package ThMod_FnH.cards.Marisa;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,10 +9,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 
-import basemod.abstracts.CustomCard;
 import ThMod_FnH.patches.AbstractCardEnum;
+import basemod.abstracts.CustomCard;
 
 public class GasGiant extends CustomCard {
 	public static final String ID = "GasGiant";
@@ -22,8 +20,8 @@ public class GasGiant extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int BLOCK_AMT = 18;
-	private static final int UPGRADE_PLUS_BLOCK = 6;
+	private static final int BLOCK_AMT = 14;
+	private static final int UPGRADE_PLUS_BLOCK = 4;
 	private static final int VUL_GAIN = 2;
 	
 	public GasGiant() {

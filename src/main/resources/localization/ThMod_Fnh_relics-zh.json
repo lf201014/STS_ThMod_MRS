@@ -23,15 +23,15 @@
     "DESCRIPTIONS": [
       "每使用3张0费牌抽一张卡。"
     ]
-  }, "AMDumbbell": {
+  }, "AmplifyWand": {
     "NAME": "增幅魔杖",
-    "FLAVOR": "“这个遗物简介咋写啊”“中午给你吧，现在手里有点事儿”",
+    "FLAVOR": "没怎么被见到用过的一根魔杖。",
     "DESCRIPTIONS": [
       "每当你使用 增幅 效果，手牌中的所有攻击卡 基础伤害 增加 2 。"
     ]
   }, "RampagingMagicTools": {
     "NAME": "失控的魔法道具",
-    "FLAVOR": "It's been so long since anyone last used them,who knows what could happen?",
+    "FLAVOR": "好像很久没被用过的道具，不知道使用的时候会发生什么。",
     "DESCRIPTIONS": [
       "每回合开始获得 [B] 。在每场战斗的第一回合获得3层随机DEBUFF（ 虚弱 、 脆弱 、 易伤 、 中毒 ）。"
     ]

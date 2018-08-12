@@ -23,12 +23,14 @@ public class StarDustReverie extends CustomCard {
 
 	public StarDustReverie() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		
-    	AbstractDungeon.actionManager.addToBottom(new StarDustReverieAction(this.upgraded));
+    	AbstractDungeon.actionManager.addToBottom(
+    			new StarDustReverieAction(this.upgraded)
+    			);
 	}
 
 	public AbstractCard makeCopy() {

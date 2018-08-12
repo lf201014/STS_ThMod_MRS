@@ -3,13 +3,14 @@ package ThMod_FnH.cards.Marisa;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 
 import ThMod_FnH.ThMod;
 import ThMod_FnH.patches.AbstractCardEnum;
@@ -37,7 +38,7 @@ public class ShootingEcho
 		this.exhaust = true;
 	}
 
-	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
+	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(
 				new ExhaustAction(p, p, 1, false));
 		
@@ -46,10 +47,10 @@ public class ShootingEcho
 		if (p.hand.size()>1) {
 			AbstractCard c = this.makeCopy();
 			if (this.upgraded) {
-				c.update();
+				c.upgrade();
 			}
-			AbstractDungeon.effectList.add(
-					new ShowCardAndAddToHandEffect(c)
+			AbstractDungeon.actionManager.addToBottom(
+					new MakeTempCardInHandAction(c)
 					);
 		}
 			

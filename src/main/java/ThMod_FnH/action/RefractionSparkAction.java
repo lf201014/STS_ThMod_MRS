@@ -28,7 +28,7 @@ public class RefractionSparkAction
 			
 			AbstractMonster mon = (AbstractMonster) this.target;
 			
-			ThMod.logger.info("MusleSparkAction : calculating damage : "+this.info.base);
+			ThMod.logger.info("RefractionSparkAction : calculating damage : "+this.info.base);
 			
 	        float tmp = this.info.base;
 	        if (mon.currentBlock > 0)
@@ -40,18 +40,18 @@ public class RefractionSparkAction
 	        	tmp = 0;
 	        
 	        if (tmp > 0) {
-	        	ThMod.logger.info("MusleSparkAction : increasing damage : "+tmp);
+	        	ThMod.logger.info("RefractionSparkAction : increasing damage : "+tmp);
 	        
 	        	for (AbstractCard c:AbstractDungeon.player.hand.group)
-	        		if ((isSpark(c))) {
-	        			ThMod.logger.info("MusleSparkAction : increasing damage for : "+c.cardID);
+	        		if ((ThMod.isSpark(c))) {
+	        			ThMod.logger.info("RefractionSparkAction : increasing damage for : "+c.cardID);
 	        			c.baseDamage += tmp;
 	        			c.flash();
 	        			c.applyPowers();
 	        		}
 	        }
 	        
-	        ThMod.logger.info("MusleSparkAction : dealing damage : "+tmp);
+	        ThMod.logger.info("RefractionSparkAction : dealing damage : "+tmp);
 	        
 			this.target.damage(this.info);
 			
@@ -60,20 +60,5 @@ public class RefractionSparkAction
 			}
 		}
 		tickDuration();
-	}
-	
-	private boolean isSpark(AbstractCard card) {
-		if (
-				(card.cardID == "Spark")||
-				(card.cardID == "DarkSpark")||
-				(card.cardID == "Strike_MRS")||
-				(card.cardID == "FinalSpark")||
-				(card.cardID == "DoubleSpark")||
-				(card.cardID == "MuscleSpark")||
-				(card.cardID == "MachineGunSpark")
-				) {
-			return true;
-		}
-		return false;
 	}
 }

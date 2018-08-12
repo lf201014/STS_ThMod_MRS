@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.relics.Orichalcum;
 
 import ThMod_FnH.ThMod;
 import ThMod_FnH.powers.Marisa.PropBagPower;
-import ThMod_FnH.relics.AMDumbbell;
+import ThMod_FnH.relics.AmplifyWand;
 
 public class PropBagAction
 	extends AbstractGameAction{
@@ -40,7 +40,7 @@ public class PropBagAction
 			case "Art of War":
 				hasArt = true;
 				break;
-			case "AMDumbbell":
+			case "AmplifyWand":
 				hasWand = true;
 				break;
 			}
@@ -49,7 +49,7 @@ public class PropBagAction
 				"PropBagAction : done checking :"
 				+ "has Orichalcum :"+hasOri
 				+ " ; has ArtOfWar : "+hasArt
-				+ " ; has AMDumbbell : "+hasWand
+				+ " ; has AmplifyWand : "+hasWand
 				);
 		ArrayList<AbstractRelic> rs = new ArrayList<AbstractRelic>();
 		AbstractRelic r;
@@ -58,7 +58,7 @@ public class PropBagAction
 			rs.add(r);
 		}
 		if (!hasWand) {
-			r = new AMDumbbell();
+			r = new AmplifyWand();
 			rs.add(r);
 		}
 		if (!hasArt) {

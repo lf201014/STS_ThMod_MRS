@@ -19,8 +19,8 @@ import basemod.abstracts.CustomPlayer;
 public class Marisa extends CustomPlayer {
 	
 	public static final int ENERGY_PER_TURN = 3; // how much energy you get every turn
-	public static final String MY_CHARACTER_SHOULDER_2 = "img/char/MyCharacter/shoulder2.png"; // campfire pose
-    public static final String MY_CHARACTER_SHOULDER_1 = "img/char/MyCharacter/shoulder.png"; // another campfire pose
+	public static final String MY_CHARACTER_SHOULDER_2 = "img/char/Marisa/shoulder2.png"; // campfire pose
+    public static final String MY_CHARACTER_SHOULDER_1 = "img/char/Marisa/shoulder.png"; // another campfire pose
 	public static final String MY_CHARACTER_CORPSE = "img/char/MyCharacter/corpse.png"; // dead corpse
 	public static final Logger logger = LogManager.getLogger(ThMod.class.getName());
 	//private static final float[] layerSpeeds = { 20.0F, 0.0F, -40.0F, 0.0F, 0.0F, 5.0F, 0.0F, -8.0F, 0.0F, 8.0F };

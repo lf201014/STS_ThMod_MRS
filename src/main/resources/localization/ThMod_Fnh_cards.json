@@ -21,7 +21,7 @@
 	},
 	"DarkSpark": {
 		"NAME": "Dark Spark",
-		"DESCRIPTION": "Deal !D! damage,draw 2 cards. NL Add !M! damage to all 'Spark' cards in your hand.",
+		"DESCRIPTION": "Deal !D! damage,draw !M! cards. NL Each 'Spark' card you play this turn will grant you 1 extra Charge-up . NL Add a Burn to your hand. ",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
 	},
 	"DeepEcologicalBomb": {
@@ -293,8 +293,8 @@
 	},
 	"SuperNova": {
 		"NAME": "Supernova",
-		"DESCRIPTION": "Add a Burn to hand whenever you play a non-Attack card . NL Exhaust your hand when your turn ends,Gain 1 Strength for each Burn exhausted.",
-		"UPGRADE_DESCRIPTION": "Innate. NL Add a Burn to hand whenever you play a non-Attack card . NL Exhaust your hand when your turn ends,Gain 1 Strength for each Burn exhausted."
+		"DESCRIPTION": "Add a Burn to hand whenever you play a Skill card . NL Exhaust your hand when your turn ends,Gain 1 Strength for each Burn exhausted.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Add a Burn to hand whenever you play a Skill card . NL Exhaust your hand when your turn ends,Gain 1 Strength for each Burn exhausted."
 	},
 	"MoraleDepletion": {
 		"NAME": "Morale Depletion",

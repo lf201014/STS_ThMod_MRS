@@ -8,13 +8,11 @@ import org.apache.logging.log4j.Logger;
 import com.badlogic.gdx.Gdx;
 //cd:E:\STSmod worktable\example_mod
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 //import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -114,7 +112,7 @@ import ThMod_FnH.cards.special.WhiteDwarf;
 import ThMod_FnH.characters.Marisa;
 import ThMod_FnH.patches.AbstractCardEnum;
 import ThMod_FnH.patches.ThModClassEnum;
-import ThMod_FnH.relics.AMDumbbell;
+import ThMod_FnH.relics.AmplifyWand;
 import ThMod_FnH.relics.BreadOfAWashokuLover;
 import ThMod_FnH.relics.EnhancedBroom;
 import ThMod_FnH.relics.EnhancedHakkero;
@@ -175,14 +173,21 @@ public class ThMod implements PostExhaustSubscriber,
 	public static final String makePath(String resource) {
 	  return ASSETS_FOLDER + "/" + resource;
   	}
-	//For Generate random Card Rarity
-	public static CardRarity RollRarity () {
-		double rd = MathUtils.random(1,75);
-		if (rd <= 20)
-			return CardRarity.COMMON;
-		if (rd >= 55)
-			return CardRarity.RARE;
-		return CardRarity.UNCOMMON;
+	//For Spark Themed Cards
+	public static boolean isSpark(AbstractCard card) {
+		if (
+				(card.cardID == "Spark")||
+				(card.cardID == "DarkSpark")||
+				(card.cardID == "Strike_MRS")||
+				(card.cardID == "FinalSpark")||
+				(card.cardID == "DoubleSpark")||
+				(card.cardID == "MuscleSpark")||
+				(card.cardID == "MachineGunSpark")||
+				(card.cardID == "MasterSpark")
+				) {
+			return true;
+		}
+		return false;
 	}
 	//For Amplify cards
 	public static boolean Amplified(int COS,int AMP) {
@@ -268,7 +273,7 @@ public class ThMod implements PostExhaustSubscriber,
 		BaseMod.addRelicToCustomPool(new EnhancedHakkero(), AbstractCardEnum.MARISA_COLOR.toString());
 		BaseMod.addRelicToCustomPool(new EnhancedBroom(), AbstractCardEnum.MARISA_COLOR.toString());
 		BaseMod.addRelicToCustomPool(new MagicArmor(), AbstractCardEnum.MARISA_COLOR.toString());
-		BaseMod.addRelicToCustomPool(new AMDumbbell(), AbstractCardEnum.MARISA_COLOR.toString());
+		BaseMod.addRelicToCustomPool(new AmplifyWand(), AbstractCardEnum.MARISA_COLOR.toString());
 		BaseMod.addRelicToCustomPool(new ExperimentalFamiliar(), AbstractCardEnum.MARISA_COLOR.toString());
 		BaseMod.addRelicToCustomPool(new RampagingMagicTools(), AbstractCardEnum.MARISA_COLOR.toString());
 		BaseMod.addRelicToCustomPool(new BreadOfAWashokuLover(), AbstractCardEnum.MARISA_COLOR.toString());

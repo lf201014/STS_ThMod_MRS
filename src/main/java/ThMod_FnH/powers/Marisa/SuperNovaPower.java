@@ -57,7 +57,7 @@ public class SuperNovaPower extends AbstractPower{
 	}
 	
 	public void onUseCard(AbstractCard card, UseCardAction action) {
-		if (card.type != CardType.ATTACK) {
+		if (card.type == CardType.SKILL) {
 			ThMod.logger.info("SuperNovaPower : Adding Burn for Using card : "+card.cardID);
 			AbstractDungeon.actionManager.addToBottom(
 					new MakeTempCardInHandAction(new Burn_MRS(),1));

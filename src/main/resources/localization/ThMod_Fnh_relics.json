@@ -23,9 +23,9 @@
     "DESCRIPTIONS": [
       "For every 3 cards that cost 0 you played,draw a card."
     ]
-  }, "AMDumbbell": {
+  }, "AmplifyWand": {
     "NAME": "Amplify Wand",
-    "FLAVOR": "'Well ,Flavor of this relic...''I'm busy now,let's discus this later.",
+    "FLAVOR": "A Wand seems not often used.",
     "DESCRIPTIONS": [
       "Whenever you activate Amplify effect ,increase base damage of all Attack in your hand by 2."
     ]

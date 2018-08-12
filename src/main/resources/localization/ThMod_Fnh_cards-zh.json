@@ -21,7 +21,7 @@
 	},
 	"DarkSpark": {
 		"NAME": "暗色火花",
-		"DESCRIPTION": "造成 !D! 点伤害,抽两张卡。 NL 之后手牌中所有的“火花”牌伤害增加 !M! 点。",
+		"DESCRIPTION": "造成 !D! 点伤害,抽 !M! 张卡。 NL 在这回合，名字中有‘火花’的卡使用时会给与你额外1层蓄力。 NL 将一张 灼伤 加入手牌。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
 	},
 	"DeepEcologicalBomb": {
@@ -117,8 +117,8 @@
 	},
 	"StarDustReverie": {
 		"NAME": "星屑幻想",
-		"DESCRIPTION": "将你的手牌放回抽牌堆，然后将放回的卡数+1张随机卡片加入手牌。这些卡获得 消耗 和 虚无 。",
-		"UPGRADE_DESCRIPTION": "将你的手牌放回抽牌堆，然后将放回的卡数+1张随机卡片加入手牌。"
+		"DESCRIPTION": "将你的手牌放回抽牌堆，然后将放回的卡数+1张随机卡片加入手牌。",
+		"UPGRADE_DESCRIPTION": "将你的手牌放回抽牌堆，然后将放回的卡数+1张 升级 过的 随机卡片加入手牌。"
 	},
 	"UltraShortWave": {
 		"NAME": "极超短波",
@@ -292,8 +292,8 @@
 	},
 	"SuperNova": {
 		"NAME": "超新星",
-		"DESCRIPTION": "每打出一张非攻击卡，向手牌加入一张 灼伤 。 NL 在回合结束时 消耗 所有的手牌，其中每有一张 灼伤 ，获得一点 力量 。",
-		"UPGRADE_DESCRIPTION": " 固有 。 NL 每打出一张非攻击卡，向手牌加入一张 灼伤 。 NL 在回合结束时 消耗 所有的手牌，其中每有一张 灼伤 ，获得一点 力量 。"
+		"DESCRIPTION": "每 消耗 一张 灼伤 ，获得一点 力量 。每打出一张技能卡，向手牌加入一张 灼伤 。 NL 在回合结束时 消耗 所有手牌。",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 每 消耗 一张 灼伤 ，获得一点 力量 。每打出一张技能卡，向手牌加入一张 灼伤 。 NL 在回合结束时 消耗 所有手牌。"
 	},
 	"MoraleDepletion": {
 		"NAME": "战意枯竭",

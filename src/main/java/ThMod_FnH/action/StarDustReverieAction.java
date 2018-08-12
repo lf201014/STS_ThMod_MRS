@@ -41,20 +41,18 @@ public class StarDustReverieAction
 	        	
 			ThMod.logger.info("StarDustReverieAction : adding "+c.cardID);
 			
-			if (!this.upgraded){
-				c.exhaust = true;
-				c.isEthereal = true;
+			if (this.upgraded) {
+				c.upgrade();
 			}
-			
 			ThMod.logger.info(
 					"StarDustReverieAction : checking : Exhaust : "+c.exhaust+
-					" ; Ethereal : "+c.isEthereal
+					" ; Ethereal : "+c.isEthereal+
+					" ; Upgraded : "+c.upgraded
 					);
-			
-			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 1));
-			
-		}
-		
+			AbstractDungeon.actionManager.addToBottom(
+					new MakeTempCardInHandAction(c, 1)
+					);
+		}		
 	    AbstractDungeon.actionManager.addToBottom(new HandCheckAction(this.upgraded));
 	    
 		this.isDone = true;

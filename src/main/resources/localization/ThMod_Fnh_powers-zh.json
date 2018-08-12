@@ -196,6 +196,13 @@
       "次。"
     ]
   },
+    "DarkSparkPower": {
+    "NAME": "暗色火花",
+    "DESCRIPTIONS": [
+      "这一回合，你打出的每一张名字有‘火花’的牌都会给你",
+      "点额外的 蓄力 。"
+    ]
+  },
     "WWWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [
