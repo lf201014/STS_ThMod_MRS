@@ -24,7 +24,7 @@ public class EscapeVelocityPower
 	 this.amount = amount;
 	 this.type = AbstractPower.PowerType.DEBUFF;
 	 updateDescription();
-	 this.img = new Texture("img/powers/drawCard.png");
+	 this.img = new Texture("img/powers/drawCardRed.png");
   	}
 
  public void atStartOfTurnPostDraw() {

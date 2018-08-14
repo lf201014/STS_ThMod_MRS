@@ -203,6 +203,20 @@
       "点额外的 蓄力 。"
     ]
   },
+    "MagicChantPower": {
+    "NAME": "咏唱",
+    "DESCRIPTIONS": [
+      "下一回合，使",
+      "的费用减1。"
+    ]
+  },
+    "SatelIllusPower": {
+    "NAME": "卫星幻觉",
+    "DESCRIPTIONS": [
+      "当你抽卡堆里的卡牌数量增加时，获得",
+      "点能量。"
+    ]
+  },
     "WWWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [

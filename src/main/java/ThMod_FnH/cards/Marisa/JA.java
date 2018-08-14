@@ -26,7 +26,7 @@ public class JA
 	
 	private static final int COST = 2;
 	private static final int ATK_DMG = 4;
-	private static final int UPG_DMG = 2;
+	//private static final int UPG_DMG = 2;
 
 	public JA() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -65,7 +65,7 @@ public class JA
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeDamage(UPG_DMG);
+			//upgradeDamage(UPG_DMG);
 			this.rawDescription = DESCRIPTION_UPG;
 			initializeDescription();
 		}

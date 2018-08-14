@@ -6,9 +6,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import basemod.abstracts.CustomCard;
-import ThMod_FnH.action.BigCrunchAction;
+
+import ThMod_FnH.action.BigCruncAction;
 import ThMod_FnH.patches.AbstractCardEnum;
+import basemod.abstracts.CustomCard;
 
 public class BigCrunch extends CustomCard {
 	public static final String ID = "BigCrunch";
@@ -16,19 +17,22 @@ public class BigCrunch extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 1;	
+	private static final int COST = 0;	
+	private static final int DIV = 5;	
+	private static final int UPG_DIV = -1;	
 	
-
 	public BigCrunch() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
 		
 		this.exhaust = true;
-		this.magicNumber = this.baseMagicNumber = 1;
+		this.magicNumber = this.baseMagicNumber = DIV;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new BigCrunchAction(p,this.upgraded));
+		AbstractDungeon.actionManager.addToBottom(
+				new BigCruncAction(this.upgraded)
+				);
 	}
 
 	public AbstractCard makeCopy() {
@@ -38,7 +42,7 @@ public class BigCrunch extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBaseCost(0);
+			upgradeMagicNumber(UPG_DIV);
 		}
 	}
 }

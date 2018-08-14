@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
@@ -32,6 +33,23 @@ public class MysteriousBeam
 				AbstractCard.CardTarget.ENEMY);
 		
 	}
+	
+	@Override
+	public void calculateCardDamage(AbstractMonster mo){
+		float tmp = this.baseDamage;
+		if (mo != null) {
+			for (AbstractPower p : mo.powers) {
+				tmp = p.atDamageReceive(tmp, this.damageTypeForTurn);
+			}
+			for (AbstractPower p : mo.powers){
+				tmp = p.atDamageFinalReceive(tmp, this.damageTypeForTurn);
+				if (this.baseDamage != (int)tmp) {
+					this.isDamageModified = true;
+				}
+			}
+		}
+		this.damage = (int) tmp;
+	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		
@@ -44,8 +62,16 @@ public class MysteriousBeam
 	    this.baseDamage = c.damage;
 	    this.calculateCardDamage(m);
 	    
-	    AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-				new DamageInfo(p, this.damage, this.damageTypeForTurn),AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+	    AbstractDungeon.actionManager.addToBottom(
+	    			new DamageAction(
+	    					m,
+	    					new DamageInfo(
+	    							p,
+	    							this.damage,
+	    							this.damageTypeForTurn),
+	    					AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+	    					)
+	    		);
 	}
 
 	public AbstractCard makeCopy() {

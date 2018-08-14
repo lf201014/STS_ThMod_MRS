@@ -1,5 +1,6 @@
 package ThMod_FnH.cards.Marisa;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 //import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -23,14 +24,23 @@ public class OpenUniverse extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 0;
-	static final int AMP = 1;
+	private static final int DRAW = 1;
+	private static final int UPG_DRAW = 1;
+	private static final int AMP = 1;
 	
 
 
 	public OpenUniverse() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
-		this.exhaust =true;
+		super(
+				ID, NAME, IMG_PATH,
+				COST, DESCRIPTION,
+				AbstractCard.CardType.SKILL,
+				AbstractCardEnum.MARISA_COLOR,
+				AbstractCard.CardRarity.UNCOMMON,
+				AbstractCard.CardTarget.SELF
+				);
+		this.exhaust = true;
+		this.magicNumber = this.baseMagicNumber = DRAW; 
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m){
@@ -40,12 +50,14 @@ public class OpenUniverse extends CustomCard {
 		
 	    for (int i = 0; i < 5; i++){
 	        AbstractCard card = AbstractDungeon.returnTrulyRandomCard().makeStatEquivalentCopy();
-	        if (this.upgraded)
+	        if (amp)
 	        	card.upgrade();
+	        /*
 	        if (amp) {
 		    	card.freeToPlayOnce = true;
 		    	card.applyPowers();
 		    }
+		    */
 			ThMod.logger.info("OpenUniverse : adding : "+card.cardID);
 			
 	        AbstractDungeon.effectList.add(
@@ -59,8 +71,15 @@ public class OpenUniverse extends CustomCard {
 	    for (AbstractRelic r : p.relics)
 	    	r.onShuffle();
 	    
-	     
+	    ThMod.logger.info("OpenUniverse : drawing");
+	    
+	    AbstractDungeon.actionManager.addToBottom(
+	    		new DrawCardAction(p,this.magicNumber)
+	    		);
+	    
 		ThMod.logger.info("OpenUniverse : done");
+		
+		
 	}
 
 	public AbstractCard makeCopy() {
@@ -70,8 +89,9 @@ public class OpenUniverse extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;;
-			initializeDescription();
+			upgradeMagicNumber(UPG_DRAW);
+			//this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;;
+			//initializeDescription();
 		}
 	}
 	

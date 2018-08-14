@@ -13,7 +13,7 @@
 	},
 	"BigCrunch": {
 		"NAME": "Big Crunch",
-		"DESCRIPTION": "Discard any number of your hand, NL gain 1  [B]  and 1 Charge-up for each discarded. NL  Exhaust ."
+		"DESCRIPTION": " Exhaust half of the cards in your Discard pile and Draw Pile, for each !M! cards exhausted ,gain [B] and draw a card. NL  Exhaust ."
 	},
 	"BlazingStar": {
 		"NAME": "Blazing Star",
@@ -57,7 +57,7 @@
 	},
 	"IllusionStar": {
 		"NAME": "Illusion Star",
-		"DESCRIPTION": "Add !M! random cards to your hand.",
+		"DESCRIPTION": "Add !M! random cards to your hand,then put a card from your hand on top of your draw pile. ",
 		"UPGRADE_DESCRIPTION": "At the start of your turn,Transform and Upgrade a card in your hand."
 	},
 	"MachineGunSpark": {
@@ -103,8 +103,8 @@
 	},
 	"SatelliteIllusion": {
 		"NAME": "Satellite Illusion",
-		"DESCRIPTION": "Draw a card whenever you play a card that doesn't exist in your master deck.",
-		"UPGRADE_DESCRIPTION": "Innate. NL GDraw a card whenever you play a card that doesn't exist in your master deck."
+		"DESCRIPTION": "When the number of cards in your draw pile increases, gain  [B]  .",
+		"UPGRADE_DESCRIPTION": " Innate . NL When the number of cards in your draw pile increases, gain  [B]  ."
 	},
 	"ShootTheMoon": {
 		"NAME": "Shoot The Moon",
@@ -158,7 +158,7 @@
 	},
 	"OpenUniverse": {
 		"NAME": "Open Universe",
-		"DESCRIPTION": "Add 5 random cards to draw pile. Exhaust . NL  Amplify  [B]  :Cards added can be played for free once.",
+		"DESCRIPTION": "Add 5 random cards to draw pile,then draw !M! cards. Exhaust . NL  Amplify  [B]  :Upgrade added cards.",
 		"UPGRADE_DESCRIPTION": "Add 5 random upgraded cards to draw pile. Exhaust . NL  Amplify  [B]  :Cards added can be played for free once."
 	},
 	"BlazeAway": {
@@ -168,7 +168,7 @@
 	},
 	"MaximisePower": {
 		"NAME": "Max Power",
-		"DESCRIPTION": "Convert your Charge-up stacks into energy. NL Draw !M! cards. NL Double your damage and discard any non-Attack in your hand this turn. NL Exhaust .",
+		"DESCRIPTION": "Convert your Charge-up stacks into energy. NL Draw !M! cards. NL Double your damage this turn. NL Exhaust .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWW"
 	},
 	"StarlightTyphoon": {
@@ -178,7 +178,7 @@
 	},
 	"SuperPerseids": {
 		"NAME": "Super Perseids",
-		"DESCRIPTION": "Can't be played. NL When discarded or  Exhaust ed,deal !D! to all enemies.",
+		"DESCRIPTION": " Retain . Exhaust all Burn in your hand. NL for each Burn Exhasted , deal !D! damage.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MysteriousBeam": {
@@ -218,7 +218,7 @@
 	},
 	"DragonMeteor": {
 		"NAME": "Dragon Meteor",
-		"DESCRIPTION": "Deal !D! damage to a random enemy for each card in your exhaust pile.",
+		"DESCRIPTION": "Deal !D! damage( !M! × number of cards in your exhaust pile ) .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"EventHorizon": {
@@ -283,7 +283,7 @@
 	},
 	"MagicChant": {
 		"NAME": "Magic Chant",
-		"DESCRIPTION": "Choose !M! to retain this turn,gain block equals to total twice the cost of cards you chose.",
+		"DESCRIPTION": "Choose !M! to retain this turn,reduce the cost of chosen cards by 1 next turn.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"UnstableBomb": {
@@ -293,12 +293,12 @@
 	},
 	"SuperNova": {
 		"NAME": "Supernova",
-		"DESCRIPTION": "Add a Burn to hand whenever you play a Skill card . NL Exhaust your hand when your turn ends,Gain 1 Strength for each Burn exhausted.",
-		"UPGRADE_DESCRIPTION": "Innate. NL Add a Burn to hand whenever you play a Skill card . NL Exhaust your hand when your turn ends,Gain 1 Strength for each Burn exhausted."
+		"DESCRIPTION": "Gain 1 Strength for each Burn exhausted . NL  Exhaust your hand when your turn ends. ",
+		"UPGRADE_DESCRIPTION": "Innate. NL Gain 1 Strength for each Burn exhausted . NL  Exhaust your hand when your turn ends. "
 	},
 	"MoraleDepletion": {
 		"NAME": "Morale Depletion",
-		"DESCRIPTION": "Gain !B! block , you can't use Amplify until this turn ends.",
+		"DESCRIPTION": "Gain !B! block , you can't use Amplify and Charge-up until this turn ends.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"DarkMatter": {
@@ -328,7 +328,7 @@
 	},
 	"GalacticHalo": {
 		"NAME": "Galactic Halo",
-		"DESCRIPTION": "At the end of your turn,gain !M! block for each Attack you played this turn.",
+		"DESCRIPTION": "Gain !B! block , !M! Charge-up.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"ManaConvection": {
@@ -338,8 +338,8 @@
 	},
 	"ManaRampage": {
 		"NAME": "Mana Rampage",
-		"DESCRIPTION": "This turn,your next attack will be played X times.",
-		"UPGRADE_DESCRIPTION": "This turn,your next attack will be played X+1 times."
+		"DESCRIPTION": "This turn,your next attack will be played X times in addition.",
+		"UPGRADE_DESCRIPTION": "This turn,your next attack will be played X+1 times in addition."
 	},
 	"StarBarrage": {
 		"NAME": "Star Barrage",

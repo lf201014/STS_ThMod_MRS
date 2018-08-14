@@ -6,9 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -55,7 +53,7 @@ public class SuperNovaPower extends AbstractPower{
 			AbstractDungeon.actionManager.addToBottom(
 					new ApplyPowerAction(p, p, new StrengthPower(p, this.amount), this.amount));
 	}
-	
+	/*
 	public void onUseCard(AbstractCard card, UseCardAction action) {
 		if (card.type == CardType.SKILL) {
 			ThMod.logger.info("SuperNovaPower : Adding Burn for Using card : "+card.cardID);
@@ -63,7 +61,7 @@ public class SuperNovaPower extends AbstractPower{
 					new MakeTempCardInHandAction(new Burn_MRS(),1));
 		}
 	}
-		
+	*/
 	@Override
 	public void onDrawOrDiscard() {
 		ThMod.logger.info("SuperNovaPower : onDrawOrDiscard : replaceBurn");

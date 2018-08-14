@@ -32,8 +32,10 @@ public class GuidingStar extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(this.makeStatEquivalentCopy(), 1, true, true));
 		
 		p.drawPile.shuffle();
-	    for (AbstractRelic r : p.relics)
-	        r.onShuffle();
+		
+		for (AbstractRelic r : p.relics) {
+			r.onShuffle();
+	    }   
 	}
 
 	public AbstractCard makeCopy() {

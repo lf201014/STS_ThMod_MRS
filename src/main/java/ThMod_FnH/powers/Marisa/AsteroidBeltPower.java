@@ -34,16 +34,29 @@ public class AsteroidBeltPower
 	    if (info.type == DamageInfo.DamageType.NORMAL) {
 	    	this.isAttacked = true;
 	    	ThMod.logger.info("AsteroidBeltPower : Attacked");
-		    AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction( owner , owner , "AsteroidBeltPower" ));
+		    AbstractDungeon.actionManager.addToTop(
+		    		new RemoveSpecificPowerAction( owner , owner , this )
+		    		);
 	    }
 	    	
 		return damageAmount;
 	}
+	
+	@Override
+	public void stackPower(int stackAmount) {}
  
 	public void atStartOfTurn() {
 		flash();
-		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.amount));
-	    AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction( owner , owner , "AsteroidBeltPower" ));
+		AbstractDungeon.actionManager.addToBottom(
+				new GainBlockAction(
+						AbstractDungeon.player,
+						AbstractDungeon.player,
+						this.amount
+						)
+				);
+	    AbstractDungeon.actionManager.addToBottom(
+	    		new RemoveSpecificPowerAction( owner , owner , this )
+	    		);
 	}
 	
 	public void atEndOfRound() {

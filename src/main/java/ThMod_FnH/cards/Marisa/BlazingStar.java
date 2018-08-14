@@ -1,9 +1,7 @@
 package ThMod_FnH.cards.Marisa;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.Burn;
@@ -12,12 +10,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
 import ThMod_FnH.ThMod;
-import ThMod_FnH.abstracts.AmplifiedAttack;
 import ThMod_FnH.cards.special.Burn_MRS;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
@@ -72,7 +66,6 @@ public class BlazingStar
 						AbstractGameAction.AttackEffect.SLASH_DIAGONAL
 						)
 				);
-	    
 	}
 
 	public AbstractCard makeCopy() {

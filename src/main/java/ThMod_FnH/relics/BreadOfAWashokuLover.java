@@ -65,7 +65,7 @@ public class BreadOfAWashokuLover extends CustomRelic {
     		AbstractDungeon.actionManager.addToBottom(
     				new RelicAboveCreatureAction(AbstractDungeon.player, this)
     				);
-    		setTexture(ImageMaster.loadImage(USED_IMG));
+    		this.img = (ImageMaster.loadImage(USED_IMG));
     		AbstractDungeon.player.increaseMaxHp(13, true);
     		this.counter = -1;
     		usedUp();

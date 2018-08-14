@@ -203,6 +203,20 @@
       " additional Charge-up this turn."
     ]
   },
+    "MagicChantPower": {
+    "NAME": "Magic Chant",
+    "DESCRIPTIONS": [
+      "Reduce the cost of ",
+      " next turn."
+    ]
+  },
+    "SatelIllusPower": {
+    "NAME": "Satellite Illusion",
+    "DESCRIPTIONS": [
+      "When the number of cards in your draw pile increases, gain ",
+      " [B] ."
+    ]
+  },
     "WWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [

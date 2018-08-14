@@ -118,7 +118,6 @@ import ThMod_FnH.relics.EnhancedBroom;
 import ThMod_FnH.relics.EnhancedHakkero;
 import ThMod_FnH.relics.ExperimentalFamiliar;
 import ThMod_FnH.relics.HandmadeGrimoire;
-import ThMod_FnH.relics.MagicArmor;
 import ThMod_FnH.relics.MiniHakkero;
 import ThMod_FnH.relics.RampagingMagicTools;
 import ThMod_FnH.relics.ShroomBag;
@@ -161,7 +160,7 @@ public class ThMod implements PostExhaustSubscriber,
 
   	private static final Color STARLIGHT = CardHelper.getColor(0f, 0f, 255.0f);
  
-  	private static final String MY_CHARACTER_BUTTON = "img/charSelect/testButton.png";
+  	private static final String MY_CHARACTER_BUTTON = "img/charSelect/MarisaButton.png";
 	
   	private static final String MARISA_PORTRAIT = "img/charSelect/marisaPortrait.jpg";
 	
@@ -215,27 +214,16 @@ public class ThMod implements PostExhaustSubscriber,
 				AbstractDungeon.actionManager.addToTop(
 						new RelicAboveCreatureAction(AbstractDungeon.player, r) 
 						);
-				/*
-				AbstractDungeon.actionManager.addToTop(
-						new ApplyPowerAction(
-								p, p,
-								new StrengthPower(p, 1),
-								1)
-						);
-				*/
 				AbstractDungeon.actionManager.addToBottom(
 						new MilkyWayAction(2)
 						);
 			}
 		}
-			
 		return res;
 	}
 	
 	public ThMod() {
-
       BaseMod.subscribe(this);
-
       logger.info("creating the color : MARISA_COLOR");
       BaseMod.addColor(AbstractCardEnum.MARISA_COLOR.toString(),
     		  	STARLIGHT, STARLIGHT, STARLIGHT, STARLIGHT, STARLIGHT, STARLIGHT, STARLIGHT,
@@ -243,7 +231,6 @@ public class ThMod implements PostExhaustSubscriber,
         	    makePath(POWER_CC), makePath(ENERGY_ORB_CC),
         	    makePath(ATTACK_CC_PORTRAIT), makePath(SKILL_CC_PORTRAIT),
         	    makePath(POWER_CC_PORTRAIT), makePath(ENERGY_ORB_CC_PORTRAIT));
-		
 	}
 
 	public void receiveEditCharacters() {
@@ -272,7 +259,7 @@ public class ThMod implements PostExhaustSubscriber,
 		BaseMod.addRelicToCustomPool(new MiniHakkero(), AbstractCardEnum.MARISA_COLOR.toString());
 		BaseMod.addRelicToCustomPool(new EnhancedHakkero(), AbstractCardEnum.MARISA_COLOR.toString());
 		BaseMod.addRelicToCustomPool(new EnhancedBroom(), AbstractCardEnum.MARISA_COLOR.toString());
-		BaseMod.addRelicToCustomPool(new MagicArmor(), AbstractCardEnum.MARISA_COLOR.toString());
+		//BaseMod.addRelicToCustomPool(new MagicArmor(), AbstractCardEnum.MARISA_COLOR.toString());
 		BaseMod.addRelicToCustomPool(new AmplifyWand(), AbstractCardEnum.MARISA_COLOR.toString());
 		BaseMod.addRelicToCustomPool(new ExperimentalFamiliar(), AbstractCardEnum.MARISA_COLOR.toString());
 		BaseMod.addRelicToCustomPool(new RampagingMagicTools(), AbstractCardEnum.MARISA_COLOR.toString());
@@ -297,7 +284,7 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("MasterSpark");
 		BaseMod.addCard(new UpSweep());
 		UnlockTracker.unlockCard("UpSweep");
-		//attack£º30
+		//attack£º31
 		//Common: 10
 		BaseMod.addCard(new DoubleSpark());
 		UnlockTracker.unlockCard("DoubleSpark");
@@ -319,7 +306,7 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("UnstableBomb");
 		BaseMod.addCard(new StarBarrage());
 		UnlockTracker.unlockCard("StarBarrage");
-		//Uncommon: 13
+		//Uncommon: 14
 		BaseMod.addCard(new MachineGunSpark());
 		UnlockTracker.unlockCard("MachineGunSpark");
 		BaseMod.addCard(new DarkSpark());
@@ -346,6 +333,8 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("ChargeUpSpray");
 		BaseMod.addCard(new AFriendsGift());
 		UnlockTracker.unlockCard("AFriendsGift");
+		BaseMod.addCard(new SuperPerseids());
+		UnlockTracker.unlockCard("SuperPerseids");
 		//Rare:  7
 		BaseMod.addCard(new BlazingStar());
 		UnlockTracker.unlockCard("BlazingStar");
@@ -387,8 +376,6 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("Occultation");
 		BaseMod.addCard(new EarthLightRay());
 		UnlockTracker.unlockCard("EarthLightRay");
-		BaseMod.addCard(new SuperPerseids());
-		UnlockTracker.unlockCard("SuperPerseids");
 		BaseMod.addCard(new BlazeAway());
 		UnlockTracker.unlockCard("BlazeAway");
 		BaseMod.addCard(new ChargingUp());
@@ -407,6 +394,8 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("PropBag");
 		BaseMod.addCard(new FungusSplash());
 		UnlockTracker.unlockCard("FungusSplash");
+		BaseMod.addCard(new GalacticHalo());
+		UnlockTracker.unlockCard("GalacticHalo");
 		//Rare : 7
 		BaseMod.addCard(new BigCrunch());
 		UnlockTracker.unlockCard("BigCrunch");
@@ -423,11 +412,11 @@ public class ThMod implements PostExhaustSubscriber,
 		BaseMod.addCard(new BinaryStars());
 		UnlockTracker.unlockCard("BinaryStars");
 		
-		//power£º13
+		//power£º12
 		//common:1
 		BaseMod.addCard(new WitchOfGreed());
 		UnlockTracker.unlockCard("WitchOfGreed");
-		//uncommon: 8
+		//uncommon: 7
 		BaseMod.addCard(new SatelliteIllusion());
 		UnlockTracker.unlockCard("SatelliteIllusion");
 		BaseMod.addCard(new OortCloud());
@@ -442,8 +431,6 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("Singualrity");
 		BaseMod.addCard(new CasketOfStar());
 		UnlockTracker.unlockCard("CasketOfStar");
-		BaseMod.addCard(new GalacticHalo());
-		UnlockTracker.unlockCard("GalacticHalo");
 		//rare: 4
 		BaseMod.addCard(new PolarisUnique());
 		UnlockTracker.unlockCard("PolarisUnique");

@@ -7,9 +7,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import basemod.abstracts.CustomCard;
+
 import ThMod_FnH.patches.AbstractCardEnum;
-import ThMod_FnH.powers.Marisa.SatelliteIllusionPower;
+import ThMod_FnH.powers.Marisa.SatelIllusPower;
+import basemod.abstracts.CustomCard;
 
 public class SatelliteIllusion extends CustomCard{
     public static final String ID = "SatelliteIllusion";
@@ -25,16 +26,21 @@ public class SatelliteIllusion extends CustomCard{
         		AbstractCard.CardType.POWER, AbstractCardEnum.MARISA_COLOR,
         		AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
     }
-  
+ 
     public void use(AbstractPlayer p, AbstractMonster m){
     	AbstractDungeon.actionManager.addToBottom(
-    		new ApplyPowerAction(p , p ,new SatelliteIllusionPower(p, 1), 1));
+    		new ApplyPowerAction(
+    				p ,
+    				p ,
+    				new SatelIllusPower(p, 1),
+    				1)
+    		);
     }
-  
+
     public AbstractCard makeCopy(){
     	return new SatelliteIllusion();
     }
-  
+
     public void upgrade(){
     	if (!this.upgraded){
     		upgradeName();

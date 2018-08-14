@@ -1,6 +1,7 @@
 package ThMod_FnH.relics;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -40,7 +41,7 @@ public class RampagingMagicTools extends CustomRelic {
     }
     
     public void atBattleStart() {
-    	int rng = (int) Math.floor(Math.random()*4);
+    	int rng = (int) (MathUtils.random(0,3));
     	AbstractPower pow = null;
     	AbstractPlayer p = AbstractDungeon.player;
     	switch (rng) {
@@ -55,6 +56,8 @@ public class RampagingMagicTools extends CustomRelic {
     		break;
     	case 3:
     		pow = new PoisonPower(p, AbstractDungeon.player, STCS);
+    		break;
+    	default:
     		break;
     	}
     	if (pow != null) {

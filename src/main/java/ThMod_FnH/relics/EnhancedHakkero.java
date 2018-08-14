@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Burn;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -52,36 +51,5 @@ public class EnhancedHakkero extends CustomRelic {
     	AbstractDungeon.actionManager.addToTop(
     			new MakeTempCardInHandAction(new Burn(), 1)
     			);
-    }
-    
-    public void atBattleStartPreDraw() {
-    	
-    	ThMod.logger.info("EnhancedHakkero : Start Marking");
-    	AbstractPlayer p = AbstractDungeon.player;
-    	
-    	ThMod.logger.info("EnhancedHakkero : Checking DiscardPile");
-    	if (!p.discardPile.isEmpty())
-    		for (AbstractCard c : p.discardPile.group) {
-    			if (c.cardID != "RitualDagger")
-    				c.misc = 1;
-    			ThMod.logger.info("EnhancedHakkero : Marking "+c.cardID);
-    		}
-    	
-    	ThMod.logger.info("EnhancedHakkero : Checking Draw Pile");
-    	if (!p.drawPile.isEmpty())
-    		for (AbstractCard c : p.drawPile.group) {
-    			if (c.cardID != "RitualDagger")
-    				c.misc = 1;
-    			ThMod.logger.info("EnhancedHakkero : Marking "+c.cardID);
-    		}
-
-    	ThMod.logger.info("EnhancedHakkero : Checking Hand");
-    	if (!p.hand.isEmpty())
-    		for (AbstractCard c : p.hand.group) {
-    			if (c.cardID != "RitualDagger")
-    				c.misc = 1;
-    			ThMod.logger.info("EnhancedHakkero : Marking "+c.cardID);
-    		}
-    	
     }
 }

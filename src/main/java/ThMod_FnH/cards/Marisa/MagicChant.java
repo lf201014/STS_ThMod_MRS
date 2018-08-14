@@ -22,14 +22,22 @@ public class MagicChant extends CustomCard {
 	private static final int UPG_RTN = 1;
 	
 	public MagicChant() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+		super(
+				ID, NAME, IMG_PATH,
+				COST, DESCRIPTION,
+				AbstractCard.CardType.SKILL,
+				AbstractCardEnum.MARISA_COLOR, 
+				AbstractCard.CardRarity.UNCOMMON,
+				AbstractCard.CardTarget.SELF
+				);
 
 		this.magicNumber = this.baseMagicNumber = RTN;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new RetainNBlockAction(p, this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(
+				new RetainNBlockAction(p, this.magicNumber)
+				);
 	}
 
 	public AbstractCard makeCopy() {

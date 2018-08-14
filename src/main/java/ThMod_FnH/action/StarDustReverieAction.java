@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import ThMod_FnH.ThMod;
 
@@ -34,6 +35,12 @@ public class StarDustReverieAction
 				cnt++;
 				ThMod.logger.info("StarDustReverieAction : Counter : "+cnt);
 			}
+		
+		p.drawPile.shuffle();
+		
+		for (AbstractRelic r: p.relics) {
+			r.onShuffle();
+		}
 
 		for (int i=0 ; i <= cnt ; i++ ) {
 

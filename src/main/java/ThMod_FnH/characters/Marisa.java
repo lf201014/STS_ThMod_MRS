@@ -19,13 +19,14 @@ import basemod.abstracts.CustomPlayer;
 public class Marisa extends CustomPlayer {
 	
 	public static final int ENERGY_PER_TURN = 3; // how much energy you get every turn
-	public static final String MY_CHARACTER_SHOULDER_2 = "img/char/Marisa/shoulder2.png"; // campfire pose
-    public static final String MY_CHARACTER_SHOULDER_1 = "img/char/Marisa/shoulder.png"; // another campfire pose
-	public static final String MY_CHARACTER_CORPSE = "img/char/MyCharacter/corpse.png"; // dead corpse
+	public static final String MARISA_SHOULDER_2 = "img/char/Marisa/shoulder2.png"; // shoulder2 / shoulder_1
+    public static final String MARISA_SHOULDER_1 = "img/char/Marisa/shoulder1.png"; // shoulder1 / shoulder_2
+	public static final String MARISA_CORPSE = "img/char/MyCharacter/corpse.png"; // dead corpse
 	public static final Logger logger = LogManager.getLogger(ThMod.class.getName());
 	//private static final float[] layerSpeeds = { 20.0F, 0.0F, -40.0F, 0.0F, 0.0F, 5.0F, 0.0F, -8.0F, 0.0F, 8.0F };
-    public static final String MY_CHARACTER_SKELETON_ATLAS = "img/char/Marisa/Marisa_v0.atlas"; // spine animation atlas
-    public static final String MY_CHARACTER_SKELETON_JSON = "img/char/Marisa/Marisa_v0.json"; // spine animation json
+    public static final String MARISA_SKELETON_ATLAS = "img/char/Marisa/MarisaModel_v02.atlas";// Marisa_v0 / MarisaModel_v02
+    public static final String MARISA_SKELETON_JSON = "img/char/Marisa/MarisaModel_v02.json";
+    public static final String MARISA_ANIMATION = "Idle";// Sprite / Idle
     //public static final String SPRITER_ANIM_FILEPATH = "img/char/MyCharacter/marisa_test.scml"; // spriter animation scml
 
 	public Marisa (String name, PlayerClass setClass) {
@@ -38,14 +39,14 @@ public class Marisa extends CustomPlayer {
 		
 		logger.info("init Marisa");
 		
-		initializeClass(null, MY_CHARACTER_SHOULDER_2, // required call to load textures and setup energy/loadout
-				MY_CHARACTER_SHOULDER_1,
-				MY_CHARACTER_CORPSE, 
+		initializeClass(null, MARISA_SHOULDER_2, // required call to load textures and setup energy/loadout
+				MARISA_SHOULDER_1,
+				MARISA_CORPSE, 
 				getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
 		
-		loadAnimation(MY_CHARACTER_SKELETON_ATLAS, MY_CHARACTER_SKELETON_JSON, 1.0F); 
+		loadAnimation(MARISA_SKELETON_ATLAS, MARISA_SKELETON_JSON, 1.0F); 
 		// if you're using modified versions of base game animations or made animations in spine make sure to include this bit and the following lines
-		AnimationState.TrackEntry e = this.state.setAnimation(0, "Sprite", true);
+		AnimationState.TrackEntry e = this.state.setAnimation(0, MARISA_ANIMATION, true);
 		e.setTime(e.getEndTime() * MathUtils.random());
 	    e.setTimeScale(0.9F);
 		logger.info("init finish");
@@ -83,10 +84,10 @@ public class Marisa extends CustomPlayer {
 		String flavor;
 		if (Settings.language == Settings.GameLanguage.ZHS) {
 			title = "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f";
-			flavor = "\u4f4f\u5728\u9b54\u6cd5\u68ee\u6797\u7684\u9b54\u6cd5\u4f7f\u3002 NL \u5584\u957f\u4e8e\u5149\u548c\u70ed\u7684\u9b54\u6cd5\u3002 \u203b\u0020\u8bf7\u4e0d\u8981\u79fb\u9664\u521d\u59cb\u9057\u7269";
+			flavor = "\u4f4f\u5728\u9b54\u6cd5\u68ee\u6797\u7684\u9b54\u6cd5\u4f7f\u3002 NL \u5584\u957f\u4e8e\u5149\u548c\u70ed\u7684\u9b54\u6cd5\u3002";
 		}else {
 			title = "The Ordinary Magician";
-			flavor = "The 'ordinay' magician lives in the magic forest. NL Specialized in light and heat magic. \u203b Please Don't remove the Starter Relic.";
+			flavor = "The 'ordinay' magician lives in the magic forest. NL Specialized in light and heat magic.";
 		}
 		return new CharSelectInfo(
 				title, flavor,

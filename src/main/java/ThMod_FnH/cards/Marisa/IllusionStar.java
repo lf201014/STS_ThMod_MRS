@@ -1,6 +1,7 @@
 package ThMod_FnH.cards.Marisa;
 
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.PutOnDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -33,6 +34,7 @@ public class IllusionStar extends CustomCard{
 
 			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 1));
 		}
+    	AbstractDungeon.actionManager.addToBottom(new PutOnDeckAction(p, p, 1, false));
     }
   
     public AbstractCard makeCopy(){

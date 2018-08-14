@@ -69,6 +69,9 @@ public class ChargeUpPower
 	
 	@Override
 	public void onPlayCard(AbstractCard card, AbstractMonster m){
+		if (this.owner.hasPower("MoraleDepletionPower")) {
+			return;
+		}
 		if ((this.cnt>0)&&(card.type == CardType.ATTACK)) {
 			ThMod.logger.info("ChargeUpPower : consuming stacks for :"+card.cardID);
 			if ( owner.hasPower("OrrerysSunPower") )
@@ -90,6 +93,9 @@ public class ChargeUpPower
 	
 	@Override
 	public float atDamageFinalGive(float damage, DamageInfo.DamageType type) {
+		if (this.owner.hasPower("MoraleDepletionPower")) {
+			return damage;
+		}
 		if (cnt>0)
 			if ((type== DamageType.NORMAL)&&(this.amount >= 1)) {
 				return (float) (damage * Math.pow(2, this.cnt));
