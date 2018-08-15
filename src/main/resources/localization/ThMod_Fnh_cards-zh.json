@@ -182,7 +182,7 @@
 	},
 	"SuperPerseids": {
 		"NAME": "超级英仙座",
-		"DESCRIPTION": " 固有 。消耗掉手牌中的所有 灼伤 ，每消耗一张，造成 !D! 点伤害。",
+		"DESCRIPTION": " 保留 。消耗掉手牌中的所有 灼伤 ，每消耗一张，造成 !D! 点伤害。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MysteriousBeam": {
@@ -282,7 +282,7 @@
 	},
 	"MagicChant": {
 		"NAME": "咏唱",
-		"DESCRIPTION": "选择 !M! 张卡 保留 到下一回合。获得所选卡片费用总和的2倍的 格挡 。",
+		"DESCRIPTION": "选择 !M! 张卡 保留 到下一回合。所选卡牌在下回合 费用 减少1 。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"UnstableBomb": {

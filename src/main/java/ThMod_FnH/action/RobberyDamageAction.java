@@ -27,18 +27,21 @@ public class RobberyDamageAction
 			
 			AbstractMonster mon = (AbstractMonster) this.target;
 			
-	        int tmp = this.info.base;
-	        tmp -= mon.currentBlock;
-	        if (tmp > mon.currentHealth) {
-	        	tmp = mon.currentHealth;
-	        }
-	        
-	        if (this.amp)
-	        	tmp *= 2;
-	        
-	        AbstractDungeon.player.gainGold(tmp);
+			int tmp = mon.currentHealth;
 	        
 			this.target.damage(this.info);
+			
+			int res;
+			
+			if (mon.isDying) {
+				res = tmp;
+			} else {
+				res = tmp - mon.currentHealth;
+			}
+	        if (this.amp)
+	        	res *= 2;
+	        
+	        AbstractDungeon.player.gainGold(res);
 			
 			if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
 				AbstractDungeon.actionManager.clearPostCombatActions();

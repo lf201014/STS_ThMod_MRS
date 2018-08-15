@@ -21,7 +21,7 @@ public class Marisa extends CustomPlayer {
 	public static final int ENERGY_PER_TURN = 3; // how much energy you get every turn
 	public static final String MARISA_SHOULDER_2 = "img/char/Marisa/shoulder2.png"; // shoulder2 / shoulder_1
     public static final String MARISA_SHOULDER_1 = "img/char/Marisa/shoulder1.png"; // shoulder1 / shoulder_2
-	public static final String MARISA_CORPSE = "img/char/MyCharacter/corpse.png"; // dead corpse
+	public static final String MARISA_CORPSE = "img/char/Marisa/fallen.png"; // dead corpse
 	public static final Logger logger = LogManager.getLogger(ThMod.class.getName());
 	//private static final float[] layerSpeeds = { 20.0F, 0.0F, -40.0F, 0.0F, 0.0F, 5.0F, 0.0F, -8.0F, 0.0F, 8.0F };
     public static final String MARISA_SKELETON_ATLAS = "img/char/Marisa/MarisaModel_v02.atlas";// Marisa_v0 / MarisaModel_v02

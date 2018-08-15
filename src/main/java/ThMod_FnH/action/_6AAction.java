@@ -25,18 +25,22 @@ public class _6AAction
 			
 			AbstractMonster mon = (AbstractMonster) this.target;
 			
-	        int tmp = this.info.base;
-	        tmp -= mon.currentBlock;
-	        if (tmp > mon.currentHealth) {
-	        	tmp = mon.currentHealth;
-	        }
-	        if (tmp<0)
-	        	tmp = 0;
-	        
-	        AbstractDungeon.player.addBlock(tmp);
+	        int tmp = mon.currentHealth;
 	        
 			this.target.damage(this.info);
 			
+			int res;
+			
+			if (mon.isDying) {
+				res = tmp;
+			} else {
+				res = tmp - mon.currentHealth;
+			}
+			
+			if (res>0) {
+				AbstractDungeon.player.addBlock(res);
+			}
+	        
 			if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
 				AbstractDungeon.actionManager.clearPostCombatActions();
 			}

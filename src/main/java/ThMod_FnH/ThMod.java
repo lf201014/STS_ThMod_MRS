@@ -209,8 +209,8 @@ public class ThMod implements PostExhaustSubscriber,
 					);
 			if (p.hasPower("EventHorizonPower"))
 				p.getPower("EventHorizonPower").onSpecificTrigger();
-			if (p.hasRelic("AMDumbbell")) {
-				AbstractRelic r = p.getRelic("AMDumbbell");
+			if (p.hasRelic("AmplifyWand")) {
+				AbstractRelic r = p.getRelic("AmplifyWand");
 				AbstractDungeon.actionManager.addToTop(
 						new RelicAboveCreatureAction(AbstractDungeon.player, r) 
 						);
