@@ -1,7 +1,6 @@
 package ThMod_FnH.relics;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,12 +12,14 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
+import ThMod_FnH.powers.Marisa.ChargeUpPower;
 import basemod.abstracts.CustomRelic;
 
 public class RampagingMagicTools extends CustomRelic {
     public static final String ID = "RampagingMagicTools";
     private static final String IMG = "img/relics/test1.png";
     private static final int STCS = 3;
+    private static final int STCS_H = 8;
 	
     public RampagingMagicTools() {
         super(ID, new Texture(IMG), RelicTier.BOSS, LandingSound.FLAT);
@@ -41,21 +42,26 @@ public class RampagingMagicTools extends CustomRelic {
     }
     
     public void atBattleStart() {
-    	int rng = (int) (MathUtils.random(0,3));
+    	int rng = AbstractDungeon.relicRng.random(0, 4);
     	AbstractPower pow = null;
+    	int stc = STCS;
     	AbstractPlayer p = AbstractDungeon.player;
     	switch (rng) {
     	case 0:
-    		pow = new FrailPower(p, STCS, false);
+    		pow = new FrailPower(p, stc, false);
     		break;
     	case 1:
-    		pow = new WeakPower(p, STCS, false);
+    		pow = new WeakPower(p, stc, false);
     		break;
     	case 2:
-    		pow = new VulnerablePower(p, STCS, false);
+    		pow = new VulnerablePower(p, stc, false);
     		break;
     	case 3:
-    		pow = new PoisonPower(p, AbstractDungeon.player, STCS);
+    		pow = new PoisonPower(p, p, stc);
+    		break;
+    	case 4:
+    		stc = STCS_H;
+    		pow = new ChargeUpPower(p, stc);
     		break;
     	default:
     		break;

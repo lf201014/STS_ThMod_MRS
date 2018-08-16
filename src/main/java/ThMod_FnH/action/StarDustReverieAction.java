@@ -60,7 +60,7 @@ public class StarDustReverieAction
 					new MakeTempCardInHandAction(c, 1)
 					);
 		}		
-	    AbstractDungeon.actionManager.addToBottom(new HandCheckAction(this.upgraded));
+	    //AbstractDungeon.actionManager.addToBottom(new HandCheckAction(this.upgraded));
 	    
 		this.isDone = true;
 	}

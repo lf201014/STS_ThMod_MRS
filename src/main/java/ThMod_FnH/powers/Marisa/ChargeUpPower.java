@@ -1,20 +1,19 @@
 package ThMod_FnH.powers.Marisa;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import ThMod_FnH.ThMod;
-
-import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import ThMod_FnH.action.ConsumeChargeUpAction;
 
 public class ChargeUpPower
 	extends AbstractPower{
@@ -54,7 +53,12 @@ public class ChargeUpPower
 			this.stc = IMPR_STACK;
 		else
 			this.stc = ACT_STACK;
-		ThMod.logger.info("ChargeUpPower : Checking stack number :"+this.stc);
+		
+		ThMod.logger.info(
+				"ChargeUpPower : Checking stack divider :"+this.stc
+				+" ; Checking stack number :"+this.amount
+				);
+		
 		this.cnt = (int) Math.floor(this.amount/this.stc);
 		ThMod.logger.info("ChargeUpPower : Done StackPower ; cnt : "+this.cnt);
 	}
@@ -69,7 +73,7 @@ public class ChargeUpPower
 	
 	@Override
 	public void onPlayCard(AbstractCard card, AbstractMonster m){
-		if (this.owner.hasPower("MoraleDepletionPower")) {
+		if (this.owner.hasPower("MoraleDepletionPlusPower")) {
 			return;
 		}
 		if ((this.cnt>0)&&(card.type == CardType.ATTACK)) {
@@ -83,9 +87,10 @@ public class ChargeUpPower
 			else
 				this.stc = ACT_STACK;
 			ThMod.logger.info("ChargeUpPower : Checking stack number :"+this.stc);
-			AbstractDungeon.actionManager.addToBottom(
-					new ApplyPowerAction(owner,owner,
-							new ChargeUpPower(owner,-cnt*this.stc),-cnt*this.stc)
+			
+			//this.stackPower(-cnt*this.stc);
+			AbstractDungeon.actionManager.addToTop(
+					new ConsumeChargeUpAction(cnt*this.stc)
 					);
 		}
 	}
@@ -93,11 +98,11 @@ public class ChargeUpPower
 	
 	@Override
 	public float atDamageFinalGive(float damage, DamageInfo.DamageType type) {
-		if (this.owner.hasPower("MoraleDepletionPower")) {
+		if (this.owner.hasPower("MoraleDepletionPlusPower")) {
 			return damage;
 		}
 		if (cnt>0)
-			if ((type== DamageType.NORMAL)&&(this.amount >= 1)) {
+			if ((type == DamageType.NORMAL)&&(this.amount >= 1)) {
 				return (float) (damage * Math.pow(2, this.cnt));
 			}
 		return damage;

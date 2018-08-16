@@ -9,6 +9,7 @@ import com.badlogic.gdx.Gdx;
 //cd:E:\STSmod worktable\example_mod
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 //import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
@@ -26,7 +27,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
-import ThMod_FnH.action.GrandCrossAction;
 import ThMod_FnH.action.MilkyWayAction;
 import ThMod_FnH.cards.Marisa.AFriendsGift;
 import ThMod_FnH.cards.Marisa.AbsoluteMagnitude;
@@ -112,6 +112,7 @@ import ThMod_FnH.cards.special.WhiteDwarf;
 import ThMod_FnH.characters.Marisa;
 import ThMod_FnH.patches.AbstractCardEnum;
 import ThMod_FnH.patches.ThModClassEnum;
+import ThMod_FnH.powers.Marisa.GrandCrossPower;
 import ThMod_FnH.relics.AmplifyWand;
 import ThMod_FnH.relics.BreadOfAWashokuLover;
 import ThMod_FnH.relics.EnhancedBroom;
@@ -146,19 +147,19 @@ public class ThMod implements PostExhaustSubscriber,
 	public static final Logger logger = LogManager.getLogger(ThMod.class.getName());
 	 
 	//card backgrounds
-	private static final String ATTACK_CC = "512/bg_attack.png";
-	private static final String SKILL_CC = "512/bg_attack.png";
-	private static final String POWER_CC = "512/bg_attack.png";
+	private static final String ATTACK_CC = "512/bg_attack_MRS_s.png";
+	private static final String SKILL_CC = "512/bg_skill_MRS_s.png";
+	private static final String POWER_CC = "512/bg_power_MRS_s.png";
 	private static final String ENERGY_ORB_CC = "512/card_orb.png";
   
-	private static final String ATTACK_CC_PORTRAIT = "1024/bg_attack.png";
-	private static final String SKILL_CC_PORTRAIT = "1024/bg_attack.png";
-  	private static final String POWER_CC_PORTRAIT = "1024/bg_attack.png";
+	private static final String ATTACK_CC_PORTRAIT = "1024/bg_attack_MRS.png";
+	private static final String SKILL_CC_PORTRAIT = "1024/bg_skill_MRS.png";
+  	private static final String POWER_CC_PORTRAIT = "1024/bg_power_MRS.png";
   	private static final String ENERGY_ORB_CC_PORTRAIT = "1024/card_orb.png";
   
   	private static final String ASSETS_FOLDER = "img";
 
-  	private static final Color STARLIGHT = CardHelper.getColor(0f, 0f, 255.0f);
+  	private static final Color STARLIGHT = CardHelper.getColor(0f, 10f, 125.0f);
  
   	private static final String MY_CHARACTER_BUTTON = "img/charSelect/MarisaButton.png";
 	
@@ -191,8 +192,10 @@ public class ThMod implements PostExhaustSubscriber,
 	//For Amplify cards
 	public static boolean Amplified(int COS,int AMP) {
 		AbstractPlayer p = AbstractDungeon.player;
-		if (p.hasPower("MoraleDepletionPower"))
+		if ((p.hasPower("MoraleDepletionPower"))
+				||(p.hasPower("MoraleDepletionPlusPower")))
 			return false;
+		
 		boolean res=false;
 		if ((p.hasPower("MilliPulsaPower"))||(p.hasPower("PulseMagicPower"))) {
 			res = true;
@@ -203,22 +206,31 @@ public class ThMod implements PostExhaustSubscriber,
 					);
 			res = true;
 		}
+		
 		if (res) {
 			AbstractDungeon.actionManager.addToTop(
-					new GrandCrossAction()
+					new ApplyPowerAction(
+							p,
+							p,
+							new GrandCrossPower(p)
+							)
 					);
 			if (p.hasPower("EventHorizonPower"))
 				p.getPower("EventHorizonPower").onSpecificTrigger();
 			if (p.hasRelic("AmplifyWand")) {
-				AbstractRelic r = p.getRelic("AmplifyWand");
+				AmplifyWand r = (AmplifyWand) p.getRelic("AmplifyWand");
+				r.onSpecificTrigger();
+				/*
 				AbstractDungeon.actionManager.addToTop(
 						new RelicAboveCreatureAction(AbstractDungeon.player, r) 
 						);
 				AbstractDungeon.actionManager.addToBottom(
 						new MilkyWayAction(2)
 						);
+				*/
 			}
 		}
+		
 		return res;
 	}
 	
@@ -306,6 +318,8 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("UnstableBomb");
 		BaseMod.addCard(new StarBarrage());
 		UnlockTracker.unlockCard("StarBarrage");
+		BaseMod.addCard(new ShootingEcho());
+		UnlockTracker.unlockCard("ShootingEcho");
 		//Uncommon: 14
 		BaseMod.addCard(new MachineGunSpark());
 		UnlockTracker.unlockCard("MachineGunSpark");
@@ -323,8 +337,6 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("DragonMeteor");
 		BaseMod.addCard(new PulseMagic());
 		UnlockTracker.unlockCard("PulseMagic");
-		BaseMod.addCard(new ShootingEcho());
-		UnlockTracker.unlockCard("ShootingEcho");
 		BaseMod.addCard(new RefractionSpark());
 		UnlockTracker.unlockCard("RefractionSpark");
 		BaseMod.addCard(new Robbery());
@@ -352,7 +364,7 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("CollectingQuirk");
 		
 		//skill£º28
-		//Common : 7
+		//Common : 6
 		BaseMod.addCard(new MilkyWay());
 		UnlockTracker.unlockCard("MilkyWay");
 		BaseMod.addCard(new AsteroidBelt());
@@ -361,13 +373,13 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("PowerUp");
 		BaseMod.addCard(new SporeBomb());
 		UnlockTracker.unlockCard("SporeBomb");
-		BaseMod.addCard(new GasGiant());
-		UnlockTracker.unlockCard("GasGiant");
 		BaseMod.addCard(new IllusionStar());
 		UnlockTracker.unlockCard("IllusionStar");
 		BaseMod.addCard(new EnergyRecoil());
 		UnlockTracker.unlockCard("EnergyRecoil");
-		//Uncommon : 14
+		//Uncommon : 15
+		BaseMod.addCard(new GasGiant());
+		UnlockTracker.unlockCard("GasGiant");
 		BaseMod.addCard(new StarDustReverie());
 		UnlockTracker.unlockCard("StarDustReverie");
 		BaseMod.addCard(new MagicAbsorber());

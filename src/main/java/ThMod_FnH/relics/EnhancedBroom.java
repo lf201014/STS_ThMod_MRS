@@ -16,7 +16,7 @@ public class EnhancedBroom extends CustomRelic {
     private static final String IMG_OTL = "img/relics/outline/Broom_s.png";
 	
     public EnhancedBroom() {
-        super(ID, ImageMaster.loadImage(IMG),ImageMaster.loadImage(IMG_OTL), RelicTier.UNCOMMON, LandingSound.FLAT);
+        super(ID, ImageMaster.loadImage(IMG),ImageMaster.loadImage(IMG_OTL), RelicTier.RARE, LandingSound.FLAT);
     }
     
     public String getUpdatedDescription() {
@@ -34,7 +34,7 @@ public class EnhancedBroom extends CustomRelic {
     public void onUseCard(AbstractCard card, UseCardAction action){
     	if (card.costForTurn == 0){
     		this.counter += 1;
-    		if (this.counter % 3 == 0){
+    		if (this.counter >= 3){
     			this.counter = 0;
     			flash();
     			AbstractDungeon.actionManager.addToBottom(

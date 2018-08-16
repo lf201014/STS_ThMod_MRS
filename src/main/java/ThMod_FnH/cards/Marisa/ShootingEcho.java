@@ -31,7 +31,7 @@ public class ShootingEcho
 
 	public ShootingEcho() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,
+				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON,
 				AbstractCard.CardTarget.ENEMY);
 
 		this.baseDamage = ATTACK_DMG;

@@ -297,8 +297,8 @@
 	},
 	"MoraleDepletion": {
 		"NAME": "战意枯竭",
-		"DESCRIPTION": "获得 !B! 点 格挡  ，这回合你将不能发动 增幅 和 蓄力 效果。",
-		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+		"DESCRIPTION": "获得 !B! 点 格挡  ，这回合你将不能发动 增幅 效果。",
+		"UPGRADE_DESCRIPTION": "获得 !B! 点 格挡  ，这回合你将不能发动 增幅 和 蓄力 效果。"
 	},
 	"DarkMatter": {
 		"NAME": "暗物质",

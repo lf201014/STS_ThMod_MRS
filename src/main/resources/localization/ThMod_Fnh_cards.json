@@ -298,8 +298,8 @@
 	},
 	"MoraleDepletion": {
 		"NAME": "Morale Depletion",
-		"DESCRIPTION": "Gain !B! block , you can't use Amplify and Charge-up until this turn ends.",
-		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+		"DESCRIPTION": "Gain !B! block , you can't use Amplify until this turn ends.",
+		"UPGRADE_DESCRIPTION": "Gain !B! block , you can't use Amplify and Charge-up until this turn ends."
 	},
 	"DarkMatter": {
 		"NAME": "Dark Matter",

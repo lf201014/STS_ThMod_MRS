@@ -3,13 +3,13 @@
     "NAME": "Mini-Hakkero",
     "FLAVOR": "Aka mini-EightTrigram Furnace,is originally gift by Rinosuke when Marisa left her parents.",
     "DESCRIPTIONS": [
-      "When you play a card,gain 1  Charge-up ."
+      "When you play a card,gain 1  #yCharge-up ."
     ]
   }, "EnhancedHakkero": {
     "NAME": "Bewitched Hakkero",
     "FLAVOR": "The firepower came to a new level when Hakkero was affected by the power of the Miracle Mallet,but is it ok to use a bewitched tool?",
     "DESCRIPTIONS": [
-      "When you play a card,gain 2  Charge-up . NL Add a Burn to your hand when your turn starts."
+      "Replace #yMini-Hakkero . NL When you play a card,gain 2  #yCharge-up . NL Add a Burn to your hand when your turn starts."
     ]
   }, "MagicArmor": {
     "NAME": "Black Magic Shield",
@@ -21,37 +21,37 @@
     "NAME": "Enhanced Broom",
     "FLAVOR": "Marisa always travels with her flying broom,and now it is upgraded.",
     "DESCRIPTIONS": [
-      "For every 3 cards that cost 0 you played,draw a card."
+      "For every #b3 cards that cost 0 you played,draw a card."
     ]
   }, "AmplifyWand": {
     "NAME": "Amplify Wand",
     "FLAVOR": "A Wand seems not often used.",
     "DESCRIPTIONS": [
-      "Whenever you activate Amplify effect ,increase base damage of all Attack in your hand by 2."
+      "For every third time you activate #yAmplify effect ,Gain [B]  [B] ."
     ]
   }, "RampagingMagicTools": {
     "NAME": "Rampaging Magic Tools",
     "FLAVOR": "It's been so long since anyone last used them,who knows what could happen?",
     "DESCRIPTIONS": [
-      "Gain [B] at the start of each turn.Apply 3 stacks of a random debuff( Frail , Weak , Vulerable , Poison )to you on the first turn of each combat."
+      "Gain [B] at the start of each turn. NL Apply a random debuff/buff ( #b3 #yFrail , #b3 #yWeak , #b3 #yVulerable , #b3 #yPoison , #b8 #yCharge-up )to you at the start of each combat."
     ]
   }, "ExperimentalFamiliar": {
     "NAME": "Experimental Familiar",
     "FLAVOR": "A Familiar looks just like a shiny orb,not very powerful but will surely help you alot.",
     "DESCRIPTIONS": [
-      "At the start of each turn,add a Spark and a random card to your hand."
+      "At the start of each turn,add a #ySpark and a random card to your hand."
     ]
   }, "BreadOfAWashokuLover": {
     "NAME": "Bread Of A Washoku Lover",
     "FLAVOR": "'Can you remember how many slices of bread you have eaten until now?''Thirteen.I prefer Japanese food.'",
     "DESCRIPTIONS": [
-      "Heal 1 hp you exhaust a Status or Curse. NL When triggered 13 times,you gain 13 max HP,and this relic no longer works."
+      "Heal 1 hp you exhaust a #yStatus or #yCurse. NL When triggered 13 times,you gain #b13 max HP,and this relic no longer works."
     ]
   }, "SimpleLauncher": {
     "NAME": "Simple Launcher",
     "FLAVOR": "Simple but useful...Perhaps...",
     "DESCRIPTIONS": [
-      "You now only need 6 stack of Charge-up to double your damage."
+      "You now only need #b6 stack of #yCharge-up to double your damage."
     ]
   }, "HandmadeGrimoire": {
     "NAME": "Handmade Grimoire",
@@ -63,7 +63,13 @@
     "NAME": "Shroom Bag",
     "FLAVOR": "All witches have abnormal ethusiasm for mushrooms... NL Or it's just Marisa...?",
     "DESCRIPTIONS": [
-      "Add 2 Parasite to your deck on pick up.You can now play Parasite to exhaust it and heal 3 HP."
+      "Add 2 #yParasite to your deck on pick up.You can now play #yParasite to exhaust it and heal 3 HP."
+    ]
+  }, "WWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWWWW",
+    "FLAVOR": "WWWWWWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWWWWWWWWWW"
     ]
   }, "WWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWW",

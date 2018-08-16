@@ -1,5 +1,8 @@
 package ThMod_FnH.relics;
 
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
@@ -15,9 +18,10 @@ public class AmplifyWand extends CustomRelic {
         		ID,
         		ImageMaster.loadImage(IMG),
         		ImageMaster.loadImage(IMG_OTL),
-        		RelicTier.UNCOMMON, 
+        		RelicTier.RARE, 
         		LandingSound.FLAT
         		);
+        this.counter = 0;
     }
     
     public String getUpdatedDescription() {
@@ -28,4 +32,17 @@ public class AmplifyWand extends CustomRelic {
         return new AmplifyWand();
     }
     
+    public void onSpecificTrigger() {
+    	this.counter++;
+    	if (this.counter >= 3) {
+    		this.counter = 0;
+    		this.flash();
+    		AbstractDungeon.actionManager.addToBottom(
+    				new RelicAboveCreatureAction( AbstractDungeon.player , this )
+    				);
+    		AbstractDungeon.actionManager.addToBottom(
+    				new GainEnergyAction(2)
+    				);
+    	}
+    }
 }

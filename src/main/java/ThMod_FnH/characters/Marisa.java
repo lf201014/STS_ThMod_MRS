@@ -39,10 +39,15 @@ public class Marisa extends CustomPlayer {
 		
 		logger.info("init Marisa");
 		
-		initializeClass(null, MARISA_SHOULDER_2, // required call to load textures and setup energy/loadout
+		initializeClass(
+				null,
+				MARISA_SHOULDER_2, // required call to load textures and setup energy/loadout
 				MARISA_SHOULDER_1,
 				MARISA_CORPSE, 
-				getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
+				getLoadout(),
+				20.0F, -10.0F, 220.0F, 290.0F,
+				new EnergyManager(ENERGY_PER_TURN)
+				);
 		
 		loadAnimation(MARISA_SKELETON_ATLAS, MARISA_SKELETON_JSON, 1.0F); 
 		// if you're using modified versions of base game animations or made animations in spine make sure to include this bit and the following lines

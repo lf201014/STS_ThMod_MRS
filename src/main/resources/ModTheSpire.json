@@ -1,10 +1,9 @@
 {
-	"modid": "STS_ThMod_FnH",
-	"name": "Team TouhouSpire 05 - Marisa",
+	"modid": "TS05_MRS",
+	"name": "Team TouhouSpire 05 - Marisa（霧雨　魔理沙）",
 	"author_list": ["Flynn", "Hell","Hohner257","Samsara"],
-	"description": "Adds Marisa from Touhou Project as a new playable character.",
+	"description": "Adds Marisa（霧雨　魔理沙） from Touhou Project as a new playable character.",
 	"dependencies": ["basemod"], 
 	"version": "0.10.5",
-	"sts_version": "08-09-2018",
-	"mts_version": "2.9.1"
+	"sts_version": "08-09-2018"
 }

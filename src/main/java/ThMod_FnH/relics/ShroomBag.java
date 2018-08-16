@@ -25,7 +25,7 @@ public class ShroomBag extends CustomRelic {
         		ID,
         		new Texture(IMG),
         		new Texture(IMG_OTL),
-        		RelicTier.UNCOMMON,
+        		RelicTier.COMMON,
         		LandingSound.FLAT
         		);
     }

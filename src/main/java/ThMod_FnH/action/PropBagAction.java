@@ -2,7 +2,6 @@ package ThMod_FnH.action;
 
 import java.util.ArrayList;
 
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -84,7 +83,7 @@ public class PropBagAction
 			return;
 		}
 		if (rs.size()>1) {
-			int index = MathUtils.random(0,rs.size()-1);
+			int index = AbstractDungeon.miscRng.random(0,rs.size()-1);
 			r = rs.get(index);
 			ThMod.logger.info(
 					"PropBagAction : random relic : "+r.relicId
