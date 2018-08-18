@@ -89,7 +89,7 @@ public class ChargeUpPower
 			ThMod.logger.info("ChargeUpPower : Checking stack number :"+this.stc);
 			
 			//this.stackPower(-cnt*this.stc);
-			AbstractDungeon.actionManager.addToTop(
+			AbstractDungeon.actionManager.addToBottom(
 					new ConsumeChargeUpAction(cnt*this.stc)
 					);
 		}

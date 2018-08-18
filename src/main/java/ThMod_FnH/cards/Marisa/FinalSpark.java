@@ -3,6 +3,7 @@ package ThMod_FnH.cards.Marisa;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -39,13 +40,36 @@ public class FinalSpark
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		
-	    AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
-	    AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY), 0.1F));
+		this.freeToPlayOnce = true;
 		
 	    AbstractDungeon.actionManager.addToBottom(
-	    		new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-		AbstractDungeon.actionManager.addToBottom(new SparkCostAction());
+	    		new SFXAction("ATTACK_HEAVY")
+	    		);
+	    AbstractDungeon.actionManager.addToBottom(
+	    		new VFXAction(
+	    				p, 
+	    				new MindblastEffect(p.dialogX, p.dialogY),
+	    				0.1F
+	    				)
+	    		);
+		
+	    AbstractDungeon.actionManager.addToBottom(
+	    		new DamageAllEnemiesAction(
+	    				p,
+	    				this.multiDamage, 
+	    				this.damageTypeForTurn, 
+	    				AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+	    				)
+	    		);
+		AbstractDungeon.actionManager.addToBottom(
+				new SparkCostAction()
+				);
+		if (this.costForTurn > 0) {
+			AbstractDungeon.actionManager.addToBottom(
+				new GainEnergyAction(-this.costForTurn)
+				);
+		}
+		
 		this.upgradeBaseCost(COST);
 		this.setCostForTurn(COST);
 		this.isCostModified = false;

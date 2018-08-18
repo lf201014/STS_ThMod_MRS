@@ -163,8 +163,8 @@
 	},
 	"BlazeAway": {
 		"NAME": "Blaze Away",
-		"DESCRIPTION": "Add a copy of the next Attack you play,it cost 0 for the turn. NL Amplify  [B]  :add one more. NL  Exhaust .",
-		"UPGRADE_DESCRIPTION": "Add a copy of the next Attack you play,it cost 0 for the turn. NL Amplify  [B]  :add one more. NL  Exhaust ."
+		"DESCRIPTION": "Add a copy of the next Attack you play this turn,it cost 0 for the turn. NL Amplify  [B]  :add one more. NL  Exhaust .",
+		"UPGRADE_DESCRIPTION": "Add a copy of the next Attack you play this turn,it cost 0 for the turn. NL Amplify  [B]  :add one more. NL  Exhaust ."
 	},
 	"MaximisePower": {
 		"NAME": "Max Power",

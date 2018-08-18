@@ -51,7 +51,6 @@ public class CollectingQuirk
 		return new CollectingQuirk();
 	}
 	
-
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();

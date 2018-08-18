@@ -5,5 +5,5 @@
 	"description": "Adds Marisa（霧雨　魔理沙） from Touhou Project as a new playable character.",
 	"dependencies": ["basemod"], 
 	"version": "0.10.5",
-	"sts_version": "08-09-2018"
+	"sts_version": "08-16-2018"
 }

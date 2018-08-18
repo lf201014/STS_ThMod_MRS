@@ -25,10 +25,7 @@ public class ConsumeChargeUpAction extends AbstractGameAction{
 		}
 		
 	    AbstractPower c = p.getPower("ChargeUpPower");
-	    c.amount -= amt;
-	    if (c.amount < 0) {
-	    	c.amount = 0;
-	    }
+	    c.stackPower(-this.amt);;
 	    
 		this.isDone = true;
 	}
