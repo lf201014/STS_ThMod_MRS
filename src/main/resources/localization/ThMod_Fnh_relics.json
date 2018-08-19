@@ -45,7 +45,7 @@
     "NAME": "Bread Of A Washoku Lover",
     "FLAVOR": "'Can you remember how many slices of bread you have eaten until now?''Thirteen.I prefer Japanese food.'",
     "DESCRIPTIONS": [
-      "Heal 1 hp you exhaust a #yStatus or #yCurse. NL When triggered 13 times,you gain #b13 max HP,and this relic no longer works."
+      "Heal 1 hp when you exhaust a #yStatus or #yCurse. NL When triggered 13 times,you gain #b13 max HP,and this relic no longer works."
     ]
   }, "SimpleLauncher": {
     "NAME": "Simple Launcher",
@@ -55,7 +55,7 @@
     ]
   }, "HandmadeGrimoire": {
     "NAME": "Handmade Grimoire",
-    "FLAVOR": "A notebook full of experiment records and magic material recipes,and just how Marisa develop her Magics.",
+    "FLAVOR": "A notebook full of experiment records and magic material recipes;just how Marisa develops her Magics.",
     "DESCRIPTIONS": [
       "At the start of battle,for every 15 cards in your master deck,gain [B] and draw a card."
     ]
@@ -63,13 +63,14 @@
     "NAME": "Shroom Bag",
     "FLAVOR": "All witches have abnormal ethusiasm for mushrooms... NL Or it's just Marisa...?",
     "DESCRIPTIONS": [
-      "Add 2 #yParasite to your deck on pick up.You can now play #yParasite to exhaust it and heal 3 HP."
+      "Add 2 #yParasite to your deck on pick up.You can now play #yParasite to exhaust it and heal #b2 HP."
     ]
-  }, "WWWWWWWWWWWW": {
-    "NAME": "WWWWWWWWWWWWW",
-    "FLAVOR": "WWWWWWWWWWWWWWW",
+  }, "Cape": {
+    "NAME": "Cape",
+    "FLAVOR": "Marisa always takes whatever she wants,and this cape would surely help her doing so.",
     "DESCRIPTIONS": [
-      "WWWWWWWWWWWWWWWWWWW"
+      " #b",
+      " use(s) left. NL You can take the first merchandiase in a shop for free."
     ]
   }, "WWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWW",

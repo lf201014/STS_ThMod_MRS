@@ -18,6 +18,7 @@ public class Parasite_MRS extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = -2;
+	private static final int HEAL = 2;
   
 	public Parasite_MRS(){
 		super(
@@ -38,7 +39,7 @@ public class Parasite_MRS extends CustomCard {
 	public boolean canUse(AbstractPlayer p, AbstractMonster m) {
 		return true;
 	}
-  
+
 	public void use(AbstractPlayer p, AbstractMonster m){
 		if (p.hasRelic("ShroomBag")) {
 			AbstractRelic r = p.getRelic("ShroomBag");
@@ -48,13 +49,13 @@ public class Parasite_MRS extends CustomCard {
   	      		  );
 		}
 		AbstractDungeon.actionManager.addToBottom(
-				new HealAction(p, p, 3)
+				new HealAction(p, p, HEAL)
 				);
 	}
-  
+
 	public AbstractCard makeCopy(){
 		return new Parasite_MRS();
 	}
-  
+
 	public void upgrade() {}
 }

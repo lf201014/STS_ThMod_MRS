@@ -113,8 +113,8 @@
 	},
 	"StarDustReverie": {
 		"NAME": "Star Dust Reverie",
-		"DESCRIPTION": "Put all cards in your hand back to draw pile,then add same number plus one random cards to your hand. These cards gain Exhaust and Ethereal .",
-		"UPGRADE_DESCRIPTION": "Put all cards in your hand back to draw pile,then add same number plus one random cards to your hand."
+		"DESCRIPTION": "Put your hand back to draw pile,then add same number plus one random cards to your hand. These cards gain Exhaust and Ethereal . NL Exhaust .",
+		"UPGRADE_DESCRIPTION": "Put your hand back to draw pile,then add same number plus one random cards to your hand. These cards gain Exhaust and Ethereal ."
 	},
 	"UltraShortWave": {
 		"NAME": "Ultimate Shortwave",

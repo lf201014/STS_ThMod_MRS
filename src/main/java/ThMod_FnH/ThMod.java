@@ -100,7 +100,6 @@ import ThMod_FnH.cards.Marisa.WitchLeyline;
 import ThMod_FnH.cards.Marisa.WitchOfGreed;
 import ThMod_FnH.cards.Marisa._6A;
 import ThMod_FnH.cards.special.BlackFlareStar;
-import ThMod_FnH.cards.special.Burn_MRS;
 import ThMod_FnH.cards.special.GuidingStar;
 import ThMod_FnH.cards.special.Parasite_MRS;
 import ThMod_FnH.cards.special.Spark;
@@ -111,6 +110,7 @@ import ThMod_FnH.patches.ThModClassEnum;
 import ThMod_FnH.powers.Marisa.GrandCrossPower;
 import ThMod_FnH.relics.AmplifyWand;
 import ThMod_FnH.relics.BreadOfAWashokuLover;
+import ThMod_FnH.relics.Cape;
 import ThMod_FnH.relics.EnhancedBroom;
 import ThMod_FnH.relics.EnhancedHakkero;
 import ThMod_FnH.relics.ExperimentalFamiliar;
@@ -275,6 +275,7 @@ public class ThMod implements PostExhaustSubscriber,
 		BaseMod.addRelicToCustomPool(new SimpleLauncher(), AbstractCardEnum.MARISA_COLOR.toString());
 		BaseMod.addRelicToCustomPool(new HandmadeGrimoire(), AbstractCardEnum.MARISA_COLOR.toString());
 		BaseMod.addRelicToCustomPool(new ShroomBag(), AbstractCardEnum.MARISA_COLOR.toString());
+		//BaseMod.addRelicToCustomPool(new Cape(), AbstractCardEnum.MARISA_COLOR.toString());
   	
 		logger.info("Relics editting finished.");
   	}
@@ -454,8 +455,8 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("Spark");
 		BaseMod.addCard(new GuidingStar());
 		UnlockTracker.unlockCard("GuidingStar");
-		BaseMod.addCard(new Burn_MRS());
-		UnlockTracker.unlockCard("Burn_MRS");
+		//BaseMod.addCard(new Burn_MRS());
+		//UnlockTracker.unlockCard("Burn_MRS");
 		BaseMod.addCard(new Parasite_MRS());
 		UnlockTracker.unlockCard("Parasite_MRS");
 		BaseMod.addCard(new BlackFlareStar());

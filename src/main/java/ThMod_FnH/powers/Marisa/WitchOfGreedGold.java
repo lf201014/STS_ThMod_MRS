@@ -1,10 +1,12 @@
 package ThMod_FnH.powers.Marisa;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 
 public class WitchOfGreedGold
@@ -26,7 +28,12 @@ public class WitchOfGreedGold
 	}
  
 	public void onVictory() {
-		AbstractDungeon.player.gainGold(this.amount);
+		AbstractPlayer p = AbstractDungeon.player;
+		for (int i = 0; i < this.amount; i++){
+			AbstractDungeon.effectList.add(
+					new GainPennyEffect(p, p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY, true)
+					);
+		}
 	}
 
 	public void updateDescription(){

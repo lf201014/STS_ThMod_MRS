@@ -26,7 +26,6 @@ public class DeepEcologicalBomb
 	private static final int UPG_DMG = 3;
 	private static final int AMP = 1;
 	
-
 	public DeepEcologicalBomb() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,

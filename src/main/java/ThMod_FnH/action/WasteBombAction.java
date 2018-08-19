@@ -30,6 +30,7 @@ public class WasteBombAction
 				new DamageInfo(AbstractDungeon.player, this.damage, DamageType.NORMAL),
 					AbstractGameAction.AttackEffect.SMASH));
 		
+		if ((!mon.isDeadOrEscaped())&&(!mon.isDying)) {
 			AbstractDungeon.actionManager.addToBottom(
 					new ApplyPowerAction(
 							mon,
@@ -38,7 +39,7 @@ public class WasteBombAction
 							3
 							)
 					);
-	    
+		}
 		this.isDone = true;
 	}
 }

@@ -38,11 +38,14 @@ public class UnstableBomb
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-			for (int i = 0;i < 4;i++) {
-				AbstractDungeon.actionManager.addToBottom(
-						new UnstableBombAction(this.damage,this.block)
-						);
-			}
+		AbstractDungeon.actionManager.addToBottom(
+				new UnstableBombAction(
+						AbstractDungeon.getMonsters().getRandomMonster(true),
+						this.damage,
+						this.block,
+						4
+						)
+				);
 	}
 
 	public AbstractCard makeCopy() {
@@ -55,7 +58,7 @@ public class UnstableBomb
 			upgradeDamage(UPG_DMG);
 			this.ampNumber += UPG_AMP;
 			this.block = this.baseDamage + this.ampNumber;
-			//this.isBlockModified = true;
+			this.isBlockModified = true;
 		}
 	}
 }

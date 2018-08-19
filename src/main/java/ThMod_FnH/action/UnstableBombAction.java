@@ -1,38 +1,64 @@
 package ThMod_FnH.action;
 
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
-import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
-import ThMod_FnH.ThMod;
-
-public class UnstableBombAction
-	extends AbstractGameAction{
-	private int max;
+public class UnstableBombAction extends AbstractGameAction{
+	private DamageInfo info;
+	private static final float DURATION = 0.01F;
+	private int numTimes;
 	private int min;
+	private int max;
   
-	public UnstableBombAction(int dmg_min,int dmg_max){
+	public UnstableBombAction(AbstractCreature target,int min,int max, int numTimes){
+		this.min = min;
+		this.max = max;
+		int dmg = AbstractDungeon.miscRng.random(min, max);
+		this.info = new DamageInfo(target, dmg) ;
+		this.target = target;
 		this.actionType = AbstractGameAction.ActionType.DAMAGE;
-		this.duration = Settings.ACTION_DUR_FAST;
-		this.min = dmg_min;
-		this.max = dmg_max;
+		this.attackEffect = AbstractGameAction.AttackEffect.FIRE;
+		this.duration = DURATION;
+		this.numTimes = numTimes;
 	}
   
-	public void update(){
-		this.isDone = false;
-		
-		int dmg = MathUtils.random(min, max);
-		ThMod.logger.info("UnstableBombAction : Random damage :"+dmg);
-		AbstractDungeon.actionManager.addToBottom(
-				new DamageRandomEnemyAction(
-						new DamageInfo(AbstractDungeon.player, dmg, DamageType.NORMAL),
-						AbstractGameAction.AttackEffect.FIRE)
-				);
-	    
+	public void update() {
+		if (this.target == null) {
+			this.isDone = true;
+			return;
+		}
+		if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
+			AbstractDungeon.actionManager.clearPostCombatActions();
+			this.isDone = true;
+			return;
+		}
+		if (this.target.currentHealth > 0) {
+			this.target.damageFlash = true;
+			this.target.damageFlashFrames = 4;
+			AbstractDungeon.effectList.add(
+					new FlashAtkImgEffect(
+							this.target.hb.cX, this.target.hb.cY, this.attackEffect
+							)
+					);
+			this.info.applyPowers(this.info.owner, this.target);
+			this.target.damage(this.info);
+			if ((this.numTimes > 1) && (!AbstractDungeon.getMonsters().areMonstersBasicallyDead())) {
+				this.numTimes --;
+				AbstractDungeon.actionManager.addToTop(
+						new UnstableBombAction(
+								AbstractDungeon.getMonsters().getRandomMonster(true),
+								min,
+								max, 
+								this.numTimes
+								)
+						);
+			}
+			AbstractDungeon.actionManager.addToTop(new WaitAction(0.2F));
+		}
 		this.isDone = true;
 	}
 }

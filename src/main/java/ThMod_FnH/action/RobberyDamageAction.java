@@ -2,9 +2,11 @@ package ThMod_FnH.action;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 public class RobberyDamageAction
@@ -23,7 +25,13 @@ public class RobberyDamageAction
   
 	public void update(){
 		if ((this.duration == 0.1F) && (this.target != null)){
-			AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+			AbstractDungeon.effectList.add(
+					new FlashAtkImgEffect(
+							this.target.hb.cX, 
+							this.target.hb.cY,
+							AbstractGameAction.AttackEffect.BLUNT_HEAVY
+							)
+					);
 			
 			AbstractMonster mon = (AbstractMonster) this.target;
 			
@@ -41,7 +49,19 @@ public class RobberyDamageAction
 	        if (this.amp)
 	        	res *= 2;
 	        
-	        AbstractDungeon.player.gainGold(res);
+	        AbstractPlayer p = AbstractDungeon.player;
+			for (int i = 0; i < res; i++){
+				AbstractDungeon.effectList.add(
+						new GainPennyEffect(
+								p,
+								target.hb.cX, 
+								target.hb.cY, 
+								p.hb.cX,
+								p.hb.cY,
+								true
+								)
+						);
+			}
 			
 			if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
 				AbstractDungeon.actionManager.clearPostCombatActions();

@@ -1,6 +1,5 @@
 package ThMod_FnH.relics;
 
-//import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -67,8 +66,8 @@ public class BreadOfAWashokuLover extends CustomRelic {
     				);
     		this.img = (ImageMaster.loadImage(USED_IMG));
     		AbstractDungeon.player.increaseMaxHp(13, true);
-    		this.counter = -1;
     		usedUp();
+    		this.counter = -2;
     	}
     }
 }
