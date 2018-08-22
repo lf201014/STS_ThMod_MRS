@@ -18,7 +18,7 @@ public class Parasite_MRS extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = -2;
-	private static final int HEAL = 2;
+	private static final int HEAL = 3;
   
 	public Parasite_MRS(){
 		super(

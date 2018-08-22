@@ -1,6 +1,5 @@
 package ThMod_FnH.cards.Marisa;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
@@ -25,31 +24,28 @@ public class DragonMeteor
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	private static final int COST = 2;
-	private static final int ATTACK_DMG = 3;
-	private static final int UPGRADE_PLUS_DMG = 1;
+	private static final int ATK_DMG = 14;
+	private static final int UPG_DMG = 6;
 
 	public DragonMeteor() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.ENEMY);
 
-		this.magicNumber = this.baseMagicNumber = ATTACK_DMG;
-		this.damage = this.baseDamage = 0;
+		this.damage = this.baseDamage = ATK_DMG;
 	}
 	
 	@Override
 	public void applyPowers() {
-		this.baseDamage = this.magicNumber * AbstractDungeon.player.exhaustPile.size();
+		int dmg = ATK_DMG;
+		if (this.upgraded) {
+			dmg += UPG_DMG;
+		}
+		this.baseDamage = dmg + AbstractDungeon.player.exhaustPile.size();
 		super.applyPowers();
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		/*
-		int cnt = p.exhaustPile.size();
-		for (int i = 0; i<cnt ; i++)
-			AbstractDungeon.actionManager.addToBottom(
-					new DamageRandomEnemyAction(new DamageInfo(p, this.damage, this.damageTypeForTurn),AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-					*/
 		
 		if (m != null) {
 		      AbstractDungeon.actionManager.addToBottom(
@@ -67,7 +63,7 @@ public class DragonMeteor
 	    							p,
 	    							this.damage,
 	    							this.damageTypeForTurn),
-	    					AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+	    					null
 	    					)
 				);
 	}
@@ -79,7 +75,7 @@ public class DragonMeteor
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(UPGRADE_PLUS_DMG);
+			upgradeDamage(UPG_DMG);
 		}
 	}
 }

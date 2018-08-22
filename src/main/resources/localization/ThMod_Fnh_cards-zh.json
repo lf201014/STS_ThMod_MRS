@@ -117,8 +117,8 @@
 	},
 	"StarDustReverie": {
 		"NAME": "星屑幻想",
-		"DESCRIPTION": "将你的手牌放回抽牌堆，然后将放回的卡数+1张随机卡片加入手牌,这些卡获得 虚无 和 消耗 。 NL 消耗 。",
-		"UPGRADE_DESCRIPTION": "将你的手牌放回抽牌堆，然后将放回的卡数+1张随机卡片加入手牌,这些卡获得 虚无 和 消耗 。"
+		"DESCRIPTION": "将你的手牌放回抽牌堆，然后将放回的卡数+1张随机卡片加入手牌。这些卡获得 虚无 和 消耗 。 NL 消耗 。",
+		"UPGRADE_DESCRIPTION": "将你的手牌放回抽牌堆，然后将放回的卡数+1张随机卡片加入手牌。这些卡获得 虚无 和 消耗 。"
 	},
 	"UltraShortWave": {
 		"NAME": "极超短波",
@@ -182,7 +182,7 @@
 	},
 	"SuperPerseids": {
 		"NAME": "超级英仙座",
-		"DESCRIPTION": " 保留 。消耗掉手牌中的所有 灼伤 ，每消耗一张，造成 !D! 点伤害。",
+		"DESCRIPTION": " 你手牌中每有1张 诅咒 或 状态 ，获得 !B! 格挡 。 NL 此卡被 消耗 时，随机造成 !D! 点伤害。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MysteriousBeam": {
@@ -222,12 +222,12 @@
 	},
 	"DragonMeteor": {
 		"NAME": "龙陨星",
-		"DESCRIPTION": "造成 !D! 点伤害（ !M! × 你消耗区的卡片数量）。",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 你的消耗区每有一张卡，此卡伤害增加 1 。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"PulseMagic": {
 		"NAME": "脉冲魔术",
-		"DESCRIPTION": "对所有敌人造成 !D! 点伤害，本回合内你不再需要支付额外能量来发动 增幅 效果。",
+		"DESCRIPTION": "下回合开始时获得  [B]  。 NL 增幅  [B]  ：本回合内你不再需要支付额外能量来发动 增幅 效果。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"D6C": {
@@ -372,13 +372,13 @@
 	},
 	"BlackFlareStar": {
 		"NAME": "黑耀星",
-		"DESCRIPTION": "只有你手牌数大于等于3时才能被打出。 NL 丢弃任意张牌，每丢一张获得 !B!  格挡 。",
+		"DESCRIPTION": "只有你手牌数大于等于 4 时才能被打出。 NL 丢弃任意张牌，每丢一张获得 !B!  格挡 。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"WhiteDwarf": {
 		"NAME": "白矮星",
-		"DESCRIPTION": "只有在你手牌数小于等于3时才能被打出。 NL 造成 !D! 伤害 (1.5 × 你的弃卡堆的卡数)。然后向你手中加入2张 灼伤 。",
-		"UPGRADE_DESCRIPTION": "只有在你手牌数小于等于3时才能被打出。 NL 造成 !D! 伤害 (2 × 你的弃卡堆的卡数)。然后向你手中加入2张 灼伤 。"
+		"DESCRIPTION": "只有在你手牌数小于等于4时才能被打出。 NL 造成 !D! 伤害 (1.5 × 你的弃卡堆的卡数)。然后向你手中加入2张 灼伤 。",
+		"UPGRADE_DESCRIPTION": "只有在你手牌数小于等于4时才能被打出。 NL 造成 !D! 伤害 (2 × 你的弃卡堆的卡数)。然后向你手中加入2张 灼伤 。"
 	},
 	"WWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWW",

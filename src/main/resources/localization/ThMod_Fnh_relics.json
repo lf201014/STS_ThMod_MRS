@@ -63,11 +63,11 @@
     "NAME": "Shroom Bag",
     "FLAVOR": "All witches have abnormal ethusiasm for mushrooms... NL Or it's just Marisa...?",
     "DESCRIPTIONS": [
-      "Add 2 #yParasite to your deck on pick up.You can now play #yParasite to exhaust it and heal #b2 HP."
+      "Add 2 #yParasite to your deck on pick up.You can now play #yParasite to exhaust it and heal #b3 HP."
     ]
   }, "Cape": {
     "NAME": "Cape",
-    "FLAVOR": "Marisa always takes whatever she wants,and this cape would surely help her doing so.",
+    "FLAVOR": "Marisa always takes whatever she wants,and this cape will surely help her doing so.",
     "DESCRIPTIONS": [
       " #b",
       " use(s) left. NL You can take the first merchandiase in a shop for free."

@@ -25,11 +25,11 @@ public class FluorensentBeam
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	
-	private static final int COST = 0;
-	private static final int ATK_DMG = 4;
-	private static final int UPG_DMG = 2;
-	private static final int AMP_DMG = 8;
-	private static final int UPG_AMP = 3;
+	private static final int COST = 1;
+	private static final int ATK_DMG = 7;
+	private static final int UPG_DMG = 3;
+	private static final int AMP_DMG = 13;
+	private static final int UPG_AMP = 2;
 	private static final int AMP = 2;
 	
 

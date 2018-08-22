@@ -100,6 +100,7 @@ import ThMod_FnH.cards.Marisa.WitchLeyline;
 import ThMod_FnH.cards.Marisa.WitchOfGreed;
 import ThMod_FnH.cards.Marisa._6A;
 import ThMod_FnH.cards.special.BlackFlareStar;
+import ThMod_FnH.cards.special.Burn_MRS;
 import ThMod_FnH.cards.special.GuidingStar;
 import ThMod_FnH.cards.special.Parasite_MRS;
 import ThMod_FnH.cards.special.Spark;
@@ -317,7 +318,7 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("StarBarrage");
 		BaseMod.addCard(new ShootingEcho());
 		UnlockTracker.unlockCard("ShootingEcho");
-		//Uncommon: 14
+		//Uncommon: 12
 		BaseMod.addCard(new MachineGunSpark());
 		UnlockTracker.unlockCard("MachineGunSpark");
 		BaseMod.addCard(new DarkSpark());
@@ -332,8 +333,6 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("GrandCross");
 		BaseMod.addCard(new DragonMeteor());
 		UnlockTracker.unlockCard("DragonMeteor");
-		BaseMod.addCard(new PulseMagic());
-		UnlockTracker.unlockCard("PulseMagic");
 		BaseMod.addCard(new RefractionSpark());
 		UnlockTracker.unlockCard("RefractionSpark");
 		BaseMod.addCard(new Robbery());
@@ -342,8 +341,6 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("ChargeUpSpray");
 		BaseMod.addCard(new AFriendsGift());
 		UnlockTracker.unlockCard("AFriendsGift");
-		BaseMod.addCard(new SuperPerseids());
-		UnlockTracker.unlockCard("SuperPerseids");
 		//Rare:  7
 		BaseMod.addCard(new BlazingStar());
 		UnlockTracker.unlockCard("BlazingStar");
@@ -374,7 +371,7 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("IllusionStar");
 		BaseMod.addCard(new EnergyRecoil());
 		UnlockTracker.unlockCard("EnergyRecoil");
-		//Uncommon : 15
+		//Uncommon : 17
 		BaseMod.addCard(new GasGiant());
 		UnlockTracker.unlockCard("GasGiant");
 		BaseMod.addCard(new StarDustReverie());
@@ -405,6 +402,10 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("FungusSplash");
 		BaseMod.addCard(new GalacticHalo());
 		UnlockTracker.unlockCard("GalacticHalo");
+		BaseMod.addCard(new SuperPerseids());
+		UnlockTracker.unlockCard("SuperPerseids");
+		BaseMod.addCard(new PulseMagic());
+		UnlockTracker.unlockCard("PulseMagic");
 		//Rare : 7
 		BaseMod.addCard(new BigCrunch());
 		UnlockTracker.unlockCard("BigCrunch");
@@ -455,8 +456,8 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("Spark");
 		BaseMod.addCard(new GuidingStar());
 		UnlockTracker.unlockCard("GuidingStar");
-		//BaseMod.addCard(new Burn_MRS());
-		//UnlockTracker.unlockCard("Burn_MRS");
+		BaseMod.addCard(new Burn_MRS());
+		UnlockTracker.unlockCard("Burn_MRS");
 		BaseMod.addCard(new Parasite_MRS());
 		UnlockTracker.unlockCard("Parasite_MRS");
 		BaseMod.addCard(new BlackFlareStar());

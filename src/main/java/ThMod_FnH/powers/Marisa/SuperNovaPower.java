@@ -1,8 +1,11 @@
 package ThMod_FnH.powers.Marisa;
 
+import java.util.ArrayList;
+
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Decay;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
@@ -18,6 +21,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import ThMod_FnH.ThMod;
+import ThMod_FnH.cards.special.Burn_MRS;
 
 public class SuperNovaPower extends AbstractPower{
 	public static final String POWER_ID = "SuperNovaPower";
@@ -49,9 +53,10 @@ public class SuperNovaPower extends AbstractPower{
 	}
 	
 	public void onExhaust(AbstractCard card) {
-		if ((card instanceof Burn))
+		if ((card instanceof Burn)||(card instanceof Burn_MRS)) {
 			AbstractDungeon.actionManager.addToBottom(
 					new ApplyPowerAction(p, p, new StrengthPower(p, this.amount), this.amount));
+		}
 	}
 	
 	/*
@@ -81,18 +86,30 @@ public class SuperNovaPower extends AbstractPower{
 	}
 	
 	private void ExhaustDiscard() {
+		ArrayList<AbstractCard> temp = new ArrayList<AbstractCard>();
 		for (AbstractCard c : AbstractDungeon.player.hand.group) {
-			if (discardCheck(c)) {
-				c.exhaust = true;
-				c.isEthereal = true;
+			if (c instanceof Burn) {
+				temp.add(c);
+			} else {
+				if (discardCheck(c)) {
+					c.exhaust = true;
+					c.isEthereal = true;
+				}
 			}
+		}
+		while (temp.size() > 0)
+		{
+			AbstractCard c = temp.remove(0);
+			AbstractDungeon.player.hand.removeCard(c);
+			AbstractDungeon.actionManager.addToTop(
+					new MakeTempCardInHandAction(new Burn_MRS(), 1)
+					);
 		}
 	}
  	
 	private boolean discardCheck(AbstractCard card) {
 		if (
-				(card instanceof Burn)
-				||(card instanceof Decay)
+				(card instanceof Decay)
 				||(card instanceof Shame)
 				||(card instanceof Regret)
 				||(card instanceof Doubt)

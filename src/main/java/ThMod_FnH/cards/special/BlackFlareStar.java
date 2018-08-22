@@ -18,8 +18,9 @@ public class BlackFlareStar extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "img/cards/pride.png";
 	private static final int COST = 0;
-	private static final int BLC_AMT = 5;
-	private static final int UPG_BLC = 2;
+	private static final int BLC_AMT = 4;
+	private static final int UPG_BLC = 1;
+	private static final int HAND_REQ = 4;
 
 	public BlackFlareStar() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
@@ -29,7 +30,7 @@ public class BlackFlareStar extends CustomCard {
 	}
 	
 	public boolean canUse(AbstractPlayer p, AbstractMonster m){
-		if (p.hand.size() >= 3)
+		if (p.hand.size() >= HAND_REQ)
 			return true;
 		return false;
 	}

@@ -26,6 +26,7 @@ public class WhiteDwarf extends CustomCard {
 	private static final int COST = 0;
 	private static final int ATTACK_DMG = 0;
 	private float magn = 1.5f;
+	private static final int HAND_REQ = 4;
 
 	public WhiteDwarf() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -58,7 +59,7 @@ public class WhiteDwarf extends CustomCard {
 	}
 	
 	public boolean canUse(AbstractPlayer p, AbstractMonster m){
-		if (p.hand.size() <= 3)
+		if (p.hand.size() <= HAND_REQ)
 			return true;
 		return false;
 	}

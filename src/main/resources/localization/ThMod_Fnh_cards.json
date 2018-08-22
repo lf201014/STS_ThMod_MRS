@@ -178,7 +178,7 @@
 	},
 	"SuperPerseids": {
 		"NAME": "Super Perseids",
-		"DESCRIPTION": " Retain . Exhaust all Burn in your hand. NL for each Burn Exhasted , deal !D! damage.",
+		"DESCRIPTION": " Gain !B! block for each Status or Curse in your hand . NL When Exhasted , deal !D! damage to a random enemy.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MysteriousBeam": {
@@ -218,7 +218,7 @@
 	},
 	"DragonMeteor": {
 		"NAME": "Dragon Meteor",
-		"DESCRIPTION": "Deal !D! damage( !M! × number of cards in your exhaust pile ) .",
+		"DESCRIPTION": "Deal !D! damage. NL Increase damage by 1 for each card in your Exhaust Pile .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"EventHorizon": {
@@ -228,7 +228,7 @@
 	},
 	"PulseMagic": {
 		"NAME": "Pulse Magic",
-		"DESCRIPTION": "Deal !D! damage to all enemies,you don't need to pay extra [B] to activate Amplify this turn.",
+		"DESCRIPTION": "Gain [B] next turn. Amplify [B]  : you don't need to pay extra [B] to activate Amplify this turn.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"D6C": {
@@ -373,13 +373,13 @@
 	},
 	"BlackFlareStar": {
 		"NAME": "Black Flare Star",
-		"DESCRIPTION": "Can only be played when you have 3 or more cards in your hand. NL Discard any number of your hand,gain !B! block for each.",
+		"DESCRIPTION": "Can only be played when you have 4 or more cards in your hand. NL Discard any number of your hand,gain !B! block for each.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"WhiteDwarf": {
 		"NAME": "White Dwarf",
-		"DESCRIPTION": "Can only be played when you have 3 or less cards in your hand. NL Deal !D! damage (1.5 × size of your discard pile).Add 2 Burn to your hand.",
-		"UPGRADE_DESCRIPTION": "Can only be played when you have 3 or less cards in your hand. NL Deal !D! damage (2 × size of your discard pile).Add 2 Burn to your hand."
+		"DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. NL Deal !D! damage (1.5 × size of your discard pile).Add 2 Burn to your hand.",
+		"UPGRADE_DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. NL Deal !D! damage (2 × size of your discard pile).Add 2 Burn to your hand."
 	},
 	"WWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWW",
