@@ -38,7 +38,7 @@ public class BlackFlareStar extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		
 		AbstractDungeon.actionManager.addToBottom(
-				new BlackFlareStarAction(this.upgraded)
+				new BlackFlareStarAction(this.block)
 				);
 	}
 

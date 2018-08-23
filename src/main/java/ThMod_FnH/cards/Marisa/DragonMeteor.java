@@ -1,5 +1,6 @@
 package ThMod_FnH.cards.Marisa;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
@@ -63,7 +64,7 @@ public class DragonMeteor
 	    							p,
 	    							this.damage,
 	    							this.damageTypeForTurn),
-	    					null
+	    					AttackEffect.FIRE
 	    					)
 				);
 	}

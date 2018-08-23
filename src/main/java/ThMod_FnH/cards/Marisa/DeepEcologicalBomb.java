@@ -36,17 +36,17 @@ public class DeepEcologicalBomb
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		
-		AbstractDungeon.actionManager.addToBottom(
-				new WasteBombAction(this.damage)
-				);
-		
+		int num = 1;	
 		
 	    if ( ThMod.Amplified(AMP+this.costForTurn,AMP) ) {
-	    	AbstractDungeon.actionManager.addToBottom(
-					new WasteBombAction(this.damage)
-					);
+	    	num++;
 	    }
+	    AbstractDungeon.actionManager.addToBottom(
+					new WasteBombAction(
+							AbstractDungeon.getMonsters().getRandomMonster(true),
+							this.damage,num
+							)
+					);
 	}
 
 	public AbstractCard makeCopy() {

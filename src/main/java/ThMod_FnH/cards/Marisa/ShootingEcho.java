@@ -45,7 +45,7 @@ public class ShootingEcho
 		ThMod.logger.info("ShootingEcho : Player now have "+p.hand.size()+" card(s) in hand.");
 		
 		if (p.hand.size()>1) {
-			AbstractCard c = this.makeCopy();
+			AbstractCard c = this.makeStatEquivalentCopy();
 			if (this.upgraded) {
 				c.upgrade();
 			}

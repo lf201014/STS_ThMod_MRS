@@ -8,12 +8,12 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class BlackFlareStarAction extends AbstractGameAction{
-	private boolean upgraded;
+	private int blc;
   
-	public BlackFlareStarAction(boolean upgraded) {
+	public BlackFlareStarAction(int block) {
 		setValues(AbstractDungeon.player, AbstractDungeon.player, -1);
 		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
-		this.upgraded = upgraded;
+		this.blc = block;
 	}
   
 	public void update() {
@@ -29,9 +29,6 @@ public class BlackFlareStarAction extends AbstractGameAction{
 					handCardSelectScreen.selectedCards.group.isEmpty()){
 				int cnt = AbstractDungeon.
 						handCardSelectScreen.selectedCards.group.size();
-				int blc = 5;
-				if (this.upgraded)
-					blc += 2;
 				AbstractDungeon.actionManager.addToTop(
 						new GainBlockAction(source, source, blc*cnt)
 						);

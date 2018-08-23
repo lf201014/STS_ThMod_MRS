@@ -188,8 +188,8 @@
 	},
 	"ShootingEcho": {
 		"NAME": "Shooting Echo",
-		"DESCRIPTION": " Exhaust  a card,add a Shooting Echo to your hand. NL deal !D! damage. NL Exhaust .",
-		"UPGRADE_DESCRIPTION": "Exhaust  a card,add a upgraded Shooting Echo to your hand. NL deal !D! damage. NL Exhaust ."
+		"DESCRIPTION": " Exhaust  a card,add a copy of this card to your hand. NL deal !D! damage. NL Exhaust .",
+		"UPGRADE_DESCRIPTION": "Exhaust  a card,add a copy of this card to your hand. NL deal !D! damage. NL Exhaust ."
 	},
 	"EnergyFlow": {
 		"NAME": "Energy Flow",
@@ -284,7 +284,7 @@
 	"MagicChant": {
 		"NAME": "Magic Chant",
 		"DESCRIPTION": "Choose !M! to retain this turn,reduce the cost of chosen cards by 1 next turn.",
-		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+		"UPGRADE_DESCRIPTION": " Retain . Choose !M! to retain this turn,reduce the cost of chosen cards by 1 next turn."
 	},
 	"UnstableBomb": {
 		"NAME": "Unstable Bomb",

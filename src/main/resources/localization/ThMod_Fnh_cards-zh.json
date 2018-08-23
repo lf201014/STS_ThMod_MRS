@@ -192,8 +192,8 @@
 	},
 	"ShootingEcho": {
 		"NAME": "流星共鸣",
-		"DESCRIPTION": " 消耗 一张卡，将一张 流星共鸣 加入手牌。 NL 造成 !D! 点伤害。 NL  消耗 。",
-		"UPGRADE_DESCRIPTION": " 消耗 一张卡，将一张 升级 过的 流星共鸣 加入手牌。 NL 造成 !D! 点伤害。 NL  消耗 。"
+		"DESCRIPTION": " 消耗 一张卡，将一张此卡的复制加入手牌。 NL 造成 !D! 点伤害。 NL  消耗 。",
+		"UPGRADE_DESCRIPTION": " 消耗 一张卡，将一张此卡的复制加入手牌。 NL 造成 !D! 点伤害。 NL  消耗 。"
 	},
 	"EnergyFlow": {
 		"NAME": "能量涌动",
@@ -283,7 +283,7 @@
 	"MagicChant": {
 		"NAME": "咏唱",
 		"DESCRIPTION": "选择 !M! 张卡 保留 到下一回合。所选卡牌在下回合 费用 减少1 。",
-		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+		"UPGRADE_DESCRIPTION": " 保留 。选择 !M! 张卡 保留 到下一回合。所选卡牌在下回合 费用 减少1 。"
 	},
 	"UnstableBomb": {
 		"NAME": "不稳定爆弹",
