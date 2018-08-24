@@ -111,7 +111,6 @@ import ThMod_FnH.patches.ThModClassEnum;
 import ThMod_FnH.powers.Marisa.GrandCrossPower;
 import ThMod_FnH.relics.AmplifyWand;
 import ThMod_FnH.relics.BreadOfAWashokuLover;
-import ThMod_FnH.relics.Cape;
 import ThMod_FnH.relics.EnhancedBroom;
 import ThMod_FnH.relics.EnhancedHakkero;
 import ThMod_FnH.relics.ExperimentalFamiliar;
@@ -234,7 +233,7 @@ public class ThMod implements PostExhaustSubscriber,
 	public ThMod() {
       BaseMod.subscribe(this);
       logger.info("creating the color : MARISA_COLOR");
-      BaseMod.addColor(AbstractCardEnum.MARISA_COLOR.toString(),
+      BaseMod.addColor(AbstractCardEnum.MARISA_COLOR,
     		  	STARLIGHT, STARLIGHT, STARLIGHT, STARLIGHT, STARLIGHT, STARLIGHT, STARLIGHT,
         	    makePath(ATTACK_CC), makePath(SKILL_CC),
         	    makePath(POWER_CC), makePath(ENERGY_ORB_CC),
@@ -249,15 +248,15 @@ public class ThMod implements PostExhaustSubscriber,
 		
 		if (Settings.language == Settings.GameLanguage.ZHS) {
 			BaseMod.addCharacter(Marisa.class, "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f", "character class string",
-					AbstractCardEnum.MARISA_COLOR.toString(), "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f",
+					AbstractCardEnum.MARISA_COLOR, "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f",
 					MY_CHARACTER_BUTTON , MARISA_PORTRAIT,
-					ThModClassEnum.MARISA.toString());
+					ThModClassEnum.MARISA);
 		}
         else {
         	BaseMod.addCharacter(Marisa.class, "The Ordinary Magician", "character class string",
-				AbstractCardEnum.MARISA_COLOR.toString(), "The Ordinary Magician",
+				AbstractCardEnum.MARISA_COLOR, "The Ordinary Magician",
 				MY_CHARACTER_BUTTON , MARISA_PORTRAIT,
-				ThModClassEnum.MARISA.toString());
+				ThModClassEnum.MARISA);
         }
 		logger.info("done editting characters");
 	}
@@ -265,18 +264,18 @@ public class ThMod implements PostExhaustSubscriber,
 	public void receiveEditRelics() {
 		logger.info("Begin editting relics.");
   	
-		BaseMod.addRelicToCustomPool(new MiniHakkero(), AbstractCardEnum.MARISA_COLOR.toString());
-		BaseMod.addRelicToCustomPool(new EnhancedHakkero(), AbstractCardEnum.MARISA_COLOR.toString());
-		BaseMod.addRelicToCustomPool(new EnhancedBroom(), AbstractCardEnum.MARISA_COLOR.toString());
-		//BaseMod.addRelicToCustomPool(new MagicArmor(), AbstractCardEnum.MARISA_COLOR.toString());
-		BaseMod.addRelicToCustomPool(new AmplifyWand(), AbstractCardEnum.MARISA_COLOR.toString());
-		BaseMod.addRelicToCustomPool(new ExperimentalFamiliar(), AbstractCardEnum.MARISA_COLOR.toString());
-		BaseMod.addRelicToCustomPool(new RampagingMagicTools(), AbstractCardEnum.MARISA_COLOR.toString());
-		BaseMod.addRelicToCustomPool(new BreadOfAWashokuLover(), AbstractCardEnum.MARISA_COLOR.toString());
-		BaseMod.addRelicToCustomPool(new SimpleLauncher(), AbstractCardEnum.MARISA_COLOR.toString());
-		BaseMod.addRelicToCustomPool(new HandmadeGrimoire(), AbstractCardEnum.MARISA_COLOR.toString());
-		BaseMod.addRelicToCustomPool(new ShroomBag(), AbstractCardEnum.MARISA_COLOR.toString());
-		//BaseMod.addRelicToCustomPool(new Cape(), AbstractCardEnum.MARISA_COLOR.toString());
+		BaseMod.addRelicToCustomPool(new MiniHakkero(), AbstractCardEnum.MARISA_COLOR);
+		BaseMod.addRelicToCustomPool(new EnhancedHakkero(), AbstractCardEnum.MARISA_COLOR);
+		BaseMod.addRelicToCustomPool(new EnhancedBroom(), AbstractCardEnum.MARISA_COLOR);
+		//BaseMod.addRelicToCustomPool(new MagicArmor(), AbstractCardEnum.MARISA_COLOR);
+		BaseMod.addRelicToCustomPool(new AmplifyWand(), AbstractCardEnum.MARISA_COLOR);
+		BaseMod.addRelicToCustomPool(new ExperimentalFamiliar(), AbstractCardEnum.MARISA_COLOR);
+		BaseMod.addRelicToCustomPool(new RampagingMagicTools(), AbstractCardEnum.MARISA_COLOR);
+		BaseMod.addRelicToCustomPool(new BreadOfAWashokuLover(), AbstractCardEnum.MARISA_COLOR);
+		BaseMod.addRelicToCustomPool(new SimpleLauncher(), AbstractCardEnum.MARISA_COLOR);
+		BaseMod.addRelicToCustomPool(new HandmadeGrimoire(), AbstractCardEnum.MARISA_COLOR);
+		BaseMod.addRelicToCustomPool(new ShroomBag(), AbstractCardEnum.MARISA_COLOR);
+		//BaseMod.addRelicToCustomPool(new Cape(), AbstractCardEnum.MARISA_COLOR);
   	
 		logger.info("Relics editting finished.");
   	}

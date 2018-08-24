@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import ThMod_FnH.action.SparkCostAction;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
+import basemod.helpers.BaseModTags;
+import basemod.helpers.CardTags;
 
 public class Strike_MRS 
 	extends CustomCard {
@@ -30,7 +32,7 @@ public class Strike_MRS
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.BASIC,
 				AbstractCard.CardTarget.ENEMY);
-
+		CardTags.addTags(this, BaseModTags.BASIC_STRIKE);
 		this.baseDamage = ATTACK_DMG;
 	}
 

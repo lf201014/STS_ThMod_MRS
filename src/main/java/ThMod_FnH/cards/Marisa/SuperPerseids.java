@@ -21,7 +21,7 @@ public class SuperPerseids extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 2;
+	private static final int COST = 1;
 	private static final int DMG = 18;
 	private static final int UPG_DMG = 6;
 	private static final int BLC = 4;

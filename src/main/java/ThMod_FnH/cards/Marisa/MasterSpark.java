@@ -16,6 +16,8 @@ import ThMod_FnH.ThMod;
 import ThMod_FnH.abstracts.AmplifiedAttack;
 import ThMod_FnH.action.SparkCostAction;
 import ThMod_FnH.patches.AbstractCardEnum;
+import basemod.helpers.BaseModTags;
+import basemod.helpers.CardTags;
 
 public class MasterSpark 
 	extends AmplifiedAttack {
@@ -38,7 +40,7 @@ public class MasterSpark
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.BASIC,
 				AbstractCard.CardTarget.ENEMY);
-
+		CardTags.addTags(this, BaseModTags.GREMLIN_MATCH);
 		this.baseDamage = ATK_DMG;
 		this.ampNumber = AMP_DMG;
 		this.baseBlock = this.baseDamage + this.ampNumber;

@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
+import basemod.helpers.BaseModTags;
+import basemod.helpers.CardTags;
 import ThMod_FnH.patches.AbstractCardEnum;
 
 public class Defend_MRS extends CustomCard {
@@ -23,7 +25,7 @@ public class Defend_MRS extends CustomCard {
 	public Defend_MRS() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
-
+		CardTags.addTags(this, BaseModTags.BASIC_DEFEND);
 		this.baseBlock = BLOCK_AMT;
 	}
 	
@@ -33,11 +35,6 @@ public class Defend_MRS extends CustomCard {
 
 	public AbstractCard makeCopy() {
 		return new Defend_MRS();
-	}
-	
-	@Override
-	public boolean isDefend(){
-		return true;
 	}
 
 	public void upgrade() {
