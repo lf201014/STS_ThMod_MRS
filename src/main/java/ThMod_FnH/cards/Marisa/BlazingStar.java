@@ -12,12 +12,12 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import ThMod_FnH.ThMod;
+import ThMod_FnH.abstracts.AmplifiedAttack;
 import ThMod_FnH.cards.special.Burn_MRS;
 import ThMod_FnH.patches.AbstractCardEnum;
-import basemod.abstracts.CustomCard;
 
 public class BlazingStar 
-	extends CustomCard {
+	extends AmplifiedAttack {
 	
 	public static final String ID = "BlazingStar";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -37,19 +37,17 @@ public class BlazingStar
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE,
 				AbstractCard.CardTarget.ENEMY);
 
-		this.baseDamage = ATK_DMG;
+		this.block = this.baseBlock = this.damage = this.baseDamage = ATK_DMG;
 		this.magicNumber = this.baseMagicNumber = AMP_DMG;
+		this.isException = true;
 	}
 	
 	public void applyPowers(){
 		AbstractPlayer p = AbstractDungeon.player;
-		this.baseDamage = ATK_DMG;
-		if (this.upgraded) {
-			this.baseDamage += UPG_DMG;
-		}
+		this.block = this.baseDamage;
 		for (AbstractCard c:p.hand.group) {
 			if ((c instanceof Burn)||(c instanceof Burn_MRS)) {
-				this.baseDamage += this.magicNumber;
+				this.block += this.magicNumber;
 			}
 		}
 		super.applyPowers();
@@ -57,13 +55,13 @@ public class BlazingStar
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (ThMod.Amplified(AMP+this.costForTurn,AMP)) {
-			this.damage *=2;
+			this.block *= 2;
 		}
 		AbstractDungeon.actionManager.addToBottom(
 				new DamageAction(
 						m,
-						new DamageInfo(p, this.damage, this.damageTypeForTurn),
-						AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+						new DamageInfo(p, this.block, this.damageTypeForTurn),
+						AbstractGameAction.AttackEffect.FIRE
 						)
 				);
 	}

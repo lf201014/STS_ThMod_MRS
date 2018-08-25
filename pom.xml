@@ -53,6 +53,7 @@
                         <configuration>
                             <target>
                                 <copy file="target/TS05_Marisa.jar" tofile="../lib/TS05_Marisa.jar"/>
+                                <copy file="target/TS05_Marisa.jar" tofile="E:/SteamLibrary/SteamApps/common/SlayTheSpire/mods/TS05_Marisa.jar"/>
                             </target>
                         </configuration>
                         <goals>

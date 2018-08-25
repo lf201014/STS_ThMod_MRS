@@ -39,6 +39,7 @@ public class LuminesStrike
 		this.baseMagicNumber = D0;
 		this.baseBlock = A0;
 		this.baseDamage = 0;
+		this.isException = true;
 	}
 	
 	@Override

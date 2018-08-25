@@ -36,6 +36,11 @@ public class Defend_MRS extends CustomCard {
 	public AbstractCard makeCopy() {
 		return new Defend_MRS();
 	}
+	
+	@Override
+	public boolean isDefend(){
+		return true;
+	}
 
 	public void upgrade() {
 		if (!this.upgraded) {

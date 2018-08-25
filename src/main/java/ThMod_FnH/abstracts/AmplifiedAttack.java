@@ -16,6 +16,7 @@ public abstract class AmplifiedAttack extends CustomCard  {
 	private int ampDamage = -1;
 	public int ampNumber = 0;
 	public int[] multiAmpDamage;
+	public boolean isException = false;
 
 	public AmplifiedAttack(String id, String name, String img, int cost, String rawDescription, CardType type,
 			CardColor color, CardRarity rarity, CardTarget target) {
@@ -34,18 +35,10 @@ public abstract class AmplifiedAttack extends CustomCard  {
 	public void applyPowers(){
 		AbstractPlayer player = AbstractDungeon.player;
 		
-		switch (this.cardID) {
-		case "MeteonicShower":
-			this.damage = this.baseDamage;
-			this.block = this.baseBlock;
-			break;
-		case "LuminesStrike":
-			break;
-		default:
+		if (!this.isException) {
 			this.damage = this.baseDamage;
 			this.ampDamage = this.baseDamage + this.ampNumber;
 			this.block = this.baseBlock = this.ampDamage;
-			break;
 		}
 		
 		this.isDamageModified = false;
@@ -180,14 +173,7 @@ public abstract class AmplifiedAttack extends CustomCard  {
 	public void calculateCardDamage(AbstractMonster mo){
 		AbstractPlayer player = AbstractDungeon.player;
 
-		switch (this.cardID) {
-		case "MeteonicShower":
-			this.damage = this.baseDamage;
-			this.block = this.baseBlock;
-			break;
-		case "LuminesStrike":
-			break;
-		default:
+		if (!this.isException) {
 			this.damage = this.baseDamage;
 			this.ampDamage = this.baseDamage + this.ampNumber;
 			this.block = this.baseBlock = this.ampDamage;

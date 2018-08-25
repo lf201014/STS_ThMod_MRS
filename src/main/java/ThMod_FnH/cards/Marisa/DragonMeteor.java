@@ -13,11 +13,11 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 
+import ThMod_FnH.abstracts.AmplifiedAttack;
 import ThMod_FnH.patches.AbstractCardEnum;
-import basemod.abstracts.CustomCard;
 
 public class DragonMeteor 
-	extends CustomCard {
+	extends AmplifiedAttack {
 
 	public static final String ID = "DragonMeteor";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -33,16 +33,13 @@ public class DragonMeteor
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.ENEMY);
 
-		this.damage = this.baseDamage = ATK_DMG;
+		this.block = this.baseBlock = this.damage = this.baseDamage = ATK_DMG;
+		this.isException = true;
 	}
 	
 	@Override
 	public void applyPowers() {
-		int dmg = ATK_DMG;
-		if (this.upgraded) {
-			dmg += UPG_DMG;
-		}
-		this.baseDamage = dmg + AbstractDungeon.player.exhaustPile.size();
+		this.block = this.baseDamage + AbstractDungeon.player.exhaustPile.size();
 		super.applyPowers();
 	}
 
@@ -62,7 +59,7 @@ public class DragonMeteor
 				new DamageAction(m,
 	    					new DamageInfo(
 	    							p,
-	    							this.damage,
+	    							this.block,
 	    							this.damageTypeForTurn),
 	    					AttackEffect.FIRE
 	    					)

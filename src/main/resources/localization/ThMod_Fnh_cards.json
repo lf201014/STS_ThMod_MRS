@@ -17,7 +17,7 @@
 	},
 	"BlazingStar": {
 		"NAME": "Blazing Star",
-		"DESCRIPTION": "Deal !D! damage.Increase damage by !M! for each Burn in your hand. NL Amplify  [B] : Deal double damage. "
+		"DESCRIPTION": "Deal !B! damage.Increase damage by !M! for each Burn in your hand. NL Amplify  [B] : Deal double damage. "
 	},
 	"DarkSpark": {
 		"NAME": "Dark Spark",
@@ -218,7 +218,7 @@
 	},
 	"DragonMeteor": {
 		"NAME": "Dragon Meteor",
-		"DESCRIPTION": "Deal !D! damage. NL Increase damage by 1 for each card in your Exhaust Pile .",
+		"DESCRIPTION": "Deal !B! damage. NL Increase damage by 1 for each card in your Exhaust Pile .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"EventHorizon": {
@@ -229,7 +229,7 @@
 	"PulseMagic": {
 		"NAME": "Pulse Magic",
 		"DESCRIPTION": "Gain [B] next turn. Amplify [B]  : you don't need to pay extra [B] to activate Amplify this turn.",
-		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+		"UPGRADE_DESCRIPTION": " Retain . NL Gain [B] next turn. Amplify [B]  : you don't need to pay extra [B] to activate Amplify this turn."
 	},
 	"D6C": {
 		"NAME": "66C",

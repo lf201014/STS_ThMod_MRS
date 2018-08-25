@@ -17,7 +17,7 @@
 	},
 	"BlazingStar": {
 		"NAME": "彗星",
-		"DESCRIPTION": "造成 !D! 点伤害，你手牌中每有一张 灼伤 伤害增加 !M! 点。 NL 增幅  [B] :造成双倍伤害。 "
+		"DESCRIPTION": "造成 !B! 点伤害，你手牌中每有一张 灼伤 伤害增加 !M! 点。 NL 增幅  [B] :造成双倍伤害。 "
 	},
 	"DarkSpark": {
 		"NAME": "暗色火花",
@@ -222,13 +222,13 @@
 	},
 	"DragonMeteor": {
 		"NAME": "龙陨星",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 你的消耗区每有一张卡，此卡伤害增加 1 。",
+		"DESCRIPTION": "造成 !B! 点伤害。 NL 你的消耗区每有一张卡，此卡伤害增加 1 。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"PulseMagic": {
 		"NAME": "脉冲魔术",
 		"DESCRIPTION": "下回合开始时获得  [B]  。 NL 增幅  [B]  ：本回合内你不再需要支付额外能量来发动 增幅 效果。",
-		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+		"UPGRADE_DESCRIPTION": " 保留 。 NL 下回合开始时获得  [B]  。 NL 增幅  [B]  ：本回合内你不再需要支付额外能量来发动 增幅 效果。"
 	},
 	"D6C": {
 		"NAME": "迎头痛击",
