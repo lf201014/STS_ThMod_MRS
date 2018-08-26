@@ -1,18 +1,12 @@
 package ThMod_FnH.relics;
 
-import java.util.ArrayList;
-
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Parasite;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 
-import ThMod_FnH.ThMod;
-import ThMod_FnH.cards.special.Parasite_MRS;
 import basemod.abstracts.CustomRelic;
 
 public class ShroomBag extends CustomRelic {
@@ -52,7 +46,7 @@ public class ShroomBag extends CustomRelic {
     					 Settings.HEIGHT / 2.0F)
     			 );
     }
-    
+    /*
     @Override
     public void onDrawOrDiscard() {
     	ThMod.logger.info("ShroomBag : onDrawOrDiscard : replaceParasite");
@@ -86,4 +80,5 @@ public class ShroomBag extends CustomRelic {
 			AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(new Parasite_MRS(), 1));
 		}
 	}
+	*/
 }

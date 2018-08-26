@@ -28,8 +28,17 @@ public class SuperPerseids extends CustomCard {
 	private static final int UPG_BLC = 2;
 	
 	public SuperPerseids() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+		super(
+				ID,
+				NAME,
+				IMG_PATH, 
+				COST,
+				DESCRIPTION, 
+				AbstractCard.CardType.SKILL,
+				AbstractCardEnum.MARISA_COLOR,
+				AbstractCard.CardRarity.UNCOMMON,
+				AbstractCard.CardTarget.SELF
+				);
 
 		this.baseDamage = DMG;
 		this.block = this.baseBlock = BLC;
@@ -64,7 +73,7 @@ public class SuperPerseids extends CustomCard {
 						new DamageInfo(
 							AbstractDungeon.player,
 							this.damage,
-							DamageType.NORMAL
+							DamageType.THORNS
 							), 
 						AttackEffect.FIRE
 						)

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 
+@Deprecated
 public class Burn_MRS extends CustomCard {
 	public static final String ID = "Burn_MRS";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Burn");

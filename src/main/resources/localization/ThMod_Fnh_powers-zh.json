@@ -158,7 +158,7 @@
     "NAME": "超新星",
     "DESCRIPTIONS": [
       "你每 #y消耗 一张 #y灼伤 ，获得 #b",
-      " 层 #y力量 。 NL 在你的回合结束时， #y消耗 你所有的手牌"
+      " 层 #y力量 。NL 你不再受到 #y灼伤 的伤害。 NL 在你的回合结束时， #y消耗 你所有的手牌"
     ]
   },
     "CasketOfStarPlusPower": {

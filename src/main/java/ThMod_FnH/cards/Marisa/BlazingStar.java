@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import ThMod_FnH.ThMod;
 import ThMod_FnH.abstracts.AmplifiedAttack;
-import ThMod_FnH.cards.special.Burn_MRS;
 import ThMod_FnH.patches.AbstractCardEnum;
 
 public class BlazingStar 
@@ -33,9 +32,17 @@ public class BlazingStar
 	private static final int AMP = 1;
 	
 	public BlazingStar() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE,
-				AbstractCard.CardTarget.ENEMY);
+		super(
+				ID, 
+				NAME, 
+				IMG_PATH,
+				COST, 
+				DESCRIPTION,
+				AbstractCard.CardType.ATTACK,
+				AbstractCardEnum.MARISA_COLOR, 
+				AbstractCard.CardRarity.RARE,
+				AbstractCard.CardTarget.ENEMY
+				);
 
 		this.block = this.baseBlock = this.damage = this.baseDamage = ATK_DMG;
 		this.magicNumber = this.baseMagicNumber = AMP_DMG;
@@ -46,7 +53,7 @@ public class BlazingStar
 		AbstractPlayer p = AbstractDungeon.player;
 		this.block = this.baseDamage;
 		for (AbstractCard c:p.hand.group) {
-			if ((c instanceof Burn)||(c instanceof Burn_MRS)) {
+			if ((c instanceof Burn)) {
 				this.block += this.magicNumber;
 			}
 		}
@@ -75,6 +82,7 @@ public class BlazingStar
 			upgradeName();
 			upgradeDamage(UPG_DMG);
 			upgradeMagicNumber(UPG_AMP);
+			this.block = this.baseBlock = this.damage;
 		}
 	}
 }

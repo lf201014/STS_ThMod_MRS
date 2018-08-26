@@ -258,7 +258,7 @@
 	},
 	"TreasureHunter": {
 		"NAME": "TreasureHunter",
-		"DESCRIPTION": "Deal !D! damage. NL If this kills an elite/a boss,gain a random rare/boss relic on victory. NL Exhaust .",
+		"DESCRIPTION": "Deal !D! damage. NL If this kills an non-minion enemy in a elite/boss fight,gain a random common or uncommon/rare relic on victory. NL Exhaust .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"Robbery": {
@@ -293,8 +293,8 @@
 	},
 	"SuperNova": {
 		"NAME": "Supernova",
-		"DESCRIPTION": "Gain 1 Strength for each Burn exhausted . NL  Exhaust your hand when your turn ends. ",
-		"UPGRADE_DESCRIPTION": "Innate. NL Gain 1 Strength for each Burn exhausted . NL  Exhaust your hand when your turn ends. "
+		"DESCRIPTION": "No longer take damage from Burn . Gain 1 Strength for each Burn exhausted . NL  Exhaust your hand when your turn ends. ",
+		"UPGRADE_DESCRIPTION": "Innate. NL No longer take damage from Burn . NL Gain 1 Strength for each Burn exhausted . NL  Exhaust your hand when your turn ends. "
 	},
 	"MoraleDepletion": {
 		"NAME": "Morale Depletion",

@@ -9,11 +9,10 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 
-public class WitchOfGreedGold
-  extends AbstractPower
-{
+public class WitchOfGreedGold extends AbstractPower{
 	public static final String POWER_ID = "WitchOfGreedGold";
-	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+	private static final PowerStrings powerStrings =
+			CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
   

@@ -292,8 +292,8 @@
 	},
 	"SuperNova": {
 		"NAME": "超新星",
-		"DESCRIPTION": "每 消耗 一张 灼伤 ，获得一点 力量 。 NL 在回合结束时 消耗 所有手牌。",
-		"UPGRADE_DESCRIPTION": " 固有 。 NL 每 消耗 一张 灼伤 ，获得一点 力量 。 NL 在回合结束时 消耗 所有手牌。"
+		"DESCRIPTION": "使你不再受到 灼伤 的伤害。 NL 每 消耗 一张 灼伤 ，获得一点 力量 。 NL 在回合结束时 消耗 所有手牌。",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 使你不再受到 灼伤 的伤害。 NL 每 消耗 一张 灼伤 ，获得一点 力量 。 NL 在回合结束时 消耗 所有手牌。"
 	},
 	"MoraleDepletion": {
 		"NAME": "战意枯竭",

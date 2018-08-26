@@ -1,11 +1,8 @@
 package ThMod_FnH.powers.Marisa;
 
-import java.util.ArrayList;
-
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Decay;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
@@ -21,7 +18,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import ThMod_FnH.ThMod;
-import ThMod_FnH.cards.special.Burn_MRS;
 
 public class SuperNovaPower extends AbstractPower{
 	public static final String POWER_ID = "SuperNovaPower";
@@ -53,7 +49,7 @@ public class SuperNovaPower extends AbstractPower{
 	}
 	
 	public void onExhaust(AbstractCard card) {
-		if ((card instanceof Burn)||(card instanceof Burn_MRS)) {
+		if ((card instanceof Burn)) {
 			AbstractDungeon.actionManager.addToBottom(
 					new ApplyPowerAction(p, p, new StrengthPower(p, this.amount), this.amount));
 		}
@@ -68,6 +64,7 @@ public class SuperNovaPower extends AbstractPower{
 		}
 	}
 	*/
+	
 	@Override
 	public void onDrawOrDiscard() {
 		ThMod.logger.info("SuperNovaPower : onDrawOrDiscard : ExhaustDiscard");
@@ -86,6 +83,7 @@ public class SuperNovaPower extends AbstractPower{
 	}
 	
 	private void ExhaustDiscard() {
+		/*
 		ArrayList<AbstractCard> temp = new ArrayList<AbstractCard>();
 		for (AbstractCard c : AbstractDungeon.player.hand.group) {
 			if (c instanceof Burn) {
@@ -104,6 +102,13 @@ public class SuperNovaPower extends AbstractPower{
 			AbstractDungeon.actionManager.addToTop(
 					new MakeTempCardInHandAction(new Burn_MRS(), 1)
 					);
+		}
+		*/
+		for (AbstractCard c : AbstractDungeon.player.hand.group) {
+			if (discardCheck(c)) {
+				c.exhaust = true;
+				c.isEthereal = true;
+			}
 		}
 	}
  	

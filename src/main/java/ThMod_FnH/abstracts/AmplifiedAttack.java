@@ -54,6 +54,7 @@ public abstract class AmplifiedAttack extends CustomCard  {
 			float amp = this.block;
 			if ((AbstractDungeon.player.hasRelic("WristBlade")) && (this.costForTurn == 0)){
 				tmp += 3.0F;
+				amp += 3.0F;
 				if (this.baseDamage != (int)tmp) {
 					this.isDamageModified = true;
 				}

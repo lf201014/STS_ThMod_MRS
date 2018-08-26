@@ -18,9 +18,11 @@ import ThMod_FnH.action.ConsumeChargeUpAction;
 public class ChargeUpPower
 	extends AbstractPower{
 	public static final String POWER_ID = "ChargeUpPower";
-	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+	private static final PowerStrings powerStrings =
+			CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
-	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+	public static final String[] DESCRIPTIONS =
+			powerStrings.DESCRIPTIONS;
 	private int cnt;
 	private int stc;
 	private int ACT_STACK = 8;
@@ -60,13 +62,16 @@ public class ChargeUpPower
 				);
 		
 		this.cnt = (int) Math.floor(this.amount/this.stc);
-		ThMod.logger.info("ChargeUpPower : Done StackPower ; cnt : "+this.cnt);
+		//ThMod.logger.info("ChargeUpPower : Done StackPower ; cnt : "+this.cnt);
 	}
 	
 	public void updateDescription(){
 		if (this.cnt>0)
 			this.description = 
-					(DESCRIPTIONS[0]+this.amount+DESCRIPTIONS[1]+","+DESCRIPTIONS[2]+(int)Math.pow(2,this.cnt)+DESCRIPTIONS[3]);
+					(
+							DESCRIPTIONS[0]+this.amount+DESCRIPTIONS[1]
+									+","+DESCRIPTIONS[2]+(int)Math.pow(2,this.cnt)+DESCRIPTIONS[3]
+									);
 		else	
 			this.description = (DESCRIPTIONS[0]+this.amount+DESCRIPTIONS[1]+".");
 	}
@@ -78,6 +83,7 @@ public class ChargeUpPower
 		}
 		if ((this.cnt>0)&&(card.type == CardType.ATTACK)) {
 			ThMod.logger.info("ChargeUpPower : consuming stacks for :"+card.cardID);
+			
 			if ( owner.hasPower("OrrerysSunPower") )
 				owner.getPower("OrrerysSunPower").onSpecificTrigger();
 			flash();

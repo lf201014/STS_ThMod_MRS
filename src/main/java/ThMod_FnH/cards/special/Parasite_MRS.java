@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomCard;
 
+@Deprecated
 public class Parasite_MRS extends CustomCard {
 	public static final String ID = "Parasite_MRS";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Parasite");

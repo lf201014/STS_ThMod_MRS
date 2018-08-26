@@ -158,7 +158,7 @@
     "NAME": "SuperNova",
     "DESCRIPTIONS": [
       "Gain  #b",
-      " #yStrength for each #yBurn exhausted. NL #yExhaust you hand when your turn ends."
+      " #yStrength for each #yBurn exhausted. NL You no longer take damage from #yBurn . NL #yExhaust you hand when your turn ends."
     ]
   },
     "CasketOfStarPlusPower": {

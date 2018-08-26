@@ -100,9 +100,7 @@ import ThMod_FnH.cards.Marisa.WitchLeyline;
 import ThMod_FnH.cards.Marisa.WitchOfGreed;
 import ThMod_FnH.cards.Marisa._6A;
 import ThMod_FnH.cards.special.BlackFlareStar;
-import ThMod_FnH.cards.special.Burn_MRS;
 import ThMod_FnH.cards.special.GuidingStar;
-import ThMod_FnH.cards.special.Parasite_MRS;
 import ThMod_FnH.cards.special.Spark;
 import ThMod_FnH.cards.special.WhiteDwarf;
 import ThMod_FnH.characters.Marisa;
@@ -450,15 +448,15 @@ public class ThMod implements PostExhaustSubscriber,
 		BaseMod.addCard(new SuperNova());
 		UnlockTracker.unlockCard("SuperNova");
 		
-		//special£º5
+		//special£º4
 		BaseMod.addCard(new Spark());
 		UnlockTracker.unlockCard("Spark");
 		BaseMod.addCard(new GuidingStar());
 		UnlockTracker.unlockCard("GuidingStar");
-		BaseMod.addCard(new Burn_MRS());
-		UnlockTracker.unlockCard("Burn_MRS");
-		BaseMod.addCard(new Parasite_MRS());
-		UnlockTracker.unlockCard("Parasite_MRS");
+		//BaseMod.addCard(new Burn_MRS());
+		//UnlockTracker.unlockCard("Burn_MRS");
+		//BaseMod.addCard(new Parasite_MRS());
+		//UnlockTracker.unlockCard("Parasite_MRS");
 		BaseMod.addCard(new BlackFlareStar());
 		UnlockTracker.unlockCard("BlackFlareStar");
 		BaseMod.addCard(new WhiteDwarf());

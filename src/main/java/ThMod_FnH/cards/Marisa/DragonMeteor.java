@@ -29,9 +29,17 @@ public class DragonMeteor
 	private static final int UPG_DMG = 6;
 
 	public DragonMeteor() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,
-				AbstractCard.CardTarget.ENEMY);
+		super(
+				ID, 
+				NAME, 
+				IMG_PATH, 
+				COST, 
+				DESCRIPTION,
+				AbstractCard.CardType.ATTACK,
+				AbstractCardEnum.MARISA_COLOR, 
+				AbstractCard.CardRarity.UNCOMMON,
+				AbstractCard.CardTarget.ENEMY
+				);
 
 		this.block = this.baseBlock = this.damage = this.baseDamage = ATK_DMG;
 		this.isException = true;
@@ -74,6 +82,7 @@ public class DragonMeteor
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeDamage(UPG_DMG);
+			this.block = this.baseBlock = this.damage;
 		}
 	}
 }

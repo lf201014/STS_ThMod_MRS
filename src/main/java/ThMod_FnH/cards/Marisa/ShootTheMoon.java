@@ -24,7 +24,7 @@ public class ShootTheMoon
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "img/cards/ShootTheMoon.png";
+	public static final String IMG_PATH = "img/cards/ShootTheMoon_v1.png";
 	
 	private static final int COST = 1;
 	private static final int ATK_DMG = 7;
@@ -34,9 +34,16 @@ public class ShootTheMoon
 	private static final int AMP = 1;
 	
 	public ShootTheMoon() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,
-				AbstractCard.CardTarget.ENEMY);
+		super(
+				ID,
+				NAME,
+				IMG_PATH,
+				COST,
+				DESCRIPTION, AbstractCard.CardType.ATTACK,
+				AbstractCardEnum.MARISA_COLOR,
+				AbstractCard.CardRarity.UNCOMMON,
+				AbstractCard.CardTarget.ENEMY
+				);
 
 		this.baseDamage = ATK_DMG;
 		this.ampNumber = AMP_DMG;
