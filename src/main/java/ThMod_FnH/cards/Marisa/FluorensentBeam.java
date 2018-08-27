@@ -34,9 +34,17 @@ public class FluorensentBeam
 	
 
 	public FluorensentBeam() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON,
-				AbstractCard.CardTarget.ALL_ENEMY);
+		super(
+				ID, 
+				NAME, 
+				IMG_PATH,
+				COST, 
+				DESCRIPTION,
+				AbstractCard.CardType.ATTACK,
+				AbstractCardEnum.MARISA_COLOR,
+				AbstractCard.CardRarity.COMMON,
+				AbstractCard.CardTarget.ALL_ENEMY
+				);
 
 		this.baseDamage = ATK_DMG;
 		this.ampNumber = AMP_DMG;

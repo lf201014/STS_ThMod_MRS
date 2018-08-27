@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -27,9 +28,9 @@ public class ShootTheMoon
 	public static final String IMG_PATH = "img/cards/ShootTheMoon_v1.png";
 	
 	private static final int COST = 1;
-	private static final int ATK_DMG = 7;
+	private static final int ATK_DMG = 8;
 	private static final int UPG_DMG = 3;
-	private static final int AMP_DMG = 4;
+	private static final int AMP_DMG = 5;
 	private static final int UPG_AMP = 2;
 	private static final int AMP = 1;
 	
@@ -50,7 +51,7 @@ public class ShootTheMoon
 		this.baseBlock = this.baseDamage + this.ampNumber;
 	}
 
-	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
+	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractPower po = null;
 		
 		boolean fightingBoss = (m.type == AbstractMonster.EnemyType.BOSS);
@@ -62,8 +63,13 @@ public class ShootTheMoon
 					if (pow.type == AbstractPower.PowerType.BUFF)
 						AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(m,p,pow));
 
-			AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-					new DamageInfo(p, this.block, this.damageTypeForTurn),AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+			AbstractDungeon.actionManager.addToBottom(
+					new DamageAction(
+							m,
+							new DamageInfo(p, this.block, this.damageTypeForTurn),
+							AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+							)
+					);
 		}
 		else {
 			if ((!m.powers.isEmpty())&&(!fightingBoss)){
@@ -79,8 +85,13 @@ public class ShootTheMoon
 			
 			}
 		
-			AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-					new DamageInfo(p, this.damage, this.damageTypeForTurn),AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+			AbstractDungeon.actionManager.addToBottom(
+					new DamageAction(
+							m,
+							new DamageInfo(p, this.damage, this.damageTypeForTurn),
+							AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+							)
+					);
 		}
 		
 	}

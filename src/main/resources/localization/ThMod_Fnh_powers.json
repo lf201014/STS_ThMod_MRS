@@ -231,6 +231,13 @@
       "WWWWWWWWWWW"
     ]
   },
+    "Diaspora": {
+    "NAME": "Diaspora",
+    "DESCRIPTIONS": [
+      "At the end of turn,instantly kill this creature if its health is less than #b",
+      " ."
+    ]
+  },
     "WWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [

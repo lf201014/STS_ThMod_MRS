@@ -48,6 +48,7 @@ import ThMod_FnH.cards.Marisa.EnergyFlow;
 import ThMod_FnH.cards.Marisa.EnergyRecoil;
 import ThMod_FnH.cards.Marisa.EscapeVelocity;
 import ThMod_FnH.cards.Marisa.EventHorizon;
+import ThMod_FnH.cards.Marisa.FairyDestructionRay;
 import ThMod_FnH.cards.Marisa.FinalSpark;
 import ThMod_FnH.cards.Marisa.FluorensentBeam;
 import ThMod_FnH.cards.Marisa.FungusSplash;
@@ -305,8 +306,8 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("WitchLeyline");
 		BaseMod.addCard(new D6C());
 		UnlockTracker.unlockCard("D6C");
-		BaseMod.addCard(new FluorensentBeam());
-		UnlockTracker.unlockCard("FluorensentBeam");
+		//BaseMod.addCard(new FluorensentBeam());
+		//UnlockTracker.unlockCard("FluorensentBeam");
 		BaseMod.addCard(new _6A());
 		UnlockTracker.unlockCard("6A");
 		BaseMod.addCard(new UnstableBomb());
@@ -321,7 +322,7 @@ public class ThMod implements PostExhaustSubscriber,
 		BaseMod.addCard(new DarkSpark());
 		UnlockTracker.unlockCard("DarkSpark");
 		BaseMod.addCard(new DeepEcologicalBomb());
-		UnlockTracker.unlockCard("DeepEcologicalBomb");
+		UnlockTracker.unlockCard("DeepEcoloBomb");
 		BaseMod.addCard(new MeteonicShower());
 		UnlockTracker.unlockCard("MeteonicShower");
 		BaseMod.addCard(new GravityBeat());
@@ -338,6 +339,8 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("ChargeUpSpray");
 		BaseMod.addCard(new AFriendsGift());
 		UnlockTracker.unlockCard("AFriendsGift");
+		BaseMod.addCard(new FairyDestructionRay());
+		UnlockTracker.unlockCard("FairyDestructionRay");
 		//Rare:  7
 		BaseMod.addCard(new BlazingStar());
 		UnlockTracker.unlockCard("BlazingStar");
@@ -503,16 +506,22 @@ public class ThMod implements PostExhaustSubscriber,
 				"\u6bcf8\u5c42\u84c4\u529b\u4f1a\u4f7f\u4f60\u7684\u4e0b\u4e00\u6b21\u653b\u51fb\u4f24\u5bb3\u7ffb\u4e00\u500d\u3002");
 		BaseMod.addKeyword(new String[] {"\u589e\u5e45"},
 				"\u5f53\u4f60\u7684\u8d39\u7528\u8db3\u591f\u4f7f\u7528\u8fd9\u5f20\u724c\u66f4\u9ad8\u7ea7\u7684\u6548\u679c\u65f6\uff0c\u4f7f\u7528\u66f4\u9ad8\u7ea7\u7684\u6548\u679c\u3002");
+		BaseMod.addKeyword(new String[] {"\u6563\u706d"},
+				"\u82e5\u5176\u751f\u547d\u503c\u4f4e\u4e8e\u67d0\u4e00\u6c34\u5e73\u5219\u7acb\u5373\u6d88\u706d\u8be5\u751f\u7269\u3002");
 		BaseMod.addKeyword(new String[] {"amplify", "Amplify"},
 				"Pay extra energy for its effect when you have enough  [B] .");
 		BaseMod.addKeyword(new String[] {"Spark","spark"},
 				"Spark is an attack card cost 0 energy.");
 		BaseMod.addKeyword(new String[] {"Charge-up", "charge-up","chargeup","ChargeUp"},
 				"For every 8 stacks,double your damage.");
+		BaseMod.addKeyword(new String[] {"Diaspora","diaspora"},
+				"Instantly kill the creature if it's HP is lower than a certain level.");
 		BaseMod.addKeyword(new String[] {
 				"depends on the type of the card exhausted",
 				"Depends On The Type Of The Card Exhausted"
 				}, "Attack : Fear Potion ; NL Skill : Weak Potion ; NL Power : Poison Potion ; Status : Fire Potion ; Curse : Smoke Bomb .");
+		
+		
 		logger.info("Keywords setting finished.");
 	}
 

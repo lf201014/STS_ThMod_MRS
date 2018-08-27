@@ -29,9 +29,9 @@ public class MasterSpark
 	public static final String IMG_PATH = "img/cards/MasterSpark.png";
 	
 	private static final int COST = 1;
-	private static final int ATK_DMG = 10;
-	private static final int UPG_DMG = 4;
-	private static final int AMP_DMG = 6;
+	private static final int ATK_DMG = 9;
+	private static final int UPG_DMG = 3;
+	private static final int AMP_DMG = 7;
 	private static final int UPG_AMP = 2;
 	private static final int AMP = 1;
 	

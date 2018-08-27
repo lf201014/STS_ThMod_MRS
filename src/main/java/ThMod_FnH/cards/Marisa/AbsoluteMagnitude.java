@@ -16,27 +16,39 @@ public class AbsoluteMagnitude
 	extends CustomCard {
 	
 	public static final String ID = "AbsoluteMagnitude";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+	private static final CardStrings cardStrings = 
+			CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	private static final int COST = 2;
-	private static final int ATTACK_DMG = 3;
-	private static final int UPGRADE_PLUS_DMG = 1;
+	private static final float ATK_MULT = 2.50F;
+	private static final float ATK_MULT_UPG = 3.50F;
+	private float multipler;
 
 	public AbsoluteMagnitude() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE,
-				AbstractCard.CardTarget.ENEMY);
+		super(
+				ID,
+				NAME, 
+				IMG_PATH,
+				COST,
+				DESCRIPTION,
+				AbstractCard.CardType.ATTACK,
+				AbstractCardEnum.MARISA_COLOR, 
+				AbstractCard.CardRarity.RARE,
+				AbstractCard.CardTarget.ENEMY
+				);
 
-		this.magicNumber = this.baseMagicNumber = ATTACK_DMG;
 		this.damage = this.baseDamage = 0;
+		this.multipler = ATK_MULT;
 	}
 	
 	public void applyPowers(){
 		AbstractPlayer p = AbstractDungeon.player;
-		if (p.hasPower("ChargeUpPower"))
-			this.baseDamage = p.getPower("ChargeUpPower").amount*this.magicNumber;
+		if (p.hasPower("ChargeUpPower")) {
+			this.baseDamage = (int) (p.getPower("ChargeUpPower").amount*this.multipler);
+		}
 		super.applyPowers();
 	}
 
@@ -55,7 +67,9 @@ public class AbsoluteMagnitude
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(UPGRADE_PLUS_DMG);
+			this.multipler = ATK_MULT_UPG;
+			this.rawDescription = DESCRIPTION_UPG;
+			initializeDescription();
 		}
 	}
 }

@@ -12,8 +12,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 
-import ThMod_FnH.cards.special.Burn_MRS;
-
 public class MeteonicShowerAction extends AbstractGameAction{
 	private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
 	public static final String[] TEXT = uiStrings.TEXT;
@@ -43,7 +41,7 @@ public class MeteonicShowerAction extends AbstractGameAction{
 			int cnt = 0;
 			for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group){
 				cnt += 2;
-				if ((c instanceof Burn)||(c instanceof Burn_MRS)) {
+				if ((c instanceof Burn)) {
 					cnt++;
 				}
 				this.p.hand.moveToExhaustPile(c);

@@ -15,7 +15,7 @@ import basemod.abstracts.CustomCard;
 public class DeepEcologicalBomb 
 	extends CustomCard {
 	
-	public static final String ID = "DeepEcologicalBomb";
+	public static final String ID = "DeepEcoloBomb";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

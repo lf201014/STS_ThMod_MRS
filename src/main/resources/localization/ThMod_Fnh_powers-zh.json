@@ -231,6 +231,13 @@
       "WWWWWWWWWWW"
     ]
   },
+    "Diaspora": {
+    "NAME": "散灭",
+    "DESCRIPTIONS": [
+      "在其回合结束时，如果该生物的生命值低于 #b",
+      " 则会被立即杀死。"
+    ]
+  },
     "WWWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [

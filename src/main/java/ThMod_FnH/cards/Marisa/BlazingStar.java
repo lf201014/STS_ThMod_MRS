@@ -49,6 +49,7 @@ public class BlazingStar
 		this.isException = true;
 	}
 	
+	@Override
 	public void applyPowers(){
 		AbstractPlayer p = AbstractDungeon.player;
 		this.block = this.baseDamage;
@@ -58,6 +59,23 @@ public class BlazingStar
 			}
 		}
 		super.applyPowers();
+	}
+	
+	@Override
+	public void calculateDamageDisplay(AbstractMonster mo){
+		calculateCardDamage(mo);
+	}
+
+	@Override
+	public void calculateCardDamage(AbstractMonster mo){
+		AbstractPlayer p = AbstractDungeon.player;
+		this.block = this.baseDamage;
+		for (AbstractCard c:p.hand.group) {
+			if ((c instanceof Burn)) {
+				this.block += this.magicNumber;
+			}
+		}
+		super.calculateCardDamage(mo);
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -82,7 +100,7 @@ public class BlazingStar
 			upgradeName();
 			upgradeDamage(UPG_DMG);
 			upgradeMagicNumber(UPG_AMP);
-			this.block = this.baseBlock = this.damage;
+			this.block = this.baseBlock = this.baseDamage;
 		}
 	}
 }

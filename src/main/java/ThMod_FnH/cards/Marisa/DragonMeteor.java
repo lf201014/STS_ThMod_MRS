@@ -50,6 +50,17 @@ public class DragonMeteor
 		this.block = this.baseDamage + AbstractDungeon.player.exhaustPile.size();
 		super.applyPowers();
 	}
+	
+	@Override
+	public void calculateDamageDisplay(AbstractMonster mo){
+		calculateCardDamage(mo);
+	}
+
+	@Override
+	public void calculateCardDamage(AbstractMonster mo){
+		this.block = this.baseDamage + AbstractDungeon.player.exhaustPile.size();
+		super.calculateCardDamage(mo);
+	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		
@@ -82,7 +93,7 @@ public class DragonMeteor
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeDamage(UPG_DMG);
-			this.block = this.baseBlock = this.damage;
+			this.block = this.baseBlock = this.baseDamage;
 		}
 	}
 }

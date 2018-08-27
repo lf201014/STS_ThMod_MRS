@@ -152,7 +152,7 @@
 	},
 	"ChargingUp": {
 		"NAME": "魔炮准备",
-		"DESCRIPTION": "获得 !M! 层 蓄力 。 NL 增幅  [B]  :获得额外2层。",
+		"DESCRIPTION": "获得 !M! 层 蓄力 。 NL 消耗 。",
 		"UPGRADE_DESCRIPTION": "获得 !M! 层 蓄力 。 NL 增幅  [B]  :获得额外3层。"
 	},
 	"LuminesStrike": {
@@ -192,8 +192,8 @@
 	},
 	"ShootingEcho": {
 		"NAME": "流星共鸣",
-		"DESCRIPTION": " 消耗 一张卡，将一张此卡的复制加入手牌。 NL 造成 !D! 点伤害。 NL  消耗 。",
-		"UPGRADE_DESCRIPTION": " 消耗 一张卡，将一张此卡的复制加入手牌。 NL 造成 !D! 点伤害。 NL  消耗 。"
+		"DESCRIPTION": " 消耗 一张卡，将一张 流星共鸣 加入手牌。 NL 造成 !D! 点伤害。 NL  消耗 。",
+		"UPGRADE_DESCRIPTION": " 消耗 一张卡，将一张 升级 过的 流星共鸣 加入手牌。 NL 造成 !D! 点伤害。 NL  消耗 。"
 	},
 	"EnergyFlow": {
 		"NAME": "能量涌动",
@@ -217,8 +217,8 @@
 	},
 	"AbsoluteMagnitude": {
 		"NAME": "绝对星等",
-		"DESCRIPTION": "造成 !D! 点伤害( !M! × 你的 蓄力 层数)",
-		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+		"DESCRIPTION": "造成 !D! 点伤害( 2.5 × 你的 蓄力 层数)。",
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害( 3.5 × 你的 蓄力 层数)。"
 	},
 	"DragonMeteor": {
 		"NAME": "龙陨星",
@@ -342,7 +342,7 @@
 	},
 	"StarBarrage": {
 		"NAME": "魔法星弹",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果你的抽牌堆有15张或以上的卡，施加一层 虚弱 。 NL 如果你的弃牌堆有15张或以上的卡，施加一层 易伤 。",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果你的抽牌堆有 !M! 张或以上的卡，施加一层 虚弱 。 NL 如果你的弃牌堆有 !M! 张或以上的卡，施加一层 易伤 。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"AFriendsGift": {
@@ -379,6 +379,11 @@
 		"NAME": "白矮星",
 		"DESCRIPTION": "只有在你手牌数小于等于4时才能被打出。 NL 造成 !D! 伤害 (1.5 × 你的弃卡堆的卡数)。然后向你手中加入2张 灼伤 。",
 		"UPGRADE_DESCRIPTION": "只有在你手牌数小于等于4时才能被打出。 NL 造成 !D! 伤害 (2 × 你的弃卡堆的卡数)。然后向你手中加入2张 灼伤 。"
+	},
+	"FairyDestructionRay": {
+		"NAME": "妖精灭尽光",
+		"DESCRIPTION": "对所有敌人造成 !D! 伤害并施加 !M! 层 散灭 。",
+		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"WWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWW",

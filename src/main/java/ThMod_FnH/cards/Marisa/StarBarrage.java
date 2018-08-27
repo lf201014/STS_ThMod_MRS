@@ -27,6 +27,8 @@ public class StarBarrage
 	private static final int COST = 0;
 	private static final int ATTACK_DMG = 4;
 	private static final int UPGRADE_PLUS_DMG = 2;
+	private static final int PILE_NUM = 15;
+	private static final int UP_PILE_NUM = -3;
 
 	public StarBarrage() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -34,17 +36,21 @@ public class StarBarrage
 				AbstractCard.CardTarget.ENEMY);
 
 		this.baseDamage = ATTACK_DMG;
+		this.magicNumber = this.baseMagicNumber = PILE_NUM;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(
 				new DamageAction(m,new DamageInfo(p, this.damage, this.damageTypeForTurn),AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-		if (p.drawPile.size() >= 15)
+		if (p.drawPile.size() >= this.magicNumber) {
 			AbstractDungeon.actionManager.addToBottom(
 					new	ApplyPowerAction(m, p, new WeakPower(m, 1, false), 1));
-		if (p.discardPile.size() >= 15)
+		}
+			
+		if (p.discardPile.size() >= this.magicNumber) {
 			AbstractDungeon.actionManager.addToBottom(
 					new	ApplyPowerAction(m, p, new VulnerablePower(m, 1, false), 1));
+		}
 	}
 
 	public AbstractCard makeCopy() {
@@ -55,6 +61,7 @@ public class StarBarrage
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeDamage(UPGRADE_PLUS_DMG);
+			upgradeMagicNumber(UP_PILE_NUM);
 		}
 	}
 }

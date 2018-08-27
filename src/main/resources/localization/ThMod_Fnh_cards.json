@@ -148,7 +148,7 @@
 	},
 	"ChargingUp": {
 		"NAME": "Charging Up",
-		"DESCRIPTION": "Gain !M! Charge-up. NL Amplify  [B]  :Gain extra 2 stacks.",
+		"DESCRIPTION": "Gain !M! Charge-up. NL Exhaust .",
 		"UPGRADE_DESCRIPTION": "Gain !M! Charge-up. NL Amplify  [B]  :Gain extra 3 stacks."
 	},
 	"LuminesStrike": {
@@ -188,8 +188,8 @@
 	},
 	"ShootingEcho": {
 		"NAME": "Shooting Echo",
-		"DESCRIPTION": " Exhaust  a card,add a copy of this card to your hand. NL deal !D! damage. NL Exhaust .",
-		"UPGRADE_DESCRIPTION": "Exhaust  a card,add a copy of this card to your hand. NL deal !D! damage. NL Exhaust ."
+		"DESCRIPTION": " Exhaust  a card,add a Shooting Echo card to your hand. NL deal !D! damage. NL Exhaust .",
+		"UPGRADE_DESCRIPTION": "Exhaust  a card,add an Upgraded Shooting Echo to your hand. NL deal !D! damage. NL Exhaust ."
 	},
 	"EnergyFlow": {
 		"NAME": "Energy Flow",
@@ -213,8 +213,8 @@
 	},
 	"AbsoluteMagnitude": {
 		"NAME": "Absolute Magnitude",
-		"DESCRIPTION": "Deal !D! damage(!M! × your Charge-up stacks)." ,
-		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+		"DESCRIPTION": "Deal !D! damage(2.5 × your Charge-up stacks)." ,
+		"UPGRADE_DESCRIPTION": "Deal !D! damage(3.5 × your Charge-up stacks)."
 	},
 	"DragonMeteor": {
 		"NAME": "Dragon Meteor",
@@ -343,7 +343,7 @@
 	},
 	"StarBarrage": {
 		"NAME": "Star Barrage",
-		"DESCRIPTION": "Deal !D! damage. NL If your deck has 15 or more cards,apply 1 Weak. NL If your discard pile has 15 or more cards ,apply 1 Vulnerable .",
+		"DESCRIPTION": "Deal !D! damage. NL If your deck has !M! or more cards,apply 1 Weak. NL If your discard pile has !M! or more cards ,apply 1 Vulnerable .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"AFriendsGift": {
@@ -381,9 +381,9 @@
 		"DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. NL Deal !D! damage (1.5 × size of your discard pile).Add 2 Burn to your hand.",
 		"UPGRADE_DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. NL Deal !D! damage (2 × size of your discard pile).Add 2 Burn to your hand."
 	},
-	"WWWWWWWWWWWW": {
-		"NAME": "WWWWWWWWWWW",
-		"DESCRIPTION": "WWWWWWWWWWW",
+	"FairyDestructionRay": {
+		"NAME": "Fairy Destruction Ray",
+		"DESCRIPTION": "Deal !D! damage and apply !M! Diaspora to all enemy.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"WWWWWWWWWWWWW": {

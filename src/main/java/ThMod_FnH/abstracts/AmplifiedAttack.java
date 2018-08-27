@@ -3,7 +3,6 @@ package ThMod_FnH.abstracts;
 import java.util.ArrayList;
 
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -18,18 +17,29 @@ public abstract class AmplifiedAttack extends CustomCard  {
 	public int[] multiAmpDamage;
 	public boolean isException = false;
 
-	public AmplifiedAttack(String id, String name, String img, int cost, String rawDescription, CardType type,
-			CardColor color, CardRarity rarity, CardTarget target) {
-		super(id, name, img, cost, rawDescription, type, color, rarity, target);
-		// TODO Auto-generated constructor stub
+	public AmplifiedAttack(
+			String id, 
+			String name, 
+			String img, 
+			int cost,
+			String rawDescription, 
+			CardType type,
+			CardColor color,
+			CardRarity rarity,
+			CardTarget target
+			) {
+		super(
+				id,
+				name, 
+				img, 
+				cost, 
+				rawDescription,
+				type, 
+				color, 
+				rarity, 
+				target
+				);
 	}
-
-
-	public abstract void upgrade();
-
-	public abstract void use(AbstractPlayer arg0, AbstractMonster arg1);
-
-	public abstract AbstractCard makeCopy();
 
 	@Override
 	public void applyPowers(){
