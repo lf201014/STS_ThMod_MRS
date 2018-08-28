@@ -23,7 +23,7 @@ public class DragonMeteor
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "img/cards/Strike.png";
+	public static final String IMG_PATH = "img/cards/DragonMeteor.png";
 	private static final int COST = 2;
 	private static final int ATK_DMG = 14;
 	private static final int UPG_DMG = 6;
@@ -94,6 +94,7 @@ public class DragonMeteor
 			upgradeName();
 			upgradeDamage(UPG_DMG);
 			this.block = this.baseBlock = this.baseDamage;
+			this.isBlockModified = true;
 		}
 	}
 }

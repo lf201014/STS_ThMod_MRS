@@ -3,6 +3,8 @@ package ThMod_FnH.powers.Marisa;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -34,8 +36,22 @@ public class DiasporaPower extends AbstractPower{
 			return;
 		}
 		if (this.owner.currentHealth <= this.amount) {
+			if (this.owner.hasPower("Intangible")) {
+				AbstractDungeon.actionManager.addToBottom(
+						new RemoveSpecificPowerAction(this.owner, this.owner, "Intangible")
+						);
+				
+			}
+			if (this.owner.hasPower("IntangiblePlayer")) {
+				AbstractDungeon.actionManager.addToBottom(
+						new RemoveSpecificPowerAction(this.owner, this.owner, "IntangiblePlayer")
+						);
+				
+			}
 			AbstractMonster m = (AbstractMonster) this.owner;
-			m.die();
+			m.damage(
+					new DamageInfo(owner,Integer.MAX_VALUE, DamageType.HP_LOSS)
+					);;
 		} else {
 			if (this.amount == 0) {
 				AbstractDungeon.actionManager.addToBottom(

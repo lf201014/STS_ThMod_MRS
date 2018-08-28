@@ -37,10 +37,7 @@ public class OpenUniverseAction
 	    	ThMod.logger.info("OpenUniverse : generationg : "+card.cardID);
 	        if (this.upgraded)
 	        	card.upgrade();
-			
-	        
-			
-	        
+			        
 	    }
 	    if (this.amplified) {
 	        }

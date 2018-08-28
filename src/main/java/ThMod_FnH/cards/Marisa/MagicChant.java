@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import ThMod_FnH.action.RetainNBlockAction;
+import ThMod_FnH.action.MagicChantAction;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
@@ -36,7 +36,7 @@ public class MagicChant extends CustomCard {
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(
-				new RetainNBlockAction(p, this.magicNumber)
+				new MagicChantAction(p, this.magicNumber)
 				);
 	}
 

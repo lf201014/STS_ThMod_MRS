@@ -24,7 +24,7 @@
 		"DESCRIPTION": "造成 !D! 点伤害,抽 !M! 张卡。 NL 在这回合，名字中有‘火花’的卡使用时会给与你额外1层蓄力。 NL 将一张 灼伤 加入手牌。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
 	},
-	"DeepEcologicalBomb": {
+	"DeepEcoloBomb": {
 		"NAME": "重生态炸弹",
 		"DESCRIPTION": "对随机敌人造成 !D! 点伤害，使其本回合内攻击力下降3点. NL 增幅  [B] :再发动一次."
 	}, 
@@ -282,7 +282,7 @@
 	},
 	"MagicChant": {
 		"NAME": "咏唱",
-		"DESCRIPTION": "选择 !M! 张卡 保留 到下一回合。所选卡牌在下回合 费用 减少1 。",
+		"DESCRIPTION": "选择 !M! 张卡 升级 并 保留 到下一回合。",
 		"UPGRADE_DESCRIPTION": " 保留 。选择 !M! 张卡 保留 到下一回合。所选卡牌在下回合 费用 减少1 。"
 	},
 	"UnstableBomb": {

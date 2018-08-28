@@ -53,7 +53,7 @@ public class SatelIllusPower extends AbstractPower{
 		checkDrawPile();
 	}
 	
-	public void atStartOfTurn() {
+	public void atStartOfTurnPostDraw() {
 		ThMod.logger.info("SatelIllusPower : checkDrawPile : atStartOfTurn ");
 		checkDrawPile();
 	}

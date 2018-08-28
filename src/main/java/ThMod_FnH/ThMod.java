@@ -50,7 +50,6 @@ import ThMod_FnH.cards.Marisa.EscapeVelocity;
 import ThMod_FnH.cards.Marisa.EventHorizon;
 import ThMod_FnH.cards.Marisa.FairyDestructionRay;
 import ThMod_FnH.cards.Marisa.FinalSpark;
-import ThMod_FnH.cards.Marisa.FluorensentBeam;
 import ThMod_FnH.cards.Marisa.FungusSplash;
 import ThMod_FnH.cards.Marisa.GalacticHalo;
 import ThMod_FnH.cards.Marisa.GasGiant;
@@ -176,7 +175,7 @@ public class ThMod implements PostExhaustSubscriber,
 				(card.cardID == "Strike_MRS")||
 				(card.cardID == "FinalSpark")||
 				(card.cardID == "DoubleSpark")||
-				(card.cardID == "MuscleSpark")||
+				(card.cardID == "RefractionSpark")||
 				(card.cardID == "MachineGunSpark")||
 				(card.cardID == "MasterSpark")
 				) {

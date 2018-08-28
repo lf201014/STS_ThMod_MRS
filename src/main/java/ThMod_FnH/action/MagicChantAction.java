@@ -1,7 +1,6 @@
 package ThMod_FnH.action;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -10,13 +9,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 
 import ThMod_FnH.ThMod;
-import ThMod_FnH.powers.Marisa.MagicChantPower;
 
-public class RetainNBlockAction extends AbstractGameAction{
+public class MagicChantAction extends AbstractGameAction{
 	private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("RetainCardsAction");
 	public static final String[] TEXT = uiStrings.TEXT;
   
-	public RetainNBlockAction(AbstractCreature source, int amount){
+	public MagicChantAction(AbstractCreature source, int amount){
 		setValues(AbstractDungeon.player, source, amount);
 		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
 	}
@@ -35,9 +33,13 @@ public class RetainNBlockAction extends AbstractGameAction{
 				for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group){
 					ThMod.logger.info("RetainNBlockAction : Retaining :"+c.name);
 					
+					if (c.canUpgrade()) {
+						c.upgrade();
+					}
 					if (!c.isEthereal) {
 						c.retain = true;
 					}
+					/*
 					ThMod.logger.info("RetainNBlockAction : Applying power for :"+c.name);
 					
 					AbstractDungeon.actionManager.addToBottom(
@@ -46,6 +48,7 @@ public class RetainNBlockAction extends AbstractGameAction{
 									new MagicChantPower(this.source,c)
 									)
 							);
+							*/
 					AbstractDungeon.player.hand.addToTop(c);
 				}
 			}

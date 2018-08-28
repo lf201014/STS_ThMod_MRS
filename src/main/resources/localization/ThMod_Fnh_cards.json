@@ -24,7 +24,7 @@
 		"DESCRIPTION": "Deal !D! damage,draw !M! cards. NL Each 'Spark' card you play this turn will grant you 1 extra Charge-up . NL Add a Burn to your hand. ",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
 	},
-	"DeepEcologicalBomb": {
+	"DeepEcoloBomb": {
 		"NAME": "Deep Ecological Bomb",
 		"DESCRIPTION": "Deal !D! damage to a random enemy,then reduce its Strength by 3 for a turn. NL Amplify  [B] :do it again."
 	},
@@ -283,7 +283,7 @@
 	},
 	"MagicChant": {
 		"NAME": "Magic Chant",
-		"DESCRIPTION": "Choose !M! to retain this turn,reduce the cost of chosen cards by 1 next turn.",
+		"DESCRIPTION": "Choose !M! cards to upgrade and retain this turn.",
 		"UPGRADE_DESCRIPTION": " Retain . Choose !M! to retain this turn,reduce the cost of chosen cards by 1 next turn."
 	},
 	"UnstableBomb": {
@@ -348,7 +348,7 @@
 	},
 	"AFriendsGift": {
 		"NAME": "A Friend's Gift",
-		"DESCRIPTION": " Retain . NL Deal !D! damage.Increase damage by 2 when your turn starts. Exhaust . NL Amplify  [B]  :Deal !B! damage instead, don't Exhaust .",
+		"DESCRIPTION": " Retain .Deal !D! damage.Increase damage by 2 when your turn starts. Exhaust . NL Amplify  [B]  :Deal !B! damage instead, don't Exhaust .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	}, 
 	"BinaryStars": {

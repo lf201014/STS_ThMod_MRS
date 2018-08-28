@@ -101,6 +101,7 @@ public class BlazingStar
 			upgradeDamage(UPG_DMG);
 			upgradeMagicNumber(UPG_AMP);
 			this.block = this.baseBlock = this.baseDamage;
+			this.isBlockModified = true;
 		}
 	}
 }

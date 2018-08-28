@@ -29,7 +29,14 @@ public class EnergyFlowPower
 	
 	public void atEndOfTurn(boolean isPlayer) {
 		flash();
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new ChargeUpPower(owner, this.amount), this.amount));
+		AbstractDungeon.actionManager.addToBottom(
+				new ApplyPowerAction(
+						owner,
+						owner,
+						new ChargeUpPower(owner, this.amount),
+						this.amount
+						)
+				);
 	}
   
 public void updateDescription(){
