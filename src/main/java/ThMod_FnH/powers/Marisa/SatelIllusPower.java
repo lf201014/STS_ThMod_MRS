@@ -23,8 +23,9 @@ public class SatelIllusPower extends AbstractPower{
 		int temp = AbstractDungeon.player.drawPile.size();
 		ThMod.logger.info(
 				"SatelIllusPower : checkDrawPile :"
-				+ " counter :" + counter
-				+ " drawPile size" + temp
+				+ " counter : " + counter
+				+ " ; drawPile size " + temp
+				+ " ; grant energy :" + (temp > counter)
 				);
 		if (temp > counter) {
 			this.flash();
@@ -47,6 +48,28 @@ public class SatelIllusPower extends AbstractPower{
 		this.img = new Texture("img/powers/absorb.png");
 		counter = AbstractDungeon.player.drawPile.size();
 	}
+	
+	@Override
+	public void onDrawOrDiscard() {
+		ThMod.logger.info("SatelIllusPower : onDrawOrDiscard : checkDrawPile");
+		checkDrawPile();
+	}
+	
+	@Override
+	public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+		ThMod.logger.info("SatelIllusPower : onApplyPower : checkDrawPile");
+		checkDrawPile();
+	}
+	@Override
+	public void onInitialApplication() {
+		ThMod.logger.info("SatelIllusPower : onInitialApplication : checkDrawPile");
+		checkDrawPile();
+	}
+	
+	public void atEndOfRound() {
+		ThMod.logger.info("SatelIllusPower : checkDrawPile : atEndOfRound ");
+		checkDrawPile();
+	}
 
 	public void onAfterUseCard(AbstractCard card, UseCardAction action) {
 		ThMod.logger.info("SatelIllusPower : checkDrawPile : onAfterUseCard : " + card.cardID);
@@ -54,7 +77,7 @@ public class SatelIllusPower extends AbstractPower{
 	}
 	
 	public void atStartOfTurnPostDraw() {
-		ThMod.logger.info("SatelIllusPower : checkDrawPile : atStartOfTurn ");
+		ThMod.logger.info("SatelIllusPower : checkDrawPile : atStartOfTurnPostDraw ");
 		checkDrawPile();
 	}
  
