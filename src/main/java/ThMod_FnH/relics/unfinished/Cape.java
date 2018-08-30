@@ -1,4 +1,4 @@
-package ThMod_FnH.relics;
+package ThMod_FnH.relics.unfinished;
 
 import java.util.HashMap;
 import java.util.Map;

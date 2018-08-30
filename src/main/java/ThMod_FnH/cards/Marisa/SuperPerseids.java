@@ -43,6 +43,7 @@ public class SuperPerseids extends CustomCard {
 		this.baseDamage = DMG;
 		this.block = this.baseBlock = BLC;
 		this.damageType = DamageType.THORNS;
+		this.damageTypeForTurn = DamageType.THORNS;
 	}
 	
 	@Override

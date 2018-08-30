@@ -40,7 +40,6 @@ public class FinalSpark
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		this.freeToPlayOnce = true;
 		
 	    AbstractDungeon.actionManager.addToBottom(
 	    		new SFXAction("ATTACK_HEAVY")
@@ -64,12 +63,14 @@ public class FinalSpark
 		AbstractDungeon.actionManager.addToBottom(
 				new SparkCostAction()
 				);
-		if (this.costForTurn > 0) {
-			AbstractDungeon.actionManager.addToBottom(
-				new GainEnergyAction(-this.costForTurn)
-				);
+		if (!this.freeToPlayOnce) {
+			if (this.costForTurn > 0) {
+				this.freeToPlayOnce = true;
+				AbstractDungeon.actionManager.addToBottom(
+						new GainEnergyAction(-this.costForTurn)
+						);
+			}
 		}
-		
 		this.upgradeBaseCost(COST);
 		this.setCostForTurn(COST);
 		this.isCostModified = false;

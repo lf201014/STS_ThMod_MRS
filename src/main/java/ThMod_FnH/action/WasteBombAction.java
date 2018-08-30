@@ -16,14 +16,16 @@ public class WasteBombAction
 	extends AbstractGameAction{
 	private int damage;
 	private int num;
+	private int stacks;
 	AbstractCreature target;
   
-	public WasteBombAction(AbstractCreature target,int dmg,int numTimes){
+	public WasteBombAction(AbstractCreature target,int dmg,int numTimes,int stacks){
 		this.actionType = AbstractGameAction.ActionType.DAMAGE;
 		this.duration = Settings.ACTION_DUR_FAST;
 		this.damage = dmg;
 		this.target = target;
 		this.num = numTimes;
+		this.stacks = stacks;
 	}
   
 	public void update(){
@@ -49,7 +51,7 @@ public class WasteBombAction
 								this.target,
 								AbstractDungeon.player, 
 								new TempStrengthLoss(this.target, 3),
-								3
+								this.stacks
 								)
 						);
 			}
@@ -60,7 +62,8 @@ public class WasteBombAction
 						new WasteBombAction(
 								AbstractDungeon.getMonsters().getRandomMonster(true),
 								this.damage, 
-								this.num
+								this.num,
+								this.stacks
 								)
 						);
 			}

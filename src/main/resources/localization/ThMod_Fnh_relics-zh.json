@@ -72,6 +72,12 @@
       "还能使用 #b",
       " 次。 NL 进入商店时，你购买的第一件货物免费。"
     ]
+  }, "SproutingBranch": {
+    "NAME": "发芽的树枝",
+    "FLAVOR": "枯枝在魔理沙手中焕发出了生命，真是富有诗意。",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，给与你 #b1 层 #y生命恩赐 效果。"
+    ]
   }, "WWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWW",
     "FLAVOR": "WWWWWWWWWWWWWWW",

@@ -1,4 +1,4 @@
-package ThMod_FnH.cards.Marisa;
+package ThMod_FnH.cards.deprecated;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;

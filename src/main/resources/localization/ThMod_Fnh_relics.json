@@ -72,6 +72,12 @@
       " #b",
       " use(s) left. NL You can take the first merchandiase in a shop for free."
     ]
+  }, "SproutingBranch": {
+    "NAME": "Sprouting Branch",
+    "FLAVOR": "The dead branch just come to life in Marisa's hand,how poetic.",
+    "DESCRIPTIONS": [
+      "At the Start of Turn,grant you #b1 stack #yGift #yof #ylife , which will heal you when your turn ends."
+    ]
   }, "WWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWW",
     "FLAVOR": "WWWWWWWWWWWWWWW",

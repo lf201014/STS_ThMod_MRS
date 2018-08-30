@@ -20,10 +20,11 @@ public class DeepEcologicalBomb
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "img/cards/DeepEcoBomb.png";
-	
+	private static final int STC = 2;
+	private static final int UPG_STC = 1;
 	private static final int COST = 1;
 	private static final int ATK_DMG = 7;
-	private static final int UPG_DMG = 3;
+	private static final int UPG_DMG = 2;
 	private static final int AMP = 1;
 	
 	public DeepEcologicalBomb() {
@@ -32,7 +33,7 @@ public class DeepEcologicalBomb
 				AbstractCard.CardTarget.ALL_ENEMY);
 
 		this.baseDamage = ATK_DMG;
-		
+		this.magicNumber = this.baseMagicNumber = STC;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -44,7 +45,9 @@ public class DeepEcologicalBomb
 	    AbstractDungeon.actionManager.addToBottom(
 					new WasteBombAction(
 							AbstractDungeon.getMonsters().getRandomMonster(true),
-							this.damage,num
+							this.damage,
+							num,
+							this.magicNumber
 							)
 					);
 	}
@@ -57,6 +60,7 @@ public class DeepEcologicalBomb
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeDamage(UPG_DMG);
+			upgradeMagicNumber(UPG_STC);
 		}
 	}
 }

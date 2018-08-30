@@ -33,7 +33,7 @@ public class StarDustReverie extends CustomCard {
 				AbstractCard.CardRarity.RARE,
 				AbstractCard.CardTarget.SELF
 				);
-		this.exhaust = true;
+		//this.exhaust = true;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -50,7 +50,7 @@ public class StarDustReverie extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.exhaust = false;
+			//this.exhaust = false;
 			this.rawDescription = DESCRIPTION_UPG;
 			initializeDescription();
 		}

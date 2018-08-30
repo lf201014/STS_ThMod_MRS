@@ -1,4 +1,4 @@
-package ThMod_FnH.relics;
+package ThMod_FnH.relics.deprecated;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;

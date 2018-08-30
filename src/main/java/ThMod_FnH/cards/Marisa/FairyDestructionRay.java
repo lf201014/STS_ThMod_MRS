@@ -2,7 +2,6 @@ package ThMod_FnH.cards.Marisa;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,8 +10,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import ThMod_FnH.action.FairyDestrucCullingAction;
 import ThMod_FnH.patches.AbstractCardEnum;
-import ThMod_FnH.powers.Marisa.DiasporaPower;
 import basemod.abstracts.CustomCard;
 
 public class FairyDestructionRay extends CustomCard {
@@ -54,7 +53,12 @@ public class FairyDestructionRay extends CustomCard {
 					)
 			);
 		
-		if (!AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead())
+		if (!AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
+			AbstractDungeon.actionManager.addToBottom(
+					new FairyDestrucCullingAction(this.magicNumber)
+					);
+		}
+		/*
 			for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
 				AbstractDungeon.actionManager.addToBottom(
 						new ApplyPowerAction(
@@ -67,6 +71,7 @@ public class FairyDestructionRay extends CustomCard {
 								)
 						);
 		}
+		*/
 	}
 
 	public AbstractCard makeCopy() {

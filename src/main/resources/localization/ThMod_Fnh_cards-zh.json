@@ -26,7 +26,7 @@
 	},
 	"DeepEcoloBomb": {
 		"NAME": "重生态炸弹",
-		"DESCRIPTION": "对随机敌人造成 !D! 点伤害，使其本回合内攻击力下降3点. NL 增幅  [B] :再发动一次."
+		"DESCRIPTION": "对随机敌人造成 !D! 点伤害，使其本回合内攻击力下降 !M! 点. NL 增幅  [B] :再发动一次."
 	}, 
 	"DoubleSpark": {
 		"NAME": "双重火花",
@@ -107,8 +107,8 @@
 	},
 	"SatelliteIllusion": {
 		"NAME": "卫星幻觉",
-		"DESCRIPTION": "当你抽卡堆里的卡牌数量增加时，获得 [B] 。",
-		"UPGRADE_DESCRIPTION": " 固有 。 NL 当你抽卡堆里的卡牌数量增加时，获得 [B] 。"
+		"DESCRIPTION": "在你的回合内，当你抽卡堆里的卡牌数量增加时，获得 [B] 。",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 在你的回合内，当你抽卡堆里的卡牌数量增加时，获得 [B] 。"
 	},
 	"ShootTheMoon": {
 		"NAME": "射月",
@@ -122,7 +122,7 @@
 	},
 	"UltraShortWave": {
 		"NAME": "极超短波",
-		"DESCRIPTION": "获得 !B! 能量与 !M! 层 蓄力 。使你本局中的所有 极超短波 能量与 蓄力 获得量+1。",
+		"DESCRIPTION": "获得 !B! 能量与 !M! 层 蓄力 。使这张卡在这场战斗中 能量与 蓄力 获得量+1。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MillisecondPulsars": {
@@ -172,8 +172,8 @@
 	},
 	"MaximisePower": {
 		"NAME": "火力全开！",
-		"DESCRIPTION": "将你的 蓄力 层数转化为能量,抽  !M!  张牌。本回合内，使你攻击力翻倍。 消耗 。",
-		"UPGRADE_DESCRIPTION": "Convert your Charge-up stacks into energy,you no longer gain Charge-up. NL Draw 2 less cards each turn.add 1 cost to all your attack cards. NL Double your damage."
+		"DESCRIPTION": "将你的 蓄力 层数转化为能量。使你本回合内的伤害翻倍。 消耗 。",
+		"UPGRADE_DESCRIPTION": "将你的 蓄力 层数转化为能量。使你本回合内的伤害翻倍。"
 	},
 	"StarlightTyphoon": {
 		"NAME": "星光台风",
@@ -382,9 +382,14 @@
 	},
 	"FairyDestructionRay": {
 		"NAME": "妖精灭尽光",
-		"DESCRIPTION": "对所有敌人造成 !D! 伤害并施加 !M! 层 散灭 。",
+		"DESCRIPTION": "对所有敌人造成 !D! 伤害，然后立即消灭生命值低于 !M! 的敌人。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
+  "Orbital": {
+    "NAME": "星轨",
+    "DESCRIPTION": " 不能被打出 。 当你抽到这张卡时，再抽 !M! 张卡。 NL 当这张卡被 消耗 时，选择消耗堆一张卡加入弃牌堆。",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
 	"WWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWW",

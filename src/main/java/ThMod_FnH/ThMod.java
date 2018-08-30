@@ -34,7 +34,6 @@ import ThMod_FnH.cards.Marisa.BlazingStar;
 import ThMod_FnH.cards.Marisa.CasketOfStar;
 import ThMod_FnH.cards.Marisa.ChargeUpSpray;
 import ThMod_FnH.cards.Marisa.ChargingUp;
-import ThMod_FnH.cards.Marisa.CircumpolarStar;
 import ThMod_FnH.cards.Marisa.CollectingQuirk;
 import ThMod_FnH.cards.Marisa.D6C;
 import ThMod_FnH.cards.Marisa.DarkMatter;
@@ -74,6 +73,7 @@ import ThMod_FnH.cards.Marisa.NonDirectionalLaser;
 import ThMod_FnH.cards.Marisa.Occultation;
 import ThMod_FnH.cards.Marisa.OortCloud;
 import ThMod_FnH.cards.Marisa.OpenUniverse;
+import ThMod_FnH.cards.Marisa.Orbital;
 import ThMod_FnH.cards.Marisa.OrrerysSun;
 import ThMod_FnH.cards.Marisa.PolarisUnique;
 import ThMod_FnH.cards.Marisa.PowerUp;
@@ -117,6 +117,7 @@ import ThMod_FnH.relics.MiniHakkero;
 import ThMod_FnH.relics.RampagingMagicTools;
 import ThMod_FnH.relics.ShroomBag;
 import ThMod_FnH.relics.SimpleLauncher;
+import ThMod_FnH.relics.SproutingBranch;
 import basemod.BaseMod;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditCharactersSubscriber;
@@ -273,6 +274,7 @@ public class ThMod implements PostExhaustSubscriber,
 		BaseMod.addRelicToCustomPool(new SimpleLauncher(), AbstractCardEnum.MARISA_COLOR);
 		BaseMod.addRelicToCustomPool(new HandmadeGrimoire(), AbstractCardEnum.MARISA_COLOR);
 		BaseMod.addRelicToCustomPool(new ShroomBag(), AbstractCardEnum.MARISA_COLOR);
+		BaseMod.addRelicToCustomPool(new SproutingBranch(), AbstractCardEnum.MARISA_COLOR);
 		//BaseMod.addRelicToCustomPool(new Cape(), AbstractCardEnum.MARISA_COLOR);
   	
 		logger.info("Relics editting finished.");
@@ -385,8 +387,8 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("BlazeAway");
 		BaseMod.addCard(new ChargingUp());
 		UnlockTracker.unlockCard("ChargingUp");
-		BaseMod.addCard(new CircumpolarStar());
-		UnlockTracker.unlockCard("CircumpolarStar");
+		//BaseMod.addCard(new CircumpolarStar());
+		//UnlockTracker.unlockCard("CircumpolarStar");
 		BaseMod.addCard(new DarkMatter());
 		UnlockTracker.unlockCard("DarkMatter");
 		BaseMod.addCard(new MagicChant());
@@ -405,6 +407,8 @@ public class ThMod implements PostExhaustSubscriber,
 		UnlockTracker.unlockCard("SuperPerseids");
 		BaseMod.addCard(new PulseMagic());
 		UnlockTracker.unlockCard("PulseMagic");
+		BaseMod.addCard(new Orbital());
+		UnlockTracker.unlockCard("Orbital");
 		//Rare : 7
 		BaseMod.addCard(new BigCrunch());
 		UnlockTracker.unlockCard("BigCrunch");

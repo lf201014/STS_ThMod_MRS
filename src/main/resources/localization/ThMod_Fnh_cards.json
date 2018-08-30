@@ -26,7 +26,7 @@
 	},
 	"DeepEcoloBomb": {
 		"NAME": "Deep Ecological Bomb",
-		"DESCRIPTION": "Deal !D! damage to a random enemy,then reduce its Strength by 3 for a turn. NL Amplify  [B] :do it again."
+		"DESCRIPTION": "Deal !D! damage to a random enemy,then reduce its Strength by !M! for a turn. NL Amplify  [B] :do it again."
 	},
 	"DoubleSpark": {
 		"NAME": "Double Spark",
@@ -103,8 +103,8 @@
 	},
 	"SatelliteIllusion": {
 		"NAME": "Satellite Illusion",
-		"DESCRIPTION": "When the number of cards in your draw pile increases, gain  [B]  .",
-		"UPGRADE_DESCRIPTION": " Innate . NL When the number of cards in your draw pile increases, gain  [B]  ."
+		"DESCRIPTION": "During your turn,when the number of cards in your draw pile increases, gain  [B]  .",
+		"UPGRADE_DESCRIPTION": " Innate . During your turn,when the number of cards in your draw pile increases, gain  [B]  ."
 	},
 	"ShootTheMoon": {
 		"NAME": "Shoot The Moon",
@@ -118,7 +118,7 @@
 	},
 	"UltraShortWave": {
 		"NAME": "Ultimate Shortwave",
-		"DESCRIPTION": "Gain !B!  [B]  and !M! Charge-up , increase the energy and Charge-up gain of all Ultimate Shortwave by 1 this battle.",
+		"DESCRIPTION": "Gain !B!  [B]  and !M! Charge-up , increase the energy and Charge-up gain of this card by 1 this battle.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MillisecondPulsars": {
@@ -168,8 +168,8 @@
 	},
 	"MaximisePower": {
 		"NAME": "Max Power",
-		"DESCRIPTION": "Convert your Charge-up stacks into energy. NL Draw !M! cards. NL Double your damage this turn. NL Exhaust .",
-		"UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWW"
+		"DESCRIPTION": "Convert your Charge-up stacks into energy. NL Double your damage this turn. NL Exhaust .",
+		"UPGRADE_DESCRIPTION": "Convert your Charge-up stacks into energy. NL Double your damage this turn."
 	},
 	"StarlightTyphoon": {
 		"NAME": "Starlight Typhoon",
@@ -383,12 +383,12 @@
 	},
 	"FairyDestructionRay": {
 		"NAME": "Fairy Destruction Ray",
-		"DESCRIPTION": "Deal !D! damage and apply !M! Diaspora to all enemy.",
+		"DESCRIPTION": "Deal !D! damage to all enemies,then instantly kill those with no more than !M! HP.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
-	"WWWWWWWWWWWWW": {
-		"NAME": "WWWWWWWWWWW",
-		"DESCRIPTION": "WWWWWWWWWWW",
+	"Orbital": {
+		"NAME": "Orbital",
+		"DESCRIPTION": " Unplayable . when you draw this card,draw !M! more card . NL If this card is Exhausted,add a card from your exhaust pile to your discard pile.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"WWWWWWWWWWWWWW": {

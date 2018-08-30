@@ -1,4 +1,4 @@
-package ThMod_FnH.powers.Marisa;
+package ThMod_FnH.powers.deprecated;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;

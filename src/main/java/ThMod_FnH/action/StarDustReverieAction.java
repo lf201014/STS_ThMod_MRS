@@ -44,7 +44,7 @@ public class StarDustReverieAction
 
 		for (int i=0 ; i <= cnt ; i++ ) {
 
-			AbstractCard c = AbstractDungeon.returnTrulyRandomCard().makeStatEquivalentCopy();
+			AbstractCard c = AbstractDungeon.returnTrulyRandomCard();
 	        	
 			ThMod.logger.info("StarDustReverieAction : adding "+c.cardID);
 			
@@ -60,7 +60,9 @@ public class StarDustReverieAction
 					new MakeTempCardInHandAction(c, 1)
 					);
 		}		
-	    AbstractDungeon.actionManager.addToBottom(new HandCheckAction(this.upgraded));
+	    AbstractDungeon.actionManager.addToBottom(
+	    		new HandCheckAction(this.upgraded)
+	    		);
 	    
 		this.isDone = true;
 	}

@@ -220,7 +220,7 @@
     "SatelIllusPower": {
     "NAME": "卫星幻觉",
     "DESCRIPTIONS": [
-      "当你抽卡堆里的卡牌数量增加时，获得  #b",
+      "在你的回合内，当你抽卡堆里的卡牌数量增加时，获得  #b",
       " 点能量。"
     ]
   },
@@ -236,6 +236,13 @@
     "DESCRIPTIONS": [
       "在其回合结束时，如果该生物的生命值低于 #b",
       " 则会被立即杀死。"
+    ]
+  },
+    "GiftOfLife": {
+    "NAME": "生命恩赐",
+    "DESCRIPTIONS": [
+      "在回合结束时恢复 #b",
+      " 点生命值。"
     ]
   },
     "WWWWWWWWWWWWWWW": {

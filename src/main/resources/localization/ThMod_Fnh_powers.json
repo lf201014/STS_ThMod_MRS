@@ -220,7 +220,7 @@
     "SatelIllusPower": {
     "NAME": "Satellite Illusion",
     "DESCRIPTIONS": [
-      "When the number of cards in your draw pile increases, gain  #b",
+      "During your turn,when the number of cards in your draw pile increases, gain  #b",
       " [B] ."
     ]
   },
@@ -236,6 +236,13 @@
     "DESCRIPTIONS": [
       "At the end of turn,instantly kill this creature if its health is less than #b",
       " ."
+    ]
+  },
+    "GiftOfLife": {
+    "NAME": "Gift of Life",
+    "DESCRIPTIONS": [
+      "Heal #b",
+      " HP at the end of your turn."
     ]
   },
     "WWWWWWWWWWWWW": {
