@@ -42,7 +42,6 @@ import ThMod_FnH.cards.Marisa.DeepEcologicalBomb;
 import ThMod_FnH.cards.Marisa.Defend_MRS;
 import ThMod_FnH.cards.Marisa.DoubleSpark;
 import ThMod_FnH.cards.Marisa.DragonMeteor;
-import ThMod_FnH.cards.Marisa.EarthLightRay;
 import ThMod_FnH.cards.Marisa.EnergyFlow;
 import ThMod_FnH.cards.Marisa.EnergyRecoil;
 import ThMod_FnH.cards.Marisa.EscapeVelocity;
@@ -99,6 +98,7 @@ import ThMod_FnH.cards.Marisa.UpSweep;
 import ThMod_FnH.cards.Marisa.WitchLeyline;
 import ThMod_FnH.cards.Marisa.WitchOfGreed;
 import ThMod_FnH.cards.Marisa._6A;
+import ThMod_FnH.cards.Marisa.EarthLightRay;
 import ThMod_FnH.cards.special.BlackFlareStar;
 import ThMod_FnH.cards.special.GuidingStar;
 import ThMod_FnH.cards.special.Spark;
@@ -232,12 +232,24 @@ public class ThMod implements PostExhaustSubscriber,
 	public ThMod() {
       BaseMod.subscribe(this);
       logger.info("creating the color : MARISA_COLOR");
-      BaseMod.addColor(AbstractCardEnum.MARISA_COLOR,
-    		  	STARLIGHT, STARLIGHT, STARLIGHT, STARLIGHT, STARLIGHT, STARLIGHT, STARLIGHT,
-        	    makePath(ATTACK_CC), makePath(SKILL_CC),
-        	    makePath(POWER_CC), makePath(ENERGY_ORB_CC),
-        	    makePath(ATTACK_CC_PORTRAIT), makePath(SKILL_CC_PORTRAIT),
-        	    makePath(POWER_CC_PORTRAIT), makePath(ENERGY_ORB_CC_PORTRAIT));
+      BaseMod.addColor(
+    		  AbstractCardEnum.MARISA_COLOR,
+    		  STARLIGHT,
+    		  STARLIGHT,
+    		  STARLIGHT, 
+    		  STARLIGHT, 
+    		  STARLIGHT, 
+    		  STARLIGHT,
+    		  STARLIGHT,
+    		  makePath(ATTACK_CC),
+    		  makePath(SKILL_CC),
+    		  makePath(POWER_CC),
+    		  makePath(ENERGY_ORB_CC),
+    		  makePath(ATTACK_CC_PORTRAIT),
+    		  makePath(SKILL_CC_PORTRAIT),
+    		  makePath(POWER_CC_PORTRAIT),
+    		  makePath(ENERGY_ORB_CC_PORTRAIT)
+    		  );
 	}
 
 	public void receiveEditCharacters() {
@@ -246,16 +258,26 @@ public class ThMod implements PostExhaustSubscriber,
 		logger.info("add " + ThModClassEnum.MARISA.toString());
 		
 		if (Settings.language == Settings.GameLanguage.ZHS) {
-			BaseMod.addCharacter(Marisa.class, "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f", "character class string",
-					AbstractCardEnum.MARISA_COLOR, "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f",
+			BaseMod.addCharacter(
+					Marisa.class,
+					"\u666e\u901a\u7684\u9b54\u6cd5\u4f7f",
+					"character class string",
+					AbstractCardEnum.MARISA_COLOR,
+					"\u666e\u901a\u7684\u9b54\u6cd5\u4f7f",
 					MY_CHARACTER_BUTTON , MARISA_PORTRAIT,
-					ThModClassEnum.MARISA);
+					ThModClassEnum.MARISA
+					);
 		}
         else {
-        	BaseMod.addCharacter(Marisa.class, "The Ordinary Magician", "character class string",
-				AbstractCardEnum.MARISA_COLOR, "The Ordinary Magician",
-				MY_CHARACTER_BUTTON , MARISA_PORTRAIT,
-				ThModClassEnum.MARISA);
+        	BaseMod.addCharacter(
+        			Marisa.class,
+        			"The Ordinary Magician", 
+        			"character class string",
+        			AbstractCardEnum.MARISA_COLOR, 
+        			"The Ordinary Magician",
+        			MY_CHARACTER_BUTTON , MARISA_PORTRAIT,
+        			ThModClassEnum.MARISA
+        			);
         }
 		logger.info("done editting characters");
 	}

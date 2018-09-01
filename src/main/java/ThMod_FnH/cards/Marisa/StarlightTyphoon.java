@@ -20,11 +20,10 @@ public class StarlightTyphoon extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-	private static final int COST = 2;
+	private static final int COST = 1;
 	public StarlightTyphoon() {
 		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
-
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {

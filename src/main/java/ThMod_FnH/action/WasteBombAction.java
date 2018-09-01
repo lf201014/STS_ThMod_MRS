@@ -50,7 +50,7 @@ public class WasteBombAction
 						new ApplyPowerAction(
 								this.target,
 								AbstractDungeon.player, 
-								new TempStrengthLoss(this.target, 3),
+								new TempStrengthLoss(this.target, this.stacks),
 								this.stacks
 								)
 						);

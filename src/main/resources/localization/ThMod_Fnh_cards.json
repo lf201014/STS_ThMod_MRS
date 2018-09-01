@@ -35,8 +35,8 @@
 	},
 	"EarthLightRay": {
 		"NAME": "Earth Light Ray",
-		"DESCRIPTION": "Heal !M! HP. NL  Exhaust  . NL Amplify  [B]  [B]  :Add a card from your discard pile to your hand,then draw a card.",
-		"UPGRADE_DESCRIPTION": "Heal !M! HP. NL  Exhaust  . NL Amplify  [B]  :Add a card from your discard pile to your hand,then draw a card."
+		"DESCRIPTION": "Heal !M! HP.  Exhaust  . NL Amplify  [B] :Add a random card from your discard pile to your hand.",
+		"UPGRADE_DESCRIPTION": "Heal !M! HP.  Exhaust  . NL Amplify  [B]  :Choose a card from your discard pile to add to your hand."
 	},
 	"EscapeVelocity": {
 		"NAME": "Escape Velocity",
@@ -113,8 +113,8 @@
 	},
 	"StarDustReverie": {
 		"NAME": "Star Dust Reverie",
-		"DESCRIPTION": "Put your hand back to draw pile,then add same number plus one random cards to your hand. These cards gain Exhaust and Ethereal . NL Exhaust .",
-		"UPGRADE_DESCRIPTION": "Put your hand back to draw pile,then add same number plus one random cards to your hand. These cards gain Exhaust and Ethereal ."
+		"DESCRIPTION": "Shuffle your hand into draw pile,then add the same number of random cards to your hand. NL Exhaust .",
+		"UPGRADE_DESCRIPTION": "Shuffle your hand into draw pile,then add the same number of random upgraded cards to your hand. NL Exhaust ."
 	},
 	"UltraShortWave": {
 		"NAME": "Ultimate Shortwave",
@@ -158,8 +158,8 @@
 	},
 	"OpenUniverse": {
 		"NAME": "Open Universe",
-		"DESCRIPTION": "Add 5 random cards to draw pile,then draw !M! cards. Exhaust . NL  Amplify  [B]  :Upgrade added cards.",
-		"UPGRADE_DESCRIPTION": "Add 5 random upgraded cards to draw pile. Exhaust . NL  Amplify  [B]  :Cards added can be played for free once."
+		"DESCRIPTION": "Shuffle 5 random cards to draw pile,then draw !M! card. NL Exhaust .",
+		"UPGRADE_DESCRIPTION": "Shuffle 5 random cards to draw pile,then draw !M! card."
 	},
 	"BlazeAway": {
 		"NAME": "Blaze Away",
@@ -173,8 +173,8 @@
 	},
 	"StarlightTyphoon": {
 		"NAME": "Starlight Typhoon",
-		"DESCRIPTION": " Exhaust  all non-Attack cards in your hand,add the same number plus 1 Spark to your hand.",
-		"UPGRADE_DESCRIPTION": " Exhaust  all non-Attack cards in your hand,add add the same number plus 1 upgraded Spark to your hand."
+		"DESCRIPTION": " Exhaust  all non-Attack cards in your hand,add the same number of Spark to your hand.",
+		"UPGRADE_DESCRIPTION": " Exhaust  all non-Attack cards in your hand,add add the same number of upgraded Spark to your hand."
 	},
 	"SuperPerseids": {
 		"NAME": "Super Perseids",
@@ -390,6 +390,11 @@
 		"NAME": "Orbital",
 		"DESCRIPTION": " Unplayable . when you draw this card,draw !M! more card . NL If this card is Exhausted,add a card from your exhaust pile to your discard pile.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+	},
+	"SillyJoke": {
+		"NAME": "Mana Phantom",
+		"DESCRIPTION": "Cast a Magic that only shown to true Magicians. NL Exhaust . NL Ethereal .",
+		"UPGRADE_DESCRIPTION": "Cast a splendid Magic that only shown true Magicians. NL Exhaust . NL Ethereal ."
 	},
 	"WWWWWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWW",

@@ -2,3 +2,7 @@
 /target/
 ModTheSpire.jar - 快捷方式.lnk
 ModTheSpire.jar.lnk
+src/main/main.iml
+/.idea/
+.idea/codeStyles/codeStyleConfig.xml
+.idea/codeStyles/Project.xml

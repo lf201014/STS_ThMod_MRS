@@ -35,8 +35,8 @@
 	},
 	"EarthLightRay": {
 		"NAME": "地球光",
-		"DESCRIPTION": "恢复 !M! 点生命。 NL  消耗 。 NL 增幅  [B]  [B]  :选择弃牌堆的一张卡加入手牌，再抽一张卡。",
-		"UPGRADE_DESCRIPTION": "恢复 !M! 点生命。 NL  消耗 。 NL 增幅  [B]  :选择弃牌堆的一张卡加入手牌，再抽一张卡。"
+		"DESCRIPTION": "恢复 !M! 点生命。 NL  消耗 。 NL 增幅  [B]  :将弃牌堆的一张随机卡牌加入手牌。",
+		"UPGRADE_DESCRIPTION": "恢复 !M! 点生命。 NL  消耗 。 NL 增幅  [B]  :选择弃牌堆的一张卡加入手牌。"
 	},
 	"EscapeVelocity": {
 		"NAME": "第二宇宙速度",
@@ -117,8 +117,8 @@
 	},
 	"StarDustReverie": {
 		"NAME": "星屑幻想",
-		"DESCRIPTION": "将你的手牌放回抽牌堆，然后将放回的卡数+1张随机卡片加入手牌。这些卡获得 虚无 和 消耗 。 NL 消耗 。",
-		"UPGRADE_DESCRIPTION": "将你的手牌放回抽牌堆，然后将放回的卡数+1张随机卡片加入手牌。这些卡获得 虚无 和 消耗 。"
+		"DESCRIPTION": "将你的手牌放回抽牌堆，然后将等量随机卡片加入手牌。 NL 消耗 。",
+		"UPGRADE_DESCRIPTION": "将你的手牌放回抽牌堆，然后将等量 升级 过的 随机卡片加入手牌。 NL 消耗 。"
 	},
 	"UltraShortWave": {
 		"NAME": "极超短波",
@@ -162,8 +162,8 @@
 	},
 	"OpenUniverse": {
 		"NAME": "开放宇宙",
-		"DESCRIPTION": "将五张随机卡牌洗入抽牌堆,抽 !M! 张牌。 消耗 。 NL  增幅  [B]  :将加入的卡升级。",
-		"UPGRADE_DESCRIPTION": "将五张已 升级 的随机卡牌洗入抽牌堆。 消耗 。 NL  增幅  [B]  :加入的卡牌可以免费使用一次。"
+		"DESCRIPTION": "将五张随机卡牌加入抽牌堆并洗牌,然后抽 !M! 张牌。 消耗 。",
+		"UPGRADE_DESCRIPTION": "将五张已 升级 的随机卡牌加入抽牌堆并洗牌,然后抽 !M! 张牌。"
 	},
 	"BlazeAway": {
 		"NAME": "连续发射",
@@ -177,8 +177,8 @@
 	},
 	"StarlightTyphoon": {
 		"NAME": "星光台风",
-		"DESCRIPTION": " 消耗 手牌中所有的非攻击牌，然后将 消耗 掉牌的数量+1张 火花 加入手牌。",
-		"UPGRADE_DESCRIPTION": " 消耗 手牌中所有的非攻击牌，然后将 消耗 掉牌的数量+1张已 升级 的 火花 加入手牌。"
+		"DESCRIPTION": " 消耗 手牌中所有的非攻击牌，然后将 相同数量 的 火花 加入手牌。",
+		"UPGRADE_DESCRIPTION": " 消耗 手牌中所有的非攻击牌，然后将 相同数量 的 已 升级 的 火花 加入手牌。"
 	},
 	"SuperPerseids": {
 		"NAME": "超级英仙座",
@@ -390,6 +390,11 @@
     "DESCRIPTION": " 不能被打出 。 当你抽到这张卡时，再抽 !M! 张卡。 NL 当这张卡被 消耗 时，选择消耗堆一张卡加入弃牌堆。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
+	"SillyJoke": {
+		"NAME": "幻象泡影",
+		"DESCRIPTION": "施展一个只有真正的魔法使才能看到的华丽魔术。 NL 消耗 。 NL 虚无 。",
+		"UPGRADE_DESCRIPTION": "施展一个只有真正的魔法使才能看到的超级华丽魔术。 NL 消耗 。 NL 虚无 。"
+	},
 	"WWWWWWWWWWW": {
 		"NAME": "WWWWWWWWWWW",
 		"DESCRIPTION": "WWWWWWWWWWW",

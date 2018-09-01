@@ -27,11 +27,27 @@ public class Marisa extends CustomPlayer {
     public static final String MARISA_SKELETON_ATLAS = "img/char/Marisa/MarisaModel_v02.atlas";// Marisa_v0 / MarisaModel_v02
     public static final String MARISA_SKELETON_JSON = "img/char/Marisa/MarisaModel_v02.json";
     public static final String MARISA_ANIMATION = "Idle";// Sprite / Idle
+    public static final String[] ORB_TEXTURES = {
+    		"img/UI/EPanel/layer5.png",
+    		"img/UI/EPanel/layer4.png",
+    		"img/UI/EPanel/layer3.png",
+    		"img/UI/EPanel/layer2.png",
+    		"img/UI/EPanel/layer1.png",
+    		"img/UI/EPanel/layer0.png",
+    		"img/UI/EPanel/layer5d.png",
+    		"img/UI/EPanel/layer4d.png",
+    		"img/UI/EPanel/layer3d.png",
+    		"img/UI/EPanel/layer2d.png",
+    		"img/UI/EPanel/layer1d.png"
+    };
+    public static final String ORB_VFX = "img/UI/energyBlueVFX.png";
+    public static final float[] LAYER_SPEED =
+    	{ 0F , 20.0F , -20.0F , -40.0F , 20.0F , 0F , 10.0F , -10.0F , -20.0F , 10.0F };
     //public static final String SPRITER_ANIM_FILEPATH = "img/char/MyCharacter/marisa_test.scml"; // spriter animation scml
 
 	public Marisa (String name, PlayerClass setClass) {
 		//super(name, setClass, null, null , null ,new SpriterAnimation(SPRITER_ANIM_FILEPATH));
-		super(name, setClass, null, null, (String)null,(String) null);
+		super(name, setClass, null, null ,(String)null,(String) null);
 		//public CustomPlayer(String name, PlayerClass playerClass, String[] orbTextures, String orbVfxPath, float[] layerSpeeds, AbstractAnimation animation)
 		
 		this.dialogX = (this.drawX + 0.0F * Settings.scale); // set location for text bubbles
@@ -53,7 +69,7 @@ public class Marisa extends CustomPlayer {
 		// if you're using modified versions of base game animations or made animations in spine make sure to include this bit and the following lines
 		AnimationState.TrackEntry e = this.state.setAnimation(0, MARISA_ANIMATION, true);
 		e.setTime(e.getEndTime() * MathUtils.random());
-	    e.setTimeScale(0.9F);
+	    e.setTimeScale(1.0F);
 		logger.info("init finish");
 	}
 
@@ -95,9 +111,18 @@ public class Marisa extends CustomPlayer {
 			flavor = "The 'ordinay' magician lives in the magic forest. NL Specialized in light and heat magic.";
 		}
 		return new CharSelectInfo(
-				title, flavor,
-				STARTING_HP, MAX_HP,0, STARTING_GOLD, HAND_SIZE,
-			 ThModClassEnum.MARISA, getStartingRelics(), getStartingDeck(), false);
+				title,
+				flavor,
+				STARTING_HP, 
+				MAX_HP,
+				0,
+				STARTING_GOLD, 
+				HAND_SIZE,
+				ThModClassEnum.MARISA, 
+				getStartingRelics(),
+				getStartingDeck(),
+				false
+				);
 	}
 	
 }

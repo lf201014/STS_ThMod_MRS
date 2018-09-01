@@ -21,9 +21,9 @@ public class GravityBeat extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String IMG_PATH = "img/cards/Strike.png";
 	private static final int COST = 2;
-	private static final int ATTACK_DMG = 12;
+	private static final int ATTACK_DMG = 9;
 	private static final int UPGRADE_PLUS_DMG = 3;
-	private static final int WK = 1;
+	private static final int WK = 2;
 	private static final int UPG_WK = 1;
 
 	public GravityBeat() {

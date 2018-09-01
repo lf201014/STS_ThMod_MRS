@@ -1,5 +1,6 @@
-package ThMod_FnH.cards.Marisa;
+package ThMod_FnH.cards.deprecated;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.defect.DiscardPileToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -8,11 +9,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import ThMod_FnH.ThMod;
-import ThMod_FnH.action.DiscToHandRandAction;
-import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
+import ThMod_FnH.ThMod;
+import ThMod_FnH.patches.AbstractCardEnum;
 
 public class EarthLightRay extends CustomCard {
 	public static final String ID = "EarthLightRay";
@@ -24,8 +23,11 @@ public class EarthLightRay extends CustomCard {
 	private static final int COST = 0;
 	private static final int HEAL_AMT = 4;
 	private static final int UPG_HEAL = 2;
-	private int AMP = 1;
+	private int AMP = 2;
+	public static final boolean isAmp =true;
 	
+
+
 	public EarthLightRay() {
 		super(
 				ID,
@@ -44,19 +46,11 @@ public class EarthLightRay extends CustomCard {
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		
 		AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.magicNumber));
 		if ( ThMod.Amplified(AMP+this.costForTurn,AMP) ) {
 			if (!p.discardPile.isEmpty())
-				if (this.upgraded) {
-					AbstractDungeon.actionManager.addToBottom(
-							new DiscardPileToHandAction(1)
-							);
-				} else {
-					AbstractDungeon.actionManager.addToBottom(
-							new DiscToHandRandAction()
-							);
-				}
+				AbstractDungeon.actionManager.addToBottom(new DiscardPileToHandAction(1));
+			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 		}
 	}
 
@@ -68,6 +62,7 @@ public class EarthLightRay extends CustomCard {
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeMagicNumber(UPG_HEAL);
+			AMP--;
 			this.rawDescription = DESCRIPTION_UPG;
 			initializeDescription();
 		}

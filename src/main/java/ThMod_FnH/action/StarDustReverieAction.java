@@ -27,7 +27,7 @@ public class StarDustReverieAction
 		
 		ThMod.logger.info("StarDustReverieAction : player hand size : "+p.hand.size());
 		
-		if (!p.hand.isEmpty())
+		if (!p.hand.isEmpty()) {
 			while (!p.hand.isEmpty()) {
 				AbstractCard c = p.hand.getTopCard();
 				ThMod.logger.info("StarDustReverieAction : moving "+c.cardID);
@@ -35,6 +35,10 @@ public class StarDustReverieAction
 				cnt++;
 				ThMod.logger.info("StarDustReverieAction : Counter : "+cnt);
 			}
+		} else {
+			this.isDone = true;
+			return;
+		}
 		
 		p.drawPile.shuffle();
 		
@@ -42,7 +46,7 @@ public class StarDustReverieAction
 			r.onShuffle();
 		}
 
-		for (int i=0 ; i <= cnt ; i++ ) {
+		for (int i = 0 ; i < cnt ; i++ ) {
 
 			AbstractCard c = AbstractDungeon.returnTrulyRandomCard();
 	        	
@@ -60,10 +64,11 @@ public class StarDustReverieAction
 					new MakeTempCardInHandAction(c, 1)
 					);
 		}		
+		/*
 	    AbstractDungeon.actionManager.addToBottom(
 	    		new HandCheckAction(this.upgraded)
 	    		);
-	    
+	    */
 		this.isDone = true;
 	}
 }

@@ -1,4 +1,4 @@
-package ThMod_FnH.action;
+package ThMod_FnH.action.deprecated;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
