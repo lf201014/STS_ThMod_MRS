@@ -119,7 +119,7 @@
       "WWWWWWWWWWW"
     ]
   },
-    "SingualrityPower": {
+    "SingularityPower": {
     "NAME": "Singualrity",
     "DESCRIPTIONS": [
       "When you play a card that cost 0 ,increase the damage of all #yAttack in your hand by #b",

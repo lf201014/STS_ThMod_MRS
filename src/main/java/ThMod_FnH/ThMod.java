@@ -6,7 +6,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.badlogic.gdx.Gdx;
-//cd:E:\STSmod worktable\example_mod
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -81,7 +80,7 @@ import ThMod_FnH.cards.Marisa.Robbery;
 import ThMod_FnH.cards.Marisa.SatelliteIllusion;
 import ThMod_FnH.cards.Marisa.ShootTheMoon;
 import ThMod_FnH.cards.Marisa.ShootingEcho;
-import ThMod_FnH.cards.Marisa.Singualrity;
+import ThMod_FnH.cards.Marisa.Singularity;
 import ThMod_FnH.cards.Marisa.SporeBomb;
 import ThMod_FnH.cards.Marisa.StarBarrage;
 import ThMod_FnH.cards.Marisa.StarDustReverie;
@@ -172,21 +171,32 @@ public class ThMod implements PostExhaustSubscriber,
 
   //For Amplify cards
   public static boolean Amplified(AbstractCard card, int AMP) {
+    logger.info(
+        "ThMod.Amplified : card to check : " + card.cardID + " ; costForTurn : "
+            + card.costForTurn);
     AbstractPlayer p = AbstractDungeon.player;
     if ((p.hasPower("MoraleDepletionPower"))
         || (p.hasPower("MoraleDepletionPlusPower"))) {
+      logger.info("ThMod.Amplified :MoraleDepletionPower detected,returning false.");
       return false;
     }
 
     boolean res = false;
-    if (
-        (p.hasPower("MilliPulsaPower"))
-            || (p.hasPower("PulseMagicPower"))
-            || (card.freeToPlayOnce)
-    ) {
+    if ((p.hasPower("MilliPulsaPower")) || (p.hasPower("PulseMagicPower"))
+        || (card.freeToPlayOnce)) {
+      logger.info(
+          "ThMod.Amplified :Free Amplify tag detected,returning true : Milli :"
+              + (p.hasPower("MilliPulsaPower"))
+              + " ; Pulse :" + (p.hasPower("PulseMagicPower")) + " ; Free2Play :"
+              + card.freeToPlayOnce
+      );
       res = true;
     } else {
       if (EnergyPanel.totalCount >= (card.costForTurn + AMP)) {
+        logger.info("ThMod.Amplified : Sufficient energy ,adding and returning true;");
+        if (card.costForTurn == 0) {
+          p.energy.use(AMP);
+        }
         card.costForTurn += AMP;
         res = true;
       }
@@ -208,6 +218,9 @@ public class ThMod implements PostExhaustSubscriber,
         r.onSpecificTrigger();
       }
     }
+    logger.info(
+        "ThMod.Amplified : card : " + card.cardID + " ; Amplify : " + res + " ; costForTurn : "
+            + card.costForTurn);
     return res;
   }
 
@@ -442,8 +455,8 @@ public class ThMod implements PostExhaustSubscriber,
     UnlockTracker.unlockCard("EnergyFlow");
     BaseMod.addCard(new EventHorizon());
     UnlockTracker.unlockCard("EventHorizon");
-    BaseMod.addCard(new Singualrity());
-    UnlockTracker.unlockCard("Singualrity");
+    BaseMod.addCard(new Singularity());
+    UnlockTracker.unlockCard("Singularity");
     BaseMod.addCard(new CasketOfStar());
     UnlockTracker.unlockCard("CasketOfStar");
     //rare: 4

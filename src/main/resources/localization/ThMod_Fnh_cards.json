@@ -9,7 +9,7 @@
 	},
 	"AsteroidBelt": {
 		"NAME": "Asteroid Belt",
-		"DESCRIPTION": "Gain !B!  block , NL if you're not attacked this turn ,keep your  block  until next turn."
+		"DESCRIPTION": "Gain !B!  block . NL Amplify  [B]  :Gain !B! block next turn."
 	},
 	"BigCrunch": {
 		"NAME": "Big Crunch",
@@ -218,7 +218,7 @@
 	},
 	"DragonMeteor": {
 		"NAME": "Dragon Meteor",
-		"DESCRIPTION": "Deal !B! damage. NL Increase damage by 1 for each card in your Exhaust Pile .",
+		"DESCRIPTION": "Deal !B! damage. NL Increase damage by !M! for each card in your Exhaust Pile .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"EventHorizon": {
@@ -229,15 +229,15 @@
 	"PulseMagic": {
 		"NAME": "Pulse Magic",
 		"DESCRIPTION": "Gain [B] next turn. Amplify [B]  : you don't need to pay extra [B] to activate Amplify this turn.",
-		"UPGRADE_DESCRIPTION": " Retain . NL Gain [B] next turn. Amplify [B]  : you don't need to pay extra [B] to activate Amplify this turn."
+		"UPGRADE_DESCRIPTION": " NL Gain [B]  [B] next turn. Amplify [B]  : you don't need to pay extra [B] to activate Amplify this turn."
 	},
 	"D6C": {
 		"NAME": "66C",
 		"DESCRIPTION": " Innate . NL Deal !D! damage. NL if there is no card in your discard pile,deal double the damage.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
-	"Singualrity": {
-		"NAME": "Singualrity",
+	"Singularity": {
+		"NAME": "Singularity",
 		"DESCRIPTION": "When you play a card that cost 0 ,increase the damage of all Attack in your hand by !M! .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},

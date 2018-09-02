@@ -9,7 +9,7 @@
 	},
 	"AsteroidBelt": {
 		"NAME": "小行星带",
-		"DESCRIPTION": "获得 !B!  格挡 。 NL 如果你这回合没有遭受攻击，则保留 格挡 到下一回合。"
+		"DESCRIPTION": "获得 !B!  格挡 。 NL 增幅 [B]  :下回合开始时获得 !B! 格挡。"
 	},
 	"BigCrunch": {
 		"NAME": "大坍缩",
@@ -222,20 +222,20 @@
 	},
 	"DragonMeteor": {
 		"NAME": "龙陨星",
-		"DESCRIPTION": "造成 !B! 点伤害。 NL 你的消耗区每有一张卡，此卡伤害增加 1 。",
+		"DESCRIPTION": "造成 !B! 点伤害。 NL 你的消耗区每有一张卡，此卡伤害增加 !M! 。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"PulseMagic": {
 		"NAME": "脉冲魔术",
 		"DESCRIPTION": "下回合开始时获得  [B]  。 NL 增幅  [B]  ：本回合内你不再需要支付额外能量来发动 增幅 效果。",
-		"UPGRADE_DESCRIPTION": " 保留 。 NL 下回合开始时获得  [B]  。 NL 增幅  [B]  ：本回合内你不再需要支付额外能量来发动 增幅 效果。"
+		"UPGRADE_DESCRIPTION": " NL 下回合开始时获得  [B]  [B]  。 NL 增幅  [B]  ：本回合内你不再需要支付额外能量来发动 增幅 效果。"
 	},
 	"D6C": {
 		"NAME": "迎头痛击",
 		"DESCRIPTION": " 固有 。 造成 !D! 点伤害，若此时你的弃卡堆里没有卡，造成双倍伤害。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
-	"Singualrity": {
+	"Singularity": {
 		"NAME": "奇点",
 		"DESCRIPTION": "每当你使用一张费用为0的卡时，使你手中所有攻击牌攻击力增加 !M! 点。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
