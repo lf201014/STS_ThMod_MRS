@@ -32,7 +32,7 @@ public class BinaryStars extends CustomCard {
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if (ThMod.Amplified(this.costForTurn+AMP, AMP)) {
+		if (ThMod.Amplified(this, AMP)) {
 			AbstractCard c = new BlackFlareStar();
 			if (this.upgraded)
 				c.upgrade();
@@ -57,7 +57,7 @@ public class BinaryStars extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;;
+			this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
 			initializeDescription();
 		}
 	}

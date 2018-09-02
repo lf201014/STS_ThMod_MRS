@@ -68,7 +68,7 @@ public class LuminesStrike
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		
-		if (ThMod.Amplified(this.costForTurn+AMP, AMP))
+		if (ThMod.Amplified(this, AMP))
 			AbstractDungeon.actionManager.addToBottom(
 					new DamageAction(m,new DamageInfo(p, this.block, this.damageTypeForTurn),AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 		else 

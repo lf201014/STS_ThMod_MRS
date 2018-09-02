@@ -31,7 +31,7 @@ public class SporeBomb extends CustomCard {
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if (ThMod.Amplified(this.costForTurn+AMP, AMP)) {
+		if (ThMod.Amplified(this, AMP)) {
 			for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
 			AbstractDungeon.actionManager.addToBottom(
 					new ApplyPowerAction(mo, p, new VulnerablePower(mo, this.magicNumber, false), this.magicNumber, true));

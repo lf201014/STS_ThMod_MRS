@@ -79,7 +79,7 @@ public class BlazingStar
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if (ThMod.Amplified(AMP+this.costForTurn,AMP)) {
+		if (ThMod.Amplified(this,AMP)) {
 			this.block *= 2;
 		}
 		AbstractDungeon.actionManager.addToBottom(

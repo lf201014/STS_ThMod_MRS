@@ -47,7 +47,7 @@ public class EarthLightRay extends CustomCard {
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.magicNumber));
-		if ( ThMod.Amplified(AMP+this.costForTurn,AMP) ) {
+		if ( ThMod.Amplified(this,AMP) ) {
 			if (!p.discardPile.isEmpty())
 				AbstractDungeon.actionManager.addToBottom(new DiscardPileToHandAction(1));
 			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));

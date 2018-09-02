@@ -50,7 +50,7 @@ public class PulseMagic
 						new EnergizedBluePower(p, 1),
 						1)
 				);
-		if (ThMod.Amplified(this.costForTurn+AMP, AMP)) {
+		if (ThMod.Amplified(this, AMP)) {
 			AbstractDungeon.actionManager.addToBottom(
 					new ApplyPowerAction(p,p,new PulseMagicPower(p))
 					);

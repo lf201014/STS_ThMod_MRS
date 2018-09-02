@@ -39,7 +39,7 @@ public class DeepEcologicalBomb
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		int num = 1;	
 		
-	    if ( ThMod.Amplified(AMP+this.costForTurn,AMP) ) {
+	    if ( ThMod.Amplified(this,AMP) ) {
 	    	num++;
 	    }
 	    AbstractDungeon.actionManager.addToBottom(

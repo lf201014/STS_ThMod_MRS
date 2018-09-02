@@ -38,7 +38,12 @@ public class Robbery
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(
-				new RobberyDamageAction((AbstractCreature)m,new DamageInfo(p, this.damage, this.damageTypeForTurn),ThMod.Amplified(this.costForTurn+AMP, AMP)));
+				new RobberyDamageAction(
+						m,
+						new DamageInfo(p, this.damage, this.damageTypeForTurn),
+            ThMod.Amplified(this, AMP)
+        )
+    );
 	}
 
 	public AbstractCard makeCopy() {

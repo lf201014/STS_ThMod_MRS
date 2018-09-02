@@ -56,7 +56,7 @@ public class FluorensentBeam
 
 	    AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.1F));
 		
-		if ( ThMod.Amplified(AMP+this.costForTurn,AMP) )
+		if ( ThMod.Amplified(this,AMP) )
 			AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p,
 					this.multiAmpDamage,DamageType.HP_LOSS, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 		else

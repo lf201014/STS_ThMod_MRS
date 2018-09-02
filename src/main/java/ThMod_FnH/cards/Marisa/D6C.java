@@ -48,11 +48,6 @@ public class D6C
 	public AbstractCard makeCopy() {
 		return new D6C();
 	}
-	
-	@Override
-	public boolean isStrike(){
-		return true;
-	}
 
 	public void upgrade() {
 		if (!this.upgraded) {

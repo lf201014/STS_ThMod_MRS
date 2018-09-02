@@ -1,4 +1,4 @@
-package ThMod_FnH.action;
+package ThMod_FnH.action.deprecated;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -19,8 +19,8 @@ public class GrandCrossAction
 	public void update(){
 		if (this.duration == Settings.ACTION_DUR_FAST)  {
 			for (AbstractCard c : this.p.hand.group) {
-				if (c.cardID == "GrandCross")
-					c.setCostForTurn(0);;
+				if (c.cardID.equals("GrandCross"))
+					c.setCostForTurn(0);
 			}
 			this.isDone = true;
 			return;

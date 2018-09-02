@@ -36,7 +36,7 @@ public class BlazeAway extends CustomCard {
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		int stack = this.magicNumber;
-			if (ThMod.Amplified(this.costForTurn+AMP, AMP)) {
+			if (ThMod.Amplified(this, AMP)) {
 				stack += AMP_STC;
 			}
 		

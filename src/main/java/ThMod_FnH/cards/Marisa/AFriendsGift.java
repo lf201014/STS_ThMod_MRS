@@ -43,14 +43,16 @@ public class AFriendsGift
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		this.exhaust = true;
-		if ( ThMod.Amplified(AMP+this.costForTurn,AMP) ) {
+		if ( ThMod.Amplified(this,AMP) ) {
 			this.exhaust = false;
-			AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-					new DamageInfo(p, this.block, this.damageTypeForTurn),
-					AbstractGameAction.AttackEffect.SLASH_DIAGONAL)
-					);
-		}		
-		else {
+			AbstractDungeon.actionManager.addToBottom(
+					new DamageAction(
+					    m,
+					    new DamageInfo(p, this.block, this.damageTypeForTurn),
+              AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+          )
+      );
+		} else {
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
 					new DamageInfo(p, this.damage, this.damageTypeForTurn),
 					AbstractGameAction.AttackEffect.SLASH_DIAGONAL)

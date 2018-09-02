@@ -52,11 +52,11 @@ public class ShootTheMoon
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractPower po = null;
+		AbstractPower po;
 		
 		boolean fightingBoss = (m.type == AbstractMonster.EnemyType.BOSS);
 		
-		if ( ThMod.Amplified(AMP+this.costForTurn,AMP) ) {
+		if ( ThMod.Amplified(this,AMP) ) {
 			
 			if (!fightingBoss)
 				for (AbstractPower pow : m.powers)
@@ -74,12 +74,12 @@ public class ShootTheMoon
 		else {
 			if ((!m.powers.isEmpty())&&(!fightingBoss)){
 			
-			ArrayList<AbstractPower> pows = new ArrayList<AbstractPower>();
+			ArrayList<AbstractPower> pows = new ArrayList<>();
 			for (AbstractPower pow : m.powers)
 				if (pow.type == AbstractPower.PowerType.BUFF)
 					pows.add(pow);
 			if (!pows.isEmpty()) {
-				po = pows.get((int)Math.random()*pows.size());
+				po = pows.get((int)(Math.random()*pows.size()));
 				AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(m,p,po));
 			}
 			

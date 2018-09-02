@@ -1,4 +1,4 @@
-package ThMod_FnH.cards.special;
+package ThMod_FnH.cards.deprecated;
 
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;

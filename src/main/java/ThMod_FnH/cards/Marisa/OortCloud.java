@@ -37,7 +37,7 @@ public class OortCloud extends CustomCard {
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		
-		if ( ThMod.Amplified(AMP+this.costForTurn,AMP) ) {
+		if ( ThMod.Amplified(this,AMP) ) {
 			if (this.upgraded)
 				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, UPG_AMP), UPG_AMP));
 			else

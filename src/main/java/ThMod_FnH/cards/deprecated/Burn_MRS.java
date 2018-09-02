@@ -1,4 +1,4 @@
-package ThMod_FnH.cards.special;
+package ThMod_FnH.cards.deprecated;
 
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -50,7 +50,6 @@ public class Burn_MRS extends CustomCard {
 	@Override
 	public void upgrade() {
 	      upgradeName();
-		return;
 	}
 }
 

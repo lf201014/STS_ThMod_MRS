@@ -51,7 +51,7 @@ public class MasterSpark
 	    AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY), 0.1F));
 
 		AbstractDungeon.actionManager.addToBottom(new SparkCostAction());
-		if ( ThMod.Amplified(AMP+this.costForTurn,AMP) )
+		if ( ThMod.Amplified(this,AMP) )
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
 					new DamageInfo(p, this.block, this.damageTypeForTurn),AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 		else

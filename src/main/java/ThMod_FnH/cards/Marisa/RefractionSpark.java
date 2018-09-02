@@ -44,7 +44,7 @@ public class RefractionSpark
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new SparkCostAction());
 		
-		if ( ThMod.Amplified(AMP+this.costForTurn,AMP) )
+		if ( ThMod.Amplified(this,AMP) )
 			AbstractDungeon.actionManager.addToBottom(new RefractionSparkAction(m,
 					new DamageInfo(p, this.block, this.damageTypeForTurn)));
 		else
