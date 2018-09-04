@@ -194,7 +194,7 @@ public class ThMod implements PostExhaustSubscriber,
     } else {
       if (EnergyPanel.totalCount >= (card.costForTurn + AMP)) {
         logger.info("ThMod.Amplified : Sufficient energy ,adding and returning true;");
-        if (card.costForTurn == 0) {
+        if ((card.costForTurn == 0)&&(card.cost == 0)) {
           p.energy.use(AMP);
         }
         card.costForTurn += AMP;
