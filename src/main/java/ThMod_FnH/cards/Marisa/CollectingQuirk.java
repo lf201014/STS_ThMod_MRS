@@ -1,5 +1,6 @@
 package ThMod_FnH.cards.Marisa;
 
+import ThMod_FnH.ThMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -42,8 +43,12 @@ public class CollectingQuirk
   public void applyPowers() {
     super.applyPowers();
     getCounter();
-    this.block = this.cnt;
-    this.isBlockModified = this.block == 0;
+    this.block = this.baseBlock = this.cnt;
+    this.isBlockModified = (this.block == 0);
+    ThMod.logger.info(
+        "CollectingQuirk : applyPowers : block :" + this.block
+            + " ; baseblock : " + this.baseBlock
+            + " ; counter : " + this.cnt);
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
