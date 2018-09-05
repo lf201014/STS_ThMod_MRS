@@ -358,7 +358,7 @@
 	},
 	"CollectingQuirk": {
 		"NAME": "Collecting Quirk",
-		"DESCRIPTION": "For each !M! relic you have ,deal !D! damage to random enemy.",
+		"DESCRIPTION": "For each !M! relic you have,deal !D! damage to random enemy (!B! time(s) for now).",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"FungusSplash": {

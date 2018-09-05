@@ -163,7 +163,7 @@
 	"OpenUniverse": {
 		"NAME": "开放宇宙",
 		"DESCRIPTION": "将五张随机卡牌加入抽牌堆并洗牌,然后抽 !M! 张牌。 消耗 。",
-		"UPGRADE_DESCRIPTION": "将五张已 升级 的随机卡牌加入抽牌堆并洗牌,然后抽 !M! 张牌。"
+		"UPGRADE_DESCRIPTION": "将五张随机卡牌加入抽牌堆并洗牌,然后抽 !M! 张牌。"
 	},
 	"BlazeAway": {
 		"NAME": "连续发射",
@@ -357,7 +357,7 @@
 	},
 	"CollectingQuirk": {
 		"NAME": "收集癖",
-		"DESCRIPTION": "你每有 !M! 个遗物，随机造成 !D! 点伤害。",
+		"DESCRIPTION": "你每有 !M! 个遗物，随机造成 !D! 点伤害(共计 !B! 次)。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"FungusSplash": {

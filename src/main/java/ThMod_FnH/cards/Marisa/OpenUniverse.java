@@ -17,80 +17,84 @@ import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
 public class OpenUniverse extends CustomCard {
-	public static final String ID = "OpenUniverse";
-	public static final String IMG_PATH = "img/cards/Defend.png";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-	private static final int COST = 0;
-	private static final int DRAW = 1;
-	//private static final int UPG_DRAW = 1;
-	//private static final int AMP = 1;
-	
-	public OpenUniverse() {
-		super(
-				ID, NAME, IMG_PATH,
-				COST, DESCRIPTION,
-				AbstractCard.CardType.SKILL,
-				AbstractCardEnum.MARISA_COLOR,
-				AbstractCard.CardRarity.UNCOMMON,
-				AbstractCard.CardTarget.SELF
-				);
-		this.exhaust = true;
-		this.magicNumber = this.baseMagicNumber = DRAW; 
-	}
-	
-	public void use(AbstractPlayer p, AbstractMonster m){
-		//boolean amp = ThMod.Amplified(this.costForTurn+AMP , AMP);
 
-		ThMod.logger.info("OpenUniverse : generationg cards");
-		
-	    for (int i = 0; i < 5; i++){
-	        AbstractCard card = AbstractDungeon.returnTrulyRandomCard();
-	        //if (amp) card.upgrade();
+  public static final String ID = "OpenUniverse";
+  public static final String IMG_PATH = "img/cards/Defend.png";
+  private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardStrings.NAME;
+  public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
+  private static final int COST = 0;
+  private static final int DRAW = 1;
+  //private static final int UPG_DRAW = 1;
+  //private static final int AMP = 1;
+
+  public OpenUniverse() {
+    super(
+        ID, NAME, IMG_PATH,
+        COST, DESCRIPTION,
+        AbstractCard.CardType.SKILL,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.UNCOMMON,
+        AbstractCard.CardTarget.SELF
+    );
+    this.exhaust = true;
+    this.magicNumber = this.baseMagicNumber = DRAW;
+  }
+
+  public void use(AbstractPlayer p, AbstractMonster m) {
+    //boolean amp = ThMod.Amplified(this.costForTurn+AMP , AMP);
+
+    ThMod.logger.info("OpenUniverse : generating cards");
+
+    for (int i = 0; i < 5; i++) {
+      AbstractCard card = AbstractDungeon.returnTrulyRandomCard();
+      //if (amp) card.upgrade();
 	        /*
 	        if (amp) {
 		    	card.freeToPlayOnce = true;
 		    	card.applyPowers();
 		    }
 		    */
-			ThMod.logger.info("OpenUniverse : adding : "+card.cardID);
-			
-	        AbstractDungeon.effectList.add(
-	        		new ShowCardAndAddToDrawPileEffect(card, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, true)
-	        		);
-	    }
-	    
-		ThMod.logger.info("OpenUniverse : shuffling");
-	    
-	    p.drawPile.shuffle();
-	    for (AbstractRelic r : p.relics)
-	    	r.onShuffle();
-	    
-	    ThMod.logger.info("OpenUniverse : drawing");
-	    
-	    AbstractDungeon.actionManager.addToBottom(
-	    		new DrawCardAction(p,this.magicNumber)
-	    		);
-	    
-		ThMod.logger.info("OpenUniverse : done");
-		
-		
-	}
+      ThMod.logger.info("OpenUniverse : adding : " + card.cardID);
 
-	public AbstractCard makeCopy() {
-		return new OpenUniverse();
-	}
+      AbstractDungeon.effectList.add(
+          new ShowCardAndAddToDrawPileEffect(card, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F,
+              true)
+      );
+    }
 
-	public void upgrade() {
-		if (!this.upgraded) {
-			upgradeName();
-			//upgradeMagicNumber(UPG_DRAW);
-			this.exhaust = false;
-			this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;;
-			initializeDescription();
-		}
-	}
-	
+    ThMod.logger.info("OpenUniverse : shuffling");
+
+    p.drawPile.shuffle();
+    for (AbstractRelic r : p.relics) {
+      r.onShuffle();
+    }
+
+    ThMod.logger.info("OpenUniverse : drawing");
+
+    AbstractDungeon.actionManager.addToBottom(
+        new DrawCardAction(p, this.magicNumber)
+    );
+
+    ThMod.logger.info("OpenUniverse : done");
+
+
+  }
+
+  public AbstractCard makeCopy() {
+    return new OpenUniverse();
+  }
+
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      //upgradeMagicNumber(UPG_DRAW);
+      this.exhaust = false;
+      this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+      ;
+      initializeDescription();
+    }
+  }
+
 }

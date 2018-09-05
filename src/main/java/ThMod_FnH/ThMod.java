@@ -142,12 +142,12 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String ATTACK_CC = "img/512/bg_attack_MRS_s.png";
   private static final String SKILL_CC = "img/512/bg_skill_MRS_s.png";
   private static final String POWER_CC = "img/512/bg_power_MRS_s.png";
-  private static final String ENERGY_ORB_CC = "img/512/card_orb.png";
+  private static final String ENERGY_ORB_CC = "img/512/cardOrb.png";
 
   private static final String ATTACK_CC_PORTRAIT = "img/1024/bg_attack_MRS.png";
   private static final String SKILL_CC_PORTRAIT = "img/1024/bg_skill_MRS.png";
   private static final String POWER_CC_PORTRAIT = "img/1024/bg_power_MRS.png";
-  private static final String ENERGY_ORB_CC_PORTRAIT = "img/1024/card_orb.png";
+  private static final String ENERGY_ORB_CC_PORTRAIT = "img/1024/cardOrb.png";
 
   private static final Color STARLIGHT = CardHelper.getColor(0f, 10f, 125.0f);
 
@@ -194,7 +194,7 @@ public class ThMod implements PostExhaustSubscriber,
     } else {
       if (EnergyPanel.totalCount >= (card.costForTurn + AMP)) {
         logger.info("ThMod.Amplified : Sufficient energy ,adding and returning true;");
-        if ((card.costForTurn == 0)&&(card.cost == 0)) {
+        if ((card.costForTurn == 0) && (card.cost == 0)) {
           p.energy.use(AMP);
         }
         card.costForTurn += AMP;

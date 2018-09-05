@@ -12,39 +12,40 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class IllusionStar extends CustomCard{
-    public static final String ID = "IllusionStar";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/cards/IllusionStar.png";
-    private static final int COST = 0;
+public class IllusionStar extends CustomCard {
 
-    public IllusionStar() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
-        		AbstractCard.CardType.SKILL, AbstractCardEnum.MARISA_COLOR,
-        		AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber =	2;
-    }
-  
-    public void use(AbstractPlayer p, AbstractMonster m){
-    	for (int i=0;i<this.magicNumber;i++) {
+  public static final String ID = "IllusionStar";
+  private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardStrings.NAME;
+  public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String IMG_PATH = "img/cards/IllusionStar.png";
+  private static final int COST = 0;
 
-			AbstractCard c = AbstractDungeon.returnTrulyRandomCard().makeStatEquivalentCopy();
+  public IllusionStar() {
+    super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
+        AbstractCard.CardType.SKILL, AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+    this.magicNumber = this.baseMagicNumber = 2;
+  }
 
-			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 1));
-		}
-    	AbstractDungeon.actionManager.addToBottom(new PutOnDeckAction(p, p, 1, false));
+  public void use(AbstractPlayer p, AbstractMonster m) {
+    for (int i = 0; i < this.magicNumber; i++) {
+
+      AbstractCard c = AbstractDungeon.returnTrulyRandomCard();
+
+      AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 1));
     }
-  
-    public AbstractCard makeCopy(){
-    	return new IllusionStar();
+    AbstractDungeon.actionManager.addToBottom(new PutOnDeckAction(p, p, 1, false));
+  }
+
+  public AbstractCard makeCopy() {
+    return new IllusionStar();
+  }
+
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      upgradeMagicNumber(1);
     }
-  
-    public void upgrade(){
-    	if (!this.upgraded){
-    		upgradeName();
-    		upgradeMagicNumber(1);
-    	}
-    }
+  }
 }

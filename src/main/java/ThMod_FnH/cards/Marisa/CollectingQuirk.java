@@ -13,49 +13,72 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class CollectingQuirk 
-	extends CustomCard {
-	
-	public static final String ID = "CollectingQuirk";
-	private static final CardStrings cardStrings = 
-			CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "img/cards/Strike.png";
-	private static final int COST = 2;
-	private static final int DVID = 4;
-	private static final int UPG_DVID = -1;
-	private static final int ATK_DMG = 7;
-	public CollectingQuirk() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE,
-				AbstractCard.CardTarget.ALL_ENEMY);
-		this.baseDamage = ATK_DMG;
-		this.magicNumber = this.baseMagicNumber = DVID;
-	}
+public class CollectingQuirk
+    extends CustomCard {
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		int cnt = p.relics.size()/this.magicNumber;
-		if (cnt > 0) {
-			for (int i = 0;i < cnt ;i++) {
-				AbstractDungeon.actionManager.addToBottom(
-					new DamageRandomEnemyAction(
-							new DamageInfo(p, this.damage, this.damageTypeForTurn),
-							AbstractGameAction.AttackEffect.SLASH_DIAGONAL)
-					);
-			}
-		}
-	}
+  public static final String ID = "CollectingQuirk";
+  private static final CardStrings cardStrings =
+      CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardStrings.NAME;
+  public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String IMG_PATH = "img/cards/Strike.png";
+  private static final int COST = 2;
+  private static final int DVID = 4;
+  private static final int UPG_DVID = -1;
+  private static final int ATK_DMG = 7;
+  private int cnt;
 
-	public AbstractCard makeCopy() {
-		return new CollectingQuirk();
-	}
-	
-	public void upgrade() {
-		if (!this.upgraded) {
-			upgradeName();
-			//upgradeDamage(UPG_DMG);
-			upgradeMagicNumber(UPG_DVID);
-		}
-	}
+  public CollectingQuirk() {
+    super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
+        AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE,
+        AbstractCard.CardTarget.ALL_ENEMY);
+    this.baseDamage = ATK_DMG;
+    this.magicNumber = this.baseMagicNumber = DVID;
+    this.cnt = 0;
+    this.block = this.baseBlock = 0;
+  }
+
+  @Override
+  public void applyPowers() {
+    super.applyPowers();
+    getCounter();
+    this.block = this.cnt;
+    this.isBlockModified = this.block == 0;
+  }
+
+  public void use(AbstractPlayer p, AbstractMonster m) {
+    getCounter();
+    if (cnt > 0) {
+      for (int i = 0; i < cnt; i++) {
+        AbstractDungeon.actionManager.addToBottom(
+            new DamageRandomEnemyAction(
+                new DamageInfo(p, this.damage, this.damageTypeForTurn),
+                AbstractGameAction.AttackEffect.SLASH_DIAGONAL)
+        );
+      }
+    }
+  }
+
+  public AbstractCard makeCopy() {
+    return new CollectingQuirk();
+  }
+
+  private void getCounter() {
+    AbstractPlayer p = AbstractDungeon.player;
+    cnt = p.relics.size() / this.magicNumber;
+    if (p.hasRelic("Circlet")) {
+      cnt += p.getRelic("Circlet").counter - 1;
+    }
+    if (p.hasRelic("Red Circlet")) {
+      cnt += p.getRelic("Red Circlet").counter - 1;
+    }
+  }
+
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      //upgradeDamage(UPG_DMG);
+      upgradeMagicNumber(UPG_DVID);
+    }
+  }
 }
