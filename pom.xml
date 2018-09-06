@@ -32,7 +32,7 @@
     </dependencies>
 
     <build>
-        <finalName>TS05_Marisa_v0.12.3</finalName>
+        <finalName>TS05_Marisa_v0.12.4</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -52,8 +52,8 @@
                         <phase>package</phase>
                         <configuration>
                             <target>
-                                <copy file="target/TS05_Marisa_v0.12.3.jar" tofile="../lib/TS05_Marisa_v0.12.3.jar"/>
-                                <copy file="target/TS05_Marisa_v0.12.3.jar" tofile="E:/SteamLibrary/SteamApps/common/SlayTheSpire/mods/TS05_Marisa_v0.12.3.jar"/>
+                                <copy file="target/TS05_Marisa_v0.12.4.jar" tofile="../lib/TS05_Marisa_v0.12.4.jar"/>
+                                <copy file="target/TS05_Marisa_v0.12.4.jar" tofile="E:/SteamLibrary/SteamApps/common/SlayTheSpire/mods/TS05_Marisa_v0.12.4.jar"/>
                             </target>
                         </configuration>
                         <goals>

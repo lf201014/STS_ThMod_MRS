@@ -299,7 +299,7 @@ public class ThMod implements PostExhaustSubscriber,
     logger.info("begin editting cards");
 
     logger.info("add cards for MARISA");
-    //starter：4
+    //starter:4
     BaseMod.addCard(new Strike_MRS());
     UnlockTracker.unlockCard("Strike_MRS");
     BaseMod.addCard(new Defend_MRS());
@@ -308,7 +308,7 @@ public class ThMod implements PostExhaustSubscriber,
     UnlockTracker.unlockCard("MasterSpark");
     BaseMod.addCard(new UpSweep());
     UnlockTracker.unlockCard("UpSweep");
-    //attack：31
+    //attack:31
     //Common: 10
     BaseMod.addCard(new DoubleSpark());
     UnlockTracker.unlockCard("DoubleSpark");
@@ -373,7 +373,7 @@ public class ThMod implements PostExhaustSubscriber,
     BaseMod.addCard(new CollectingQuirk());
     UnlockTracker.unlockCard("CollectingQuirk");
 
-    //skill：28
+    //skill:28
     //Common : 6
     BaseMod.addCard(new MilkyWay());
     UnlockTracker.unlockCard("MilkyWay");
@@ -440,7 +440,7 @@ public class ThMod implements PostExhaustSubscriber,
     BaseMod.addCard(new BinaryStars());
     UnlockTracker.unlockCard("BinaryStars");
 
-    //power：12
+    //power:12
     //common:1
     BaseMod.addCard(new WitchOfGreed());
     UnlockTracker.unlockCard("WitchOfGreed");
@@ -469,7 +469,7 @@ public class ThMod implements PostExhaustSubscriber,
     BaseMod.addCard(new SuperNova());
     UnlockTracker.unlockCard("SuperNova");
 
-    //special：4
+    //special:4
     BaseMod.addCard(new Spark());
     UnlockTracker.unlockCard("Spark");
     BaseMod.addCard(new GuidingStar());
