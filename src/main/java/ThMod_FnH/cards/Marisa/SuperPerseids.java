@@ -16,81 +16,82 @@ import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
 public class SuperPerseids extends CustomCard {
-	public static final String ID = "SuperPerseids";
-	public static final String IMG_PATH = "img/cards/SuperPerseids.png";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 1;
-	private static final int DMG = 18;
-	private static final int UPG_DMG = 6;
-	private static final int BLC = 4;
-	private static final int UPG_BLC = 2;
-	
-	public SuperPerseids() {
-		super(
-				ID,
-				NAME,
-				IMG_PATH, 
-				COST,
-				DESCRIPTION, 
-				AbstractCard.CardType.SKILL,
-				AbstractCardEnum.MARISA_COLOR,
-				AbstractCard.CardRarity.UNCOMMON,
-				AbstractCard.CardTarget.SELF
-				);
 
-		this.baseDamage = DMG;
-		this.block = this.baseBlock = BLC;
-		this.damageType = DamageType.THORNS;
-		this.damageTypeForTurn = DamageType.THORNS;
-	}
-	
-	@Override
-	public void applyPowers() {
-		super.applyPowers();
-	}
-	  
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		int cnt = 0;
-		for (AbstractCard c : p.hand.group) {
-			if ((c.type == CardType.CURSE)||(c.type == CardType.STATUS)) {
-				cnt++;
-			}
-		}
-		if (cnt>0) {
-			AbstractDungeon.actionManager.addToBottom(
-					new GainBlockAction(
-							p,
-							p,
-							cnt*this.block
-							)
-					);
-		}
-	}
-	
-	public void triggerOnExhaust() {
-		AbstractDungeon.actionManager.addToBottom(
-				new DamageRandomEnemyAction(
-						new DamageInfo(
-							AbstractDungeon.player,
-							this.damage,
-							DamageType.THORNS
-							), 
-						AttackEffect.FIRE
-						)
-				);
-	}
-	
-	public AbstractCard makeCopy() {
-		return new SuperPerseids();
-	}
+  public static final String ID = "SuperPerseids";
+  public static final String IMG_PATH = "img/cards/SuperPerseids.png";
+  private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardStrings.NAME;
+  public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  private static final int COST = -2;
+  private static final int DMG = 18;
+  private static final int UPG_DMG = 6;
+  private static final int BLC = 5;
+  private static final int UPG_BLC = 3;
 
-	public void upgrade() {
-		if (!this.upgraded) {
-			upgradeName();
-			upgradeDamage(UPG_DMG);
-			upgradeBlock(UPG_BLC);
-		}
-	}
+  public SuperPerseids() {
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.SKILL,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.UNCOMMON,
+        AbstractCard.CardTarget.SELF
+    );
+
+    this.baseDamage = DMG;
+    this.block = this.baseBlock = BLC;
+    this.damageType = DamageType.THORNS;
+    this.damageTypeForTurn = DamageType.THORNS;
+  }
+
+  @Override
+  public void applyPowers() {
+    super.applyPowers();
+  }
+
+  public void triggerWhenDrawn() {
+    AbstractDungeon.actionManager.addToBottom(
+        new GainBlockAction(
+            AbstractDungeon.player,
+            AbstractDungeon.player,
+            this.block
+        )
+    );
+  }
+
+  @Override
+  public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+    return false;
+  }
+
+  public void use(AbstractPlayer p, AbstractMonster m) {
+  }
+
+  public void triggerOnExhaust() {
+    AbstractDungeon.actionManager.addToBottom(
+        new DamageRandomEnemyAction(
+            new DamageInfo(
+                AbstractDungeon.player,
+                this.damage,
+                DamageType.THORNS
+            ),
+            AttackEffect.FIRE
+        )
+    );
+  }
+
+  public AbstractCard makeCopy() {
+    return new SuperPerseids();
+  }
+
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      upgradeDamage(UPG_DMG);
+      upgradeBlock(UPG_BLC);
+    }
+  }
 }

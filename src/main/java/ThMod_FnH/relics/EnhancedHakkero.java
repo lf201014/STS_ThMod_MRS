@@ -30,12 +30,7 @@ public class EnhancedHakkero extends CustomRelic {
   }
 
   public AbstractRelic makeCopy() {
-    if (AbstractDungeon.player.hasRelic("MiniHakkero")) {
-      return new EnhancedHakkero();
-    } else {
-      return AbstractDungeon.returnRandomRelic(RelicTier.BOSS).makeCopy();
-    }
-
+    return new EnhancedHakkero();
   }
 
   public void obtain() {

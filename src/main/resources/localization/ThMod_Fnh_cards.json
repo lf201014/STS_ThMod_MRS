@@ -80,7 +80,7 @@
 	},
 	"MilkyWay": {
 		"NAME": "Milky Way",
-		"DESCRIPTION": "Gain !B!  block  .Increase the damage of all Attack in your hand by !M!."
+		"DESCRIPTION": "Gain !B!  block , Draw a card . NL Increase the damage of all Attack in your hand by !M!."
 	},
 	"NonDirectionalLaser": {
 		"NAME": "Non-Directional Laser",
@@ -178,7 +178,7 @@
 	},
 	"SuperPerseids": {
 		"NAME": "Super Perseids",
-		"DESCRIPTION": " Gain !B! block for each Status or Curse in your hand . NL When Exhasted , deal !D! damage to a random enemy.",
+		"DESCRIPTION": "Unplayable. Gain !B! block when you draw this card . NL When Exhasted , deal !D! damage to a random enemy.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MysteriousBeam": {
@@ -333,17 +333,17 @@
 	},
 	"ManaConvection": {
 		"NAME": "Mana Convection",
-		"DESCRIPTION": "Draw !M! cards,then exhaust 2. NL If your Charge-up stacks equals to or more than 8,lose 8 Charge-up and gain  [B]  [B]  .",
+		"DESCRIPTION": "Draw !M! cards,then exhaust 2. NL If your Charge-up stacks equals to or more than 8,lose 8 Charge-up and gain  [B] .",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"ManaRampage": {
 		"NAME": "Mana Rampage",
-		"DESCRIPTION": "This turn,your next attack will be played X times in addition.",
+		"DESCRIPTION": "Increase the damage of all attacks in your hand by !M!  X times and retain your hand until next turn.",
 		"UPGRADE_DESCRIPTION": "This turn,your next attack will be played X+1 times in addition."
 	},
 	"StarBarrage": {
 		"NAME": "Star Barrage",
-		"DESCRIPTION": "Deal !D! damage. NL If your deck has !M! or more cards,apply 1 Weak. NL If your discard pile has !M! or more cards ,apply 1 Vulnerable .",
+		"DESCRIPTION": "Deal !D! damage,then increase the damage of this card for the damage dealt.",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"AFriendsGift": {

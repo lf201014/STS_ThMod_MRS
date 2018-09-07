@@ -84,7 +84,7 @@
 	},
 	"MilkyWay": {
 		"NAME": "银河",
-		"DESCRIPTION": "获得 !B! 点 格挡 。增加你手中所有攻击牌 !M! 点伤害。"
+		"DESCRIPTION": "获得 !B! 点 格挡 , 抽一张卡。 NL 增加你手中所有攻击牌 !M! 点伤害。"
 	},
 	"NonDirectionalLaser": {
 		"NAME": "非定向激光",
@@ -157,7 +157,7 @@
 	},
 	"LuminesStrike": {
 		"NAME": "声光冲击",
-		"DESCRIPTION": "造成 !D! 点伤害 (2 × 你手中的卡牌数)。 NL 增幅  [B]  :伤害变为 !B! 点(4 × 你现在的能量数)。",
+		"DESCRIPTION": "造成 !D! 点伤害 (2 × 你的手牌数)。 NL 增幅  [B]  :伤害变为 !B! 点(4 × 你现在的能量)。",
 		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害 (3点基础伤害 × 你手中的卡牌数)。 NL 增幅  [B]  :伤害变为 !B! 点(5 × 你现在的能量数)。"
 	},
 	"OpenUniverse": {
@@ -182,7 +182,7 @@
 	},
 	"SuperPerseids": {
 		"NAME": "超级英仙座",
-		"DESCRIPTION": " 你手牌中每有1张 诅咒 或 状态 ，获得 !B! 格挡 。 NL 此卡被 消耗 时，随机造成 !D! 点伤害。",
+		"DESCRIPTION": " 不能被打出 。 当你抽到这张卡，获得 !B! 格挡 。 NL 此卡被 消耗 时，随机造成 !D! 点伤害。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"MysteriousBeam": {
@@ -297,7 +297,7 @@
 	},
 	"MoraleDepletion": {
 		"NAME": "战意枯竭",
-		"DESCRIPTION": "获得 !B! 点 格挡  ，这回合你将不能发动 增幅 效果。",
+		"DESCRIPTION": "获得 !B! 点 格挡  ，这回合你将不能发动 增幅 和 蓄力 效果。",
 		"UPGRADE_DESCRIPTION": "获得 !B! 点 格挡  ，这回合你将不能发动 增幅 和 蓄力 效果。"
 	},
 	"DarkMatter": {
@@ -332,17 +332,17 @@
 	},
 	"ManaConvection": {
 		"NAME": "魔力对流",
-		"DESCRIPTION": "抽 !M! 张卡，然后消耗2张卡。 NL 如果你的 蓄力 层数大于或等于8层，则消耗8层蓄力，获得  [B]  [B]  。",
+		"DESCRIPTION": "抽 !M! 张卡，然后消耗2张卡。 NL 如果你的 蓄力 层数大于或等于8层，则消耗8层蓄力，获得  [B] 。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"ManaRampage": {
 		"NAME": "魔力暴走",
-		"DESCRIPTION": "本回合内，你的下一张攻击牌将被额外打出X次。",
+		"DESCRIPTION": "将你手牌中所有攻击牌的伤害增加 !M! 点X次，然后 保留 所有手牌直到下一回合。",
 		"UPGRADE_DESCRIPTION": "本回合内，你的下一张攻击牌将被额外打出X+1次。"
 	},
 	"StarBarrage": {
 		"NAME": "魔法星弹",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果你的抽牌堆有 !M! 张或以上的卡，施加一层 虚弱 。 NL 如果你的弃牌堆有 !M! 张或以上的卡，施加一层 易伤 。",
+		"DESCRIPTION": "造成 !D! 点伤害，并使此卡的基础伤害增加所造成伤害的数值。",
 		"UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
 	},
 	"AFriendsGift": {

@@ -5,9 +5,10 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.powers.RegenPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
-import ThMod_FnH.powers.Marisa.GiftOfLifePower;
+import ThMod_FnH.powers.deprecated.GiftOfLifePower;
 import basemod.abstracts.CustomRelic;
 
 public class SproutingBranch extends CustomRelic {
@@ -33,16 +34,15 @@ public class SproutingBranch extends CustomRelic {
         return new SproutingBranch();
     }
     
-    public void atTurnStartPostDraw() {
+    public void atBattleStart() {
     	AbstractDungeon.actionManager.addToBottom(
       		  new RelicAboveCreatureAction(AbstractDungeon.player, this)
       		  );
-    	AbstractPlayer p = AbstractDungeon.player;
     	AbstractDungeon.actionManager.addToBottom(
 				new ApplyPowerAction(
-						p,
-						p,
-						new GiftOfLifePower(p, 1),
+						AbstractDungeon.player,
+						AbstractDungeon.player,
+						new RegenPower(AbstractDungeon.player, 5),
 						1
 						)
 				);

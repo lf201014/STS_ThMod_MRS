@@ -1,67 +1,56 @@
 package ThMod_FnH.cards.Marisa;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import ThMod_FnH.action.StarBarrageDamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
-
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class StarBarrage 
-	extends CustomCard {
-	
-	public static final String ID = "StarBarrage";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "img/cards/Strike.png";
-	private static final int COST = 0;
-	private static final int ATTACK_DMG = 4;
-	private static final int UPGRADE_PLUS_DMG = 2;
-	private static final int PILE_NUM = 15;
-	private static final int UP_PILE_NUM = -3;
+public class StarBarrage
+    extends CustomCard {
 
-	public StarBarrage() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON,
-				AbstractCard.CardTarget.ENEMY);
+  public static final String ID = "StarBarrage";
+  private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardStrings.NAME;
+  public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String IMG_PATH = "img/cards/Strike.png";
+  private static final int COST = 1;
+  private static final int ATK_DMG = 6;
+  private static final int UPGRADE_PLUS_DMG = 3;
 
-		this.baseDamage = ATTACK_DMG;
-		this.magicNumber = this.baseMagicNumber = PILE_NUM;
-	}
+  public StarBarrage() {
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.ATTACK,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.COMMON,
+        AbstractCard.CardTarget.ENEMY
+    );
+    this.baseDamage = ATK_DMG;
+  }
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(
-				new DamageAction(m,new DamageInfo(p, this.damage, this.damageTypeForTurn),AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-		if (p.drawPile.size() >= this.magicNumber) {
-			AbstractDungeon.actionManager.addToBottom(
-					new	ApplyPowerAction(m, p, new WeakPower(m, 1, false), 1));
-		}
-			
-		if (p.discardPile.size() >= this.magicNumber) {
-			AbstractDungeon.actionManager.addToBottom(
-					new	ApplyPowerAction(m, p, new VulnerablePower(m, 1, false), 1));
-		}
-	}
+  public void use(AbstractPlayer p, AbstractMonster m) {
+    AbstractDungeon.actionManager.addToBottom(
+        new StarBarrageDamageAction(m, this)
+    );
+  }
 
-	public AbstractCard makeCopy() {
-		return new StarBarrage();
-	}
+  public AbstractCard makeCopy() {
+    return new StarBarrage();
+  }
 
-	public void upgrade() {
-		if (!this.upgraded) {
-			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
-			upgradeMagicNumber(UP_PILE_NUM);
-		}
-	}
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      upgradeDamage(UPGRADE_PLUS_DMG);
+    }
+  }
 }

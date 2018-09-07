@@ -76,7 +76,7 @@
     "NAME": "发芽的树枝",
     "FLAVOR": "枯枝在魔理沙手中焕发出了生命，真是富有诗意。",
     "DESCRIPTIONS": [
-      "在你的回合开始时，给与你 #b1 层 #y生命恩赐 效果。"
+      "在每场战斗开始时，给与你 #b5 层 #y再生 。"
     ]
   }, "WWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWW",

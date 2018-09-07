@@ -76,7 +76,7 @@
     "NAME": "Sprouting Branch",
     "FLAVOR": "The dead branch just come to life in Marisa's hand,how poetic.",
     "DESCRIPTIONS": [
-      "At the Start of Turn,grant you #b1 stack #yGift #yof #ylife , which will heal you when your turn ends."
+      "At the Start of each battle,grant you #b5 stack #yRegen ."
     ]
   }, "WWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWW",
