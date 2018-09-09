@@ -9,66 +9,69 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import ThMod_FnH.ThMod;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 public class StarDustReverieAction
-	extends AbstractGameAction{
-	private AbstractPlayer p;
-	private boolean upgraded = false;
-  
-	public StarDustReverieAction(boolean upgraded){
-		this.duration = Settings.ACTION_DUR_FAST;
-		this.upgraded = upgraded;
-		this.p = AbstractDungeon.player;
-	}
-  
-	public void update(){
-		this.isDone = false;
-		int cnt = 0;
-		
-		ThMod.logger.info("StarDustReverieAction : player hand size : "+p.hand.size());
-		
-		if (!p.hand.isEmpty()) {
-			while (!p.hand.isEmpty()) {
-				AbstractCard c = p.hand.getTopCard();
-				ThMod.logger.info("StarDustReverieAction : moving "+c.cardID);
-					p.hand.moveToDeck(c, true);
-				cnt++;
-				ThMod.logger.info("StarDustReverieAction : Counter : "+cnt);
-			}
-		} else {
-			this.isDone = true;
-			return;
-		}
-		
-		p.drawPile.shuffle();
-		
-		for (AbstractRelic r: p.relics) {
-			r.onShuffle();
-		}
+    extends AbstractGameAction {
 
-		for (int i = 0 ; i < cnt ; i++ ) {
+  private AbstractPlayer p;
+  private boolean upgraded = false;
 
-			AbstractCard c = AbstractDungeon.returnTrulyRandomCard();
-	        	
-			ThMod.logger.info("StarDustReverieAction : adding "+c.cardID);
-			
-			if (this.upgraded) {
-				c.upgrade();
-			}
-			ThMod.logger.info(
-					"StarDustReverieAction : checking : Exhaust : "+c.exhaust+
-					" ; Ethereal : "+c.isEthereal+
-					" ; Upgraded : "+c.upgraded
-					);
-			AbstractDungeon.actionManager.addToBottom(
-					new MakeTempCardInHandAction(c, 1)
-					);
-		}		
+  public StarDustReverieAction(boolean upgraded) {
+    this.duration = Settings.ACTION_DUR_FAST;
+    this.upgraded = upgraded;
+    this.p = AbstractDungeon.player;
+  }
+
+  public void update() {
+    this.isDone = false;
+    int cnt = 0;
+
+    ThMod.logger.info("StarDustReverieAction : player hand size : " + p.hand.size());
+
+    if (!p.hand.isEmpty()) {
+      while (!p.hand.isEmpty()) {
+        AbstractCard c = p.hand.getTopCard();
+        ThMod.logger.info("StarDustReverieAction : moving " + c.cardID);
+        p.hand.moveToDeck(c, true);
+        cnt++;
+        ThMod.logger.info("StarDustReverieAction : Counter : " + cnt);
+      }
+    } else {
+      this.isDone = true;
+      return;
+    }
+
+    p.drawPile.shuffle();
+
+    for (AbstractRelic r : p.relics) {
+      r.onShuffle();
+    }
+
+    for (int i = 0; i < cnt; i++) {
+
+      AbstractCard c = AbstractDungeon.returnTrulyRandomCard();
+      UnlockTracker.unlockCard(c.cardID);
+
+      ThMod.logger.info("StarDustReverieAction : adding " + c.cardID);
+
+      if (this.upgraded) {
+        c.upgrade();
+      }
+      ThMod.logger.info(
+          "StarDustReverieAction : checking : Exhaust : " + c.exhaust +
+              " ; Ethereal : " + c.isEthereal +
+              " ; Upgraded : " + c.upgraded
+      );
+      AbstractDungeon.actionManager.addToBottom(
+          new MakeTempCardInHandAction(c, 1)
+      );
+    }
 		/*
 	    AbstractDungeon.actionManager.addToBottom(
 	    		new HandCheckAction(this.upgraded)
 	    		);
 	    */
-		this.isDone = true;
-	}
+    this.isDone = true;
+  }
 }

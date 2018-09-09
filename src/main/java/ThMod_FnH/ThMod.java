@@ -175,8 +175,7 @@ public class ThMod implements PostExhaustSubscriber,
         "ThMod.Amplified : card to check : " + card.cardID + " ; costForTurn : "
             + card.costForTurn);
     AbstractPlayer p = AbstractDungeon.player;
-    if ((p.hasPower("MoraleDepletionPower"))
-        || (p.hasPower("MoraleDepletionPlusPower"))) {
+    if (p.hasPower("MoraleDepletionPlusPower")) {
       logger.info("ThMod.Amplified :MoraleDepletionPower detected,returning false.");
       return false;
     }
@@ -248,7 +247,7 @@ public class ThMod implements PostExhaustSubscriber,
   }
 
   public void receiveEditCharacters() {
-    logger.info("begin editting characters");
+    logger.info("begin editing characters");
 
     logger.info("add " + ThModClassEnum.MARISA.toString());
 
@@ -273,23 +272,56 @@ public class ThMod implements PostExhaustSubscriber,
           ThModClassEnum.MARISA
       );
     }
-    logger.info("done editting characters");
+    logger.info("done editing characters");
   }
 
   public void receiveEditRelics() {
-    logger.info("Begin editting relics.");
+    logger.info("Begin editing relics.");
 
-    BaseMod.addRelicToCustomPool(new MiniHakkero(), AbstractCardEnum.MARISA_COLOR);
-    BaseMod.addRelicToCustomPool(new EnhancedHakkero(), AbstractCardEnum.MARISA_COLOR);
-    BaseMod.addRelicToCustomPool(new EnhancedBroom(), AbstractCardEnum.MARISA_COLOR);
-    BaseMod.addRelicToCustomPool(new AmplifyWand(), AbstractCardEnum.MARISA_COLOR);
-    BaseMod.addRelicToCustomPool(new ExperimentalFamiliar(), AbstractCardEnum.MARISA_COLOR);
-    BaseMod.addRelicToCustomPool(new RampagingMagicTools(), AbstractCardEnum.MARISA_COLOR);
-    BaseMod.addRelicToCustomPool(new BreadOfAWashokuLover(), AbstractCardEnum.MARISA_COLOR);
-    BaseMod.addRelicToCustomPool(new SimpleLauncher(), AbstractCardEnum.MARISA_COLOR);
-    BaseMod.addRelicToCustomPool(new HandmadeGrimoire(), AbstractCardEnum.MARISA_COLOR);
-    BaseMod.addRelicToCustomPool(new ShroomBag(), AbstractCardEnum.MARISA_COLOR);
-    BaseMod.addRelicToCustomPool(new SproutingBranch(), AbstractCardEnum.MARISA_COLOR);
+    BaseMod.addRelicToCustomPool(
+        new MiniHakkero(),
+        AbstractCardEnum.MARISA_COLOR
+    );
+    BaseMod.addRelicToCustomPool(
+        new EnhancedHakkero(),
+        AbstractCardEnum.MARISA_COLOR
+    );
+    BaseMod.addRelicToCustomPool(
+        new EnhancedBroom(),
+        AbstractCardEnum.MARISA_COLOR
+    );
+    BaseMod.addRelicToCustomPool(
+        new AmplifyWand(),
+        AbstractCardEnum.MARISA_COLOR
+    );
+    BaseMod.addRelicToCustomPool(
+        new ExperimentalFamiliar(),
+        AbstractCardEnum.MARISA_COLOR
+    );
+    BaseMod.addRelicToCustomPool(
+        new RampagingMagicTools(),
+        AbstractCardEnum.MARISA_COLOR
+    );
+    BaseMod.addRelicToCustomPool(
+        new BreadOfAWashokuLover(),
+        AbstractCardEnum.MARISA_COLOR
+    );
+    BaseMod.addRelicToCustomPool(
+        new SimpleLauncher(),
+        AbstractCardEnum.MARISA_COLOR
+    );
+    BaseMod.addRelicToCustomPool(
+        new HandmadeGrimoire(),
+        AbstractCardEnum.MARISA_COLOR
+    );
+    BaseMod.addRelicToCustomPool(
+        new ShroomBag(),
+        AbstractCardEnum.MARISA_COLOR
+    );
+    BaseMod.addRelicToCustomPool(
+        new SproutingBranch(),
+        AbstractCardEnum.MARISA_COLOR
+    );
     //BaseMod.addRelicToCustomPool(new Cape(), AbstractCardEnum.MARISA_COLOR);
 
     logger.info("Relics editting finished.");
@@ -322,8 +354,6 @@ public class ThMod implements PostExhaustSubscriber,
     UnlockTracker.unlockCard("WitchLeyline");
     BaseMod.addCard(new D6C());
     UnlockTracker.unlockCard("D6C");
-    //BaseMod.addCard(new FluorensentBeam());
-    //UnlockTracker.unlockCard("FluorensentBeam");
     BaseMod.addCard(new _6A());
     UnlockTracker.unlockCard("6A");
     BaseMod.addCard(new UnstableBomb());
@@ -402,8 +432,6 @@ public class ThMod implements PostExhaustSubscriber,
     UnlockTracker.unlockCard("BlazeAway");
     BaseMod.addCard(new ChargingUp());
     UnlockTracker.unlockCard("ChargingUp");
-    //BaseMod.addCard(new CircumpolarStar());
-    //UnlockTracker.unlockCard("CircumpolarStar");
     BaseMod.addCard(new DarkMatter());
     UnlockTracker.unlockCard("DarkMatter");
     BaseMod.addCard(new MagicChant());
@@ -479,7 +507,7 @@ public class ThMod implements PostExhaustSubscriber,
     BaseMod.addCard(new WhiteDwarf());
     UnlockTracker.unlockCard("WhiteDwarf");
 
-    logger.info("done editting cards");
+    logger.info("done editing cards");
   }
 
   public static void initialize() {
@@ -551,7 +579,6 @@ public class ThMod implements PostExhaustSubscriber,
 
   @Override
   public void receiveEditStrings() {
-    // TODO Auto-generated method stublogger.info("begin editing strings");
     logger.info("start editing strings");
 
     String relicStrings, cardStrings, powerStrings;
@@ -585,12 +612,7 @@ public class ThMod implements PostExhaustSubscriber,
           .readString(String.valueOf(StandardCharsets.UTF_8));
       BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
     }
-
-    logger.info(("relics :" + relicStrings.length()));
-    logger.info(("powers :" + cardStrings.length()));
-    logger.info(("cards :" + powerStrings.length()));
-
-    logger.info("done editting strings");
+    logger.info("done editing strings");
   }
 
   @Override

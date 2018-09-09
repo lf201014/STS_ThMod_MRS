@@ -1,5 +1,6 @@
 package ThMod_FnH.cards.Marisa;
 
+import ThMod_FnH.ThMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -41,18 +42,18 @@ public class SuperPerseids extends CustomCard {
         AbstractCard.CardTarget.SELF
     );
 
-    this.baseDamage = DMG;
+    this.damage = this.baseDamage = DMG;
     this.block = this.baseBlock = BLC;
     this.damageType = DamageType.THORNS;
     this.damageTypeForTurn = DamageType.THORNS;
   }
 
-  @Override
-  public void applyPowers() {
-    super.applyPowers();
-  }
-
   public void triggerWhenDrawn() {
+    this.applyPowers();
+    ThMod.logger.info("SuperPerseids : triggerWhenDrawn : Granting Block "
+        +"; : upgraded : "+this.upgraded
+        +"; : block : "+this.block
+    );
     AbstractDungeon.actionManager.addToBottom(
         new GainBlockAction(
             AbstractDungeon.player,
@@ -71,6 +72,11 @@ public class SuperPerseids extends CustomCard {
   }
 
   public void triggerOnExhaust() {
+    this.applyPowers();
+    ThMod.logger.info("SuperPerseids : triggerOnExhaust : Damaging Random Enemy :"
+        +"; upgraded : "+this.upgraded
+        +"; damage : "+this.damage
+    );
     AbstractDungeon.actionManager.addToBottom(
         new DamageRandomEnemyAction(
             new DamageInfo(

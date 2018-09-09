@@ -25,10 +25,17 @@ public class MoraleDepletion extends CustomCard {
   //private static final int UPGRADE_PLUS_BLOCK = 2;
 
   public MoraleDepletion() {
-    super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-        AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,
-        AbstractCard.CardTarget.SELF);
-
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.SKILL,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.UNCOMMON,
+        AbstractCard.CardTarget.SELF
+    );
     this.baseBlock = BLOCK_AMT;
   }
 

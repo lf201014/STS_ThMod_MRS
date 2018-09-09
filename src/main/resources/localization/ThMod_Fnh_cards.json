@@ -98,8 +98,8 @@
 	},
 	"PolarisUnique": {
 		"NAME": "Polaris Unique",
-		"DESCRIPTION": "Shuffle a Guiding Star into your deck.Gain [B] at each start of turn if Guiding Star is in your deck.",
-		"UPGRADE_DESCRIPTION": "Shuffle a upgraded Guiding Star into your deck.Gain [B] at each start of turn if Guiding Star is in your deck."
+		"DESCRIPTION": "Put a Guiding Star into your deck.Gain [B] at each start of turn if Guiding Star is in your deck.",
+		"UPGRADE_DESCRIPTION": "Put an upgraded Guiding Star into your deck.Gain [B] at each start of turn if Guiding Star is in your deck."
 	},
 	"SatelliteIllusion": {
 		"NAME": "Satellite Illusion",
@@ -303,8 +303,8 @@
 	},
 	"DarkMatter": {
 		"NAME": "Dark Matter",
-		"DESCRIPTION": "Shuffle 2 Dark Matter into your Draw Pile,gain !B! block when exhausted. NL Ethereal .",
-		"UPGRADE_DESCRIPTION": "Shuffle 2 Upgraded Dark Matter into your Draw Pile,gain !B! block when exhausted. NL Ethereal ."
+		"DESCRIPTION": "Put 2 Dark Matter into your Draw Pile,gain !B! block when exhausted. NL Ethereal .",
+		"UPGRADE_DESCRIPTION": "Put 2 Upgraded Dark Matter into your Draw Pile,gain !B! block when exhausted. NL Ethereal ."
 	},
 	"GasGiant": {
 		"NAME": "Gas Giant",

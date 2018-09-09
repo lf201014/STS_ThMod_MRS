@@ -47,7 +47,7 @@ public class ManaRampage extends CustomCard {
       cnt += 2;
     }
     for (AbstractCard c : p.hand.group) {
-      if ((!c.isEthereal)) {
+      if ((!c.isEthereal)&&(c != this)) {
         c.retain = true;
       }
     }
