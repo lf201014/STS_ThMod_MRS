@@ -78,7 +78,7 @@
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 增幅  [B]  :伤害变为 !B! 点。",
 		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Amplify  [B]  :add 9 to base damage."
 	},
-	"MeteonicShower": {
+	"MeteoricShower": {
 		"NAME": "流星雨",
 		"DESCRIPTION": " 消耗最多X+1张手牌，每消耗一张，随机造成 !D! 点2次，消耗的牌中每有一张 灼伤 ，攻击次数+1。"
 	},

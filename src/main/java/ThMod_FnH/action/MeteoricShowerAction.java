@@ -12,14 +12,14 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 
-public class MeteonicShowerAction extends AbstractGameAction{
+public class MeteoricShowerAction extends AbstractGameAction{
 	private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
 	public static final String[] TEXT = uiStrings.TEXT;
 	private AbstractPlayer p;
 	private int num;
 	private int dmg;
   
-	public MeteonicShowerAction(int number,int damage) {
+	public MeteoricShowerAction(int number,int damage) {
 		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
 		this.p = AbstractDungeon.player;
 		this.duration = Settings.ACTION_DUR_FAST;

@@ -74,8 +74,8 @@
 		"DESCRIPTION": "Deal !D! damage. NL Amplify  [B]  :Deal !B! damage instead.",
 		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Amplify  [B]  :add 9 to base damage."
 	},
-	"MeteonicShower": {
-		"NAME": "Meteonic Shower",
+	"MeteoricShower": {
+		"NAME": "Meteoric Shower",
 		"DESCRIPTION": " Exhaust X+1 cards at most. NL For each card exhausted deal !D! damage twice,and for each Burn exhausted,deal damage once more."
 	},
 	"MilkyWay": {
