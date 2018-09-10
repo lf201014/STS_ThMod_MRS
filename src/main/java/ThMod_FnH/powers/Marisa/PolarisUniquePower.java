@@ -14,53 +14,56 @@ import ThMod_FnH.cards.special.GuidingStar;
 
 import com.megacrit.cardcrawl.localization.PowerStrings;
 
-public class PolarisUniquePower extends AbstractPower{
-	public static final String POWER_ID = "PolarisUniquePower";
-	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
-	public static final String NAME = powerStrings.NAME;
-	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-	private AbstractPlayer p;
-	public boolean Gain;
-  
-	public PolarisUniquePower(AbstractCreature owner){
-		ThMod.logger.info("PolarisUniquePower : Init");
-		this.name = NAME;
-		this.ID = POWER_ID;
-		this.type = AbstractPower.PowerType.BUFF;
-		updateDescription();
-		this.img = new Texture("img/powers/transmute.png");
-		this.p = AbstractDungeon.player;
-		this.Gain = false;
-		this.owner = owner;
+public class PolarisUniquePower extends AbstractPower {
 
-		ThMod.logger.info("PolarisUniquePower : Done initing");
-	}
- 
- 
-	public void stackPower(int stackAmount){
-		ThMod.logger.info("PolarisUniquePower : StackPower");
-	}
+  public static final String POWER_ID = "PolarisUniquePower";
+  private static final PowerStrings powerStrings = CardCrawlGame.languagePack
+      .getPowerStrings(POWER_ID);
+  public static final String NAME = powerStrings.NAME;
+  public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+  private AbstractPlayer p;
+  public boolean Gain;
 
-	public void atStartOfTurnPostDraw() {
-		ThMod.logger.info("PolarisUniquePower : Checking");
+  public PolarisUniquePower(AbstractCreature owner) {
+    ThMod.logger.info("PolarisUniquePower : Init");
+    this.name = NAME;
+    this.ID = POWER_ID;
+    this.type = AbstractPower.PowerType.BUFF;
+    updateDescription();
+    this.img = new Texture("img/powers/transmute.png");
+    this.p = AbstractDungeon.player;
+    this.Gain = false;
+    this.owner = owner;
 
-		for (AbstractCard c:p.drawPile.group) {
-			if (c instanceof GuidingStar)
-				this.Gain = true;
-		}
-		ThMod.logger.info("PolarisUniquePower : Result : "+Gain);
-		if (Gain) {
-			flash();
-			AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
-		}
-		this.Gain = false;
+    ThMod.logger.info("PolarisUniquePower : Done initing");
+  }
 
-		ThMod.logger.info("PolarisUniquePower : Done Checking");
-	}
- 
-	public void updateDescription(){
-		ThMod.logger.info("PolarisUniquePower : updating Description");
-		this.description = (DESCRIPTIONS[0]);
-		ThMod.logger.info("PolarisUniquePower : Done updating Description");
-	}
+
+  public void stackPower(int stackAmount) {
+    ThMod.logger.info("PolarisUniquePower : StackPower");
+  }
+
+  public void atStartOfTurnPostDraw() {
+    ThMod.logger.info("PolarisUniquePower : Checking");
+
+    for (AbstractCard c : p.drawPile.group) {
+      if (c instanceof GuidingStar) {
+        this.Gain = true;
+      }
+    }
+    ThMod.logger.info("PolarisUniquePower : Result : " + Gain);
+    if (Gain) {
+      flash();
+      AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+    }
+    this.Gain = false;
+
+    ThMod.logger.info("PolarisUniquePower : Done Checking");
+  }
+
+  public void updateDescription() {
+    ThMod.logger.info("PolarisUniquePower : updating Description");
+    this.description = (DESCRIPTIONS[0]);
+    ThMod.logger.info("PolarisUniquePower : Done updating Description");
+  }
 }

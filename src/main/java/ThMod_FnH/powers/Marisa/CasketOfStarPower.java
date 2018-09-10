@@ -11,29 +11,31 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import ThMod_FnH.cards.special.Spark;
 
-public class CasketOfStarPower extends AbstractPower{
-	public static final String POWER_ID = "CasketOfStarPower";
-	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
-	public static final String NAME = powerStrings.NAME;
-	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-  
-	public CasketOfStarPower(AbstractCreature owner , int amount){
-		this.name = NAME;
-		this.ID = POWER_ID;
-		this.owner = owner;
-		this.amount = amount;
-		this.type = AbstractPower.PowerType.BUFF;
-		updateDescription();
-		this.img = new Texture("img/powers/energyNext.png");
-	}
-	
-	public void onGainedBlock(float blockAmount){
-		AbstractCard card = new Spark();
-		AbstractDungeon.actionManager.addToBottom(
-				new MakeTempCardInHandAction(card, this.amount));
-	}
+public class CasketOfStarPower extends AbstractPower {
 
-	public void updateDescription(){
-		this.description = (DESCRIPTIONS[0]+this.amount+DESCRIPTIONS[1]);
-	}
+  public static final String POWER_ID = "CasketOfStarPower";
+  private static final PowerStrings powerStrings = CardCrawlGame.languagePack
+      .getPowerStrings(POWER_ID);
+  public static final String NAME = powerStrings.NAME;
+  public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
+  public CasketOfStarPower(AbstractCreature owner, int amount) {
+    this.name = NAME;
+    this.ID = POWER_ID;
+    this.owner = owner;
+    this.amount = amount;
+    this.type = AbstractPower.PowerType.BUFF;
+    updateDescription();
+    this.img = new Texture("img/powers/energyNext.png");
+  }
+
+  public void onGainedBlock(float blockAmount) {
+    AbstractCard card = new Spark();
+    AbstractDungeon.actionManager.addToBottom(
+        new MakeTempCardInHandAction(card, this.amount));
+  }
+
+  public void updateDescription() {
+    this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+  }
 }
