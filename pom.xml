@@ -3,7 +3,7 @@
 
     <groupId>ThMod_FnH</groupId>
     <artifactId>ThMod_FnH</artifactId>
-    <version>v0.0.1</version>
+    <version>v0.12.7</version>
     <packaging>jar</packaging>
 
 
@@ -11,21 +11,21 @@
         <dependency>
             <groupId>com.megacrit.cardcrawl</groupId>
             <artifactId>slaythespire</artifactId>
-            <version>016</version>
+            <version>906</version>
             <scope>system</scope>
             <systemPath>${basedir}/../lib/desktop-1.0.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>basemod</groupId>
             <artifactId>basemod</artifactId>
-            <version>2.10.0</version>
+            <version>3.2.2</version>
             <scope>system</scope>
             <systemPath>${basedir}/../lib/BaseMod.jar</systemPath>
         </dependency>
         <dependency>
 	        <groupId>com.evacipated.cardcrawl</groupId>
 		      <artifactId>ModTheSpire</artifactId>
-		      <version>2.6.0</version>
+		      <version>3.1.0</version>
 		      <scope>system</scope>
           <systemPath>${basedir}/../lib/ModTheSpire.jar</systemPath>
 	      </dependency>

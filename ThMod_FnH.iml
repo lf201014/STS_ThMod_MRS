@@ -14,7 +14,7 @@
     <orderEntry type="library" name="ModTheSpire" level="project" />
     <orderEntry type="library" name="desktop-1.0" level="project" />
     <orderEntry type="module-library">
-      <library name="Maven: com.megacrit.cardcrawl:slaythespire:016">
+      <library name="Maven: com.megacrit.cardcrawl:slaythespire:906">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../lib/desktop-1.0.jar!/" />
         </CLASSES>
@@ -23,7 +23,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: basemod:basemod:2.10.0">
+      <library name="Maven: basemod:basemod:3.2.2">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../lib/BaseMod.jar!/" />
         </CLASSES>
@@ -32,7 +32,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: com.evacipated.cardcrawl:ModTheSpire:2.6.0">
+      <library name="Maven: com.evacipated.cardcrawl:ModTheSpire:3.1.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../lib/ModTheSpire.jar!/" />
         </CLASSES>

@@ -5,80 +5,93 @@
     "DESCRIPTIONS": [
       "每打出一张卡，获得一层 #y蓄力 。"
     ]
-  }, "EnhancedHakkero": {
+  },
+  "EnhancedHakkero": {
     "NAME": "妖器八卦炉",
     "FLAVOR": "受到万宝槌魔力影响的八卦炉的火力前所未有地强大；当然，使用这样的道具也是有代价的……",
     "DESCRIPTIONS": [
       "取代 #r迷你八卦炉 。 NL 每打出一张卡，获得两层 #y蓄力 。 NL 在你的回合开始时，向手牌里加入一张 #y灼伤 。"
     ]
-  }, "MagicArmor": {
+  },
+  "MagicArmor": {
     "NAME": "黑魔法盾",
     "FLAVOR": "说实话我也不知道这是个啥玩意儿，不过策划案里有这个，我就做了。——程序",
     "DESCRIPTIONS": [
       "每当你抽到一张 #y诅咒 或 #y状态 ，获得 5 格挡 。"
     ]
-  }, "EnhancedBroom": {
+  },
+  "EnhancedBroom": {
     "NAME": "魔法笤帚",
     "FLAVOR": "魔理沙用来骑着飞来飞去的魔法扫帚。",
     "DESCRIPTIONS": [
       "每 #b3 次以 #b0 费使用卡牌，抽一张卡。"
     ]
-  }, "AmplifyWand": {
+  },
+  "AmplifyWand": {
     "NAME": "增幅魔杖",
     "FLAVOR": "没怎么被见到用过的一根魔杖。",
     "DESCRIPTIONS": [
       "你每发动 #b3 次 #y增幅 效果，获得 #b2 点能量 。"
     ]
-  }, "RampagingMagicTools": {
+  },
+  "RampagingMagicTools": {
     "NAME": "失控的魔法道具",
     "FLAVOR": "好像很久没被用过的道具，不知道使用的时候会发生什么。",
     "DESCRIPTIONS": [
       "每回合开始获得 [B] 。在每场战斗开始时，从以下五种状态效果随机获得一种： #b3 层 #y虚弱 、 #b3 层 #y脆弱 、 #b3 层 #y易伤 、 #b3 层 #y中毒、 #b8 层 #y蓄力 。"
     ]
-  }, "ExperimentalFamiliar": {
+  },
+  "ExperimentalFamiliar": {
     "NAME": "试验型使魔",
     "FLAVOR": "像个光球一样的使魔，虽然不太强但是绝对能帮上忙。",
     "DESCRIPTIONS": [
       "在回合开始时，将一张 #y火花 和一张随机卡片加入手卡。"
     ]
-  }, "BreadOfAWashokuLover": {
+  },
+  "BreadOfAWashokuLover": {
     "NAME": "和食主义者的面包",
     "FLAVOR": "“你能记得清楚到今天为止自己吃过的面包的数量吗？”“13块。我是和食主义者。”",
     "DESCRIPTIONS": [
       "每当你 #y消耗 一张 #y状态 或 #y诅咒，恢复 #b1 点 生命 。累计触发 #b13 次后获得 #b13 点 #y最大生命值 ，同时此遗物失效。"
     ]
-  }, "SimpleLauncher": {
+  },
+  "SimpleLauncher": {
     "NAME": "简易发射器",
     "FLAVOR": "从香霖那里淘来的东西，看起来很好用……大概吧……",
     "DESCRIPTIONS": [
       "现在你只需要 #b6 层 #y蓄力 来发动攻击力翻倍效果了。"
     ]
-  }, "HandmadeGrimoire": {
+  },
+  "HandmadeGrimoire": {
     "NAME": "自制魔导书",
     "FLAVOR": "其实是个写满了实验记录和魔法材料配方的笔记本。",
     "DESCRIPTIONS": [
       "你的主卡组每有 #b15 张卡，在每场战斗开始时获得 #b1 点能量并抽一张卡。"
     ]
-  }, "ShroomBag": {
+  },
+  "ShroomBag": {
     "NAME": "蘑菇袋",
     "FLAVOR": "所有的魔女都对蘑菇有异样的热情……或者只是魔理沙有？",
     "DESCRIPTIONS": [
       "拾取时向卡组中加入 #b2 张 #y寄生 。使你可以将 #y寄生 打出，从而将其 #y消耗 并回复 #b3 点生命值。"
     ]
-  }, "Cape": {
+  },
+  "Cape": {
     "NAME": "怪盗披风",
     "FLAVOR": "如果能把想要的东西弄到手，魔理沙并不介意使用什么方法；而这个披风正好是方法之一。",
     "DESCRIPTIONS": [
-      "还能使用 #b",
+      "每当进入商店，获得一份随机的战斗房奖励。",
       " 次。 NL 进入商店时，你购买的第一件货物免费。"
     ]
-  }, "SproutingBranch": {
+  },
+  "SproutingBranch": {
     "NAME": "发芽的树枝",
     "FLAVOR": "枯枝在魔理沙手中焕发出了生命，真是富有诗意。",
     "DESCRIPTIONS": [
       "在每场战斗开始时，给与你 #b5 层 #y再生 。"
     ]
-  }, "WWWWWWWWWWW": {
+  },
+  "WWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWW",
     "FLAVOR": "WWWWWWWWWWWWWWW",
     "DESCRIPTIONS": [

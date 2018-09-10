@@ -6,63 +6,63 @@
       ""
     ]
   },
-    "ExtraDraw": {
+  "ExtraDraw": {
     "NAME": "第二宇宙速度",
     "DESCRIPTIONS": [
       "回合开始时，将 #b",
       " 张 #y灼伤 加入手牌。"
     ]
   },
-    "EventHorizonPower": {
+  "EventHorizonPower": {
     "NAME": "黑洞边缘",
     "DESCRIPTIONS": [
       "当你发动 #y增幅 时，可以选一张弃牌堆的卡加入手牌。本效果每回合只能发动 #b",
       " 次。"
     ]
   },
-    "IllusionStarPower": {
+  "IllusionStarPower": {
     "NAME": "幻像之星",
     "DESCRIPTIONS": [
       "At the start of your turn , transform ",
       "card(s) of your hand."
     ]
   },
-    "MilliPulsaPower": {
+  "MilliPulsaPower": {
     "NAME": "毫秒脉冲星",
     "DESCRIPTIONS": [
       "你不在需要支付额外的能量来发动 #y增幅 。",
       ""
     ]
   },
-    "SatellIllusPower": {
+  "SatellIllusPower": {
     "NAME": "卫星幻觉",
     "DESCRIPTIONS": [
       "每当你使用一张不在你卡组中的卡时，抽 #b",
       " 张卡。"
     ]
   },
-    "TempStrength": {
+  "TempStrength": {
     "NAME": "Temproy Strength",
     "DESCRIPTIONS": [
       "Your next blow deals additional ",
       " damage."
     ]
   },
-    "TempStrengthLoss": {
+  "TempStrengthLoss": {
     "NAME": "力量下降",
     "DESCRIPTIONS": [
       "这个生物的攻击力下降了 #b",
       " 点。"
     ]
   },
-    "ExtraEnergyPower": {
+  "ExtraEnergyPower": {
     "NAME": "Extra Energy",
     "DESCRIPTIONS": [
       "Gain ",
       " energy in addition each turn."
     ]
   },
-    "ChargeUpPower": {
+  "ChargeUpPower": {
     "NAME": " 蓄力 ",
     "DESCRIPTIONS": [
       "你现在有",
@@ -71,188 +71,185 @@
       " 倍伤害。"
     ]
   },
-    "PolarisUniquePower": {
+  "PolarisUniquePower": {
     "NAME": "北极星",
     "DESCRIPTIONS": [
       "在回合开始时，如果 #y北极星 在你的抽卡堆里，则获得 #b1 点能量。"
     ]
   },
-    "OrrerysSunPower": {
+  "OrrerysSunPower": {
     "NAME": "太阳仪",
     "DESCRIPTIONS": [
       "每次消耗 #y蓄力 层数，都会对所有敌人造成 #b",
       " 点伤害。"
     ]
   },
-    "Charged": {
+  "Charged": {
     "NAME": "Charged!",
     "DESCRIPTIONS": [
       "Your next blow will do ",
       " times damage"
     ]
   },
-    "BlazeAwayPower": {
+  "BlazeAwayPower": {
     "NAME": "Blaze Away",
     "DESCRIPTIONS": [
       "复制 #b",
       " 张你接下来使用的攻击牌到手牌。"
     ]
   },
-    "MPPower": {
+  "MPPower": {
     "NAME": "火力全开！",
     "DESCRIPTIONS": [
       "你的本回合的攻击会造成 #b",
       " 倍伤害。"
     ]
   },
-    "EnergyFlowPower": {
+  "EnergyFlowPower": {
     "NAME": "能量涌动",
     "DESCRIPTIONS": [
       "在你的回合结束时，获得 #b",
       " 层 #y蓄力 。"
     ]
   },
-    "PulseMagicPower": {
+  "PulseMagicPower": {
     "NAME": "脉冲魔术",
     "DESCRIPTIONS": [
       "本回合内你不再需要支付额外能量来发动 #y增幅 效果。",
       "WWWWWWWWWWW"
     ]
   },
-    "SingularityPower": {
+  "SingularityPower": {
     "NAME": "奇点",
     "DESCRIPTIONS": [
       "每当你使用一张费用为 0 的卡时，使你手中所有攻击牌攻击力增加 #b",
       " 点。"
     ]
   },
-    "WitchOfGreedGold": {
+  "WitchOfGreedGold": {
     "NAME": "强欲魔女",
     "DESCRIPTIONS": [
       "战斗结束时获得 #b",
       " 金币 。"
     ]
   },
-    "WitchOfGreedPotion": {
+  "WitchOfGreedPotion": {
     "NAME": "强欲魔女",
     "DESCRIPTIONS": [
       "战斗结束时获得 #b",
       " 瓶随机药剂。"
     ]
   },
-    "MoraleDepletionPlusPower": {
+  "MoraleDepletionPlusPower": {
     "NAME": "战意丧失",
     "DESCRIPTIONS": [
       "这回合你将不再触发 #y增幅 和 #y蓄力 效果。",
       "WWWWWWWWWWW"
     ]
   },
-    "MoraleDepletionPower": {
+  "MoraleDepletionPower": {
     "NAME": "战意丧失",
     "DESCRIPTIONS": [
       "这回合你将不再触发 #y增幅 效果。",
       "WWWWWWWWWWW"
     ]
   },
-    "SuperNovaPower": {
+  "SuperNovaPower": {
     "NAME": "超新星",
     "DESCRIPTIONS": [
       "你每 #y消耗 一张 #y灼伤 ，获得 #b",
       " 层 #y力量 。NL 你不再受到 #y灼伤 的伤害。 NL 在你的回合结束时， #y消耗 你所有的手牌"
     ]
   },
-    "CasketOfStarPlusPower": {
+  "CasketOfStarPlusPower": {
     "NAME": "星之器",
     "DESCRIPTIONS": [
       "每当你获得 #y格挡 ，将 #b",
       " 张 #y升级 过的 #y火花 加入手牌。"
     ]
   },
-    "CasketOfStarPower": {
+  "CasketOfStarPower": {
     "NAME": "星之器",
     "DESCRIPTIONS": [
       "每当你获得 #y格挡 ，将 #b",
       " 张 #y火花 加入手牌。"
     ]
   },
-    "GalacticHaloPower": {
+  "GalacticHaloPower": {
     "NAME": "星晕",
     "DESCRIPTIONS": [
       "你每打出一张攻击牌，回合结束时获得 #b",
       "  #y格挡 。"
     ]
   },
-    "ManaRampagePower": {
+  "ManaRampagePower": {
     "NAME": "魔力暴走",
     "DESCRIPTIONS": [
       "你的下一张攻击牌将被打出 #b",
       " 次。"
     ]
   },
-    "PropBagPower": {
+  "PropBagPower": {
     "NAME": "便携道具包",
     "DESCRIPTIONS": [
       "战斗结束时，失去  #y",
       " 。"
     ]
   },
-    "UltraShortWavePower": {
+  "UltraShortWavePower": {
     "NAME": "极超短波",
     "DESCRIPTIONS": [
       "你的 #y极超短波 的效果被加强了 #b",
       " 次。"
     ]
   },
-    "DarkSparkPower": {
+  "DarkSparkPower": {
     "NAME": "暗色火花",
     "DESCRIPTIONS": [
       "这一回合，你打出的每一张名字有‘火花’的牌都会给你  #b",
       " 点额外的 #y蓄力 。"
     ]
   },
-    "MagicChantPower": {
+  "MagicChantPower": {
     "NAME": "咏唱",
     "DESCRIPTIONS": [
       "下一回合，使 #y",
       " 的费用减1。"
     ]
   },
-    "SatelIllusPower": {
+  "SatelIllusPower": {
     "NAME": "卫星幻觉",
     "DESCRIPTIONS": [
       "在你的回合内，当你抽卡堆里的卡牌数量增加时，获得  #b",
       " 点能量。"
     ]
   },
-    "GrandCrossPower": {
+  "GrandCrossPower": {
     "NAME": "增幅",
     "DESCRIPTIONS": [
       "你在这回合已发动了 #y增幅 效果。",
       "WWWWWWWWWWW"
     ]
   },
-    "Diaspora": {
+  "Diaspora": {
     "NAME": "散灭",
     "DESCRIPTIONS": [
       "在其回合结束时，如果该生物的生命值低于 #b",
       " 则会被立即杀死。"
     ]
   },
-    "GiftOfLife": {
+  "GiftOfLife": {
     "NAME": "生命恩赐",
     "DESCRIPTIONS": [
       "在回合结束时恢复 #b",
       " 点生命值。"
     ]
   },
-    "WWWWWWWWWWWWWWW": {
+  "WWWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [
       "WWWWWWWWWWW",
       "WWWWWWWWWWW"
     ]
   }
-
-
-
 }

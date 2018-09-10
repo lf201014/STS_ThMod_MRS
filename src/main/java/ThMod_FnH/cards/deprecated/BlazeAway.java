@@ -1,6 +1,6 @@
-package ThMod_FnH.cards.Marisa;
+package ThMod_FnH.cards.deprecated;
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,7 +11,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import ThMod_FnH.ThMod;
 import ThMod_FnH.patches.AbstractCardEnum;
+import ThMod_FnH.powers.Marisa.BlazeAwayPower;
 
+@Deprecated
 public class BlazeAway extends CustomCard {
 
   public static final String ID = "BlazeAway";
@@ -24,7 +26,7 @@ public class BlazeAway extends CustomCard {
   private static final int STC = 1;
 
   private static final int AMP = 1;
-  //private static final int AMP_STC = 1;
+  private static final int AMP_STC = 1;
 
   public BlazeAway() {
     super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
@@ -32,24 +34,19 @@ public class BlazeAway extends CustomCard {
         AbstractCard.CardTarget.SELF);
 
     this.baseMagicNumber = this.magicNumber = STC;
-    //this.exhaust = true;
+    this.exhaust = true;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-    if (ThMod.lastAttack != null) {
-      ThMod.logger.info("BlazeAway : last attack :" + ThMod.lastAttack.cardID);
-      AbstractCard card = ThMod.lastAttack.makeStatEquivalentCopy();
-      if (ThMod.Amplified(this, AMP)) {
-        card.costForTurn = card.cost = 0;
-      }
-      AbstractDungeon.actionManager.addToBottom(
-          new MakeTempCardInHandAction(card, 1)
-      );
-
-    } else {
-      ThMod.logger.info("BlazeAway : error : last attack is null ");
+    int stack = this.magicNumber;
+    if (ThMod.Amplified(this, AMP)) {
+      stack += AMP_STC;
     }
 
+    ThMod.logger.info("BlazeWay : Applying power : " + stack);
+
+    AbstractDungeon.actionManager
+        .addToBottom(new ApplyPowerAction(p, p, new BlazeAwayPower(p, stack), stack));
   }
 
   public AbstractCard makeCopy() {
@@ -59,10 +56,9 @@ public class BlazeAway extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      upgradeBaseCost(0);
-      //this.rawDescription = DESCRIPTION_UPG;
-      //initializeDescription();
-      //this.exhaust = false;
+      this.rawDescription = DESCRIPTION_UPG;
+      initializeDescription();
+      this.exhaust = false;
     }
   }
 }

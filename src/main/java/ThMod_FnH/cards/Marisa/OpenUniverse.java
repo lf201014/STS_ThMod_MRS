@@ -43,7 +43,6 @@ public class OpenUniverse extends CustomCard {
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-    //boolean amp = ThMod.Amplified(this.costForTurn+AMP , AMP);
 
     ThMod.logger.info("OpenUniverse : generating cards");
 

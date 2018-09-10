@@ -22,7 +22,7 @@ public class MachineGunSpark
 	public static final String IMG_PATH = "img/cards/MachineGunSpark.png";
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 1;
-	private static final int CNT = 6;
+	private static final int CNT = 5;
 	private static final int UPG_CNT = 2;
 
 	public MachineGunSpark() {
