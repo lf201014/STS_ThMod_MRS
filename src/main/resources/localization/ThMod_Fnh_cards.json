@@ -163,7 +163,7 @@
   },
   "BlazeAway": {
     "NAME": "Blaze Away",
-    "DESCRIPTION": "Add a copy of the last Attack you played this combat. NL Amplify [B] :Set its base cost to 0.",
+    "DESCRIPTION": "Add a copy of the last Attack you played this combat. NL Amplify [B] :It cost 0 for this turn.",
     "UPGRADE_DESCRIPTION": "Add a copy of the next Attack you play this turn,it cost 0 for the turn. NL Amplify  [B]  :add one more. NL  Exhaust ."
   },
   "MaximisePower": {
@@ -338,7 +338,7 @@
   },
   "ManaRampage": {
     "NAME": "Mana Rampage",
-    "DESCRIPTION": "Increase the damage of all attacks in your hand by !M!  X times and retain your hand until next turn.",
+    "DESCRIPTION": "Increase the damage of all attacks in your hand by !M!  X times and retain all attack your hand until next turn.",
     "UPGRADE_DESCRIPTION": "This turn,your next attack will be played X+1 times in addition."
   },
   "StarBarrage": {

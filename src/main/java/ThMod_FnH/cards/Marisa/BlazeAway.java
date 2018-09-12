@@ -40,7 +40,7 @@ public class BlazeAway extends CustomCard {
       ThMod.logger.info("BlazeAway : last attack :" + ThMod.lastAttack.cardID);
       AbstractCard card = ThMod.lastAttack.makeStatEquivalentCopy();
       if (ThMod.Amplified(this, AMP)) {
-        card.costForTurn = card.cost = 0;
+        card.costForTurn = 0;
       }
       AbstractDungeon.actionManager.addToBottom(
           new MakeTempCardInHandAction(card, 1)

@@ -35,7 +35,9 @@ public class IllusionStar extends CustomCard {
 
       AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 1));
     }
-    AbstractDungeon.actionManager.addToBottom(new PutOnDeckAction(p, p, 1, false));
+    AbstractDungeon.actionManager.addToBottom(
+        new PutOnDeckAction(p, p, 1, false)
+    );
   }
 
   public AbstractCard makeCopy() {

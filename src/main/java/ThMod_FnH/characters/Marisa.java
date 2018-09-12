@@ -42,14 +42,13 @@ public class Marisa extends CustomPlayer {
   };
   public static final String ORB_VFX = "img/UI/energyBlueVFX.png";
   public static final float[] LAYER_SPEED =
-      {80.0F, 40.0F, -40.0F, 20.0F, 0.0F, 16.0F, 8.0F, -8.0F, 5.0F, 0.0F};
+      {-40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F};
   //public static final String SPRITER_ANIM_FILEPATH = "img/char/MyCharacter/marisa_test.scml"; // spriter animation scml
 
   public Marisa(String name, PlayerClass setClass) {
     //super(name, setClass, null, null , null ,new SpriterAnimation(SPRITER_ANIM_FILEPATH));
-    //super(name, setClass, ORB_TEXTURES, ORB_VFX, LAYER_SPEED, null, null);
-    super(name, setClass, null, null, (String) null, null);
-    //public CustomPlayer(String name, PlayerClass playerClass, String[] orbTextures, String orbVfxPath, float[] layerSpeeds, AbstractAnimation animation)
+    super(name, setClass, ORB_TEXTURES, ORB_VFX, LAYER_SPEED, null, null);
+    //super(name, setClass, null, null, (String) null, null);
 
     this.dialogX = (this.drawX + 0.0F * Settings.scale); // set location for text bubbles
     this.dialogY = (this.drawY + 220.0F * Settings.scale); // you can just copy these values

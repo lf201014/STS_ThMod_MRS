@@ -82,7 +82,8 @@ public class DragonMeteor
             new DamageInfo(
                 p,
                 this.block,
-                this.damageTypeForTurn),
+                this.damageTypeForTurn
+            ),
             AttackEffect.FIRE
         )
     );

@@ -48,7 +48,8 @@ public class CollectingQuirk
     ThMod.logger.info(
         "CollectingQuirk : applyPowers : block :" + this.block
             + " ; baseblock : " + this.baseBlock
-            + " ; counter : " + this.cnt);
+            + " ; counter : " + this.cnt
+    );
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
@@ -57,8 +58,13 @@ public class CollectingQuirk
       for (int i = 0; i < cnt; i++) {
         AbstractDungeon.actionManager.addToBottom(
             new DamageRandomEnemyAction(
-                new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                AbstractGameAction.AttackEffect.SLASH_DIAGONAL)
+                new DamageInfo(
+                    p,
+                    this.damage,
+                    this.damageTypeForTurn
+                ),
+                AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+            )
         );
       }
     }

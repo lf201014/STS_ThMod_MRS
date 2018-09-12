@@ -16,45 +16,57 @@ import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
 public class DarkMatter extends CustomCard {
-	public static final String ID = "DarkMatter";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-	public static final String IMG_PATH = "img/cards/DarkMatter.png";
-	private static final int COST = 0;
-	private static final int BLC_GAIN = 4;
-	private static final int UPG_BLC = 2;
 
-	public DarkMatter() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,
-				AbstractCard.CardTarget.SELF);
-		this.isEthereal =true;
-		this.block = this.baseBlock = BLC_GAIN;
-	}
-	
-	public void triggerOnExhaust() {
-		AbstractPlayer p = AbstractDungeon.player;
-		AbstractDungeon.actionManager.addToBottom(
-				new GainBlockAction(p, p, this.block));
-	}
+  public static final String ID = "DarkMatter";
+  private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardStrings.NAME;
+  public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
+  public static final String IMG_PATH = "img/cards/DarkMatter.png";
+  private static final int COST = 0;
+  private static final int BLC_GAIN = 4;
+  private static final int UPG_BLC = 2;
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(
-				new MakeTempCardInDrawPileAction(
-						this.makeStatEquivalentCopy(),
-						1,
-						true,
-						true)
-				);
-		AbstractDungeon.actionManager.addToBottom(
-				new MakeTempCardInDrawPileAction(
-						this.makeStatEquivalentCopy(),
-						1,
-						true,
-						true)
-				);
+  public DarkMatter() {
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.SKILL,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.UNCOMMON,
+        AbstractCard.CardTarget.SELF
+    );
+    this.isEthereal = true;
+    this.block = this.baseBlock = BLC_GAIN;
+  }
+
+  public void triggerOnExhaust() {
+    AbstractPlayer p = AbstractDungeon.player;
+    AbstractDungeon.actionManager.addToBottom(
+        new GainBlockAction(p, p, this.block)
+    );
+  }
+
+  public void use(AbstractPlayer p, AbstractMonster m) {
+    AbstractDungeon.actionManager.addToBottom(
+        new MakeTempCardInDrawPileAction(
+            this.makeStatEquivalentCopy(),
+            1,
+            true,
+            true
+        )
+    );
+    AbstractDungeon.actionManager.addToBottom(
+        new MakeTempCardInDrawPileAction(
+            this.makeStatEquivalentCopy(),
+            1,
+            true,
+            true
+        )
+    );
 		/*
 		AbstractCard c = new DarkMatter();
 		if (this.upgraded)
@@ -75,18 +87,18 @@ public class DarkMatter extends CustomCard {
 	    for (AbstractRelic r : p.relics)
 	        r.onShuffle();  
 	        */
-	}
+  }
 
-	public AbstractCard makeCopy() {
-		return new DarkMatter();
-	}
+  public AbstractCard makeCopy() {
+    return new DarkMatter();
+  }
 
-	public void upgrade() {
-		if (!this.upgraded) {
-			upgradeName();
-			upgradeBlock(UPG_BLC);
-			this.rawDescription = DESCRIPTION_UPG;
-			initializeDescription();
-		}
-	}
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      upgradeBlock(UPG_BLC);
+      this.rawDescription = DESCRIPTION_UPG;
+      initializeDescription();
+    }
+  }
 }

@@ -1,69 +1,71 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ThMod_FnH</groupId>
-    <artifactId>ThMod_FnH</artifactId>
-    <version>v0.12.7</version>
-    <packaging>jar</packaging>
+  <groupId>ThMod_FnH</groupId>
+  <artifactId>ThMod_FnH</artifactId>
+  <version>v0.12.8</version>
+  <packaging>jar</packaging>
 
 
-    <dependencies>
-        <dependency>
-            <groupId>com.megacrit.cardcrawl</groupId>
-            <artifactId>slaythespire</artifactId>
-            <version>906</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/../lib/desktop-1.0.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>basemod</groupId>
-            <artifactId>basemod</artifactId>
-            <version>3.2.2</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/../lib/BaseMod.jar</systemPath>
-        </dependency>
-        <dependency>
-	        <groupId>com.evacipated.cardcrawl</groupId>
-		      <artifactId>ModTheSpire</artifactId>
-		      <version>3.1.0</version>
-		      <scope>system</scope>
-          <systemPath>${basedir}/../lib/ModTheSpire.jar</systemPath>
-	      </dependency>
-    </dependencies>
+  <dependencies>
+    <dependency>
+      <groupId>com.megacrit.cardcrawl</groupId>
+      <artifactId>slaythespire</artifactId>
+      <version>906</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/../lib/desktop-1.0.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>basemod</groupId>
+      <artifactId>basemod</artifactId>
+      <version>3.2.2</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/../lib/BaseMod.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.evacipated.cardcrawl</groupId>
+      <artifactId>ModTheSpire</artifactId>
+      <version>3.1.0</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/../lib/ModTheSpire.jar</systemPath>
+    </dependency>
+  </dependencies>
 
-    <build>
-        <finalName>TS05_Marisa_v0.12.7</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <version>1.8</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <configuration>
-                            <target>
-                                <copy file="target/TS05_Marisa_v0.12.7.jar" tofile="../lib/TS05_Marisa_v0.12.7.jar"/>
-                                <copy file="target/TS05_Marisa_v0.12.7.jar" tofile="E:/SteamLibrary/SteamApps/common/SlayTheSpire/mods/TS05_Marisa_v0.12.7.jar"/>
-                            </target>
-                        </configuration>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-    <name>SL the Spire Touhou Mod By Flynn , Hell , Hohner_257 , Samsara</name>
-    <description>A Mod of the poor blonde hair girl from Touhou Project(</description>
+  <build>
+    <finalName>TS05_Marisa_v0.12.8</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.8</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <configuration>
+              <target>
+                <copy file="target/TS05_Marisa_v0.12.8.jar"
+                  tofile="../lib/TS05_Marisa_v0.12.8.jar"/>
+                <copy file="target/TS05_Marisa_v0.12.8.jar"
+                  tofile="E:/SteamLibrary/SteamApps/common/SlayTheSpire/mods/TS05_Marisa_v0.12.8.jar"/>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <name>SL the Spire Touhou Mod By Flynn , Hell , Hohner_257 , Samsara</name>
+  <description>A Mod of the poor blonde hair girl from Touhou Project(</description>
 </project>

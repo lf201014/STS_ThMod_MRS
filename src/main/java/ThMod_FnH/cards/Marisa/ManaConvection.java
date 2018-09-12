@@ -1,5 +1,6 @@
 package ThMod_FnH.cards.Marisa;
 
+import ThMod_FnH.action.ConsumeChargeUpAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
@@ -49,8 +50,7 @@ public class ManaConvection extends CustomCard {
             new GainEnergyAction(ENEG_GAIN)
         );
         AbstractDungeon.actionManager.addToBottom(
-            new ApplyPowerAction(p, p,
-                new ChargeUpPower(p, -CHRG_DRAIN), -CHRG_DRAIN)
+            new ConsumeChargeUpAction(CHRG_DRAIN)
         );
       }
     }

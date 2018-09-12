@@ -11,8 +11,8 @@ import basemod.abstracts.CustomRelic;
 public class HandmadeGrimoire extends CustomRelic {
 
   public static final String ID = "HandmadeGrimoire";
-  private static final String IMG = "img/relics/test3.png";
-  private static final String IMG_OTL = "img/relics/outline/test4.png";
+  private static final String IMG = "img/relics/Grimoire.png";
+  private static final String IMG_OTL = "img/relics/outline/Grimoire.png";
 
   public HandmadeGrimoire() {
     super(

@@ -535,6 +535,9 @@ public class ThMod implements PostExhaustSubscriber,
     if (card.type == CardType.ATTACK) {
       lastAttack = card;
     }
+    if (card.retain == true){
+      card.retain = false;
+    }
   }
 
   @Override
