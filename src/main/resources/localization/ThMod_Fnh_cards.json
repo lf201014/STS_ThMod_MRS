@@ -383,7 +383,7 @@
   },
   "FairyDestructionRay": {
     "NAME": "Fairy Destruction Ray",
-    "DESCRIPTION": "Deal !D! damage to all enemies,then instantly kill those with no more than !M! HP.",
+    "DESCRIPTION": "Deal !D! damage to all enemies. Amplify  [B]  [B] : Instant-kill those with no more than !M! HP.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Orbital": {

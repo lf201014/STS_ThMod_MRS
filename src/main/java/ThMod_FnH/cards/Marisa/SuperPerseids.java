@@ -51,8 +51,8 @@ public class SuperPerseids extends CustomCard {
   public void triggerWhenDrawn() {
     this.applyPowers();
     ThMod.logger.info("SuperPerseids : triggerWhenDrawn : Granting Block "
-        +"; : upgraded : "+this.upgraded
-        +"; : block : "+this.block
+        + "; : upgraded : " + this.upgraded
+        + "; : block : " + this.block
     );
     AbstractDungeon.actionManager.addToBottom(
         new GainBlockAction(
@@ -74,8 +74,8 @@ public class SuperPerseids extends CustomCard {
   public void triggerOnExhaust() {
     this.applyPowers();
     ThMod.logger.info("SuperPerseids : triggerOnExhaust : Damaging Random Enemy :"
-        +"; upgraded : "+this.upgraded
-        +"; damage : "+this.damage
+        + "; upgraded : " + this.upgraded
+        + "; damage : " + this.damage
     );
     AbstractDungeon.actionManager.addToBottom(
         new DamageRandomEnemyAction(

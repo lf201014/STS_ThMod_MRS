@@ -20,12 +20,22 @@ public class IllusionStar extends CustomCard {
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String IMG_PATH = "img/cards/IllusionStar.png";
   private static final int COST = 0;
+  private static final int CARD_PRINT = 1;
+  private static final int UPG_CARD_PRINT = 1;
 
   public IllusionStar() {
-    super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
-        AbstractCard.CardType.SKILL, AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
-    this.magicNumber = this.baseMagicNumber = 2;
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.SKILL,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.COMMON,
+        AbstractCard.CardTarget.SELF
+    );
+    this.magicNumber = this.baseMagicNumber = CARD_PRINT;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,7 +43,9 @@ public class IllusionStar extends CustomCard {
 
       AbstractCard c = AbstractDungeon.returnTrulyRandomCard();
 
-      AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 1));
+      AbstractDungeon.actionManager.addToBottom(
+          new MakeTempCardInHandAction(c, 1)
+      );
     }
     AbstractDungeon.actionManager.addToBottom(
         new PutOnDeckAction(p, p, 1, false)
@@ -47,7 +59,7 @@ public class IllusionStar extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      upgradeMagicNumber(1);
+      upgradeMagicNumber(UPG_CARD_PRINT);
     }
   }
 }

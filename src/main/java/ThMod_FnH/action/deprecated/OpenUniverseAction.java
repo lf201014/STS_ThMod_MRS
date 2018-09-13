@@ -1,4 +1,4 @@
-package ThMod_FnH.action;
+package ThMod_FnH.action.deprecated;
 
 import java.util.ArrayList;
 
@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDrawPileEffect;
 
 import ThMod_FnH.ThMod;
 
+@Deprecated
 public class OpenUniverseAction
     extends AbstractGameAction {
 

@@ -47,13 +47,23 @@ public class WitchOfGreed extends CustomCard {
 
     if (ThMod.Amplified(this, AMP)) {
       AbstractDungeon.actionManager.addToBottom(
-          new ApplyPowerAction(p, p, new WitchOfGreedPotion(p, 1), 1));
+          new ApplyPowerAction(
+              p,
+              p,
+              new WitchOfGreedPotion(p, 1), 1)
+      );
     }
 
     ThMod.logger.info("WitchOfGreed : Applying power : gold ;");
 
     AbstractDungeon.actionManager.addToBottom(
-        new ApplyPowerAction(p, p, new WitchOfGreedGold(p, this.magicNumber), this.magicNumber));
+        new ApplyPowerAction(
+            p,
+            p,
+            new WitchOfGreedGold(p, this.magicNumber),
+            this.magicNumber
+        )
+    );
   }
 
   public AbstractCard makeCopy() {

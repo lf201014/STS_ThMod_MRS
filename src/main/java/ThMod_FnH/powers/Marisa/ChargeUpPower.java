@@ -85,11 +85,8 @@ public class ChargeUpPower
       return;
     }
     if ((this.cnt > 0) && (card.type == CardType.ATTACK)) {
-      ThMod.logger.info("ChargeUpPower : consuming stacks for :" + card.cardID);
+      ThMod.logger.info("ChargeUpPower : onPlayCard : consuming stacks for :" + card.cardID);
 
-      if (owner.hasPower("OrrerysSunPower")) {
-        owner.getPower("OrrerysSunPower").onSpecificTrigger();
-      }
       flash();
 
       if (AbstractDungeon.player.hasRelic("SimpleLauncher")) {

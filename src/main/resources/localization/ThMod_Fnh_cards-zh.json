@@ -381,8 +381,8 @@
     "UPGRADE_DESCRIPTION": "只有在你手牌数小于等于4时才能被打出。 NL 造成 !D! 伤害 (2 × 你的弃卡堆的卡数)。然后向你手中加入2张 灼伤 。"
   },
   "FairyDestructionRay": {
-    "NAME": "妖精灭尽光",
-    "DESCRIPTION": "对所有敌人造成 !D! 伤害，然后立即消灭生命值低于 !M! 的敌人。",
+    "NAME": "妖精尽灭光",
+    "DESCRIPTION": "对所有敌人造成 !D! 伤害。 NL 增幅  [B]  [B]  :立即消灭生命值低于 !M! 的敌人。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Orbital": {

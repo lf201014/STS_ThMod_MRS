@@ -26,9 +26,17 @@ public class SporeBomb extends CustomCard {
   private static final int UPG_STC = 1;
 
   public SporeBomb() {
-    super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-        AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON,
-        AbstractCard.CardTarget.ENEMY);
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.SKILL,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.COMMON,
+        AbstractCard.CardTarget.ENEMY
+    );
     this.magicNumber = this.baseMagicNumber = STC;
   }
 
@@ -36,13 +44,25 @@ public class SporeBomb extends CustomCard {
     if (ThMod.Amplified(this, AMP)) {
       for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
         AbstractDungeon.actionManager.addToBottom(
-            new ApplyPowerAction(mo, p, new VulnerablePower(mo, this.magicNumber, false),
-                this.magicNumber, true));
+            new ApplyPowerAction(
+                mo,
+                p,
+                new VulnerablePower(mo, this.magicNumber, false),
+                this.magicNumber,
+                true
+            )
+        );
       }
     } else {
       AbstractDungeon.actionManager.addToBottom(
-          new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false),
-              this.magicNumber, true));
+          new ApplyPowerAction(
+              m,
+              p,
+              new VulnerablePower(m, this.magicNumber, false),
+              this.magicNumber,
+              true
+          )
+      );
     }
   }
 
