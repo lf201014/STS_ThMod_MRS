@@ -23,7 +23,7 @@ public class LuminesStrike
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-  public static final String IMG_PATH = "img/cards/Strike.png";
+  public static final String IMG_PATH = "img/cards/LumiStrike.png";
 
   private static final int COST = 0;
   private static final int D0 = 2;
@@ -33,9 +33,17 @@ public class LuminesStrike
   private static final int AMP = 1;
 
   public LuminesStrike() {
-    super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-        AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON,
-        AbstractCard.CardTarget.ENEMY);
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.ATTACK,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.COMMON,
+        AbstractCard.CardTarget.ENEMY
+    );
     this.baseMagicNumber = D0;
     this.baseBlock = A0;
     this.baseDamage = 0;
@@ -70,12 +78,20 @@ public class LuminesStrike
 
     if (ThMod.Amplified(this, AMP)) {
       AbstractDungeon.actionManager.addToBottom(
-          new DamageAction(m, new DamageInfo(p, this.block, this.damageTypeForTurn),
-              AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+          new DamageAction(
+              m,
+              new DamageInfo(p, this.block, this.damageTypeForTurn),
+              AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+          )
+      );
     } else {
       AbstractDungeon.actionManager.addToBottom(
-          new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
-              AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+          new DamageAction(
+              m,
+              new DamageInfo(p, this.damage, this.damageTypeForTurn),
+              AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+          )
+      );
     }
 
   }

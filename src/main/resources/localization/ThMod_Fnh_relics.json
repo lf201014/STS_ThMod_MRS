@@ -5,80 +5,93 @@
     "DESCRIPTIONS": [
       "When you play a card,gain 1  #yCharge-up ."
     ]
-  }, "EnhancedHakkero": {
+  },
+  "EnhancedHakkero": {
     "NAME": "Bewitched Hakkero",
     "FLAVOR": "The firepower came to a new level when Hakkero was affected by the power of the Miracle Mallet,but is it ok to use a bewitched tool?",
     "DESCRIPTIONS": [
       "Replace #yMini-Hakkero . NL When you play a card,gain 2  #yCharge-up . NL Add a Burn to your hand when your turn starts."
     ]
-  }, "MagicArmor": {
+  },
+  "MagicArmor": {
     "NAME": "Black Magic Shield",
     "FLAVOR": "In fact I don't know what the hell is this,but since the Designer put it in the Plan,here it is.-programmer",
     "DESCRIPTIONS": [
       "When you draw a Status or Curse,gain 5 Block ."
     ]
-  }, "EnhancedBroom": {
+  },
+  "EnhancedBroom": {
     "NAME": "Enhanced Broom",
     "FLAVOR": "Marisa always travels with her flying broom,and now it is upgraded.",
     "DESCRIPTIONS": [
       "For every #b3 cards that cost 0 you played,draw a card."
     ]
-  }, "AmplifyWand": {
+  },
+  "AmplifyWand": {
     "NAME": "Amplify Wand",
     "FLAVOR": "A Wand seems not often used.",
     "DESCRIPTIONS": [
       "For every third time you activate #yAmplify effect ,Gain [B]  [B] ."
     ]
-  }, "RampagingMagicTools": {
+  },
+  "RampagingMagicTools": {
     "NAME": "Rampaging Magic Tools",
     "FLAVOR": "It's been so long since anyone last used them,who knows what could happen?",
     "DESCRIPTIONS": [
       "Gain [B] at the start of each turn. NL Apply a random debuff/buff ( #b3 #yFrail , #b3 #yWeak , #b3 #yVulerable , #b3 #yPoison , #b8 #yCharge-up )to you at the start of each combat."
     ]
-  }, "ExperimentalFamiliar": {
+  },
+  "ExperimentalFamiliar": {
     "NAME": "Experimental Familiar",
     "FLAVOR": "A Familiar looks just like a shiny orb,not very powerful but will surely help you alot.",
     "DESCRIPTIONS": [
       "At the start of each turn,add a #ySpark and a random card to your hand."
     ]
-  }, "BreadOfAWashokuLover": {
+  },
+  "BreadOfAWashokuLover": {
     "NAME": "Bread Of A Washoku Lover",
     "FLAVOR": "'Can you remember how many slices of bread you have eaten until now?''Thirteen.I prefer Japanese food.'",
     "DESCRIPTIONS": [
       "Heal 1 hp when you exhaust a #yStatus or #yCurse. NL When triggered 13 times,you gain #b13 max HP,and this relic no longer works."
     ]
-  }, "SimpleLauncher": {
+  },
+  "SimpleLauncher": {
     "NAME": "Simple Launcher",
     "FLAVOR": "Simple but useful...Perhaps...",
     "DESCRIPTIONS": [
       "You now only need #b6 stack of #yCharge-up to double your damage."
     ]
-  }, "HandmadeGrimoire": {
+  },
+  "HandmadeGrimoire": {
     "NAME": "Handmade Grimoire",
     "FLAVOR": "A notebook full of experiment records and magic material recipes;just how Marisa develops her Magics.",
     "DESCRIPTIONS": [
       "At the start of battle,for every 15 cards in your master deck,gain [B] and draw a card."
     ]
-  }, "ShroomBag": {
+  },
+  "ShroomBag": {
     "NAME": "Shroom Bag",
     "FLAVOR": "All witches have abnormal ethusiasm for mushrooms... NL Or it's just Marisa...?",
     "DESCRIPTIONS": [
       "Add 2 #yParasite to your deck on pick up.You can now play #yParasite to exhaust it and heal #b3 HP."
     ]
-  }, "Cape": {
+  },
+  "Cape": {
     "NAME": "Cape",
     "FLAVOR": "Marisa always takes whatever she wants,and this cape will surely help her doing so.",
     "DESCRIPTIONS": [
-      " #b",
-      " use(s) left. NL You can take the first merchandiase in a shop for free."
+      "Whenever you enter a shop room,earn some random combat rewards.",
+      " use(s) left. NL You can take the first merchandise in a shop for free."
     ]
-  }, "SproutingBranch": {
+  },
+  "SproutingBranch": {
     "NAME": "Sprouting Branch",
     "FLAVOR": "The dead branch just come to life in Marisa's hand,how poetic.",
     "DESCRIPTIONS": [
       "At the Start of each battle,grant you #b5 stack #yRegen ."
     ]
-  }, "WWWWWWWWWWWW": {
+  },
+  "WWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWW",
     "FLAVOR": "WWWWWWWWWWWWWWW",
     "DESCRIPTIONS": [

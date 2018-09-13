@@ -19,7 +19,7 @@ public class StarBarrage
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String IMG_PATH = "img/cards/Strike.png";
   private static final int COST = 1;
-  private static final int ATK_DMG = 6;
+  private static final int ATK_DMG = 9;
   private static final int UPGRADE_PLUS_DMG = 3;
 
   public StarBarrage() {
@@ -31,7 +31,7 @@ public class StarBarrage
         DESCRIPTION,
         AbstractCard.CardType.ATTACK,
         AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.COMMON,
+        AbstractCard.CardRarity.UNCOMMON,
         AbstractCard.CardTarget.ENEMY
     );
     this.baseDamage = ATK_DMG;

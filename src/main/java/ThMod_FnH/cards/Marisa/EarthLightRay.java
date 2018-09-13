@@ -58,7 +58,9 @@ public class EarthLightRay extends CustomCard {
         }
       }
     }
-    AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.magicNumber));
+    AbstractDungeon.actionManager.addToBottom(
+        new HealAction(p, p, this.magicNumber)
+    );
 
   }
 

@@ -14,55 +14,74 @@ import ThMod_FnH.action.RefractionSparkAction;
 import ThMod_FnH.action.SparkCostAction;
 import ThMod_FnH.patches.AbstractCardEnum;
 
-public class RefractionSpark 
-	extends AmplifiedAttack {
-	
-	public static final String ID = "RefractionSpark";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "img/cards/Strike.png";
-	
-	private static final int COST = 1;
-	private static final int ATK_DMG = 4;
-	private static final int UPG_DMG = 1;
-	private static final int AMP_DMG = 2;
-	private static final int UPG_AMP = 1;
-	private static final int AMP = 1;
-	
+public class RefractionSpark
+    extends AmplifiedAttack {
 
-	public RefractionSpark() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,
-				AbstractCard.CardTarget.ENEMY);
+  public static final String ID = "RefractionSpark";
+  private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardStrings.NAME;
+  public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String IMG_PATH = "img/cards/Strike.png";
 
-		this.baseDamage = ATK_DMG;
-		this.ampNumber = AMP_DMG;
-		this.baseBlock = this.baseDamage + this.ampNumber;
-	}
+  private static final int COST = 1;
+  private static final int ATK_DMG = 4;
+  private static final int UPG_DMG = 1;
+  private static final int AMP_DMG = 2;
+  private static final int UPG_AMP = 1;
+  private static final int AMP = 1;
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new SparkCostAction());
-		
-		if ( ThMod.Amplified(this,AMP) )
-			AbstractDungeon.actionManager.addToBottom(new RefractionSparkAction(m,
-					new DamageInfo(p, this.block, this.damageTypeForTurn)));
-		else
-			AbstractDungeon.actionManager.addToBottom(new RefractionSparkAction(m,
-					new DamageInfo(p, this.damage, this.damageTypeForTurn)));		
-	}
 
-	public AbstractCard makeCopy() {
-		return new RefractionSpark();
-	}
+  public RefractionSpark() {
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.ATTACK,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.UNCOMMON,
+        AbstractCard.CardTarget.ENEMY
+    );
 
-	public void upgrade() {
-		if (!this.upgraded) {
-			upgradeName();
-			upgradeDamage(UPG_DMG);
-			this.ampNumber += UPG_AMP;
-			this.block = this.baseDamage + this.ampNumber;
-			this.isBlockModified = true;
-		}
-	}
+    this.baseDamage = ATK_DMG;
+    this.ampNumber = AMP_DMG;
+    this.baseBlock = this.baseDamage + this.ampNumber;
+  }
+
+  public void use(AbstractPlayer p, AbstractMonster m) {
+    AbstractDungeon.actionManager.addToBottom(
+        new SparkCostAction()
+    );
+
+    if (ThMod.Amplified(this, AMP)) {
+      AbstractDungeon.actionManager.addToBottom(
+          new RefractionSparkAction(
+              m,
+              new DamageInfo(p, this.block, this.damageTypeForTurn)
+          )
+      );
+    } else {
+      AbstractDungeon.actionManager.addToBottom(
+          new RefractionSparkAction(
+              m,
+              new DamageInfo(p, this.damage, this.damageTypeForTurn)
+          )
+      );
+    }
+  }
+
+  public AbstractCard makeCopy() {
+    return new RefractionSpark();
+  }
+
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      upgradeDamage(UPG_DMG);
+      this.ampNumber += UPG_AMP;
+      this.block = this.baseDamage + this.ampNumber;
+      this.isBlockModified = true;
+    }
+  }
 }

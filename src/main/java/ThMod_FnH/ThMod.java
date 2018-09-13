@@ -1,5 +1,7 @@
 package ThMod_FnH;
 
+import ThMod_FnH.relics.Cape;
+import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import java.nio.charset.StandardCharsets;
 
 import org.apache.logging.log4j.LogManager;
@@ -138,6 +140,8 @@ public class ThMod implements PostExhaustSubscriber,
 
   public static final Logger logger = LogManager.getLogger(ThMod.class.getName());
 
+  public static AbstractCard lastAttack = null;
+
   //card backgrounds
   private static final String ATTACK_CC = "img/512/bg_attack_MRS_s.png";
   private static final String SKILL_CC = "img/512/bg_skill_MRS_s.png";
@@ -152,7 +156,6 @@ public class ThMod implements PostExhaustSubscriber,
   private static final Color STARLIGHT = CardHelper.getColor(0f, 10f, 125.0f);
 
   private static final String MY_CHARACTER_BUTTON = "img/charSelect/MarisaButton.png";
-
   private static final String MARISA_PORTRAIT = "img/charSelect/marisaPortrait.jpg";
 
   //For Spark Themed Cards
@@ -522,8 +525,26 @@ public class ThMod implements PostExhaustSubscriber,
   @Override
   public void receivePostBattle(AbstractRoom r) {
     // TODO Auto-generated method stub
+    logger.info("ThMod : PostBattle");
+    lastAttack = null;
   }
 
+  @Override
+  public void receiveCardUsed(AbstractCard card) {
+    ThMod.logger.info("ThMod : Card used : " + card.cardID);
+    if (card.type == CardType.ATTACK) {
+      lastAttack = card;
+    }
+    if (card.retain == true){
+      card.retain = false;
+    }
+  }
+
+  @Override
+  public void receivePowersModified() {
+    // TODO Auto-generated method stub
+
+  }
 
   @Override
   public void receivePostDungeonInitialize() {
@@ -533,7 +554,6 @@ public class ThMod implements PostExhaustSubscriber,
   @Override
   public void receivePostDraw(AbstractCard arg0) {
     // TODO Auto-generated method stub
-
   }
 
   @Override
@@ -562,19 +582,6 @@ public class ThMod implements PostExhaustSubscriber,
         "Attack : Fear Potion ; NL Skill : Weak Potion ; NL Power : Poison Potion ; Status : Fire Potion ; Curse : Smoke Bomb .");
 
     logger.info("Keywords setting finished.");
-  }
-
-  @Override
-  public void receivePowersModified() {
-    // TODO Auto-generated method stub
-
-  }
-
-
-  @Override
-  public void receiveCardUsed(AbstractCard arg0) {
-    // TODO Auto-generated method stub
-
   }
 
   @Override

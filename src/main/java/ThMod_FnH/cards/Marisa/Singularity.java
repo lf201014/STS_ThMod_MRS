@@ -23,16 +23,29 @@ public class Singularity extends CustomCard {
   private static final int UPG_STC = 1;
 
   public Singularity() {
-    super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
-        AbstractCard.CardType.POWER, AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.POWER,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.UNCOMMON,
+        AbstractCard.CardTarget.SELF
+    );
     this.magicNumber = this.baseMagicNumber = STC;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
     AbstractDungeon.actionManager.addToBottom(
-        new ApplyPowerAction(p, p,
-            new SingularityPower(p, this.magicNumber), this.magicNumber));
+        new ApplyPowerAction(
+            p,
+            p,
+            new SingularityPower(p, this.magicNumber),
+            this.magicNumber
+        )
+    );
   }
 
   public AbstractCard makeCopy() {

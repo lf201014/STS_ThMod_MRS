@@ -10,14 +10,16 @@ import ThMod_FnH.characters.Marisa;
 import ThMod_FnH.relics.SproutingBranch;
 
 public class DeadBranchObtainPatch {
-	@SpirePatch(cls = "com.megacrit.cardcrawl.relics.DeadBranch", method = "makeCopy")
-	public static class DeadBranchObtain {
-		@SpirePrefixPatch
-		public static SpireReturn<AbstractRelic> Prefix(AbstractRelic _inst) {
-			if ((AbstractDungeon.player instanceof Marisa)) {
-				return SpireReturn.Return(new SproutingBranch());
-			}
-			return SpireReturn.Continue();
-		}
-	}
+
+  @SpirePatch(cls = "com.megacrit.cardcrawl.relics.DeadBranch", method = "makeCopy")
+  public static class DeadBranchObtain {
+
+    @SpirePrefixPatch
+    public static SpireReturn<AbstractRelic> Prefix(AbstractRelic _inst) {
+      if ((AbstractDungeon.player instanceof Marisa)) {
+        return SpireReturn.Return(new SproutingBranch());
+      }
+      return SpireReturn.Continue();
+    }
+  }
 }

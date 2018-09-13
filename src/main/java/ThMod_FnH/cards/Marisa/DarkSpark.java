@@ -19,73 +19,81 @@ import ThMod_FnH.patches.AbstractCardEnum;
 import ThMod_FnH.powers.Marisa.DarkSparkPower;
 import basemod.abstracts.CustomCard;
 
-public class DarkSpark 
-	extends CustomCard {
-	
-	public static final String ID = "DarkSpark";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "img/cards/Strike.png";
-	
-	private static final int COST = 1;
-	private static final int ATK_DMG = 4;
-	private static final int UPG_DMG = 2;
-	private static final int DRAW = 2;
-	private static final int UPG_DRAW = 1;
+public class DarkSpark
+    extends CustomCard {
 
-	public DarkSpark() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,
-				AbstractCard.CardTarget.ENEMY);
+  public static final String ID = "DarkSpark";
+  private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardStrings.NAME;
+  public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String IMG_PATH = "img/cards/Strike.png";
 
-		this.baseDamage = ATK_DMG;
-		this.baseMagicNumber = this.magicNumber = DRAW;
-	}
+  private static final int COST = 1;
+  private static final int ATK_DMG = 4;
+  private static final int UPG_DMG = 2;
+  private static final int DRAW = 2;
+  private static final int UPG_DRAW = 1;
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		
-		AbstractDungeon.actionManager.addToBottom(
-				new DamageAction(
-						m,
-						new DamageInfo(p, this.damage, this.damageTypeForTurn),
-						AbstractGameAction.AttackEffect.SLASH_DIAGONAL)
-				);
+  public DarkSpark() {
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.ATTACK,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.UNCOMMON,
+        AbstractCard.CardTarget.ENEMY
+    );
 
-    	AbstractDungeon.actionManager.addToBottom(
-    			new DrawCardAction(p, this.magicNumber)
-    			);
-    	
-    	AbstractDungeon.actionManager.addToBottom(
-    			new ApplyPowerAction(
-    					p,
-    					p,
-    					new DarkSparkPower(p,1),
-    					1
-    					)
-    			);
-    	
-    	AbstractDungeon.actionManager.addToBottom(
-    			new MakeTempCardInHandAction(
-    					new Burn(),
-    					1
-    					)
-    			);
+    this.baseDamage = ATK_DMG;
+    this.baseMagicNumber = this.magicNumber = DRAW;
+  }
 
-		AbstractDungeon.actionManager.addToBottom(
-				new SparkCostAction()
-				);
-	}
+  public void use(AbstractPlayer p, AbstractMonster m) {
 
-	public AbstractCard makeCopy() {
-		return new DarkSpark();
-	}
+    AbstractDungeon.actionManager.addToBottom(
+        new DamageAction(
+            m,
+            new DamageInfo(p, this.damage, this.damageTypeForTurn),
+            AbstractGameAction.AttackEffect.SLASH_DIAGONAL)
+    );
 
-	public void upgrade() {
-		if (!this.upgraded) {
-			upgradeName();
-			upgradeDamage(UPG_DMG);
-			upgradeMagicNumber(UPG_DRAW);
-		}
-	}
+    AbstractDungeon.actionManager.addToBottom(
+        new DrawCardAction(p, this.magicNumber)
+    );
+
+    AbstractDungeon.actionManager.addToBottom(
+        new ApplyPowerAction(
+            p,
+            p,
+            new DarkSparkPower(p, 1),
+            1
+        )
+    );
+
+    AbstractDungeon.actionManager.addToBottom(
+        new MakeTempCardInHandAction(
+            new Burn(),
+            1
+        )
+    );
+
+    AbstractDungeon.actionManager.addToBottom(
+        new SparkCostAction()
+    );
+  }
+
+  public AbstractCard makeCopy() {
+    return new DarkSpark();
+  }
+
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      upgradeDamage(UPG_DMG);
+      upgradeMagicNumber(UPG_DRAW);
+    }
+  }
 }

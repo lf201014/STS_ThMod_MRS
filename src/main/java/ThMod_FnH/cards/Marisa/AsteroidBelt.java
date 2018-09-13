@@ -27,18 +27,34 @@ public class AsteroidBelt extends CustomCard {
 
 
   public AsteroidBelt() {
-    super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-        AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON,
-        AbstractCard.CardTarget.SELF);
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.SKILL,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.COMMON,
+        AbstractCard.CardTarget.SELF
+    );
 
     this.baseBlock = BLOCK_AMT;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-    AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+    AbstractDungeon.actionManager.addToBottom(
+        new GainBlockAction(p, p, this.block)
+    );
     if (ThMod.Amplified(this, AMP)) {
       AbstractDungeon.actionManager.addToBottom(
-          new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.block), this.block));
+          new ApplyPowerAction(
+              p,
+              p,
+              new NextTurnBlockPower(p, this.block),
+              this.block
+          )
+      );
     }
   }
 

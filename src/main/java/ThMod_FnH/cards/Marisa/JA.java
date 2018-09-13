@@ -25,7 +25,7 @@ public class JA
 	public static final String IMG_PATH = "img/cards/JA.png";
 	
 	private static final int COST = 2;
-	private static final int ATK_DMG = 4;
+	private static final int ATK_DMG = 1;
 	//private static final int UPG_DMG = 2;
 
 	public JA() {

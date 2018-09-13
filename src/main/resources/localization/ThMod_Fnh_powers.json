@@ -1,68 +1,68 @@
 {
-	"AsteroidBeltPower": {
+  "AsteroidBeltPower": {
     "NAME": "Asteroid Belt",
     "DESCRIPTIONS": [
       "Keep all block if not attacked this turn.",
       ""
     ]
   },
-  	"ExtraDraw": {
+  "ExtraDraw": {
     "NAME": "Escape Velocity",
     "DESCRIPTIONS": [
       "Add ",
       " #yBurn(s) to your hand at each start of your turn."
     ]
   },
-  	"EventHorizonPower": {
+  "EventHorizonPower": {
     "NAME": "Event Horizon",
     "DESCRIPTIONS": [
       "You can pick a card from your discard pile to your hand  #b",
       " time(s) each turn when you activate #yAmplify ."
     ]
   },
-  	"IllusionStarPower": {
+  "IllusionStarPower": {
     "NAME": "Illusion Star",
     "DESCRIPTIONS": [
       "At the start of your turn , transform  #b",
       "card(s) of your hand."
     ]
   },
-  	"MilliPulsaPower": {
+  "MilliPulsaPower": {
     "NAME": "Millisecond Pulsars",
     "DESCRIPTIONS": [
       " #yAmplify no longer need extra energy to activate.",
       ""
     ]
   },
-  	"SatellIllusPower": {
+  "SatellIllusPower": {
     "NAME": "Satellite Illusion",
     "DESCRIPTIONS": [
       "When you use a card that doesn't exist in your master deck,draw  #b",
       " card."
     ]
   },
-  	"TempStrength": {
+  "TempStrength": {
     "NAME": "Temproy Strength",
     "DESCRIPTIONS": [
       "Your next blow deals additional  #b",
       " damage."
     ]
   },
-  	"TempStrengthLoss": {
+  "TempStrengthLoss": {
     "NAME": "Temproy Strength Loss",
     "DESCRIPTIONS": [
       "The damage of this creature is lowered by  #b",
       " this turn."
     ]
   },
-    "ExtraEnergyPower": {
+  "ExtraEnergyPower": {
     "NAME": "Extra Energy",
     "DESCRIPTIONS": [
       "Gain ",
       " energy in addition each turn."
     ]
   },
-    "ChargeUpPower": {
+  "ChargeUpPower": {
     "NAME": "Charge Up",
     "DESCRIPTIONS": [
       "You have  #b",
@@ -71,188 +71,185 @@
       " times damage."
     ]
   },
-    "PolarisUniquePower": {
+  "PolarisUniquePower": {
     "NAME": "Guiding Star",
     "DESCRIPTIONS": [
       "Gain extra [B] at the start of your turn,if #yGuidingStar is in your draw pile."
     ]
   },
-    "OrrerysSunPower": {
+  "OrrerysSunPower": {
     "NAME": "Orrerys Sun",
     "DESCRIPTIONS": [
       "When you cost #yCharge-up stacks,deal  #b",
       " damage to all enemies."
     ]
   },
-    "Charged": {
+  "Charged": {
     "NAME": "Charged!",
     "DESCRIPTIONS": [
       "Your next blow will do  #b",
       " times damage"
     ]
   },
-    "BlazeAwayPower": {
+  "BlazeAwayPower": {
     "NAME": "Blaze Away",
     "DESCRIPTIONS": [
       "Will add  #b",
       " copy(copies) of the next attack card you use."
     ]
   },
-    "MPPower": {
+  "MPPower": {
     "NAME": "Max Power",
     "DESCRIPTIONS": [
       "Your damage is multipled by  #b",
       " this turn."
     ]
   },
-    "EnergyFlowPower": {
+  "EnergyFlowPower": {
     "NAME": "Energy Flow",
     "DESCRIPTIONS": [
       "At the end of your turn ,gain  #b",
       " #yCharge-up ."
     ]
   },
-    "PulseMagicPower": {
+  "PulseMagicPower": {
     "NAME": "Pulse Magic",
     "DESCRIPTIONS": [
       "You don't need to pay extra  [B]  to activate #yAmplify this turn.",
       "WWWWWWWWWWW"
     ]
   },
-    "SingularityPower": {
+  "SingularityPower": {
     "NAME": "Singualrity",
     "DESCRIPTIONS": [
       "When you play a card that cost 0 ,increase the damage of all #yAttack in your hand by #b",
       " ."
     ]
   },
-    "WitchOfGreedGold": {
+  "WitchOfGreedGold": {
     "NAME": "Witch Of Greed",
     "DESCRIPTIONS": [
       "At the end of combat,gain  #b",
       " gold ."
     ]
   },
-    "WitchOfGreedPotion": {
+  "WitchOfGreedPotion": {
     "NAME": "Witch Of Greed",
     "DESCRIPTIONS": [
       "At the end of combat,gain  #b",
       " random potion."
     ]
   },
-    "MoraleDepletionPlusPower": {
+  "MoraleDepletionPlusPower": {
     "NAME": "Morale Depletion",
     "DESCRIPTIONS": [
       "You won't trigger #yAmplify and #yCharge-up this turn.",
       "WWWWWWWWWWW"
     ]
   },
-    "MoraleDepletionPower": {
+  "MoraleDepletionPower": {
     "NAME": "Morale Depletion",
     "DESCRIPTIONS": [
       "You won't trigger #yAmplify this turn.",
       "WWWWWWWWWWW"
     ]
   },
-    "SuperNovaPower": {
+  "SuperNovaPower": {
     "NAME": "SuperNova",
     "DESCRIPTIONS": [
       "Gain  #b",
       " #yStrength for each #yBurn exhausted. NL You no longer take damage from #yBurn . NL #yExhaust you hand when your turn ends."
     ]
   },
-    "CasketOfStarPlusPower": {
+  "CasketOfStarPlusPower": {
     "NAME": "Casket Of Star",
     "DESCRIPTIONS": [
       "Add  #b",
       " #yupgraded #ySpark to your hand whenever you gain #yBlock ."
     ]
   },
-    "CasketOfStarPower": {
+  "CasketOfStarPower": {
     "NAME": "Casket Of Star",
     "DESCRIPTIONS": [
       "Add  #b",
       " #ySpark to your hand whenever you gain #yBlock ."
     ]
   },
-    "GalacticHaloPower": {
+  "GalacticHaloPower": {
     "NAME": "Galactic Halo",
     "DESCRIPTIONS": [
       "At the end of your turn,gain  #b",
       " #yblock for each #yAttack you played this turn."
     ]
   },
-    "ManaRampagePower": {
+  "ManaRampagePower": {
     "NAME": "Mana Rampage",
     "DESCRIPTIONS": [
       "Your next #yAttack will be played  #b",
       " extra times this turn."
     ]
   },
-    "PropBagPower": {
+  "PropBagPower": {
     "NAME": "Portable Prop Bagr",
     "DESCRIPTIONS": [
       "When the battle ends,you'll lose  #y",
       "."
     ]
   },
-    "UltraShortWavePower": {
+  "UltraShortWavePower": {
     "NAME": "Ultimate ShortWave",
     "DESCRIPTIONS": [
       "Your #yUltimate #yShortWave's effect is #yAmplified  #b",
       " times."
     ]
   },
-    "DarkSparkPower": {
+  "DarkSparkPower": {
     "NAME": "Dark Spark",
     "DESCRIPTIONS": [
       "Each card with 'Spark' in its name you play will grant you  #b",
       " additional #yCharge-up this turn."
     ]
   },
-    "MagicChantPower": {
+  "MagicChantPower": {
     "NAME": "Magic Chant",
     "DESCRIPTIONS": [
       "Reduce the cost of  #b",
       " next turn."
     ]
   },
-    "SatelIllusPower": {
+  "SatelIllusPower": {
     "NAME": "Satellite Illusion",
     "DESCRIPTIONS": [
       "During your turn,when the number of cards in your draw pile increases, gain  #b",
       " [B] ."
     ]
   },
-    "GrandCrossPower": {
+  "GrandCrossPower": {
     "NAME": "Amplified",
     "DESCRIPTIONS": [
       "You have activated #yAmplify effect this turn.",
       "WWWWWWWWWWW"
     ]
   },
-    "Diaspora": {
+  "Diaspora": {
     "NAME": "Diaspora",
     "DESCRIPTIONS": [
       "At the end of turn,instantly kill this creature if its health is less than #b",
       " ."
     ]
   },
-    "GiftOfLife": {
+  "GiftOfLife": {
     "NAME": "Gift of Life",
     "DESCRIPTIONS": [
       "Heal #b",
       " HP at the end of your turn."
     ]
   },
-    "WWWWWWWWWWWWW": {
+  "WWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [
       "WWWWWWWWWWW",
       "WWWWWWWWWWW"
     ]
   }
-
-
-
 }

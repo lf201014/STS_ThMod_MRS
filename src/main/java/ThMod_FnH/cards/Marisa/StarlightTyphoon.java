@@ -24,8 +24,17 @@ public class StarlightTyphoon extends CustomCard {
   private static final int COST = 1;
 
   public StarlightTyphoon() {
-    super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-        AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.SKILL,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.RARE,
+        AbstractCard.CardTarget.SELF
+    );
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
@@ -34,7 +43,9 @@ public class StarlightTyphoon extends CustomCard {
     for (AbstractCard c : p.hand.group) {
       if ((c.type != CardType.ATTACK) && (c != this)) {
         ThMod.logger.info("StarlightTyphoon : exahsting : " + c.cardID);
-        AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(c, p.hand, true));
+        AbstractDungeon.actionManager.addToTop(
+            new ExhaustSpecificCardAction(c, p.hand, true)
+        );
         cnt++;
         ThMod.logger.info("StarlightTyphoon : counter : " + cnt);
       }
@@ -44,7 +55,9 @@ public class StarlightTyphoon extends CustomCard {
       if (this.upgraded) {
         tmp.upgrade();
       }
-      AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(tmp, 1));
+      AbstractDungeon.actionManager.addToBottom(
+          new MakeTempCardInHandAction(tmp, 1)
+      );
       ThMod.logger.info("StarlightTyphoon : adding Spark : counter : " + cnt);
     }
   }

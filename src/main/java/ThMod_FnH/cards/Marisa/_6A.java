@@ -13,39 +13,43 @@ import ThMod_FnH.action._6AAction;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class _6A 
-	extends CustomCard {
-	
-	public static final String ID = "6A";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "img/cards/Strike.png";
-	private static final int COST = 0;
-	private static final int ATTACK_DMG = 3;
-	private static final int UPGRADE_PLUS_DMG = 1;
+public class _6A
+    extends CustomCard {
 
-	public _6A() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON,
-				AbstractCard.CardTarget.ENEMY);
+  public static final String ID = "6A";
+  private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardStrings.NAME;
+  public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String IMG_PATH = "img/cards/Strike.png";
+  private static final int COST = 0;
+  private static final int ATTACK_DMG = 3;
+  private static final int UPGRADE_PLUS_DMG = 1;
 
-		this.baseDamage = ATTACK_DMG;
-	}
+  public _6A() {
+    super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
+        AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON,
+        AbstractCard.CardTarget.ENEMY);
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(
-				new _6AAction((AbstractCreature)m,new DamageInfo(p, this.damage, this.damageTypeForTurn)));
-	}
+    this.baseDamage = ATTACK_DMG;
+  }
 
-	public AbstractCard makeCopy() {
-		return new _6A();
-	}
-	
-	public void upgrade() {
-		if (!this.upgraded) {
-			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
-		}
-	}
+  public void use(AbstractPlayer p, AbstractMonster m) {
+    AbstractDungeon.actionManager.addToBottom(
+        new _6AAction(
+            m,
+            new DamageInfo(p, this.damage, this.damageTypeForTurn)
+        )
+    );
+  }
+
+  public AbstractCard makeCopy() {
+    return new _6A();
+  }
+
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      upgradeDamage(UPGRADE_PLUS_DMG);
+    }
+  }
 }

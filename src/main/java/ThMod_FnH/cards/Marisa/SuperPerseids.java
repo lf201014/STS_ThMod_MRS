@@ -24,10 +24,10 @@ public class SuperPerseids extends CustomCard {
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   private static final int COST = -2;
-  private static final int DMG = 18;
-  private static final int UPG_DMG = 6;
-  private static final int BLC = 5;
-  private static final int UPG_BLC = 3;
+  private static final int DMG = 16;
+  private static final int UPG_DMG = 4;
+  private static final int BLC = 4;
+  private static final int UPG_BLC = 2;
 
   public SuperPerseids() {
     super(
@@ -51,8 +51,8 @@ public class SuperPerseids extends CustomCard {
   public void triggerWhenDrawn() {
     this.applyPowers();
     ThMod.logger.info("SuperPerseids : triggerWhenDrawn : Granting Block "
-        +"; : upgraded : "+this.upgraded
-        +"; : block : "+this.block
+        + "; : upgraded : " + this.upgraded
+        + "; : block : " + this.block
     );
     AbstractDungeon.actionManager.addToBottom(
         new GainBlockAction(
@@ -74,8 +74,8 @@ public class SuperPerseids extends CustomCard {
   public void triggerOnExhaust() {
     this.applyPowers();
     ThMod.logger.info("SuperPerseids : triggerOnExhaust : Damaging Random Enemy :"
-        +"; upgraded : "+this.upgraded
-        +"; damage : "+this.damage
+        + "; upgraded : " + this.upgraded
+        + "; damage : " + this.damage
     );
     AbstractDungeon.actionManager.addToBottom(
         new DamageRandomEnemyAction(

@@ -16,45 +16,60 @@ import basemod.abstracts.CustomCard;
 import basemod.helpers.BaseModTags;
 import basemod.helpers.CardTags;
 
-public class Strike_MRS 
-	extends CustomCard {
-	
-	public static final String ID = "Strike_MRS";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "img/cards/SimpleSpark.png";
-	private static final int COST = 1;
-	private static final int ATTACK_DMG = 6;
-	private static final int UPGRADE_PLUS_DMG = 3;
+public class Strike_MRS
+    extends CustomCard {
 
-	public Strike_MRS() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.BASIC,
-				AbstractCard.CardTarget.ENEMY);
-		CardTags.addTags(this, BaseModTags.BASIC_STRIKE);
-		this.baseDamage = ATTACK_DMG;
-	}
+  public static final String ID = "Strike_MRS";
+  private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardStrings.NAME;
+  public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String IMG_PATH = "img/cards/SimpleSpark.png";
+  private static final int COST = 1;
+  private static final int ATTACK_DMG = 6;
+  private static final int UPGRADE_PLUS_DMG = 3;
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(
-				new DamageAction(m,new DamageInfo(p, this.damage, this.damageTypeForTurn),AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-		AbstractDungeon.actionManager.addToBottom(new SparkCostAction());
-	}
+  public Strike_MRS() {
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.ATTACK,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.BASIC,
+        AbstractCard.CardTarget.ENEMY
+    );
+    CardTags.addTags(this, BaseModTags.BASIC_STRIKE);
+    this.baseDamage = ATTACK_DMG;
+  }
 
-	public AbstractCard makeCopy() {
-		return new Strike_MRS();
-	}
-	
-	@Override
-	public boolean isStrike(){
-		return true;
-	}
+  public void use(AbstractPlayer p, AbstractMonster m) {
+    AbstractDungeon.actionManager.addToBottom(
+        new DamageAction(
+            m,
+            new DamageInfo(p, this.damage, this.damageTypeForTurn),
+            AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+        )
+    );
+    AbstractDungeon.actionManager.addToBottom(
+        new SparkCostAction()
+    );
+  }
 
-	public void upgrade() {
-		if (!this.upgraded) {
-			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
-		}
-	}
+  public AbstractCard makeCopy() {
+    return new Strike_MRS();
+  }
+
+  @Override
+  public boolean isStrike() {
+    return true;
+  }
+
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      upgradeDamage(UPGRADE_PLUS_DMG);
+    }
+  }
 }

@@ -14,46 +14,54 @@ import ThMod_FnH.action.RobberyDamageAction;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class Robbery 
-	extends CustomCard {
-	
-	public static final String ID = "Robbery";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "img/cards/Strike.png";
-	private static final int COST = 1;
-	private static final int ATTACK_DMG = 7;
-	private static final int UPGRADE_PLUS_DMG = 3;
-	private static final int AMP = 1;
+public class Robbery
+    extends CustomCard {
 
-	public Robbery() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,
-				AbstractCard.CardTarget.ENEMY);
+  public static final String ID = "Robbery";
+  private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardStrings.NAME;
+  public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String IMG_PATH = "img/cards/Strike.png";
+  private static final int COST = 1;
+  private static final int ATTACK_DMG = 7;
+  private static final int UPGRADE_PLUS_DMG = 3;
+  private static final int AMP = 1;
 
-		this.baseDamage = ATTACK_DMG;
-		this.exhaust = true;
-	}
+  public Robbery() {
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.ATTACK,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.UNCOMMON,
+        AbstractCard.CardTarget.ENEMY
+    );
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(
-				new RobberyDamageAction(
-						m,
-						new DamageInfo(p, this.damage, this.damageTypeForTurn),
+    this.baseDamage = ATTACK_DMG;
+    this.exhaust = true;
+  }
+
+  public void use(AbstractPlayer p, AbstractMonster m) {
+    AbstractDungeon.actionManager.addToBottom(
+        new RobberyDamageAction(
+            m,
+            new DamageInfo(p, this.damage, this.damageTypeForTurn),
             ThMod.Amplified(this, AMP)
         )
     );
-	}
+  }
 
-	public AbstractCard makeCopy() {
-		return new Robbery();
-	}
-	
-	public void upgrade() {
-		if (!this.upgraded) {
-			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
-		}
-	}
+  public AbstractCard makeCopy() {
+    return new Robbery();
+  }
+
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      upgradeDamage(UPGRADE_PLUS_DMG);
+    }
+  }
 }

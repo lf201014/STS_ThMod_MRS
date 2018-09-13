@@ -14,45 +14,63 @@ import basemod.abstracts.CustomCard;
 import ThMod_FnH.patches.AbstractCardEnum;
 import ThMod_FnH.powers.Marisa.ChargeUpPower;
 
-public class UpSweep 
-	extends CustomCard {
-	
-	public static final String ID = "UpSweep";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "img/cards/UpSweep.png";
-	private static final int COST = 0;
-	private static final int ATTACK_DMG = 4;
-	private static final int UPGRADE_PLUS_DMG = 1;
-	private static final int CHG_GAIN = 1;
-	private static final int UPG_CHG = 1;
+public class UpSweep
+    extends CustomCard {
 
-	public UpSweep() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.BASIC,
-				AbstractCard.CardTarget.ENEMY);
+  public static final String ID = "UpSweep";
+  private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardStrings.NAME;
+  public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String IMG_PATH = "img/cards/UpSweep.png";
+  private static final int COST = 0;
+  private static final int ATTACK_DMG = 4;
+  private static final int UPGRADE_PLUS_DMG = 1;
+  private static final int CHG_GAIN = 1;
+  private static final int UPG_CHG = 1;
 
-		this.baseDamage = this.damage = ATTACK_DMG;
-		this.magicNumber = this.baseMagicNumber = CHG_GAIN;
-	}
+  public UpSweep() {
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.ATTACK,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.BASIC,
+        AbstractCard.CardTarget.ENEMY
+    );
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-				new DamageInfo(p, this.damage, this.damageTypeForTurn),
-					AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p,p,new ChargeUpPower(p,this.magicNumber),this.magicNumber));
-	}
+    this.baseDamage = this.damage = ATTACK_DMG;
+    this.magicNumber = this.baseMagicNumber = CHG_GAIN;
+  }
 
-	public AbstractCard makeCopy() {
-		return new UpSweep();
-	}
+  public void use(AbstractPlayer p, AbstractMonster m) {
+    AbstractDungeon.actionManager.addToBottom(
+        new DamageAction(m,
+            new DamageInfo(p, this.damage, this.damageTypeForTurn),
+            AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+        )
+    );
+    AbstractDungeon.actionManager.addToBottom(
+        new ApplyPowerAction(
+            p,
+            p,
+            new ChargeUpPower(p, this.magicNumber),
+            this.magicNumber
+        )
+    );
+  }
 
-	public void upgrade() {
-		if (!this.upgraded) {
-			upgradeName();
-			upgradeMagicNumber(UPG_CHG);
-			upgradeDamage(UPGRADE_PLUS_DMG);
-		}
-	}
+  public AbstractCard makeCopy() {
+    return new UpSweep();
+  }
+
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      upgradeMagicNumber(UPG_CHG);
+      upgradeDamage(UPGRADE_PLUS_DMG);
+    }
+  }
 }
