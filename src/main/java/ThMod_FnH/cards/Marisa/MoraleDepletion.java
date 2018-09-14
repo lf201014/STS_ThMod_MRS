@@ -44,7 +44,11 @@ public class MoraleDepletion extends CustomCard {
         new GainBlockAction(p, p, this.block)
     );
     AbstractDungeon.actionManager.addToBottom(
-        new ApplyPowerAction(p, p, new MoraleDepletionPlusPower(p))
+        new ApplyPowerAction(
+            p,
+            p,
+            new MoraleDepletionPlusPower(p)
+        )
     );
   }
 

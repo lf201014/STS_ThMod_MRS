@@ -15,69 +15,71 @@ import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
 public class GravityBeat extends CustomCard {
-	public static final String ID = "GravityBeat";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "img/cards/Strike.png";
-	private static final int COST = 2;
-	private static final int ATTACK_DMG = 9;
-	private static final int UPGRADE_PLUS_DMG = 3;
-	private static final int WK = 2;
-	private static final int UPG_WK = 1;
 
-	public GravityBeat() {
-		super(
-				ID, 
-				NAME,
-				IMG_PATH, 
-				COST, 
-				DESCRIPTION,
-				AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.MARISA_COLOR,
-				AbstractCard.CardRarity.UNCOMMON,
-				AbstractCard.CardTarget.ALL_ENEMY
-				);
-		
-		this.isMultiDamage = true;
-		this.baseDamage = this.damage = ATTACK_DMG;
-		this.magicNumber = this.baseMagicNumber = WK;
-	}
+  public static final String ID = "GravityBeat";
+  private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardStrings.NAME;
+  public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String IMG_PATH = "img/cards/Strike.png";
+  private static final int COST = 2;
+  private static final int ATTACK_DMG = 9;
+  private static final int UPGRADE_PLUS_DMG = 3;
+  private static final int WK = 2;
+  private static final int UPG_WK = 1;
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(
-				new DamageAllEnemiesAction(
-						p,
-						this.multiDamage,
-						this.damageTypeForTurn,
-						AttackEffect.SLASH_DIAGONAL
-						)
-			);
-		
-		if (!AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead())
-			for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-				AbstractDungeon.actionManager.addToBottom(
-						new ApplyPowerAction(
-								mo,
-								p, 
-								new WeakPower(mo, this.magicNumber, false),
-								this.magicNumber,
-								true,
-								AttackEffect.NONE
-								)
-						);
-		}
-	}
+  public GravityBeat() {
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.ATTACK,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.UNCOMMON,
+        AbstractCard.CardTarget.ALL_ENEMY
+    );
 
-	public AbstractCard makeCopy() {
-		return new GravityBeat();
-	}
+    this.isMultiDamage = true;
+    this.baseDamage = this.damage = ATTACK_DMG;
+    this.magicNumber = this.baseMagicNumber = WK;
+  }
 
-	public void upgrade() {
-		if (!this.upgraded) {
-			upgradeName();
-			upgradeMagicNumber(UPG_WK);
-			upgradeDamage(UPGRADE_PLUS_DMG);
-		}
-	}
+  public void use(AbstractPlayer p, AbstractMonster m) {
+    AbstractDungeon.actionManager.addToBottom(
+        new DamageAllEnemiesAction(
+            p,
+            this.multiDamage,
+            this.damageTypeForTurn,
+            AttackEffect.SLASH_DIAGONAL
+        )
+    );
+
+    if (!AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
+      for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+        AbstractDungeon.actionManager.addToBottom(
+            new ApplyPowerAction(
+                mo,
+                p,
+                new WeakPower(mo, this.magicNumber, false),
+                this.magicNumber,
+                true,
+                AttackEffect.NONE
+            )
+        );
+      }
+    }
+  }
+
+  public AbstractCard makeCopy() {
+    return new GravityBeat();
+  }
+
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      upgradeMagicNumber(UPG_WK);
+      upgradeDamage(UPGRADE_PLUS_DMG);
+    }
+  }
 }

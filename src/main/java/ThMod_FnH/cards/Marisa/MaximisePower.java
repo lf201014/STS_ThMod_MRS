@@ -13,49 +13,66 @@ import ThMod_FnH.patches.AbstractCardEnum;
 import ThMod_FnH.powers.Marisa.MPPower;
 import basemod.abstracts.CustomCard;
 
-public class MaximisePower extends CustomCard{
-    public static final String ID = "MaximisePower";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-    public static final String IMG_PATH = "img/cards/Defend.png";
-    private static final int COST = 3;
+public class MaximisePower extends CustomCard {
 
-    public MaximisePower() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
-        		AbstractCard.CardType.SKILL, AbstractCardEnum.MARISA_COLOR,
-        		AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = 2;
-        this.exhaust = true;
+  public static final String ID = "MaximisePower";
+  private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardStrings.NAME;
+  public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
+  public static final String IMG_PATH = "img/cards/Defend.png";
+  private static final int COST = 3;
+
+  public MaximisePower() {
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.SKILL,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.RARE,
+        AbstractCard.CardTarget.SELF
+    );
+    this.magicNumber = this.baseMagicNumber = 2;
+    this.exhaust = true;
+  }
+
+  public void use(AbstractPlayer p, AbstractMonster m) {
+    if (p.hasPower("ChargeUpPower")) {
+      if (p.getPower("ChargeUpPower").amount > 0) {
+        AbstractDungeon.actionManager.addToBottom(
+            new GainEnergyAction(p.getPower("ChargeUpPower").amount)
+        );
+        p.getPower("ChargeUpPower").amount = 0;
+      }
     }
-  
-    public void use(AbstractPlayer p, AbstractMonster m){
-    	if (p.hasPower("ChargeUpPower"))
-			if (p.getPower("ChargeUpPower").amount>0) {
-				AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(p.getPower("ChargeUpPower").amount));
-				p.getPower("ChargeUpPower").amount = 0;
-			}
     			/*
     	AbstractDungeon.actionManager.addToBottom(
     			new DrawCardAction(m, this.magicNumber));
     	*/
-    	AbstractDungeon.actionManager.addToBottom(
-        		new ApplyPowerAction(p , p , 
-        			new MPPower(p, 1), 1));
+    AbstractDungeon.actionManager.addToBottom(
+        new ApplyPowerAction(
+            p,
+            p,
+            new MPPower(p, 1),
+            1
+        )
+    );
+  }
+
+  public AbstractCard makeCopy() {
+    return new MaximisePower();
+  }
+
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      //upgradeMagicNumber(1);
+      this.rawDescription = DESCRIPTION_UPG;
+      initializeDescription();
+      this.exhaust = false;
     }
-  
-    public AbstractCard makeCopy(){
-    	return new MaximisePower();
-    }
-  
-    public void upgrade(){
-    	if (!this.upgraded){
-    		upgradeName();
-    		//upgradeMagicNumber(1);
-			this.rawDescription = DESCRIPTION_UPG;
-			initializeDescription();
-    		this.exhaust = false;
-    	}
-    }
+  }
 }

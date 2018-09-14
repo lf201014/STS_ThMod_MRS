@@ -27,9 +27,17 @@ public class MeteoricShower
 
 
   public MeteoricShower() {
-    super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-        AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,
-        AbstractCard.CardTarget.ALL_ENEMY);
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.ATTACK,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.UNCOMMON,
+        AbstractCard.CardTarget.ALL_ENEMY
+    );
 
     this.baseDamage = ATK_DMG;
   }

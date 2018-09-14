@@ -43,9 +43,15 @@ public class MilkyWay extends CustomCard {
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-    AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-    AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
-    AbstractDungeon.actionManager.addToBottom(new DamageUpAction(this.magicNumber));
+    AbstractDungeon.actionManager.addToBottom(
+        new GainBlockAction(p, p, this.block)
+    );
+    AbstractDungeon.actionManager.addToBottom(
+        new DrawCardAction(p, 1)
+    );
+    AbstractDungeon.actionManager.addToBottom(
+        new DamageUpAction(this.magicNumber)
+    );
   }
 
   public AbstractCard makeCopy() {

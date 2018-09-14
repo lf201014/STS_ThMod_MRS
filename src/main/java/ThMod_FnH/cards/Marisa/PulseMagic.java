@@ -29,9 +29,17 @@ public class PulseMagic
   private static final int AMP = 1;
 
   public PulseMagic() {
-    super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-        AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,
-        AbstractCard.CardTarget.SELF);
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.SKILL,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.UNCOMMON,
+        AbstractCard.CardTarget.SELF
+    );
 
     this.magicNumber = this.baseMagicNumber = ENE;
   }
@@ -47,7 +55,8 @@ public class PulseMagic
   public void use(AbstractPlayer p, AbstractMonster m) {
     if (ThMod.Amplified(this, AMP)) {
       AbstractDungeon.actionManager.addToBottom(
-          new ApplyPowerAction(p, p, new PulseMagicPower(p))
+          new ApplyPowerAction(p, p, new PulseMagicPower(p)
+          )
       );
     }
     AbstractDungeon.actionManager.addToBottom(
@@ -55,7 +64,8 @@ public class PulseMagic
             p,
             p,
             new EnergizedBluePower(p, this.magicNumber),
-            this.magicNumber)
+            this.magicNumber
+        )
     );
 
   }

@@ -15,74 +15,89 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class MysteriousBeam 
-	extends CustomCard {
-	
-	public static final String ID = "MysteriousBeam";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-	public static final String IMG_PATH = "img/cards/MysteriousBeam.png";
-	
-	private static final int COST = 1;
+public class MysteriousBeam
+    extends CustomCard {
 
-	public MysteriousBeam() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON,
-				AbstractCard.CardTarget.ENEMY);
-		
-	}
-	
-	@Override
-	public void calculateCardDamage(AbstractMonster mo){
-		float tmp = this.baseDamage;
-		if (mo != null) {
-			for (AbstractPower p : mo.powers) {
-				tmp = p.atDamageReceive(tmp, this.damageTypeForTurn);
-			}
-			for (AbstractPower p : mo.powers){
-				tmp = p.atDamageFinalReceive(tmp, this.damageTypeForTurn);
-				if (this.baseDamage != (int)tmp) {
-					this.isDamageModified = true;
-				}
-			}
-		}
-		this.damage = (int) tmp;
-	}
+  public static final String ID = "MysteriousBeam";
+  private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardStrings.NAME;
+  public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
+  public static final String IMG_PATH = "img/cards/MysteriousBeam.png";
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		
-		AbstractCard c = AbstractDungeon.returnTrulyRandomCard(AbstractCard.CardType.ATTACK, AbstractDungeon.cardRandomRng).makeCopy();
-		if (this.upgraded)
-			c.upgrade();
-	    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, true));
-	    c.applyPowers();
-	    
-	    this.baseDamage = c.damage;
-	    this.calculateCardDamage(m);
-	    
-	    AbstractDungeon.actionManager.addToBottom(
-	    			new DamageAction(
-	    					m,
-	    					new DamageInfo(
-	    							p,
-	    							this.damage,
-	    							this.damageTypeForTurn),
-	    					AbstractGameAction.AttackEffect.SLASH_DIAGONAL
-	    					)
-	    		);
-	}
+  private static final int COST = 1;
 
-	public AbstractCard makeCopy() {
-		return new MysteriousBeam();
-	}
+  public MysteriousBeam() {
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.ATTACK,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.COMMON,
+        AbstractCard.CardTarget.ENEMY
+    );
 
-	public void upgrade() {
-		if (!this.upgraded) {
-			upgradeName();
-			this.rawDescription = DESCRIPTION_UPG;
-			initializeDescription();
-		}
-	}
+  }
+
+  @Override
+  public void calculateCardDamage(AbstractMonster mo) {
+    float tmp = this.baseDamage;
+    if (mo != null) {
+      for (AbstractPower p : mo.powers) {
+        tmp = p.atDamageReceive(tmp, this.damageTypeForTurn);
+      }
+      for (AbstractPower p : mo.powers) {
+        tmp = p.atDamageFinalReceive(tmp, this.damageTypeForTurn);
+        if (this.baseDamage != (int) tmp) {
+          this.isDamageModified = true;
+        }
+      }
+    }
+    this.damage = (int) tmp;
+  }
+
+  public void use(AbstractPlayer p, AbstractMonster m) {
+
+    AbstractCard c =
+        AbstractDungeon.returnTrulyRandomCard(
+            AbstractCard.CardType.ATTACK,
+            AbstractDungeon.cardRandomRng
+        ).makeCopy();
+    if (this.upgraded) {
+      c.upgrade();
+    }
+    AbstractDungeon.actionManager.addToBottom(
+        new MakeTempCardInHandAction(c, true)
+    );
+    c.applyPowers();
+
+    this.baseDamage = c.damage;
+    this.calculateCardDamage(m);
+
+    AbstractDungeon.actionManager.addToBottom(
+        new DamageAction(
+            m,
+            new DamageInfo(
+                p,
+                this.damage,
+                this.damageTypeForTurn),
+            AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+        )
+    );
+  }
+
+  public AbstractCard makeCopy() {
+    return new MysteriousBeam();
+  }
+
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      this.rawDescription = DESCRIPTION_UPG;
+      initializeDescription();
+    }
+  }
 }

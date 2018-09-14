@@ -32,7 +32,8 @@ public class CasketOfStarPower extends AbstractPower {
   public void onGainedBlock(float blockAmount) {
     AbstractCard card = new Spark();
     AbstractDungeon.actionManager.addToBottom(
-        new MakeTempCardInHandAction(card, this.amount));
+        new MakeTempCardInHandAction(card, this.amount)
+    );
   }
 
   public void updateDescription() {

@@ -31,18 +31,28 @@ public class ManaConvection extends CustomCard {
   private static final int CHRG_DRAIN = 8;
 
   public ManaConvection() {
-    super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-        AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON,
-        AbstractCard.CardTarget.SELF);
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.SKILL,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.COMMON,
+        AbstractCard.CardTarget.SELF
+    );
     this.magicNumber = this.baseMagicNumber = DRAW;
 
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
     AbstractDungeon.actionManager.addToBottom(
-        new DrawCardAction(p, this.magicNumber));
+        new DrawCardAction(p, this.magicNumber)
+    );
     AbstractDungeon.actionManager.addToBottom(
-        new ExhaustAction(p, p, EXHT, false));
+        new ExhaustAction(p, p, EXHT, false)
+    );
 
     if (p.hasPower("ChargeUpPower")) {
       if (p.getPower("ChargeUpPower").amount >= CHRG_DRAIN) {

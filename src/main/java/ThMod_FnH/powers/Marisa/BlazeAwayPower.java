@@ -49,11 +49,15 @@ public class BlazeAwayPower
 
     ThMod.logger.info("BlazeWayPower : adding " + this.amount + " : " + c.cardID);
 
-    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, this.amount));
+    AbstractDungeon.actionManager.addToBottom(
+        new MakeTempCardInHandAction(c, this.amount)
+    );
 
     ThMod.logger.info("BlazeWayPower : removing power");
 
-    AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, this));
+    AbstractDungeon.actionManager.addToBottom(
+        new RemoveSpecificPowerAction(owner, owner, this)
+    );
 
     ThMod.logger.info("BlazeWayPower : all done");
   }
@@ -64,8 +68,9 @@ public class BlazeAwayPower
 
   public void atEndOfTurn(boolean isPlayer) {
     if (isPlayer) {
-      AbstractDungeon.actionManager
-          .addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+      AbstractDungeon.actionManager.addToBottom(
+          new RemoveSpecificPowerAction(this.owner, this.owner, this)
+      );
     }
   }
 }

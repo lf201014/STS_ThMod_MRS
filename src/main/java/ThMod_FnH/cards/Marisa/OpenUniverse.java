@@ -27,8 +27,6 @@ public class OpenUniverse extends CustomCard {
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   private static final int COST = 1;
   private static final int DRAW = 2;
-  //private static final int UPG_DRAW = 1;
-  //private static final int AMP = 1;
 
   public OpenUniverse() {
     super(
@@ -49,17 +47,11 @@ public class OpenUniverse extends CustomCard {
 
     for (int i = 0; i < 5; i++) {
       AbstractCard card = AbstractDungeon.returnTrulyRandomCard();
-      //if (amp) card.upgrade();
-	        /*
-	        if (amp) {
-		    	card.freeToPlayOnce = true;
-		    	card.applyPowers();
-		    }
-		    */
+
       ThMod.logger.info("OpenUniverse : adding : " + card.cardID);
 
       AbstractDungeon.actionManager.addToBottom(
-          new MakeTempCardInDrawPileAction(card,1,true,true)
+          new MakeTempCardInDrawPileAction(card, 1, true, true)
       );
     }
 
@@ -77,7 +69,6 @@ public class OpenUniverse extends CustomCard {
     );
 
     ThMod.logger.info("OpenUniverse : done");
-
 
   }
 
