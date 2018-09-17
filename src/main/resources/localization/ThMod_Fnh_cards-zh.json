@@ -192,8 +192,8 @@
   },
   "ShootingEcho": {
     "NAME": "流星共鸣",
-    "DESCRIPTION": " 消耗 一张卡，将一张 流星共鸣 加入手牌。 NL 造成 !D! 点伤害。 NL  消耗 。",
-    "UPGRADE_DESCRIPTION": " 消耗 一张卡，将一张 升级 过的 流星共鸣 加入手牌。 NL 造成 !D! 点伤害。 NL  消耗 。"
+    "DESCRIPTION": " 消耗 一张随机手牌，然后将一张 流星共鸣 加入手中。 NL 造成 !D! 点伤害。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": " 消耗 一张手牌，然后将一张 升级 过的 流星共鸣 加入手中。 NL 造成 !D! 点伤害。 NL  消耗 。"
   },
   "EnergyFlow": {
     "NAME": "能量涌动",
@@ -342,7 +342,7 @@
   },
   "StarBarrage": {
     "NAME": "魔法星弹",
-    "DESCRIPTION": "造成 !D! 点伤害，并使此卡的基础伤害增加所造成伤害的数值。",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次，并使这张卡在这场战斗中伤害段数增加1。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "AFriendsGift": {

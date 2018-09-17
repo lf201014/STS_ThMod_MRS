@@ -188,8 +188,8 @@
   },
   "ShootingEcho": {
     "NAME": "Shooting Echo",
-    "DESCRIPTION": " Exhaust  a card,add a Shooting Echo card to your hand. NL deal !D! damage. NL Exhaust .",
-    "UPGRADE_DESCRIPTION": "Exhaust  a card,add an Upgraded Shooting Echo to your hand. NL deal !D! damage. NL Exhaust ."
+    "DESCRIPTION": " Exhaust  a random card in hand ,then add a Shooting Echo card to your hand. NL deal !D! damage. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "Exhaust  a card,then add an Upgraded Shooting Echo to your hand. NL deal !D! damage. NL Exhaust ."
   },
   "EnergyFlow": {
     "NAME": "Energy Flow",
@@ -343,7 +343,7 @@
   },
   "StarBarrage": {
     "NAME": "Star Barrage",
-    "DESCRIPTION": "Deal !D! damage,then increase the damage of this card for the damage dealt.",
+    "DESCRIPTION": "Deal !D! damage !M! time(s). NL Deal one more time damage every time this card is played in this combat.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "AFriendsGift": {

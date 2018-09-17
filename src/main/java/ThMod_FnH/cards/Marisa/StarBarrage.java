@@ -1,7 +1,10 @@
 package ThMod_FnH.cards.Marisa;
 
-import ThMod_FnH.action.StarBarrageDamageAction;
+import ThMod_FnH.action.deprecated.StarBarrageDamageAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -21,6 +24,7 @@ public class StarBarrage
   private static final int COST = 1;
   private static final int ATK_DMG = 6;
   private static final int UPGRADE_PLUS_DMG = 3;
+  private static final int TAP = 1;
 
   public StarBarrage() {
     super(
@@ -35,16 +39,25 @@ public class StarBarrage
         AbstractCard.CardTarget.ENEMY
     );
     this.baseDamage = ATK_DMG;
+    this.magicNumber = this.baseMagicNumber = TAP;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-    AbstractDungeon.actionManager.addToBottom(
-        new StarBarrageDamageAction(m, this)
-    );
+    for (int i = 0; i < this.magicNumber; i++) {
+      AbstractDungeon.actionManager.addToBottom(
+          new DamageAction(
+              m,
+              new DamageInfo(p, this.damage, this.damageTypeForTurn),
+              AttackEffect.FIRE
+          )
+      );
+    }
+    this.upgradeMagicNumber(TAP);
+    this.applyPowers();
   }
 
   public AbstractCard makeCopy() {
-    return new StarBarrage();
+    return new ThMod_FnH.cards.Marisa.StarBarrage();
   }
 
   public void upgrade() {

@@ -1,35 +1,28 @@
 package ThMod_FnH.cards.Marisa;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import ThMod_FnH.action.CardTransformAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import ThMod_FnH.ThMod;
-import ThMod_FnH.abstracts.AmplifiedAttack;
+import ThMod_FnH.action.OrbitalAction;
 import ThMod_FnH.patches.AbstractCardEnum;
+import basemod.abstracts.CustomCard;
 
-public class AFriendsGift
-    extends AmplifiedAttack {
+public class AFriendsGift extends CustomCard {
 
   public static final String ID = "AFriendsGift";
+  public static final String IMG_PATH = "img/cards/Defend.png";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-  public static final String IMG_PATH = "img/cards/Strike.png";
-
-  private static final int COST = 1;
-  private static final int ATK_DMG = 6;
-  private static final int UPG_DMG = 3;
-  private static final int AMP_DMG = 6;
-  private static final int UPG_AMP = 3;
-  private static final int AMP = 1;
-
+  private static final int COST = -2;
+  private static final int UPG_DRAW = 1;
+  private static final int DRAW = 1;
 
   public AFriendsGift() {
     super(
@@ -38,72 +31,39 @@ public class AFriendsGift
         IMG_PATH,
         COST,
         DESCRIPTION,
-        AbstractCard.CardType.ATTACK,
+        AbstractCard.CardType.SKILL,
         AbstractCardEnum.MARISA_COLOR,
         AbstractCard.CardRarity.UNCOMMON,
-        AbstractCard.CardTarget.ENEMY
+        AbstractCard.CardTarget.SELF
     );
-
-    this.baseDamage = ATK_DMG;
-    this.ampNumber = AMP_DMG;
-    this.baseBlock = this.baseDamage + this.ampNumber;
-  }
-
-  public void use(AbstractPlayer p, AbstractMonster m) {
-    this.exhaust = true;
-    if (ThMod.Amplified(this, AMP)) {
-      this.exhaust = false;
-      AbstractDungeon.actionManager.addToBottom(
-          new DamageAction(
-              m,
-              new DamageInfo(p, this.block, this.damageTypeForTurn),
-              AbstractGameAction.AttackEffect.SLASH_DIAGONAL
-          )
-      );
-    } else {
-      AbstractDungeon.actionManager.addToBottom(
-          new DamageAction(
-              m,
-              new DamageInfo(p, this.damage, this.damageTypeForTurn),
-              AbstractGameAction.AttackEffect.SLASH_DIAGONAL
-          )
-      );
-    }
+    this.magicNumber = this.baseMagicNumber = DRAW;
   }
 
   @Override
-  public void applyPowers() {
-    super.applyPowers();
-    this.retain = true;
-  }
-
-  public void atTurnStart() {
-    ThMod.logger.info(
-        "AFriendsGift : atTurnStart : Upgrading damage : base :" + this.baseDamage +
-            " ; damage : " + this.damage +
-            " ; Amplified base : " + this.baseBlock +
-            " ; AMplified damage : " + this.block
-    );
-    this.upgradeDamage(2);
-    ThMod.logger.info(
-        "AFriendsGift : atTurnStart : upgraded damage : base :" + this.baseDamage +
-            " ; damage : " + this.damage +
-            " ; Amplified base : " + this.baseBlock +
-            " ; AMplified damage : " + this.block
-    );
-  }
-
-  public AbstractCard makeCopy() {
-    return new AFriendsGift();
-  }
-
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      upgradeDamage(UPG_DMG);
-      this.ampNumber += UPG_AMP;
-      this.block = this.baseDamage + this.ampNumber;
-      this.isBlockModified = true;
+      upgradeMagicNumber(UPG_DRAW);
     }
+  }
+
+  public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+    return false;
+  }
+
+  public void triggerOnExhaust() {
+    AbstractDungeon.actionManager.addToBottom(
+        new CardTransformAction(this,AbstractDungeon.player.hand)
+    );
+  }
+
+  public void triggerWhenDrawn() {
+    AbstractDungeon.actionManager.addToBottom(
+        new DrawCardAction(AbstractDungeon.player, this.magicNumber)
+    );
+  }
+
+  @Override
+  public void use(AbstractPlayer arg0, AbstractMonster arg1) {
   }
 }

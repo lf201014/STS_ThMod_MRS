@@ -1,6 +1,5 @@
 package ThMod_FnH;
 
-import ThMod_FnH.relics.Cape;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import java.nio.charset.StandardCharsets;
 
@@ -362,7 +361,7 @@ public class ThMod implements PostExhaustSubscriber,
     BaseMod.addCard(new UnstableBomb());
     UnlockTracker.unlockCard("UnstableBomb");
     BaseMod.addCard(new StarBarrage());
-    UnlockTracker.unlockCard("StarBarrage");
+    UnlockTracker.unlockCard("StarBarrage_0");
     BaseMod.addCard(new ShootingEcho());
     UnlockTracker.unlockCard("ShootingEcho");
     //Uncommon: 12

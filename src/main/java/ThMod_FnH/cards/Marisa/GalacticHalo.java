@@ -25,7 +25,7 @@ public class GalacticHalo extends CustomCard {
   private static final int STC = 2;
   private static final int UPG_STC = 1;
   private static final int BLC = 13;
-  private static final int UPG_BLC = 3;
+  private static final int UPG_BLC = 2;
 
   public GalacticHalo() {
     super(
