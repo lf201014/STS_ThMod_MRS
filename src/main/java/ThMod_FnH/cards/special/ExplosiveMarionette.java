@@ -1,7 +1,6 @@
 package ThMod_FnH.cards.special;
 
 import ThMod_FnH.ThMod;
-import ThMod_FnH.cards.Marisa.BlazingStar;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -61,7 +60,13 @@ public class ExplosiveMarionette extends CustomCard {
   }
 
   public AbstractCard makeCopy() {
-    return new BlazingStar();
+    return new ExplosiveMarionette();
+  }
+
+  @Override
+  public void applyPowers() {
+    super.applyPowers();
+    this.retain = true;
   }
 
   public void upgrade() {

@@ -15,16 +15,16 @@ import ThMod_FnH.ThMod;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class FiveColorTailsmanPower
+public class TalismanPower
     extends AbstractPower {
 
-  public static final String POWER_ID = "BlazeAwayPower";
+  public static final String POWER_ID = "TalismanPower";
   private static final PowerStrings powerStrings =
       CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
   public static final String NAME = powerStrings.NAME;
   public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-  public FiveColorTailsmanPower(AbstractCreature owner, int amount) {
+  public TalismanPower(AbstractCreature owner, int amount) {
     this.name = NAME;
     this.ID = POWER_ID;
     this.owner = owner;

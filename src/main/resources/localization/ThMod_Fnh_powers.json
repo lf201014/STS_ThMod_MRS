@@ -245,6 +245,13 @@
       " HP at the end of your turn."
     ]
   },
+  "TalismanPower": {
+    "NAME": "Five-Colored Talisman",
+    "DESCRIPTIONS": [
+      "At the start of your turn,add #b",
+      " random #ySkill to your hand."
+    ]
+  },
   "WWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [

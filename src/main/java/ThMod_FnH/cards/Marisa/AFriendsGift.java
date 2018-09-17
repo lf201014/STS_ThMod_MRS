@@ -51,15 +51,9 @@ public class AFriendsGift extends CustomCard {
     return false;
   }
 
-  public void triggerOnExhaust() {
-    AbstractDungeon.actionManager.addToBottom(
-        new CardTransformAction(this,AbstractDungeon.player.hand)
-    );
-  }
-
   public void triggerWhenDrawn() {
     AbstractDungeon.actionManager.addToBottom(
-        new DrawCardAction(AbstractDungeon.player, this.magicNumber)
+        new CardTransformAction(this,AbstractDungeon.player.hand)
     );
   }
 

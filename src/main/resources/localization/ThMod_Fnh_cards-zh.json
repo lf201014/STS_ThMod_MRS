@@ -395,6 +395,21 @@
     "DESCRIPTION": "施展一个只有真正的魔法使才能看到的华丽魔术。 NL 消耗 。 NL 虚无 。",
     "UPGRADE_DESCRIPTION": "施展一个只有真正的魔法使才能看到的超级华丽魔术。 NL 消耗 。 NL 虚无 。"
   },
+  "ExplosiveMarionette": {
+    "NAME": "Explosive Marionette",
+    "DESCRIPTION": " Retain .Deal !D! damage. NL Amplify [B] :Deal double damage. Exhaust .",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "OpticalCamouflage": {
+    "NAME": "Optical Camouflage",
+    "DESCRIPTION": " Retain .Gain !B! block. Nl Amplify [B] :Gain double amount. Exhaust .",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "FiveColoredTalisman": {
+    "NAME": "Five-Colored Talisman",
+    "DESCRIPTION": " Retain .Add a random skill to your hand at the start of your turn.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
   "WWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTION": "WWWWWWWWWWW",

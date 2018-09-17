@@ -348,8 +348,8 @@
   },
   "AFriendsGift": {
     "NAME": "A Friend's Gift",
-    "DESCRIPTION": " Retain .Deal !D! damage.Increase damage by 2 when your turn starts. Exhaust . NL Amplify  [B]  :Deal !B! damage instead, don't Exhaust .",
-    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+    "DESCRIPTION": " UnPlayable . Transform to a random card of three specific cards.",
+    "UPGRADE_DESCRIPTION": "Retain .Deal !D! damage.Increase damage by 2 when your turn starts. Exhaust . NL Amplify  [B]  :Deal !B! damage instead, don't Exhaust ."
   },
   "BinaryStars": {
     "NAME": "Binary Stars",
@@ -395,6 +395,21 @@
     "NAME": "Mana Phantom",
     "DESCRIPTION": "Cast a Magic that only shown to true Magicians. NL Exhaust . NL Ethereal .",
     "UPGRADE_DESCRIPTION": "Cast a splendid Magic that only shown true Magicians. NL Exhaust . NL Ethereal ."
+  },
+  "ExplosiveMarionette": {
+    "NAME": "Explosive Marionette",
+    "DESCRIPTION": " Retain .Deal !D! damage. NL Amplify [B] :Deal double damage. Exhaust .",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "OpticalCamouflage": {
+    "NAME": "Optical Camouflage",
+    "DESCRIPTION": " Retain .Gain !B! block. Nl Amplify [B] :Gain double amount. Exhaust .",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "FiveColoredTalisman": {
+    "NAME": "Five-Colored Talisman",
+    "DESCRIPTION": " Retain .Add a random skill to your hand at the start of your turn.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",

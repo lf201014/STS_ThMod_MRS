@@ -245,6 +245,13 @@
       " 点生命值。"
     ]
   },
+  "TalismanPower": {
+    "NAME": "Five-Colored Talisman",
+    "DESCRIPTIONS": [
+      "At the start of your turn,add #b",
+      " random #ySkill to your hand."
+    ]
+  },
   "WWWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [

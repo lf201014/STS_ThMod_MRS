@@ -1,8 +1,9 @@
 package ThMod_FnH.action;
 
+import ThMod_FnH.ThMod;
 import ThMod_FnH.cards.Marisa.AFriendsGift;
 import ThMod_FnH.cards.special.ExplosiveMarionette;
-import ThMod_FnH.cards.special.FiveColoredTailsman;
+import ThMod_FnH.cards.special.FiveColoredTalisman;
 import ThMod_FnH.cards.special.OpticalCamouflage;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -18,6 +19,10 @@ public class CardTransformAction extends AbstractGameAction {
   public CardTransformAction(AbstractCard card, CardGroup group) {
     this.card = card;
     this.group = group;
+    ThMod.logger.info(
+        "CardTransformAction : card :"+card.cardID
+        +" ; group :"+group.toString()
+    );
   }
 
   public void update() {
@@ -42,12 +47,14 @@ public class CardTransformAction extends AbstractGameAction {
           c = new OpticalCamouflage();
           break;
         case 2:
-          c = new FiveColoredTailsman();
+          c = new FiveColoredTalisman();
           break;
         default:
           c = new AFriendsGift();
           break;
       }
+
+      ThMod.logger.info("CardTransformAction : Adding :"+c.cardID);
 
       if (group == AbstractDungeon.player.hand) {
         group.removeCard(card);
@@ -60,6 +67,10 @@ public class CardTransformAction extends AbstractGameAction {
         group.addToRandomSpot(c);
       }
 
+      this.isDone = true;
+
+    } else {
+      ThMod.logger.info("CardTransformAction:done");
     }
   }
 }

@@ -47,7 +47,7 @@ public class OpticalCamouflage extends CustomCard {
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-    if (ThMod.Amplified(this,this.AMP)){
+    if (ThMod.Amplified(this, this.AMP)) {
       this.block *= 2;
     }
     AbstractDungeon.actionManager.addToBottom(
@@ -56,12 +56,18 @@ public class OpticalCamouflage extends CustomCard {
   }
 
   public AbstractCard makeCopy() {
-    return new ThMod_FnH.cards.Marisa.Defend_MRS();
+    return new OpticalCamouflage();
   }
 
   @Override
   public boolean isDefend() {
     return true;
+  }
+
+  @Override
+  public void applyPowers() {
+    super.applyPowers();
+    this.retain = true;
   }
 
   public void upgrade() {
