@@ -347,7 +347,7 @@
   },
   "AFriendsGift": {
     "NAME": "友人之赠",
-    "DESCRIPTION": " 保留 。回合开始时伤害上升2点。 NL 造成 !D! 伤害， 消耗 。 NL 增幅  [B]  :伤害变为 !B! ， 不再 消耗 。",
+    "DESCRIPTION": " 不能被打出 。抽到此卡时获得效果。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "BinaryStars": {
@@ -396,18 +396,18 @@
     "UPGRADE_DESCRIPTION": "施展一个只有真正的魔法使才能看到的超级华丽魔术。 NL 消耗 。 NL 虚无 。"
   },
   "ExplosiveMarionette": {
-    "NAME": "Explosive Marionette",
-    "DESCRIPTION": " Retain .Deal !D! damage. NL Amplify [B] :Deal double damage. Exhaust .",
+    "NAME": "人偶炸弹",
+    "DESCRIPTION": " 保留 。造成 !D! 伤害。 NL 增幅 [B] ：造成双倍伤害。 消耗 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "OpticalCamouflage": {
-    "NAME": "Optical Camouflage",
-    "DESCRIPTION": " Retain .Gain !B! block. Nl Amplify [B] :Gain double amount. Exhaust .",
+    "NAME": "光学迷彩",
+    "DESCRIPTION": " 保留 。获得 !B! 格挡 。 NL 增幅 [B] ：获得双倍格挡。 消耗 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "FiveColoredTalisman": {
-    "NAME": "Five-Colored Talisman",
-    "DESCRIPTION": " Retain .Add a random skill to your hand at the start of your turn.",
+    "NAME": "五色魔符",
+    "DESCRIPTION": " 保留 。在你回合开始时将一张随机技能加入手牌。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WWWWWWWWWWW": {

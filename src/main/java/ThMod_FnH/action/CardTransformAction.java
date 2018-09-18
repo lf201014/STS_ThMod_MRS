@@ -37,7 +37,7 @@ public class CardTransformAction extends AbstractGameAction {
       }
 
       AbstractCard c ;
-      int i = (int) AbstractDungeon.miscRng.random() * 3;
+      int i = AbstractDungeon.miscRng.random(0,2);
 
       switch (i) {
         case 0:

@@ -403,7 +403,7 @@
   },
   "OpticalCamouflage": {
     "NAME": "Optical Camouflage",
-    "DESCRIPTION": " Retain .Gain !B! block. Nl Amplify [B] :Gain double amount. Exhaust .",
+    "DESCRIPTION": " Retain .Gain !B! block. NL Amplify [B] :Gain double amount. Exhaust .",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "FiveColoredTalisman": {

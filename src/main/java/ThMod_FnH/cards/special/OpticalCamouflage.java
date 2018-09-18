@@ -4,8 +4,6 @@ package ThMod_FnH.cards.special;
 import ThMod_FnH.ThMod;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModTags;
-import basemod.helpers.CardTags;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -24,7 +22,7 @@ public class OpticalCamouflage extends CustomCard {
   private static final int COST = 1;
   private static final int BLOCK_AMT = 8;
   private static final int UPGRADE_PLUS_BLOCK = 3;
-  private static final int AMP = 3;
+  private static final int AMP = 1;
 
   public OpticalCamouflage() {
     super(
@@ -57,11 +55,6 @@ public class OpticalCamouflage extends CustomCard {
 
   public AbstractCard makeCopy() {
     return new OpticalCamouflage();
-  }
-
-  @Override
-  public boolean isDefend() {
-    return true;
   }
 
   @Override

@@ -1,11 +1,13 @@
 package ThMod_FnH.action;
 
+import ThMod_FnH.ThMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 public class UnstableBombAction extends AbstractGameAction {
 
@@ -26,10 +28,18 @@ public class UnstableBombAction extends AbstractGameAction {
     this.attackEffect = AbstractGameAction.AttackEffect.FIRE;
     this.duration = DURATION;
     this.numTimes = numTimes;
+    if (target != null) {
+      ThMod.logger.info(
+          "UnstableBombAction : target : " + target.name
+              + " damage : " + this.dmg
+              + " times: " + this.numTimes
+      );
+    }
   }
 
   public void update() {
     if (this.target == null) {
+      ThMod.logger.info("UnstableBombAction : error : target == null !");
       this.isDone = true;
       return;
     }
@@ -39,16 +49,17 @@ public class UnstableBombAction extends AbstractGameAction {
       return;
     }
     if (this.target.currentHealth > 0) {
-			/*
-			this.target.damageFlash = true;
-			this.target.damageFlashFrames = 4;
-			AbstractDungeon.effectList.add(
-					new FlashAtkImgEffect(
-							this.target.hb.cX, this.target.hb.cY, this.attackEffect
-							)
-					);
-					*/
+      this.target.damageFlash = true;
+      this.target.damageFlashFrames = 4;
+      AbstractDungeon.effectList.add(
+          new FlashAtkImgEffect(
+              this.target.hb.cX, this.target.hb.cY, this.attackEffect
+          )
+      );
+
+      this.target.damage(this.info);
       //this.info.applyPowers(this.info.owner, this.target);
+      /*
       AbstractDungeon.actionManager.addToBottom(
           new DamageAction(
               this.target,
@@ -56,7 +67,7 @@ public class UnstableBombAction extends AbstractGameAction {
               this.attackEffect
           )
       );
-      //this.target.damage(this.info);
+      */
       if ((this.numTimes > 1) && (!AbstractDungeon.getMonsters().areMonstersBasicallyDead())) {
         this.numTimes--;
         AbstractDungeon.actionManager.addToBottom(

@@ -36,14 +36,17 @@ public class TalismanPower
 
   @Override
   public void atStartOfTurnPostDraw() {
-    AbstractCard c =
-        AbstractDungeon.returnTrulyRandomCard(
-            AbstractCard.CardType.ATTACK,
-            AbstractDungeon.cardRandomRng
-        ).makeCopy();
-    AbstractDungeon.actionManager.addToBottom(
-        new MakeTempCardInHandAction(c, 1)
-    );
+    for (int i = 0; i < this.amount; i++) {
+      AbstractCard c =
+          AbstractDungeon.returnTrulyRandomCard(
+              AbstractCard.CardType.SKILL,
+              AbstractDungeon.cardRandomRng
+          ).makeCopy();
+      AbstractDungeon.actionManager.addToBottom(
+          new MakeTempCardInHandAction(c, 1)
+      );
+    }
+
   }
 
   public void updateDescription() {

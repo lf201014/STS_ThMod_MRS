@@ -246,10 +246,10 @@
     ]
   },
   "TalismanPower": {
-    "NAME": "Five-Colored Talisman",
+    "NAME": "五色魔符",
     "DESCRIPTIONS": [
-      "At the start of your turn,add #b",
-      " random #ySkill to your hand."
+      "在你的回合开始时，将 #b",
+      " 张随机 #y技能 加入手牌。"
     ]
   },
   "WWWWWWWWWWWWWWW": {
