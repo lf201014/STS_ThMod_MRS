@@ -1,7 +1,8 @@
 package ThMod_FnH.cards.Marisa;
 
 import ThMod_FnH.ThMod;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import ThMod_FnH.action.UnstableBombAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -24,17 +25,25 @@ public class CollectingQuirk
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String IMG_PATH = "img/cards/Strike.png";
   private static final int COST = 2;
-  private static final int DVID = 4;
-  private static final int UPG_DVID = -1;
+  private static final int DIVIDER = 4;
+  private static final int UPG_DIVIDER = -1;
   private static final int ATK_DMG = 7;
   private int cnt;
 
   public CollectingQuirk() {
-    super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-        AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.RARE,
-        AbstractCard.CardTarget.ALL_ENEMY);
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.ATTACK,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.RARE,
+        AbstractCard.CardTarget.ALL_ENEMY
+    );
     this.baseDamage = ATK_DMG;
-    this.magicNumber = this.baseMagicNumber = DVID;
+    this.magicNumber = this.baseMagicNumber = DIVIDER;
     this.cnt = 0;
     this.block = this.baseBlock = 0;
   }
@@ -47,13 +56,14 @@ public class CollectingQuirk
     this.isBlockModified = (this.block == 0);
     ThMod.logger.info(
         "CollectingQuirk : applyPowers : block :" + this.block
-            + " ; baseblock : " + this.baseBlock
+            + " ; baseBlock : " + this.baseBlock
             + " ; counter : " + this.cnt
     );
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
     getCounter();
+    /*
     if (cnt > 0) {
       for (int i = 0; i < cnt; i++) {
         AbstractDungeon.actionManager.addToBottom(
@@ -63,10 +73,21 @@ public class CollectingQuirk
                     this.damage,
                     this.damageTypeForTurn
                 ),
-                AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+                AttackEffect.FIRE
             )
         );
       }
+    }
+    */
+    if (cnt > 0) {
+      AbstractDungeon.actionManager.addToBottom(
+          new UnstableBombAction(
+              AbstractDungeon.getMonsters().getRandomMonster(true),
+              this.damage,
+              this.damage,
+              this.cnt
+          )
+      );
     }
   }
 
@@ -89,7 +110,7 @@ public class CollectingQuirk
     if (!this.upgraded) {
       upgradeName();
       //upgradeDamage(UPG_DMG);
-      upgradeMagicNumber(UPG_DVID);
+      upgradeMagicNumber(UPG_DIVIDER);
     }
   }
 }

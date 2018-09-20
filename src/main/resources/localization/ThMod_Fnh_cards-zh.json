@@ -357,7 +357,7 @@
   },
   "CollectingQuirk": {
     "NAME": "收集癖",
-    "DESCRIPTION": "你每有 !M! 个遗物，随机造成 !D! 点伤害(共计 !B! 次)。",
+    "DESCRIPTION": "你每有 !M! 个遗物，随机造成 !D! 点伤害(共 !B! 次)。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "FungusSplash": {

@@ -238,13 +238,6 @@
       " ."
     ]
   },
-  "GiftOfLife": {
-    "NAME": "Gift of Life",
-    "DESCRIPTIONS": [
-      "Heal #b",
-      " HP at the end of your turn."
-    ]
-  },
   "TalismanPower": {
     "NAME": "Five-Colored Talisman",
     "DESCRIPTIONS": [

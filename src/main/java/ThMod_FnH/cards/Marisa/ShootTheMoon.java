@@ -113,7 +113,7 @@ public class ShootTheMoon
       upgradeName();
       upgradeDamage(UPG_DMG);
       this.ampNumber += UPG_AMP;
-      this.block = this.baseDamage + this.ampNumber;
+      this.block = this.baseBlock = this.baseDamage + this.ampNumber;
       this.isBlockModified = true;
     }
   }
