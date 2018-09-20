@@ -1,4 +1,4 @@
-package ThMod_FnH.powers.Marisa;
+package ThMod_FnH.powers.deprecated;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 
+@Deprecated
 public class WitchOfGreedGold extends AbstractPower {
 
   public static final String POWER_ID = "WitchOfGreedGold";

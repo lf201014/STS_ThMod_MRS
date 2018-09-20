@@ -45,7 +45,7 @@
     "NAME": "Experimental Familiar",
     "FLAVOR": "A Familiar looks just like a shiny orb,not very powerful but will surely help you alot.",
     "DESCRIPTIONS": [
-      "At the start of each turn,add a #ySpark and a random card to your hand."
+      "At the start of each turn,add a #ySpark and a random #yAttack to your hand."
     ]
   },
   "BreadOfAWashokuLover": {

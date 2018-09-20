@@ -54,9 +54,11 @@ public class PolarisUnique extends CustomCard {
 
     ThMod.logger.info("Adding card to deck : GuidingStar");
     AbstractCard c = new GuidingStar();
+    /*
     if (this.upgraded) {
       c.upgrade();
     }
+    */
     AbstractDungeon.actionManager.addToBottom(
         new MakeTempCardInDrawPileAction(c, 1, true, true)
     );
@@ -78,6 +80,7 @@ public class PolarisUnique extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
+      this.isInnate = true;
       this.rawDescription = DESCRIPTION_UPG;
       initializeDescription();
     }

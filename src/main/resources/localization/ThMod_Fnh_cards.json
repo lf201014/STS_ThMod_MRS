@@ -98,8 +98,8 @@
   },
   "PolarisUnique": {
     "NAME": "Polaris Unique",
-    "DESCRIPTION": "Put a Guiding Star into your deck.Gain [B] at each start of turn if Guiding Star is in your deck.",
-    "UPGRADE_DESCRIPTION": "Put an upgraded Guiding Star into your deck.Gain [B] at each start of turn if Guiding Star is in your deck."
+    "DESCRIPTION": "Put a Guiding Star into your deck.Gain [B] at the start of turn if it is in your deck.",
+    "UPGRADE_DESCRIPTION": " Innate .Put a Guiding Star into your deck.Gain [B] at the start of turn if it is in your deck."
   },
   "SatelliteIllusion": {
     "NAME": "Satellite Illusion",
@@ -253,7 +253,7 @@
   },
   "WitchOfGreed": {
     "NAME": "Witch Of Greed",
-    "DESCRIPTION": "At the end of combat,gain !M! gold.  NL  Amplify  [B]  :Gain a random potion in addition.",
+    "DESCRIPTION": "At the end of combat,gain !M! extra gold.  NL  Amplify  [B]  :Gain a random potion in addition.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "TreasureHunter": {

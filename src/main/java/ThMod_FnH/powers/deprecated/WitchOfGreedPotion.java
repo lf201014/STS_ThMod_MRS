@@ -1,4 +1,4 @@
-package ThMod_FnH.powers.Marisa;
+package ThMod_FnH.powers.deprecated;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+@Deprecated
 public class WitchOfGreedPotion
     extends AbstractPower {
 
