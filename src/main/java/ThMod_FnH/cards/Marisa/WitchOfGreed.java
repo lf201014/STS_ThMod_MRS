@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import ThMod_FnH.ThMod;
 import ThMod_FnH.patches.AbstractCardEnum;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 
 public class WitchOfGreed extends CustomCard {
@@ -71,7 +72,9 @@ public class WitchOfGreed extends CustomCard {
       AbstractDungeon.getCurrRoom().addGoldToRewards(this.magicNumber);
 
       if (ThMod.Amplified(this, AMP)) {
-        AbstractDungeon.getCurrRoom().addPotionToRewards();
+        AbstractPotion po = AbstractDungeon.returnRandomPotion();
+        AbstractDungeon.getCurrRoom().addPotionToRewards(po);
+        ThMod.logger.info("WitchOfGreed : use : Amplified : adding :"+po.ID);
       }
 
     }

@@ -58,9 +58,7 @@ public class MasterSpark
 
     AbstractDungeon.actionManager.addToBottom(
         new VFXAction(
-            p,
-            new MindblastEffect(p.dialogX, p.dialogY),
-            0.1F
+            new MindblastEffect(p.dialogX, p.dialogY, false)
         )
     );
 
