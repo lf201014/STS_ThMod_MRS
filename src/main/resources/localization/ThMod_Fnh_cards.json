@@ -98,8 +98,8 @@
   },
   "PolarisUnique": {
     "NAME": "Polaris Unique",
-    "DESCRIPTION": "Put a Guiding Star into your deck.Gain [B] at each start of turn if Guiding Star is in your deck.",
-    "UPGRADE_DESCRIPTION": "Put an upgraded Guiding Star into your deck.Gain [B] at each start of turn if Guiding Star is in your deck."
+    "DESCRIPTION": "Put a Guiding Star into your deck.Gain [B] at the start of turn if it is in your deck.",
+    "UPGRADE_DESCRIPTION": " Innate .Put a Guiding Star into your deck.Gain [B] at the start of turn if it is in your deck."
   },
   "SatelliteIllusion": {
     "NAME": "Satellite Illusion",
@@ -188,8 +188,8 @@
   },
   "ShootingEcho": {
     "NAME": "Shooting Echo",
-    "DESCRIPTION": " Exhaust  a card,add a Shooting Echo card to your hand. NL deal !D! damage. NL Exhaust .",
-    "UPGRADE_DESCRIPTION": "Exhaust  a card,add an Upgraded Shooting Echo to your hand. NL deal !D! damage. NL Exhaust ."
+    "DESCRIPTION": " Exhaust  a random card in hand ,then add a Shooting Echo card to your hand. NL deal !D! damage. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "Exhaust  a card,then add an Upgraded Shooting Echo to your hand. NL deal !D! damage. NL Exhaust ."
   },
   "EnergyFlow": {
     "NAME": "Energy Flow",
@@ -253,7 +253,7 @@
   },
   "WitchOfGreed": {
     "NAME": "Witch Of Greed",
-    "DESCRIPTION": "At the end of combat,gain !M! gold.  NL  Amplify  [B]  :Gain a random potion in addition.",
+    "DESCRIPTION": "At the end of combat,gain !M! extra gold.  NL  Amplify  [B]  :Gain a random potion in addition.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "TreasureHunter": {
@@ -343,13 +343,13 @@
   },
   "StarBarrage": {
     "NAME": "Star Barrage",
-    "DESCRIPTION": "Deal !D! damage,then increase the damage of this card for the damage dealt.",
+    "DESCRIPTION": "Deal !D! damage !M! time(s). NL Deal one more time damage every time this card is played in this combat.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "AFriendsGift": {
     "NAME": "A Friend's Gift",
-    "DESCRIPTION": " Retain .Deal !D! damage.Increase damage by 2 when your turn starts. Exhaust . NL Amplify  [B]  :Deal !B! damage instead, don't Exhaust .",
-    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+    "DESCRIPTION": " UnPlayable . Transform to a random card of three specific cards.",
+    "UPGRADE_DESCRIPTION": "Retain .Deal !D! damage.Increase damage by 2 when your turn starts. Exhaust . NL Amplify  [B]  :Deal !B! damage instead, don't Exhaust ."
   },
   "BinaryStars": {
     "NAME": "Binary Stars",
@@ -395,6 +395,21 @@
     "NAME": "Mana Phantom",
     "DESCRIPTION": "Cast a Magic that only shown to true Magicians. NL Exhaust . NL Ethereal .",
     "UPGRADE_DESCRIPTION": "Cast a splendid Magic that only shown true Magicians. NL Exhaust . NL Ethereal ."
+  },
+  "ExplosiveMarionette": {
+    "NAME": "Explosive Marionette",
+    "DESCRIPTION": " Retain .Deal !D! damage. NL Amplify [B] :Deal double damage. Exhaust .",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "OpticalCamouflage": {
+    "NAME": "Optical Camouflage",
+    "DESCRIPTION": " Retain .Gain !B! block. NL Amplify [B] :Gain double amount. Exhaust .",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "FiveColoredTalisman": {
+    "NAME": "Five-Colored Talisman",
+    "DESCRIPTION": " Retain .Add a random skill to your hand at the start of your turn.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",

@@ -12,46 +12,47 @@ import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
 public class ASillyJoke extends CustomCard {
-	public static final String ID = "SillyJoke";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-	public static final String IMG_PATH = "img/cards/Defend.png";
-	private static final int COST = -2;
 
-	public ASillyJoke() {
-		super(
-				ID, 
-				NAME, 
-				IMG_PATH, 
-				COST, 
-				DESCRIPTION,
-				AbstractCard.CardType.SKILL,
-				AbstractCardEnum.MARISA_COLOR,
-				AbstractCard.CardRarity.SPECIAL,
-				AbstractCard.CardTarget.NONE
-				);
+  public static final String ID = "SillyJoke";
+  private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardStrings.NAME;
+  public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
+  public static final String IMG_PATH = "img/cards/Defend.png";
+  private static final int COST = -2;
 
-	    this.exhaust = true;
-		this.isEthereal = true;
-	}
+  public ASillyJoke() {
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.SKILL,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.SPECIAL,
+        AbstractCard.CardTarget.NONE
+    );
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(
-				new WaitAction(1.0F)
-				);
-	}
+    this.exhaust = true;
+    this.isEthereal = true;
+  }
 
-	public AbstractCard makeCopy() {
-		return new ASillyJoke();
-	}
+  public void use(AbstractPlayer p, AbstractMonster m) {
+    AbstractDungeon.actionManager.addToBottom(
+        new WaitAction(1.0F)
+    );
+  }
 
-	public void upgrade() {
-		if (!this.upgraded) {
-			upgradeName();
-			this.rawDescription = DESCRIPTION_UPG;
-			initializeDescription();
-		}
-	}
+  public AbstractCard makeCopy() {
+    return new ASillyJoke();
+  }
+
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      this.rawDescription = DESCRIPTION_UPG;
+      initializeDescription();
+    }
+  }
 }

@@ -21,8 +21,17 @@ public class FungusSplash extends CustomCard {
 	private static final int COST = 1;
 	
 	public FungusSplash() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
+		super(
+				ID,
+				NAME,
+				IMG_PATH,
+				COST,
+				DESCRIPTION,
+				AbstractCard.CardType.SKILL,
+				AbstractCardEnum.MARISA_COLOR,
+				AbstractCard.CardRarity.UNCOMMON,
+				AbstractCard.CardTarget.ENEMY
+		);
 		this.exhaust =true;
 	}
 	

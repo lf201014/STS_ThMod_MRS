@@ -23,15 +23,25 @@ public class PowerUp extends CustomCard {
   private static final int UPG_STC = 1;
 
   public PowerUp() {
-    super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-        AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON,
-        AbstractCard.CardTarget.SELF);
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.SKILL,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.COMMON,
+        AbstractCard.CardTarget.SELF
+    );
 
     this.baseMagicNumber = this.magicNumber = STC;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-    AbstractDungeon.actionManager.addToBottom(new DamageUpAction(this.magicNumber));
+    AbstractDungeon.actionManager.addToBottom(
+        new DamageUpAction(this.magicNumber)
+    );
   }
 
   public AbstractCard makeCopy() {

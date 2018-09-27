@@ -13,29 +13,39 @@ import basemod.abstracts.CustomCard;
 import ThMod_FnH.patches.AbstractCardEnum;
 
 public class GuidingStar extends CustomCard {
-	public static final String ID = "GuidingStar";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "img/cards/pride.png";
-	private static final int COST = 2;
 
-	public GuidingStar() {
-		super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.SPECIAL,
-				AbstractCard.CardTarget.SELF);
-		this.exhaust = true;
-	}
+  public static final String ID = "GuidingStar";
+  private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardStrings.NAME;
+  public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String IMG_PATH = "img/cards/pride.png";
+  private static final int COST = 2;
 
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		
-		AbstractDungeon.actionManager.addToBottom(
-				new MakeTempCardInDrawPileAction(
-						this.makeStatEquivalentCopy(),
-						1,
-						true,
-						true)
-				);
+  public GuidingStar() {
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.SKILL,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.SPECIAL,
+        AbstractCard.CardTarget.SELF
+    );
+    this.exhaust = true;
+  }
+
+  public void use(AbstractPlayer p, AbstractMonster m) {
+
+    AbstractDungeon.actionManager.addToBottom(
+        new MakeTempCardInDrawPileAction(
+            this.makeStatEquivalentCopy(),
+            1,
+            true,
+            true
+        )
+    );
 		/*
 		p.drawPile.shuffle();
 		
@@ -43,16 +53,16 @@ public class GuidingStar extends CustomCard {
 			r.onShuffle();
 	    }   
 	    */
-	}
+  }
 
-	public AbstractCard makeCopy() {
-		return new GuidingStar();
-	}
+  public AbstractCard makeCopy() {
+    return new GuidingStar();
+  }
 
-	public void upgrade() {
-		if (!this.upgraded) {
-			upgradeName();
-			upgradeBaseCost(1);
-		}
-	}
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      upgradeBaseCost(1);
+    }
+  }
 }

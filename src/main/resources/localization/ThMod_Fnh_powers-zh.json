@@ -245,6 +245,13 @@
       " 点生命值。"
     ]
   },
+  "TalismanPower": {
+    "NAME": "五色魔符",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，将 #b",
+      " 张随机 #y技能 加入手牌。"
+    ]
+  },
   "WWWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [

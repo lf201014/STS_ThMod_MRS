@@ -26,8 +26,8 @@ public class ShootingEcho
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   public static final String IMG_PATH = "img/cards/Strike.png";
   private static final int COST = 1;
-  private static final int ATTACK_DMG = 8;
-  private static final int UPGRADE_PLUS_DMG = 3;
+  private static final int ATTACK_DMG = 9;
+  //private static final int UPGRADE_PLUS_DMG = 3;
 
   public ShootingEcho() {
     super(
@@ -48,9 +48,8 @@ public class ShootingEcho
 
   public void use(AbstractPlayer p, AbstractMonster m) {
     AbstractDungeon.actionManager.addToBottom(
-        new ExhaustAction(p, p, 1, false));
-
-    ThMod.logger.info("ShootingEcho : Player now have " + p.hand.size() + " card(s) in hand.");
+        new ExhaustAction(p, p, 1, !this.upgraded)
+    );
 
     if (p.hand.size() > 1) {
       AbstractCard c = this.makeCopy();
@@ -78,9 +77,8 @@ public class ShootingEcho
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      upgradeDamage(UPGRADE_PLUS_DMG);
+      //upgradeDamage(UPGRADE_PLUS_DMG);
       this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-      ;
       initializeDescription();
     }
   }

@@ -238,11 +238,11 @@
       " ."
     ]
   },
-  "GiftOfLife": {
-    "NAME": "Gift of Life",
+  "TalismanPower": {
+    "NAME": "Five-Colored Talisman",
     "DESCRIPTIONS": [
-      "Heal #b",
-      " HP at the end of your turn."
+      "At the start of your turn,add #b",
+      " random #ySkill to your hand."
     ]
   },
   "WWWWWWWWWWWWW": {

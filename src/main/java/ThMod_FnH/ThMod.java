@@ -1,6 +1,8 @@
 package ThMod_FnH;
 
-import ThMod_FnH.relics.Cape;
+import ThMod_FnH.cards.special.ExplosiveMarionette;
+import ThMod_FnH.cards.special.FiveColoredTalisman;
+import ThMod_FnH.cards.special.OpticalCamouflage;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import java.nio.charset.StandardCharsets;
 
@@ -362,7 +364,7 @@ public class ThMod implements PostExhaustSubscriber,
     BaseMod.addCard(new UnstableBomb());
     UnlockTracker.unlockCard("UnstableBomb");
     BaseMod.addCard(new StarBarrage());
-    UnlockTracker.unlockCard("StarBarrage");
+    UnlockTracker.unlockCard("StarBarrage_0");
     BaseMod.addCard(new ShootingEcho());
     UnlockTracker.unlockCard("ShootingEcho");
     //Uncommon: 12
@@ -509,6 +511,12 @@ public class ThMod implements PostExhaustSubscriber,
     UnlockTracker.unlockCard("BlackFlareStar");
     BaseMod.addCard(new WhiteDwarf());
     UnlockTracker.unlockCard("WhiteDwarf");
+    BaseMod.addCard(new ExplosiveMarionette());
+    UnlockTracker.unlockCard("ExplosiveMarionette");
+    BaseMod.addCard(new OpticalCamouflage());
+    UnlockTracker.unlockCard("OpticalCamouflage");
+    BaseMod.addCard(new FiveColoredTalisman());
+    UnlockTracker.unlockCard("FiveColoredTalisman");
 
     logger.info("done editing cards");
   }

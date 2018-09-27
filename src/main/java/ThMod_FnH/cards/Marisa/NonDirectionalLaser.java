@@ -16,49 +16,58 @@ import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
 public class NonDirectionalLaser
-	extends CustomCard
-	{
-	public static final String ID = "NonDirectionalLaser";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String IMG_PATH = "img/cards/NonDirectLaser.png";
-	private static final int COST = 1;
-	private static final int ATK_DMG = 5;
-	private static final int UPG_DMG = 2;
-  
-public NonDirectionalLaser()
-  {
-	super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-			AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.COMMON,
-			AbstractCard.CardTarget.ALL_ENEMY);
+    extends CustomCard {
+
+  public static final String ID = "NonDirectionalLaser";
+  private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardStrings.NAME;
+  public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String IMG_PATH = "img/cards/NonDirectLaser.png";
+  private static final int COST = 1;
+  private static final int ATK_DMG = 5;
+  private static final int UPG_DMG = 2;
+
+  public NonDirectionalLaser() {
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        AbstractCard.CardType.ATTACK,
+        AbstractCardEnum.MARISA_COLOR,
+        AbstractCard.CardRarity.COMMON,
+        AbstractCard.CardTarget.ALL_ENEMY
+    );
     this.baseDamage = ATK_DMG;
     this.isMultiDamage = true;
   }
-  
-  public void use(AbstractPlayer p, AbstractMonster m){	  
-	  AbstractDungeon.actionManager.addToBottom(
-			  new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AttackEffect.SLASH_HORIZONTAL)
-			  );
-    
-	  AbstractDungeon.actionManager.addToBottom(
-			  new DamageRandomEnemyAction(
-					  new DamageInfo(p, this.damage, this.damageTypeForTurn),
-					  AbstractGameAction.AttackEffect.SLASH_VERTICAL
-					  )
-			  );
+
+  public void use(AbstractPlayer p, AbstractMonster m) {
+    AbstractDungeon.actionManager.addToBottom(
+        new DamageAllEnemiesAction(
+            p,
+            multiDamage,
+            damageTypeForTurn,
+            AttackEffect.SLASH_HORIZONTAL
+        )
+    );
+
+    AbstractDungeon.actionManager.addToBottom(
+        new DamageRandomEnemyAction(
+            new DamageInfo(p, this.damage, this.damageTypeForTurn),
+            AbstractGameAction.AttackEffect.SLASH_VERTICAL
+        )
+    );
 
   }
-  
-  public AbstractCard makeCopy()
-  {
+
+  public AbstractCard makeCopy() {
     return new NonDirectionalLaser();
   }
-  
-  public void upgrade()
-  {
-    if (!this.upgraded)
-    {
+
+  public void upgrade() {
+    if (!this.upgraded) {
       upgradeName();
       upgradeDamage(UPG_DMG);
     }

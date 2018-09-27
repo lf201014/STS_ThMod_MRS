@@ -1,6 +1,5 @@
 package ThMod_FnH.cards.Marisa;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,8 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import ThMod_FnH.ThMod;
 import ThMod_FnH.patches.AbstractCardEnum;
-import ThMod_FnH.powers.Marisa.WitchOfGreedGold;
-import ThMod_FnH.powers.Marisa.WitchOfGreedPotion;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
+import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 
 public class WitchOfGreed extends CustomCard {
 
@@ -43,27 +42,43 @@ public class WitchOfGreed extends CustomCard {
     this.baseMagicNumber = this.magicNumber = STC;
   }
 
-  public void use(AbstractPlayer p, AbstractMonster m) {
+  /*
+    public void use(AbstractPlayer p, AbstractMonster m) {
 
-    if (ThMod.Amplified(this, AMP)) {
+      if (ThMod.Amplified(this, AMP)) {
+        AbstractDungeon.actionManager.addToBottom(
+            new ApplyPowerAction(
+                p,
+                p,
+                new WitchOfGreedPotion(p, 1), 1)
+        );
+      }
+
+      ThMod.logger.info("WitchOfGreed : Applying power : gold ;");
+
       AbstractDungeon.actionManager.addToBottom(
           new ApplyPowerAction(
               p,
               p,
-              new WitchOfGreedPotion(p, 1), 1)
+              new WitchOfGreedGold(p, this.magicNumber),
+              this.magicNumber
+          )
       );
     }
+  */
+  public void use(AbstractPlayer p, AbstractMonster m) {
+    if (AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT) {
 
-    ThMod.logger.info("WitchOfGreed : Applying power : gold ;");
+      AbstractDungeon.getCurrRoom().addGoldToRewards(this.magicNumber);
 
-    AbstractDungeon.actionManager.addToBottom(
-        new ApplyPowerAction(
-            p,
-            p,
-            new WitchOfGreedGold(p, this.magicNumber),
-            this.magicNumber
-        )
-    );
+      if (ThMod.Amplified(this, AMP)) {
+        AbstractPotion po = AbstractDungeon.returnRandomPotion();
+        AbstractDungeon.getCurrRoom().addPotionToRewards(po);
+        ThMod.logger.info("WitchOfGreed : use : Amplified : adding :"+po.ID);
+      }
+
+    }
+
   }
 
   public AbstractCard makeCopy() {

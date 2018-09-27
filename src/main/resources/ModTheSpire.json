@@ -1,6 +1,6 @@
 {
   "modid": "TS05_Marisa",
-  "name": "TS05-Marisa（霧雨　魔理沙）",
+  "name": "Marisa（霧雨　魔理沙）",
   "author_list": [
     "Flynn",
     "Hell",
@@ -11,6 +11,6 @@
   "dependencies": [
     "basemod"
   ],
-  "version": "0.12.9",
-  "sts_version": "09-06-2018"
+  "version": "0.12.16",
+  "sts_version": "09-20-2018"
 }

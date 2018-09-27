@@ -2,6 +2,7 @@ package ThMod_FnH.relics;
 
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -42,7 +43,10 @@ public class ExperimentalFamiliar extends CustomRelic {
     );
     AbstractDungeon.actionManager.addToBottom(
         new MakeTempCardInHandAction(
-            AbstractDungeon.returnTrulyRandomCard().makeCopy(),
+            AbstractDungeon.returnTrulyRandomCard(
+                AbstractCard.CardType.ATTACK,
+                AbstractDungeon.cardRandomRng
+            ).makeCopy(),
             1
         )
     );
