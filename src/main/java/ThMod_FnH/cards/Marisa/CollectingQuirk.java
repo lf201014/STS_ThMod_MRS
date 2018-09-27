@@ -23,7 +23,7 @@ public class CollectingQuirk
       CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-  public static final String IMG_PATH = "img/cards/Strike.png";
+  public static final String IMG_PATH = "img/cards/collec.png";
   private static final int COST = 2;
   private static final int DIVIDER = 4;
   private static final int UPG_DIVIDER = -1;

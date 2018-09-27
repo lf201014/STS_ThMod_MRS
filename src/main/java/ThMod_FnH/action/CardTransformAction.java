@@ -54,7 +54,11 @@ public class CardTransformAction extends AbstractGameAction {
           break;
       }
 
-      ThMod.logger.info("CardTransformAction : Adding :"+c.cardID);
+      if (card.upgraded){
+        c.upgrade();
+      }
+
+      ThMod.logger.info("CardTransformAction : Adding :"+c.cardID+" for random result : "+i);
 
       if (group == AbstractDungeon.player.hand) {
         group.removeCard(card);
