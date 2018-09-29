@@ -43,6 +43,7 @@ public class StarBarrage
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
+    this.magicNumber = this.baseMagicNumber;
     for (int i = 0; i < this.magicNumber; i++) {
       AbstractDungeon.actionManager.addToBottom(
           new DamageAction(
