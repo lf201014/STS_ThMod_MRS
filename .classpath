@@ -2,8 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/Dustin/git/libs/BaseMod.jar" sourcepath="C:/Users/Dustin/git/libs/BaseMod.zip"/>
-	<classpathentry kind="lib" path="C:/Users/Dustin/git/libs/desktop-1.0.jar" sourcepath="C:/Users/Dustin/git/libs/decompiled"/>
-	<classpathentry kind="lib" path="C:/Users/Dustin/git/libs/ModTheSpire.jar" sourcepath="C:/Users/Dustin/git/libs/ModTheSpire.zip"/>
+	<classpathentry kind="lib" path="E:/STSmod worktable/lib/desktop-1.0.jar"/>
+	<classpathentry kind="lib" path="E:/STSmod worktable/lib/BaseMod.jar"/>
+	<classpathentry kind="lib" path="E:/STSmod worktable/lib/ModTheSpire.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
