@@ -1,7 +1,5 @@
-package ThMod_FnH.cards.Marisa;
+package ThMod_FnH.cards.derivations;
 
-import ThMod_FnH.action.CardTransformAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,22 +7,23 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import ThMod_FnH.action.OrbitalAction;
+import ThMod_FnH.action.BlackFlareStarAction;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class AFriendsGift extends CustomCard {
+public class BlackFlareStar extends CustomCard {
 
-  public static final String ID = "AFriendsGift";
-  public static final String IMG_PATH = "img/cards/Defend.png";
+  public static final String ID = "BlackFlareStar";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-  private static final int COST = -2;
-  private static final int UPG_DRAW = 1;
-  private static final int DRAW = 1;
+  public static final String IMG_PATH = "img/cards/pride.png";
+  private static final int COST = 0;
+  private static final int BLC_AMT = 4;
+  private static final int UPG_BLC = 1;
+  private static final int HAND_REQ = 4;
 
-  public AFriendsGift() {
+  public BlackFlareStar() {
     super(
         ID,
         NAME,
@@ -32,32 +31,35 @@ public class AFriendsGift extends CustomCard {
         COST,
         DESCRIPTION,
         AbstractCard.CardType.SKILL,
-        AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.UNCOMMON,
+        AbstractCardEnum.MARISA_DERIVATIONS,
+        AbstractCard.CardRarity.SPECIAL,
         AbstractCard.CardTarget.SELF
     );
-    this.magicNumber = this.baseMagicNumber = DRAW;
-  }
-
-  @Override
-  public void upgrade() {
-    if (!this.upgraded) {
-      upgradeName();
-      upgradeMagicNumber(UPG_DRAW);
-    }
+    this.baseBlock = BLC_AMT;
   }
 
   public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+    if (p.hand.size() >= HAND_REQ) {
+      return true;
+    }
     return false;
   }
 
-  public void triggerWhenDrawn() {
+  public void use(AbstractPlayer p, AbstractMonster m) {
+
     AbstractDungeon.actionManager.addToBottom(
-        new CardTransformAction(this,AbstractDungeon.player.hand)
+        new BlackFlareStarAction(this.block)
     );
   }
 
-  @Override
-  public void use(AbstractPlayer arg0, AbstractMonster arg1) {
+  public AbstractCard makeCopy() {
+    return new BlackFlareStar();
+  }
+
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      this.upgradeBlock(UPG_BLC);
+    }
   }
 }

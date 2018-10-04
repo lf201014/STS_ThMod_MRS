@@ -1,68 +1,70 @@
-package ThMod_FnH.cards.special;
+package ThMod_FnH.cards.Marisa;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import ThMod_FnH.ThMod;
+import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import basemod.abstracts.CustomCard;
-import ThMod_FnH.action.SparkCostAction;
+
 import ThMod_FnH.patches.AbstractCardEnum;
 
-public class Spark extends CustomCard {
+public class AlicesGift extends CustomCard {
 
-  public static final String ID = "Spark";
+  public static final String ID = "AlicesGift";
+  public static final String IMG_PATH = "img/cards/Defend.png";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-  public static final String IMG_PATH = "img/cards/Spark.png";
   private static final int COST = 0;
-  private static final int ATTACK_DMG = 4;
-  private static final int UPGRADE_PLUS_DMG = 2;
+  private static final int ATK = 5;
+  private static final int ATK_UPG = 2;
+  private static final int AMP = 3;
 
-  public Spark() {
+  public AlicesGift() {
     super(
         ID,
         NAME,
         IMG_PATH,
         COST,
         DESCRIPTION,
-        AbstractCard.CardType.ATTACK,
+        CardType.ATTACK,
         AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.SPECIAL,
-        AbstractCard.CardTarget.ENEMY
+        CardRarity.UNCOMMON,
+        CardTarget.ENEMY
     );
-
-    this.exhaust = true;
-    this.baseDamage = ATTACK_DMG;
-
+    this.damage = this.baseDamage = ATK;
   }
 
+  @Override
+  public void upgrade() {
+    if (!this.upgraded) {
+      upgradeName();
+      upgradeDamage(ATK_UPG);
+    }
+  }
+
+  @Override
+  public void applyPowers() {
+    super.applyPowers();
+    this.retain = true;
+  }
+
+  @Override
   public void use(AbstractPlayer p, AbstractMonster m) {
+    if (ThMod.Amplified(this, this.AMP)) {
+      this.damage *= 3;
+    }
     AbstractDungeon.actionManager.addToBottom(
         new DamageAction(
             m,
             new DamageInfo(p, this.damage, this.damageTypeForTurn),
-            AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+            AttackEffect.FIRE
         )
     );
-    AbstractDungeon.actionManager.addToBottom(
-        new SparkCostAction()
-    );
-  }
-
-  public AbstractCard makeCopy() {
-    return new Spark();
-  }
-
-  public void upgrade() {
-    if (!this.upgraded) {
-      upgradeName();
-      upgradeDamage(UPGRADE_PLUS_DMG);
-    }
   }
 }

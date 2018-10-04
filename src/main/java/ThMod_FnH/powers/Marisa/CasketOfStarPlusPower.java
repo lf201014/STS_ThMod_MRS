@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import ThMod_FnH.cards.special.Spark;
+import ThMod_FnH.cards.derivations.Spark;
 
 public class CasketOfStarPlusPower extends AbstractPower {
 

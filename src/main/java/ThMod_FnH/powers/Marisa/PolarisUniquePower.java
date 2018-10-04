@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import ThMod_FnH.ThMod;
-import ThMod_FnH.cards.special.GuidingStar;
+import ThMod_FnH.cards.derivations.GuidingStar;
 
 import com.megacrit.cardcrawl.localization.PowerStrings;
 

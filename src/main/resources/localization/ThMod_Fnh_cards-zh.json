@@ -21,7 +21,7 @@
   },
   "DarkSpark": {
     "NAME": "暗色火花",
-    "DESCRIPTION": "造成 !D! 点伤害,抽 !M! 张卡。 NL 在这回合，名字中有‘火花’的卡使用时会给与你额外1层蓄力。 NL 将一张 灼伤 加入手牌。",
+    "DESCRIPTION": " 消耗 手牌中所有非攻击牌。对所有敌人造成 !D! 点伤害。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   },
   "DeepEcoloBomb": {
@@ -49,7 +49,7 @@
   "FinalSpark": {
     "NAME": "究极火花",
     "DESCRIPTION": "本场战斗中你每打出一张 “火花”牌，此卡的费用-1。 NL 对所有敌人造成 !D! 点伤害。 NL 此卡在使用后重置费用。",
-    "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWW"
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 本场战斗中你每打出一张 “火花”牌，此卡的费用-1。 NL 对所有敌人造成 !D! 点伤害。 NL 此卡在使用后重置费用。"
   },
   "GrandCross": {
     "NAME": "大十字",
@@ -61,8 +61,8 @@
   },
   "IllusionStar": {
     "NAME": "幻像之星",
-    "DESCRIPTION": "将 !M! 张随机卡片加入手牌，然后将一张手牌放到抽牌堆顶。",
-    "UPGRADE_DESCRIPTION": "At the start of your turn,Transform and Upgrade a card in your hand."
+    "DESCRIPTION": "将 !M! 张随机卡片加入手牌，然后将一张手牌放到抽牌堆顶。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将 !M! 张随机卡片加入手牌，然后将一张手牌放到抽牌堆顶。"
   },
   "MachineGunSpark": {
     "NAME": "机枪火花",
@@ -102,7 +102,7 @@
   },
   "PolarisUnique": {
     "NAME": "唯一的北极星",
-    "DESCRIPTION": "将1张 北极星 洗入抽卡堆。在你的回合开始时如果 北极星 在你的抽卡堆中，获得1点能量。",
+    "DESCRIPTION": " 固有 。 将1张 北极星 洗入抽卡堆。在你的回合开始时如果 北极星 在你的抽卡堆中，获得1点能量。",
     "UPGRADE_DESCRIPTION": " 固有 。 将1张 北极星 洗入抽卡堆。在你的回合开始时如果 北极星 在你的抽卡堆中，获得1点能量。"
   },
   "SatelliteIllusion": {
@@ -322,7 +322,7 @@
   },
   "EnergyRecoil": {
     "NAME": "能量反冲",
-    "DESCRIPTION": "获得 !B!  格挡 。 NL 消耗掉你的 蓄力 直到其层数小于4，每用掉4层 蓄力 ，获得额外 !D!  格挡。",
+    "DESCRIPTION": "获得 !B!  格挡 。 NL 这张卡会触发 蓄力 ，并享受其增益效果。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "GalacticHalo": {
@@ -332,7 +332,7 @@
   },
   "ManaConvection": {
     "NAME": "魔力对流",
-    "DESCRIPTION": "抽 !M! 张卡，然后消耗2张卡。 NL 如果你的 蓄力 层数大于或等于8层，则消耗8层蓄力，获得  [B] 。",
+    "DESCRIPTION": "抽 !M! 张卡，然后消耗2张卡。 NL 如果你的 蓄力 层数大于或等于8层，则消耗8层蓄力，获得  [B]  [B] 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ManaRampage": {
@@ -410,9 +410,9 @@
     "DESCRIPTION": " 保留 。在你回合开始时将一张随机技能加入手牌。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
-  "WWWWWWWWWWW": {
-    "NAME": "WWWWWWWWWWW",
-    "DESCRIPTION": "WWWWWWWWWWW",
+  "AlicesGift": {
+    "NAME": "友人之赠",
+    "DESCRIPTION": " 保留 。造成 !D! 伤害。 NL 增幅 [B]  [B] : 造成三倍伤害。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WWWWWWWWWWWW": {

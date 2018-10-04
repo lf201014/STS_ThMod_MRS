@@ -1,66 +1,60 @@
-package ThMod_FnH.cards.special;
+package ThMod_FnH.cards.deprecated;
+
 
 import ThMod_FnH.ThMod;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class ExplosiveMarionette extends CustomCard {
+public class OpticalCamouflage extends CustomCard {
 
-  public static final String ID = "ExplosiveMarionette";
+  public static final String ID = "OpticalCamouflage";
+  public static final String IMG_PATH = "img/cards/Defend_MRS.png";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-  public static final String IMG_PATH = "img/cards/Strike.png";
-
   private static final int COST = 1;
-  private static final int ATK_DMG = 9;
-  private static final int UPG_DMG = 3;
+  private static final int BLOCK_AMT = 8;
+  private static final int UPGRADE_PLUS_BLOCK = 3;
   private static final int AMP = 1;
 
-  public ExplosiveMarionette() {
+  public OpticalCamouflage() {
     super(
         ID,
         NAME,
         IMG_PATH,
         COST,
         DESCRIPTION,
-        AbstractCard.CardType.ATTACK,
-        AbstractCardEnum.MARISA_COLOR,
-        CardRarity.SPECIAL,
-        AbstractCard.CardTarget.ENEMY
+        AbstractCard.CardType.SKILL,
+        AbstractCardEnum.MARISA_DERIVATIONS,
+        AbstractCard.CardRarity.BASIC,
+        AbstractCard.CardTarget.SELF
     );
+    this.baseBlock = BLOCK_AMT;
     setBannerTexture(
         "images/cardui/512/banner_uncommon.png",
         "images/cardui/1024/banner_uncommon.png"
     );
     this.exhaust = true;
-    this.damage = this.baseDamage = ATK_DMG;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-    if (ThMod.Amplified(this, AMP)) {
-      this.damage *= 2;
+    if (ThMod.Amplified(this, this.AMP)) {
+      this.block *= 2;
     }
     AbstractDungeon.actionManager.addToBottom(
-        new DamageAction(
-            m,
-            new DamageInfo(p, this.damage, this.damageTypeForTurn),
-            AbstractGameAction.AttackEffect.FIRE
-        )
+        new GainBlockAction(p, p, this.block)
     );
   }
 
   public AbstractCard makeCopy() {
-    return new ExplosiveMarionette();
+    return new OpticalCamouflage();
   }
 
   @Override
@@ -72,7 +66,7 @@ public class ExplosiveMarionette extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      upgradeDamage(UPG_DMG);
+      upgradeBlock(UPGRADE_PLUS_BLOCK);
     }
   }
 }

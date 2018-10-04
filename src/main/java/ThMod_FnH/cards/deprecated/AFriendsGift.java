@@ -18,7 +18,7 @@ import ThMod_FnH.patches.AbstractCardEnum;
 public class AFriendsGift
     extends AmplifiedAttack {
 
-  public static final String ID = "AFriendsGift";
+  public static final String ID = "AFriendsGift_1";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -80,14 +80,14 @@ public class AFriendsGift
 
   public void atTurnStart() {
     ThMod.logger.info(
-        "AFriendsGift : atTurnStart : Upgrading damage : base :" + this.baseDamage +
+        "AFriendsGift_1 : atTurnStart : Upgrading damage : base :" + this.baseDamage +
             " ; damage : " + this.damage +
             " ; Amplified base : " + this.baseBlock +
             " ; AMplified damage : " + this.block
     );
     this.upgradeDamage(2);
     ThMod.logger.info(
-        "AFriendsGift : atTurnStart : upgraded damage : base :" + this.baseDamage +
+        "AFriendsGift_1 : atTurnStart : upgraded damage : base :" + this.baseDamage +
             " ; damage : " + this.damage +
             " ; Amplified base : " + this.baseBlock +
             " ; AMplified damage : " + this.block

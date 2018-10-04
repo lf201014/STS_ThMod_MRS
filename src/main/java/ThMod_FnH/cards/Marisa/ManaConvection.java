@@ -1,7 +1,6 @@
 package ThMod_FnH.cards.Marisa;
 
 import ThMod_FnH.action.ConsumeChargeUpAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -13,7 +12,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import ThMod_FnH.patches.AbstractCardEnum;
-import ThMod_FnH.powers.Marisa.ChargeUpPower;
 import basemod.abstracts.CustomCard;
 
 public class ManaConvection extends CustomCard {
@@ -24,10 +22,10 @@ public class ManaConvection extends CustomCard {
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   private static final int COST = 1;
-  private static final int DRAW = 3;
+  private static final int DRAW = 2;
   private static final int UPG_DRAW = 1;
   private static final int EXHT = 2;
-  private static final int ENEG_GAIN = 1;
+  private static final int ENEG_GAIN = 2;
   private static final int CHRG_DRAIN = 8;
 
   public ManaConvection() {
@@ -54,13 +52,19 @@ public class ManaConvection extends CustomCard {
         new ExhaustAction(p, p, EXHT, false)
     );
 
+    int drain = CHRG_DRAIN;
+    int ene_gain = ENEG_GAIN;
+    if (p.hasRelic("SimpleLauncher")) {
+      drain = 6;
+    }
+
     if (p.hasPower("ChargeUpPower")) {
-      if (p.getPower("ChargeUpPower").amount >= CHRG_DRAIN) {
+      if (p.getPower("ChargeUpPower").amount >= drain) {
         AbstractDungeon.actionManager.addToBottom(
-            new GainEnergyAction(ENEG_GAIN)
+            new GainEnergyAction(ene_gain)
         );
         AbstractDungeon.actionManager.addToBottom(
-            new ConsumeChargeUpAction(CHRG_DRAIN)
+            new ConsumeChargeUpAction(drain)
         );
       }
     }

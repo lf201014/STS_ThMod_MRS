@@ -1,6 +1,6 @@
-package ThMod_FnH.cards.special;
+package ThMod_FnH.cards.deprecated;
 
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import ThMod_FnH.action.deprecated.CardTransformAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,17 +11,18 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class ASillyJoke extends CustomCard {
+public class AFriendsGift_1 extends CustomCard {
 
-  public static final String ID = "SillyJoke";
+  public static final String ID = "AFriendsGift_1";
+  public static final String IMG_PATH = "img/cards/Defend.png";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-  public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-  public static final String IMG_PATH = "img/cards/Defend.png";
   private static final int COST = -2;
+  private static final int UPG_DRAW = 1;
+  private static final int DRAW = 1;
 
-  public ASillyJoke() {
+  public AFriendsGift_1() {
     super(
         ID,
         NAME,
@@ -30,29 +31,31 @@ public class ASillyJoke extends CustomCard {
         DESCRIPTION,
         AbstractCard.CardType.SKILL,
         AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.SPECIAL,
-        AbstractCard.CardTarget.NONE
+        AbstractCard.CardRarity.UNCOMMON,
+        AbstractCard.CardTarget.SELF
     );
-
-    this.exhaust = true;
-    this.isEthereal = true;
+    this.magicNumber = this.baseMagicNumber = DRAW;
   }
 
-  public void use(AbstractPlayer p, AbstractMonster m) {
-    AbstractDungeon.actionManager.addToBottom(
-        new WaitAction(1.0F)
-    );
-  }
-
-  public AbstractCard makeCopy() {
-    return new ASillyJoke();
-  }
-
+  @Override
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      this.rawDescription = DESCRIPTION_UPG;
-      initializeDescription();
+      upgradeMagicNumber(UPG_DRAW);
     }
+  }
+
+  public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+    return false;
+  }
+
+  public void triggerWhenDrawn() {
+    AbstractDungeon.actionManager.addToBottom(
+        new CardTransformAction(this,AbstractDungeon.player.hand)
+    );
+  }
+
+  @Override
+  public void use(AbstractPlayer arg0, AbstractMonster arg1) {
   }
 }

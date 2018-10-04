@@ -1,8 +1,9 @@
 package ThMod_FnH;
 
-import ThMod_FnH.cards.special.ExplosiveMarionette;
-import ThMod_FnH.cards.special.FiveColoredTalisman;
-import ThMod_FnH.cards.special.OpticalCamouflage;
+import ThMod_FnH.cards.Marisa.AlicesGift;
+import ThMod_FnH.cards.deprecated.ExplosiveMarionette;
+import ThMod_FnH.cards.deprecated.FiveColoredTalisman;
+import ThMod_FnH.cards.deprecated.OpticalCamouflage;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import java.nio.charset.StandardCharsets;
 
@@ -25,7 +26,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
-import ThMod_FnH.cards.Marisa.AFriendsGift;
 import ThMod_FnH.cards.Marisa.AbsoluteMagnitude;
 import ThMod_FnH.cards.Marisa.AsteroidBelt;
 import ThMod_FnH.cards.Marisa.BigCrunch;
@@ -44,7 +44,7 @@ import ThMod_FnH.cards.Marisa.Defend_MRS;
 import ThMod_FnH.cards.Marisa.DoubleSpark;
 import ThMod_FnH.cards.Marisa.DragonMeteor;
 import ThMod_FnH.cards.Marisa.EnergyFlow;
-import ThMod_FnH.cards.Marisa.EnergyRecoil;
+import ThMod_FnH.cards.deprecated.EnergyRecoil;
 import ThMod_FnH.cards.Marisa.EscapeVelocity;
 import ThMod_FnH.cards.Marisa.EventHorizon;
 import ThMod_FnH.cards.Marisa.FairyDestructionRay;
@@ -100,10 +100,10 @@ import ThMod_FnH.cards.Marisa.WitchLeyline;
 import ThMod_FnH.cards.Marisa.WitchOfGreed;
 import ThMod_FnH.cards.Marisa._6A;
 import ThMod_FnH.cards.Marisa.EarthLightRay;
-import ThMod_FnH.cards.special.BlackFlareStar;
-import ThMod_FnH.cards.special.GuidingStar;
-import ThMod_FnH.cards.special.Spark;
-import ThMod_FnH.cards.special.WhiteDwarf;
+import ThMod_FnH.cards.derivations.BlackFlareStar;
+import ThMod_FnH.cards.derivations.GuidingStar;
+import ThMod_FnH.cards.derivations.Spark;
+import ThMod_FnH.cards.derivations.WhiteDwarf;
 import ThMod_FnH.characters.Marisa;
 import ThMod_FnH.patches.AbstractCardEnum;
 import ThMod_FnH.patches.ThModClassEnum;
@@ -388,8 +388,8 @@ public class ThMod implements PostExhaustSubscriber,
     UnlockTracker.unlockCard("Robbery");
     BaseMod.addCard(new ChargeUpSpray());
     UnlockTracker.unlockCard("ChargeUpSpray");
-    BaseMod.addCard(new AFriendsGift());
-    UnlockTracker.unlockCard("AFriendsGift");
+    BaseMod.addCard(new AlicesGift());
+    UnlockTracker.unlockCard("AlicesGift");
     BaseMod.addCard(new FairyDestructionRay());
     UnlockTracker.unlockCard("FairyDestructionRay");
     //Rare:  7
@@ -502,7 +502,7 @@ public class ThMod implements PostExhaustSubscriber,
     BaseMod.addCard(new SuperNova());
     UnlockTracker.unlockCard("SuperNova");
 
-    //special:4
+    //derivations:4
     BaseMod.addCard(new Spark());
     UnlockTracker.unlockCard("Spark");
     BaseMod.addCard(new GuidingStar());
@@ -543,7 +543,7 @@ public class ThMod implements PostExhaustSubscriber,
     if (card.type == CardType.ATTACK) {
       lastAttack = card;
     }
-    if (card.retain == true){
+    if (card.retain){
       card.retain = false;
     }
   }

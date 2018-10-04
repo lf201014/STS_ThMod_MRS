@@ -30,10 +30,10 @@ public class CasketOfStar extends CustomCard {
         IMG_PATH,
         COST,
         DESCRIPTION,
-        AbstractCard.CardType.POWER,
+        CardType.POWER,
         AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.UNCOMMON,
-        AbstractCard.CardTarget.SELF
+        CardRarity.RARE,
+        CardTarget.SELF
     );
   }
 

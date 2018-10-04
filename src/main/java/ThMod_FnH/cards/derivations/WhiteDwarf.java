@@ -1,4 +1,4 @@
-package ThMod_FnH.cards.special;
+package ThMod_FnH.cards.derivations;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -36,7 +36,7 @@ public class WhiteDwarf extends CustomCard {
         COST,
         DESCRIPTION,
         AbstractCard.CardType.ATTACK,
-        AbstractCardEnum.MARISA_COLOR,
+        AbstractCardEnum.MARISA_DERIVATIONS,
         AbstractCard.CardRarity.SPECIAL,
         AbstractCard.CardTarget.ENEMY
     );

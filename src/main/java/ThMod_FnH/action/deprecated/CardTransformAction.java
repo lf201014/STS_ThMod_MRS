@@ -1,10 +1,10 @@
-package ThMod_FnH.action;
+package ThMod_FnH.action.deprecated;
 
 import ThMod_FnH.ThMod;
-import ThMod_FnH.cards.Marisa.AFriendsGift;
-import ThMod_FnH.cards.special.ExplosiveMarionette;
-import ThMod_FnH.cards.special.FiveColoredTalisman;
-import ThMod_FnH.cards.special.OpticalCamouflage;
+import ThMod_FnH.cards.deprecated.AFriendsGift_1;
+import ThMod_FnH.cards.deprecated.ExplosiveMarionette;
+import ThMod_FnH.cards.deprecated.FiveColoredTalisman;
+import ThMod_FnH.cards.deprecated.OpticalCamouflage;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -50,7 +50,7 @@ public class CardTransformAction extends AbstractGameAction {
           c = new FiveColoredTalisman();
           break;
         default:
-          c = new AFriendsGift();
+          c = new AFriendsGift_1();
           break;
       }
 

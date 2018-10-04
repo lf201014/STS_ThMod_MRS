@@ -1,58 +1,66 @@
-package ThMod_FnH.cards.special;
+package ThMod_FnH.cards.deprecated;
 
+import ThMod_FnH.ThMod;
 import ThMod_FnH.patches.AbstractCardEnum;
-import ThMod_FnH.powers.Marisa.TalismanPower;
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class FiveColoredTalisman extends CustomCard {
+public class ExplosiveMarionette extends CustomCard {
 
-  public static final String ID = "FiveColoredTalisman";
-  public static final String IMG_PATH = "img/cards/feelNoPain.png";
+  public static final String ID = "ExplosiveMarionette";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-  private static final int COST = 1;
-  private static final int STACK = 1;
+  public static final String IMG_PATH = "img/cards/Strike.png";
 
-  public FiveColoredTalisman() {
+  private static final int COST = 1;
+  private static final int ATK_DMG = 9;
+  private static final int UPG_DMG = 3;
+  private static final int AMP = 1;
+
+  public ExplosiveMarionette() {
     super(
         ID,
         NAME,
         IMG_PATH,
         COST,
         DESCRIPTION,
-        CardType.POWER,
-        AbstractCardEnum.MARISA_COLOR,
-        CardRarity.BASIC,
-        CardTarget.SELF
+        AbstractCard.CardType.ATTACK,
+        AbstractCardEnum.MARISA_DERIVATIONS,
+        CardRarity.SPECIAL,
+        AbstractCard.CardTarget.ENEMY
     );
     setBannerTexture(
         "images/cardui/512/banner_uncommon.png",
         "images/cardui/1024/banner_uncommon.png"
     );
-    this.magicNumber = this.baseMagicNumber = STACK;
+    this.exhaust = true;
+    this.damage = this.baseDamage = ATK_DMG;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
+    if (ThMod.Amplified(this, AMP)) {
+      this.damage *= 2;
+    }
     AbstractDungeon.actionManager.addToBottom(
-        new ApplyPowerAction(
-            p,
-            p,
-            new TalismanPower(p, this.magicNumber),
-            this.magicNumber
+        new DamageAction(
+            m,
+            new DamageInfo(p, this.damage, this.damageTypeForTurn),
+            AbstractGameAction.AttackEffect.FIRE
         )
     );
   }
 
   public AbstractCard makeCopy() {
-    return new FiveColoredTalisman();
+    return new ExplosiveMarionette();
   }
 
   @Override
@@ -64,6 +72,7 @@ public class FiveColoredTalisman extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
+      upgradeDamage(UPG_DMG);
     }
   }
 }

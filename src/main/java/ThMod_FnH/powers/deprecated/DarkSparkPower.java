@@ -1,5 +1,6 @@
-package ThMod_FnH.powers.Marisa;
+package ThMod_FnH.powers.deprecated;
 
+import ThMod_FnH.powers.Marisa.ChargeUpPower;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;

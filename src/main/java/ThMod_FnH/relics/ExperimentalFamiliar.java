@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
-import ThMod_FnH.cards.special.Spark;
+import ThMod_FnH.cards.derivations.Spark;
 import basemod.abstracts.CustomRelic;
 
 public class ExperimentalFamiliar extends CustomRelic {

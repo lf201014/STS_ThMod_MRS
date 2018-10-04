@@ -7,8 +7,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-import ThMod_FnH.cards.special.BlackFlareStar;
-import ThMod_FnH.cards.special.WhiteDwarf;
+import ThMod_FnH.cards.derivations.BlackFlareStar;
+import ThMod_FnH.cards.derivations.WhiteDwarf;
 
 public class BinaryStarsAction extends AbstractGameAction{
 	private AbstractPlayer p;

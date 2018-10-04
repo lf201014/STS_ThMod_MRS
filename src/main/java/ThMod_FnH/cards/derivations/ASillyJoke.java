@@ -1,27 +1,27 @@
-package ThMod_FnH.cards.special;
+package ThMod_FnH.cards.derivations;
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-//import com.megacrit.cardcrawl.relics.AbstractRelic;
 
-import basemod.abstracts.CustomCard;
 import ThMod_FnH.patches.AbstractCardEnum;
+import basemod.abstracts.CustomCard;
 
-public class GuidingStar extends CustomCard {
+public class ASillyJoke extends CustomCard {
 
-  public static final String ID = "GuidingStar";
+  public static final String ID = "SillyJoke";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-  public static final String IMG_PATH = "img/cards/pride.png";
-  private static final int COST = 2;
+  public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
+  public static final String IMG_PATH = "img/cards/Defend.png";
+  private static final int COST = -2;
 
-  public GuidingStar() {
+  public ASillyJoke() {
     super(
         ID,
         NAME,
@@ -29,40 +29,30 @@ public class GuidingStar extends CustomCard {
         COST,
         DESCRIPTION,
         AbstractCard.CardType.SKILL,
-        AbstractCardEnum.MARISA_COLOR,
+        AbstractCardEnum.MARISA_DERIVATIONS,
         AbstractCard.CardRarity.SPECIAL,
-        AbstractCard.CardTarget.SELF
+        AbstractCard.CardTarget.NONE
     );
+
     this.exhaust = true;
+    this.isEthereal = true;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-
     AbstractDungeon.actionManager.addToBottom(
-        new MakeTempCardInDrawPileAction(
-            this.makeStatEquivalentCopy(),
-            1,
-            true,
-            true
-        )
+        new WaitAction(1.0F)
     );
-		/*
-		p.drawPile.shuffle();
-		
-		for (AbstractRelic r : p.relics) {
-			r.onShuffle();
-	    }   
-	    */
   }
 
   public AbstractCard makeCopy() {
-    return new GuidingStar();
+    return new ASillyJoke();
   }
 
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      upgradeBaseCost(1);
+      this.rawDescription = DESCRIPTION_UPG;
+      initializeDescription();
     }
   }
 }

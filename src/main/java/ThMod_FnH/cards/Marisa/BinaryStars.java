@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import ThMod_FnH.ThMod;
 import ThMod_FnH.action.BinaryStarsAction;
-import ThMod_FnH.cards.special.BlackFlareStar;
-import ThMod_FnH.cards.special.WhiteDwarf;
+import ThMod_FnH.cards.derivations.BlackFlareStar;
+import ThMod_FnH.cards.derivations.WhiteDwarf;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 

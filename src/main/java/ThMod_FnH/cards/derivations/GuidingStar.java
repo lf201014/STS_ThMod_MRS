@@ -1,29 +1,27 @@
-package ThMod_FnH.cards.special;
+package ThMod_FnH.cards.derivations;
 
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+//import com.megacrit.cardcrawl.relics.AbstractRelic;
 
-import ThMod_FnH.action.BlackFlareStarAction;
-import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
+import ThMod_FnH.patches.AbstractCardEnum;
 
-public class BlackFlareStar extends CustomCard {
+public class GuidingStar extends CustomCard {
 
-  public static final String ID = "BlackFlareStar";
+  public static final String ID = "GuidingStar";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String IMG_PATH = "img/cards/pride.png";
-  private static final int COST = 0;
-  private static final int BLC_AMT = 4;
-  private static final int UPG_BLC = 1;
-  private static final int HAND_REQ = 4;
+  private static final int COST = 2;
 
-  public BlackFlareStar() {
+  public GuidingStar() {
     super(
         ID,
         NAME,
@@ -31,35 +29,40 @@ public class BlackFlareStar extends CustomCard {
         COST,
         DESCRIPTION,
         AbstractCard.CardType.SKILL,
-        AbstractCardEnum.MARISA_COLOR,
+        AbstractCardEnum.MARISA_DERIVATIONS,
         AbstractCard.CardRarity.SPECIAL,
         AbstractCard.CardTarget.SELF
     );
-    this.baseBlock = BLC_AMT;
-  }
-
-  public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-    if (p.hand.size() >= HAND_REQ) {
-      return true;
-    }
-    return false;
+    this.exhaust = true;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
 
     AbstractDungeon.actionManager.addToBottom(
-        new BlackFlareStarAction(this.block)
+        new MakeTempCardInDrawPileAction(
+            this.makeStatEquivalentCopy(),
+            1,
+            true,
+            true
+        )
     );
+		/*
+		p.drawPile.shuffle();
+		
+		for (AbstractRelic r : p.relics) {
+			r.onShuffle();
+	    }   
+	    */
   }
 
   public AbstractCard makeCopy() {
-    return new BlackFlareStar();
+    return new GuidingStar();
   }
 
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      this.upgradeBlock(UPG_BLC);
+      upgradeBaseCost(1);
     }
   }
 }

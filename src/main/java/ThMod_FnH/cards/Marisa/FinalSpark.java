@@ -24,11 +24,11 @@ public class FinalSpark
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   public static final String IMG_PATH = "img/cards/Strike.png";
 
   private static final int COST = 8;
   private static final int ATK_DMG = 40;
-  private static final int UPG_DMG = 10;
 
   public FinalSpark() {
     super(
@@ -45,6 +45,14 @@ public class FinalSpark
 
     this.isMultiDamage = true;
     this.baseDamage = ATK_DMG;
+  }
+
+  @Override
+  public void applyPowers() {
+    super.applyPowers();
+    if (this.upgraded) {
+      this.retain = true;
+    }
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
@@ -89,7 +97,8 @@ public class FinalSpark
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      upgradeDamage(UPG_DMG);
+      this.rawDescription = DESCRIPTION_UPG;
+      initializeDescription();
     }
   }
 }

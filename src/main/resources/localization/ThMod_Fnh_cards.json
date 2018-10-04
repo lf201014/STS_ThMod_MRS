@@ -21,7 +21,7 @@
   },
   "DarkSpark": {
     "NAME": "Dark Spark",
-    "DESCRIPTION": "Deal !D! damage. Draw !M! cards. NL Each Spark card you play this turn will grant you 1 extra Charge-up . NL Add a Burn to your hand.",
+    "DESCRIPTION": "Exhaust all non-Attack cards in your hand. NL Deal !D! damage to all enemies.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   },
   "DeepEcoloBomb": {
@@ -57,8 +57,8 @@
   },
   "IllusionStar": {
     "NAME": "Illusion Star",
-    "DESCRIPTION": "Add !M! random cards to your hand. Put a card from your hand on top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Transform and Upgrade a card in your hand at the start of your turn."
+    "DESCRIPTION": "Add !M! random cards to your hand. Put a card from your hand on top of your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Add !M! random cards to your hand. Put a card from your hand on top of your draw pile."
   },
   "MachineGunSpark": {
     "NAME": "Machine-Gun Spark",
@@ -98,7 +98,7 @@
   },
   "PolarisUnique": {
     "NAME": "Polaris Unique",
-    "DESCRIPTION": "Put a Guiding Star into your draw pile. Gain  [B]  at the start of your turn if it is in your draw pile.",
+    "DESCRIPTION": "Innate. Put a Guiding Star into your draw pile. Gain  [B]  at the start of your turn if it is in your draw pile.",
     "UPGRADE_DESCRIPTION": "Innate. Put a Guiding Star into your draw pile. Gain  [B]  at the start of your turn if it is in your draw pile."
   },
   "SatelliteIllusion": {
@@ -323,7 +323,7 @@
   },
   "EnergyRecoil": {
     "NAME": "Energy Recoil",
-    "DESCRIPTION": "Gain !B! Block. NL Deplete your Charge-up until its stacks less than 4. Gain !D! Block for every 4 Charge-up cost.",
+    "DESCRIPTION": "Gain !B! Block. NL This card is affected by Charge-up as attack.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "GalacticHalo": {
@@ -409,6 +409,11 @@
   "FiveColoredTalisman": {
     "NAME": "Five-Colored Talisman",
     "DESCRIPTION": "Retain. Add a random skill to your hand at the start of your turn.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "AlicesGift": {
+    "NAME": "Alice's Gift",
+    "DESCRIPTION": " Retain. Deal !D! Damage. NL Amplify [B]  [B] : Deal triple damage.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WWWWWWWWWWWWWW": {

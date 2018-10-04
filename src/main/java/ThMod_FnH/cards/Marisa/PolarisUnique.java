@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomCard;
 import ThMod_FnH.ThMod;
-import ThMod_FnH.cards.special.GuidingStar;
+import ThMod_FnH.cards.derivations.GuidingStar;
 import ThMod_FnH.patches.AbstractCardEnum;
 import ThMod_FnH.powers.Marisa.PolarisUniquePower;
 
@@ -25,6 +25,7 @@ public class PolarisUnique extends CustomCard {
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   private static final int COST = 1;
+  private static final int UPG_COST = 0;
 
   public PolarisUnique() {
     super(
@@ -33,12 +34,12 @@ public class PolarisUnique extends CustomCard {
         IMG_PATH,
         COST,
         DESCRIPTION,
-        AbstractCard.CardType.POWER,
+        CardType.POWER,
         AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.RARE,
-        AbstractCard.CardTarget.SELF
+        CardRarity.RARE,
+        CardTarget.SELF
     );
-
+    this.isInnate = true;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
@@ -80,9 +81,8 @@ public class PolarisUnique extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      this.isInnate = true;
-      this.rawDescription = DESCRIPTION_UPG;
-      initializeDescription();
+      //this.rawDescription = DESCRIPTION_UPG;
+      //initializeDescription();
     }
   }
 }

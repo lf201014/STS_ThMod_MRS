@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Burn;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -43,12 +44,34 @@ public class EnhancedHakkero extends CustomRelic {
 
   public void onUseCard(AbstractCard card, UseCardAction action) {
     flash();
-    ThMod.logger.info("Applying ChargeUpPower");
-    AbstractDungeon.actionManager.addToTop(
-        new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-            new ChargeUpPower(AbstractDungeon.player, 2), 2));
-    AbstractDungeon.actionManager
-        .addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+    AbstractPlayer p = AbstractDungeon.player;
+    Boolean available = true;
+    int div = 8;
+    if (p.hasRelic("SimpleLauncher")) {
+      div = 6;
+    }
+    if (p.hasPower("ChargeUpPower")) {
+      if (p.getPower("ChargeUpPower").amount >= div) {
+        available = false;
+      }
+    }
+    if (available) {
+      ThMod.logger.info(
+          "EnhancedHakkero : Applying ChargeUpPower for using card : " + card.cardID
+      );
+      AbstractDungeon.actionManager.addToTop(
+          new ApplyPowerAction(
+              AbstractDungeon.player,
+              AbstractDungeon.player,
+              new ChargeUpPower(AbstractDungeon.player, 2),
+              2
+          )
+      );
+      AbstractDungeon.actionManager.addToBottom(
+          new RelicAboveCreatureAction(AbstractDungeon.player, this)
+      );
+    }
+
   }
 
   public void atTurnStart() {
