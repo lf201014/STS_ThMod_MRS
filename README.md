@@ -5,6 +5,7 @@ This is a mod for [**Slay the Spire**](https://store.steampowered.com/app/646570
 Like many other mod,this mod needs [BaseMod](https://github.com/daviscook477/BaseMod/releases) and [ModTheSpire](https://github.com/kiooeht/ModTheSpire/releases) to work.
 
 ## Content and Gameplay ##
+(I'll write this later...)
 
 ## Usage ##
 ### Download ###
@@ -28,7 +29,7 @@ Like many other mod,this mod needs [BaseMod](https://github.com/daviscook477/Bas
 ### Staffs ###
   * Hell : Design of this mod,balance and gameplay adjustment
   * Hohner_257 : card illustrations and relic icons
-  * Samsara : character concept ,card illustrations and relic icons
+  * Samsara : character concept art,card illustrations and relic icons
   * Kishin : playtesting and gameplay consultation
   * Flynn (https://github.com/lf201014) : programming and project management
 ### Special Thanks ###
@@ -42,12 +43,14 @@ Like many other mod,this mod needs [BaseMod](https://github.com/daviscook477/Bas
 
 ## See Also ##
 Dependences:
-   * ModTheSpire () : extenal mod loader for Slay The Spire
-   * BaseMod () : the API mod which also provides a dev console
+   * ModTheSpire (https://github.com/kiooeht/ModTheSpire) : extenal mod loader for Slay The Spire
+   * BaseMod (https://github.com/daviscook477/BaseMod) : the API mod which also provides a dev console<
+   
 Other mod by the members of Touhou Spire Group:
   * [The Servant(Sakuya)](https://github.com/lionpkqq/StS-BlackRuseMod) : mod of Izayoi Sakuya
   * [Satori](https://github.com/HOYKJ/KomeijiMod) : mod of Komeiji Satori
   * [Yuyuko](https://github.com/Gogomoe/YuyukoMod) : mod of Saigyouji Yuyuko
+  
 Strongly Recommended:
   * [SuperFastMode](https://github.com/Skrelpoid/SuperFastMode) : speeding up the game,making the gameplay lightning fast
   * [BetterRewardsMod](https://github.com/Skrelpoid/BetterRewardsMod) : adding a choice at Neow that reward you depending on the score of your last run
