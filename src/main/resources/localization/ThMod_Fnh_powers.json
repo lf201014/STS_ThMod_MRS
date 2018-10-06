@@ -1,8 +1,8 @@
 {
-  "AsteroidBeltPower": {
-    "NAME": "Asteroid Belt",
+  "DarkMatterPower": {
+    "NAME": "Dark Matter",
     "DESCRIPTIONS": [
-      "Keep all block if not attacked this turn.",
+      "You cannot play more #yDark #yMatter this turn.",
       ""
     ]
   },
@@ -122,7 +122,7 @@
   "SingularityPower": {
     "NAME": "Singualrity",
     "DESCRIPTIONS": [
-      "When you play a card that cost 0 ,increase the damage of all #yAttack in your hand by #b",
+      "When you play a card that cost 0 ,increase the damage of a random #yattack in your hand by #b",
       " ."
     ]
   },
@@ -157,8 +157,9 @@
   "SuperNovaPower": {
     "NAME": "SuperNova",
     "DESCRIPTIONS": [
-      "Gain  #b",
-      " #yStrength for each #yBurn exhausted. NL You no longer take damage from #yBurn . NL #yExhaust you hand when your turn ends."
+      "When you #yExhaust a #yBurn ,Gain  #b",
+      "When you #yExhaust a #yCurse or a #Status ,Gain  #b",
+      " #yStrength . NL You no longer take damage from #yBurn . NL #yExhaust you hand when your turn ends."
     ]
   },
   "CasketOfStarPlusPower": {

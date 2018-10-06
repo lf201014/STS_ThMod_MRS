@@ -19,6 +19,7 @@ import ThMod_FnH.patches.AbstractCardEnum;
 import ThMod_FnH.powers.deprecated.DarkSparkPower;
 import basemod.abstracts.CustomCard;
 
+@Deprecated
 public class DarkSpark
     extends CustomCard {
 

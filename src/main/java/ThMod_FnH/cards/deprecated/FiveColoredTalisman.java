@@ -1,7 +1,7 @@
 package ThMod_FnH.cards.deprecated;
 
 import ThMod_FnH.patches.AbstractCardEnum;
-import ThMod_FnH.powers.Marisa.TalismanPower;
+import ThMod_FnH.powers.deprecated.TalismanPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+@Deprecated
 public class FiveColoredTalisman extends CustomCard {
 
   public static final String ID = "FiveColoredTalisman";

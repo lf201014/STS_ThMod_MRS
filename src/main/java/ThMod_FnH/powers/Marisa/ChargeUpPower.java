@@ -33,7 +33,11 @@ public class ChargeUpPower
     this.name = NAME;
     this.ID = POWER_ID;
     this.owner = owner;
-    this.amount = amount;
+    if (ThMod.ExhaustionCheck()) {
+      this.amount = 0;
+    } else {
+      this.amount = amount;
+    }
     this.type = AbstractPower.PowerType.BUFF;
     updateDescription();
     this.img = new Texture("img/powers/generator.png");
@@ -42,16 +46,15 @@ public class ChargeUpPower
 
   @Override
   public void stackPower(int stackAmount) {
-    //ThMod.logger.info("ChargeUpPower : StackPower");
-    //ThMod.logger.info("ChargeUpPower : adding");
-
+    if (ThMod.ExhaustionCheck()) {
+      return;
+    }
     this.fontScale = 8.0F;
     this.amount += stackAmount;
     if (this.amount <= 0) {
       this.amount = 0;
       return;
     }
-    //ThMod.logger.info("ChargeUpPower : checking counter");
     if (AbstractDungeon.player.hasRelic("SimpleLauncher")) {
       this.stc = IMPR_STACK;
     } else {
@@ -64,7 +67,6 @@ public class ChargeUpPower
     );
 
     this.cnt = (int) Math.floor(this.amount / this.stc);
-    //ThMod.logger.info("ChargeUpPower : Done StackPower ; cnt : "+this.cnt);
   }
 
   public void updateDescription() {
@@ -81,7 +83,7 @@ public class ChargeUpPower
 
   @Override
   public void onPlayCard(AbstractCard card, AbstractMonster m) {
-    if (this.owner.hasPower("MoraleDepletionPlusPower")) {
+    if ((this.owner.hasPower("MoraleDepletionPlusPower")) || (ThMod.ExhaustionCheck())) {
       return;
     }
     if ((this.cnt > 0) && (card.type == CardType.ATTACK)) {
@@ -96,7 +98,6 @@ public class ChargeUpPower
       }
       ThMod.logger.info("ChargeUpPower : Checking stack number :" + this.stc);
 
-      //this.stackPower(-cnt*this.stc);
       AbstractDungeon.actionManager.addToBottom(
           new ConsumeChargeUpAction(cnt * this.stc)
       );
@@ -106,7 +107,7 @@ public class ChargeUpPower
 
   @Override
   public float atDamageFinalGive(float damage, DamageInfo.DamageType type) {
-    if (this.owner.hasPower("MoraleDepletionPlusPower")) {
+    if ((this.owner.hasPower("MoraleDepletionPlusPower")) || (ThMod.ExhaustionCheck())) {
       return damage;
     }
     if (cnt > 0) {

@@ -40,6 +40,7 @@ public class WitchOfGreed extends CustomCard {
     );
 
     this.baseMagicNumber = this.magicNumber = STC;
+    this.tags.add(AbstractCard.CardTags.HEALING);
   }
 
   /*

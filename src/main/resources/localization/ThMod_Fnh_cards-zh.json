@@ -172,7 +172,7 @@
   },
   "MaximisePower": {
     "NAME": "火力全开！",
-    "DESCRIPTION": "将你的 蓄力 层数转化为能量。使你本回合内的伤害翻倍。 消耗 。",
+    "DESCRIPTION": "将你的 蓄力 层数转化为能量。将一张 力竭 加入手牌。使你本回合内的伤害翻倍。 消耗 。",
     "UPGRADE_DESCRIPTION": "将你的 蓄力 层数转化为能量。使你本回合内的伤害翻倍。"
   },
   "StarlightTyphoon": {
@@ -182,7 +182,7 @@
   },
   "SuperPerseids": {
     "NAME": "超级英仙座",
-    "DESCRIPTION": " 不能被打出 。 当你抽到这张卡，获得 !B! 格挡 。 NL 此卡被 消耗 时，随机造成 !D! 点伤害。",
+    "DESCRIPTION": " 不能被打出 。 当你抽到这张卡，获得 !M! 蓄力 。 NL 此卡被 消耗 时，随机造成 !D! 点伤害。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MysteriousBeam": {
@@ -237,7 +237,7 @@
   },
   "Singularity": {
     "NAME": "奇点",
-    "DESCRIPTION": "每当你使用一张费用为0的卡时，使你手中所有攻击牌攻击力增加 !M! 点。",
+    "DESCRIPTION": "每当你使用一张费用为0的卡时，使你手中一张随机攻击牌攻击力增加 !M! 点。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "SporeBomb": {
@@ -292,7 +292,7 @@
   },
   "SuperNova": {
     "NAME": "超新星",
-    "DESCRIPTION": "使你不再受到 灼伤 的伤害。 NL 每 消耗 一张 灼伤 ，获得一点 力量 。 NL 在回合结束时 消耗 所有手牌。",
+    "DESCRIPTION": "每当你 消耗 一张 灼伤 ，获得一点 力量 。",
     "UPGRADE_DESCRIPTION": " 固有 。 NL 使你不再受到 灼伤 的伤害。 NL 每 消耗 一张 灼伤 ，获得一点 力量 。 NL 在回合结束时 消耗 所有手牌。"
   },
   "MoraleDepletion": {
@@ -302,8 +302,11 @@
   },
   "DarkMatter": {
     "NAME": "暗物质",
-    "DESCRIPTION": "将两张 暗物质 加入抽卡堆。被消耗时获得 !B! 点 格挡 。 NL 虚无 。",
-    "UPGRADE_DESCRIPTION": "将两张 升级 过的 暗物质 加入抽卡堆。被消耗时获得 !B! 点 格挡 。 NL 虚无 。"
+    "DESCRIPTION": "每回合只能打出一张。将两张 暗物质 加入抽卡堆。抽一张卡。被消耗时获得 !B! 点 格挡 。 NL 虚无 。",
+    "UPGRADE_DESCRIPTION": "每回合只能打出一张。将两张 升级 过的 暗物质 加入抽卡堆。抽一张卡。被消耗时获得 !B! 点 格挡 。 NL 虚无 。",
+    "EXTENDED_DESCRIPTION": [
+      "我这回合不能再打出暗物质了"
+    ]
   },
   "GasGiant": {
     "NAME": "气态巨行星",
@@ -337,8 +340,8 @@
   },
   "ManaRampage": {
     "NAME": "魔力暴走",
-    "DESCRIPTION": "将手中所有攻击牌的伤害增加 !M! 点X次，然后 保留 手中的攻击牌到下一回合。",
-    "UPGRADE_DESCRIPTION": "本回合内，你的下一张攻击牌将被额外打出X+1次。"
+    "DESCRIPTION": "打出一张随机攻击卡X次。",
+    "UPGRADE_DESCRIPTION": "打出一张 升级 过的随机攻击卡X次。"
   },
   "StarBarrage": {
     "NAME": "魔法星弹",
@@ -415,9 +418,9 @@
     "DESCRIPTION": " 保留 。造成 !D! 伤害。 NL 增幅 [B]  [B] : 造成三倍伤害。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
-  "WWWWWWWWWWWW": {
-    "NAME": "WWWWWWWWWWW",
-    "DESCRIPTION": "WWWWWWWWWWW",
+  "Exhaustion_MRS": {
+    "NAME": "力竭",
+    "DESCRIPTION": " 不能被打出 。 NL 这张卡在你手中时你将无法获得或发动 增幅",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WWWWWWWWWWWWW": {

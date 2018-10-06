@@ -1,5 +1,6 @@
 package ThMod_FnH.cards.Marisa;
 
+import ThMod_FnH.action.OpenUniverseAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 //import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
@@ -43,32 +44,9 @@ public class OpenUniverse extends CustomCard {
 
   public void use(AbstractPlayer p, AbstractMonster m) {
 
-    ThMod.logger.info("OpenUniverse : generating cards");
-
-    for (int i = 0; i < 5; i++) {
-      AbstractCard card = AbstractDungeon.returnTrulyRandomCard();
-
-      ThMod.logger.info("OpenUniverse : adding : " + card.cardID);
-
-      AbstractDungeon.actionManager.addToBottom(
-          new MakeTempCardInDrawPileAction(card, 1, true, true)
-      );
-    }
-
-    ThMod.logger.info("OpenUniverse : shuffling");
-
-    p.drawPile.shuffle();
-    for (AbstractRelic r : p.relics) {
-      r.onShuffle();
-    }
-
-    ThMod.logger.info("OpenUniverse : drawing");
-
     AbstractDungeon.actionManager.addToBottom(
-        new DrawCardAction(p, this.magicNumber)
+        new OpenUniverseAction(this.magicNumber,this.upgraded)
     );
-
-    ThMod.logger.info("OpenUniverse : done");
 
   }
 

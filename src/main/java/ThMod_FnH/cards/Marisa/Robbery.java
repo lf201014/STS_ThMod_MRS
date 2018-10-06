@@ -42,6 +42,7 @@ public class Robbery
 
     this.baseDamage = ATTACK_DMG;
     this.exhaust = true;
+    this.tags.add(AbstractCard.CardTags.HEALING);
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {

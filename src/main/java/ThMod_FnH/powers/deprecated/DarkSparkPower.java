@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import ThMod_FnH.ThMod;
 
+@Deprecated
 public class DarkSparkPower extends AbstractPower {
 
   public static final String POWER_ID = "DarkSparkPower";

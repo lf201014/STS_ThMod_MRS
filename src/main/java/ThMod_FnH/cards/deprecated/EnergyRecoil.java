@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import basemod.abstracts.CustomCard;
 import ThMod_FnH.patches.AbstractCardEnum;
 
+@Deprecated
 public class EnergyRecoil extends CustomCard {
 
   public static final String ID = "EnergyRecoil";

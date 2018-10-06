@@ -1,17 +1,17 @@
 package ThMod_FnH.cards.Marisa;
 
-import ThMod_FnH.action.DamageUpAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import ThMod_FnH.action.ManaRampageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import ThMod_FnH.patches.AbstractCardEnum;
-import ThMod_FnH.powers.Marisa.ManaRampagePower;
 import basemod.abstracts.CustomCard;
 
 public class ManaRampage extends CustomCard {
@@ -33,10 +33,10 @@ public class ManaRampage extends CustomCard {
         IMG_PATH,
         COST,
         DESCRIPTION,
-        AbstractCard.CardType.SKILL,
+        CardType.ATTACK,
         AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.RARE,
-        AbstractCard.CardTarget.SELF
+        CardRarity.RARE,
+        CardTarget.ALL_ENEMY
     );
     this.magicNumber = this.baseMagicNumber = DMG_UP;
   }
@@ -46,16 +46,11 @@ public class ManaRampage extends CustomCard {
     if (p.hasRelic("Chemical X")) {
       cnt += 2;
     }
-    for (AbstractCard c : p.hand.group) {
-      if ((!c.isEthereal) && (c != this) && (c.type == CardType.ATTACK)) {
-        c.retain = true;
-      }
-    }
-    if (cnt > 0) {
-      AbstractDungeon.actionManager.addToBottom(
-          new DamageUpAction(this.magicNumber * cnt)
-      );
-    }
+
+    AbstractDungeon.actionManager.addToBottom(
+        new ManaRampageAction(cnt,this.upgraded)
+    );
+
     if (!this.freeToPlayOnce) {
       p.energy.use(EnergyPanel.totalCount);
     }
@@ -69,8 +64,7 @@ public class ManaRampage extends CustomCard {
     if (!this.upgraded) {
       upgradeName();
       upgradeMagicNumber(DMG_UP_PLUS);
-      //this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-      //initializeDescription();
+      this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
     }
   }
 }

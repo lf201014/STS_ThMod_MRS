@@ -1,9 +1,10 @@
 package ThMod_FnH.cards.Marisa;
 
 import ThMod_FnH.ThMod;
+import ThMod_FnH.powers.Marisa.ChargeUpPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
@@ -24,10 +25,9 @@ public class SuperPerseids extends CustomCard {
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   private static final int COST = -2;
-  private static final int DMG = 16;
-  private static final int UPG_DMG = 4;
-  private static final int BLC = 4;
-  private static final int UPG_BLC = 2;
+  private static final int DMG = 15;
+  private static final int UPG_DMG = 5;
+  private static final int STACK = 2;
 
   public SuperPerseids() {
     super(
@@ -43,22 +43,23 @@ public class SuperPerseids extends CustomCard {
     );
 
     this.damage = this.baseDamage = DMG;
-    this.block = this.baseBlock = BLC;
+    this.magicNumber = this.baseMagicNumber = STACK;
     this.damageType = DamageType.THORNS;
     this.damageTypeForTurn = DamageType.THORNS;
   }
 
   public void triggerWhenDrawn() {
     this.applyPowers();
-    ThMod.logger.info("SuperPerseids : triggerWhenDrawn : Granting Block "
+    ThMod.logger.info("SuperPerseids : triggerWhenDrawn : Granting Charge-up "
         + "; : upgraded : " + this.upgraded
-        + "; : block : " + this.block
     );
+    AbstractPlayer p = AbstractDungeon.player;
     AbstractDungeon.actionManager.addToBottom(
-        new GainBlockAction(
-            AbstractDungeon.player,
-            AbstractDungeon.player,
-            this.block
+        new ApplyPowerAction(
+            p,
+            p,
+            new ChargeUpPower(p,this.magicNumber),
+            this.magicNumber
         )
     );
   }
@@ -97,7 +98,6 @@ public class SuperPerseids extends CustomCard {
     if (!this.upgraded) {
       upgradeName();
       upgradeDamage(UPG_DMG);
-      upgradeBlock(UPG_BLC);
     }
   }
 }

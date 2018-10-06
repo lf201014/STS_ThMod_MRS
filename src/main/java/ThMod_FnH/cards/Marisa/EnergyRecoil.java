@@ -1,5 +1,6 @@
 package ThMod_FnH.cards.Marisa;
 
+import ThMod_FnH.ThMod;
 import ThMod_FnH.action.ConsumeChargeUpAction;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -48,6 +49,9 @@ public class EnergyRecoil extends CustomCard {
   @Override
   public void applyPowers() {
     super.applyPowers();
+    if (ThMod.ExhaustionCheck()){
+      return;
+    }
     AbstractPlayer p = AbstractDungeon.player;
     hasLauncher = p.hasRelic("SimpleLauncher");
     if (p.hasPower("ChargeUpPower")) {
@@ -72,6 +76,11 @@ public class EnergyRecoil extends CustomCard {
     AbstractDungeon.actionManager.addToBottom(
         new GainBlockAction(p, p, this.block)
     );
+
+    if (ThMod.ExhaustionCheck()){
+      return;
+    }
+
     if (p.hasPower("ChargeUpPower")) {
       int div = 8;
       if (hasLauncher){

@@ -1,5 +1,6 @@
 package ThMod_FnH.cards.Marisa;
 
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -35,7 +36,7 @@ public class Defend_MRS extends CustomCard {
         AbstractCard.CardRarity.BASIC,
         AbstractCard.CardTarget.SELF
     );
-    CardTags.addTags(this, BaseModTags.BASIC_DEFEND);
+    this.tags.add(BaseModCardTags.BASIC_DEFEND);
     this.baseBlock = BLOCK_AMT;
   }
 

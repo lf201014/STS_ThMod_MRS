@@ -1,9 +1,8 @@
 package ThMod_FnH;
 
 import ThMod_FnH.cards.Marisa.AlicesGift;
-import ThMod_FnH.cards.deprecated.ExplosiveMarionette;
-import ThMod_FnH.cards.deprecated.FiveColoredTalisman;
-import ThMod_FnH.cards.deprecated.OpticalCamouflage;
+import ThMod_FnH.cards.Marisa.ManaRampage;
+import ThMod_FnH.cards.derivations.Exhaustion_MRS;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import java.nio.charset.StandardCharsets;
 
@@ -44,7 +43,7 @@ import ThMod_FnH.cards.Marisa.Defend_MRS;
 import ThMod_FnH.cards.Marisa.DoubleSpark;
 import ThMod_FnH.cards.Marisa.DragonMeteor;
 import ThMod_FnH.cards.Marisa.EnergyFlow;
-import ThMod_FnH.cards.deprecated.EnergyRecoil;
+import ThMod_FnH.cards.Marisa.EnergyRecoil;
 import ThMod_FnH.cards.Marisa.EscapeVelocity;
 import ThMod_FnH.cards.Marisa.EventHorizon;
 import ThMod_FnH.cards.Marisa.FairyDestructionRay;
@@ -61,7 +60,6 @@ import ThMod_FnH.cards.Marisa.MachineGunSpark;
 import ThMod_FnH.cards.Marisa.MagicAbsorber;
 import ThMod_FnH.cards.Marisa.MagicChant;
 import ThMod_FnH.cards.Marisa.ManaConvection;
-import ThMod_FnH.cards.Marisa.ManaRampage;
 import ThMod_FnH.cards.Marisa.MasterSpark;
 import ThMod_FnH.cards.Marisa.MaximisePower;
 import ThMod_FnH.cards.Marisa.MeteoricShower;
@@ -135,10 +133,17 @@ import basemod.interfaces.PostInitializeSubscriber;
 
 @SpireInitializer
 public class ThMod implements PostExhaustSubscriber,
-    PostBattleSubscriber, PostDungeonInitializeSubscriber,
-    EditCharactersSubscriber, PostInitializeSubscriber,
-    EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber,
-    OnCardUseSubscriber, EditKeywordsSubscriber, OnPowersModifiedSubscriber, PostDrawSubscriber {
+    PostBattleSubscriber,
+    PostDungeonInitializeSubscriber,
+    EditCharactersSubscriber,
+    PostInitializeSubscriber,
+    EditRelicsSubscriber,
+    EditCardsSubscriber,
+    EditStringsSubscriber,
+    OnCardUseSubscriber,
+    EditKeywordsSubscriber,
+    OnPowersModifiedSubscriber,
+    PostDrawSubscriber {
 
   public static final Logger logger = LogManager.getLogger(ThMod.class.getName());
 
@@ -160,7 +165,7 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String MY_CHARACTER_BUTTON = "img/charSelect/MarisaButton.png";
   private static final String MARISA_PORTRAIT = "img/charSelect/marisaPortrait.jpg";
 
-  //For Spark Themed Cards
+  //For Spark Themed cards
   public static boolean isSpark(AbstractCard card) {
     return (
         (card.cardID.equals("Spark")) ||
@@ -174,11 +179,25 @@ public class ThMod implements PostExhaustSubscriber,
     );
   }
 
+  //For the FXXKING Exhaustion curse
+  public static boolean ExhaustionCheck() {
+    boolean res = false;
+    for (AbstractCard c : AbstractDungeon.player.hand.group) {
+      if (c instanceof Exhaustion_MRS) {
+        res = true;
+      }
+    }
+    return res;
+  }
+
   //For Amplify cards
   public static boolean Amplified(AbstractCard card, int AMP) {
     logger.info(
-        "ThMod.Amplified : card to check : " + card.cardID + " ; costForTurn : "
-            + card.costForTurn);
+        "ThMod.Amplified : card to check : "
+            + card.cardID
+            + " ; costForTurn : "
+            + card.costForTurn
+    );
     AbstractPlayer p = AbstractDungeon.player;
     if (p.hasPower("MoraleDepletionPlusPower")) {
       logger.info("ThMod.Amplified :MoraleDepletionPower detected,returning false.");
@@ -191,7 +210,9 @@ public class ThMod implements PostExhaustSubscriber,
       logger.info(
           "ThMod.Amplified :Free Amplify tag detected,returning true : Milli :"
               + (p.hasPower("MilliPulsaPower"))
-              + " ; Pulse :" + (p.hasPower("PulseMagicPower")) + " ; Free2Play :"
+              + " ; Pulse :"
+              + (p.hasPower("PulseMagicPower"))
+              + " ; Free2Play :"
               + card.freeToPlayOnce
       );
       res = true;
@@ -511,12 +532,8 @@ public class ThMod implements PostExhaustSubscriber,
     UnlockTracker.unlockCard("BlackFlareStar");
     BaseMod.addCard(new WhiteDwarf());
     UnlockTracker.unlockCard("WhiteDwarf");
-    BaseMod.addCard(new ExplosiveMarionette());
-    UnlockTracker.unlockCard("ExplosiveMarionette");
-    BaseMod.addCard(new OpticalCamouflage());
-    UnlockTracker.unlockCard("OpticalCamouflage");
-    BaseMod.addCard(new FiveColoredTalisman());
-    UnlockTracker.unlockCard("FiveColoredTalisman");
+    BaseMod.addCard(new Exhaustion_MRS());
+    UnlockTracker.unlockCard("Exhaustion_MRS");
 
     logger.info("done editing cards");
   }
@@ -543,7 +560,7 @@ public class ThMod implements PostExhaustSubscriber,
     if (card.type == CardType.ATTACK) {
       lastAttack = card;
     }
-    if (card.retain){
+    if (card.retain) {
       card.retain = false;
     }
   }
@@ -568,6 +585,8 @@ public class ThMod implements PostExhaustSubscriber,
   public void receiveEditKeywords() {
     logger.info("Setting up custom keywords");
 
+    BaseMod.addKeyword(new String[]{"\u529b\u7aed"},
+        "\u529b\u7aed\u4f1a\u4f7f\u4f60\u65e0\u6cd5\u83b7\u5f97\u6216\u4f7f\u7528 \u84c4\u529b \u3002");
     BaseMod.addKeyword(new String[]{"\u53d6\u51b3\u4e8e\u6240\u6d88\u8017\u5361\u7684\u79cd\u7c7b"},
         "\u653b\u51fb\uff1a\u6050\u60e7\u836f\u6c34\uff1b\u6280\u80fd\uff1a\u865a\u5f31\u836f\u6c34\uff1b\u80fd\u529b\uff1a\u6bd2\u7d20\u836f\u6c34\uff1b\u72b6\u6001\uff1a\u706b\u7130\u836f\u6c34\uff1b\u8bc5\u5492\uff1a\u70df\u96fe\u0020\u5f39\u0020\u3002");
     BaseMod.addKeyword(new String[]{"\u706b\u82b1"},
@@ -579,6 +598,8 @@ public class ThMod implements PostExhaustSubscriber,
 
     BaseMod.addKeyword(new String[]{"amplify", "Amplify"},
         "Pay extra energy for its effect when you have enough  [B] .");
+    BaseMod.addKeyword(new String[]{"Exhaustion", "Exhaustion"},
+        "Exhaustion prevent you from gaining or using Charge-Up .");
     BaseMod.addKeyword(new String[]{"Spark", "spark"},
         "Spark is an attack card cost 0 energy.");
     BaseMod.addKeyword(new String[]{"Charge-up", "charge-up", "chargeup", "ChargeUp"},
@@ -587,7 +608,8 @@ public class ThMod implements PostExhaustSubscriber,
             "depends on the type of the card",
             "Depends On The Type Of The Card"
         },
-        "Attack : Fear Potion ; NL Skill : Weak Potion ; NL Power : Poison Potion ; Status : Fire Potion ; Curse : Smoke Bomb .");
+        "Attack : Fear Potion ; NL Skill : Weak Potion ; NL Power : Poison Potion ; Status : Fire Potion ; Curse : Smoke Bomb ."
+    );
 
     logger.info("Keywords setting finished.");
   }

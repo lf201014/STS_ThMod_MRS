@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+@Deprecated
 public class OpticalCamouflage extends CustomCard {
 
   public static final String ID = "OpticalCamouflage";

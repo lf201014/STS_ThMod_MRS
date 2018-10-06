@@ -1,5 +1,6 @@
 package ThMod_FnH.cards.Marisa;
 
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -48,7 +49,7 @@ public class MasterSpark
         AbstractCard.CardRarity.BASIC,
         AbstractCard.CardTarget.ENEMY
     );
-    CardTags.addTags(this, BaseModTags.GREMLIN_MATCH);
+    this.tags.add(BaseModCardTags.GREMLIN_MATCH);
     this.baseDamage = ATK_DMG;
     this.ampNumber = AMP_DMG;
     this.baseBlock = this.baseDamage + this.ampNumber;

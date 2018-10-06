@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
+@Deprecated
 public class AFriendsGift_1 extends CustomCard {
 
   public static final String ID = "AFriendsGift_1";

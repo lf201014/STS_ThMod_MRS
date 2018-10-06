@@ -8,15 +8,15 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 
-public class GrandCrossPower extends AbstractPower {
+public class DarkMatterPower extends AbstractPower {
 
-  public static final String POWER_ID = "GrandCrossPower";
+  public static final String POWER_ID = "DarkMatterPower";
   private static final PowerStrings powerStrings = CardCrawlGame.languagePack
       .getPowerStrings(POWER_ID);
   public static final String NAME = powerStrings.NAME;
   public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-  public GrandCrossPower(AbstractCreature owner) {
+  public DarkMatterPower(AbstractCreature owner) {
     this.name = NAME;
     this.ID = POWER_ID;
     this.owner = owner;

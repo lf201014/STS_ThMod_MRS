@@ -1,4 +1,4 @@
-package ThMod_FnH.powers.Marisa;
+package ThMod_FnH.powers.deprecated;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -15,6 +15,7 @@ import ThMod_FnH.ThMod;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+@Deprecated
 public class TalismanPower
     extends AbstractPower {
 
@@ -38,10 +39,7 @@ public class TalismanPower
   public void atStartOfTurnPostDraw() {
     for (int i = 0; i < this.amount; i++) {
       AbstractCard c =
-          AbstractDungeon.returnTrulyRandomCard(
-              AbstractCard.CardType.SKILL,
-              AbstractDungeon.cardRandomRng
-          ).makeCopy();
+          AbstractDungeon.returnTrulyRandomCard();
       AbstractDungeon.actionManager.addToBottom(
           new MakeTempCardInHandAction(c, 1)
       );

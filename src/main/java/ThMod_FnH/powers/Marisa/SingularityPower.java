@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import ThMod_FnH.ThMod;
 
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import java.util.ArrayList;
 
 public class SingularityPower
     extends AbstractPower {
@@ -40,14 +41,26 @@ public class SingularityPower
     if ((card.costForTurn == 0) || (card.costForTurn <= -2)) {
       ThMod.logger.info("SingularityPower : applying upgrade :");
       this.flash();
+      ArrayList<AbstractCard> pool = new ArrayList<>();
       for (AbstractCard c : AbstractDungeon.player.hand.group) {
         if (c.type == CardType.ATTACK) {
-          ThMod.logger
-              .info("SingularityPower : adding " + this.amount + " base damage to " + c.cardID);
-          c.baseDamage += this.amount;
-          c.applyPowers();
-          c.flash();
+          pool.add(c);
         }
+      }
+      if (!pool.isEmpty()) {
+        int rand = AbstractDungeon.miscRng.random(0, pool.size() - 1);
+        AbstractCard c = pool.get(rand);
+        ThMod.logger.info(
+            "SingularityPower : adding "
+                + this.amount
+                + " base damage to "
+                + c.cardID
+                + " random res :"
+                + rand
+        );
+        c.baseDamage += this.amount;
+        c.applyPowers();
+        c.flash();
       }
     }
   }

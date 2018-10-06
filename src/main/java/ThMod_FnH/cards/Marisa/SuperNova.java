@@ -1,5 +1,6 @@
 package ThMod_FnH.cards.Marisa;
 
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -34,14 +35,19 @@ public class SuperNova extends CustomCard {
         AbstractCard.CardRarity.RARE,
         AbstractCard.CardTarget.SELF
     );
+    this.tags.add(BaseModCardTags.FORM);
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
+    if ((this.upgraded) && (p.hasPower("SuperNovaPower"))) {
+      SuperNovaPower po = (SuperNovaPower) p.getPower("SuperNovaPower");
+      po.upgraded = true;
+    }
     AbstractDungeon.actionManager.addToBottom(
         new ApplyPowerAction(
             p,
             p,
-            new SuperNovaPower(p, 1),
+            new SuperNovaPower(p, 1, this.upgraded),
             1
         )
     );
