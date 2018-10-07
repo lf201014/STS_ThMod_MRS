@@ -20,25 +20,54 @@ public class BlazeAway extends CustomCard {
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
+  public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
   private static final int COST = 1;
   private static final int STC = 1;
-
   private static final int AMP = 1;
-  //private static final int AMP_STC = 1;
+  public static AbstractCard lastAttack = null;
 
   public BlazeAway() {
-    super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-        AbstractCardEnum.MARISA_COLOR, AbstractCard.CardRarity.UNCOMMON,
-        AbstractCard.CardTarget.SELF);
+    super(
+        ID,
+        NAME,
+        IMG_PATH,
+        COST,
+        DESCRIPTION,
+        CardType.SKILL,
+        AbstractCardEnum.MARISA_COLOR,
+        CardRarity.UNCOMMON,
+        CardTarget.SELF
+    );
 
     this.baseMagicNumber = this.magicNumber = STC;
-    //this.exhaust = true;
+  }
+
+  @Override
+  public void applyPowers() {
+    lastAttack = null;
+    for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
+      if (c.type == CardType.ATTACK) {
+        lastAttack = c;
+      }
+    }
+    if (lastAttack != null) {
+      this.rawDescription =
+          DESCRIPTION + EXTENDED_DESCRIPTION[0] + lastAttack.name + EXTENDED_DESCRIPTION[1];
+      initializeDescription();
+    } else {
+      this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[2];
+    }
+  }
+
+  public void onMoveToDiscard() {
+    this.rawDescription = DESCRIPTION;
+    initializeDescription();
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-    if (ThMod.lastAttack != null) {
-      ThMod.logger.info("BlazeAway : last attack :" + ThMod.lastAttack.cardID);
-      AbstractCard card = ThMod.lastAttack.makeStatEquivalentCopy();
+    if (lastAttack != null) {
+      ThMod.logger.info("BlazeAway : last attack :" + lastAttack.cardID);
+      AbstractCard card = lastAttack.makeStatEquivalentCopy();
       if (ThMod.Amplified(this, AMP)) {
         card.costForTurn = 0;
       } else {

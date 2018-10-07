@@ -62,9 +62,8 @@ public class MysteriousBeam
   public void use(AbstractPlayer p, AbstractMonster m) {
 
     AbstractCard c =
-        AbstractDungeon.returnTrulyRandomCard(
-            AbstractCard.CardType.ATTACK,
-            AbstractDungeon.cardRandomRng
+        AbstractDungeon.returnTrulyRandomCardInCombat(
+            AbstractCard.CardType.ATTACK
         ).makeCopy();
     if (this.upgraded) {
       c.upgrade();

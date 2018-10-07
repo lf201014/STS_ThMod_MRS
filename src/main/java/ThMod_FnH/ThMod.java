@@ -3,7 +3,6 @@ package ThMod_FnH;
 import ThMod_FnH.cards.Marisa.AlicesGift;
 import ThMod_FnH.cards.Marisa.ManaRampage;
 import ThMod_FnH.cards.derivations.Exhaustion_MRS;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import java.nio.charset.StandardCharsets;
 
 import org.apache.logging.log4j.LogManager;
@@ -147,7 +146,7 @@ public class ThMod implements PostExhaustSubscriber,
 
   public static final Logger logger = LogManager.getLogger(ThMod.class.getName());
 
-  public static AbstractCard lastAttack = null;
+  public static int typhoonCounter = 0;
 
   //card backgrounds
   private static final String ATTACK_CC = "img/512/bg_attack_MRS_s.png";
@@ -254,6 +253,24 @@ public class ThMod implements PostExhaustSubscriber,
     logger.info("creating the color : MARISA_COLOR");
     BaseMod.addColor(
         AbstractCardEnum.MARISA_COLOR,
+        STARLIGHT,
+        STARLIGHT,
+        STARLIGHT,
+        STARLIGHT,
+        STARLIGHT,
+        STARLIGHT,
+        STARLIGHT,
+        ATTACK_CC,
+        SKILL_CC,
+        POWER_CC,
+        ENERGY_ORB_CC,
+        ATTACK_CC_PORTRAIT,
+        SKILL_CC_PORTRAIT,
+        POWER_CC_PORTRAIT,
+        ENERGY_ORB_CC_PORTRAIT
+    );
+    BaseMod.addColor(
+        AbstractCardEnum.MARISA_DERIVATIONS,
         STARLIGHT,
         STARLIGHT,
         STARLIGHT,
@@ -551,14 +568,14 @@ public class ThMod implements PostExhaustSubscriber,
   public void receivePostBattle(AbstractRoom r) {
     // TODO Auto-generated method stub
     logger.info("ThMod : PostBattle");
-    lastAttack = null;
+    typhoonCounter = 0;
   }
 
   @Override
   public void receiveCardUsed(AbstractCard card) {
     ThMod.logger.info("ThMod : Card used : " + card.cardID);
-    if (card.type == CardType.ATTACK) {
-      lastAttack = card;
+    if ((card.costForTurn == 0) || (card.costForTurn <= -2)) {
+      typhoonCounter++;
     }
     if (card.retain) {
       card.retain = false;

@@ -163,8 +163,13 @@
   },
   "BlazeAway": {
     "NAME": "Blaze Away",
-    "DESCRIPTION": "Add a copy of the last Attack you played this combat. NL Amplify [B] : It costs 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Add a copy of the next Attack you play this turn. It costs 0 this turn. NL Amplify  [B]  :add one more. NL  Exhaust."
+    "DESCRIPTION": "Add a copy of the last Attack you played this turn. NL Amplify [B] : It costs 0 this turn.",
+    "UPGRADE_DESCRIPTION": "Add a copy of the next Attack you play this turn. It costs 0 this turn. NL Amplify  [B]  :add one more. NL  Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Last Attack : ",
+      " ).",
+      " NL (You haven't played attack yet this turn.)"
+    ]
   },
   "MaximisePower": {
     "NAME": "Max Power",
@@ -172,6 +177,15 @@
     "UPGRADE_DESCRIPTION": "Convert your Charge-up stacks into energy.Add an Exhaustion into your hand. NL Double your damage this turn."
   },
   "StarlightTyphoon": {
+    "NAME": "Starlight Typhoon",
+    "DESCRIPTION": "Deal damage equal to !M! times the card that cost 0 you played this combat to ALL enemies.",
+    "UPGRADE_DESCRIPTION": " Exhaust ALL non-Attack cards in your hand. Add the same number of upgraded Sparks to your hand.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage.)",
+      ""
+    ]
+  },
+  "StarlightTyphoon_D": {
     "NAME": "Starlight Typhoon",
     "DESCRIPTION": " Exhaust ALL non-Attack cards in your hand. Add the same number of Sparks to your hand.",
     "UPGRADE_DESCRIPTION": " Exhaust ALL non-Attack cards in your hand. Add the same number of upgraded Sparks to your hand."
@@ -303,9 +317,12 @@
   },
   "DarkMatter": {
     "NAME": "Dark Matter",
-    "DESCRIPTION": "Can only be played once per turn. Put 2 Dark Matter into your draw pile. Draw a card. Gain !B! Block when exhausted. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "Can only be played once per turn. Put 2 Upgraded Dark Matter into your draw pile. Draw a card. Gain !B! Block when exhausted. NL Ethereal .",
-    "EXTENDED_DESCRIPTION":["I can't play any more Dark Matter this turn."]
+    "DESCRIPTION": "Can only be played once per turn. NL Put 2 Dark Matter into your draw pile. Draw a card. Gain !B! Block when exhausted. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Can only be played once per turn. NL Put 2 Upgraded Dark Matter into your draw pile. Draw a card. Gain !B! Block when exhausted. NL Ethereal .",
+    "EXTENDED_DESCRIPTION":[
+      "I can't play any more Dark Matter this turn.",
+      ""
+    ]
   },
   "GasGiant": {
     "NAME": "Gas Giant",
@@ -334,7 +351,7 @@
   },
   "ManaConvection": {
     "NAME": "Mana Convection",
-    "DESCRIPTION": "Draw !M! cards, then exhaust 2. NL If you have 8 or more Charge-up, lose 8 Charge-up and gain  [B]  .",
+    "DESCRIPTION": "Draw !M! cards, then exhaust 2. NL If you have 8 or more Charge-up, lose 8 Charge-up and gain  [B]  [B]  .",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ManaRampage": {
@@ -375,12 +392,20 @@
   "BlackFlareStar": {
     "NAME": "Black Flare Star",
     "DESCRIPTION": "Can only be played when you have 4 or more cards in your hand. NL Discard any number of cards from your hand and gain !B! Block for each.",
-    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
+    "EXTENDED_DESCRIPTION":[
+      "I don't have 4 cards in my hand.",
+      ""
+    ]
   },
   "WhiteDwarf": {
     "NAME": "White Dwarf",
     "DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. NL Deal !D! damage (1.5 × size of your discard pile). Add 2 Burns to your hand.",
-    "UPGRADE_DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. NL Deal !D! damage (2 × size of your discard pile). Add 2 Burns to your hand."
+    "UPGRADE_DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. NL Deal !D! damage (2 × size of your discard pile). Add 2 Burns to your hand.",
+    "EXTENDED_DESCRIPTION":[
+      "I have more than 4 cards in my hand.",
+      ""
+    ]
   },
   "FairyDestructionRay": {
     "NAME": "Fairy Destruction Ray",
@@ -389,7 +414,7 @@
   },
   "Orbital": {
     "NAME": "Orbital",
-    "DESCRIPTION": " Unplayable. When you draw this card draw !M! more card(s). NL If this card is Exhausted, add a card from your exhaust pile to your discard pile.",
+    "DESCRIPTION": " Unplayable. When you draw this card draw 1 more card(s). NL If this card is Exhausted, add !M! card from your exhaust pile to your discard pile.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "SillyJoke": {

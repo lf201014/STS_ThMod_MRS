@@ -60,12 +60,13 @@ public class MiniHakkero extends CustomRelic {
               1
           )
       );
+      AbstractDungeon.actionManager.addToBottom(
+          new RelicAboveCreatureAction(
+              AbstractDungeon.player, this
+          )
+      );
     }
 
-    AbstractDungeon.actionManager.addToBottom(
-        new RelicAboveCreatureAction(
-            AbstractDungeon.player, this
-        )
-    );
+
   }
 }

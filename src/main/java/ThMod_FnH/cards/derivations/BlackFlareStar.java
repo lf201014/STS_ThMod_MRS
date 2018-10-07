@@ -17,6 +17,7 @@ public class BlackFlareStar extends CustomCard {
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
   public static final String IMG_PATH = "img/cards/pride.png";
   private static final int COST = 0;
   private static final int BLC_AMT = 4;
@@ -41,8 +42,10 @@ public class BlackFlareStar extends CustomCard {
   public boolean canUse(AbstractPlayer p, AbstractMonster m) {
     if (p.hand.size() >= HAND_REQ) {
       return true;
+    } else {
+      this.cantUseMessage = EXTENDED_DESCRIPTION[0];
+      return false;
     }
-    return false;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {

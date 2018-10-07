@@ -3,14 +3,14 @@
     "NAME": "Mini-Hakkero",
     "FLAVOR": "Aka mini-EightTrigram Furnace,is originally gift by Rinosuke when Marisa left her parents.",
     "DESCRIPTIONS": [
-      "When you play a card,gain #b1  #yCharge-up .Lose its effect when your #yCharge-Up stacks is higher than #b8 ."
+      "When you play a card,gain #b1  #yCharge-up . NL Doesn't work when your #yCharge-Up stacks is higher than #b8 ."
     ]
   },
   "EnhancedHakkero": {
     "NAME": "Bewitched Hakkero",
-    "FLAVOR": "The firepower came to a new level when Hakkero was affected by the power of the Miracle Mallet,but is it ok to use a bewitched tool?",
+    "FLAVOR": "Its firepower came to a new level now,but is it ok to use a bewitched tool?",
     "DESCRIPTIONS": [
-      "Replace #yMini-Hakkero . NL When you play a card,gain 2  #yCharge-up . NL Add a Burn to your hand when your turn starts."
+      "Replace #yMini-Hakkero . NL When you play a card,gain 2  #yCharge-up . NL Add a Burn to your hand when your turn starts. NL Doesn't work when your #yCharge-Up stacks is higher than #b8 ."
     ]
   },
   "MagicArmor": {
@@ -21,8 +21,8 @@
     ]
   },
   "EnhancedBroom": {
-    "NAME": "Enhanced Broom",
-    "FLAVOR": "Marisa always travels with her flying broom,and now it is upgraded.",
+    "NAME": "Magic Broom",
+    "FLAVOR": "Marisa always travels with her flying broom.",
     "DESCRIPTIONS": [
       "For every #b3 cards that cost 0 you played,draw a card."
     ]
@@ -35,7 +35,7 @@
     ]
   },
   "RampagingMagicTools": {
-    "NAME": "Rampaging Magic Tools",
+    "NAME": "Rampaging Magic Tool",
     "FLAVOR": "It's been so long since anyone last used them,who knows what could happen?",
     "DESCRIPTIONS": [
       "Gain [B] at the start of each turn. NL Apply a random debuff/buff ( #b3 #yFrail , #b3 #yWeak , #b3 #yVulerable , #b3 #yPoison , #b8 #yCharge-up )to you at the start of each combat."
@@ -45,12 +45,12 @@
     "NAME": "Experimental Familiar",
     "FLAVOR": "A Familiar looks just like a shiny orb,not very powerful but will surely help you alot.",
     "DESCRIPTIONS": [
-      "At the start of each turn,add a #ySpark and a random #yAttack to your hand."
+      "At the start of your turn,add a #ySpark  your hand. NL At the start of each combat,you can choose #b1 from #b3 random card,and it cost 0 for the turn."
     ]
   },
   "BreadOfAWashokuLover": {
     "NAME": "Bread Of A Washoku Lover",
-    "FLAVOR": "'Can you remember how many slices of bread you have eaten until now?''Thirteen.I prefer Japanese food.'",
+    "FLAVOR": "\"Can you remember how many slices of bread you have eaten until now?\"\"Thirteen.I prefer Japanese food.\"",
     "DESCRIPTIONS": [
       "Heal 1 hp when you exhaust a #yStatus or #yCurse. NL When triggered 13 times,you gain #b13 max HP,and this relic no longer works."
     ]
@@ -59,7 +59,7 @@
     "NAME": "Simple Launcher",
     "FLAVOR": "Simple but useful...Perhaps...",
     "DESCRIPTIONS": [
-      "You now only need #b6 stack of #yCharge-up to double your damage."
+      "Reduce your #yCharge-up consumption threshold value from #b8 to #b6 ."
     ]
   },
   "HandmadeGrimoire": {
