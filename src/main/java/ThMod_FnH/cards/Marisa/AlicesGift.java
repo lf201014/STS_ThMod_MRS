@@ -38,6 +38,7 @@ public class AlicesGift extends CustomCard {
         CardTarget.ENEMY
     );
     this.damage = this.baseDamage = ATK;
+    this.exhaust = true;
   }
 
   @Override

@@ -56,6 +56,7 @@ public class BlazeAway extends CustomCard {
       initializeDescription();
     } else {
       this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[2];
+      initializeDescription();
     }
   }
 

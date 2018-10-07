@@ -615,7 +615,7 @@ public class ThMod implements PostExhaustSubscriber,
 
     BaseMod.addKeyword(new String[]{"amplify", "Amplify"},
         "Pay extra energy for its effect when you have enough  [B] .");
-    BaseMod.addKeyword(new String[]{"Exhaustion", "Exhaustion"},
+    BaseMod.addKeyword(new String[]{"Exhaustion", "exhaustion"},
         "Exhaustion prevent you from gaining or using Charge-Up .");
     BaseMod.addKeyword(new String[]{"Spark", "spark"},
         "Spark is an attack card cost 0 energy.");

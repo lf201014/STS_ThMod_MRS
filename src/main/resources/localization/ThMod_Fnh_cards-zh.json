@@ -112,7 +112,7 @@
   },
   "ShootTheMoon": {
     "NAME": "射月",
-    "DESCRIPTION": "造成 !D! 点伤害。如果目标不是boss，移除它身上的一个状态效果。 NL 增幅  [B]  :伤害变为 !B! 点，移除所有状态效果。",
+    "DESCRIPTION": "造成 !D! 点伤害。如果目标不是boss，移除它身上的一个增益效果。 NL 增幅  [B]  :伤害变为 !B! 点，移除所有增益效果。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWW"
   },
   "StarDustReverie": {
@@ -162,8 +162,8 @@
   },
   "OpenUniverse": {
     "NAME": "开放宇宙",
-    "DESCRIPTION": "将五张随机卡牌加入抽牌堆并洗牌,然后抽 !M! 张牌。 消耗 。",
-    "UPGRADE_DESCRIPTION": "将五张随机卡牌加入抽牌堆并洗牌,然后抽 !M! 张牌。"
+    "DESCRIPTION": "将五张随机卡牌加入抽牌堆并洗牌,然后抽 !M! 张牌。这些牌有 !D! %的几率被 升级 。",
+    "UPGRADE_DESCRIPTION": "将五张随机卡牌加入抽牌堆并洗牌,然后抽 !M! 张牌。这些牌有 !D! %的几率被 升级 。"
   },
   "BlazeAway": {
     "NAME": "连续发射",
@@ -182,10 +182,10 @@
   },
   "StarlightTyphoon": {
     "NAME": "星光台风",
-    "DESCRIPTION": "Deal damage equal to !M! times the Frost Channeled this combat to ALL enemies.",
+    "DESCRIPTION": "对所有敌人造成本局中打出0费牌数量 !M! 倍的伤害。",
     "UPGRADE_DESCRIPTION": " Exhaust ALL non-Attack cards in your hand. Add the same number of upgraded Sparks to your hand.",
     "EXTENDED_DESCRIPTION": [
-      " NL (Deals !D! damage.)",
+      " NL ( !D! 点伤害。)",
       ""
     ]
   },
@@ -437,7 +437,7 @@
   },
   "AlicesGift": {
     "NAME": "友人之赠",
-    "DESCRIPTION": " 保留 。造成 !D! 伤害。 NL 增幅 [B]  [B] : 造成三倍伤害。",
+    "DESCRIPTION": " 保留 。造成 !D! 伤害。 消耗 。 NL 增幅 [B]  [B] : 造成三倍伤害。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Exhaustion_MRS": {

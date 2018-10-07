@@ -158,7 +158,7 @@
   },
   "OpenUniverse": {
     "NAME": "Open Universe",
-    "DESCRIPTION": "Shuffle 5 random cards into your draw pile. Draw !M! cards. NL Exhaust.",
+    "DESCRIPTION": "Shuffle 5 random cards into your draw pile. Draw !M! cards.Each card has a !D! % chance to be upgraded.",
     "UPGRADE_DESCRIPTION": "Shuffle 5 random cards into your draw pile. Draw !M! cards."
   },
   "BlazeAway": {
@@ -376,7 +376,7 @@
   },
   "CollectingQuirk": {
     "NAME": "Collecting Quirk",
-    "DESCRIPTION": "Deal !D! damage to a random enemy (!B! time(s) for now) for each !M! relics you have.",
+    "DESCRIPTION": "Deal !D! damage to a random enemy ( !B! time(s) for now) for each !M! relics you have.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "FungusSplash": {
@@ -439,7 +439,7 @@
   },
   "AlicesGift": {
     "NAME": "Alice's Gift",
-    "DESCRIPTION": " Retain. Deal !D! Damage. NL Amplify [B]  [B] : Deal triple damage.",
+    "DESCRIPTION": " Retain. Deal !D! Damage. Exhaust . NL Amplify [B]  [B] : Deal triple damage.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Exhaustion_MRS": {

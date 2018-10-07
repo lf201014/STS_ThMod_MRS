@@ -25,7 +25,7 @@ public class PolarisUnique extends CustomCard {
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   private static final int COST = 1;
-  private static final int UPG_COST = 0;
+  private static final int UPG_COST = -1;
 
   public PolarisUnique() {
     super(
@@ -81,6 +81,7 @@ public class PolarisUnique extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
+      updateCost(UPG_COST);
       //this.rawDescription = DESCRIPTION_UPG;
       //initializeDescription();
     }

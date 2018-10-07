@@ -62,16 +62,6 @@ public class EnergyRecoil extends CustomCard {
     }
   }
 
-  @Override
-  public void calculateDamageDisplay(AbstractMonster mo) {
-    calculateCardDamage(mo);
-  }
-
-  @Override
-  public void calculateCardDamage(AbstractMonster mo) {
-    this.applyPowers();
-  }
-
   public void use(AbstractPlayer p, AbstractMonster m) {
     AbstractDungeon.actionManager.addToBottom(
         new GainBlockAction(p, p, this.block)

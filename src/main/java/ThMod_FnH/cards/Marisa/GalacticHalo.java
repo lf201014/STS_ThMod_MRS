@@ -39,12 +39,6 @@ public class GalacticHalo extends CustomCard {
 
     this.magicNumber = this.baseMagicNumber = STC;
     this.block = this.baseBlock = BLC;
-
-    ThMod.logger.info(
-        "GalacticHalo : init :"
-            + " magicNumber : " + this.magicNumber
-            + " baseMagicNumber : " + this.baseMagicNumber
-    );
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
