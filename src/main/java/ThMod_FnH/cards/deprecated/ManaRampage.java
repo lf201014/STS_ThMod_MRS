@@ -16,7 +16,7 @@ import basemod.abstracts.CustomCard;
 @Deprecated
 public class ManaRampage extends CustomCard {
 
-  public static final String ID = "ManaRampage";
+  public static final String ID = "ManaRampage_1";
   public static final String IMG_PATH = "img/cards/ManaRampage.png";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;

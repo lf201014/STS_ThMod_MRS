@@ -1,32 +1,31 @@
-package ThMod_FnH.cards.Marisa;
+package ThMod_FnH.cards.deprecated;
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import ThMod_FnH.action.DamageUpAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
-import ThMod_FnH.ThMod;
-import ThMod_FnH.action.BinaryStarsAction;
-import ThMod_FnH.cards.derivations.BlackFlareStar;
-import ThMod_FnH.cards.derivations.WhiteDwarf;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class BinaryStars extends CustomCard {
+@Deprecated
+public class ManaRampage_1 extends CustomCard {
 
-  public static final String ID = "BinaryStars";
-  public static final String IMG_PATH = "img/cards/Defend.png";
+  public static final String ID = "ManaRampage_1";
+  public static final String IMG_PATH = "img/cards/ManaRampage.png";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-  private static final int COST = 1;
-  private static final int AMP = 1;
+  private static final int COST = -1;
+  private static final int DMG_UP = 2;
+  private static final int DMG_UP_PLUS = 1;
 
-  public BinaryStars() {
+  public ManaRampage_1() {
     super(
         ID,
         NAME,
@@ -38,42 +37,39 @@ public class BinaryStars extends CustomCard {
         AbstractCard.CardRarity.RARE,
         AbstractCard.CardTarget.SELF
     );
-    this.exhaust = true;
+    this.magicNumber = this.baseMagicNumber = DMG_UP;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-    if (ThMod.Amplified(this, AMP)) {
-      AbstractCard c = new BlackFlareStar();
-      if (this.upgraded) {
-        c.upgrade();
+    int cnt = EnergyPanel.totalCount;
+    if (p.hasRelic("Chemical X")) {
+      cnt += 2;
+    }
+    for (AbstractCard c : p.hand.group) {
+      if ((!c.isEthereal) && (c != this) && (c.type == CardType.ATTACK)) {
+        c.retain = true;
       }
+    }
+    if (cnt > 0) {
       AbstractDungeon.actionManager.addToBottom(
-          new MakeTempCardInHandAction(c, 1)
-      );
-      c = new WhiteDwarf();
-      if (this.upgraded) {
-        c.upgrade();
-      }
-      AbstractDungeon.actionManager.addToBottom(
-          new MakeTempCardInHandAction(c, 1)
-      );
-    } else {
-      AbstractDungeon.actionManager.addToBottom(
-          new BinaryStarsAction(this.upgraded)
+          new DamageUpAction(this.magicNumber * cnt)
       );
     }
-
+    if (!this.freeToPlayOnce) {
+      p.energy.use(EnergyPanel.totalCount);
+    }
   }
 
   public AbstractCard makeCopy() {
-    return new BinaryStars();
+    return new ManaRampage_1();
   }
 
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-      initializeDescription();
+      upgradeMagicNumber(DMG_UP_PLUS);
+      //this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+      //initializeDescription();
     }
   }
 }

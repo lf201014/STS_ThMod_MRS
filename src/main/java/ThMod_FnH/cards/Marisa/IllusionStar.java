@@ -18,9 +18,10 @@ public class IllusionStar extends CustomCard {
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   public static final String IMG_PATH = "img/cards/IllusionStar.png";
   private static final int COST = 0;
-  private static final int CARD_PRINT = 1;
+  private static final int CARD_PRINT = 2;
   private static final int UPG_CARD_PRINT = 1;
 
   public IllusionStar() {
@@ -36,6 +37,7 @@ public class IllusionStar extends CustomCard {
         AbstractCard.CardTarget.SELF
     );
     this.magicNumber = this.baseMagicNumber = CARD_PRINT;
+    this.exhaust = true;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
@@ -59,7 +61,10 @@ public class IllusionStar extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      upgradeMagicNumber(UPG_CARD_PRINT);
+      //upgradeMagicNumber(UPG_CARD_PRINT);
+      this.exhaust = false;
+      this.rawDescription = DESCRIPTION_UPG;
+      initializeDescription();
     }
   }
 }

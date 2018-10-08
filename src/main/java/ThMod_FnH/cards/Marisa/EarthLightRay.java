@@ -42,6 +42,7 @@ public class EarthLightRay extends CustomCard {
 
     this.baseMagicNumber = this.magicNumber = HEAL_AMT;
     this.exhaust = true;
+    this.tags.add(AbstractCard.CardTags.HEALING);
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {

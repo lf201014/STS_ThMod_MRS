@@ -1,5 +1,6 @@
 package ThMod_FnH.cards.Marisa;
 
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -35,12 +36,12 @@ public class Strike_MRS
         IMG_PATH,
         COST,
         DESCRIPTION,
-        AbstractCard.CardType.ATTACK,
+        CardType.ATTACK,
         AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.BASIC,
-        AbstractCard.CardTarget.ENEMY
+        CardRarity.BASIC,
+        CardTarget.ENEMY
     );
-    CardTags.addTags(this, BaseModTags.BASIC_STRIKE);
+    this.tags.add(BaseModCardTags.BASIC_STRIKE);
     this.baseDamage = ATTACK_DMG;
   }
 

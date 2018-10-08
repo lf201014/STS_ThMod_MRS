@@ -21,7 +21,7 @@ public class WitchOfGreed extends CustomCard {
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   private static final int COST = 1;
-  private static final int STC = 20;
+  private static final int STC = 15;
   private static final int UPG_STC = 10;
 
   private static final int AMP = 1;
@@ -40,6 +40,7 @@ public class WitchOfGreed extends CustomCard {
     );
 
     this.baseMagicNumber = this.magicNumber = STC;
+    this.tags.add(AbstractCard.CardTags.HEALING);
   }
 
   /*

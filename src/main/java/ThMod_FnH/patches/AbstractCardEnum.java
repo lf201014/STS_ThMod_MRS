@@ -5,7 +5,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class AbstractCardEnum {
 
-	@SpireEnum
-	public static AbstractCard.CardColor MARISA_COLOR;
-	
+  @SpireEnum
+  public static AbstractCard.CardColor MARISA_COLOR;
+
+  @SpireEnum
+  public static AbstractCard.CardColor MARISA_DERIVATIONS;
+
 }

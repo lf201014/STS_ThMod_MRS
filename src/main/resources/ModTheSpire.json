@@ -11,6 +11,6 @@
   "dependencies": [
     "basemod"
   ],
-  "version": "0.12.17",
-  "sts_version": "09-27-2018"
+  "version": "0.13.1",
+  "sts_version": "10-04-2018"
 }

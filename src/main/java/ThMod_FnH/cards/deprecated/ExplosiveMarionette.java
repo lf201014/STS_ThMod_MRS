@@ -1,4 +1,4 @@
-package ThMod_FnH.cards.special;
+package ThMod_FnH.cards.deprecated;
 
 import ThMod_FnH.ThMod;
 import ThMod_FnH.patches.AbstractCardEnum;
@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+@Deprecated
 public class ExplosiveMarionette extends CustomCard {
 
   public static final String ID = "ExplosiveMarionette";
@@ -34,7 +35,7 @@ public class ExplosiveMarionette extends CustomCard {
         COST,
         DESCRIPTION,
         AbstractCard.CardType.ATTACK,
-        AbstractCardEnum.MARISA_COLOR,
+        AbstractCardEnum.MARISA_DERIVATIONS,
         CardRarity.SPECIAL,
         AbstractCard.CardTarget.ENEMY
     );

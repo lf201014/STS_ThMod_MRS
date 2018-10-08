@@ -2,12 +2,12 @@ package ThMod_FnH.relics;
 
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.actions.unique.DiscoveryAction;
 
-import ThMod_FnH.cards.special.Spark;
+import ThMod_FnH.cards.derivations.Spark;
 import basemod.abstracts.CustomRelic;
 
 public class ExperimentalFamiliar extends CustomRelic {
@@ -41,14 +41,14 @@ public class ExperimentalFamiliar extends CustomRelic {
     AbstractDungeon.actionManager.addToBottom(
         new MakeTempCardInHandAction(new Spark(), 1)
     );
+  }
+
+  public void atBattleStart() {
     AbstractDungeon.actionManager.addToBottom(
-        new MakeTempCardInHandAction(
-            AbstractDungeon.returnTrulyRandomCard(
-                AbstractCard.CardType.ATTACK,
-                AbstractDungeon.cardRandomRng
-            ).makeCopy(),
-            1
-        )
+        new RelicAboveCreatureAction(AbstractDungeon.player, this)
+    );
+    AbstractDungeon.actionManager.addToBottom(
+        new DiscoveryAction(null)
     );
   }
 }

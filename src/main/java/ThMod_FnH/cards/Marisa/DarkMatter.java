@@ -1,5 +1,8 @@
 package ThMod_FnH.cards.Marisa;
 
+import ThMod_FnH.powers.Marisa.DarkMatterPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -49,6 +52,19 @@ public class DarkMatter extends CustomCard {
         new GainBlockAction(p, p, this.block)
     );
   }
+  public boolean canUse(AbstractPlayer p, AbstractMonster m)
+  {
+    boolean canUse = super.canUse(p, m);
+    if (!canUse) {
+      return false;
+    }
+    if (p.hasPower("DarkMatterPower"))
+    {
+      this.cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
+      return false;
+    }
+    return true;
+  }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
     AbstractDungeon.actionManager.addToBottom(
@@ -67,26 +83,21 @@ public class DarkMatter extends CustomCard {
             true
         )
     );
-		/*
-		AbstractCard c = new DarkMatter();
-		if (this.upgraded)
-			c.upgrade();
-		AbstractDungeon.effectList.add(
-        		new ShowCardAndAddToDrawPileEffect(c, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, true)
-        		);
-		
-		c = new DarkMatter();
-		if (this.upgraded)
-			c.upgrade();
-		AbstractDungeon.effectList.add(
-        		new ShowCardAndAddToDrawPileEffect(c, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, true)
-        		);
-        		*/
+    AbstractDungeon.actionManager.addToBottom(
+        new DrawCardAction(p,1)
+    );
+    AbstractDungeon.actionManager.addToBottom(
+        new ApplyPowerAction(
+            p,
+            p,
+            new DarkMatterPower(p)
+        )
+    );
 		/*
 		p.drawPile.shuffle();
 	    for (AbstractRelic r : p.relics)
 	        r.onShuffle();  
-	        */
+	  */
   }
 
   public AbstractCard makeCopy() {

@@ -1,9 +1,8 @@
 package ThMod_FnH;
 
-import ThMod_FnH.cards.special.ExplosiveMarionette;
-import ThMod_FnH.cards.special.FiveColoredTalisman;
-import ThMod_FnH.cards.special.OpticalCamouflage;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
+import ThMod_FnH.cards.Marisa.AlicesGift;
+import ThMod_FnH.cards.Marisa.ManaRampage;
+import ThMod_FnH.cards.derivations.Exhaustion_MRS;
 import java.nio.charset.StandardCharsets;
 
 import org.apache.logging.log4j.LogManager;
@@ -25,7 +24,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
-import ThMod_FnH.cards.Marisa.AFriendsGift;
 import ThMod_FnH.cards.Marisa.AbsoluteMagnitude;
 import ThMod_FnH.cards.Marisa.AsteroidBelt;
 import ThMod_FnH.cards.Marisa.BigCrunch;
@@ -61,7 +59,6 @@ import ThMod_FnH.cards.Marisa.MachineGunSpark;
 import ThMod_FnH.cards.Marisa.MagicAbsorber;
 import ThMod_FnH.cards.Marisa.MagicChant;
 import ThMod_FnH.cards.Marisa.ManaConvection;
-import ThMod_FnH.cards.Marisa.ManaRampage;
 import ThMod_FnH.cards.Marisa.MasterSpark;
 import ThMod_FnH.cards.Marisa.MaximisePower;
 import ThMod_FnH.cards.Marisa.MeteoricShower;
@@ -100,10 +97,10 @@ import ThMod_FnH.cards.Marisa.WitchLeyline;
 import ThMod_FnH.cards.Marisa.WitchOfGreed;
 import ThMod_FnH.cards.Marisa._6A;
 import ThMod_FnH.cards.Marisa.EarthLightRay;
-import ThMod_FnH.cards.special.BlackFlareStar;
-import ThMod_FnH.cards.special.GuidingStar;
-import ThMod_FnH.cards.special.Spark;
-import ThMod_FnH.cards.special.WhiteDwarf;
+import ThMod_FnH.cards.derivations.BlackFlareStar;
+import ThMod_FnH.cards.derivations.GuidingStar;
+import ThMod_FnH.cards.derivations.Spark;
+import ThMod_FnH.cards.derivations.WhiteDwarf;
 import ThMod_FnH.characters.Marisa;
 import ThMod_FnH.patches.AbstractCardEnum;
 import ThMod_FnH.patches.ThModClassEnum;
@@ -135,14 +132,21 @@ import basemod.interfaces.PostInitializeSubscriber;
 
 @SpireInitializer
 public class ThMod implements PostExhaustSubscriber,
-    PostBattleSubscriber, PostDungeonInitializeSubscriber,
-    EditCharactersSubscriber, PostInitializeSubscriber,
-    EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber,
-    OnCardUseSubscriber, EditKeywordsSubscriber, OnPowersModifiedSubscriber, PostDrawSubscriber {
+    PostBattleSubscriber,
+    PostDungeonInitializeSubscriber,
+    EditCharactersSubscriber,
+    PostInitializeSubscriber,
+    EditRelicsSubscriber,
+    EditCardsSubscriber,
+    EditStringsSubscriber,
+    OnCardUseSubscriber,
+    EditKeywordsSubscriber,
+    OnPowersModifiedSubscriber,
+    PostDrawSubscriber {
 
   public static final Logger logger = LogManager.getLogger(ThMod.class.getName());
 
-  public static AbstractCard lastAttack = null;
+  public static int typhoonCounter = 0;
 
   //card backgrounds
   private static final String ATTACK_CC = "img/512/bg_attack_MRS_s.png";
@@ -160,7 +164,7 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String MY_CHARACTER_BUTTON = "img/charSelect/MarisaButton.png";
   private static final String MARISA_PORTRAIT = "img/charSelect/marisaPortrait.jpg";
 
-  //For Spark Themed Cards
+  //For Spark Themed cards
   public static boolean isSpark(AbstractCard card) {
     return (
         (card.cardID.equals("Spark")) ||
@@ -174,11 +178,25 @@ public class ThMod implements PostExhaustSubscriber,
     );
   }
 
+  //For the FXXKING Exhaustion curse
+  public static boolean ExhaustionCheck() {
+    boolean res = false;
+    for (AbstractCard c : AbstractDungeon.player.hand.group) {
+      if (c instanceof Exhaustion_MRS) {
+        res = true;
+      }
+    }
+    return res;
+  }
+
   //For Amplify cards
   public static boolean Amplified(AbstractCard card, int AMP) {
     logger.info(
-        "ThMod.Amplified : card to check : " + card.cardID + " ; costForTurn : "
-            + card.costForTurn);
+        "ThMod.Amplified : card to check : "
+            + card.cardID
+            + " ; costForTurn : "
+            + card.costForTurn
+    );
     AbstractPlayer p = AbstractDungeon.player;
     if (p.hasPower("MoraleDepletionPlusPower")) {
       logger.info("ThMod.Amplified :MoraleDepletionPower detected,returning false.");
@@ -191,7 +209,9 @@ public class ThMod implements PostExhaustSubscriber,
       logger.info(
           "ThMod.Amplified :Free Amplify tag detected,returning true : Milli :"
               + (p.hasPower("MilliPulsaPower"))
-              + " ; Pulse :" + (p.hasPower("PulseMagicPower")) + " ; Free2Play :"
+              + " ; Pulse :"
+              + (p.hasPower("PulseMagicPower"))
+              + " ; Free2Play :"
               + card.freeToPlayOnce
       );
       res = true;
@@ -233,6 +253,24 @@ public class ThMod implements PostExhaustSubscriber,
     logger.info("creating the color : MARISA_COLOR");
     BaseMod.addColor(
         AbstractCardEnum.MARISA_COLOR,
+        STARLIGHT,
+        STARLIGHT,
+        STARLIGHT,
+        STARLIGHT,
+        STARLIGHT,
+        STARLIGHT,
+        STARLIGHT,
+        ATTACK_CC,
+        SKILL_CC,
+        POWER_CC,
+        ENERGY_ORB_CC,
+        ATTACK_CC_PORTRAIT,
+        SKILL_CC_PORTRAIT,
+        POWER_CC_PORTRAIT,
+        ENERGY_ORB_CC_PORTRAIT
+    );
+    BaseMod.addColor(
+        AbstractCardEnum.MARISA_DERIVATIONS,
         STARLIGHT,
         STARLIGHT,
         STARLIGHT,
@@ -388,8 +426,8 @@ public class ThMod implements PostExhaustSubscriber,
     UnlockTracker.unlockCard("Robbery");
     BaseMod.addCard(new ChargeUpSpray());
     UnlockTracker.unlockCard("ChargeUpSpray");
-    BaseMod.addCard(new AFriendsGift());
-    UnlockTracker.unlockCard("AFriendsGift");
+    BaseMod.addCard(new AlicesGift());
+    UnlockTracker.unlockCard("AlicesGift");
     BaseMod.addCard(new FairyDestructionRay());
     UnlockTracker.unlockCard("FairyDestructionRay");
     //Rare:  7
@@ -502,7 +540,7 @@ public class ThMod implements PostExhaustSubscriber,
     BaseMod.addCard(new SuperNova());
     UnlockTracker.unlockCard("SuperNova");
 
-    //special:4
+    //derivations:4
     BaseMod.addCard(new Spark());
     UnlockTracker.unlockCard("Spark");
     BaseMod.addCard(new GuidingStar());
@@ -511,12 +549,8 @@ public class ThMod implements PostExhaustSubscriber,
     UnlockTracker.unlockCard("BlackFlareStar");
     BaseMod.addCard(new WhiteDwarf());
     UnlockTracker.unlockCard("WhiteDwarf");
-    BaseMod.addCard(new ExplosiveMarionette());
-    UnlockTracker.unlockCard("ExplosiveMarionette");
-    BaseMod.addCard(new OpticalCamouflage());
-    UnlockTracker.unlockCard("OpticalCamouflage");
-    BaseMod.addCard(new FiveColoredTalisman());
-    UnlockTracker.unlockCard("FiveColoredTalisman");
+    BaseMod.addCard(new Exhaustion_MRS());
+    UnlockTracker.unlockCard("Exhaustion_MRS");
 
     logger.info("done editing cards");
   }
@@ -534,16 +568,16 @@ public class ThMod implements PostExhaustSubscriber,
   public void receivePostBattle(AbstractRoom r) {
     // TODO Auto-generated method stub
     logger.info("ThMod : PostBattle");
-    lastAttack = null;
+    typhoonCounter = 0;
   }
 
   @Override
   public void receiveCardUsed(AbstractCard card) {
     ThMod.logger.info("ThMod : Card used : " + card.cardID);
-    if (card.type == CardType.ATTACK) {
-      lastAttack = card;
+    if ((card.costForTurn == 0) || (card.costForTurn <= -2)) {
+      typhoonCounter++;
     }
-    if (card.retain == true){
+    if (card.retain) {
       card.retain = false;
     }
   }
@@ -568,6 +602,8 @@ public class ThMod implements PostExhaustSubscriber,
   public void receiveEditKeywords() {
     logger.info("Setting up custom keywords");
 
+    BaseMod.addKeyword(new String[]{"\u529b\u7aed"},
+        "\u529b\u7aed\u4f1a\u4f7f\u4f60\u65e0\u6cd5\u83b7\u5f97\u6216\u4f7f\u7528 \u84c4\u529b \u3002");
     BaseMod.addKeyword(new String[]{"\u53d6\u51b3\u4e8e\u6240\u6d88\u8017\u5361\u7684\u79cd\u7c7b"},
         "\u653b\u51fb\uff1a\u6050\u60e7\u836f\u6c34\uff1b\u6280\u80fd\uff1a\u865a\u5f31\u836f\u6c34\uff1b\u80fd\u529b\uff1a\u6bd2\u7d20\u836f\u6c34\uff1b\u72b6\u6001\uff1a\u706b\u7130\u836f\u6c34\uff1b\u8bc5\u5492\uff1a\u70df\u96fe\u0020\u5f39\u0020\u3002");
     BaseMod.addKeyword(new String[]{"\u706b\u82b1"},
@@ -579,15 +615,18 @@ public class ThMod implements PostExhaustSubscriber,
 
     BaseMod.addKeyword(new String[]{"amplify", "Amplify"},
         "Pay extra energy for its effect when you have enough  [B] .");
+    BaseMod.addKeyword(new String[]{"Exhaustion", "exhaustion"},
+        "Exhaustion prevent you from gaining or using Charge-Up .");
     BaseMod.addKeyword(new String[]{"Spark", "spark"},
         "Spark is an attack card cost 0 energy.");
     BaseMod.addKeyword(new String[]{"Charge-up", "charge-up", "chargeup", "ChargeUp"},
         "For every 8 stacks,double your damage.");
     BaseMod.addKeyword(new String[]{
-            "depends on the type of the card exhausted",
-            "Depends On The Type Of The Card Exhausted"
+            "depends on the type of the card",
+            "Depends On The Type Of The Card"
         },
-        "Attack : Fear Potion ; NL Skill : Weak Potion ; NL Power : Poison Potion ; Status : Fire Potion ; Curse : Smoke Bomb .");
+        "Attack : Fear Potion ; NL Skill : Weak Potion ; NL Power : Poison Potion ; Status : Fire Potion ; Curse : Smoke Bomb ."
+    );
 
     logger.info("Keywords setting finished.");
   }

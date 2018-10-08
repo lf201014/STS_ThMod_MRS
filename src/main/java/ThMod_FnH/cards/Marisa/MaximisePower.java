@@ -1,7 +1,9 @@
 package ThMod_FnH.cards.Marisa;
 
+import ThMod_FnH.cards.derivations.Exhaustion_MRS;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -48,15 +50,17 @@ public class MaximisePower extends CustomCard {
         p.getPower("ChargeUpPower").amount = 0;
       }
     }
-    			/*
-    	AbstractDungeon.actionManager.addToBottom(
-    			new DrawCardAction(m, this.magicNumber));
-    	*/
     AbstractDungeon.actionManager.addToBottom(
         new ApplyPowerAction(
             p,
             p,
             new MPPower(p, 1),
+            1
+        )
+    );
+    AbstractDungeon.actionManager.addToBottom(
+        new MakeTempCardInHandAction(
+            new Exhaustion_MRS(),
             1
         )
     );
@@ -69,10 +73,11 @@ public class MaximisePower extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
+      updateCost(-1);
       //upgradeMagicNumber(1);
-      this.rawDescription = DESCRIPTION_UPG;
-      initializeDescription();
-      this.exhaust = false;
+      //this.rawDescription = DESCRIPTION_UPG;
+      //initializeDescription();
+      //this.exhaust = false;
     }
   }
 }

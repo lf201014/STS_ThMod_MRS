@@ -1,9 +1,7 @@
-package ThMod_FnH.cards.Marisa;
+package ThMod_FnH.cards.deprecated;
 
-import ThMod_FnH.ThMod;
 import ThMod_FnH.action.ConsumeChargeUpAction;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,8 +13,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import basemod.abstracts.CustomCard;
 import ThMod_FnH.patches.AbstractCardEnum;
-import ThMod_FnH.powers.Marisa.ChargeUpPower;
 
+@Deprecated
 public class EnergyRecoil extends CustomCard {
 
   public static final String ID = "EnergyRecoil";
@@ -26,9 +24,11 @@ public class EnergyRecoil extends CustomCard {
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   private static final int COST = 1;
   private static final int BLOCK_AMT = 7;
-  private static final int UPG_PLUS_BLC = 3;
+  private static final int UPG_PLUS_BLC = 2;
+  private static final int BLC_CHRG = 4;
+  private static final int UPG_PULS_CHRG = 1;
   private static final int DIVIDER = 8;
-  private boolean hasLauncher = false;
+  private boolean haveLauncher = false;
 
   public EnergyRecoil() {
     super(
@@ -44,42 +44,56 @@ public class EnergyRecoil extends CustomCard {
     );
 
     this.baseBlock = BLOCK_AMT;
+    this.baseDamage = BLC_CHRG;
   }
 
   @Override
   public void applyPowers() {
-    super.applyPowers();
-    if (ThMod.ExhaustionCheck()){
-      return;
+    this.isBlockModified = false;
+    float tmp = this.baseBlock;
+    float amp = this.baseDamage;
+    for (AbstractPower p : AbstractDungeon.player.powers) {
+      tmp = p.modifyBlock(tmp);
+      amp = p.modifyBlock(amp);
+      if (this.baseBlock != MathUtils.floor(tmp)) {
+        this.isBlockModified = true;
+      }
+      if (this.baseDamage != MathUtils.floor(amp)) {
+        this.isDamageModified = true;
+      }
     }
-    AbstractPlayer p = AbstractDungeon.player;
-    hasLauncher = p.hasRelic("SimpleLauncher");
-    if (p.hasPower("ChargeUpPower")) {
-      this.block = (int) p.getPower("ChargeUpPower")
-          .atDamageGive((float) this.block, this.damageTypeForTurn);
-      this.block = (int) p.getPower("ChargeUpPower")
-          .atDamageFinalGive((float) this.block, this.damageTypeForTurn);
+    if (tmp < 0.0F) {
+      tmp = 0.0F;
     }
+    if (amp < 0.0F) {
+      amp = 0.0F;
+    }
+    this.block = MathUtils.floor(tmp);
+    this.damage = MathUtils.floor(amp);
+  }
+
+  @Override
+  public void calculateDamageDisplay(AbstractMonster mo) {
+    calculateCardDamage(mo);
+  }
+
+  @Override
+  public void calculateCardDamage(AbstractMonster mo) {
+    this.applyPowers();
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
     AbstractDungeon.actionManager.addToBottom(
         new GainBlockAction(p, p, this.block)
     );
-
-    if (ThMod.ExhaustionCheck()){
-      return;
-    }
-
     if (p.hasPower("ChargeUpPower")) {
-      int div = 8;
-      if (hasLauncher){
-        div -= 2;
-      }
-      if (p.getPower("ChargeUpPower").amount >= div) {
-        int cnt = p.getPower("ChargeUpPower").amount / div;
+      if (p.getPower("ChargeUpPower").amount >= DIVIDER) {
+        int cnt = p.getPower("ChargeUpPower").amount / DIVIDER;
         AbstractDungeon.actionManager.addToBottom(
-            new ConsumeChargeUpAction(cnt * div)
+            new GainBlockAction(p, p, cnt * this.damage)
+        );
+        AbstractDungeon.actionManager.addToBottom(
+            new ConsumeChargeUpAction(cnt * DIVIDER)
         );
       }
     }
@@ -94,6 +108,7 @@ public class EnergyRecoil extends CustomCard {
     if (!this.upgraded) {
       upgradeName();
       upgradeBlock(UPG_PLUS_BLC);
+      upgradeDamage(UPG_PULS_CHRG);
     }
   }
 }

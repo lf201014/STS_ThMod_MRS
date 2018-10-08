@@ -1,5 +1,6 @@
 package ThMod_FnH.cards.Marisa;
 
+import ThMod_FnH.action.OpenUniverseAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 //import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
@@ -27,6 +28,9 @@ public class OpenUniverse extends CustomCard {
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   private static final int COST = 1;
   private static final int DRAW = 2;
+  private static final int UPG_DRAW = 1;
+  private static final int CHANCE = 20;
+  private static final int UPG_CHANCE = 10;
 
   public OpenUniverse() {
     super(
@@ -39,36 +43,22 @@ public class OpenUniverse extends CustomCard {
     );
     this.exhaust = true;
     this.magicNumber = this.baseMagicNumber = DRAW;
+    this.damage = this.baseDamage = CHANCE;
+  }
+
+  @Override
+  public void applyPowers(){
+  }
+
+  @Override
+  public void calculateCardDamage(AbstractMonster mo) {
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
 
-    ThMod.logger.info("OpenUniverse : generating cards");
-
-    for (int i = 0; i < 5; i++) {
-      AbstractCard card = AbstractDungeon.returnTrulyRandomCard();
-
-      ThMod.logger.info("OpenUniverse : adding : " + card.cardID);
-
-      AbstractDungeon.actionManager.addToBottom(
-          new MakeTempCardInDrawPileAction(card, 1, true, true)
-      );
-    }
-
-    ThMod.logger.info("OpenUniverse : shuffling");
-
-    p.drawPile.shuffle();
-    for (AbstractRelic r : p.relics) {
-      r.onShuffle();
-    }
-
-    ThMod.logger.info("OpenUniverse : drawing");
-
     AbstractDungeon.actionManager.addToBottom(
-        new DrawCardAction(p, this.magicNumber)
+        new OpenUniverseAction(this.magicNumber,this.upgraded)
     );
-
-    ThMod.logger.info("OpenUniverse : done");
 
   }
 
@@ -79,11 +69,11 @@ public class OpenUniverse extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      //upgradeMagicNumber(UPG_DRAW);
-      this.exhaust = false;
-      this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-      ;
-      initializeDescription();
+      upgradeMagicNumber(UPG_DRAW);
+      upgradeDamage(UPG_CHANCE);
+      //this.exhaust = false;
+      //this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+      //initializeDescription();
     }
   }
 

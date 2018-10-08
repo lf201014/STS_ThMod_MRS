@@ -1,10 +1,9 @@
-package ThMod_FnH.cards.special;
+package ThMod_FnH.cards.deprecated;
 
-
-import ThMod_FnH.ThMod;
 import ThMod_FnH.patches.AbstractCardEnum;
+import ThMod_FnH.powers.deprecated.TalismanPower;
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,49 +11,49 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class OpticalCamouflage extends CustomCard {
+@Deprecated
+public class FiveColoredTalisman extends CustomCard {
 
-  public static final String ID = "OpticalCamouflage";
-  public static final String IMG_PATH = "img/cards/Defend_MRS.png";
+  public static final String ID = "FiveColoredTalisman";
+  public static final String IMG_PATH = "img/cards/feelNoPain.png";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   private static final int COST = 1;
-  private static final int BLOCK_AMT = 8;
-  private static final int UPGRADE_PLUS_BLOCK = 3;
-  private static final int AMP = 1;
+  private static final int STACK = 1;
 
-  public OpticalCamouflage() {
+  public FiveColoredTalisman() {
     super(
         ID,
         NAME,
         IMG_PATH,
         COST,
         DESCRIPTION,
-        AbstractCard.CardType.SKILL,
-        AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.BASIC,
-        AbstractCard.CardTarget.SELF
+        CardType.POWER,
+        AbstractCardEnum.MARISA_DERIVATIONS,
+        CardRarity.BASIC,
+        CardTarget.SELF
     );
-    this.baseBlock = BLOCK_AMT;
     setBannerTexture(
         "images/cardui/512/banner_uncommon.png",
         "images/cardui/1024/banner_uncommon.png"
     );
-    this.exhaust = true;
+    this.magicNumber = this.baseMagicNumber = STACK;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-    if (ThMod.Amplified(this, this.AMP)) {
-      this.block *= 2;
-    }
     AbstractDungeon.actionManager.addToBottom(
-        new GainBlockAction(p, p, this.block)
+        new ApplyPowerAction(
+            p,
+            p,
+            new TalismanPower(p, this.magicNumber),
+            this.magicNumber
+        )
     );
   }
 
   public AbstractCard makeCopy() {
-    return new OpticalCamouflage();
+    return new FiveColoredTalisman();
   }
 
   @Override
@@ -66,7 +65,6 @@ public class OpticalCamouflage extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      upgradeBlock(UPGRADE_PLUS_BLOCK);
     }
   }
 }

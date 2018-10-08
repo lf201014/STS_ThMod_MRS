@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import ThMod_FnH.action.SparkCostAction;
-import ThMod_FnH.cards.special.Spark;
+import ThMod_FnH.cards.derivations.Spark;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
