@@ -356,8 +356,8 @@
   },
   "ManaRampage": {
     "NAME": "Mana Rampage",
-    "DESCRIPTION": "Play a random attack X time.",
-    "UPGRADE_DESCRIPTION": "Play a random upgraded attack X time."
+    "DESCRIPTION": "Play X random attack .",
+    "UPGRADE_DESCRIPTION": "Play X random upgraded attack ."
   },
   "StarBarrage": {
     "NAME": "Star Barrage",

@@ -34,7 +34,7 @@ public class StarlightTyphoon extends CustomCard {
         DESCRIPTION,
         CardType.ATTACK,
         AbstractCardEnum.MARISA_COLOR,
-        CardRarity.RARE,
+        CardRarity.UNCOMMON,
         CardTarget.ALL_ENEMY
     );
     this.magicNumber = this.baseMagicNumber = MULT;
@@ -90,8 +90,8 @@ public class StarlightTyphoon extends CustomCard {
     if (!this.upgraded) {
       upgradeName();
       upgradeMagicNumber(UPG_MULT);
-      this.rawDescription = DESCRIPTION_UPG;
-      initializeDescription();
+      //this.rawDescription = DESCRIPTION_UPG;
+      //initializeDescription();
     }
   }
 }
