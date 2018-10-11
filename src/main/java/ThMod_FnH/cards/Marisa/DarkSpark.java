@@ -22,7 +22,7 @@ public class DarkSpark
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String IMG_PATH = "img/cards/Strike.png";
 
-  private static final int COST = 1;
+  private static final int COST = 2;
   private static final int ATK_DMG = 14;
   private static final int UPG_DMG = 4;
 

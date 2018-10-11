@@ -65,6 +65,7 @@ public class ManaRampage extends CustomCard {
       upgradeName();
       upgradeMagicNumber(DMG_UP_PLUS);
       this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+      initializeDescription();
     }
   }
 }

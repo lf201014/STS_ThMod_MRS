@@ -1,6 +1,7 @@
 package ThMod_FnH;
 
 import ThMod_FnH.cards.Marisa.AlicesGift;
+import ThMod_FnH.cards.Marisa.EnergyRecoil;
 import ThMod_FnH.cards.Marisa.ManaRampage;
 import ThMod_FnH.cards.derivations.Exhaustion_MRS;
 import java.nio.charset.StandardCharsets;
@@ -42,7 +43,6 @@ import ThMod_FnH.cards.Marisa.Defend_MRS;
 import ThMod_FnH.cards.Marisa.DoubleSpark;
 import ThMod_FnH.cards.Marisa.DragonMeteor;
 import ThMod_FnH.cards.Marisa.EnergyFlow;
-import ThMod_FnH.cards.Marisa.EnergyRecoil;
 import ThMod_FnH.cards.Marisa.EscapeVelocity;
 import ThMod_FnH.cards.Marisa.EventHorizon;
 import ThMod_FnH.cards.Marisa.FairyDestructionRay;
