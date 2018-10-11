@@ -9,13 +9,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import ThMod_FnH.ThMod;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 public class StarDustReverieAction
     extends AbstractGameAction {
 
   private AbstractPlayer p;
-  private boolean upgraded = false;
+  private boolean upgraded;
 
   public StarDustReverieAction(boolean upgraded) {
     this.duration = Settings.ACTION_DUR_FAST;
@@ -50,8 +49,7 @@ public class StarDustReverieAction
 
     for (int i = 0; i < cnt; i++) {
 
-      AbstractCard c = AbstractDungeon.returnTrulyRandomCard();
-      UnlockTracker.unlockCard(c.cardID);
+      AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat();
 
       ThMod.logger.info("StarDustReverieAction : adding " + c.cardID);
 

@@ -173,7 +173,7 @@
   },
   "MaximisePower": {
     "NAME": "Max Power",
-    "DESCRIPTION": "Convert your Charge-up stacks into energy.Add an Exhaustion into your hand. NL Double your damage this turn. NL Exhaust.",
+    "DESCRIPTION": "Convert your Charge-up stacks into energy.Add an Exhaustion into your hand. Double your damage this turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Convert your Charge-up stacks into energy.Add an Exhaustion into your hand. NL Double your damage this turn."
   },
   "StarlightTyphoon": {
@@ -341,8 +341,12 @@
   },
   "EnergyRecoil": {
     "NAME": "Energy Recoil",
-    "DESCRIPTION": "Gain !B! Block. NL This card is affected by Charge-up as attack.",
-    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+    "DESCRIPTION": "Gain the same amount of Block as your current Charge-up stacks.",
+    "UPGRADE_DESCRIPTION": "Gain the same amount of Block as your current Charge-up stacks plus 3.",
+    "EXTENDED_DESCRIPTION":[
+      " NL (Gain ",
+      " Block.)"
+    ]
   },
   "GalacticHalo": {
     "NAME": "Galactic Halo",

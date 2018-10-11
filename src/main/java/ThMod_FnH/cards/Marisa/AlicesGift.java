@@ -23,7 +23,7 @@ public class AlicesGift extends CustomCard {
   private static final int COST = 0;
   private static final int ATK = 5;
   private static final int ATK_UPG = 2;
-  private static final int AMP = 3;
+  private static final int AMP = 2;
 
   public AlicesGift() {
     super(
@@ -57,7 +57,7 @@ public class AlicesGift extends CustomCard {
 
   @Override
   public void use(AbstractPlayer p, AbstractMonster m) {
-    if (ThMod.Amplified(this, this.AMP)) {
+    if (ThMod.Amplified(this, AMP)) {
       this.damage *= 3;
     }
     AbstractDungeon.actionManager.addToBottom(

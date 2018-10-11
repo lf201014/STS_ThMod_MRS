@@ -339,8 +339,12 @@
   },
   "EnergyRecoil": {
     "NAME": "能量反冲",
-    "DESCRIPTION": "获得 !B!  格挡 。 NL 这张卡会触发 蓄力 ，并享受其增益效果。",
-    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+    "DESCRIPTION": "获得等同于你拥有的 蓄力 层数的 格挡 。",
+    "UPGRADE_DESCRIPTION": "获得等同于你拥有的 蓄力 层数+3的 格挡 。",
+    "EXTENDED_DESCRIPTION":[
+      "NL （获得",
+      "层 格挡 。）"
+    ]
   },
   "GalacticHalo": {
     "NAME": "星晕",

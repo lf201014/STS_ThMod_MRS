@@ -1,9 +1,5 @@
 package ThMod_FnH.cards.Marisa;
 
-import ThMod_FnH.ThMod;
-import ThMod_FnH.action.ConsumeChargeUpAction;
-import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,11 +7,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import basemod.abstracts.CustomCard;
 import ThMod_FnH.patches.AbstractCardEnum;
-import ThMod_FnH.powers.Marisa.ChargeUpPower;
 
 public class EnergyRecoil extends CustomCard {
 
@@ -24,11 +18,9 @@ public class EnergyRecoil extends CustomCard {
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
+  public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
   private static final int COST = 1;
-  private static final int BLOCK_AMT = 7;
-  private static final int UPG_PLUS_BLC = 3;
-  private static final int DIVIDER = 8;
-  private boolean hasLauncher = false;
 
   public EnergyRecoil() {
     super(
@@ -42,48 +34,48 @@ public class EnergyRecoil extends CustomCard {
         AbstractCard.CardRarity.COMMON,
         AbstractCard.CardTarget.SELF
     );
-
-    this.baseBlock = BLOCK_AMT;
+    this.baseBlock = this.block = 0;
   }
 
   @Override
   public void applyPowers() {
-    super.applyPowers();
-    if (ThMod.ExhaustionCheck()){
-      return;
-    }
     AbstractPlayer p = AbstractDungeon.player;
-    hasLauncher = p.hasRelic("SimpleLauncher");
+    if (this.upgraded) {
+      this.baseBlock = 3;
+    } else {
+      this.baseBlock = 0;
+    }
     if (p.hasPower("ChargeUpPower")) {
-      this.block = (int) p.getPower("ChargeUpPower")
-          .atDamageGive((float) this.block, this.damageTypeForTurn);
-      this.block = (int) p.getPower("ChargeUpPower")
-          .atDamageFinalGive((float) this.block, this.damageTypeForTurn);
+      this.baseBlock += p.getPower("ChargeUpPower").amount;
+      super.applyPowers();
+    }
+
+    if (this.block > 0) {
+      String extendString = EXTENDED_DESCRIPTION[0] + this.block + EXTENDED_DESCRIPTION[1];
+      if (!this.upgraded) {
+        this.rawDescription = DESCRIPTION + extendString;
+      } else {
+        this.rawDescription = DESCRIPTION_UPG + extendString;
+      }
+      initializeDescription();
     }
   }
 
+  public void onMoveToDiscard() {
+    if (this.upgraded) {
+      this.rawDescription = DESCRIPTION_UPG;
+    } else {
+      this.rawDescription = DESCRIPTION;
+    }
+    initializeDescription();
+  }
+
   public void use(AbstractPlayer p, AbstractMonster m) {
-    AbstractDungeon.actionManager.addToBottom(
-        new GainBlockAction(p, p, this.block)
-    );
-
-    if (ThMod.ExhaustionCheck()){
-      return;
+    if (this.block > 0) {
+      AbstractDungeon.actionManager.addToBottom(
+          new GainBlockAction(p, p, this.block)
+      );
     }
-
-    if (p.hasPower("ChargeUpPower")) {
-      int div = 8;
-      if (hasLauncher){
-        div -= 2;
-      }
-      if (p.getPower("ChargeUpPower").amount >= div) {
-        int cnt = p.getPower("ChargeUpPower").amount / div;
-        AbstractDungeon.actionManager.addToBottom(
-            new ConsumeChargeUpAction(cnt * div)
-        );
-      }
-    }
-
   }
 
   public AbstractCard makeCopy() {
@@ -93,7 +85,8 @@ public class EnergyRecoil extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      upgradeBlock(UPG_PLUS_BLC);
+      this.rawDescription = DESCRIPTION_UPG;
+      initializeDescription();
     }
   }
 }
