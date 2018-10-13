@@ -1,5 +1,7 @@
 package ThMod_FnH;
 
+import static ThMod_FnH.patches.AbstractCardEnum.MARISA_COLOR;
+
 import ThMod_FnH.cards.Marisa.AlicesGift;
 import ThMod_FnH.cards.Marisa.EnergyRecoil;
 import ThMod_FnH.cards.Marisa.ManaRampage;
@@ -146,8 +148,6 @@ public class ThMod implements PostExhaustSubscriber,
 
   public static final Logger logger = LogManager.getLogger(ThMod.class.getName());
 
-  public static int typhoonCounter = 0;
-
   //card backgrounds
   private static final String ATTACK_CC = "img/512/bg_attack_MRS_s.png";
   private static final String SKILL_CC = "img/512/bg_skill_MRS_s.png";
@@ -159,7 +159,7 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String POWER_CC_PORTRAIT = "img/1024/bg_power_MRS.png";
   private static final String ENERGY_ORB_CC_PORTRAIT = "img/1024/cardOrb.png";
 
-  private static final Color STARLIGHT = CardHelper.getColor(0f, 10f, 125.0f);
+  public static final Color STARLIGHT = CardHelper.getColor(0f, 10f, 125.0f);
 
   private static final String MY_CHARACTER_BUTTON = "img/charSelect/MarisaButton.png";
   private static final String MARISA_PORTRAIT = "img/charSelect/marisaPortrait.jpg";
@@ -218,9 +218,11 @@ public class ThMod implements PostExhaustSubscriber,
     } else {
       if (EnergyPanel.totalCount >= (card.costForTurn + AMP)) {
         logger.info("ThMod.Amplified : Sufficient energy ,adding and returning true;");
+        /*
         if ((card.costForTurn == 0) && (card.cost == 0)) {
           p.energy.use(AMP);
         }
+        */
         card.costForTurn += AMP;
         res = true;
       }
@@ -252,7 +254,7 @@ public class ThMod implements PostExhaustSubscriber,
     BaseMod.subscribe(this);
     logger.info("creating the color : MARISA_COLOR");
     BaseMod.addColor(
-        AbstractCardEnum.MARISA_COLOR,
+        MARISA_COLOR,
         STARLIGHT,
         STARLIGHT,
         STARLIGHT,
@@ -293,28 +295,13 @@ public class ThMod implements PostExhaustSubscriber,
     logger.info("begin editing characters");
 
     logger.info("add " + ThModClassEnum.MARISA.toString());
-
-    if (Settings.language == Settings.GameLanguage.ZHS) {
-      BaseMod.addCharacter(
-          Marisa.class,
-          "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f",
-          "character class string",
-          AbstractCardEnum.MARISA_COLOR,
-          "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f",
-          MY_CHARACTER_BUTTON, MARISA_PORTRAIT,
-          ThModClassEnum.MARISA
-      );
-    } else {
-      BaseMod.addCharacter(
-          Marisa.class,
-          "The Ordinary Magician",
-          "character class string",
-          AbstractCardEnum.MARISA_COLOR,
-          "The Ordinary Magician",
-          MY_CHARACTER_BUTTON, MARISA_PORTRAIT,
-          ThModClassEnum.MARISA
-      );
-    }
+    BaseMod.addCharacter(
+        new Marisa("Marisa"),
+        AbstractCardEnum.MARISA_COLOR,
+        MY_CHARACTER_BUTTON,
+        MARISA_PORTRAIT,
+        ThModClassEnum.MARISA
+    );
     logger.info("done editing characters");
   }
 
@@ -323,47 +310,47 @@ public class ThMod implements PostExhaustSubscriber,
 
     BaseMod.addRelicToCustomPool(
         new MiniHakkero(),
-        AbstractCardEnum.MARISA_COLOR
+        MARISA_COLOR
     );
     BaseMod.addRelicToCustomPool(
         new EnhancedHakkero(),
-        AbstractCardEnum.MARISA_COLOR
+        MARISA_COLOR
     );
     BaseMod.addRelicToCustomPool(
         new EnhancedBroom(),
-        AbstractCardEnum.MARISA_COLOR
+        MARISA_COLOR
     );
     BaseMod.addRelicToCustomPool(
         new AmplifyWand(),
-        AbstractCardEnum.MARISA_COLOR
+        MARISA_COLOR
     );
     BaseMod.addRelicToCustomPool(
         new ExperimentalFamiliar(),
-        AbstractCardEnum.MARISA_COLOR
+        MARISA_COLOR
     );
     BaseMod.addRelicToCustomPool(
         new RampagingMagicTools(),
-        AbstractCardEnum.MARISA_COLOR
+        MARISA_COLOR
     );
     BaseMod.addRelicToCustomPool(
         new BreadOfAWashokuLover(),
-        AbstractCardEnum.MARISA_COLOR
+        MARISA_COLOR
     );
     BaseMod.addRelicToCustomPool(
         new SimpleLauncher(),
-        AbstractCardEnum.MARISA_COLOR
+        MARISA_COLOR
     );
     BaseMod.addRelicToCustomPool(
         new HandmadeGrimoire(),
-        AbstractCardEnum.MARISA_COLOR
+        MARISA_COLOR
     );
     BaseMod.addRelicToCustomPool(
         new ShroomBag(),
-        AbstractCardEnum.MARISA_COLOR
+        MARISA_COLOR
     );
     BaseMod.addRelicToCustomPool(
         new SproutingBranch(),
-        AbstractCardEnum.MARISA_COLOR
+        MARISA_COLOR
     );
     //BaseMod.addRelicToCustomPool(new Cape(), AbstractCardEnum.MARISA_COLOR);
 
@@ -568,15 +555,11 @@ public class ThMod implements PostExhaustSubscriber,
   public void receivePostBattle(AbstractRoom r) {
     // TODO Auto-generated method stub
     logger.info("ThMod : PostBattle");
-    typhoonCounter = 0;
   }
 
   @Override
   public void receiveCardUsed(AbstractCard card) {
     ThMod.logger.info("ThMod : Card used : " + card.cardID);
-    if ((card.costForTurn == 0) || (card.costForTurn <= -2)) {
-      typhoonCounter++;
-    }
     if (card.retain) {
       card.retain = false;
     }

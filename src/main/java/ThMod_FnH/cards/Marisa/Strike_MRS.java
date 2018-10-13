@@ -14,8 +14,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import ThMod_FnH.action.SparkCostAction;
 import ThMod_FnH.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModTags;
-import basemod.helpers.CardTags;
 
 public class Strike_MRS
     extends CustomCard {

@@ -1,5 +1,15 @@
 package ThMod_FnH.characters;
 
+import ThMod_FnH.cards.Marisa.MasterSpark;
+import ThMod_FnH.patches.ThModClassEnum;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings.GameLanguage;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ScreenShake;
 import java.util.ArrayList;
 
 import org.apache.logging.log4j.LogManager;
@@ -13,21 +23,20 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import ThMod_FnH.ThMod;
-import ThMod_FnH.patches.ThModClassEnum;
 import basemod.abstracts.CustomPlayer;
 
 public class Marisa extends CustomPlayer {
 
-  public static final int ENERGY_PER_TURN = 3; // how much energy you get every turn
-  public static final String MARISA_SHOULDER_2 = "img/char/Marisa/shoulder2.png"; // shoulder2 / shoulder_1
-  public static final String MARISA_SHOULDER_1 = "img/char/Marisa/shoulder1.png"; // shoulder1 / shoulder_2
-  public static final String MARISA_CORPSE = "img/char/Marisa/fallen.png"; // dead corpse
+  private static final int ENERGY_PER_TURN = 3; // how much energy you get every turn
+  private static final String MARISA_SHOULDER_2 = "img/char/Marisa/shoulder2.png"; // shoulder2 / shoulder_1
+  private static final String MARISA_SHOULDER_1 = "img/char/Marisa/shoulder1.png"; // shoulder1 / shoulder_2
+  private static final String MARISA_CORPSE = "img/char/Marisa/fallen.png"; // dead corpse
   public static final Logger logger = LogManager.getLogger(ThMod.class.getName());
   //private static final float[] layerSpeeds = { 20.0F, 0.0F, -40.0F, 0.0F, 0.0F, 5.0F, 0.0F, -8.0F, 0.0F, 8.0F };
-  public static final String MARISA_SKELETON_ATLAS = "img/char/Marisa/MarisaModel_v02.atlas";// Marisa_v0 / MarisaModel_v02
-  public static final String MARISA_SKELETON_JSON = "img/char/Marisa/MarisaModel_v02.json";
-  public static final String MARISA_ANIMATION = "Idle";// Sprite / Idle
-  public static final String[] ORB_TEXTURES = {
+  private static final String MARISA_SKELETON_ATLAS = "img/char/Marisa/MarisaModel_v02.atlas";// Marisa_v0 / MarisaModel_v02
+  private static final String MARISA_SKELETON_JSON = "img/char/Marisa/MarisaModel_v02.json";
+  private static final String MARISA_ANIMATION = "Idle";// Sprite / Idle
+  private static final String[] ORB_TEXTURES = {
       "img/UI/EPanel/layer5.png",
       "img/UI/EPanel/layer4.png",
       "img/UI/EPanel/layer3.png",
@@ -40,14 +49,14 @@ public class Marisa extends CustomPlayer {
       "img/UI/EPanel/layer2d.png",
       "img/UI/EPanel/layer1d.png"
   };
-  public static final String ORB_VFX = "img/UI/energyBlueVFX.png";
-  public static final float[] LAYER_SPEED =
+  private static final String ORB_VFX = "img/UI/energyBlueVFX.png";
+  private static final float[] LAYER_SPEED =
       {-40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F};
   //public static final String SPRITER_ANIM_FILEPATH = "img/char/MyCharacter/marisa_test.scml"; // spriter animation scml
 
-  public Marisa(String name, PlayerClass setClass) {
+  public Marisa(String name) {
     //super(name, setClass, null, null , null ,new SpriterAnimation(SPRITER_ANIM_FILEPATH));
-    super(name, setClass, ORB_TEXTURES, ORB_VFX, LAYER_SPEED, null, null);
+    super(name, ThModClassEnum.MARISA, ORB_TEXTURES, ORB_VFX, LAYER_SPEED, null, null);
     //super(name, setClass, null, null, (String) null, null);
 
     this.dialogX = (this.drawX + 0.0F * Settings.scale); // set location for text bubbles
@@ -73,7 +82,7 @@ public class Marisa extends CustomPlayer {
     logger.info("init finish");
   }
 
-  public static ArrayList<String> getStartingDeck() { // starting deck 'nuff said
+  public ArrayList<String> getStartingDeck() { // starting deck 'nuff said
     ArrayList<String> retVal = new ArrayList<>();
     retVal.add("Strike_MRS");
     retVal.add("Strike_MRS");
@@ -88,19 +97,20 @@ public class Marisa extends CustomPlayer {
     return retVal;
   }
 
-  public static ArrayList<String> getStartingRelics() { // starting relics - also simple
+  public ArrayList<String> getStartingRelics() { // starting relics - also simple
     ArrayList<String> retVal = new ArrayList<>();
     retVal.add("MiniHakkero");
     UnlockTracker.markRelicAsSeen("MiniHakkero");
     return retVal;
   }
 
-  public static final int STARTING_HP = 75;
-  public static final int MAX_HP = 75;
-  public static final int STARTING_GOLD = 99;
-  public static final int HAND_SIZE = 5;
+  private static final int STARTING_HP = 75;
+  private static final int MAX_HP = 75;
+  private static final int STARTING_GOLD = 99;
+  private static final int HAND_SIZE = 5;
+  private static final int ASCENSION_MAX_HP_LOSS = 5;
 
-  public static CharSelectInfo getLoadout() { // the rest of the character loadout so includes your character select screen info plus hp and starting gold
+  public CharSelectInfo getLoadout() { // the rest of the character loadout so includes your character select screen info plus hp and starting gold
     String title;
     String flavor;
     if (Settings.language == Settings.GameLanguage.ZHS) {
@@ -108,7 +118,7 @@ public class Marisa extends CustomPlayer {
       flavor = "\u4f4f\u5728\u9b54\u6cd5\u68ee\u6797\u7684\u9b54\u6cd5\u4f7f\u3002 NL \u5584\u957f\u4e8e\u5149\u548c\u70ed\u7684\u9b54\u6cd5\u3002";
     } else {
       title = "The Ordinary Magician";
-      flavor = "The 'ordinay' magician lives in the magic forest. NL Specialized in light and heat magic.";
+      flavor = "The \"ordinay\" magician lives in the magic forest. NL Specialized in light and heat magic.";
     }
     return new CharSelectInfo(
         title,
@@ -118,11 +128,61 @@ public class Marisa extends CustomPlayer {
         0,
         STARTING_GOLD,
         HAND_SIZE,
-        ThModClassEnum.MARISA,
+        this,
         getStartingRelics(),
         getStartingDeck(),
         false
     );
   }
 
+  public Color getCardColor() {
+    return ThMod.STARLIGHT;
+  }
+
+  public AbstractCard getStartCardForEvent() {
+    return new MasterSpark();
+  }
+
+  public String getTitle(PlayerClass playerClass) {
+    String title;
+    if (Settings.language == GameLanguage.ZHS) {
+      title = "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f";
+    } else {
+      title = "The Ordinary Magician";
+    }
+    return title;
+  }
+
+  public Color getCardTrailColor() {
+    return ThMod.STARLIGHT;
+  }
+
+  public int getAscensionMaxHPLoss() {
+    return ASCENSION_MAX_HP_LOSS;
+  }
+
+  public BitmapFont getEnergyNumFont() {
+    return FontHelper.energyNumFontBlue;
+  }
+
+  public void doCharSelectScreenSelectEffect() {
+    CardCrawlGame.sound.playA("ATTACK_MAGIC_BEAM_SHORT", MathUtils.random(-0.2F, 0.2F));
+    CardCrawlGame.screenShake.shake(
+        ScreenShake.ShakeIntensity.MED,
+        ScreenShake.ShakeDur.SHORT,
+        false
+    );
+  }
+
+  public String getCustomModeCharacterButtonSoundKey() {
+    return "ATTACK_MAGIC_BEAM_SHORT";
+  }
+
+  public String getLocalizedCharacterName() {
+    return "Marisa";
+  }
+
+  public AbstractPlayer newInstance() {
+    return new Marisa(this.name);
+  }
 }
