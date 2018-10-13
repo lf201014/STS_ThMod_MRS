@@ -59,7 +59,6 @@ public class SuperNova extends CustomCard {
 
   public void upgrade() {
     if (!this.upgraded) {
-      this.isInnate = true;
       upgradeName();
       this.rawDescription = DESCRIPTION_UPG;
       initializeDescription();

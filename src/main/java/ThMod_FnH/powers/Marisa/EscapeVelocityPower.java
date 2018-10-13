@@ -1,6 +1,7 @@
 package ThMod_FnH.powers.Marisa;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -22,18 +23,22 @@ public class EscapeVelocityPower extends AbstractPower {
     this.ID = POWER_ID;
     this.owner = owner;
     this.amount = amount;
-    this.type = AbstractPower.PowerType.DEBUFF;
+    this.type = AbstractPower.PowerType.BUFF;
     updateDescription();
     this.img = new Texture("img/powers/drawCardRed.png");
   }
 
   public void atStartOfTurnPostDraw() {
     AbstractDungeon.actionManager.addToBottom(
+        new DrawCardAction(this.owner, this.amount * 2)
+    );
+    AbstractDungeon.actionManager.addToBottom(
         new MakeTempCardInHandAction(new Burn(), this.amount)
     );
   }
 
   public void updateDescription() {
-    this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+    this.description = (DESCRIPTIONS[0] + this.amount * 2 + DESCRIPTIONS[1] + this.amount
+        + DESCRIPTIONS[2]);
   }
 }

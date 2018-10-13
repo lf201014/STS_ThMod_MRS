@@ -23,7 +23,7 @@ public class DarkMatterPower extends AbstractPower {
     this.amount = -1;
     this.type = AbstractPower.PowerType.BUFF;
     updateDescription();
-    this.img = new Texture("img/powers/systems.png");
+    this.img = new Texture("img/powers/darkness.png");
   }
 
   @Override

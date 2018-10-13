@@ -53,7 +53,6 @@ public class ChargeUpPower
     this.amount += stackAmount;
     if (this.amount <= 0) {
       this.amount = 0;
-      return;
     }
     if (AbstractDungeon.player.hasRelic("SimpleLauncher")) {
       this.stc = IMPR_STACK;
@@ -62,8 +61,10 @@ public class ChargeUpPower
     }
 
     ThMod.logger.info(
-        "ChargeUpPower : Checking stack divider :" + this.stc
-            + " ; Checking stack number :" + this.amount
+        "ChargeUpPower : Checking stack divider :"
+            + this.stc
+            + " ; Checking stack number :"
+            + this.amount
     );
 
     this.cnt = (int) Math.floor(this.amount / this.stc);
@@ -96,14 +97,17 @@ public class ChargeUpPower
       } else {
         this.stc = ACT_STACK;
       }
-      ThMod.logger.info("ChargeUpPower : Checking stack number :" + this.stc);
-
-      AbstractDungeon.actionManager.addToBottom(
+      ThMod.logger.info("ChargeUpPower : onPlayCard :"
+          + " Checking stack number : "
+          + this.stc
+          + " ; Checking square counter : "
+          + this.cnt
+      );
+      AbstractDungeon.actionManager.addToTop(
           new ConsumeChargeUpAction(cnt * this.stc)
       );
     }
   }
-
 
   @Override
   public float atDamageFinalGive(float damage, DamageInfo.DamageType type) {
