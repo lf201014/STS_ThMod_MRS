@@ -8,9 +8,9 @@
   },
   "EnhancedHakkero": {
     "NAME": "Bewitched Hakkero",
-    "FLAVOR": "Its firepower came to a new level now,but is it ok to use a bewitched tool?",
+    "FLAVOR": "Its firepower came to a new level,but is it ok to use a bewitched tool?",
     "DESCRIPTIONS": [
-      "Replace #yMini-Hakkero . NL When you play a card,gain 2  #yCharge-up . NL Add a Burn to your hand when your turn starts. NL Doesn't work when your #yCharge-Up stacks is higher than #b8 ."
+      "Replace #rMini-Hakkero . NL When you play a card,gain #b1 #yCharge-up ."
     ]
   },
   "MagicArmor": {

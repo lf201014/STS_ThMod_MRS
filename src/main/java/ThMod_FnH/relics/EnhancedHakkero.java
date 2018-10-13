@@ -22,8 +22,13 @@ public class EnhancedHakkero extends CustomRelic {
   private static final String IMG_OTL = "img/relics/outline/Hakkero_1_s.png";
 
   public EnhancedHakkero() {
-    super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.BOSS,
-        LandingSound.MAGICAL);
+    super(
+        ID,
+        ImageMaster.loadImage(IMG),
+        ImageMaster.loadImage(IMG_OTL),
+        RelicTier.BOSS,
+        LandingSound.MAGICAL
+    );
   }
 
   public String getUpdatedDescription() {
@@ -44,39 +49,19 @@ public class EnhancedHakkero extends CustomRelic {
 
   public void onUseCard(AbstractCard card, UseCardAction action) {
     flash();
-    AbstractPlayer p = AbstractDungeon.player;
-    Boolean available = true;
-    int div = 8;
-    if (p.hasRelic("SimpleLauncher")) {
-      div = 6;
-    }
-    if (p.hasPower("ChargeUpPower")) {
-      if (p.getPower("ChargeUpPower").amount >= div) {
-        available = false;
-      }
-    }
-    if (available) {
-      ThMod.logger.info(
-          "EnhancedHakkero : Applying ChargeUpPower for using card : " + card.cardID
-      );
-      AbstractDungeon.actionManager.addToTop(
-          new ApplyPowerAction(
-              AbstractDungeon.player,
-              AbstractDungeon.player,
-              new ChargeUpPower(AbstractDungeon.player, 2),
-              2
-          )
-      );
-      AbstractDungeon.actionManager.addToBottom(
-          new RelicAboveCreatureAction(AbstractDungeon.player, this)
-      );
-    }
-
-  }
-
-  public void atTurnStart() {
+    ThMod.logger.info(
+        "EnhancedHakkero : Applying ChargeUpPower for using card : " + card.cardID
+    );
     AbstractDungeon.actionManager.addToTop(
-        new MakeTempCardInHandAction(new Burn(), 1)
+        new ApplyPowerAction(
+            AbstractDungeon.player,
+            AbstractDungeon.player,
+            new ChargeUpPower(AbstractDungeon.player, 1),
+            1
+        )
+    );
+    AbstractDungeon.actionManager.addToBottom(
+        new RelicAboveCreatureAction(AbstractDungeon.player, this)
     );
   }
 }

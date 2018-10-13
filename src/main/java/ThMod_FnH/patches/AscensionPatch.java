@@ -1,5 +1,5 @@
 package ThMod_FnH.patches;
-
+/*
 import org.apache.logging.log4j.Logger;
 
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
@@ -48,3 +48,4 @@ public class AscensionPatch {
     }
   }
 }
+*/

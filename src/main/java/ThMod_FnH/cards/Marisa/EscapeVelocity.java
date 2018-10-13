@@ -36,7 +36,6 @@ public class EscapeVelocity extends CustomCard {
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-    p.gameHandSize += 2;
     AbstractDungeon.actionManager.addToBottom(
         new ApplyPowerAction(
             p,

@@ -41,7 +41,6 @@ public class OpenUniverse extends CustomCard {
         AbstractCard.CardRarity.UNCOMMON,
         AbstractCard.CardTarget.SELF
     );
-    this.exhaust = true;
     this.magicNumber = this.baseMagicNumber = DRAW;
     this.damage = this.baseDamage = CHANCE;
   }
@@ -71,9 +70,6 @@ public class OpenUniverse extends CustomCard {
       upgradeName();
       upgradeMagicNumber(UPG_DRAW);
       upgradeDamage(UPG_CHANCE);
-      //this.exhaust = false;
-      //this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-      //initializeDescription();
     }
   }
 

@@ -1,5 +1,6 @@
 package ThMod_FnH.action;
 
+import ThMod_FnH.ThMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -26,8 +27,18 @@ public class ConsumeChargeUpAction extends AbstractGameAction {
     }
 
     AbstractPower c = p.getPower("ChargeUpPower");
+    ThMod.logger.info(
+        "ConsumeChargeUpAction :"
+        + " Consume amount : "
+        + this.amt
+        + " ; Charge-Up stacks : "
+        + c.amount
+    );
+    if ((this.amt<=0)||(c.amount<=0)){
+      this.isDone = true;
+      return;
+    }
     c.stackPower(-this.amt);
-
     if (p.hasPower("OrrerysSunPower")) {
       p.getPower("OrrerysSunPower").onSpecificTrigger();
     }
