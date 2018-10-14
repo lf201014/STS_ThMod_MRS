@@ -45,6 +45,7 @@ public class ManaRampageAction
         return;
       }
       tmp.current_x = (-300.0F * Settings.scale);
+      tmp.current_y = (Settings.HEIGHT / 2.0F);
       tmp.target_x = (Settings.WIDTH / 2.0F - 300.0F * Settings.scale);
       tmp.target_y = (Settings.HEIGHT / 2.0F);
       tmp.freeToPlayOnce = true;

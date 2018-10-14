@@ -19,8 +19,9 @@ public class Occultation extends CustomCard {
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-  private static final int COST = 1;
-  private static final int BLOCK_AMT = 3;
+  private static final int COST = 2;
+  private static final int UPG_COST = 1;
+  //private static final int BLOCK_AMT = 3;
 
   public Occultation() {
     super(
@@ -35,7 +36,7 @@ public class Occultation extends CustomCard {
         AbstractCard.CardTarget.SELF
     );
 
-    this.baseBlock = BLOCK_AMT;
+    //this.baseBlock = BLOCK_AMT;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
@@ -44,11 +45,13 @@ public class Occultation extends CustomCard {
           new OccultationAction()
       );
     }
+    /*
     if (this.upgraded) {
       AbstractDungeon.actionManager.addToBottom(
           new GainBlockAction(p, p, this.block)
       );
     }
+    */
   }
 
   public AbstractCard makeCopy() {
@@ -58,10 +61,11 @@ public class Occultation extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      this.rawDescription = (this.rawDescription + " NL Gain !B! block.");
-      initializeDescription();
-      this.rawDescription = DESCRIPTION_UPG;
-      initializeDescription();
+      upgradeBaseCost(UPG_COST);
+      //this.rawDescription = (this.rawDescription + " NL Gain !B! block.");
+      //initializeDescription();
+      //this.rawDescription = DESCRIPTION_UPG;
+      //initializeDescription();
     }
   }
 }

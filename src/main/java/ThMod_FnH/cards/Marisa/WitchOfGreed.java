@@ -1,5 +1,8 @@
 package ThMod_FnH.cards.Marisa;
 
+import ThMod_FnH.powers.Marisa.WitchOfGreedGold;
+import ThMod_FnH.powers.Marisa.WitchOfGreedPotion;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -71,11 +74,27 @@ public class WitchOfGreed extends CustomCard {
     if (AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT) {
 
       AbstractDungeon.getCurrRoom().addGoldToRewards(this.magicNumber);
+      AbstractDungeon.actionManager.addToBottom(
+          new ApplyPowerAction(
+              p,
+              p,
+              new WitchOfGreedGold(p, this.magicNumber),
+              this.magicNumber
+          )
+      );
 
       if (ThMod.Amplified(this, AMP)) {
         AbstractPotion po = AbstractDungeon.returnRandomPotion();
         AbstractDungeon.getCurrRoom().addPotionToRewards(po);
-        ThMod.logger.info("WitchOfGreed : use : Amplified : adding :"+po.ID);
+        AbstractDungeon.actionManager.addToBottom(
+            new ApplyPowerAction(
+                p,
+                p,
+                new WitchOfGreedPotion(p, 1),
+                1
+            )
+        );
+        ThMod.logger.info("WitchOfGreed : use : Amplified : adding :" + po.ID);
       }
 
     }

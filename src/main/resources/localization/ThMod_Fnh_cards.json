@@ -40,7 +40,8 @@
   },
   "EscapeVelocity": {
     "NAME": "Escape Velocity",
-    "DESCRIPTION": "At the start of each turn, draw 2 more cards and add a Burn to your hand."
+    "DESCRIPTION": "At the start of each turn, draw 2 more cards and add a Burn to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. At the start of each turn, draw 2 more cards and add a Burn to your hand."
   },
   "FinalSpark": {
     "NAME": "Final Spark",
@@ -222,8 +223,8 @@
   },
   "JA": {
     "NAME": "JA",
-    "DESCRIPTION": "Deal !D! damage. Add a 623C, a Spark and a WitchLeyline to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a 623C, a Spark and a WitchLeyline to your hand and upgrade them."
+    "DESCRIPTION": "Deal !D! damage. Add a 623B, a Spark and a WitchLeyline to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a 623B, a Spark and a WitchLeyline to your hand and upgrade them."
   },
   "AbsoluteMagnitude": {
     "NAME": "Absolute Magnitude",
@@ -311,8 +312,8 @@
     "UPGRADE_DESCRIPTION": "No longer take damage from Burn. Gain 1 Strength for each curse or status exhausted. NL Exhaust your hand when your turn ends."
   },
   "MoraleDepletion": {
-    "NAME": "Morale Depletion",
-    "DESCRIPTION": "Gain !B! Block. You can't use Amplify until this turn ends.",
+    "NAME": "One Time Off",
+    "DESCRIPTION": "Gain !B! Block. You can't use Amplify and  Charge-up until this turn ends. NL Draw !M! cards next turn.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. You can't use Amplify and Charge-up until this turn ends."
   },
   "DarkMatter": {
