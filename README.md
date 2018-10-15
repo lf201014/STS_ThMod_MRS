@@ -2,7 +2,7 @@
 
 ## Introduction ##
 This is a mod for [**Slay the Spire**](https://store.steampowered.com/app/646570/Slay_the_Spire/), which adds [**Marisa Kirisame**](https://en.touhouwiki.net/wiki/Kirisame_Marisa) from Touhou Project as a playable character.<br>
-Like many other mod,this mod needs [BaseMod](https://github.com/daviscook477/BaseMod/releases) and [ModTheSpire](https://github.com/kiooeht/ModTheSpire/releases) to work.
+Like many other mods,this mod needs [BaseMod](https://github.com/daviscook477/BaseMod/releases) and [ModTheSpire](https://github.com/kiooeht/ModTheSpire/releases) to work.
 
 ## Content and Gameplay ##
 (I'll write this later...)
@@ -33,7 +33,7 @@ Like many other mod,this mod needs [BaseMod](https://github.com/daviscook477/Bas
   * Kishin : playtesting and gameplay consultation
   * Flynn (https://github.com/lf201014) : programming and project management
 ### Special Thanks ###
-  * Dustin (https://github.com/Skrelpoid) : generously offering help and making great improvement to the Englis text
+  * Dustin (https://github.com/Skrelpoid) : generously offering help and making great improvement to the English text
   * OPM (一下午) (Tencent QQ: 1315659893) : ascension patch and programming consultation
   * Gogo (https://github.com/Gogomoe): programming consultation
   * BlackRuse (https://github.com/lionpkqq) : programming consultation
