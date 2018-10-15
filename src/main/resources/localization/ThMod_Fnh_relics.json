@@ -10,7 +10,7 @@
     "NAME": "Bewitched Hakkero",
     "FLAVOR": "Its firepower came to a new level,but is it ok to use a bewitched tool?",
     "DESCRIPTIONS": [
-      "Replace #rMini-Hakkero . NL When you play a card,gain #b1 #yCharge-up ."
+      "Replace #rMini-Hakkero . NL When you play a card,gain #b1 #yCharge-up . NL Gain #b2 #yCharge-up at the start of your turn."
     ]
   },
   "MagicArmor": {

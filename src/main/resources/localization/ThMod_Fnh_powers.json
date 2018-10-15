@@ -142,14 +142,14 @@
     ]
   },
   "MoraleDepletionPlusPower": {
-    "NAME": "Morale Depletion",
+    "NAME": "One Time Off",
     "DESCRIPTIONS": [
       "You won't trigger #yAmplify and #yCharge-up this turn.",
       "WWWWWWWWWWW"
     ]
   },
   "MoraleDepletionPower": {
-    "NAME": "Morale Depletion",
+    "NAME": "One Time Off",
     "DESCRIPTIONS": [
       "You won't trigger #yAmplify this turn.",
       "WWWWWWWWWWW"

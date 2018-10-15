@@ -90,8 +90,6 @@ public class StarlightTyphoon extends CustomCard {
     if (!this.upgraded) {
       upgradeName();
       upgradeMagicNumber(UPG_MULT);
-      //this.rawDescription = DESCRIPTION_UPG;
-      //initializeDescription();
     }
   }
 }

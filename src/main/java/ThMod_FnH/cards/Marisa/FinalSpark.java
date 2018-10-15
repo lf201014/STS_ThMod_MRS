@@ -78,12 +78,10 @@ public class FinalSpark
         new SparkCostAction()
     );
     if (!this.freeToPlayOnce) {
-      if (this.costForTurn > 0) {
-        this.freeToPlayOnce = true;
-        AbstractDungeon.actionManager.addToBottom(
-            new GainEnergyAction(-this.costForTurn)
-        );
-      }
+      AbstractDungeon.actionManager.addToBottom(
+          new GainEnergyAction(-this.costForTurn)
+      );
+      this.freeToPlayOnce = true;
     }
     this.upgradeBaseCost(COST);
     this.setCostForTurn(COST);

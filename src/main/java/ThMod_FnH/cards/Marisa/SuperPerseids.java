@@ -28,6 +28,7 @@ public class SuperPerseids extends CustomCard {
   private static final int DMG = 15;
   private static final int UPG_DMG = 5;
   private static final int STACK = 2;
+  private static final int UPG_STACK = 1;
 
   public SuperPerseids() {
     super(
@@ -98,6 +99,7 @@ public class SuperPerseids extends CustomCard {
     if (!this.upgraded) {
       upgradeName();
       upgradeDamage(UPG_DMG);
+      upgradeMagicNumber(UPG_STACK);
     }
   }
 }

@@ -39,7 +39,6 @@ public class MysteriousBeam
         AbstractCard.CardRarity.COMMON,
         AbstractCard.CardTarget.ENEMY
     );
-
   }
 
   @Override

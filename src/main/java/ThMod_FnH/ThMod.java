@@ -605,8 +605,8 @@ public class ThMod implements PostExhaustSubscriber,
     BaseMod.addKeyword(new String[]{"Charge-up", "charge-up", "chargeup", "ChargeUp"},
         "For every 8 stacks,double your damage.");
     BaseMod.addKeyword(new String[]{
-            "depends on the type of the card",
-            "Depends On The Type Of The Card"
+            "Depends On The Type Of The Card",
+            "depends on the type of the card"
         },
         "Attack : Fear Potion ; NL Skill : Weak Potion ; NL Power : Poison Potion ; Status : Fire Potion ; Curse : Smoke Bomb ."
     );

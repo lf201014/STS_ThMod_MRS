@@ -64,4 +64,20 @@ public class EnhancedHakkero extends CustomRelic {
         new RelicAboveCreatureAction(AbstractDungeon.player, this)
     );
   }
+
+  @Override
+  public void atTurnStartPostDraw() {
+    flash();
+    AbstractDungeon.actionManager.addToTop(
+        new ApplyPowerAction(
+            AbstractDungeon.player,
+            AbstractDungeon.player,
+            new ChargeUpPower(AbstractDungeon.player, 1),
+            2
+        )
+    );
+    AbstractDungeon.actionManager.addToBottom(
+        new RelicAboveCreatureAction(AbstractDungeon.player, this)
+    );
+  }
 }
