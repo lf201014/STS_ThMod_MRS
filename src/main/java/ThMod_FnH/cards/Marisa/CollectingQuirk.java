@@ -2,10 +2,7 @@ package ThMod_FnH.cards.Marisa;
 
 import ThMod_FnH.ThMod;
 import ThMod_FnH.action.UnstableBombAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
-import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -23,12 +20,13 @@ public class CollectingQuirk
       CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  private static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
   public static final String IMG_PATH = "img/cards/collec.png";
   private static final int COST = 2;
   private static final int DIVIDER = 4;
-  private static final int UPG_DIVIDER = -1;
+  private static final int UPG_DIVIDER = 3;
   private static final int ATK_DMG = 7;
-  private int cnt;
+  private int counter;
 
   public CollectingQuirk() {
     super(
@@ -44,51 +42,61 @@ public class CollectingQuirk
     );
     this.baseDamage = ATK_DMG;
     this.magicNumber = this.baseMagicNumber = DIVIDER;
-    this.cnt = 0;
     this.block = this.baseBlock = 0;
+    this.counter = 0;
   }
 
   @Override
   public void applyPowers() {
     super.applyPowers();
     getCounter();
-    this.block = this.baseBlock = this.cnt;
-    this.isBlockModified = (this.block == 0);
+    modifyBlock();
+    this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0];
+    initializeDescription();
     ThMod.logger.info(
-        "CollectingQuirk : applyPowers : block :" + this.block
-            + " ; baseBlock : " + this.baseBlock
-            + " ; counter : " + this.cnt
+        "CollectingQuirk : applyPowers : damage :"
+            + this.damage
+            + " ; counter : " + this.counter
+            + " ; block :" + this.block
+            + " ; magic number :" + this.magicNumber
     );
+  }
+
+  @Override
+  public void calculateCardDamage(AbstractMonster mo) {
+    super.calculateCardDamage(mo);
+    getCounter();
+    modifyBlock();
+    this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0];
+    initializeDescription();
+    ThMod.logger.info(
+        "CollectingQuirk : applyPowers : damage :"
+            + this.damage
+            + " ; counter : " + this.counter
+            + " ; block :" + this.block
+            + " ; magic number :" + this.magicNumber
+    );
+    this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0];
+    initializeDescription();
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
     getCounter();
-    /*
-    if (cnt > 0) {
-      for (int i = 0; i < cnt; i++) {
-        AbstractDungeon.actionManager.addToBottom(
-            new DamageRandomEnemyAction(
-                new DamageInfo(
-                    p,
-                    this.damage,
-                    this.damageTypeForTurn
-                ),
-                AttackEffect.FIRE
-            )
-        );
-      }
-    }
-    */
-    if (cnt > 0) {
+    if (counter > 0) {
       AbstractDungeon.actionManager.addToBottom(
           new UnstableBombAction(
               AbstractDungeon.getMonsters().getRandomMonster(true),
               this.damage,
               this.damage,
-              this.cnt
+              this.counter
           )
       );
     }
+  }
+
+  public void onMoveToDiscard() {
+    this.rawDescription = DESCRIPTION;
+    initializeDescription();
   }
 
   public AbstractCard makeCopy() {
@@ -97,20 +105,35 @@ public class CollectingQuirk
 
   private void getCounter() {
     AbstractPlayer p = AbstractDungeon.player;
-    cnt = p.relics.size() / this.magicNumber;
+    int divider = DIVIDER;
+    if (this.upgraded) {
+      divider = UPG_DIVIDER;
+    }
+    counter = p.relics.size();
     if (p.hasRelic("Circlet")) {
-      cnt += p.getRelic("Circlet").counter - 1;
+      counter += p.getRelic("Circlet").counter - 1;
     }
     if (p.hasRelic("Red Circlet")) {
-      cnt += p.getRelic("Red Circlet").counter - 1;
+      counter += p.getRelic("Red Circlet").counter - 1;
     }
+    counter /= divider;
   }
 
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      //upgradeDamage(UPG_DMG);
-      upgradeMagicNumber(UPG_DIVIDER);
+      this.magicNumber = this.baseMagicNumber = UPG_DIVIDER;
+      this.upgradedMagicNumber = true;
+    }
+  }
+
+  private void modifyBlock() {
+    if (this.counter > 0) {
+      this.isBlockModified = true;
+      this.block = this.baseBlock = this.counter;
+    } else {
+      this.isBlockModified = false;
+      this.block = this.baseBlock = 0;
     }
   }
 }

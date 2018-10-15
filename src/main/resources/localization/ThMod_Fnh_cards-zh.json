@@ -40,7 +40,7 @@
   },
   "EscapeVelocity": {
     "NAME": "第二宇宙速度",
-    "DESCRIPTION": "每回合抽卡数+2，在回合开始时将一张 灼伤 加入手牌。"
+    "DESCRIPTION": "每回合抽卡数+2，在回合开始时将一张 灼伤 加入手牌。",
     "UPGRADE_DESCRIPTION": " 固有 。每回合抽卡数+2，在回合开始时将一张 灼伤 加入手牌。"
   },
   "EventHorizon": {
@@ -379,8 +379,12 @@
   },
   "CollectingQuirk": {
     "NAME": "收集癖",
-    "DESCRIPTION": "你每有 !M! 个遗物，随机造成 !D! 点伤害(共 !B! 次)。",
-    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+    "DESCRIPTION": "你每有 !M! 个遗物，随机造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
+    "EXTENDED_DESCRIPTION":[
+      "(共 !B! 次)",
+      ""
+    ]
   },
   "FungusSplash": {
     "NAME": "蘑菇药剂",

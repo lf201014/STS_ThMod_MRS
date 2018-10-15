@@ -381,8 +381,12 @@
   },
   "CollectingQuirk": {
     "NAME": "Collecting Quirk",
-    "DESCRIPTION": "Deal !D! damage to a random enemy ( !B! time(s) for now) for each !M! relics you have.",
-    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each !M! relics you have.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
+    "EXTENDED_DESCRIPTION":[
+      "( !B! time(s) for now)",
+      ""
+    ]
   },
   "FungusSplash": {
     "NAME": "Fungus Brew",
