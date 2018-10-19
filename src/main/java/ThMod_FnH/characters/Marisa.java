@@ -1,9 +1,12 @@
 package ThMod_FnH.characters;
 
 import ThMod_FnH.cards.Marisa.MasterSpark;
+import ThMod_FnH.patches.AbstractCardEnum;
 import ThMod_FnH.patches.ThModClassEnum;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -135,8 +138,8 @@ public class Marisa extends CustomPlayer {
     );
   }
 
-  public Color getCardColor() {
-    return ThMod.STARLIGHT;
+  public AbstractCard.CardColor getCardColor() {
+    return AbstractCardEnum.MARISA_COLOR;
   }
 
   public AbstractCard getStartCardForEvent() {
@@ -184,5 +187,43 @@ public class Marisa extends CustomPlayer {
 
   public AbstractPlayer newInstance() {
     return new Marisa(this.name);
+  }
+
+  @Override
+  public String getVampireText() {
+    return com.megacrit.cardcrawl.events.city.Vampires.DESCRIPTIONS[1];
+  }
+
+  public Color getCardRenderColor() {
+    return ThMod.STARLIGHT;
+  }
+
+  public void updateOrb(int orbCount)
+  {
+    this.energyOrb.updateOrb(orbCount);
+  }
+
+  public TextureAtlas.AtlasRegion getOrb()
+  {
+    return AbstractCard.orb_blue;
+  }
+
+  public Color getSlashAttackColor() {
+    return ThMod.STARLIGHT;
+  }
+
+  public AttackEffect[] getSpireHeartSlashEffect() {
+    return new AttackEffect[]{
+        AttackEffect.SLASH_HEAVY,
+        AttackEffect.FIRE,
+        AttackEffect.SLASH_DIAGONAL,
+        AttackEffect.SLASH_HEAVY,
+        AttackEffect.FIRE,
+        AttackEffect.SLASH_DIAGONAL
+    };
+  }
+
+  public String getSpireHeartText() {
+    return com.megacrit.cardcrawl.events.beyond.SpireHeart.DESCRIPTIONS[10];
   }
 }

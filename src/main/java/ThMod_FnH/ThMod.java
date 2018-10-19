@@ -297,7 +297,6 @@ public class ThMod implements PostExhaustSubscriber,
     logger.info("add " + ThModClassEnum.MARISA.toString());
     BaseMod.addCharacter(
         new Marisa("Marisa"),
-        AbstractCardEnum.MARISA_COLOR,
         MY_CHARACTER_BUTTON,
         MARISA_PORTRAIT,
         ThModClassEnum.MARISA
@@ -352,7 +351,7 @@ public class ThMod implements PostExhaustSubscriber,
         new SproutingBranch(),
         MARISA_COLOR
     );
-    //BaseMod.addRelicToCustomPool(new Cape(), AbstractCardEnum.MARISA_COLOR);
+    //BaseMod.addRelicToCustomPool(new Cape_1(), AbstractCardEnum.MARISA_COLOR);
 
     logger.info("Relics editting finished.");
   }

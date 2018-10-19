@@ -20,7 +20,7 @@ import basemod.abstracts.CustomRelic;
 @Deprecated
 public class Cape extends CustomRelic {
 
-  public static final String ID = "Cape";
+  public static final String ID = "Cape_1";
   private static final String IMG = "img/relics/vCore.png";
   private static final String IMG_USED = "img/relics/usedvCore.png";
   private static final String IMG_OTL = "img/relics/outline/vCore.png";
@@ -52,7 +52,7 @@ public class Cape extends CustomRelic {
       return;
     }
     if ((room instanceof ShopRoom)) {
-      ThMod.logger.info("Cape : onEnterRoom : ShopRoom detected .");
+      ThMod.logger.info("Cape_1 : onEnterRoom : ShopRoom detected .");
       this.avail = true;
       flash();
       this.pulse = true;
@@ -65,27 +65,27 @@ public class Cape extends CustomRelic {
   public void update() {
     super.update();
     if ((this.counter <= 0) || (this.usedUp)) {
-      ThMod.logger.info("Cape : update : returning for being used");
+      ThMod.logger.info("Cape_1 : update : returning for being used");
       return;
     }
     if (!this.isObtained) {
-      ThMod.logger.info("Cape : update : returning for not obtained");
+      ThMod.logger.info("Cape_1 : update : returning for not obtained");
       return;
     }
     if ((this.RclickStart) && (InputHelper.justReleasedClickRight)) {
       if (this.hb.hovered) {
-        ThMod.logger.info("Cape : update : hovered");
+        ThMod.logger.info("Cape_1 : update : hovered");
         this.Rclick = true;
       }
       this.RclickStart = false;
     }
     if ((this.isObtained) && (this.hb != null) && (this.hb.hovered)
         && (InputHelper.justClickedRight)) {
-      ThMod.logger.info("Cape : update : right click detected");
+      ThMod.logger.info("Cape_1 : update : right click detected");
       this.RclickStart = true;
     }
     if (this.Rclick) {
-      ThMod.logger.info("Cape : update : Calling OnRclick");
+      ThMod.logger.info("Cape_1 : update : Calling OnRclick");
       this.Rclick = false;
       OnRclick();
     }
@@ -131,7 +131,7 @@ public class Cape extends CustomRelic {
   public void onSpendGold() {
     if ((this.counter <= 0) || (this.usedUp) || (!this.JustActivated)) {
       ThMod.logger.info(
-          "Cape : OnSpendGold : returning :"
+          "Cape_1 : OnSpendGold : returning :"
               + " Counter : " + this.counter
               + " usedUp : " + this.usedUp
               + " JustActivated : " + this.JustActivated

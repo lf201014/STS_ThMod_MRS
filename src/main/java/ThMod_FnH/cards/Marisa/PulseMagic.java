@@ -22,7 +22,7 @@ public class PulseMagic
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-  public static final String IMG_PATH = "img/cards/Defend.png";
+  public static final String IMG_PATH = "img/cards/pulseMagic.png";
   private static final int COST = 0;
   private static final int ENE = 1;
   private static final int UPG_ENE = 1;
