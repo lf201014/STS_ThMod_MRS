@@ -21,7 +21,7 @@ public class GrandCross
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String IMG_PATH = "img/cards/GrandCross.png";
   private static final int COST = 2;
-  private static final int ATTACK_DMG = 12;
+  private static final int ATTACK_DMG = 13;
   private static final int UPGRADE_PLUS_DMG = 5;
 
   public GrandCross() {

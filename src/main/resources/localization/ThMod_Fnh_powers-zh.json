@@ -254,6 +254,20 @@
       " 张随机 #y技能 加入手牌。"
     ]
   },
+  "Wraith": {
+    "NAME": "怨灵",
+    "DESCRIPTIONS": [
+      "在你的回合开始后，随机 #y消耗 你的一张手牌。",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "LimboContact": {
+    "NAME": "UndeadContact",
+    "DESCRIPTIONS": [
+      "Whenever you take damage from this enemy, gain a stack of #yWraith .",
+      "WWWWWWWWWWW"
+    ]
+  },
   "WWWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [

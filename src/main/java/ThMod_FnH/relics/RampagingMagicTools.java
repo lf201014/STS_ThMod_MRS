@@ -20,7 +20,8 @@ public class RampagingMagicTools extends CustomRelic {
   public static final String ID = "RampagingMagicTools";
   private static final String IMG = "img/relics/RamTool.png";
   private static final String IMG_OTL = "img/relics/outline/RamTool.png";
-  private static final int STCS = 3;
+  private static final int STACK = 2;
+  private static final int STACK_POISON = 3;
   private static final int STCS_H = 8;
 
   public RampagingMagicTools() {
@@ -52,7 +53,7 @@ public class RampagingMagicTools extends CustomRelic {
   public void atBattleStart() {
     int rng = AbstractDungeon.miscRng.random(0, 4);
     AbstractPower pow = null;
-    int stc = STCS;
+    int stc = STACK;
     AbstractPlayer p = AbstractDungeon.player;
     switch (rng) {
       case 0:
@@ -65,6 +66,7 @@ public class RampagingMagicTools extends CustomRelic {
         pow = new VulnerablePower(p, stc, false);
         break;
       case 3:
+        stc = STACK_POISON;
         pow = new PoisonPower(p, p, stc);
         break;
       case 4:
@@ -79,7 +81,7 @@ public class RampagingMagicTools extends CustomRelic {
           new RelicAboveCreatureAction(AbstractDungeon.player, this)
       );
       AbstractDungeon.actionManager.addToBottom(
-          new ApplyPowerAction(p, p, pow, STCS)
+          new ApplyPowerAction(p, p, pow, stc)
       );
     }
   }

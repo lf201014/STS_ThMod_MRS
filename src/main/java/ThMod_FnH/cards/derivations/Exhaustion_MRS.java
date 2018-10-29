@@ -26,10 +26,10 @@ public class Exhaustion_MRS extends CustomCard {
         "img/cards/parasite.png",
         COST,
         DESCRIPTION,
-        AbstractCard.CardType.CURSE,
-        AbstractCard.CardColor.CURSE,
-        AbstractCard.CardRarity.CURSE,
-        AbstractCard.CardTarget.SELF
+        CardType.CURSE,
+        CardColor.CURSE,
+        CardRarity.CURSE,
+        CardTarget.SELF
     );
     this.exhaust = true;
   }

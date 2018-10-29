@@ -3,7 +3,7 @@
 
   <groupId>ThMod_FnH</groupId>
   <artifactId>ThMod_FnH</artifactId>
-  <version>v0.13.7</version>
+  <version>v0.13.8</version>
   <packaging>jar</packaging>
 
 
@@ -32,7 +32,7 @@
   </dependencies>
 
   <build>
-    <finalName>TS05_Marisa_v0.13.7</finalName>
+    <finalName>TS05_Marisa_v0.13.8</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -52,10 +52,10 @@
             <phase>package</phase>
             <configuration>
               <target>
-                <copy file="target/TS05_Marisa_v0.13.7.jar"
-                  tofile="../lib/TS05_Marisa_v0.13.7.jar"/>
-                <copy file="target/TS05_Marisa_v0.13.7.jar"
-                  tofile="E:/SteamLibrary/SteamApps/common/SlayTheSpire/mods/TS05_Marisa_v0.13.7.jar"/>
+                <copy file="target/TS05_Marisa_v0.13.8.jar"
+                  tofile="../lib/TS05_Marisa_v0.13.8.jar"/>
+                <copy file="target/TS05_Marisa_v0.13.8.jar"
+                  tofile="E:/SteamLibrary/SteamApps/common/SlayTheSpire/mods/TS05_Marisa_v0.13.8.jar"/>
               </target>
             </configuration>
             <goals>

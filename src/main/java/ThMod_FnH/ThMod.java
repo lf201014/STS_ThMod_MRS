@@ -6,6 +6,8 @@ import ThMod_FnH.cards.Marisa.AlicesGift;
 import ThMod_FnH.cards.Marisa.EnergyRecoil;
 import ThMod_FnH.cards.Marisa.ManaRampage;
 import ThMod_FnH.cards.derivations.Exhaustion_MRS;
+import ThMod_FnH.event.Mushrooms_MRS;
+import com.megacrit.cardcrawl.dungeons.Exordium;
 import java.nio.charset.StandardCharsets;
 
 import org.apache.logging.log4j.LogManager;
@@ -654,7 +656,7 @@ public class ThMod implements PostExhaustSubscriber,
   @Override
   public void receivePostInitialize() {
     // TODO Auto-generated method stub
-
+    BaseMod.addEvent(Mushrooms_MRS.ID, Mushrooms_MRS.class, Exordium.ID);
   }
 	/*
 	
