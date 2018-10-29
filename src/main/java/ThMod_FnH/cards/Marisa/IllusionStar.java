@@ -19,10 +19,10 @@ public class IllusionStar extends CustomCard {
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-  public static final String IMG_PATH = "img/cards/IllusionStar.png";
+  public static final String IMG_PATH = "img/cards/IllusionStar_V2.png";
   private static final int COST = 0;
   private static final int CARD_PRINT = 2;
-  private static final int UPG_CARD_PRINT = 1;
+  //private static final int UPG_CARD_PRINT = 1;
 
   public IllusionStar() {
     super(
