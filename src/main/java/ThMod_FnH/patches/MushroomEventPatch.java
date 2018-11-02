@@ -9,6 +9,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.exordium.Mushrooms;
+import com.megacrit.cardcrawl.random.Random;
 
 public class MushroomEventPatch {
 
@@ -16,12 +17,12 @@ public class MushroomEventPatch {
   public static class GetEventFix {
 
     @SpirePostfixPatch()
-    public static AbstractEvent PostFix(AbstractEvent _retVal) {
+    public static AbstractEvent PostFix(AbstractEvent _retVal,Random random) {
       logger.info(
           "MarisaModEventPatch : GetEvent : _retVal : "
               + _retVal.toString()
               + " ; PlayerCharacter : "
-              + AbstractDungeon.player.name
+              + AbstractDungeon.player.toString()
       );
       if ((AbstractDungeon.player instanceof Marisa) && (_retVal instanceof Mushrooms)) {
         logger.info("Marisa & Mushrooms detected,altering return value.");

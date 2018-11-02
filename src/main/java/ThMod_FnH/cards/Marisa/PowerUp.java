@@ -19,7 +19,7 @@ public class PowerUp extends CustomCard {
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   private static final int COST = 0;
-  private static final int STC = 3;
+  private static final int STC = 2;
   private static final int UPG_STC = 1;
 
   public PowerUp() {
