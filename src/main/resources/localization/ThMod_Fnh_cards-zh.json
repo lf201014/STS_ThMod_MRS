@@ -169,7 +169,7 @@
   "BlazeAway": {
     "NAME": "连续发射",
     "DESCRIPTION": "将你本回合最后使用过的攻击卡的复制加入手牌. NL 增幅  [B]  :使其本回合内费用变为0。",
-    "UPGRADE_DESCRIPTION": "将你本回合接下来使用的攻击卡的复制加入手牌，该复制在回合内的费用为0. NL 增幅  [B]  :复制两张。",
+    "UPGRADE_DESCRIPTION": "将你本回合最后使用过的攻击卡的两张复制加入手牌。 NL 增幅  [B]  :使其本回合内费用变为0。",
     "EXTENDED_DESCRIPTION": [
       " NL （最后使用的攻击卡 : ",
       " ）。",
@@ -197,7 +197,7 @@
   },
   "SuperPerseids": {
     "NAME": "超级英仙座",
-    "DESCRIPTION": " 不能被打出 。 当你抽到这张卡，获得 !M! 蓄力 。 NL 此卡被 消耗 时，随机造成 !D! 点伤害。",
+    "DESCRIPTION": " 不能被打出 。 当你抽到这张卡，获得 [B] 。 NL 此卡被 消耗 时，随机造成 !D! 点伤害。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MysteriousBeam": {
@@ -421,7 +421,7 @@
   },
   "Orbital": {
     "NAME": "星轨",
-    "DESCRIPTION": " 不能被打出 。 当你抽到这张卡时，再抽一张卡。 NL 当这张卡被 消耗 时，选择消耗堆最多 !M! 张卡加入弃牌堆。",
+    "DESCRIPTION": " 不能被打出 。 当你抽到这张卡时，再抽一张卡。 NL 当这张卡被 消耗 时，从消耗堆选择 !M! 张卡加入手牌。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "SillyJoke": {
@@ -452,6 +452,11 @@
   "Exhaustion_MRS": {
     "NAME": "力竭",
     "DESCRIPTION": " 不能被打出 。 NL 这张卡在你手中时你将无法获得或发动 蓄力",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "UltimateShortwave": {
+    "NAME": "极超短波",
+    "DESCRIPTION": "获得 [B]  [B]  与 !M! 层 蓄力 。使这张卡在这场战斗中 蓄力 获得量增加 !D! ，能量获得量增加1。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WWWWWWWWWWWWW": {

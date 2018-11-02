@@ -36,7 +36,7 @@ public class GravityBeat extends CustomCard {
         DESCRIPTION,
         AbstractCard.CardType.ATTACK,
         AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.UNCOMMON,
+        AbstractCard.CardRarity.COMMON,
         AbstractCard.CardTarget.ALL_ENEMY
     );
 

@@ -1,6 +1,6 @@
-package ThMod_FnH.relics;
+package ThMod_FnH.relics.deprecated;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -8,12 +8,12 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomRelic;
 
+@Deprecated
 public class AmplifyWand extends CustomRelic {
 
-  public static final String ID = "AmpWand";
+  public static final String ID = "AmplifyWand";
   private static final String IMG = "img/relics/AmplifyWand_s.png";
   private static final String IMG_OTL = "img/relics/outline/AmplifyWand_s.png";
-  private static final int BLOCK_AMT = 5;
 
   public AmplifyWand() {
     super(
@@ -23,6 +23,7 @@ public class AmplifyWand extends CustomRelic {
         RelicTier.RARE,
         LandingSound.FLAT
     );
+    this.counter = 0;
   }
 
   public String getUpdatedDescription() {
@@ -34,12 +35,16 @@ public class AmplifyWand extends CustomRelic {
   }
 
   public void onSpecificTrigger() {
-    this.flash();
-    AbstractDungeon.actionManager.addToBottom(
-        new RelicAboveCreatureAction(AbstractDungeon.player, this)
-    );
-    AbstractDungeon.actionManager.addToBottom(
-        new GainBlockAction(AbstractDungeon.player,AbstractDungeon.player,BLOCK_AMT)
-    );
+    this.counter++;
+    if (this.counter >= 3) {
+      this.counter = 0;
+      this.flash();
+      AbstractDungeon.actionManager.addToBottom(
+          new RelicAboveCreatureAction(AbstractDungeon.player, this)
+      );
+      AbstractDungeon.actionManager.addToBottom(
+          new GainEnergyAction(2)
+      );
+    }
   }
 }

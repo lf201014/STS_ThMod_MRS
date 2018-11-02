@@ -22,9 +22,9 @@ public class MoraleDepletion extends CustomCard {
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   private static final int COST = 1;
-  private static final int BLOCK_AMT = 7;
-  private static final int UPGRADE_PLUS_BLOCK = 3;
-  private static final int DRAW = 2;
+  private static final int BLOCK_AMT = 5;
+  private static final int UPGRADE_PLUS_BLOCK = 2;
+  private static final int DRAW = 1;
   private static final int UPGRADE_PLUS_DRAW = 1;
 
   public MoraleDepletion() {

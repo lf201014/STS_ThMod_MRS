@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.relics.Orichalcum;
 
 import ThMod_FnH.ThMod;
 import ThMod_FnH.powers.Marisa.PropBagPower;
-import ThMod_FnH.relics.AmplifyWand;
+import ThMod_FnH.relics.deprecated.AmplifyWand;
 
 public class PropBagAction
 	extends AbstractGameAction{

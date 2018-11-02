@@ -5,6 +5,7 @@ import ThMod_FnH.powers.Marisa.ChargeUpPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
@@ -51,6 +52,7 @@ public class SuperPerseids extends CustomCard {
 
   public void triggerWhenDrawn() {
     this.applyPowers();
+    /*
     ThMod.logger.info("SuperPerseids : triggerWhenDrawn : Granting Charge-up "
         + "; : upgraded : " + this.upgraded
     );
@@ -62,6 +64,10 @@ public class SuperPerseids extends CustomCard {
             new ChargeUpPower(p,this.magicNumber),
             this.magicNumber
         )
+    );
+    */
+    AbstractDungeon.actionManager.addToBottom(
+        new GainEnergyAction(1)
     );
   }
 

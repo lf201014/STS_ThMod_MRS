@@ -23,19 +23,17 @@ public class MushroomEventPatch {
               + " ; PlayerCharacter : "
               + AbstractDungeon.player.name
       );
-      if (AbstractDungeon.player instanceof Marisa) {
-        if (_retVal instanceof Mushrooms) {
-          logger.info("Marisa & Mushrooms detected,altering return value.");
-          return new Mushrooms_MRS();
-        } else if (_retVal instanceof Mushrooms_MRS) {
-          logger.info("Marisa & Mushrooms_MRS detected,returning shrine.");
-          return AbstractDungeon.getShrine();
-        }
-        }
-        return _retVal;
+      if ((AbstractDungeon.player instanceof Marisa) && (_retVal instanceof Mushrooms)) {
+        logger.info("Marisa & Mushrooms detected,altering return value.");
+        return new Mushrooms_MRS();
+      } else if (_retVal instanceof Mushrooms_MRS) {
+        logger.info("Mushrooms_MRS detected,returning shrine.");
+        return AbstractDungeon.getShrine(AbstractDungeon.eventRng);
       }
+      return _retVal;
     }
   }
+}
 /*
 import ThMod_FnH.characters.Marisa;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;

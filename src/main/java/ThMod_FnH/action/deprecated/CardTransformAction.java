@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
+@Deprecated
 public class CardTransformAction extends AbstractGameAction {
 
   private AbstractCard card;

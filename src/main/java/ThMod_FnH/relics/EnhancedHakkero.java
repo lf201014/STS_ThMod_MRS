@@ -5,8 +5,10 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -66,6 +68,25 @@ public class EnhancedHakkero extends CustomRelic {
   }
 
   @Override
+  public int onAttacked(DamageInfo info, int damageAmount)
+  {
+    flash();
+    AbstractDungeon.actionManager.addToBottom(
+        new ApplyPowerAction(
+            AbstractDungeon.player,
+            AbstractDungeon.player,
+            new ChargeUpPower(AbstractDungeon.player, 1),
+            1
+        )
+    );
+    AbstractDungeon.actionManager.addToBottom(
+        new RelicAboveCreatureAction(AbstractDungeon.player, this)
+    );
+    return damageAmount;
+  }
+
+  /*
+  @Override
   public void atTurnStartPostDraw() {
     flash();
     AbstractDungeon.actionManager.addToTop(
@@ -80,4 +101,6 @@ public class EnhancedHakkero extends CustomRelic {
         new RelicAboveCreatureAction(AbstractDungeon.player, this)
     );
   }
+
+  */
 }

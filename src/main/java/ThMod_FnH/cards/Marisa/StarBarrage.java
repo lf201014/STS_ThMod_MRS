@@ -1,6 +1,5 @@
 package ThMod_FnH.cards.Marisa;
 
-import ThMod_FnH.action.deprecated.StarBarrageDamageAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -22,7 +21,7 @@ public class StarBarrage
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String IMG_PATH = "img/cards/Strike.png";
   private static final int COST = 1;
-  private static final int ATK_DMG = 6;
+  private static final int ATK_DMG = 7;
   private static final int UPGRADE_PLUS_DMG = 3;
   private static final int TAP = 1;
 

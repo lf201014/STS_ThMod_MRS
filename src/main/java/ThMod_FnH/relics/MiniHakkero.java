@@ -38,7 +38,6 @@ public class MiniHakkero extends CustomRelic {
   }
 
   public void onUseCard(AbstractCard card, UseCardAction action) {
-    flash();
     AbstractPlayer p = AbstractDungeon.player;
     Boolean available = true;
     int div = 8;
@@ -47,10 +46,11 @@ public class MiniHakkero extends CustomRelic {
     }
     if (p.hasPower("ChargeUpPower")) {
       if (p.getPower("ChargeUpPower").amount >= div) {
-        available = false;
+        //available = false;
       }
     }
     if (available) {
+      flash();
       ThMod.logger.info("MiniHakkero : Applying ChargeUpPower for using card : " + card.cardID);
       AbstractDungeon.actionManager.addToTop(
           new ApplyPowerAction(
@@ -66,7 +66,6 @@ public class MiniHakkero extends CustomRelic {
           )
       );
     }
-
 
   }
 }
