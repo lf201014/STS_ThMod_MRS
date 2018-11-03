@@ -27,7 +27,7 @@
       "每 #b3 次以 #b0 费使用卡牌，抽一张卡。"
     ]
   },
-  "AmplifyWand": {
+  "AmpWand": {
     "NAME": "增幅魔杖",
     "FLAVOR": "没怎么被见到用过的一根魔杖。",
     "DESCRIPTIONS": [
@@ -91,7 +91,7 @@
       "在每场战斗开始时，给与你 #b5 层 #y再生 。"
     ]
   },
-  "AmpWand": {
+  "AmplifyWand": {
     "NAME": "增幅魔杖",
     "FLAVOR": "没怎么见魔理沙用过的一根魔杖。",
     "DESCRIPTIONS": [

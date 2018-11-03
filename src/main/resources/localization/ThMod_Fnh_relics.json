@@ -27,7 +27,7 @@
       "For every #b3 cards that cost 0 you played,draw a card."
     ]
   },
-  "AmplifyWand": {
+  "AmpWand": {
     "NAME": "Amplify Wand",
     "FLAVOR": "A Wand seems not often used.",
     "DESCRIPTIONS": [
@@ -91,7 +91,7 @@
       "At the Start of each battle,grant you #b5 stack #yRegen ."
     ]
   },
-  "AmpWand": {
+  "AmplifyWand": {
     "NAME": "Amplify Wand",
     "FLAVOR": "A Wand seems not often used.",
     "DESCRIPTIONS": [
