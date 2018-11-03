@@ -24,7 +24,7 @@ public class UltraShortWave extends CustomCard {
   private static final int GAIN = 1;
   private static final int GROW = 1;
   private static final int GAIN_GROW = 1;
-  private static final int ENERGY = 2;
+  private static final int ENERGY = 1;
 
   public UltraShortWave() {
     super(

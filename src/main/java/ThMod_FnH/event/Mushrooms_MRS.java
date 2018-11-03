@@ -28,8 +28,7 @@ public class Mushrooms_MRS
 
   private static final Logger logger = ThMod.logger;
   public static final String ID = "Mushrooms_MRS";
-  private static final EventStrings eventStrings = CardCrawlGame.languagePack
-      .getEventString("Mushrooms");
+  private static final EventStrings eventStrings = CardCrawlGame.languagePack.getEventString("Mushrooms");
   public static final String NAME = eventStrings.NAME;
   public static final String[] DESCRIPTIONS = eventStrings.DESCRIPTIONS;
   public static final String[] OPTIONS = eventStrings.OPTIONS;
@@ -65,11 +64,13 @@ public class Mushrooms_MRS
     } else {
       this.roomEventText.addDialogOption(OPTIONS[0]);
     }
+
     int temp = (int) (AbstractDungeon.player.maxHealth * 0.25F);
     this.roomEventText.addDialogOption(
         OPTIONS[1] + temp + OPTIONS[2],
         CardLibrary.getCopy("Parasite")
     );
+
     AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.EVENT;
     this.hasDialog = true;
     this.hasFocus = true;

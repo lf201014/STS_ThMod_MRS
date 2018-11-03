@@ -98,7 +98,7 @@
   },
   "OortCloud": {
     "NAME": "奥尔特云",
-    "DESCRIPTION": "获得 !M! 层多层护甲。 NL 增幅  [B]  :获得额外2层。",
+    "DESCRIPTION": "获得 !M! 层多层护甲。 NL 增幅  [B]  :获得额外 !B! 层。",
     "UPGRADE_DESCRIPTION": "获得 !M! 层多层护甲。 NL 增幅  [B]  :获得额外3层。"
   },
   "PolarisUnique": {
@@ -456,7 +456,7 @@
   },
   "UltimateShortwave": {
     "NAME": "极超短波",
-    "DESCRIPTION": "获得 [B]  [B]  与 !M! 层 蓄力 。使这张卡在这场战斗中 蓄力 获得量增加 !D! ，能量获得量增加1。",
+    "DESCRIPTION": "获得 [B] 与 !M! 层 蓄力 。使这张卡在这场战斗中 蓄力 获得量增加 !D! ，能量获得量增加1。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WWWWWWWWWWWWW": {

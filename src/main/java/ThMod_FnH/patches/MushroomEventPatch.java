@@ -26,7 +26,8 @@ public class MushroomEventPatch {
       );
       if ((AbstractDungeon.player instanceof Marisa) && (_retVal instanceof Mushrooms)) {
         logger.info("Marisa & Mushrooms detected,altering return value.");
-        return new Mushrooms_MRS();
+        //return new Mushrooms_MRS();
+        return AbstractDungeon.getShrine(AbstractDungeon.eventRng);
       } else if (_retVal instanceof Mushrooms_MRS) {
         logger.info("Mushrooms_MRS detected,returning shrine.");
         return AbstractDungeon.getShrine(AbstractDungeon.eventRng);

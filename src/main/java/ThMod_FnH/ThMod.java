@@ -656,7 +656,7 @@ public class ThMod implements PostExhaustSubscriber,
   @Override
   public void receivePostInitialize() {
     // TODO Auto-generated method stub
-    BaseMod.addEvent(Mushrooms_MRS.ID, Mushrooms_MRS.class, Exordium.ID);
+    //BaseMod.addEvent(Mushrooms_MRS.ID, Mushrooms_MRS.class, Exordium.ID);
   }
 	/*
 	

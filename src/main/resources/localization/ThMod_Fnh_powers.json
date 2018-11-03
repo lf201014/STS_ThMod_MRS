@@ -18,7 +18,8 @@
     "NAME": "Event Horizon",
     "DESCRIPTIONS": [
       "You can pick a card from your discard pile to your hand  #b",
-      " time(s) each turn when you activate #yAmplify ."
+      " time(s) each turn when you activate #yAmplify .( ",
+      " charge(s) left)"
     ]
   },
   "IllusionStarPower": {

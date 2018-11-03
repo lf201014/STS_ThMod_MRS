@@ -44,7 +44,8 @@ public class ManaRampageAction
         this.isDone = true;
         return;
       }
-      tmp.current_x = (-300.0F * Settings.scale);
+      AbstractDungeon.player.limbo.group.add(tmp);
+      tmp.current_x = (Settings.WIDTH / 2.0F);
       tmp.current_y = (Settings.HEIGHT / 2.0F);
       tmp.target_x = (Settings.WIDTH / 2.0F - 300.0F * Settings.scale);
       tmp.target_y = (Settings.HEIGHT / 2.0F);

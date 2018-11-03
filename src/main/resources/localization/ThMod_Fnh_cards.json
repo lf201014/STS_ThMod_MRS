@@ -94,7 +94,7 @@
   },
   "OortCloud": {
     "NAME": "OortCloud",
-    "DESCRIPTION": "Gain !M! Plated Armor. NL Amplify  [B]  : Gain 2 more Plated Armor.",
+    "DESCRIPTION": "Gain !M! Plated Armor. NL Amplify  [B]  : Gain !B! more Plated Armor.",
     "UPGRADE_DESCRIPTION": "Gain !M! Plated Armor. NL Amplify  [B]  : Gain 3 more Plated Armor."
   },
   "PolarisUnique": {
@@ -458,7 +458,7 @@
   },
   "UltimateShortwave": {
     "NAME": "Ultimate Shortwave",
-    "DESCRIPTION": "Gain [B]  [B]  and !M! Charge-up. Increase the Charge-up gain of this card by !D! and energy gain by 1 for this battle.",
+    "DESCRIPTION": "Gain [B] and !M! Charge-up. Increase the Charge-up gain of this card by !D! and energy gain by 1 for this battle.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WWWWWWWWWWWWWW": {
