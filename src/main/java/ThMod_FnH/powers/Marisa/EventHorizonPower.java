@@ -65,8 +65,9 @@ public class EventHorizonPower
         DESCRIPTIONS[0]
             + this.amount
             + DESCRIPTIONS[1]
-            + this.cnt
             + DESCRIPTIONS[2]
+            + this.cnt
+            + DESCRIPTIONS[3]
     );
   }
 

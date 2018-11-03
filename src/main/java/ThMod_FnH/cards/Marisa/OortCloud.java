@@ -46,8 +46,15 @@ public class OortCloud extends CustomCard {
   }
 
   @Override
-  public void applyPowers(){
+  public void applyPowers() {
+    this.block = this.baseBlock;
+    this.magicNumber = this.baseMagicNumber;
+  }
 
+  @Override
+  public void calculateCardDamage(AbstractMonster mo) {
+    this.block = this.baseBlock;
+    this.magicNumber = this.baseMagicNumber;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
