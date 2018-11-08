@@ -17,21 +17,21 @@
     "NAME": "Black Magic Shield",
     "FLAVOR": "In fact I don't know what the hell is this,but since the Designer put it in the Plan,here it is.-programmer",
     "DESCRIPTIONS": [
-      "When you draw a Status or Curse,gain 5 Block ."
+      "Whenever you draw a Status or Curse, gain 5 Block ."
     ]
   },
   "EnhancedBroom": {
     "NAME": "Magic Broom",
     "FLAVOR": "Marisa always travels with her flying broom.",
     "DESCRIPTIONS": [
-      "For every #b3 cards that cost 0 you played,draw a card."
+      "Every time you play #b3 cards that cost 0, draw 1 card."
     ]
   },
   "AmplifyWand": {
     "NAME": "Amplify Wand",
     "FLAVOR": "A Wand seems not often used.",
     "DESCRIPTIONS": [
-      "For every third time you activate #yAmplify effect ,Gain [B]  [B] ."
+      "Every time you activate 3 #yAmplify effects, gain [B]  [B] ."
     ]
   },
   "RampagingMagicTools": {
@@ -71,9 +71,9 @@
   },
   "ShroomBag": {
     "NAME": "Shroom Bag",
-    "FLAVOR": "All witches have abnormal ethusiasm for mushrooms... NL Or it's just Marisa...?",
+    "FLAVOR": "All witches have abnormal ethusiasm for mushrooms... NL Or is it just Marisa...?",
     "DESCRIPTIONS": [
-      "Add 2 #yParasite to your deck on pick up.You can now play #yParasite to exhaust it and heal #b3 HP."
+      "Upon pickup, obtain 2 #yParasite. Parasite cards can now be played. Playing a #yParasite will heal #b3 HP and Exhausts the card."
     ]
   },
   "Cape": {
