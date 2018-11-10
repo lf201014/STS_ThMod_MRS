@@ -34,6 +34,7 @@ Like many other mods,this mod needs [BaseMod](https://github.com/daviscook477/Ba
   * Flynn (https://github.com/lf201014) : programming and project management
 ### Special Thanks ###
   * Dustin (https://github.com/Skrelpoid) : generously offering help and making great improvement to the English text
+  * Rakkis157 (https://github.com/Rakkis157) : generously offering help and making the descriptions match the base game
   * OPM (一下午) (Tencent QQ: 1315659893) : ascension patch and programming consultation
   * Gogo (https://github.com/Gogomoe): programming consultation
   * BlackRuse (https://github.com/lionpkqq) : programming consultation
