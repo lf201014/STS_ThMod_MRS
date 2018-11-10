@@ -1,6 +1,5 @@
 package ThMod_FnH.cards.Marisa;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,7 +13,7 @@ import ThMod_FnH.patches.AbstractCardEnum;
 public class Occultation extends CustomCard {
 
   public static final String ID = "Occultation";
-  public static final String IMG_PATH = "img/cards/Defend.png";
+  public static final String IMG_PATH = "img/cards/occultation.png";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;

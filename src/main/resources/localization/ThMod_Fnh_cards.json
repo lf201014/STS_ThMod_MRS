@@ -94,7 +94,7 @@
   },
   "OortCloud": {
     "NAME": "OortCloud",
-    "DESCRIPTION": "Gain !M! Plated Armor. NL Amplify  [B]  : Gain 2 more Plated Armor.",
+    "DESCRIPTION": "Gain !M! Plated Armor. NL Amplify  [B]  : Gain !B! more Plated Armor.",
     "UPGRADE_DESCRIPTION": "Gain !M! Plated Armor. NL Amplify  [B]  : Gain 3 more Plated Armor."
   },
   "PolarisUnique": {
@@ -165,7 +165,7 @@
   "BlazeAway": {
     "NAME": "Blaze Away",
     "DESCRIPTION": "Add a copy of the last Attack you played this turn. NL Amplify [B] : It costs 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Add a copy of the next Attack you play this turn. It costs 0 this turn. NL Amplify  [B]  :add one more. NL  Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add 2 copies of the last Attack you played this turn. NL Amplify [B] : It costs 0 this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (Last Attack : ",
       " ).",
@@ -193,7 +193,7 @@
   },
   "SuperPerseids": {
     "NAME": "Super Perseids",
-    "DESCRIPTION": "Unplayable. Gain !M! Charge-Up when you draw this card. NL Deal !D! damage to a random enemy when exhausted.",
+    "DESCRIPTION": "Unplayable. Gain [B] when you draw this card. NL Deal !D! damage to a random enemy when exhausted.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MysteriousBeam": {
@@ -423,7 +423,7 @@
   },
   "Orbital": {
     "NAME": "Orbital",
-    "DESCRIPTION": " Unplayable. When you draw this card draw 1 more card(s). NL If this card is Exhausted, add !M! card from your exhaust pile to your discard pile.",
+    "DESCRIPTION": " Unplayable. When you draw this card draw 1 more card. NL If this card is Exhausted, add !M! card(s) from your exhaust pile to your hand.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "SillyJoke": {
@@ -454,6 +454,11 @@
   "Exhaustion_MRS": {
     "NAME": "Exhaustion",
     "DESCRIPTION": "Unplayable. NL You cannot gain or use Charge-Up when this card is in your hand.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "UltimateShortwave": {
+    "NAME": "Ultimate Shortwave",
+    "DESCRIPTION": "Gain [B] and !M! Charge-up. Increase the Charge-up gain of this card by !D! and energy gain by 1 for this battle.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WWWWWWWWWWWWWW": {

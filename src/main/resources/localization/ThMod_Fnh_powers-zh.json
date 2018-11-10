@@ -18,7 +18,9 @@
     "NAME": "黑洞边缘",
     "DESCRIPTIONS": [
       "当你发动 #y增幅 时，可以选一张弃牌堆的卡加入手牌。本效果每回合只能发动 #b",
-      " 次。"
+      " 次。",
+      "（当前可用次数： ",
+      "）"
     ]
   },
   "IllusionStarPower": {
@@ -31,7 +33,7 @@
   "MilliPulsaPower": {
     "NAME": "毫秒脉冲星",
     "DESCRIPTIONS": [
-      "你不在需要支付额外的能量来发动 #y增幅 。",
+      "你不需要支付额外的能量来发动 #y增幅 。",
       ""
     ]
   },
@@ -252,6 +254,20 @@
     "DESCRIPTIONS": [
       "在你的回合开始时，将 #b",
       " 张随机 #y技能 加入手牌。"
+    ]
+  },
+  "Wraith": {
+    "NAME": "怨灵",
+    "DESCRIPTIONS": [
+      "在你的回合开始后，随机 #y消耗 你的一张手牌。",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "LimboContact": {
+    "NAME": "UndeadContact",
+    "DESCRIPTIONS": [
+      "Whenever you take damage from this enemy, gain a stack of #yWraith .",
+      "WWWWWWWWWWW"
     ]
   },
   "WWWWWWWWWWWWWWW": {

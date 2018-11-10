@@ -41,7 +41,9 @@ public class ChargeUpPower
     this.type = AbstractPower.PowerType.BUFF;
     updateDescription();
     this.img = new Texture("img/powers/generator.png");
-    this.cnt = (int) Math.floor(this.amount / 6);
+
+    getDivider();
+    this.cnt = (int) Math.floor(this.amount / this.stc);
   }
 
   @Override
@@ -54,11 +56,8 @@ public class ChargeUpPower
     if (this.amount <= 0) {
       this.amount = 0;
     }
-    if (AbstractDungeon.player.hasRelic("SimpleLauncher")) {
-      this.stc = IMPR_STACK;
-    } else {
-      this.stc = ACT_STACK;
-    }
+
+    getDivider();
 
     ThMod.logger.info(
         "ChargeUpPower : Checking stack divider :"
@@ -92,11 +91,8 @@ public class ChargeUpPower
 
       flash();
 
-      if (AbstractDungeon.player.hasRelic("SimpleLauncher")) {
-        this.stc = IMPR_STACK;
-      } else {
-        this.stc = ACT_STACK;
-      }
+      getDivider();
+
       ThMod.logger.info("ChargeUpPower : onPlayCard :"
           + " Checking stack number : "
           + this.stc
@@ -120,5 +116,13 @@ public class ChargeUpPower
       }
     }
     return damage;
+  }
+
+  private void getDivider() {
+    if (AbstractDungeon.player.hasRelic("SimpleLauncher")) {
+      this.stc = IMPR_STACK;
+    } else {
+      this.stc = ACT_STACK;
+    }
   }
 }

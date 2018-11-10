@@ -52,8 +52,13 @@ public class Orbital extends CustomCard {
 
   public void triggerOnExhaust() {
     AbstractDungeon.actionManager.addToBottom(
-        new OrbitalAction(this.upgraded)
+        new OrbitalAction()
     );
+    if (this.upgraded){
+      AbstractDungeon.actionManager.addToBottom(
+          new OrbitalAction()
+      );
+    }
   }
 
   public void triggerWhenDrawn() {

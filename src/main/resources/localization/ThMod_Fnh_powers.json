@@ -18,7 +18,9 @@
     "NAME": "Event Horizon",
     "DESCRIPTIONS": [
       "You can pick a card from your discard pile to your hand  #b",
-      " time(s) each turn when you activate #yAmplify ."
+      " time(s) each turn when you activate #yAmplify .",
+      "( ",
+      " charge(s) left)"
     ]
   },
   "IllusionStarPower": {
@@ -245,6 +247,20 @@
     "DESCRIPTIONS": [
       "At the start of your turn,add #b",
       " random #ySkill to your hand."
+    ]
+  },
+  "Wraith": {
+    "NAME": "Wraith",
+    "DESCRIPTIONS": [
+      "#yExhaust a random card in your hand after the start of your turn.",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "LimboContact": {
+    "NAME": "Undead Contact",
+    "DESCRIPTIONS": [
+      "Whenever you take damage from this enemy, gain a stack of #yWraith .",
+      "WWWWWWWWWWW"
     ]
   },
   "WWWWWWWWWWWWW": {

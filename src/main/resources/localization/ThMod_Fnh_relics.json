@@ -3,14 +3,14 @@
     "NAME": "Mini-Hakkero",
     "FLAVOR": "Aka mini-EightTrigram Furnace,is originally gift by Rinosuke when Marisa left her parents.",
     "DESCRIPTIONS": [
-      "When you play a card,gain #b1  #yCharge-up . NL Doesn't work when your #yCharge-Up stacks is higher than #b8 ."
+      "When you play a card,gain #b1  #yCharge-up ."
     ]
   },
   "EnhancedHakkero": {
     "NAME": "Bewitched Hakkero",
     "FLAVOR": "Its firepower came to a new level,but is it ok to use a bewitched tool?",
     "DESCRIPTIONS": [
-      "Replace #rMini-Hakkero . NL When you play a card,gain #b1 #yCharge-up . NL Gain #b2 #yCharge-up at the start of your turn."
+      "Replace #rMini-Hakkero . NL When you play a card or attacked,gain #b1 #yCharge-up ."
     ]
   },
   "MagicArmor": {
@@ -27,7 +27,7 @@
       "For every #b3 cards that cost 0 you played,draw a card."
     ]
   },
-  "AmplifyWand": {
+  "AmpWand": {
     "NAME": "Amplify Wand",
     "FLAVOR": "A Wand seems not often used.",
     "DESCRIPTIONS": [
@@ -38,7 +38,7 @@
     "NAME": "Rampaging Magic Tool",
     "FLAVOR": "It's been so long since anyone last used them,who knows what could happen?",
     "DESCRIPTIONS": [
-      "Gain [B] at the start of each turn. NL Apply a random debuff/buff ( #b3 #yFrail , #b3 #yWeak , #b3 #yVulerable , #b3 #yPoison , #b8 #yCharge-up )to you at the start of each combat."
+      "Gain [B] at the start of each turn. NL Apply a random debuff/buff ( #b2 #yFrail , #b2 #yWeak , #b2 #yVulerable , #b3 #yPoison , #b8 #yCharge-up )to you at the start of each combat."
     ]
   },
   "ExperimentalFamiliar": {
@@ -89,6 +89,13 @@
     "FLAVOR": "The dead branch just come to life in Marisa's hand,how poetic.",
     "DESCRIPTIONS": [
       "At the Start of each battle,grant you #b5 stack #yRegen ."
+    ]
+  },
+  "AmplifyWand": {
+    "NAME": "Amplify Wand",
+    "FLAVOR": "A Wand seems not often used.",
+    "DESCRIPTIONS": [
+      "Whenever you activate #yAmplify ,gain #b5  #yblock ."
     ]
   },
   "WWWWWWWWWWWW": {

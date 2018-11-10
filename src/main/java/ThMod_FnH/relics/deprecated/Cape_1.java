@@ -1,4 +1,4 @@
-package ThMod_FnH.relics;
+package ThMod_FnH.relics.deprecated;
 
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -9,16 +9,17 @@ import com.megacrit.cardcrawl.rooms.ShopRoom;
 import ThMod_FnH.ThMod;
 import basemod.abstracts.CustomRelic;
 
-public class Cape extends CustomRelic {
+@Deprecated
+public class Cape_1 extends CustomRelic {
 
-  public static final String ID = "Cape";
+  public static final String ID = "Cape_1";
   private static final String IMG = "img/relics/vCore.png";
   private static final String IMG_OTL = "img/relics/outline/vCore.png";
   private static final int RELIC_RATE = 30;
   private static final int RELIC_RATE_RARE = 18;
   private static final int RELIC_RATE_UNCOMMON = 50;
 
-  public Cape() {
+  public Cape_1() {
     super(
         ID,
         ImageMaster.loadImage(IMG),
@@ -30,7 +31,7 @@ public class Cape extends CustomRelic {
 
   public void onEnterRoom(AbstractRoom room) {
     if ((room instanceof ShopRoom)) {
-      ThMod.logger.info("Cape : onEnterRoom : ShopRoom detected .");
+      ThMod.logger.info("Cape_1 : onEnterRoom : ShopRoom detected .");
       this.flash();
       AbstractRoom currRoom = AbstractDungeon.getCurrRoom();
       currRoom.addPotionToRewards();
@@ -54,6 +55,6 @@ public class Cape extends CustomRelic {
   }
 
   public AbstractRelic makeCopy() {
-    return new Cape();
+    return new Cape_1();
   }
 }

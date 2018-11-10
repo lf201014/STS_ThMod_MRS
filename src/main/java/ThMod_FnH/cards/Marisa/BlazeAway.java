@@ -88,6 +88,11 @@ public class BlazeAway extends CustomCard {
       AbstractDungeon.actionManager.addToBottom(
           new MakeTempCardInHandAction(card, 1)
       );
+      if (this.upgraded) {
+        AbstractDungeon.actionManager.addToBottom(
+            new MakeTempCardInHandAction(card, 1)
+        );
+      }
 
     } else {
       ThMod.logger.info("BlazeAway : error : last attack is null ");
@@ -102,9 +107,9 @@ public class BlazeAway extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      upgradeBaseCost(0);
-      //this.rawDescription = DESCRIPTION_UPG;
-      //initializeDescription();
+      //upgradeBaseCost(0);
+      this.rawDescription = DESCRIPTION_UPG;
+      initializeDescription();
       //this.exhaust = false;
     }
   }
