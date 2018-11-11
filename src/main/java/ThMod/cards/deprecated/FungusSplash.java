@@ -1,4 +1,4 @@
-package ThMod.cards.Marisa;
+package ThMod.cards.deprecated;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,6 +22,7 @@ public class FungusSplash extends CustomCard {
   private static final int COST = 1;
   private static final int UPG_COST = 0;
 
+  @Deprecated
   public FungusSplash() {
     super(
         ID,

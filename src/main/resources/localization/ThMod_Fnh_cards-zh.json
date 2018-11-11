@@ -459,6 +459,11 @@
     "DESCRIPTION": "获得 [B] 与 !M! 层 蓄力 。使这张卡在这场战斗中 蓄力 获得量增加 !D! ，能量获得量增加1。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
+  "NebulaRing": {
+    "NAME": "星云环",
+    "DESCRIPTION": "场上每有一个敌人，这张牌的耗能就减少1 [B] 。 NL 获得 !B! 点 格挡。",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
   "WWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTION": "WWWWWWWWWWW",

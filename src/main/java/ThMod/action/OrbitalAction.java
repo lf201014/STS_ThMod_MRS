@@ -18,7 +18,7 @@ public class OrbitalAction
   private AbstractPlayer p;
   private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("ExhumeAction");
   private static final String[] TEXT = uiStrings.TEXT;
-  private ArrayList<AbstractCard> orbitals = new ArrayList();
+  private ArrayList<AbstractCard> orbitals = new ArrayList<>();
 
   public OrbitalAction() {
     this.p = AbstractDungeon.player;

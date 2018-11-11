@@ -25,7 +25,7 @@ public class CollectingQuirk
   private static final int COST = 2;
   private static final int DIVIDER = 4;
   private static final int UPG_DIVIDER = 3;
-  private static final int ATK_DMG = 7;
+  private static final int ATK_DMG = 9;
   private int counter;
 
   public CollectingQuirk() {

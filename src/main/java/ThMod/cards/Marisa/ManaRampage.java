@@ -31,7 +31,7 @@ public class ManaRampage extends CustomCard {
         IMG_PATH,
         COST,
         DESCRIPTION,
-        CardType.ATTACK,
+        CardType.SKILL,
         AbstractCardEnum.MARISA_COLOR,
         CardRarity.RARE,
         CardTarget.ALL_ENEMY

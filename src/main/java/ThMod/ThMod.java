@@ -1,11 +1,15 @@
 package ThMod;
 
 import static ThMod.patches.AbstractCardEnum.MARISA_COLOR;
+import static ThMod.patches.ThModClassEnum.MARISA;
 
 import ThMod.cards.Marisa.AlicesGift;
 import ThMod.cards.Marisa.EnergyRecoil;
 import ThMod.cards.Marisa.ManaRampage;
+import ThMod.cards.Marisa.NebulaRing;
 import ThMod.cards.derivations.Exhaustion_MRS;
+import ThMod.potions.ShroomBrew;
+import com.megacrit.cardcrawl.localization.PotionStrings;
 import java.nio.charset.StandardCharsets;
 
 import org.apache.logging.log4j.LogManager;
@@ -49,7 +53,6 @@ import ThMod.cards.Marisa.EscapeVelocity;
 import ThMod.cards.Marisa.EventHorizon;
 import ThMod.cards.Marisa.FairyDestructionRay;
 import ThMod.cards.Marisa.FinalSpark;
-import ThMod.cards.Marisa.FungusSplash;
 import ThMod.cards.Marisa.GalacticHalo;
 import ThMod.cards.Marisa.GasGiant;
 import ThMod.cards.Marisa.GrandCross;
@@ -105,7 +108,6 @@ import ThMod.cards.derivations.Spark;
 import ThMod.cards.derivations.WhiteDwarf;
 import ThMod.characters.Marisa;
 import ThMod.patches.AbstractCardEnum;
-import ThMod.patches.ThModClassEnum;
 import ThMod.powers.Marisa.GrandCrossPower;
 import ThMod.relics.AmplifyWand;
 import ThMod.relics.BreadOfAWashokuLover;
@@ -163,6 +165,15 @@ public class ThMod implements PostExhaustSubscriber,
 
   private static final String MY_CHARACTER_BUTTON = "img/charSelect/MarisaButton.png";
   private static final String MARISA_PORTRAIT = "img/charSelect/marisaPortrait.jpg";
+
+  private static final String CARD_STRING = "localization/ThMod_Fnh_cards.json";
+  private static final String CARD_STRING_ZH = "localization/ThMod_Fnh_cards-zh.json";
+  private static final String RELIC_STRING = "localization/ThMod_Fnh_relics.json";
+  private static final String RELIC_STRING_ZH = "localization/ThMod_Fnh_relics-zh.json";
+  private static final String POWER_STRING = "localization/ThMod_Fnh_powers.json";
+  private static final String POWER_STRING_ZH = "localization/ThMod_Fnh_powers-zh.json";
+  private static final String POTION_STRING = "localization/ThMod_MRS_potions.json";
+  private static final String POTION_STRING_ZH = "localization/ThMod_MRS_potions-zh.json";
 
   //For Spark Themed cards
   public static boolean isSpark(AbstractCard card) {
@@ -294,12 +305,12 @@ public class ThMod implements PostExhaustSubscriber,
   public void receiveEditCharacters() {
     logger.info("begin editing characters");
 
-    logger.info("add " + ThModClassEnum.MARISA.toString());
+    logger.info("add " + MARISA.toString());
     BaseMod.addCharacter(
         new Marisa("Marisa"),
         MY_CHARACTER_BUTTON,
         MARISA_PORTRAIT,
-        ThModClassEnum.MARISA
+        MARISA
     );
     logger.info("done editing characters");
   }
@@ -471,8 +482,8 @@ public class ThMod implements PostExhaustSubscriber,
     UnlockTracker.unlockCard("ManaConvection");
     BaseMod.addCard(new PropBag());
     UnlockTracker.unlockCard("PropBag");
-    BaseMod.addCard(new FungusSplash());
-    UnlockTracker.unlockCard("FungusSplash");
+    BaseMod.addCard(new NebulaRing());
+    UnlockTracker.unlockCard("NebulaRing");
     BaseMod.addCard(new GalacticHalo());
     UnlockTracker.unlockCard("GalacticHalo");
     BaseMod.addCard(new SuperPerseids());
@@ -617,37 +628,39 @@ public class ThMod implements PostExhaustSubscriber,
   public void receiveEditStrings() {
     logger.info("start editing strings");
 
-    String relicStrings, cardStrings, powerStrings;
+    String relicStrings, cardStrings, powerStrings, potionStrings, relic, card, power, potion;
 
     if (Settings.language == Settings.GameLanguage.ZHS) {
       logger.info("lang == zhs");
-
-      relicStrings = Gdx.files.internal("localization/ThMod_Fnh_relics-zh.json")
-          .readString(String.valueOf(StandardCharsets.UTF_8));
-      BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
-
-      cardStrings = Gdx.files.internal("localization/ThMod_Fnh_cards-zh.json")
-          .readString(String.valueOf(StandardCharsets.UTF_8));
-      BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
-
-      powerStrings = Gdx.files.internal("localization/ThMod_Fnh_powers-zh.json")
-          .readString(String.valueOf(StandardCharsets.UTF_8));
-      BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
+      card = CARD_STRING_ZH;
+      relic = RELIC_STRING_ZH;
+      power = POWER_STRING_ZH;
+      potion = POTION_STRING_ZH;
     } else {
       logger.info("lang == eng");
-
-      relicStrings = Gdx.files.internal("localization/ThMod_Fnh_relics.json")
-          .readString(String.valueOf(StandardCharsets.UTF_8));
-      BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
-
-      cardStrings = Gdx.files.internal("localization/ThMod_Fnh_cards.json")
-          .readString(String.valueOf(StandardCharsets.UTF_8));
-      BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
-
-      powerStrings = Gdx.files.internal("localization/ThMod_Fnh_powers.json")
-          .readString(String.valueOf(StandardCharsets.UTF_8));
-      BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
+      card = CARD_STRING;
+      relic = RELIC_STRING;
+      power = POWER_STRING;
+      potion = POTION_STRING;
     }
+
+    relicStrings = Gdx.files.internal(relic).readString(
+        String.valueOf(StandardCharsets.UTF_8)
+    );
+    BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
+    cardStrings = Gdx.files.internal(card).readString(
+        String.valueOf(StandardCharsets.UTF_8)
+    );
+    BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
+    powerStrings = Gdx.files.internal(power).readString(
+        String.valueOf(StandardCharsets.UTF_8)
+    );
+    BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
+    potionStrings = Gdx.files.internal(potion).readString(
+        String.valueOf(StandardCharsets.UTF_8)
+    );
+    BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
+
     logger.info("done editing strings");
   }
 
@@ -655,6 +668,7 @@ public class ThMod implements PostExhaustSubscriber,
   public void receivePostInitialize() {
     // TODO Auto-generated method stub
     //BaseMod.addEvent(Mushrooms_MRS.ID, Mushrooms_MRS.class, Exordium.ID);
+    BaseMod.addPotion(ShroomBrew.class, STARLIGHT, STARLIGHT, STARLIGHT, "ShroomBrew", MARISA);
   }
 	/*
 	

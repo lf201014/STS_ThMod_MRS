@@ -1,0 +1,17 @@
+{
+  "ShroomBrew": {
+    "NAME": "蘑菇药剂",
+    "DESCRIPTIONS": [
+      "WWWW",
+      "WWWWW",
+      "WWWWWW"
+    ]
+  },
+  "WWWWWW": {
+    "NAME": "WWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWW",
+      "WWWWW"
+    ]
+  }
+}

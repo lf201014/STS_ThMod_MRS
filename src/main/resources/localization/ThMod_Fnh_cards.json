@@ -461,6 +461,11 @@
     "DESCRIPTION": "Gain [B] and !M! Charge-up. Increase the Charge-up gain of this card by !D! and energy gain by 1 for this battle.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
+  "NebulaRing": {
+    "NAME": "Nebula Ring",
+    "DESCRIPTION": "Costs 1 less [B] NL for each enemy alive. NL Gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
   "WWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTION": "WWWWWWWWWWW",
