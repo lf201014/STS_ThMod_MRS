@@ -17,11 +17,11 @@
   },
   "BlazingStar": {
     "NAME": "Blazing Star",
-    "DESCRIPTION": "Deal !B! damage. Increase damage by !M! for each Burn in your hand. NL Amplify  [B]  : Deal double damage. "
+    "DESCRIPTION": "Deal !B! damage. Deals !M! additional damage for each Burn in your hand. NL Amplify  [B]  : Deals double damage. "
   },
   "DarkSpark": {
     "NAME": "Dark Spark",
-    "DESCRIPTION": "Exhaust all non-Attack cards in your hand. NL Deal !D! damage to all enemies.",
+    "DESCRIPTION": "Exhaust all non-Attack cards in your hand. NL Deal !D! damage to ALL enemies.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   },
   "DeepEcoloBomb": {
@@ -30,13 +30,13 @@
   },
   "DoubleSpark": {
     "NAME": "Double Spark",
-    "DESCRIPTION": "Deal !D! damage. Add a Spark to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add an upgraded Spark to your hand."
+    "DESCRIPTION": "Deal !D! damage. Add 1 Spark to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add 1 Upgraded Spark to your hand."
   },
   "EarthLightRay": {
     "NAME": "Earth Light Ray",
-    "DESCRIPTION": "Heal !M! HP. Exhaust. NL Amplify  [B]  : Add a random card from your discard pile to your hand.",
-    "UPGRADE_DESCRIPTION": "Heal !M! HP. Exhaust. NL Amplify  [B]  : Choose a card from your discard pile to add to your hand."
+    "DESCRIPTION": "Heal !M! HP. Exhaust. NL Amplify  [B]  : Return a random card from your discard pile to your hand.",
+    "UPGRADE_DESCRIPTION": "Heal !M! HP. Exhaust. NL Amplify  [B]  : Return a card from your discard pile to your hand."
   },
   "EscapeVelocity": {
     "NAME": "Escape Velocity",
@@ -45,12 +45,12 @@
   },
   "FinalSpark": {
     "NAME": "Final Spark",
-    "DESCRIPTION": "Cost 1 less  [B]  for each Spark card you played this combat. NL Deal !D! damage to ALL enemies. NL Reset the cost of this card.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Cost 1 less  [B]  for each Spark card you played this combat. NL Deal !D! damage to ALL enemies. NL Reset the cost of this card."
+    "DESCRIPTION": "Cost 1 less  [B]  for each Spark card played this combat. NL Deal !D! damage to ALL enemies. NL Reset the cost of this card.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Cost 1 less  [B]  for each Spark card played this combat. NL Deal !D! damage to ALL enemies. NL Reset the cost of this card."
   },
   "GrandCross": {
     "NAME": "Grand Cross",
-    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if you activated the Amplify effect of a card this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if you have activated the Amplify effect of a card this turn."
   },
   "GravityBeat": {
     "NAME": "Gravity Beat",
@@ -77,7 +77,7 @@
   },
   "MeteoricShower": {
     "NAME": "Meteoric Shower",
-    "DESCRIPTION": "Exhaust X + 1 cards at most. NL For each card exhausted deal !D! damage twice, or thrice if it was a Burn."
+    "DESCRIPTION": "Exhaust up to X + 1 cards. NL For each card exhausted deal !D! damage twice, or thrice if it was a Burn."
   },
   "MilkyWay": {
     "NAME": "Milky Way",
@@ -85,7 +85,7 @@
   },
   "NonDirectionalLaser": {
     "NAME": "Non-Directional Laser",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies, then deal !D! damage to random enemy."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies, then deal !D! damage to a random enemy."
   },
   "Occultation": {
     "NAME": "Occultation",
@@ -99,8 +99,8 @@
   },
   "PolarisUnique": {
     "NAME": "Polaris Unique",
-    "DESCRIPTION": "Innate. Put a Guiding Star into your draw pile. Gain  [B]  at the start of your turn if it is in your draw pile.",
-    "UPGRADE_DESCRIPTION": "Innate. Put a Guiding Star into your draw pile. Gain  [B]  at the start of your turn if it is in your draw pile."
+    "DESCRIPTION": "Innate. Shuffle a Guiding Star into your draw pile. Gain  [B]  at the start of your turn while it is in your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. Shuffle a Guiding Star into your draw pile. Gain  [B]  at the start of your turn while it is in your draw pile."
   },
   "SatelliteIllusion": {
     "NAME": "Satellite Illusion",
