@@ -121,7 +121,7 @@ public class Marisa extends CustomPlayer {
       flavor = "\u4f4f\u5728\u9b54\u6cd5\u68ee\u6797\u7684\u9b54\u6cd5\u4f7f\u3002 NL \u5584\u957f\u4e8e\u5149\u548c\u70ed\u7684\u9b54\u6cd5\u3002";
     } else {
       title = "The Ordinary Magician";
-      flavor = "The \"ordinay\" magician lives in the magic forest. NL Specialized in light and heat magic.";
+      flavor = "The \"ordinary\" magician lives in the magical forest. NL Specializes in light and heat magic.";
     }
     return new CharSelectInfo(
         title,
