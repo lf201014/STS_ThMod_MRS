@@ -1,16 +1,16 @@
 {
   "MiniHakkero": {
     "NAME": "Mini-Hakkero",
-    "FLAVOR": "Aka mini-EightTrigram Furnace,is originally gift by Rinosuke when Marisa left her parents.",
+    "FLAVOR": "A mini-Eight Trigram Furnace, a gift from Rinosuke when Marisa left her parents.",
     "DESCRIPTIONS": [
-      "When you play a card,gain #b1  #yCharge-up ."
+      "Whenever you play a card, gain #b1  #yCharge-up ."
     ]
   },
   "EnhancedHakkero": {
     "NAME": "Bewitched Hakkero",
-    "FLAVOR": "Its firepower came to a new level,but is it ok to use a bewitched tool?",
+    "FLAVOR": "Its firepower is on a new level, but is it ok to use a bewitched tool?",
     "DESCRIPTIONS": [
-      "Replace #rMini-Hakkero . NL When you play a card or attacked,gain #b1 #yCharge-up ."
+      "Replaces #rMini-Hakkero . NL Whenever you play a card or are attacked, gain #b1 #yCharge-up ."
     ]
   },
   "MagicArmor": {
@@ -29,14 +29,14 @@
   },
   "AmpWand": {
     "NAME": "Amplify Wand",
-    "FLAVOR": "A Wand seems not often used.",
+    "FLAVOR": "A Wand seems to not be used often.",
     "DESCRIPTIONS": [
       "Every time you activate 3 #yAmplify effects, gain [B]  [B] ."
     ]
   },
   "RampagingMagicTools": {
     "NAME": "Rampaging Magic Tool",
-    "FLAVOR": "It's been so long since anyone last used them,who knows what could happen?",
+    "FLAVOR": "It's been so long since anyone last used them. Who knows what could happen?",
     "DESCRIPTIONS": [
       "Gain [B] at the start of each turn. NL Apply a random debuff/buff ( #b2 #yFrail , #b2 #yWeak , #b2 #yVulerable , #b3 #yPoison , #b8 #yCharge-up )to you at the start of each combat."
     ]
@@ -50,9 +50,9 @@
   },
   "BreadOfAWashokuLover": {
     "NAME": "Bread Of A Washoku Lover",
-    "FLAVOR": "\"Can you remember how many slices of bread you have eaten until now?\"\"Thirteen.I prefer Japanese food.\"",
+    "FLAVOR": "\"Can you remember how many slices of bread you have eaten until now?\"\"Thirteen. I prefer Japanese food.\"",
     "DESCRIPTIONS": [
-      "Heal 1 hp when you exhaust a #yStatus or #yCurse. NL When triggered 13 times,you gain #b13 max HP,and this relic no longer works."
+      "Heal 1 hp whenever you exhaust a #yStatus or a #yCurse. NL When triggered 13 times, you gain #b13 max HP,and this relic no longer works."
     ]
   },
   "SimpleLauncher": {
@@ -66,7 +66,7 @@
     "NAME": "Handmade Grimoire",
     "FLAVOR": "A notebook full of experiment records and magic material recipes;just how Marisa develops her Magics.",
     "DESCRIPTIONS": [
-      "At the start of battle,for every 15 cards in your master deck,gain [B] and draw a card."
+      "At the start of battle,for every 15 cards in your master deck, gain [B] and draw a card."
     ]
   },
   "ShroomBag": {
@@ -88,14 +88,14 @@
     "NAME": "Sprouting Branch",
     "FLAVOR": "The dead branch just come to life in Marisa's hand,how poetic.",
     "DESCRIPTIONS": [
-      "At the Start of each battle,grant you #b5 stack #yRegen ."
+      "At the start of combat, gain #b5 #yRegen ."
     ]
   },
   "AmplifyWand": {
     "NAME": "Amplify Wand",
-    "FLAVOR": "A Wand seems not often used.",
+    "FLAVOR": "A Wand seems to not be used often.",
     "DESCRIPTIONS": [
-      "Whenever you activate #yAmplify ,gain #b5  #yblock ."
+      "Whenever you activate an #yAmplify effect, gain #b5  #yblock ."
     ]
   },
   "WWWWWWWWWWWW": {
