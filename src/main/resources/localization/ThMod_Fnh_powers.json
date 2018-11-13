@@ -2,7 +2,7 @@
   "DarkMatterPower": {
     "NAME": "Dark Matter",
     "DESCRIPTIONS": [
-      "You cannot play more #yDark #yMatter this turn.",
+      "You can no longer play #yDark #yMatter this turn.",
       ""
     ]
   },
@@ -17,8 +17,8 @@
   "EventHorizonPower": {
     "NAME": "Event Horizon",
     "DESCRIPTIONS": [
-      "You can pick a card from your discard pile to your hand  #b",
-      " time(s) each turn when you activate #yAmplify .",
+      "You can put an Attack from your discard pile into your hand whenever you activate an Amplify effect, up to #b",
+      " time(s) each turn.",
       "( ",
       " charge(s) left)"
     ]
@@ -33,7 +33,7 @@
   "MilliPulsaPower": {
     "NAME": "Millisecond Pulsars",
     "DESCRIPTIONS": [
-      " #yAmplify no longer need extra energy to activate.",
+      " #yAmplify effects no longer need extra energy to activate.",
       ""
     ]
   },
@@ -111,35 +111,35 @@
   "EnergyFlowPower": {
     "NAME": "Energy Flow",
     "DESCRIPTIONS": [
-      "At the end of your turn ,gain  #b",
+      "At the end of your turn, gain  #b",
       " #yCharge-up ."
     ]
   },
   "PulseMagicPower": {
     "NAME": "Pulse Magic",
     "DESCRIPTIONS": [
-      "You don't need to pay extra  [B]  to activate #yAmplify this turn.",
+      "You don't need to pay  [B]  to activate #yAmplify effects this turn.",
       "WWWWWWWWWWW"
     ]
   },
   "SingularityPower": {
     "NAME": "Singualrity",
     "DESCRIPTIONS": [
-      "When you play a card that cost 0 ,increase the damage of a random #yattack in your hand by #b",
+      "When you play a card that costs 0 , increase the damage of a random #yAttack in your hand by #b",
       " ."
     ]
   },
   "WitchOfGreedGold": {
     "NAME": "Witch Of Greed",
     "DESCRIPTIONS": [
-      "At the end of combat,gain  #b",
+      "At the end of combat, gain  #b",
       " gold ."
     ]
   },
   "WitchOfGreedPotion": {
     "NAME": "Witch Of Greed",
     "DESCRIPTIONS": [
-      "At the end of combat,gain  #b",
+      "At the end of combat, obtain  #b",
       " random potion."
     ]
   },
@@ -231,7 +231,7 @@
   "GrandCrossPower": {
     "NAME": "Amplified",
     "DESCRIPTIONS": [
-      "You have activated #yAmplify effect this turn.",
+      "You have activated an #yAmplify effect this turn.",
       "WWWWWWWWWWW"
     ]
   },
