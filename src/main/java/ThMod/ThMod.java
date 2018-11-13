@@ -482,8 +482,8 @@ public class ThMod implements PostExhaustSubscriber,
     UnlockTracker.unlockCard("ManaConvection");
     BaseMod.addCard(new PropBag());
     UnlockTracker.unlockCard("PropBag");
-    BaseMod.addCard(new NebulaRing());
-    UnlockTracker.unlockCard("NebulaRing");
+    //BaseMod.addCard(new NebulaRing());
+    //UnlockTracker.unlockCard("NebulaRing");
     BaseMod.addCard(new GalacticHalo());
     UnlockTracker.unlockCard("GalacticHalo");
     BaseMod.addCard(new SuperPerseids());
