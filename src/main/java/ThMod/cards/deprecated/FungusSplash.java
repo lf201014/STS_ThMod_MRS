@@ -11,6 +11,7 @@ import ThMod.action.FungusSplashAction;
 import ThMod.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
+@Deprecated
 public class FungusSplash extends CustomCard {
 
   public static final String ID = "FungusSplash";
