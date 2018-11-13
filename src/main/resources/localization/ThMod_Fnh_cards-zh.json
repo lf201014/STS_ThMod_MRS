@@ -461,7 +461,7 @@
   },
   "NebulaRing": {
     "NAME": "星云环",
-    "DESCRIPTION": "场上每有一个敌人，这张牌的耗能就减少1 [B] 。 NL 获得 !B! 点 格挡。",
+    "DESCRIPTION": "每当你因敌人或卡牌损失 格挡 ，获得 !M! 层 多层护甲 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WWWWWWWWWWWWW": {

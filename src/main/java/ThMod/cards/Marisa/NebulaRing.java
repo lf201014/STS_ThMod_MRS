@@ -1,6 +1,7 @@
 package ThMod.cards.Marisa;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import ThMod.powers.Marisa.NebulaPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,13 +14,13 @@ import ThMod.patches.AbstractCardEnum;
 public class NebulaRing extends CustomCard {
 
   public static final String ID = "NebulaRing";
-  public static final String IMG_PATH = "img/cards/Defend.png";
+  public static final String IMG_PATH = "img/cards/feelNoPain.png";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-  private static final int COST = 4;
-  private static final int BLOCK_AMT = 18;
-  private static final int UPGRADE_PLUS_BLOCK = 6;
+  private static final int COST = 1;
+  private static final int STACK = 1;
+  private static final int UPG_STACK = 1;
 
   public NebulaRing() {
     super(
@@ -28,37 +29,22 @@ public class NebulaRing extends CustomCard {
         IMG_PATH,
         COST,
         DESCRIPTION,
-        AbstractCard.CardType.SKILL,
+        CardType.POWER,
         AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.BASIC,
+        CardRarity.UNCOMMON,
         AbstractCard.CardTarget.SELF
     );
-    this.baseBlock = BLOCK_AMT;
-  }
-
-  @Override
-  public void applyPowers() {
-    super.applyPowers();
-    if ((this.costForTurn != this.costForTurn)||(this.costForTurn <= 0)){
-      return;
-    }
-    int count = 0;
-    for (AbstractMonster mon : AbstractDungeon.getMonsters().monsters) {
-      if (!mon.isDeadOrEscaped()) {
-        count++;
-      }
-    }
-    if (count >= this.costForTurn){
-      this.costForTurn = 0;
-    } else {
-      this.costForTurn -= count;
-    }
-    this.isCostModified = true;
+    this.magicNumber = this.baseMagicNumber = STACK;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
     AbstractDungeon.actionManager.addToBottom(
-        new GainBlockAction(p, p, this.block)
+        new ApplyPowerAction(
+            p,
+            p,
+            new NebulaPower(p, this.magicNumber),
+            this.magicNumber
+        )
     );
   }
 
@@ -69,7 +55,7 @@ public class NebulaRing extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      upgradeBlock(UPGRADE_PLUS_BLOCK);
+      upgradeMagicNumber(UPG_STACK);
     }
   }
 }

@@ -23,7 +23,7 @@ public class ShroomBrew
   public ShroomBrew() {
     super(
         NAME
-        , "Ancient Potion"
+        , "ShroomBrew"
         , AbstractPotion.PotionRarity.UNCOMMON
         , AbstractPotion.PotionSize.FAIRY
         , AbstractPotion.PotionColor.FIRE
@@ -31,6 +31,7 @@ public class ShroomBrew
     this.potency = getPotency();
     this.description = DESCRIPTIONS[0];
     this.isThrown = true;
+    this.targetRequired = true;
     this.tips.add(
         new PowerTip(this.name, this.description)
     );

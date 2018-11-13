@@ -36,8 +36,8 @@ public class Marisa extends CustomPlayer {
   private static final String MARISA_CORPSE = "img/char/Marisa/fallen.png"; // dead corpse
   public static final Logger logger = LogManager.getLogger(ThMod.class.getName());
   //private static final float[] layerSpeeds = { 20.0F, 0.0F, -40.0F, 0.0F, 0.0F, 5.0F, 0.0F, -8.0F, 0.0F, 8.0F };
-  private static final String MARISA_SKELETON_ATLAS = "img/char/Marisa/MarisaModelv3.atlas";// Marisa_v0 / MarisaModel_v02 /MarisaModelv3
-  private static final String MARISA_SKELETON_JSON = "img/char/Marisa/MarisaModelv3.json";
+  private static final String MARISA_SKELETON_ATLAS = "img/char/Marisa/MarisaModel_v02.atlas";// Marisa_v0 / MarisaModel_v02 /MarisaModelv3
+  private static final String MARISA_SKELETON_JSON = "img/char/Marisa/MarisaModel_v02.json";
   private static final String MARISA_ANIMATION = "Idle";// Sprite / Idle
   private static final String[] ORB_TEXTURES = {
       "img/UI/EPanel/layer5.png",
@@ -77,7 +77,7 @@ public class Marisa extends CustomPlayer {
         new EnergyManager(ENERGY_PER_TURN)
     );
 
-    loadAnimation(MARISA_SKELETON_ATLAS, MARISA_SKELETON_JSON, 1.0F);
+    loadAnimation(MARISA_SKELETON_ATLAS, MARISA_SKELETON_JSON, 1.3F);
     // if you're using modified versions of base game animations or made animations in spine make sure to include this bit and the following lines
     AnimationState.TrackEntry e = this.state.setAnimation(0, MARISA_ANIMATION, true);
     e.setTime(e.getEndTime() * MathUtils.random());

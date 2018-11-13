@@ -463,7 +463,7 @@
   },
   "NebulaRing": {
     "NAME": "Nebula Ring",
-    "DESCRIPTION": "Costs 1 less [B] NL for each enemy alive. NL Gain !B! Block.",
+    "DESCRIPTION": "Gain !M! Plated Armor whenever you lose Block from enemies or cards.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WWWWWWWWWWWWWW": {
