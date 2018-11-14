@@ -22,9 +22,9 @@ public class EnergyFlowPower
     this.ID = POWER_ID;
     this.owner = owner;
     this.type = AbstractPower.PowerType.BUFF;
+    this.amount = amount;
     updateDescription();
     this.img = new Texture("img/powers/electricField.png");
-    this.amount = amount;
   }
 
   public void atEndOfTurn(boolean isPlayer) {

@@ -16,17 +16,17 @@ public class ShroomBrew
 
   public static final String POTION_ID = "ShroomBrew";
   private static final PotionStrings potionStrings =
-      CardCrawlGame.languagePack.getPotionString("ShroomBrew");
+      CardCrawlGame.languagePack.getPotionString(POTION_ID);
   public static final String NAME = potionStrings.NAME;
   public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
   public ShroomBrew() {
     super(
-        NAME
-        , "ShroomBrew"
-        , AbstractPotion.PotionRarity.UNCOMMON
-        , AbstractPotion.PotionSize.FAIRY
-        , AbstractPotion.PotionColor.FIRE
+        NAME,
+        POTION_ID,
+        PotionRarity.UNCOMMON,
+        PotionSize.FAIRY,
+        PotionColor.SMOKE
     );
     this.potency = getPotency();
     this.description = DESCRIPTIONS[0];
