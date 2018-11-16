@@ -68,7 +68,7 @@
   },
   "MagicAbsorber": {
     "NAME": "Magic Absorber",
-    "DESCRIPTION": "Gain !B! Block. Remove a random debuff. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. Remove a random debuff from yourself. NL Exhaust."
   },
   "MasterSpark": {
     "NAME": "Master Spark",
