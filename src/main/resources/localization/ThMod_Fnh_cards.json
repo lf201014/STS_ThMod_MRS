@@ -253,7 +253,7 @@
   },
   "Singularity": {
     "NAME": "Singularity",
-    "DESCRIPTION": "Increase the damage of a random Attack in your hand by !M! whenever you play a card that costs 0.",
+    "DESCRIPTION": "Whenever you play a card that costs 0, increase the damage of a random Attack in your hand by !M! .",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "SporeBomb": {
