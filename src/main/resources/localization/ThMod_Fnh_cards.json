@@ -124,8 +124,8 @@
   },
   "MillisecondPulsars": {
     "NAME": "Millisecond Pulsars",
-    "DESCRIPTION": "Amplify effects cost no  [B]  for this combat.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Amplify effects cost no  [B]  for this combat."
+    "DESCRIPTION": "Amplify effects cost no  [B]  this combat.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Amplify effects cost no  [B]  this combat."
   },
   "Spark": {
     "NAME": "Spark",
