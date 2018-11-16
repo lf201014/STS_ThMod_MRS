@@ -50,7 +50,7 @@
   },
   "GrandCross": {
     "NAME": "Grand Cross",
-    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if you have activated the Amplify effect of a card this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if you have activated an Amplify effect this turn."
   },
   "GravityBeat": {
     "NAME": "Gravity Beat",
