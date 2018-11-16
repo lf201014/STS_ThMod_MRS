@@ -35,8 +35,8 @@
   },
   "EarthLightRay": {
     "NAME": "Earth Light Ray",
-    "DESCRIPTION": "Heal !M! HP. Exhaust. NL Amplify  [B]  : Return a random card from your discard pile to your hand.",
-    "UPGRADE_DESCRIPTION": "Heal !M! HP. Exhaust. NL Amplify  [B]  : Return a card from your discard pile to your hand."
+    "DESCRIPTION": "Heal !M! HP. Exhaust. NL Amplify  [B]  : Put a random card from your discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Heal !M! HP. Exhaust. NL Amplify  [B]  : Put a card from your discard pile into your hand."
   },
   "EscapeVelocity": {
     "NAME": "Escape Velocity",
