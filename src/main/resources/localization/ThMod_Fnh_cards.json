@@ -223,8 +223,8 @@
   },
   "JA": {
     "NAME": "Warming Up",
-    "DESCRIPTION": "Deal !D! damage. Add a 623B, a Spark and a WitchLeyline to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a 623B, a Spark and a WitchLeyline to your hand and upgrade them."
+    "DESCRIPTION": "Deal !D! damage. Add a 623B, a Spark and a Witch Leyline to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a 623B, a Spark and a Witch Leyline to your hand and Upgrade them."
   },
   "AbsoluteMagnitude": {
     "NAME": "Absolute Magnitude",
