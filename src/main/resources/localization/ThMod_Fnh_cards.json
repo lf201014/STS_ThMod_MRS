@@ -76,7 +76,7 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Amplify  [B]  : Deal 9 more damage."
   },
   "MeteoricShower": {
-    "NAME": "Meteoric Shower",
+    "NAME": "Meteor Shower",
     "DESCRIPTION": "Exhaust up to X + 1 cards. NL Deal !D! damage 2 times for each card you Exhausted, or 3 times for each Burn Exhausted."
   },
   "MilkyWay": {
