@@ -109,7 +109,7 @@
   },
   "ShootTheMoon": {
     "NAME": "Shoot The Moon",
-    "DESCRIPTION": "Deal !D! damage. Remove a random buff from your target if it is not a boss. NL Amplify  [B]  : !B! damage instead, remove ALL buffs.",
+    "DESCRIPTION": "Remove a random buff from your target if it is not a boss enemy. Deal !D! damage. NL Amplify  [B]  : Remove ALL buffs and deal !B! damage instead.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWW"
   },
   "StarDustReverie": {
@@ -243,8 +243,8 @@
   },
   "PulseMagic": {
     "NAME": "Pulse Magic",
-    "DESCRIPTION": "Gain  [B]  next turn. Amplify [B]  : You don't need to pay extra [B] to activate Amplify this turn.",
-    "UPGRADE_DESCRIPTION": "Gain [B]  [B]  next turn. Amplify [B]  : You don't need to pay extra [B] to activate Amplify this turn."
+    "DESCRIPTION": "Gain  [B]  next turn. Amplify [B]  : You don't need to pay extra [B] to activate Amplify effects this turn.",
+    "UPGRADE_DESCRIPTION": "Gain [B]  [B]  next turn. Amplify [B]  : You don't need to pay extra [B] to activate Amplify effects this turn."
   },
   "D6C": {
     "NAME": "66C",
