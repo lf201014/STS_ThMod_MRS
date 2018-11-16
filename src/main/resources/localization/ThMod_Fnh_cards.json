@@ -258,7 +258,7 @@
   },
   "SporeBomb": {
     "NAME": "Spore Crump",
-    "DESCRIPTION": "Apply !M! Vulnerable to an enemy. NL Amplify  [B]  : Apply to ALL enemies instead.",
+    "DESCRIPTION": "Apply !M! Vulnerable to an enemy. NL Amplify  [B]  : Apply !M! Vulnerable to ALL enemies instead.",
     "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to all enemies. NL Amplify  [B]  : 1 more stack."
   },
   "FluorensentBeam": {
