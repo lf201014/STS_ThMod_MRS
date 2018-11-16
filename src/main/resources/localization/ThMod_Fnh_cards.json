@@ -26,7 +26,7 @@
   },
   "DeepEcoloBomb": {
     "NAME": "Deep Ecological Bomb",
-    "DESCRIPTION": "Deal !D! damage to a random enemy, then reduce its Strength by !M! for a turn. NL Amplify  [B]  : Do it again."
+    "DESCRIPTION": "Deal !D! damage to a random enemy, then reduce its Strength by !M! for a turn. NL Amplify  [B]  : Apply this effect again."
   },
   "DoubleSpark": {
     "NAME": "Double Spark",
