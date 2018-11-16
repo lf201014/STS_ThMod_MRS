@@ -248,7 +248,7 @@
   },
   "D6C": {
     "NAME": "66C",
-    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Deal double damage if there are no cards in your discard pile.",
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Deals double damage if there are no cards in your discard pile.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Singularity": {
