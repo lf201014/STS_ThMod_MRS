@@ -318,10 +318,10 @@
   },
   "DarkMatter": {
     "NAME": "Dark Matter",
-    "DESCRIPTION": "Can only be played once per turn. NL Put 2 Dark Matter into your draw pile. Draw a card. Gain !B! Block when exhausted. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "Can only be played once per turn. NL Put 2 Upgraded Dark Matter into your draw pile. Draw a card. Gain !B! Block when exhausted. NL Ethereal .",
+    "DESCRIPTION": "Can only be played once per turn. NL Shuffle 2 copies of this card into your draw pile. Draw 1 card. When this card is Exhausted, gain !B! Block. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Can only be played once per turn. NL Shuffle 2 copies of this card into your draw pile. Draw 1 card. When this card is Exhausted, gain !B! Block. NL Ethereal .",
     "EXTENDED_DESCRIPTION":[
-      "I can't play any more Dark Matter this turn.",
+      "I can't play Dark Matter again this turn.",
       ""
     ]
   },
