@@ -89,8 +89,8 @@
   },
   "Occultation": {
     "NAME": "Occultation",
-    "DESCRIPTION": "Discard ALL cards in your draw pile and gain 1 Block for each of them.",
-    "UPGRADE_DESCRIPTION": "Discard ALL cards in your draw pile and gain 1 Block for each of them. Gain 3 Block."
+    "DESCRIPTION": "Discard your draw pile. Gain 1 Block for each card discarded.",
+    "UPGRADE_DESCRIPTION": "Discard your draw pile. Gain 1 Block for each card discarded. Gain 3 Block."
   },
   "OortCloud": {
     "NAME": "OortCloud",
