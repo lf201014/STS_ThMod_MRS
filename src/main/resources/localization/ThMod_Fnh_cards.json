@@ -144,7 +144,7 @@
   },
   "OrrerysSun": {
     "NAME": "Orrerys Sun",
-    "DESCRIPTION": "For each stack of Charge-up you have, deal !M! damage to ALL enemies.",
+    "DESCRIPTION": "Whenever Charge-Up is consumed, deal !M! damage to ALL enemies.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ChargingUp": {
