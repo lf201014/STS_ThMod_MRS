@@ -90,7 +90,7 @@
   "Occultation": {
     "NAME": "Occultation",
     "DESCRIPTION": "Discard your draw pile. Gain 1 Block for each card discarded.",
-    "UPGRADE_DESCRIPTION": "Discard your draw pile. Gain 1 Block for each card discarded. Gain 3 Block."
+    "UPGRADE_DESCRIPTION": "Discard your draw pile. Gain 1 Block for each card discarded +3."
   },
   "OortCloud": {
     "NAME": "OortCloud",
