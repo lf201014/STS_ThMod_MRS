@@ -193,7 +193,7 @@
   },
   "SuperPerseids": {
     "NAME": "Super Perseids",
-    "DESCRIPTION": "Unplayable. Gain [B] when you draw this card. NL Deal !D! damage to a random enemy when exhausted.",
+    "DESCRIPTION": "Unplayable. When this card is drawn, gain [B]. NL If this card is Exhausted, deal !D! damage to a random enemy.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MysteriousBeam": {
