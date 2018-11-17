@@ -144,7 +144,7 @@
   },
   "OrrerysSun": {
     "NAME": "Orrerys Sun",
-    "DESCRIPTION": "Whenever Charge-Up is consumed, deal !M! damage to ALL enemies.",
+    "DESCRIPTION": "Whenever Charge-up is consumed, deal !M! damage to ALL enemies.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ChargingUp": {
@@ -342,8 +342,8 @@
   },
   "EnergyRecoil": {
     "NAME": "Energy Recoil",
-    "DESCRIPTION": "Gain Block equal to your Charge-Up.",
-    "UPGRADE_DESCRIPTION": "Gain Block equal to your Charge-Up + 3.",
+    "DESCRIPTION": "Gain Block equal to your Charge-up.",
+    "UPGRADE_DESCRIPTION": "Gain Block equal to your Charge-up + 3.",
     "EXTENDED_DESCRIPTION":[
       " NL (Gain ",
       " Block.)"
@@ -453,7 +453,7 @@
   },
   "Exhaustion_MRS": {
     "NAME": "Exhaustion",
-    "DESCRIPTION": "Unplayable. NL You cannot gain or use Charge-Up when this card is in your hand.",
+    "DESCRIPTION": "Unplayable. NL You cannot gain or use Charge-up when this card is in your hand.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "UltimateShortwave": {
