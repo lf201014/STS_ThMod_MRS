@@ -164,12 +164,12 @@
   },
   "BlazeAway": {
     "NAME": "Blaze Away",
-    "DESCRIPTION": "Add a copy of the last Attack you played this turn to your hand. NL Amplify [B] : It costs 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Add 2 copies of the last Attack you played this turn to your hand. NL Amplify [B] : It costs 0 this turn.",
+    "DESCRIPTION": "Add a copy of the last Attack you played this turn to your hand. NL It costs 0 this turn.",
+    "UPGRADE_DESCRIPTION": "Add 2 copies of the last Attack you played this turn to your hand. NL They costs 0 this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (Last Attack : ",
       " ).",
-      " NL (You haven't played an attack this turn.)"
+      " NL (You haven't played an Attack this turn.)"
     ]
   },
   "MaximisePower": {
@@ -458,7 +458,17 @@
   },
   "UltimateShortwave": {
     "NAME": "Ultimate Shortwave",
-    "DESCRIPTION": "Gain [B] and !M! Charge-up. Increase the Charge-up gain of this card by !D! and energy gain by 1 for this battle.",
+    "DESCRIPTION": "Gain !B! [B] and !M! Charge-up. Increase the Charge-up gain of this card by !D! and energy gain by 1 for this battle.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "NebulaRing": {
+    "NAME": "Nebula Ring",
+    "DESCRIPTION": "Gain !M! Plated Armor whenever you lose Block from enemies or cards.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "SprinkleStarSeal": {
+    "NAME": "Sprinkle Star Seal",
+    "DESCRIPTION": "Apply 99 Weak. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WWWWWWWWWWWWWW": {
