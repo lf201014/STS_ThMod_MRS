@@ -270,6 +270,13 @@
       "WWWWWWWWWWW"
     ]
   },
+  "Nebula": {
+    "NAME": "星云",
+    "DESCRIPTIONS": [
+      "每当你因敌人或卡牌损失 格挡 ，获得 ",
+      " 层 多层护甲 。"
+    ]
+  },
   "WWWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [

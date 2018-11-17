@@ -1,0 +1,167 @@
+
+MarisaModelv3.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hat_b
+  rotate: false
+  xy: 285, 323
+  size: 120, 39
+  orig: 120, 39
+  offset: 0, 0
+  index: -1
+ribbon
+  rotate: false
+  xy: 481, 159
+  size: 8, 91
+  orig: 8, 91
+  offset: 0, 0
+  index: -1
+hair_b
+  rotate: false
+  xy: 1, 83
+  size: 178, 162
+  orig: 178, 162
+  offset: 0, 0
+  index: -1
+braid
+  rotate: false
+  xy: 479, 404
+  size: 32, 71
+  orig: 32, 71
+  offset: 0, 0
+  index: -1
+cape_b
+  rotate: false
+  xy: 396, 1
+  size: 106, 156
+  orig: 106, 156
+  offset: 0, 0
+  index: -1
+skull
+  rotate: false
+  xy: 227, 278
+  size: 56, 85
+  orig: 56, 85
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 455, 344
+  size: 43, 58
+  orig: 43, 58
+  offset: 0, 0
+  index: -1
+propbag
+  rotate: false
+  xy: 384, 290
+  size: 60, 28
+  orig: 60, 28
+  offset: 0, 0
+  index: -1
+hand_r
+  rotate: false
+  xy: 266, 83
+  size: 120, 103
+  orig: 120, 103
+  offset: 0, 0
+  index: -1
+Shirt1
+  rotate: false
+  xy: 179, 401
+  size: 68, 83
+  orig: 68, 83
+  offset: 0, 0
+  index: -1
+hotpants
+  rotate: false
+  xy: 407, 423
+  size: 70, 45
+  orig: 70, 45
+  offset: 0, 0
+  index: -1
+broom
+  rotate: false
+  xy: 1, 1
+  size: 393, 80
+  orig: 393, 80
+  offset: 0, 0
+  index: -1
+belt
+  rotate: false
+  xy: 285, 278
+  size: 48, 21
+  orig: 48, 21
+  offset: 0, 0
+  index: -1
+thigh_r
+  rotate: false
+  xy: 455, 290
+  size: 54, 52
+  orig: 54, 52
+  offset: 0, 0
+  index: -1
+leg_r
+  rotate: false
+  xy: 179, 269
+  size: 46, 130
+  orig: 46, 130
+  offset: 0, 0
+  index: -1
+thigh_l
+  rotate: false
+  xy: 249, 365
+  size: 74, 64
+  orig: 74, 64
+  offset: 0, 0
+  index: -1
+leg_l
+  rotate: false
+  xy: 337, 188
+  size: 45, 133
+  orig: 45, 133
+  offset: 0, 0
+  index: -1
+ArmL
+  rotate: false
+  xy: 407, 323
+  size: 46, 98
+  orig: 46, 98
+  offset: 0, 0
+  index: -1
+HandL
+  rotate: false
+  xy: 285, 301
+  size: 28, 12
+  orig: 28, 12
+  offset: 0, 0
+  index: -1
+cape_f
+  rotate: false
+  xy: 181, 83
+  size: 83, 184
+  orig: 83, 184
+  offset: 0, 0
+  index: -1
+Hair_F
+  rotate: false
+  xy: 266, 188
+  size: 69, 88
+  orig: 69, 88
+  offset: 0, 0
+  index: -1
+hat
+  rotate: false
+  xy: 1, 247
+  size: 176, 77
+  orig: 176, 77
+  offset: 0, 0
+  index: -1
+bow
+  rotate: false
+  xy: 388, 159
+  size: 91, 129
+  orig: 91, 129
+  offset: 0, 0
+  index: -1
