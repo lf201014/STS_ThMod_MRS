@@ -395,8 +395,8 @@
   },
   "PropBag": {
     "NAME": "Portable Prop Bag",
-    "DESCRIPTION": "Randomly get either Orichalcum, Amplify Wand or Art Of War. NL Lose that relic when the battle ends. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": " Innate. NL Randomly get either Orichalcum, Amplify Wand or Art Of War. NL Lose that relic when the battle ends. NL Exhaust."
+    "DESCRIPTION": "Randomly get either Orichalcum, Amplification Wand or Art Of War. NL Lose that relic when the battle ends. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Innate. NL Randomly get either Orichalcum, Amplification Wand or Art Of War. NL Lose that relic when the battle ends. NL Exhaust."
   },
   "BlackFlareStar": {
     "NAME": "Black Flare Star",
