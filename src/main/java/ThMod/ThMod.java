@@ -6,7 +6,7 @@ import static ThMod.patches.ThModClassEnum.MARISA;
 import ThMod.cards.Marisa.AlicesGift;
 import ThMod.cards.Marisa.EnergyRecoil;
 import ThMod.cards.Marisa.ManaRampage;
-import ThMod.cards.Marisa.NebulaRing;
+import ThMod.cards.Marisa.SprinkleStarSeal;
 import ThMod.cards.derivations.Exhaustion_MRS;
 import ThMod.potions.ShroomBrew;
 import com.megacrit.cardcrawl.localization.PotionStrings;
@@ -482,8 +482,8 @@ public class ThMod implements PostExhaustSubscriber,
     UnlockTracker.unlockCard("ManaConvection");
     BaseMod.addCard(new PropBag());
     UnlockTracker.unlockCard("PropBag");
-    //BaseMod.addCard(new NebulaRing());
-    //UnlockTracker.unlockCard("NebulaRing");
+    BaseMod.addCard(new SprinkleStarSeal());
+    UnlockTracker.unlockCard("SprinkleStarSeal");
     BaseMod.addCard(new GalacticHalo());
     UnlockTracker.unlockCard("GalacticHalo");
     BaseMod.addCard(new SuperPerseids());
@@ -668,7 +668,7 @@ public class ThMod implements PostExhaustSubscriber,
   public void receivePostInitialize() {
     // TODO Auto-generated method stub
     //BaseMod.addEvent(Mushrooms_MRS.ID, Mushrooms_MRS.class, Exordium.ID);
-    BaseMod.addPotion(ShroomBrew.class, STARLIGHT, STARLIGHT, STARLIGHT, "ShroomBrew", MARISA);
+    BaseMod.addPotion(ShroomBrew.class, Color.NAVY.cpy(), Color.LIME.cpy(), Color.OLIVE, "ShroomBrew", MARISA);
   }
 	/*
 	

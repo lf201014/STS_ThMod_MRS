@@ -1,5 +1,6 @@
 package ThMod.cards.Marisa;
 
+import ThMod.action.SparkCostAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.unique.ExhaustAllNonAttackAction;
@@ -54,6 +55,9 @@ public class DarkSpark
             this.damageTypeForTurn,
             AbstractGameAction.AttackEffect.NONE
         )
+    );
+    AbstractDungeon.actionManager.addToBottom(
+        new SparkCostAction()
     );
   }
 

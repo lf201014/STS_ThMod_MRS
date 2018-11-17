@@ -1,4 +1,4 @@
-package ThMod.powers.Marisa;
+package ThMod.powers.deprecated;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -16,6 +16,7 @@ import ThMod.ThMod;
 import ThMod.action.DiscToHandATKOnly;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 
+@Deprecated
 public class NebulaPower
     extends AbstractPower {
 

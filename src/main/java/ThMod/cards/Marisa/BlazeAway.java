@@ -22,8 +22,9 @@ public class BlazeAway extends CustomCard {
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
   private static final int COST = 1;
-  private static final int STC = 1;
-  private static final int AMP = 1;
+  private static final int NUM = 1;
+  private static final int UPG_NUM = 1;
+  //private static final int AMP = 1;
   public static AbstractCard lastAttack = null;
 
   public BlazeAway() {
@@ -39,7 +40,7 @@ public class BlazeAway extends CustomCard {
         CardTarget.SELF
     );
 
-    this.baseMagicNumber = this.magicNumber = STC;
+    this.baseMagicNumber = this.magicNumber = NUM;
   }
 
   @Override
@@ -69,10 +70,15 @@ public class BlazeAway extends CustomCard {
     if (lastAttack != null) {
       ThMod.logger.info("BlazeAway : last attack :" + lastAttack.cardID);
       AbstractCard card = lastAttack.makeStatEquivalentCopy();
+      /*
       if (ThMod.Amplified(this, AMP)) {
         card.costForTurn = 0;
       } else {
         card.costForTurn = card.cost;
+      }
+      */
+      if (card.costForTurn>=0){
+        card.setCostForTurn(0);
       }
       ThMod.logger.info(
           "BlazeAway : card :" + card.cardID
@@ -86,13 +92,8 @@ public class BlazeAway extends CustomCard {
               + " ; CFT : " + card.costForTurn
       );
       AbstractDungeon.actionManager.addToBottom(
-          new MakeTempCardInHandAction(card, 1)
+          new MakeTempCardInHandAction(card, this.magicNumber)
       );
-      if (this.upgraded) {
-        AbstractDungeon.actionManager.addToBottom(
-            new MakeTempCardInHandAction(card, 1)
-        );
-      }
 
     } else {
       ThMod.logger.info("BlazeAway : error : last attack is null ");
@@ -106,6 +107,7 @@ public class BlazeAway extends CustomCard {
 
   public void upgrade() {
     if (!this.upgraded) {
+      upgradeMagicNumber(UPG_NUM);
       upgradeName();
       //upgradeBaseCost(0);
       this.rawDescription = DESCRIPTION_UPG;
