@@ -45,7 +45,7 @@
     "NAME": "Experimental Familiar",
     "FLAVOR": "A Familiar looks just like a shiny orb,not very powerful but will surely help you alot.",
     "DESCRIPTIONS": [
-      "At the start of your turn,add a #ySpark  your hand. NL At the start of each combat,you can choose #b1 from #b3 random card,and it cost 0 for the turn."
+      "At the start of each turn, add 1 #ySpark to your hand. NL At the start of combat, you can choose #b1 from #b3 random cards. It costs 0 this turn."
     ]
   },
   "BreadOfAWashokuLover": {
