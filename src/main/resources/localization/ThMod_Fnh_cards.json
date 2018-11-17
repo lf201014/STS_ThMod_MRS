@@ -298,7 +298,7 @@
   },
   "MagicChant": {
     "NAME": "Magic Chant",
-    "DESCRIPTION": "Choose !M! cards to upgrade and retain this turn.",
+    "DESCRIPTION": "Choose !M! cards to Upgrade and Retain this turn.",
     "UPGRADE_DESCRIPTION": "Retain. Choose !M! to retain this turn. Reduce the cost of the chosen cards by 1 next turn."
   },
   "UnstableBomb": {
