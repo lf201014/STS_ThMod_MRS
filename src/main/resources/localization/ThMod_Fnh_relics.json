@@ -92,8 +92,8 @@
     ]
   },
   "AmplifyWand": {
-    "NAME": "Amplify Wand",
-    "FLAVOR": "A Wand seems to not be used often.",
+    "NAME": "Amplification Wand",
+    "FLAVOR": "A Wand that seems to not be used often.",
     "DESCRIPTIONS": [
       "Whenever you activate an #yAmplify effect, gain #b5  #yblock ."
     ]
