@@ -238,7 +238,7 @@
   },
   "EventHorizon": {
     "NAME": "Event Horizon",
-    "DESCRIPTION": "!M! time(s) each turn, when you activate Amplify, you can put an Attack from your discard pile in your hand.",
+    "DESCRIPTION": "!M! time(s) each turn, when you activate an Amplify effect, you can put an Attack from your discard pile into your hand.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "PulseMagic": {
