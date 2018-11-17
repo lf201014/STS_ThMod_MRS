@@ -26,7 +26,7 @@
   },
   "DeepEcoloBomb": {
     "NAME": "Deep Ecological Bomb",
-    "DESCRIPTION": "Deal !D! damage to a random enemy, then reduce its Strength by !M! for a turn. NL Amplify  [B]  : Do it again."
+    "DESCRIPTION": "Deal !D! damage to a random enemy, then reduce its Strength by !M! for a turn. NL Amplify  [B]  : Apply this effect again."
   },
   "DoubleSpark": {
     "NAME": "Double Spark",
@@ -35,8 +35,8 @@
   },
   "EarthLightRay": {
     "NAME": "Earth Light Ray",
-    "DESCRIPTION": "Heal !M! HP. Exhaust. NL Amplify  [B]  : Return a random card from your discard pile to your hand.",
-    "UPGRADE_DESCRIPTION": "Heal !M! HP. Exhaust. NL Amplify  [B]  : Return a card from your discard pile to your hand."
+    "DESCRIPTION": "Heal !M! HP. Exhaust. NL Amplify  [B]  : Put a random card from your discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Heal !M! HP. Exhaust. NL Amplify  [B]  : Put a card from your discard pile into your hand."
   },
   "EscapeVelocity": {
     "NAME": "Escape Velocity",
@@ -50,7 +50,7 @@
   },
   "GrandCross": {
     "NAME": "Grand Cross",
-    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if you have activated the Amplify effect of a card this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if you have activated an Amplify effect this turn."
   },
   "GravityBeat": {
     "NAME": "Gravity Beat",
@@ -68,7 +68,7 @@
   },
   "MagicAbsorber": {
     "NAME": "Magic Absorber",
-    "DESCRIPTION": "Gain !B! Block. Remove a random debuff. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. Remove a random debuff from yourself. NL Exhaust."
   },
   "MasterSpark": {
     "NAME": "Master Spark",
@@ -76,12 +76,12 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Amplify  [B]  : Deal 9 more damage."
   },
   "MeteoricShower": {
-    "NAME": "Meteoric Shower",
-    "DESCRIPTION": "Exhaust up to X + 1 cards. NL For each card exhausted deal !D! damage twice, or thrice if it was a Burn."
+    "NAME": "Meteonic Shower",
+    "DESCRIPTION": "Exhaust up to X + 1 cards. NL Deal !D! damage 2 times for each card you Exhausted, or 3 times for each Burn Exhausted."
   },
   "MilkyWay": {
     "NAME": "Milky Way",
-    "DESCRIPTION": "Gain !B! Block. Draw a card. NL Increase the damage of ALL Attacks in your hand by !M!."
+    "DESCRIPTION": "Gain !B! Block. Draw 1 card. NL Increase the damage of ALL Attacks in your hand by !M!."
   },
   "NonDirectionalLaser": {
     "NAME": "Non-Directional Laser",
@@ -89,8 +89,8 @@
   },
   "Occultation": {
     "NAME": "Occultation",
-    "DESCRIPTION": "Discard ALL cards in your draw pile and gain 1 Block for each of them.",
-    "UPGRADE_DESCRIPTION": "Discard ALL cards in your draw pile and gain 1 Block for each of them. Gain 3 Block."
+    "DESCRIPTION": "Discard your draw pile. Gain 1 Block for each card discarded.",
+    "UPGRADE_DESCRIPTION": "Discard your draw pile. Gain 1 Block for each card discarded +3."
   },
   "OortCloud": {
     "NAME": "OortCloud",
@@ -109,7 +109,7 @@
   },
   "ShootTheMoon": {
     "NAME": "Shoot The Moon",
-    "DESCRIPTION": "Deal !D! damage. Remove a random buff from your target if it is not a boss. NL Amplify  [B]  : !B! damage instead, remove ALL buffs.",
+    "DESCRIPTION": "Remove a random buff from your target if it is not a boss enemy. Deal !D! damage. NL Amplify  [B]  : Remove ALL buffs and deal !B! damage instead.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWW"
   },
   "StarDustReverie": {
@@ -119,13 +119,13 @@
   },
   "UltraShortWave": {
     "NAME": "Ultimate Shortwave",
-    "DESCRIPTION": "Gain !B!  [B]  and !M! Charge-up. Increase the energy and Charge-up gain of this card by 1 for this battle.",
+    "DESCRIPTION": "Gain !B!  [B]  and !M! Charge-up. Increase the energy and Charge-up gain of this card by 1 for this combat.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MillisecondPulsars": {
     "NAME": "Millisecond Pulsars",
-    "DESCRIPTION": "Amplify effects cost no  [B]  for this combat.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Amplify effects cost no  [B]  for this combat."
+    "DESCRIPTION": "Amplify effects cost no  [B]  this combat.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Amplify effects cost no  [B]  this combat."
   },
   "Spark": {
     "NAME": "Spark",
@@ -144,7 +144,7 @@
   },
   "OrrerysSun": {
     "NAME": "Orrerys Sun",
-    "DESCRIPTION": "For each stack of Charge-up you have, deal !M! damage to ALL enemies.",
+    "DESCRIPTION": "Whenever Charge-Up is consumed, deal !M! damage to ALL enemies.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ChargingUp": {
@@ -222,9 +222,9 @@
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "JA": {
-    "NAME": "JA",
-    "DESCRIPTION": "Deal !D! damage. Add a 623B, a Spark and a WitchLeyline to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a 623B, a Spark and a WitchLeyline to your hand and upgrade them."
+    "NAME": "Warming Up",
+    "DESCRIPTION": "Deal !D! damage. Add a 623B, a Spark and a Witch Leyline to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a 623B, a Spark and a Witch Leyline to your hand and Upgrade them."
   },
   "AbsoluteMagnitude": {
     "NAME": "Absolute Magnitude",
@@ -243,22 +243,22 @@
   },
   "PulseMagic": {
     "NAME": "Pulse Magic",
-    "DESCRIPTION": "Gain  [B]  next turn. Amplify [B]  : You don't need to pay extra [B] to activate Amplify this turn.",
-    "UPGRADE_DESCRIPTION": "Gain [B]  [B]  next turn. Amplify [B]  : You don't need to pay extra [B] to activate Amplify this turn."
+    "DESCRIPTION": "Gain  [B]  next turn. Amplify [B]  : You don't need to pay extra [B] to activate Amplify effects this turn.",
+    "UPGRADE_DESCRIPTION": "Gain [B]  [B]  next turn. Amplify [B]  : You don't need to pay extra [B] to activate Amplify effects this turn."
   },
   "D6C": {
     "NAME": "66C",
-    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Deal double damage if there are no cards in your discard pile.",
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Deals double damage if there are no cards in your discard pile.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Singularity": {
     "NAME": "Singularity",
-    "DESCRIPTION": "Increase the damage of a random Attack in your hand by !M! whenever you play a card that costs 0.",
+    "DESCRIPTION": "Whenever you play a card that costs 0, increase the damage of a random Attack in your hand by !M! .",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "SporeBomb": {
     "NAME": "Spore Crump",
-    "DESCRIPTION": "Apply !M! Vulnerable to an enemy. NL Amplify  [B]  : Apply to ALL enemies instead.",
+    "DESCRIPTION": "Apply !M! Vulnerable to an enemy. NL Amplify  [B]  : Apply !M! Vulnerable to ALL enemies instead.",
     "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to all enemies. NL Amplify  [B]  : 1 more stack."
   },
   "FluorensentBeam": {
@@ -293,7 +293,7 @@
   },
   "RefractionSpark": {
     "NAME": "Refraction Spark",
-    "DESCRIPTION": "Deal !D! damage. Increase the damage of all Spark cards in your hand by the damage dealt. NL Amplify  [B]  : Deal !B! damage instead.",
+    "DESCRIPTION": "Deal !D! damage. Increase the damage of ALL Spark cards in your hand by the damage dealt. NL Amplify  [B]  : Deal !B! damage instead.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MagicChant": {
@@ -318,10 +318,10 @@
   },
   "DarkMatter": {
     "NAME": "Dark Matter",
-    "DESCRIPTION": "Can only be played once per turn. NL Put 2 Dark Matter into your draw pile. Draw a card. Gain !B! Block when exhausted. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "Can only be played once per turn. NL Put 2 Upgraded Dark Matter into your draw pile. Draw a card. Gain !B! Block when exhausted. NL Ethereal .",
+    "DESCRIPTION": "Can only be played once per turn. NL Shuffle 2 copies of this card into your draw pile. Draw 1 card. When this card is Exhausted, gain !B! Block. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Can only be played once per turn. NL Shuffle 2 copies of this card into your draw pile. Draw 1 card. When this card is Exhausted, gain !B! Block. NL Ethereal .",
     "EXTENDED_DESCRIPTION":[
-      "I can't play any more Dark Matter this turn.",
+      "I can't play Dark Matter again this turn.",
       ""
     ]
   },
