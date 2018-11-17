@@ -453,7 +453,7 @@
   },
   "Exhaustion_MRS": {
     "NAME": "Exhaustion",
-    "DESCRIPTION": "Unplayable. NL You cannot gain or use Charge-up when this card is in your hand.",
+    "DESCRIPTION": "Unplayable. NL While in hand, you cannot gain or consume Charge-up.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "UltimateShortwave": {
