@@ -243,8 +243,8 @@
   },
   "PulseMagic": {
     "NAME": "Pulse Magic",
-    "DESCRIPTION": "Gain  [B]  next turn. Amplify [B]  : You don't need to pay extra [B] to activate Amplify effects this turn.",
-    "UPGRADE_DESCRIPTION": "Gain [B]  [B]  next turn. Amplify [B]  : You don't need to pay extra [B] to activate Amplify effects this turn."
+    "DESCRIPTION": "Gain  [B]  next turn. Amplify [B]  : Amplify effects cost no [B] this turn.",
+    "UPGRADE_DESCRIPTION": "Gain [B]  [B]  next turn. Amplify [B]  : Amplify effects cost no [B] this turn."
   },
   "D6C": {
     "NAME": "66C",
