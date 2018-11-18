@@ -81,7 +81,7 @@
   },
   "MilkyWay": {
     "NAME": "Milky Way",
-    "DESCRIPTION": "Gain !B! Block. Draw 1 card. NL Increase the damage of ALL Attacks in your hand by !M!."
+    "DESCRIPTION": "Gain !B! Block. Draw 1 card. NL ALL Attacks in your hand deal !M! additional damage this combat."
   },
   "NonDirectionalLaser": {
     "NAME": "Non-Directional Laser",
