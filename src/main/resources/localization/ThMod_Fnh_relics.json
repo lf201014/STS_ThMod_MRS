@@ -43,7 +43,7 @@
   },
   "ExperimentalFamiliar": {
     "NAME": "Experimental Familiar",
-    "FLAVOR": "A Familiar looks just like a shiny orb,not very powerful but will surely help you alot.",
+    "FLAVOR": "A Familiar looks just like a shiny orb. Not very powerful, but it will surely help you a lot.",
     "DESCRIPTIONS": [
       "At the start of each turn, add 1 #ySpark to your hand. NL At the start of combat, you can choose #b1 from #b3 random cards. It costs 0 this turn."
     ]
