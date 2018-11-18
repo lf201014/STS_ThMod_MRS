@@ -366,7 +366,7 @@
   },
   "StarBarrage": {
     "NAME": "Star Barrage",
-    "DESCRIPTION": "Deal !D! damage !M! time. NL Each time this card is played, it deals damage 1 additional time for this combat.",
+    "DESCRIPTION": "Deal !D! damage !M! time. NL Every time this card is played, it deals damage 1 additional time for this combat.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "AFriendsGift": {
