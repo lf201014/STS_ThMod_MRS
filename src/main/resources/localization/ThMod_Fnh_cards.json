@@ -213,7 +213,7 @@
   },
   "PowerUp": {
     "NAME": "Upgrade!",
-    "DESCRIPTION": "Add !M! damage to all Attacks in your hand.",
+    "DESCRIPTION": "ALL Attacks in your hand deal !M! additional damage this combat.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WitchLeyline": {
