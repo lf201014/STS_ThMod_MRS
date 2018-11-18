@@ -77,7 +77,7 @@
   "PolarisUniquePower": {
     "NAME": "Guiding Star",
     "DESCRIPTIONS": [
-      "Gain extra [B] at the start of your turn,if #yGuidingStar is in your draw pile."
+      "If #yGuidingStar is in your draw pile, gain extra [B] at the start of each turn,."
     ]
   },
   "OrrerysSunPower": {
