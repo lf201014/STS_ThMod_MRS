@@ -337,7 +337,7 @@
   },
   "ChargeUpSpray": {
     "NAME": "Charge-Up Spray",
-    "DESCRIPTION": "Deal !D! damage. NL If this card is affected by Charge-up, gain [B] and draw !M! card(s).",
+    "DESCRIPTION": "Deal !D! damage. NL If this card consumes Charge-up, gain [B] and draw !M! cards.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "EnergyRecoil": {
