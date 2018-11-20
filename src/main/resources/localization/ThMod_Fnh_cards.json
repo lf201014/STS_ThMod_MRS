@@ -62,7 +62,7 @@
     "UPGRADE_DESCRIPTION": "Add !M! random cards to your hand. Put a card from your hand on top of your draw pile."
   },
   "MachineGunSpark": {
-    "NAME": "Machine-Gun Spark",
+    "NAME": "Machine Gun Spark",
     "DESCRIPTION": "Deal !D! damage !M! times. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage 8 times. NL Exhaust."
   },
