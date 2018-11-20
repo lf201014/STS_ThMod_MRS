@@ -228,8 +228,8 @@
   },
   "AbsoluteMagnitude": {
     "NAME": "Absolute Magnitude",
-    "DESCRIPTION": "Deal !D! damage (2.5 × your Charge-up stacks).",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage (3.5 × your Charge-up stacks)."
+    "DESCRIPTION": "Deal damage equal to 2.5 times your Charge-up (Deals !D! damage).",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to 3.5 times your Charge-up (Deals !D! damage)."
   },
   "DragonMeteor": {
     "NAME": "Dragon Meteor",
