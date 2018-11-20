@@ -22,7 +22,7 @@
   },
   "EnhancedBroom": {
     "NAME": "Magic Broom",
-    "FLAVOR": "Marisa always travels with her flying broom.",
+    "FLAVOR": "Marisa always travels on her flying broom.",
     "DESCRIPTIONS": [
       "Every time you play #b3 cards that cost 0, draw 1 card."
     ]
@@ -57,7 +57,7 @@
   },
   "SimpleLauncher": {
     "NAME": "Simple Launcher",
-    "FLAVOR": "Simple but useful...Perhaps...",
+    "FLAVOR": "Simple, but useful...Perhaps...",
     "DESCRIPTIONS": [
       "Reduce your #yCharge-up consumption threshold value from #b8 to #b6 ."
     ]
@@ -66,12 +66,12 @@
     "NAME": "Handmade Grimoire",
     "FLAVOR": "A notebook full of experiment records and magic material recipes;just how Marisa develops her Magics.",
     "DESCRIPTIONS": [
-      "At the start of battle,for every 15 cards in your master deck, gain [B] and draw a card."
+      "At the start of battle, for every 15 cards in your master deck, gain [B] and draw a card."
     ]
   },
   "ShroomBag": {
     "NAME": "Shroom Bag",
-    "FLAVOR": "All witches have abnormal ethusiasm for mushrooms... NL Or is it just Marisa...?",
+    "FLAVOR": "All witches have an abnormal ethusiasm for mushrooms... NL Or is it just Marisa...?",
     "DESCRIPTIONS": [
       "Upon pickup, obtain 2 #yParasite. Parasite cards can now be played. Playing a #yParasite will heal #b3 HP and Exhausts the card."
     ]
