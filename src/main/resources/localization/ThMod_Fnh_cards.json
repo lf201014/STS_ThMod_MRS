@@ -165,7 +165,7 @@
   "BlazeAway": {
     "NAME": "Blaze Away",
     "DESCRIPTION": "Add a copy of the last Attack you played this turn to your hand. NL It costs 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Add 2 copies of the last Attack you played this turn to your hand. NL They costs 0 this turn.",
+    "UPGRADE_DESCRIPTION": "Add 2 copies of the last Attack you played this turn to your hand. NL They cost 0 this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (Last Attack : ",
       " ).",
