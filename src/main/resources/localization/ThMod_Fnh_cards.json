@@ -381,10 +381,10 @@
   },
   "CollectingQuirk": {
     "NAME": "Collecting Quirk",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for each !M! relics you have.",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for every !M! relics you have.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
     "EXTENDED_DESCRIPTION":[
-      "( !B! time(s) for now)",
+      "(Deals damage !B! time(s))",
       ""
     ]
   },
