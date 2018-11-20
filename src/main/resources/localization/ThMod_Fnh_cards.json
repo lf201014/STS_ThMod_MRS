@@ -9,7 +9,7 @@
   },
   "AsteroidBelt": {
     "NAME": "Asteroid Belt",
-    "DESCRIPTION": "Gain !B! Block. NL Amplify  [B]  : Gain !B! Block next turn."
+    "DESCRIPTION": "Gain !B! Block. NL Amplify  [B]  : Next turn, gain !B! Block."
   },
   "BigCrunch": {
     "NAME": "Big Crunch",
