@@ -154,8 +154,8 @@
   },
   "LuminesStrike": {
     "NAME": "Luminous Strike",
-    "DESCRIPTION": "Deal !D! damage (2 × the size of your hand). NL Amplify  [B]  : Deal !B! damage (4 × your current energy) instead.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage (3 × the size of your hand). NL Amplify  [B]  : Deal !B! damage (5 × your current energy) instead."
+    "DESCRIPTION": "Deal damage equal to 2 times the number of cards in your hand. NL Amplify  [B]  : Deal damage equal to 4 times your current energy instead.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to 3 times the number of cards in your hand. NL Amplify  [B]  : Deal damage equal to 5 times your current energy instead."
   },
   "OpenUniverse": {
     "NAME": "Open Universe",
