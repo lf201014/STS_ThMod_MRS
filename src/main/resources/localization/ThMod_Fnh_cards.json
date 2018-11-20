@@ -34,7 +34,7 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. Add 1 Upgraded Spark to your hand."
   },
   "EarthLightRay": {
-    "NAME": "Earth Light Ray",
+    "NAME": "Earthlight Ray",
     "DESCRIPTION": "Heal !M! HP. Exhaust. NL Amplify  [B]  : Put a random card from your discard pile into your hand.",
     "UPGRADE_DESCRIPTION": "Heal !M! HP. Exhaust. NL Amplify  [B]  : Put a card from your discard pile into your hand."
   },
