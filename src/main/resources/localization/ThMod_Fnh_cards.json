@@ -313,8 +313,8 @@
   },
   "MoraleDepletion": {
     "NAME": "One Time Off",
-    "DESCRIPTION": "Gain !B! Block. You can't use Amplify and  Charge-up until this turn ends. NL Draw !M! cards next turn.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. You can't use Amplify and Charge-up until this turn ends."
+    "DESCRIPTION": "Gain !B! Block. You can't activate Amplify effects or consume Charge-up this turn. NL Next turn, draw !M! card(s).",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. You can't activate Amplify effects or consume Charge-up this turn. NL Next turn, draw !M! cards."
   },
   "DarkMatter": {
     "NAME": "Dark Matter",
