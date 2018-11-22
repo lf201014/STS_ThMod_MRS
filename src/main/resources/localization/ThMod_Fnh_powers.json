@@ -83,7 +83,7 @@
   "OrrerysSunPower": {
     "NAME": "Orrerys Sun",
     "DESCRIPTIONS": [
-      "When you cost #yCharge-up stacks,deal  #b",
+      "Whenever you consume #yCharge-up, deal  #b",
       " damage to all enemies."
     ]
   },
