@@ -204,7 +204,7 @@
   "ShootingEcho": {
     "NAME": "Shooting Echo",
     "DESCRIPTION": " Exhaust a random card. Add a Shooting Echo to your hand. NL Deal !D! damage. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Exhaust a card. Add an upgraded Shooting Echo to your hand. NL deal !D! damage. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Exhaust a card. Add an Upgraded Shooting Echo to your hand. NL Deal !D! damage. NL Exhaust."
   },
   "EnergyFlow": {
     "NAME": "Energy Flow",
