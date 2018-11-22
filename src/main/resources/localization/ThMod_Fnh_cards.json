@@ -333,7 +333,7 @@
   "CasketOfStar": {
     "NAME": "Casket Of Star",
     "DESCRIPTION": "Whenever you gain Block, add a Spark to your hand.",
-    "UPGRADE_DESCRIPTION": "Whenever you gain Block, add a Spark to your hand."
+    "UPGRADE_DESCRIPTION": "Whenever you gain Block, add an Upgraded Spark to your hand."
   },
   "ChargeUpSpray": {
     "NAME": "Charge-Up Spray",
