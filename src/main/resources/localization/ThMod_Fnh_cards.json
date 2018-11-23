@@ -13,7 +13,7 @@
   },
   "BigCrunch": {
     "NAME": "Big Crunch",
-    "DESCRIPTION": "Exhaust half of the cards in your Discard pile and Draw Pile. Gain  [B]  and draw a card for each !M! cards exhausted. NL Exhaust."
+    "DESCRIPTION": "Exhaust half of the cards in your discard pile and Draw Pile. Gain  [B]  and draw 1 card for every !M! cards Exhausted. NL Exhaust."
   },
   "BlazingStar": {
     "NAME": "Blazing Star",
@@ -26,7 +26,7 @@
   },
   "DeepEcoloBomb": {
     "NAME": "Deep Ecological Bomb",
-    "DESCRIPTION": "Deal !D! damage to a random enemy, then reduce its Strength by !M! for a turn. NL Amplify  [B]  : Apply this effect again."
+    "DESCRIPTION": "Deal !D! damage to a random enemy, then reduce its Strength by !M! this turn. NL Amplify  [B]  : Apply this effect again."
   },
   "DoubleSpark": {
     "NAME": "Double Spark",
@@ -189,7 +189,7 @@
   "StarlightTyphoon_D": {
     "NAME": "Starlight Typhoon",
     "DESCRIPTION": " Exhaust ALL non-Attack cards in your hand. Add the same number of Sparks to your hand.",
-    "UPGRADE_DESCRIPTION": " Exhaust ALL non-Attack cards in your hand. Add the same number of upgraded Sparks to your hand."
+    "UPGRADE_DESCRIPTION": " Exhaust ALL non-Attack cards in your hand. Add the same number of Upgraded Sparks to your hand."
   },
   "SuperPerseids": {
     "NAME": "Super Perseids",
@@ -233,7 +233,7 @@
   },
   "DragonMeteor": {
     "NAME": "Dragon Meteor",
-    "DESCRIPTION": "Deal !B! damage. NL Deals an additional !M! damage for each card in your Exhaust Pile.",
+    "DESCRIPTION": "Deal !B! damage. NL Deals an additional !M! damage for each card in your exhaust pile.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "EventHorizon": {
@@ -308,8 +308,8 @@
   },
   "SuperNova": {
     "NAME": "Supernova",
-    "DESCRIPTION": "No longer take damage from Burn. Gain 1 Strength for each Burn exhausted. NL Exhaust your hand when your turn ends.",
-    "UPGRADE_DESCRIPTION": "No longer take damage from Burn. Gain 1 Strength for each curse or status exhausted. NL Exhaust your hand when your turn ends."
+    "DESCRIPTION": "No longer take damage from Burn. Whenever you Exhaust a Burn, gain 1 Strength. NL Exhaust your hand at the end of each turn.",
+    "UPGRADE_DESCRIPTION": "No longer take damage from Burn. Whenever you Exhaust a Curse or Status, gain 1 Strength. NL Exhaust your hand at the end of each turn."
   },
   "MoraleDepletion": {
     "NAME": "One Time Off",
@@ -361,8 +361,8 @@
   },
   "ManaRampage": {
     "NAME": "Mana Rampage",
-    "DESCRIPTION": "Play X random attacks.",
-    "UPGRADE_DESCRIPTION": "Play X random upgraded attacks."
+    "DESCRIPTION": "Play X random Attacks.",
+    "UPGRADE_DESCRIPTION": "Play X random Upgraded Attacks."
   },
   "StarBarrage": {
     "NAME": "Star Barrage",
@@ -381,7 +381,7 @@
   },
   "CollectingQuirk": {
     "NAME": "Collecting Quirk",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for every !M! relics you have.",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for every !M! Relics you have.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
     "EXTENDED_DESCRIPTION":[
       "(Deals damage !B! time(s))",
@@ -423,7 +423,7 @@
   },
   "Orbital": {
     "NAME": "Orbital",
-    "DESCRIPTION": " Unplayable. When this card is drawn, draw 1 card. NL If this card is Exhausted, place !M! card(s) from your Exhaust pile into your hand.",
+    "DESCRIPTION": " Unplayable. When this card is drawn, draw 1 card. NL If this card is Exhausted, place !M! card(s) from your exhaust pile into your hand.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "SillyJoke": {
