@@ -22,7 +22,7 @@
   },
   "EnhancedBroom": {
     "NAME": "Magic Broom",
-    "FLAVOR": "Marisa always travels with her flying broom.",
+    "FLAVOR": "Marisa always travels on her flying broom.",
     "DESCRIPTIONS": [
       "Every time you play #b3 cards that cost 0, draw 1 card."
     ]
@@ -38,14 +38,14 @@
     "NAME": "Rampaging Magic Tool",
     "FLAVOR": "It's been so long since anyone last used them. Who knows what could happen?",
     "DESCRIPTIONS": [
-      "Gain [B] at the start of each turn. NL Apply a random debuff/buff ( #b2 #yFrail , #b2 #yWeak , #b2 #yVulerable , #b3 #yPoison , #b8 #yCharge-up )to you at the start of each combat."
+      "Gain [B] at the start of each turn. NL Apply a random debuff/buff ( #b2 #yFrail , #b2 #yWeak , #b2 #yVulnerable , #b3 #yPoison , #b8 #yCharge-up )to you at the start of each combat."
     ]
   },
   "ExperimentalFamiliar": {
     "NAME": "Experimental Familiar",
-    "FLAVOR": "A Familiar looks just like a shiny orb,not very powerful but will surely help you alot.",
+    "FLAVOR": "A Familiar looks just like a shiny orb. Not very powerful, but it will surely help you a lot.",
     "DESCRIPTIONS": [
-      "At the start of your turn,add a #ySpark  your hand. NL At the start of each combat,you can choose #b1 from #b3 random card,and it cost 0 for the turn."
+      "At the start of each turn, add 1 #ySpark to your hand. NL At the start of combat, you can choose #b1 from #b3 random cards. It costs 0 this turn."
     ]
   },
   "BreadOfAWashokuLover": {
@@ -57,7 +57,7 @@
   },
   "SimpleLauncher": {
     "NAME": "Simple Launcher",
-    "FLAVOR": "Simple but useful...Perhaps...",
+    "FLAVOR": "Simple, but useful...Perhaps...",
     "DESCRIPTIONS": [
       "Reduce your #yCharge-up consumption threshold value from #b8 to #b6 ."
     ]
@@ -66,12 +66,12 @@
     "NAME": "Handmade Grimoire",
     "FLAVOR": "A notebook full of experiment records and magic material recipes;just how Marisa develops her Magics.",
     "DESCRIPTIONS": [
-      "At the start of battle,for every 15 cards in your master deck, gain [B] and draw a card."
+      "At the start of battle, for every 15 cards in your master deck, gain [B] and draw a card."
     ]
   },
   "ShroomBag": {
     "NAME": "Shroom Bag",
-    "FLAVOR": "All witches have abnormal ethusiasm for mushrooms... NL Or is it just Marisa...?",
+    "FLAVOR": "All witches have an abnormal ethusiasm for mushrooms... NL Or is it just Marisa...?",
     "DESCRIPTIONS": [
       "Upon pickup, obtain 2 #yParasite. Parasite cards can now be played. Playing a #yParasite will heal #b3 HP and Exhausts the card."
     ]
@@ -92,8 +92,8 @@
     ]
   },
   "AmplifyWand": {
-    "NAME": "Amplify Wand",
-    "FLAVOR": "A Wand seems to not be used often.",
+    "NAME": "Amplification Wand",
+    "FLAVOR": "A wand that seems to not be used often.",
     "DESCRIPTIONS": [
       "Whenever you activate an #yAmplify effect, gain #b5  #yblock ."
     ]
