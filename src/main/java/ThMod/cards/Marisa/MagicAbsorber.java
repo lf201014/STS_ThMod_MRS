@@ -48,14 +48,14 @@ public class MagicAbsorber extends CustomCard {
         new GainBlockAction(p, p, this.block)
     );
     if (!p.powers.isEmpty()) {
-      ArrayList<AbstractPower> pows = new ArrayList<AbstractPower>();
+      ArrayList<AbstractPower> pows = new ArrayList<>();
       for (AbstractPower pow : p.powers) {
         if (pow.type == AbstractPower.PowerType.DEBUFF) {
           pows.add(pow);
         }
       }
       if (!pows.isEmpty()) {
-        AbstractPower po = pows.get((int) Math.random() * pows.size());
+        AbstractPower po = pows.get(AbstractDungeon.miscRng.random(0, pows.size() - 1));
         AbstractDungeon.actionManager.addToBottom(
             new RemoveSpecificPowerAction(p, p, po)
         );

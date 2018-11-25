@@ -13,7 +13,7 @@ public class AmplifyWand extends CustomRelic {
   public static final String ID = "AmplifyWand";
   private static final String IMG = "img/relics/AmplifyWand_s.png";
   private static final String IMG_OTL = "img/relics/outline/AmplifyWand_s.png";
-  private static final int BLOCK_AMT = 5;
+  private static final int BLOCK_AMT = 4;
 
   public AmplifyWand() {
     super(

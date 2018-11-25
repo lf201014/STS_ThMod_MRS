@@ -272,7 +272,7 @@
   },
   "TreasureHunter": {
     "NAME": "宝物猎手",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若此卡杀死一名精英/boss，则在战斗奖励中增加一件普通或罕见/稀有遗物。 NL 消耗 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张牌在精英或boss战中杀死一名不是“爪牙”的敌人，则在战斗奖励中增加一件随机遗物。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Robbery": {
