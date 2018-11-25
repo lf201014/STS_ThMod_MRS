@@ -33,7 +33,7 @@
   "MilliPulsaPower": {
     "NAME": "Millisecond Pulsars",
     "DESCRIPTIONS": [
-      " #yAmplify effects no longer need extra energy to activate.",
+      " #yAmplify effects no longer need extra  [B]  to activate.",
       ""
     ]
   },
@@ -77,13 +77,13 @@
   "PolarisUniquePower": {
     "NAME": "Guiding Star",
     "DESCRIPTIONS": [
-      "Gain extra [B] at the start of your turn,if #yGuidingStar is in your draw pile."
+      "If #yGuidingStar is in your draw pile, gain extra [B] at the start of each turn,."
     ]
   },
   "OrrerysSunPower": {
     "NAME": "Orrerys Sun",
     "DESCRIPTIONS": [
-      "When you cost #yCharge-up stacks,deal  #b",
+      "Whenever you consume #yCharge-up, deal  #b",
       " damage to all enemies."
     ]
   },
@@ -125,8 +125,8 @@
   "SingularityPower": {
     "NAME": "Singualrity",
     "DESCRIPTIONS": [
-      "When you play a card that costs 0 , increase the damage of a random #yAttack in your hand by #b",
-      " ."
+      "Whenever you play a card that costs 0 , a random #yAttack in your hand deals #b",
+      " additional damage this combat."
     ]
   },
   "WitchOfGreedGold": {
