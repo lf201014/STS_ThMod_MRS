@@ -21,7 +21,7 @@ public class RefractionSpark
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-  public static final String IMG_PATH = "img/cards/Strike.png";
+  public static final String IMG_PATH = "img/cards/Refraction.png";
 
   private static final int COST = 1;
   private static final int ATK_DMG = 4;
@@ -80,8 +80,8 @@ public class RefractionSpark
       upgradeName();
       upgradeDamage(UPG_DMG);
       this.ampNumber += UPG_AMP;
-      this.block = this.baseDamage + this.ampNumber;
       this.isBlockModified = true;
+      this.block = this.baseDamage + this.ampNumber;
     }
   }
 }

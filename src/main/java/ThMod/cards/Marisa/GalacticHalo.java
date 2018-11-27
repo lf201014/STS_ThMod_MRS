@@ -20,7 +20,7 @@ public class GalacticHalo extends CustomCard {
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-  public static final String IMG_PATH = "img/cards/Defend.png";
+  public static final String IMG_PATH = "img/cards/temp/Halo.png";
   private static final int COST = 2;
   private static final int STC = 2;
   private static final int UPG_STC = 1;

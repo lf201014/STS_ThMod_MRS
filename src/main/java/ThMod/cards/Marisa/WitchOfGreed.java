@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 public class WitchOfGreed extends CustomCard {
 
   public static final String ID = "WitchOfGreed";
-  public static final String IMG_PATH = "img/cards/feelNoPain.png";
+  public static final String IMG_PATH = "img/cards/Greed.png";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;

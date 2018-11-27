@@ -15,7 +15,7 @@ import ThMod.patches.AbstractCardEnum;
 public class BlazeAway extends CustomCard {
 
   public static final String ID = "BlazeAway";
-  public static final String IMG_PATH = "img/cards/Defend.png";
+  public static final String IMG_PATH = "img/cards/temp/BlazeAway.png";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
