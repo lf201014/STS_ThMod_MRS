@@ -1,5 +1,6 @@
 package ThMod.cards.Marisa;
 
+import ThMod.abstracts.AmplifiedAttack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,10 +12,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import ThMod.patches.AbstractCardEnum;
 
-public class StarlightTyphoon extends CustomCard {
+public class StarlightTyphoon extends AmplifiedAttack {
 
   public static final String ID = "StarlightTyphoon";
-  public static final String IMG_PATH = "img/cards/Strike.png";
+  public static final String IMG_PATH = "img/cards/temp/Typhoon.png";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -51,7 +52,7 @@ public class StarlightTyphoon extends CustomCard {
       }
     }
     if (counter > 0) {
-      this.baseDamage = this.magicNumber * counter;
+      this.ampNumber = this.magicNumber * counter;
       this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
       initializeDescription();
       super.applyPowers();
@@ -75,7 +76,7 @@ public class StarlightTyphoon extends CustomCard {
     AbstractDungeon.actionManager.addToBottom(
         new DamageAllEnemiesAction(
             p,
-            this.multiDamage,
+            this.multiAmpDamage,
             this.damageTypeForTurn,
             AttackEffect.FIRE
         )

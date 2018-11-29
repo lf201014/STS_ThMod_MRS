@@ -90,7 +90,11 @@
   "Occultation": {
     "NAME": "Occultation",
     "DESCRIPTION": "Discard your draw pile. Gain 1 Block for each card discarded.",
-    "UPGRADE_DESCRIPTION": "Discard your draw pile. Gain 1 Block for each card discarded +3."
+    "UPGRADE_DESCRIPTION": "Discard your draw pile. Gain 1 Block for each card discarded +3.",
+    "EXTENDED_DESCRIPTION": [
+      "(Gain !B! in total.)",
+      ""
+      ]
   },
   "OortCloud": {
     "NAME": "OortCloud",
@@ -182,7 +186,7 @@
     "DESCRIPTION": "Deal damage equal to !M! times the number of cards that cost 0 you played this combat to ALL enemies.",
     "UPGRADE_DESCRIPTION": " Exhaust ALL non-Attack cards in your hand. Add the same number of upgraded Sparks to your hand.",
     "EXTENDED_DESCRIPTION": [
-      " NL (Deals !D! damage.)",
+      " NL (Deals !B! damage.)",
       ""
     ]
   },
@@ -228,8 +232,8 @@
   },
   "AbsoluteMagnitude": {
     "NAME": "Absolute Magnitude",
-    "DESCRIPTION": "Deal damage equal to 2.5 times your Charge-up (Deals !D! damage).",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to 3.5 times your Charge-up (Deals !D! damage)."
+    "DESCRIPTION": "Deal damage equal to 2.5 times your Charge-up (Deals !B! damage).",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to 3.5 times your Charge-up (Deals !B! damage)."
   },
   "DragonMeteor": {
     "NAME": "Dragon Meteor",
@@ -409,8 +413,8 @@
   },
   "WhiteDwarf": {
     "NAME": "White Dwarf",
-    "DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. NL Deal !D! damage (1.5 × size of your discard pile). Add 2 Burns to your hand.",
-    "UPGRADE_DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. NL Deal !D! damage (2 × size of your discard pile). Add 2 Burns to your hand.",
+    "DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. NL Deal !B! damage (1.5 × size of your discard pile). Add 2 Burns to your hand.",
+    "UPGRADE_DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. NL Deal !B! damage (2 × size of your discard pile). Add 2 Burns to your hand.",
     "EXTENDED_DESCRIPTION":[
       "I have more than 4 cards in my hand.",
       ""

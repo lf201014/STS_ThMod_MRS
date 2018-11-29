@@ -1,167 +1,174 @@
 
 MarisaModelv3.png
-size: 512,512
+size: 1024,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 hat_b
   rotate: false
-  xy: 285, 323
-  size: 120, 39
-  orig: 120, 39
+  xy: 767, 819
+  size: 240, 78
+  orig: 240, 78
   offset: 0, 0
   index: -1
 ribbon
   rotate: false
-  xy: 481, 159
-  size: 8, 91
-  orig: 8, 91
+  xy: 1007, 1
+  size: 15, 182
+  orig: 15, 182
   offset: 0, 0
   index: -1
 hair_b
   rotate: false
-  xy: 1, 83
-  size: 178, 162
-  orig: 178, 162
+  xy: 1, 344
+  size: 355, 323
+  orig: 355, 323
   offset: 0, 0
   index: -1
 braid
   rotate: false
-  xy: 479, 404
-  size: 32, 71
-  orig: 32, 71
+  xy: 942, 1
+  size: 63, 141
+  orig: 63, 141
   offset: 0, 0
   index: -1
 cape_b
   rotate: false
-  xy: 396, 1
-  size: 106, 156
-  orig: 106, 156
+  xy: 789, 183
+  size: 211, 312
+  orig: 211, 312
   offset: 0, 0
   index: -1
 skull
   rotate: false
-  xy: 227, 278
-  size: 56, 85
-  orig: 56, 85
+  xy: 448, 819
+  size: 111, 169
+  orig: 111, 169
   offset: 0, 0
   index: -1
 face
   rotate: false
-  xy: 455, 344
-  size: 43, 58
-  orig: 43, 58
+  xy: 812, 899
+  size: 86, 115
+  orig: 86, 115
   offset: 0, 0
   index: -1
 propbag
   rotate: false
-  xy: 384, 290
-  size: 60, 28
-  orig: 60, 28
+  xy: 561, 940
+  size: 120, 55
+  orig: 120, 55
   offset: 0, 0
   index: -1
 hand_r
   rotate: false
-  xy: 266, 83
-  size: 120, 103
-  orig: 120, 103
+  xy: 526, 344
+  size: 240, 205
+  orig: 240, 205
   offset: 0, 0
   index: -1
 Shirt1
   rotate: false
-  xy: 179, 401
-  size: 68, 83
-  orig: 68, 83
+  xy: 618, 551
+  size: 136, 166
+  orig: 136, 166
   offset: 0, 0
   index: -1
 hotpants
   rotate: false
-  xy: 407, 423
-  size: 70, 45
-  orig: 70, 45
+  xy: 561, 849
+  size: 139, 89
+  orig: 139, 89
   offset: 0, 0
   index: -1
 broom
   rotate: false
-  xy: 1, 1
-  size: 393, 80
-  orig: 393, 80
+  xy: 1, 183
+  size: 786, 159
+  orig: 786, 159
   offset: 0, 0
   index: -1
 belt
   rotate: false
-  xy: 285, 278
-  size: 48, 21
-  orig: 48, 21
+  xy: 900, 899
+  size: 95, 42
+  orig: 95, 42
   offset: 0, 0
   index: -1
 thigh_r
   rotate: false
-  xy: 455, 290
-  size: 54, 52
-  orig: 54, 52
+  xy: 702, 899
+  size: 108, 104
+  orig: 108, 104
   offset: 0, 0
   index: -1
 leg_r
   rotate: false
-  xy: 179, 269
-  size: 46, 130
-  orig: 46, 130
+  xy: 355, 713
+  size: 91, 260
+  orig: 91, 260
   offset: 0, 0
   index: -1
 thigh_l
   rotate: false
-  xy: 249, 365
-  size: 74, 64
-  orig: 74, 64
+  xy: 618, 719
+  size: 147, 128
+  orig: 147, 128
   offset: 0, 0
   index: -1
 leg_l
   rotate: false
-  xy: 337, 188
-  size: 45, 133
-  orig: 45, 133
+  xy: 526, 551
+  size: 90, 266
+  orig: 90, 266
   offset: 0, 0
   index: -1
 ArmL
   rotate: false
-  xy: 407, 323
-  size: 46, 98
-  orig: 46, 98
+  xy: 1, 824
+  size: 92, 196
+  orig: 92, 196
   offset: 0, 0
   index: -1
 HandL
   rotate: false
-  xy: 285, 301
-  size: 28, 12
-  orig: 28, 12
+  xy: 942, 144
+  size: 56, 24
+  orig: 56, 24
   offset: 0, 0
   index: -1
 cape_f
   rotate: false
-  xy: 181, 83
-  size: 83, 184
-  orig: 83, 184
+  xy: 358, 344
+  size: 166, 367
+  orig: 166, 367
   offset: 0, 0
   index: -1
 Hair_F
   rotate: false
-  xy: 266, 188
-  size: 69, 88
-  orig: 69, 88
+  xy: 803, 1
+  size: 137, 176
+  orig: 137, 176
   offset: 0, 0
   index: -1
 hat
   rotate: false
-  xy: 1, 247
-  size: 176, 77
-  orig: 176, 77
+  xy: 1, 669
+  size: 352, 153
+  orig: 352, 153
   offset: 0, 0
   index: -1
 bow
   rotate: false
-  xy: 388, 159
-  size: 91, 129
-  orig: 91, 129
+  xy: 768, 497
+  size: 181, 257
+  orig: 181, 257
+  offset: 0, 0
+  index: -1
+shade
+  rotate: false
+  xy: 1, 1
+  size: 800, 180
+  orig: 800, 180
   offset: 0, 0
   index: -1

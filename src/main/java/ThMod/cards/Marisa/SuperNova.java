@@ -20,7 +20,7 @@ public class SuperNova extends CustomCard {
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-  public static final String IMG_PATH = "img/cards/feelNoPain.png";
+  public static final String IMG_PATH = "img/cards/temp/SuperNova.png";
   private static final int COST = 3;
 
   public SuperNova() {

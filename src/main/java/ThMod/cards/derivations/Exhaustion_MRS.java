@@ -23,7 +23,7 @@ public class Exhaustion_MRS extends CustomCard {
     super(
         ID,
         NAME,
-        "img/cards/parasite.png",
+        "img/cards/temp/Exhaustion.png",
         COST,
         DESCRIPTION,
         CardType.CURSE,

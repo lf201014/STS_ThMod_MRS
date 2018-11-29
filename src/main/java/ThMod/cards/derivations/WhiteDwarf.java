@@ -1,5 +1,6 @@
 package ThMod.cards.derivations;
 
+import ThMod.abstracts.AmplifiedAttack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -13,21 +14,23 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import ThMod.patches.AbstractCardEnum;
-import basemod.abstracts.CustomCard;
 
-public class WhiteDwarf extends CustomCard {
+public class WhiteDwarf extends AmplifiedAttack {
 
   public static final String ID = "WhiteDwarf";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-  public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
+  private static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
   public static final String IMG_PATH = "img/cards/pride.png";
   private static final int COST = 0;
   private static final int ATTACK_DMG = 0;
-  private float magn = 1.5f;
   private static final int HAND_REQ = 4;
+  private static final float MULTIPLIER = 1.5f;
+  private static final float MULTIPLIER_UPG = 2.0f;
+
+  private float magn = MULTIPLIER;
 
   public WhiteDwarf() {
     super(
@@ -42,14 +45,14 @@ public class WhiteDwarf extends CustomCard {
         AbstractCard.CardTarget.ENEMY
     );
 
-    this.baseDamage = ATTACK_DMG;
+    this.baseDamage = this.damage = ATTACK_DMG;
 
   }
 
   @Override
   public void applyPowers() {
     AbstractPlayer player = AbstractDungeon.player;
-    this.baseDamage = (int) (Math.floor(player.discardPile.size() * this.magn));
+    this.ampNumber = (int) (Math.floor(player.discardPile.size() * this.magn));
     super.applyPowers();
   }
 
@@ -61,7 +64,7 @@ public class WhiteDwarf extends CustomCard {
   @Override
   public void calculateCardDamage(AbstractMonster mo) {
     AbstractPlayer player = AbstractDungeon.player;
-    this.baseDamage = (int) (Math.floor(player.discardPile.size() * this.magn));
+    this.ampNumber = (int) (Math.floor(player.discardPile.size() * this.magn));
     super.applyPowers();
   }
 
@@ -78,7 +81,7 @@ public class WhiteDwarf extends CustomCard {
     AbstractDungeon.actionManager.addToBottom(
         new DamageAction(
             m,
-            new DamageInfo(p, this.damage, this.damageTypeForTurn),
+            new DamageInfo(p, this.block, this.damageTypeForTurn),
             AttackEffect.SLASH_DIAGONAL
         )
     );
@@ -94,7 +97,7 @@ public class WhiteDwarf extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      this.magn = 2.0f;
+      this.magn = MULTIPLIER_UPG;
       this.rawDescription = DESCRIPTION_UPG;
       initializeDescription();
     }

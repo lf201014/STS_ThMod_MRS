@@ -94,7 +94,11 @@
   "Occultation": {
     "NAME": "掩星",
     "DESCRIPTION": "将抽牌堆的卡全部放入弃牌堆，每一张使你获得1点 格挡 。",
-    "UPGRADE_DESCRIPTION": "将抽牌堆的卡全部放入弃牌堆，每一张使你获得1点 格挡 。 NL 获得3点 格挡 。"
+    "UPGRADE_DESCRIPTION": "将抽牌堆的卡全部放入弃牌堆，每一张使你获得1点 格挡 。 NL 获得3点 格挡 。",
+    "EXTENDED_DESCRIPTION": [
+      "（获得 !B! 点格挡）",
+      ""
+    ]
   },
   "OortCloud": {
     "NAME": "奥尔特云",
@@ -186,7 +190,7 @@
     "DESCRIPTION": "对所有敌人造成本局中打出0费牌数量 !M! 倍的伤害。",
     "UPGRADE_DESCRIPTION": " Exhaust ALL non-Attack cards in your hand. Add the same number of upgraded Sparks to your hand.",
     "EXTENDED_DESCRIPTION": [
-      " NL ( !D! 点伤害。)",
+      " NL ( !B! 点伤害。)",
       ""
     ]
   },
@@ -232,8 +236,8 @@
   },
   "AbsoluteMagnitude": {
     "NAME": "绝对星等",
-    "DESCRIPTION": "造成 !D! 点伤害( 2.5 × 你的 蓄力 层数)。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害( 3.5 × 你的 蓄力 层数)。"
+    "DESCRIPTION": "造成 !B! 点伤害( 2.5 × 你的 蓄力 层数)。",
+    "UPGRADE_DESCRIPTION": "造成 !B! 点伤害( 3.5 × 你的 蓄力 层数)。"
   },
   "DragonMeteor": {
     "NAME": "龙陨星",
@@ -272,7 +276,7 @@
   },
   "TreasureHunter": {
     "NAME": "宝物猎手",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若此卡杀死一名精英/boss，则在战斗奖励中增加一件普通或罕见/稀有遗物。 NL 消耗 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张牌在精英或boss战中杀死一名不是“爪牙”的敌人，则在战斗奖励中增加一件随机遗物。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Robbery": {
@@ -407,8 +411,8 @@
   },
   "WhiteDwarf": {
     "NAME": "白矮星",
-    "DESCRIPTION": "只有在你手牌数小于等于4时才能被打出。 NL 造成 !D! 伤害 (1.5 × 你的弃卡堆的卡数)。然后向你手中加入2张 灼伤 。",
-    "UPGRADE_DESCRIPTION": "只有在你手牌数小于等于4时才能被打出。 NL 造成 !D! 伤害 (2 × 你的弃卡堆的卡数)。然后向你手中加入2张 灼伤 。",
+    "DESCRIPTION": "只有在你手牌数小于等于4时才能被打出。 NL 造成 !B! 伤害 (1.5 × 你的弃卡堆的卡数)。然后向你手中加入2张 灼伤 。",
+    "UPGRADE_DESCRIPTION": "只有在你手牌数小于等于4时才能被打出。 NL 造成 !B! 伤害 (2 × 你的弃卡堆的卡数)。然后向你手中加入2张 灼伤 。",
     "EXTENDED_DESCRIPTION":[
       "我的手牌数大于4。",
       ""

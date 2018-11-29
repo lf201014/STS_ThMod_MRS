@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 public class SprinkleStarSeal extends CustomCard {
 
   public static final String ID = "SprinkleStarSeal";
-  public static final String IMG_PATH = "img/cards/Defend.png";
+  public static final String IMG_PATH = "img/cards/temp/Sprinkle.png";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;

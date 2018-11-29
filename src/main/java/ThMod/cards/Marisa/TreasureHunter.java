@@ -1,5 +1,6 @@
 package ThMod.cards.Marisa;
 
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -39,6 +40,7 @@ public class TreasureHunter
 
     this.baseDamage = ATTACK_DMG;
     this.exhaust = true;
+    this.tags.add(CardTags.HEALING);
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {

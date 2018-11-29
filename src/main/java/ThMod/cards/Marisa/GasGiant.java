@@ -16,7 +16,7 @@ import basemod.abstracts.CustomCard;
 public class GasGiant extends CustomCard {
 
   public static final String ID = "GasGiant";
-  public static final String IMG_PATH = "img/cards/Defend.png";
+  public static final String IMG_PATH = "img/cards/temp/GasGiant.png";
   private static final CardStrings cardStrings =
       CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;

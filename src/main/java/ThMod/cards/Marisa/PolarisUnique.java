@@ -19,7 +19,7 @@ import ThMod.powers.Marisa.PolarisUniquePower;
 public class PolarisUnique extends CustomCard {
 
   public static final String ID = "PolarisUnique";
-  public static final String IMG_PATH = "img/cards/feelNoPain.png";
+  public static final String IMG_PATH = "img/cards/temp/PolUni.png";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;

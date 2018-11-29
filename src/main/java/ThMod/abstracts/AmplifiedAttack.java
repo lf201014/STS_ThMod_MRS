@@ -13,9 +13,9 @@ public abstract class AmplifiedAttack
     extends CustomCard {
 
   private int ampDamage = -1;
-  public int ampNumber = 0;
-  public int[] multiAmpDamage;
-  public boolean isException = false;
+  protected int ampNumber = 0;
+  protected int[] multiAmpDamage;
+  protected boolean isException = false;
 
   public AmplifiedAttack(
       String id,
