@@ -30,7 +30,7 @@ public class OccultationAction
 		
 
 		ArrayList<AbstractCard> cards = AbstractDungeon.player.drawPile.group;
-		int cnt = 0;
+		//int cnt = 0;
 		ThMod.logger.info(("Draw pile:"+cards.size()));
 		
 		while (!p.drawPile.isEmpty()) {
@@ -41,10 +41,10 @@ public class OccultationAction
 			c.triggerOnManualDiscard();
 			p.drawPile.removeCard(c);
 			
-			cnt++;
+			//cnt++;
 			
 		}
-		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, cnt));
+		//AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, cnt));
 		this.isDone = true;
 		return;
 	}

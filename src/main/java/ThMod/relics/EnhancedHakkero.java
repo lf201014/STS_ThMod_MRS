@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import ThMod.ThMod;
 import ThMod.powers.Marisa.ChargeUpPower;
 import basemod.abstracts.CustomRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 
 public class EnhancedHakkero extends CustomRelic {
 
@@ -64,20 +65,21 @@ public class EnhancedHakkero extends CustomRelic {
   }
 
   @Override
-  public int onAttacked(DamageInfo info, int damageAmount)
-  {
-    flash();
-    AbstractDungeon.actionManager.addToBottom(
-        new ApplyPowerAction(
-            AbstractDungeon.player,
-            AbstractDungeon.player,
-            new ChargeUpPower(AbstractDungeon.player, 1),
-            1
-        )
-    );
-    AbstractDungeon.actionManager.addToBottom(
-        new RelicAboveCreatureAction(AbstractDungeon.player, this)
-    );
+  public int onAttacked(DamageInfo info, int damageAmount) {
+    if (AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT) {
+      flash();
+      AbstractDungeon.actionManager.addToBottom(
+          new ApplyPowerAction(
+              AbstractDungeon.player,
+              AbstractDungeon.player,
+              new ChargeUpPower(AbstractDungeon.player, 1),
+              1
+          )
+      );
+      AbstractDungeon.actionManager.addToBottom(
+          new RelicAboveCreatureAction(AbstractDungeon.player, this)
+      );
+    }
     return damageAmount;
   }
 

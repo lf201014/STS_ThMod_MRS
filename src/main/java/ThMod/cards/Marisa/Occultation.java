@@ -1,5 +1,6 @@
 package ThMod.cards.Marisa;
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -17,10 +18,11 @@ public class Occultation extends CustomCard {
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+  private static final String EXT_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION[0];
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   private static final int COST = 2;
   private static final int UPG_COST = 1;
-  //private static final int BLOCK_AMT = 3;
+  private static final int BLOCK_AMT = 0;
 
   public Occultation() {
     super(
@@ -35,7 +37,23 @@ public class Occultation extends CustomCard {
         AbstractCard.CardTarget.SELF
     );
 
-    //this.baseBlock = BLOCK_AMT;
+    this.baseBlock = BLOCK_AMT;
+  }
+
+  @Override
+  public void applyPowers() {
+    if (AbstractDungeon.player.drawPile.size() >= 0) {
+      this.baseBlock = AbstractDungeon.player.drawPile.size();
+      this.rawDescription = DESCRIPTION + EXT_DESCRIPTION;
+      initializeDescription();
+    }
+    super.applyPowers();
+  }
+
+  public void onMoveToDiscard() {
+    this.rawDescription = DESCRIPTION;
+    this.block = this.baseBlock = 0;
+    initializeDescription();
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
@@ -44,6 +62,9 @@ public class Occultation extends CustomCard {
           new OccultationAction()
       );
     }
+    AbstractDungeon.actionManager.addToBottom(
+        new GainBlockAction(p, p, this.block)
+    );
     /*
     if (this.upgraded) {
       AbstractDungeon.actionManager.addToBottom(
