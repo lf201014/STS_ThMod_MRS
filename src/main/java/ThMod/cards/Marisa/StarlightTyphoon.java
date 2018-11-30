@@ -1,5 +1,6 @@
 package ThMod.cards.Marisa;
 
+import ThMod.ThMod;
 import ThMod.abstracts.AmplifiedAttack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -45,12 +46,16 @@ public class StarlightTyphoon extends AmplifiedAttack {
 
   @Override
   public void applyPowers() {
+    /*
     counter = 0;
     for (AbstractCard c:AbstractDungeon.actionManager.cardsPlayedThisCombat){
       if ((c.costForTurn == 0) || (c.costForTurn <= -2)){
         counter ++;
       }
     }
+    */
+    counter = ThMod.typhoonCounter;
+
     if (counter > 0) {
       this.ampNumber = this.magicNumber * counter;
       this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);

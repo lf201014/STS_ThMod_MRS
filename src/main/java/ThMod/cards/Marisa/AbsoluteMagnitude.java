@@ -43,6 +43,7 @@ public class AbsoluteMagnitude
 
     this.damage = this.baseDamage = 0;
     this.multipler = ATK_MULT;
+    this.block = this.baseBlock = 0;
   }
 
   public void applyPowers() {
