@@ -33,7 +33,7 @@ public class GalacticHalo extends CustomCard {
         COST, DESCRIPTION,
         AbstractCard.CardType.SKILL,
         AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.UNCOMMON,
+        AbstractCard.CardRarity.COMMON,
         AbstractCard.CardTarget.SELF
     );
 

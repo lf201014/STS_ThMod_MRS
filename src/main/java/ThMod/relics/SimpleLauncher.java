@@ -8,8 +8,8 @@ import basemod.abstracts.CustomRelic;
 public class SimpleLauncher extends CustomRelic {
 
   public static final String ID = "SimpleLauncher";
-  private static final String IMG = "img/relics/test8.png";
-  private static final String IMG_OTL = "img/relics/outline/test8.png";
+  private static final String IMG = "img/relics/FlashLight.png";
+  private static final String IMG_OTL = "img/relics/outline/FlashLight.png";
 
   public SimpleLauncher() {
     super(

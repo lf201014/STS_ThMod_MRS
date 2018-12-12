@@ -8,20 +8,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import ThMod.ThMod;
 
 public class SuperNovaDiscardPatch {
-	/*
-	@SpirePatch(cls = "com.megacrit.cardcrawl.cards.status.Burn", method = "triggerOnEndOfTurnForPlayingCard")
-	public static class DisableBurn_Replace {
-		public static void Replace(AbstractCard _inst) {
-			if (AbstractDungeon.player.hasPower("SuperNovaPower")) {
-				ThMod.logger.info("SuperNovaPatch : Burn detected.");
-				return;
-			} else {
-				_inst.dontTriggerOnUseCard = true;
-				AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(_inst, true));
-			}
-		}
-	}
-	*/
 
   @SpirePatch(cls = "com.megacrit.cardcrawl.cards.status.Burn", method = "triggerOnEndOfTurnForPlayingCard")
   public static class DisableBurn_PreFix {

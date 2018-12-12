@@ -76,10 +76,10 @@ public class Orin extends AbstractMonster {
   private int strength;
   private int debuff;
   private int executeDmg;
-  private boolean CatForm = true;
+  private static final String tempImgUrl = "img/monsters/Orin/Orin.png";
 
   public Orin() {
-    super(NAME, "Orin", STAGE_1_HP, 0.0F, -30.0F, 220.0F, 320.0F, null, -20.0F, -10.0F);
+    super(NAME, "Orin", STAGE_1_HP, 0.0F, -30.0F, 220.0F, 320.0F, tempImgUrl, -20.0F, -10.0F);
     if (Settings.language == GameLanguage.ZHS) {
       this.name = "\u963f\u71d0";
     }
@@ -108,6 +108,8 @@ public class Orin extends AbstractMonster {
     this.damage.add(new DamageInfo(this, this.executeDmg));
 
     this.type = AbstractMonster.EnemyType.ELITE;
+
+
     /*
     loadAnimation("images/monsters/theForest/mage/skeleton.atlas",
         "images/monsters/theForest/mage/skeleton.json", 1.0F);
@@ -288,18 +290,18 @@ public class Orin extends AbstractMonster {
       }
       if (num < 50) {
         if (!lastMove((byte) 2)) {
-          setMove((byte) 2, AbstractMonster.Intent.ATTACK, 6, 4, true);
+          setMove((byte) 2, Intent.BUFF);
         } else {
           setMove((byte) 1, AbstractMonster.Intent.ATTACK, 20);
         }
-      } else if (!lastTwoMoves((byte) 1)) {
+      } else if (!lastMove((byte) 1)) {
         setMove((byte) 1, AbstractMonster.Intent.ATTACK, 20);
       } else {
-        setMove((byte) 2, AbstractMonster.Intent.ATTACK, 6, 4, true);
+        setMove((byte) 2, Intent.BUFF);
       }
     } else {
       if (this.firstTurn) {
-        setMove((byte) 5, AbstractMonster.Intent.ATTACK, 40);
+        setMove((byte) 7, Intent.UNKNOWN);
         this.firstTurn = false;
         return;
       }
