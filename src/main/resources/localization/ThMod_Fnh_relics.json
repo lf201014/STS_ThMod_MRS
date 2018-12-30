@@ -57,7 +57,7 @@
   },
   "SimpleLauncher": {
     "NAME": "Simple Launcher",
-    "FLAVOR": "Simple, but useful...Perhaps...",
+    "FLAVOR": "A flashlight is a flashlight,no matter how it is called...",
     "DESCRIPTIONS": [
       "Reduce your #yCharge-up consumption threshold value from #b8 to #b6 ."
     ]

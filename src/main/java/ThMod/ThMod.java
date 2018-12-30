@@ -175,6 +175,8 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String POTION_STRING = "localization/ThMod_MRS_potions.json";
   private static final String POTION_STRING_ZH = "localization/ThMod_MRS_potions-zh.json";
 
+  public static int typhoonCounter = 0;
+
   //For Spark Themed cards
   public static boolean isSpark(AbstractCard card) {
     return (
@@ -563,13 +565,17 @@ public class ThMod implements PostExhaustSubscriber,
 
   @Override
   public void receivePostBattle(AbstractRoom r) {
-    // TODO Auto-generated method stub
+    typhoonCounter = 0;
     logger.info("ThMod : PostBattle");
   }
 
   @Override
   public void receiveCardUsed(AbstractCard card) {
-    ThMod.logger.info("ThMod : Card used : " + card.cardID);
+    ThMod.logger.info("ThMod : Card used : " + card.cardID + " ; cost : " + card.costForTurn);
+    if ((card.costForTurn == 0) || (card.costForTurn <= -2) || ((card.costForTurn == -1) && (
+        AbstractDungeon.player.energy.energy <= 0))) {
+      typhoonCounter++;
+    }
     if (card.retain) {
       card.retain = false;
     }
@@ -668,7 +674,9 @@ public class ThMod implements PostExhaustSubscriber,
   public void receivePostInitialize() {
     // TODO Auto-generated method stub
     //BaseMod.addEvent(Mushrooms_MRS.ID, Mushrooms_MRS.class, Exordium.ID);
-    BaseMod.addPotion(ShroomBrew.class, Color.NAVY.cpy(), Color.LIME.cpy(), Color.OLIVE, "ShroomBrew", MARISA);
+    BaseMod
+        .addPotion(ShroomBrew.class, Color.NAVY.cpy(), Color.LIME.cpy(), Color.OLIVE, "ShroomBrew",
+            MARISA);
   }
 	/*
 	

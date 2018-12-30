@@ -34,7 +34,7 @@ public class MilkyWay extends CustomCard {
         DESCRIPTION,
         AbstractCard.CardType.SKILL,
         AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.COMMON,
+        AbstractCard.CardRarity.UNCOMMON,
         AbstractCard.CardTarget.SELF
     );
 

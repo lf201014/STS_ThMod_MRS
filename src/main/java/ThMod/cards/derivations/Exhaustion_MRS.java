@@ -13,8 +13,8 @@ import basemod.abstracts.CustomCard;
 public class Exhaustion_MRS extends CustomCard {
 
   public static final String ID = "Exhaustion_MRS";
-  private static final CardStrings cardStrings = CardCrawlGame.languagePack
-      .getCardStrings("Exhaustion_MRS");
+  private static final CardStrings cardStrings =
+      CardCrawlGame.languagePack.getCardStrings("Exhaustion_MRS");
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   private static final int COST = -2;
@@ -26,17 +26,17 @@ public class Exhaustion_MRS extends CustomCard {
         "img/cards/temp/Exhaustion.png",
         COST,
         DESCRIPTION,
-        CardType.CURSE,
-        CardColor.CURSE,
-        CardRarity.CURSE,
-        CardTarget.SELF
+        CardType.STATUS,
+        CardColor.COLORLESS,
+        CardRarity.SPECIAL,
+        CardTarget.NONE
     );
     this.exhaust = true;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-    if (p.hasRelic("Blue Candle")) {
-      useBlueCandle(p);
+    if (p.hasRelic("Medical Kit")) {
+      useMedicalKit(p);
     } else {
       AbstractDungeon.actionManager.addToBottom(new UseCardAction(this));
     }

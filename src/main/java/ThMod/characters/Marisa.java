@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings.GameLanguage;
@@ -81,6 +82,7 @@ public class Marisa extends CustomPlayer {
     // if you're using modified versions of base game animations or made animations in spine make sure to include this bit and the following lines
     AnimationState.TrackEntry e = this.state.setAnimation(0, MARISA_ANIMATION, true);
     e.setTime(e.getEndTime() * MathUtils.random());
+    this.stateData.setMix("Hit", "Idle", 0.1F);
     e.setTimeScale(1.0F);
     logger.info("init finish");
   }
@@ -198,13 +200,11 @@ public class Marisa extends CustomPlayer {
     return ThMod.STARLIGHT;
   }
 
-  public void updateOrb(int orbCount)
-  {
+  public void updateOrb(int orbCount) {
     this.energyOrb.updateOrb(orbCount);
   }
 
-  public TextureAtlas.AtlasRegion getOrb()
-  {
+  public TextureAtlas.AtlasRegion getOrb() {
     return AbstractCard.orb_blue;
   }
 
@@ -226,4 +226,16 @@ public class Marisa extends CustomPlayer {
   public String getSpireHeartText() {
     return com.megacrit.cardcrawl.events.beyond.SpireHeart.DESCRIPTIONS[10];
   }
+
+  public void damage(DamageInfo info) {
+    if ((info.owner != null) && (info.type != DamageInfo.DamageType.THORNS) && (
+        info.output - this.currentBlock > 0)) {
+      AnimationState.TrackEntry e =
+          this.state.setAnimation(0, "Hit", false);
+      this.state.addAnimation(0, "Idle", true, 0.0F);
+      e.setTimeScale(1.0F);
+    }
+    super.damage(info);
+  }
+
 }

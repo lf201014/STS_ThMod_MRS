@@ -39,7 +39,7 @@ public class BlazeAway extends CustomCard {
         CardRarity.UNCOMMON,
         CardTarget.SELF
     );
-
+    this.exhaust = true;
     this.baseMagicNumber = this.magicNumber = NUM;
   }
 
