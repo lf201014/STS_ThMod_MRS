@@ -455,7 +455,7 @@
   },
   "Exhaustion_MRS": {
     "NAME": "力竭",
-    "DESCRIPTION": " 不能被打出 。 NL 這張卡在你手中時你將無法獲得或發動 蓄力",
+    "DESCRIPTION": " 無法打出 。 NL 這張卡在你手中時你將無法獲得或發動 蓄力",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "UltimateShortwave": {
