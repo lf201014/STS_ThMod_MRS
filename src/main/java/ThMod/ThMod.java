@@ -174,6 +174,7 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String POWER_STRING = "localization/ThMod_Fnh_powers.json";
   private static final String POWER_STRING_ZH = "localization/ThMod_Fnh_powers-zh.json";
   private static final String POTION_STRING = "localization/ThMod_MRS_potions.json";
+  private static final String POTION_STRING_JP = "localization/ThMod_MRS_potions-jp.json";
   private static final String POTION_STRING_ZH = "localization/ThMod_MRS_potions-zh.json";
 
   public static int typhoonCounter = 0;
@@ -659,7 +660,7 @@ public class ThMod implements PostExhaustSubscriber,
       card = CARD_STRING;
       relic = RELIC_STRING_JP;
       power = POWER_STRING;
-      potion = POTION_STRING;
+      potion = POTION_STRING_JP;
     } else {
       logger.info("lang == eng");
       card = CARD_STRING;

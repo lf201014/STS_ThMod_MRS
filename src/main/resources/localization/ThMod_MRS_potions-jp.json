@@ -1,0 +1,17 @@
+{
+  "ShroomBrew": {
+    "NAME": "キノコポーション",
+    "DESCRIPTIONS": [
+      "カードを消費する。 NL このポーションの効果は消費した カードによって異なる 。",
+      "詳細",
+      "攻撃 ： 恐怖ポーション NL スキル ： 脱力ポーション NL パワー ： 毒ポーション NL ステータス ： 火炎ポーション NL 呪い ： 煙玉 ."
+    ]
+  },
+  "WWWWWW": {
+    "NAME": "WWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWW",
+      "WWWWW"
+    ]
+  }
+}
