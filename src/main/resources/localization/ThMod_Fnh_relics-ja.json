@@ -1,0 +1,108 @@
+{
+  "MiniHakkero": {
+    "NAME": "ミニ八卦炉",
+    "FLAVOR": "霖之助からの贈り物。ミニ八卦炉は魔理沙が人里の両親の元から去るときに、霖之助が作ってくれたマジックアイテム。",
+    "DESCRIPTIONS": [
+      "カードをプレイするたび、チャージを #b1 つ #y増加。"
+    ]
+  },
+  "EnhancedHakkero": {
+    "NAME": "妖器「ミニ八卦炉」",
+    "FLAVOR": "妖器と化したミニ八卦炉はこれまでにない威力を出すが、安全かどうかは分からない......",
+    "DESCRIPTIONS": [
+      "#rミニ八卦炉と交換。 NL カードか攻撃をプレイするたびに、 チャージを #b1 つ #y増加。"
+    ]
+  },
+  "MagicArmor": {
+    "NAME": "Black Magic Shield",
+    "FLAVOR": "In fact I don't know what the hell is this,but since the Designer put it in the Plan,here it is.-programmer",
+    "DESCRIPTIONS": [
+      "Whenever you draw a Status or Curse, gain 5 Block ."
+    ]
+  },
+  "EnhancedBroom": {
+    "NAME": "Magic Broom",
+    "FLAVOR": "Marisa always travels on her flying broom.",
+    "DESCRIPTIONS": [
+      "Every time you play #b3 cards that cost 0, draw 1 card."
+    ]
+  },
+  "AmpWand": {
+    "NAME": "Amplify Wand",
+    "FLAVOR": "A Wand seems to not be used often.",
+    "DESCRIPTIONS": [
+      "Every time you activate 3 #yAmplify effects, gain [B]  [B] ."
+    ]
+  },
+  "RampagingMagicTools": {
+    "NAME": "Rampaging Magic Tool",
+    "FLAVOR": "It's been so long since anyone last used them. Who knows what could happen?",
+    "DESCRIPTIONS": [
+      "Gain [B] at the start of each turn. NL Apply a random debuff/buff ( #b2 #yFrail , #b2 #yWeak , #b2 #yVulnerable , #b3 #yPoison , #b8 #yCharge-up )to you at the start of each combat."
+    ]
+  },
+  "ExperimentalFamiliar": {
+    "NAME": "Experimental Familiar",
+    "FLAVOR": "A Familiar looks just like a shiny orb. Not very powerful, but it will surely help you a lot.",
+    "DESCRIPTIONS": [
+      "At the start of each turn, add 1 #ySpark to your hand. NL At the start of combat, you can choose #b1 from #b3 random cards. It costs 0 this turn."
+    ]
+  },
+  "BreadOfAWashokuLover": {
+    "NAME": "Bread Of A Washoku Lover",
+    "FLAVOR": "\"Can you remember how many slices of bread you have eaten until now?\"\"Thirteen. I prefer Japanese food.\"",
+    "DESCRIPTIONS": [
+      "Heal 1 hp whenever you exhaust a #yStatus or a #yCurse. NL When triggered 13 times, you gain #b13 max HP,and this relic no longer works."
+    ]
+  },
+  "SimpleLauncher": {
+    "NAME": "Simple Launcher",
+    "FLAVOR": "A flashlight is a flashlight,no matter how it is called...",
+    "DESCRIPTIONS": [
+      "Reduce your #yCharge-up consumption threshold value from #b8 to #b6 ."
+    ]
+  },
+  "HandmadeGrimoire": {
+    "NAME": "Handmade Grimoire",
+    "FLAVOR": "A notebook full of experiment records and magic material recipes;just how Marisa develops her Magics.",
+    "DESCRIPTIONS": [
+      "At the start of battle, for every 15 cards in your master deck, gain [B] and draw a card."
+    ]
+  },
+  "ShroomBag": {
+    "NAME": "Shroom Bag",
+    "FLAVOR": "All witches have an abnormal ethusiasm for mushrooms... NL Or is it just Marisa...?",
+    "DESCRIPTIONS": [
+      "Upon pickup, obtain 2 #yParasite. Parasite cards can now be played. Playing a #yParasite will heal #b3 HP and Exhausts the card."
+    ]
+  },
+  "Cape": {
+    "NAME": "Cape",
+    "FLAVOR": "Marisa always takes whatever she wants,and this cape will surely help her doing so.",
+    "DESCRIPTIONS": [
+      "Whenever you enter a shop room,earn some random combat rewards.",
+      " use(s) left. NL You can take the first merchandise in a shop for free."
+    ]
+  },
+  "SproutingBranch": {
+    "NAME": "Sprouting Branch",
+    "FLAVOR": "The dead branch just come to life in Marisa's hand,how poetic.",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain #b5 #yRegen ."
+    ]
+  },
+  "AmplifyWand": {
+    "NAME": "Amplification Wand",
+    "FLAVOR": "A wand that seems to not be used often.",
+    "DESCRIPTIONS": [
+      "Whenever you activate an #yAmplify effect, gain #b4  #yblock ."
+    ]
+  },
+  "WWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWWWW",
+    "FLAVOR": "WWWWWWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWWWWWWWWWW"
+    ]
+  }
+}

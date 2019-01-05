@@ -121,7 +121,11 @@ public class Marisa extends CustomPlayer {
     if (Settings.language == Settings.GameLanguage.ZHS) {
       title = "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f";
       flavor = "\u4f4f\u5728\u9b54\u6cd5\u68ee\u6797\u7684\u9b54\u6cd5\u4f7f\u3002 NL \u5584\u957f\u4e8e\u5149\u548c\u70ed\u7684\u9b54\u6cd5\u3002";
-    } else {
+    }else if (Settings.language == Settings.GameLanguage.JA) {
+      title = "\u666e\u901a\u306e\u9b54\u6cd5\u4f7f\u3044";
+      flavor = "\u4f4f\u5728\u9b54\u6cd5\u68ee\u6797\u7684\u9b54\u6cd5\u4f7f\u3002 NL \u5584\u957f\u4e8e\u5149\u548c\u70ed\u7684\u9b54\u6cd5\u3002";
+    }
+    else {
       title = "The Ordinary Magician";
       flavor = "The \"ordinary\" magician lives in the Forest of Magic. NL Specializes in light and heat magic.";
     }
