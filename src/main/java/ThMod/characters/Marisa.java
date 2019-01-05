@@ -190,6 +190,9 @@ public class Marisa extends CustomPlayer {
   }
 
   public String getLocalizedCharacterName() {
+    if (Settings.language == Settings.GameLanguage.JPN) {
+      return "\u9b54\u7406\u6c99";
+    }
     return "Marisa";
   }
 
