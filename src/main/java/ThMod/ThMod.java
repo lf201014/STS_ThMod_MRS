@@ -169,6 +169,7 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String CARD_STRING = "localization/ThMod_Fnh_cards.json";
   private static final String CARD_STRING_ZH = "localization/ThMod_Fnh_cards-zh.json";
   private static final String RELIC_STRING = "localization/ThMod_Fnh_relics.json";
+  private static final String RELIC_STRING_JP = "localization/ThMod_Fnh_relics-jp.json";
   private static final String RELIC_STRING_ZH = "localization/ThMod_Fnh_relics-zh.json";
   private static final String POWER_STRING = "localization/ThMod_Fnh_powers.json";
   private static final String POWER_STRING_ZH = "localization/ThMod_Fnh_powers-zh.json";
@@ -642,6 +643,12 @@ public class ThMod implements PostExhaustSubscriber,
       relic = RELIC_STRING_ZH;
       power = POWER_STRING_ZH;
       potion = POTION_STRING_ZH;
+    } else if (Settings.language == Settings.GameLanguage.JPN) {
+      logger.info("lang == jpn");
+      card = CARD_STRING;
+      relic = RELIC_STRING_JP;
+      power = POWER_STRING;
+      potion = POTION_STRING;
     } else {
       logger.info("lang == eng");
       card = CARD_STRING;
