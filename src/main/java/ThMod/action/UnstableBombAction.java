@@ -56,8 +56,8 @@ public class UnstableBombAction extends AbstractGameAction {
           )
       );
 
+      this.info.applyPowers(this.info.owner, this.target);
       this.target.damage(this.info);
-      //this.info.applyPowers(this.info.owner, this.target);
       /*
       AbstractDungeon.actionManager.addToBottom(
           new DamageAction(
@@ -69,7 +69,7 @@ public class UnstableBombAction extends AbstractGameAction {
       */
       if ((this.numTimes > 1) && (!AbstractDungeon.getMonsters().areMonstersBasicallyDead())) {
         this.numTimes--;
-        AbstractDungeon.actionManager.addToBottom(
+        AbstractDungeon.actionManager.addToTop(
             new UnstableBombAction(
                 AbstractDungeon.getMonsters().getRandomMonster(true),
                 min,
