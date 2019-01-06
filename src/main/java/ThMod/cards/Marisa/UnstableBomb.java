@@ -56,14 +56,18 @@ public class UnstableBomb
     );
   }
 
+  @Override
+  public void calculateCardDamage(AbstractMonster mo){
+  }
+
   public AbstractCard makeCopy() {
     return new UnstableBomb();
   }
 
   public void upgrade() {
     if (!this.upgraded) {
-      upgradeName();
       upgradeDamage(UPG_DMG);
+      upgradeName();
       this.ampNumber += UPG_AMP;
       this.block = this.baseBlock = this.baseDamage + this.ampNumber;
       this.isBlockModified = true;

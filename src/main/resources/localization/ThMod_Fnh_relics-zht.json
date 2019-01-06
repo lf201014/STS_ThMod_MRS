@@ -1,0 +1,108 @@
+﻿{
+  "MiniHakkero": {
+    "NAME": "迷你八卦爐",
+    "FLAVOR": "霖之助的發明。在魔理沙離開人裡去往魔法森林時，被霖之助作為禮物送給了魔理沙。",
+    "DESCRIPTIONS": [
+      "每打出1張牌，獲得1層 #y蓄力"
+    ]
+  },
+  "EnhancedHakkero": {
+    "NAME": "妖器八卦爐",
+    "FLAVOR": "妖器化的八卦爐火力前所未有地強大，不過這樣好像不太安全……",
+    "DESCRIPTIONS": [
+      "取代 #r迷你八卦爐 。 NL 每打出1張牌或被攻擊時，獲得一層 #y蓄力"
+    ]
+  },
+  "MagicArmor": {
+    "NAME": "黑魔法盾",
+    "FLAVOR": "「說實話我也不知道這是個什麼東西，不過策劃案裡有這個，我就做了。」──程序員",
+    "DESCRIPTIONS": [
+      "每抽到1張 #y詛咒 或 #y狀態 ，獲得 5 點 格擋"
+    ]
+  },
+  "EnhancedBroom": {
+    "NAME": "魔法笤帚",
+    "FLAVOR": "魔理沙用來騎著飛來飛去的魔法掃帚。",
+    "DESCRIPTIONS": [
+      "每打出 #b3 張 #b0 費的牌時，抽1張牌"
+    ]
+  },
+  "AmpWand": {
+    "NAME": "增幅魔杖",
+    "FLAVOR": "沒怎麼被見到用過的一根魔杖。",
+    "DESCRIPTIONS": [
+      "每發動 #b3 次 #y增幅 效果，獲得 [B] [B]"
+    ]
+  },
+  "RampagingMagicTools": {
+    "NAME": "失控的魔法道具",
+    "FLAVOR": "好像很久沒被用過的道具，不知道使用的時候會發生什麼事。",
+    "DESCRIPTIONS": [
+      "每回合開始獲得 [B] 。在每場戰鬥開始時，獲得以下五種狀態效果隨機一種： #b2 層 #y虛弱 、 #b2 層 #y脆弱 、 #b2 層 #y易傷 、 #b3 層 #y中毒、 #b8 層 #y蓄力"
+    ]
+  },
+  "ExperimentalFamiliar": {
+    "NAME": "試驗型使魔",
+    "FLAVOR": "像個光球一樣的使魔，雖然不太強但是絕對能幫上忙。",
+    "DESCRIPTIONS": [
+      "在你的回合開始時，將一張 #y火花 加入手牌。 NL 每場戰鬥開始時，你可以從三張隨機牌中選擇一張加入手牌，且該回合中費用變為0"
+    ]
+  },
+  "BreadOfAWashokuLover": {
+    "NAME": "和食主義者的麵包",
+    "FLAVOR": "「你能清楚記得到至今為止吃過的麵包的數量嗎？」「13塊。我是和食主義者。」",
+    "DESCRIPTIONS": [
+      "每當 #y消耗 1張 #y狀態 或 #y詛咒，恢復 #b1 點 生命 。累計觸發 #b13 次後獲得 #b13 點 #y最大生命值 ，同時此遺物失效"
+    ]
+  },
+  "SimpleLauncher": {
+    "NAME": "簡易發射器",
+    "FLAVOR": "不管叫什麼名字，一個手電筒始終還是手電筒……",
+    "DESCRIPTIONS": [
+      "#y蓄力 的消耗與觸發閾值降為 #b6 層"
+    ]
+  },
+  "HandmadeGrimoire": {
+    "NAME": "自製魔導書",
+    "FLAVOR": "其實是個寫滿了實驗記錄和魔法材料配方的筆記本。",
+    "DESCRIPTIONS": [
+      "牌組每有 #b15 張卡，在每場戰鬥開始時獲得 [B] 並抽1張牌"
+    ]
+  },
+  "ShroomBag": {
+    "NAME": "蘑菇袋",
+    "FLAVOR": "所有的魔女都對蘑菇有異樣的熱情……或者只是魔理沙有？",
+    "DESCRIPTIONS": [
+      "拾取時向卡組中加入 #b2 張 #y寄生 。使你可以將 #y寄生 打出，從而將其 #y消耗 並回復 #b3 點生命值"
+    ]
+  },
+  "Cape": {
+    "NAME": "怪盜披風",
+    "FLAVOR": "如果能把想要的東西弄到手，魔理沙並不介意使用什麼方法；而這個披風正好是方法之一。",
+    "DESCRIPTIONS": [
+      "每當進入商店，獲得一份隨機的戰鬥房獎勵。",
+      " 次餘下次數。 NL 進入商店時，你購買的第一件貨物免費"
+    ]
+  },
+  "SproutingBranch": {
+    "NAME": "發芽的樹枝",
+    "FLAVOR": "枯枝在魔理沙手中煥發出了生命，真是富有詩意。",
+    "DESCRIPTIONS": [
+      "在每場戰鬥開始時，給與你 #b5 層 #y再生"
+    ]
+  },
+  "AmplifyWand": {
+    "NAME": "增幅魔杖",
+    "FLAVOR": "沒怎麼被見到用過的一根魔杖。",
+    "DESCRIPTIONS": [
+      "每當發動 #y增幅 ，獲得 #b4  #y格擋"
+    ]
+  },
+  "WWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWWWW",
+    "FLAVOR": "WWWWWWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWWWWWWWWWW"
+    ]
+  }
+}

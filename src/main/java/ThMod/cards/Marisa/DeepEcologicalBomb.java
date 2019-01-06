@@ -44,6 +44,9 @@ public class DeepEcologicalBomb
     this.magicNumber = this.baseMagicNumber = STC;
   }
 
+  @Override
+  public void calculateCardDamage(AbstractMonster mo){}
+
   public void use(AbstractPlayer p, AbstractMonster m) {
     int num = 1;
 

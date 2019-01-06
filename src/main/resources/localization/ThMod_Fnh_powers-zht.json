@@ -1,0 +1,287 @@
+﻿{
+  "DarkMatterPower": {
+    "NAME": "暗物質",
+    "DESCRIPTIONS": [
+      "本回合不能再打出 #y暗物質",
+      ""
+    ]
+  },
+  "ExtraDraw": {
+    "NAME": "第二宇宙速度",
+    "DESCRIPTIONS": [
+      "每回合額外抽 #b",
+      " 張牌，並將 #b",
+      " 張 #y灼傷 加入手牌"
+    ]
+  },
+  "EventHorizonPower": {
+    "NAME": "黑洞邊緣",
+    "DESCRIPTIONS": [
+      "當發動 #y增幅 時，選擇1張棄牌堆的牌加入手牌。每回合只能發動 #b",
+      " 次。",
+      "（當前可用次數： ",
+      "）"
+    ]
+  },
+  "IllusionStarPower": {
+    "NAME": "幻像之星",
+    "DESCRIPTIONS": [
+      "在你的回合開始時， 變化 ",
+      "張手牌"
+    ]
+  },
+  "MilliPulsaPower": {
+    "NAME": "毫秒脈衝星",
+    "DESCRIPTIONS": [
+      "不需要支付額外的能量來發動 #y增幅 ",
+      ""
+    ]
+  },
+  "SatellIllusPower": {
+    "NAME": "衛星幻覺",
+    "DESCRIPTIONS": [
+      "每使用1張不在牌組中的牌時，抽 #b",
+      " 張卡"
+    ]
+  },
+  "TempStrength": {
+    "NAME": "Temproy Strength",
+    "DESCRIPTIONS": [
+      "Your next blow deals additional ",
+      " damage."
+    ]
+  },
+  "TempStrengthLoss": {
+    "NAME": "力量下降",
+    "DESCRIPTIONS": [
+      "這個生物的攻擊力下降了 #b",
+      " 點"
+    ]
+  },
+  "ExtraEnergyPower": {
+    "NAME": "額外能量",
+    "DESCRIPTIONS": [
+      "每回合獲得 ",
+      " 額外能量"
+    ]
+  },
+  "ChargeUpPower": {
+    "NAME": " 蓄力 ",
+    "DESCRIPTIONS": [
+      "現在有",
+      "層 #y蓄力 ",
+      "你的下一次攻擊會造成 #b",
+      " 倍傷害"
+    ]
+  },
+  "PolarisUniquePower": {
+    "NAME": "北極星",
+    "DESCRIPTIONS": [
+      "在回合開始時，如果 #y引導星 在抽牌堆裡，則獲得 [B]"
+    ]
+  },
+  "OrrerysSunPower": {
+    "NAME": "太陽儀",
+    "DESCRIPTIONS": [
+      "每次消耗 #y蓄力 層數，都會對所有敵人造成 #b",
+      " 點傷害"
+    ]
+  },
+  "Charged": {
+    "NAME": "蓄力!",
+    "DESCRIPTIONS": [
+      "你的下一次攻擊造成 ",
+      " 倍傷害"
+    ]
+  },
+  "BlazeAwayPower": {
+    "NAME": "Blaze Away",
+    "DESCRIPTIONS": [
+      "複製 #b",
+      " 張接下來使用的攻擊牌到手牌"
+    ]
+  },
+  "MPPower": {
+    "NAME": "火力全開！",
+    "DESCRIPTIONS": [
+      "本回合的攻擊會造成 #b",
+      " 倍傷害"
+    ]
+  },
+  "EnergyFlowPower": {
+    "NAME": "能量湧動",
+    "DESCRIPTIONS": [
+      "在你的回合結束時，獲得 #b",
+      " 層 #y蓄力"
+    ]
+  },
+  "PulseMagicPower": {
+    "NAME": "脈衝魔術",
+    "DESCRIPTIONS": [
+      "本回合內不再需要支付額外能量來發動 #y增幅",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "SingularityPower": {
+    "NAME": "奇點",
+    "DESCRIPTIONS": [
+      "每使用1張費用為 0 的牌時，使手牌內1張隨機攻擊牌攻擊力增加 #b",
+      " 點"
+    ]
+  },
+  "WitchOfGreedGold": {
+    "NAME": "強欲魔女",
+    "DESCRIPTIONS": [
+      "戰鬥結束時獲得 #b",
+      " 金幣"
+    ]
+  },
+  "WitchOfGreedPotion": {
+    "NAME": "強欲魔女",
+    "DESCRIPTIONS": [
+      "戰鬥結束時獲得 #b",
+      " 瓶隨機藥劑"
+    ]
+  },
+  "MoraleDepletionPlusPower": {
+    "NAME": "一回休",
+    "DESCRIPTIONS": [
+      "本回合不能發動 #y增幅 和 #y蓄力",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "MoraleDepletionPower": {
+    "NAME": "戰意喪失",
+    "DESCRIPTIONS": [
+      "本回合不能發動 #y增幅",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "SuperNovaPower": {
+    "NAME": "超新星",
+    "DESCRIPTIONS": [
+      "每 #y消耗 一張 #y灼傷 ，獲得 #b",
+      "每 #y消耗 一張 #y詛咒 或 #y狀態 ，獲得 #b",
+      " 點 #y力量 。NL 不再受到 #y灼傷 傷害。 NL 在你的回合結束時， #y消耗 所有手牌"
+    ]
+  },
+  "CasketOfStarPlusPower": {
+    "NAME": "星之器",
+    "DESCRIPTIONS": [
+      "每獲得 #y格擋 ，將 #b",
+      " 張 #y已升級 #y火花 加入手牌"
+    ]
+  },
+  "CasketOfStarPower": {
+    "NAME": "星之器",
+    "DESCRIPTIONS": [
+      "每獲得 #y格擋 ，將 #b",
+      " 張 #y火花 加入手牌"
+    ]
+  },
+  "GalacticHaloPower": {
+    "NAME": "星暈",
+    "DESCRIPTIONS": [
+      "每打出1張攻擊牌，回合結束時獲得 #b",
+      "  #y格擋"
+    ]
+  },
+  "ManaRampagePower": {
+    "NAME": "魔力暴走",
+    "DESCRIPTIONS": [
+      "下一張攻擊牌將被打出 #b",
+      " 次"
+    ]
+  },
+  "PropBagPower": {
+    "NAME": "便攜道具包",
+    "DESCRIPTIONS": [
+      "戰鬥結束時，失去 #y",
+      ""
+    ]
+  },
+  "UltraShortWavePower": {
+    "NAME": "極超短波",
+    "DESCRIPTIONS": [
+      "#y極超短波 的效果被加強了 #b",
+      " 次"
+    ]
+  },
+  "DarkSparkPower": {
+    "NAME": "暗色火花",
+    "DESCRIPTIONS": [
+      "本回合打出的每一張名字有 火花 的牌都會給你 #b",
+      " 點額外的 #y蓄力"
+    ]
+  },
+  "MagicChantPower": {
+    "NAME": "詠唱",
+    "DESCRIPTIONS": [
+      "下一回合，使 #b",
+      " 的費用減1。"
+    ]
+  },
+  "SatelIllusPower": {
+    "NAME": "衛星幻覺",
+    "DESCRIPTIONS": [
+      "在你的回合內，當抽牌堆裡的卡牌數量增加時，獲得 #b",
+      "  [B]"
+    ]
+  },
+  "GrandCrossPower": {
+    "NAME": "增幅",
+    "DESCRIPTIONS": [
+      "本回合已發動了 #y增幅",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "Diaspora": {
+    "NAME": "散滅",
+    "DESCRIPTIONS": [
+      "在其回合結束時，如果該生物的生命值低於 #b",
+      " 則會被立即殺死"
+    ]
+  },
+  "GiftOfLife": {
+    "NAME": "生命恩賜",
+    "DESCRIPTIONS": [
+      "在回合結束時恢復 #b",
+      " 點生命值"
+    ]
+  },
+  "TalismanPower": {
+    "NAME": "五色魔符",
+    "DESCRIPTIONS": [
+      "在你的回合開始時，將 #b",
+      " 張隨機 #y技能 加入手牌"
+    ]
+  },
+  "Wraith": {
+    "NAME": "怨靈",
+    "DESCRIPTIONS": [
+      "在你的回合開始後，隨機 #y消耗 1張手牌",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "LimboContact": {
+    "NAME": "UndeadContact",
+    "DESCRIPTIONS": [
+      "Whenever you take damage from this enemy, gain a stack of #yWraith .",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "Nebula": {
+    "NAME": "星雲",
+    "DESCRIPTIONS": [
+      "每當你因敵人或卡牌損失 格擋 ，獲得 ",
+      " 層 多層護甲"
+    ]
+  },
+  "WWWWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWW",
+      "WWWWWWWWWWW"
+    ]
+  }
+}
