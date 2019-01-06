@@ -64,7 +64,7 @@ public class CollectingQuirk
 
   @Override
   public void calculateCardDamage(AbstractMonster mo) {
-    super.calculateCardDamage(mo);
+    //super.calculateCardDamage(mo);
     getCounter();
     modifyBlock();
     this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0];
@@ -76,8 +76,6 @@ public class CollectingQuirk
             + " ; block :" + this.block
             + " ; magic number :" + this.magicNumber
     );
-    this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0];
-    initializeDescription();
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
