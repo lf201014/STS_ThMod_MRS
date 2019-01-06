@@ -1,0 +1,483 @@
+{
+  "Strike_MRS": {
+    "NAME": "シンプルスパーク",
+    "DESCRIPTION": "!D! のダメージを与える。"
+  },
+  "Defend_MRS": {
+    "NAME": "防御",
+    "DESCRIPTION": "!B! の ブロック を得る。"
+  },
+  "AsteroidBelt": {
+    "NAME": "アステロイドベルト",
+    "DESCRIPTION": "!B! の ブロック を得る。 NL 増幅 [B]  :次のターン、 !B! の ブロック を得る。"
+  },
+  "BigCrunch": {
+    "NAME": "ビッグクランチ",
+    "DESCRIPTION": "捨て札と山札の半分を廃棄する。 !M! 枚のカードを廃棄した分 [B] の獲得とカードを 1 枚引く。 NL 廃棄"
+  },
+  "BlazingStar": {
+    "NAME": "ブレイジングスター",
+    "DESCRIPTION": "!B! のダメージを与える。手札にある火傷の枚数だけ !M! の追加ダメージを与える。 NL 増幅  [B]  : 2倍のダメージを与える。 "
+  },
+  "DarkSpark": {
+    "NAME": "ダークスパーク",
+    "DESCRIPTION": "手札の攻撃カードをすべて破棄する。 NL すべての敵に !D! ダメージを与える。",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
+  },
+  "DeepEcoloBomb": {
+    "NAME": "ディープエコロジカルボム",
+    "DESCRIPTION": "ランダムな敵に !D! を与え、このターン !M! の筋力を低下させる。 NL 増幅  [B]  : この効果を再度発動する。"
+  },
+  "DoubleSpark": {
+    "NAME": "ダブルスパーク",
+    "DESCRIPTION": "!D! ダメージを与える。手札に 1 枚スパークを加える。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。手札に 1 枚強化済みのスパークを加える。"
+  },
+  "EarthLightRay": {
+    "NAME": " アースライトレイ",
+    "DESCRIPTION": "HPを !M! 回復。 NL 廃棄 NL 増幅  [B]  : 捨て札からランダムなカードを手札に加える。",
+    "UPGRADE_DESCRIPTION": "HPを !M! 回復。 NL 廃棄 NL 増幅  [B]  : 捨て札からカードを手札に加える。"
+  },
+  "EscapeVelocity": {
+    "NAME": "エスケープベロシティ",
+    "DESCRIPTION": "各ターンの始め、 追加で2枚のカードを引き、火傷を加える。",
+    "UPGRADE_DESCRIPTION": "天賦。 各ターンの始め、 追加で2枚のカードを引き、火傷を加える。"
+  },
+  "FinalSpark": {
+    "NAME": "ファイナルスパーク",
+    "DESCRIPTION": "この戦闘で使用されたスパーク1枚につき [B] のコストを1減らす。 NL すべての敵に !D! ダメージを与える。 NL このカードのコストはリセットされる。",
+    "UPGRADE_DESCRIPTION": "保留。 NLこの戦闘で使用されたスパーク1枚につき [B] のコストを1減らす。 NL すべての敵に !D! ダメージを与える。 NL このカードのコストはリセットされる。"
+  },
+  "GrandCross": {
+    "NAME": "グランドクロス",
+    "DESCRIPTION": "!D! ダメージを与える。 NL このターン中増幅を使用していれば、コストが0になる。"
+  },
+  "GravityBeat": {
+    "NAME": "グラビティビート",
+    "DESCRIPTION": "すべての敵に !D! ダメージを与え、!M! 脱力 を付与する。"
+  },
+  "IllusionStar": {
+    "NAME": "イリュージョンスター",
+    "DESCRIPTION": "!M! 枚ランダムなカードを手札に加える。 手札から山札の上にカードを置く。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "!M! 枚ランダムなカードを手札に加える。 手札から山札の上にカードを置く。"
+  },
+  "MachineGunSpark": {
+    "NAME": "マシンガンスパーク",
+    "DESCRIPTION": "!M! 回 !D! ダメージを与える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "8 回 !D! ダメージを与える。 NL 廃棄"
+  },
+  "MagicAbsorber": {
+    "NAME": "マジックアブソーバ",
+    "DESCRIPTION": "!B! ブロック を得る。 自身のデバフを取り除く。 NL 廃棄"
+  },
+  "MasterSpark": {
+    "NAME": "マスタースパーク",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 増幅  [B]  : !B! にダメージを変更する。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 増幅  [B]  : 加えて9ダメージを与える。"
+  },
+  "MeteoricShower": {
+    "NAME": "メテオニックシャワー",
+    "DESCRIPTION": "X + 1 のカードを廃棄。 NL 廃棄した枚数ごとに !D! ダメージを 2 回与える。 火傷を廃棄し場合は 3 回になる。"
+  },
+  "MilkyWay": {
+    "NAME": "ミルキーウェイ",
+    "DESCRIPTION": "!B! ブロック を得る。 カードを1枚引く。 NL 手札にあるすべての攻撃は、この戦闘で追加の !M! ダメージを与える。"
+  },
+  "NonDirectionalLaser": {
+    "NAME": "ノンディレクショナルレーザ",
+    "DESCRIPTION": "すべての敵に !D! ダメージを与え、ランダムな敵に追加で !D! ダメージを与える。"
+  },
+  "Occultation": {
+    "NAME": "オカルテイション",
+    "DESCRIPTION": "山札をすべて捨て札に移す。 捨てた枚数ごとに 1 ブロック を得る。",
+    "UPGRADE_DESCRIPTION": "山札をすべて捨て札に移す。 捨てた枚数ごとに 1 ブロック を得る。NL 3 ブロック を得る。",
+    "EXTENDED_DESCRIPTION": [
+      "(合計 !B! ブロック を獲得。)",
+      ""
+      ]
+  },
+  "OortCloud": {
+    "NAME": "OortCloud",
+    "DESCRIPTION": "Gain !M! Plated Armor. NL Amplify  [B]  : Gain !B! more Plated Armor.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Plated Armor. NL Amplify  [B]  : Gain 3 more Plated Armor."
+  },
+  "PolarisUnique": {
+    "NAME": "Polaris Unique",
+    "DESCRIPTION": "Innate. Shuffle a Guiding Star into your draw pile. Gain  [B]  at the start of your turn while it is in your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. Shuffle a Guiding Star into your draw pile. Gain  [B]  at the start of your turn while it is in your draw pile."
+  },
+  "SatelliteIllusion": {
+    "NAME": "Satellite Illusion",
+    "DESCRIPTION": "Gain  [B]  when the number of cards in your draw pile increases during your turn.",
+    "UPGRADE_DESCRIPTION": "Innate. Gain  [B]  when the number of cards in your draw pile increases during your turn."
+  },
+  "ShootTheMoon": {
+    "NAME": "Shoot The Moon",
+    "DESCRIPTION": "Remove a random buff from your target if it is not a boss enemy. Deal !D! damage. NL Amplify  [B]  : Remove ALL buffs and deal !B! damage instead.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWW"
+  },
+  "StarDustReverie": {
+    "NAME": "Stardust Reverie",
+    "DESCRIPTION": "Shuffle your hand into your draw pile, then add that many random cards into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Shuffle your hand into your draw pile, then add that many random Upgraded cards to your hand. NL Exhaust."
+  },
+  "UltraShortWave": {
+    "NAME": "Ultimate Shortwave",
+    "DESCRIPTION": "Gain !B!  [B]  and !M! Charge-up. Increase the energy and Charge-up gain of this card by 1 for this combat.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "MillisecondPulsars": {
+    "NAME": "Millisecond Pulsars",
+    "DESCRIPTION": "Amplify effects cost no  [B]  this combat.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Amplify effects cost no  [B]  this combat."
+  },
+  "Spark": {
+    "NAME": "スパーク",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "UpSweep": {
+    "NAME": "ライジングスウィープ",
+    "DESCRIPTION": "!D! ダメージを与える。 !M! チャージを増加する。",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "GuidingStar": {
+    "NAME": "Guiding Star",
+    "DESCRIPTION": "Shuffle a copy of this card into your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "OrrerysSun": {
+    "NAME": "Orrerys Sun",
+    "DESCRIPTION": "Whenever Charge-up is consumed, deal !M! damage to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "ChargingUp": {
+    "NAME": "Charging Up",
+    "DESCRIPTION": "Gain !M! Charge-up. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Charge-up. NL Amplify  [B]  : Gain 3 additional stacks."
+  },
+  "LuminesStrike": {
+    "NAME": "ルミネスストライク",
+    "DESCRIPTION": "手札のカード数の2倍のダメージを与える。 NL 増幅  [B]  : 代わりに現在の [B] の4倍のダメージを与える。",
+    "UPGRADE_DESCRIPTION": "手札のカード数の3倍のダメージを与える。 NL Amplify  [B]  : 代わりに現在の [B] の5倍のダメージを与える。"
+  },
+  "OpenUniverse": {
+    "NAME": "Open Universe",
+    "DESCRIPTION": "Shuffle 5 random cards into your draw pile. Draw !M! cards. Each card has a !D! % chance to be Upgraded.",
+    "UPGRADE_DESCRIPTION": "Shuffle 5 random cards into your draw pile. Draw !M! cards."
+  },
+  "BlazeAway": {
+    "NAME": "Blaze Away",
+    "DESCRIPTION": "Add a copy of the last Attack you played this turn to your hand. NL It costs 0 this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add 2 copies of the last Attack you played this turn to your hand. NL They cost 0 this turn. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Last Attack : ",
+      " ).",
+      " NL (You haven't played an Attack this turn.)"
+    ]
+  },
+  "MaximisePower": {
+    "NAME": "Max Power",
+    "DESCRIPTION": "Convert your Charge-up stacks into energy. Add 1 Exhaustion to your hand. Your attack damage is doubled this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Convert your Charge-up stacks into energy. Add 1 Exhaustion to your hand. NL Your attack damage is doubled this turn."
+  },
+  "StarlightTyphoon": {
+    "NAME": "Starlight Typhoon",
+    "DESCRIPTION": "Deal damage equal to !M! times the number of cards that cost 0 you played this combat to ALL enemies.",
+    "UPGRADE_DESCRIPTION": " Exhaust ALL non-Attack cards in your hand. Add the same number of upgraded Sparks to your hand.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !B! damage.)",
+      ""
+    ]
+  },
+  "StarlightTyphoon_D": {
+    "NAME": "Starlight Typhoon",
+    "DESCRIPTION": " Exhaust ALL non-Attack cards in your hand. Add the same number of Sparks to your hand.",
+    "UPGRADE_DESCRIPTION": " Exhaust ALL non-Attack cards in your hand. Add the same number of Upgraded Sparks to your hand."
+  },
+  "SuperPerseids": {
+    "NAME": "Super Perseids",
+    "DESCRIPTION": "Unplayable. When this card is drawn, gain [B]. NL If this card is Exhausted, deal !D! damage to a random enemy.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "MysteriousBeam": {
+    "NAME": "ミステリアスビーム",
+    "DESCRIPTION": "ランダムな攻撃カードを手札に加える。 加えたカードのダメージを与える",
+    "UPGRADE_DESCRIPTION": "強化済みのランダムな攻撃カードを手札に加える。 加えたカードのダメージを与える."
+  },
+  "ShootingEcho": {
+    "NAME": "Shooting Echo",
+    "DESCRIPTION": " Exhaust a random card. Add a Shooting Echo to your hand. NL Deal !D! damage. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Exhaust a card. Add an Upgraded Shooting Echo to your hand. NL Deal !D! damage. NL Exhaust."
+  },
+  "EnergyFlow": {
+    "NAME": "Energy Flow",
+    "DESCRIPTION": "Gain !M! Charge-up at the end of your turn.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "PowerUp": {
+    "NAME": "アップグレード！",
+    "DESCRIPTION": "この戦闘中手札にあるすべての攻撃カードは !M! の追加ダメージを与える。",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "WitchLeyline": {
+    "NAME": "Witch Leyline",
+    "DESCRIPTION": "Deal !D! damage. Add 2 Burns to your hand.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "JA": {
+    "NAME": "Warming Up",
+    "DESCRIPTION": "Deal !D! damage. Add a 623B, a Spark and a Witch Leyline to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a 623B, a Spark and a Witch Leyline to your hand and Upgrade them."
+  },
+  "AbsoluteMagnitude": {
+    "NAME": "Absolute Magnitude",
+    "DESCRIPTION": "Deal damage equal to 2.5 times your Charge-up (Deals !B! damage).",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to 3.5 times your Charge-up (Deals !B! damage)."
+  },
+  "DragonMeteor": {
+    "NAME": "Dragon Meteor",
+    "DESCRIPTION": "Deal !B! damage. NL Deals an additional !M! damage for each card in your exhaust pile.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "EventHorizon": {
+    "NAME": "イベントホライズン",
+    "DESCRIPTION": "各ターン !M! 回、 増幅効果を使用するとき、 捨て札から攻撃カードを手札に加えることができる。",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "PulseMagic": {
+    "NAME": "Pulse Magic",
+    "DESCRIPTION": "Next turn, gain  [B]  . Amplify [B]  : Amplify effects cost no [B] this turn.",
+    "UPGRADE_DESCRIPTION": "Next turn, gain [B]  [B]  . Amplify [B]  : Amplify effects cost no [B] this turn."
+  },
+  "D6C": {
+    "NAME": "66C",
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Deals double damage if there are no cards in your discard pile.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "Singularity": {
+    "NAME": "Singularity",
+    "DESCRIPTION": "Whenever you play a card that costs 0, increase the damage of a random Attack in your hand by !M! .",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "SporeBomb": {
+    "NAME": "Spore Crump",
+    "DESCRIPTION": "Apply !M! Vulnerable to an enemy. NL Amplify  [B]  : Apply !M! Vulnerable to ALL enemies instead.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to all enemies. NL Amplify  [B]  : 1 more stack."
+  },
+  "FluorensentBeam": {
+    "NAME": "Fluorensent Beam",
+    "DESCRIPTION": "ALL enemies lose !D! HP. NL Amplify  [B]  [B]  : Deal  !B! instead.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "WitchOfGreed": {
+    "NAME": "強欲の魔女",
+    "DESCRIPTION": "戦闘終了時、 !M! ゴールドを獲得。 NL 増幅  [B] : 加えてランダムなポーションも獲得。",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "TreasureHunter": {
+    "NAME": "TreasureHunter",
+    "DESCRIPTION": "Deal !D! damage. NL If this kills a non-minion enemy in an Elite or Boss room, at the end of combat, obtain 1 random relic. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "Robbery": {
+    "NAME": "Robbery",
+    "DESCRIPTION": "Deal !D! damage. Gain gold equal to the unblocked damage dealt. NL Exhaust. NL Amplify [B] : Double the gold you gain.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "6A": {
+    "NAME": "6A",
+    "DESCRIPTION": "!D! ダメージを与える。 与えたダメージと同じ ブロック を得る。.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "CircumpolarStar": {
+    "NAME": "Circumpolar Star",
+    "DESCRIPTION": "Gain !B! Block. Draw !M! card(s). Increase this card's draw amount by 1 for this combat.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "RefractionSpark": {
+    "NAME": "Refraction Spark",
+    "DESCRIPTION": "Deal !D! damage. Increase the damage of ALL Spark cards in your hand by the damage dealt. NL Amplify  [B]  : Deal !B! damage instead.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "MagicChant": {
+    "NAME": "Magic Chant",
+    "DESCRIPTION": "Choose !M! cards to Upgrade and Retain this turn.",
+    "UPGRADE_DESCRIPTION": "Retain. Choose !M! to retain this turn. Reduce the cost of the chosen cards by 1 next turn."
+  },
+  "UnstableBomb": {
+    "NAME": "Unstable Bomb",
+    "DESCRIPTION": "Deal random damage ( !D! to !B! ) to a random enemy 4 times.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "SuperNova": {
+    "NAME": "Supernova",
+    "DESCRIPTION": "No longer take damage from Burn. Whenever you Exhaust a Burn, gain 1 Strength. NL Exhaust your hand at the end of each turn.",
+    "UPGRADE_DESCRIPTION": "No longer take damage from Burn. Whenever you Exhaust a Curse or Status, gain 1 Strength. NL Exhaust your hand at the end of each turn."
+  },
+  "MoraleDepletion": {
+    "NAME": "One Time Off",
+    "DESCRIPTION": "Gain !B! Block. You can't activate Amplify effects or consume Charge-up this turn. NL Next turn, draw !M! card(s).",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. You can't activate Amplify effects or consume Charge-up this turn. NL Next turn, draw !M! cards."
+  },
+  "DarkMatter": {
+    "NAME": "Dark Matter",
+    "DESCRIPTION": "Can only be played once per turn. NL Shuffle 2 copies of this card into your draw pile. Draw 1 card. When this card is Exhausted, gain !B! Block. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Can only be played once per turn. NL Shuffle 2 copies of this card into your draw pile. Draw 1 card. When this card is Exhausted, gain !B! Block. NL Ethereal .",
+    "EXTENDED_DESCRIPTION":[
+      "I can't play Dark Matter again this turn.",
+      ""
+    ]
+  },
+  "GasGiant": {
+    "NAME": "Gas Giant",
+    "DESCRIPTION": "Gain !B! Block. Add !M! Burns to your hand.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "CasketOfStar": {
+    "NAME": "Casket Of Star",
+    "DESCRIPTION": "Whenever you gain Block, add a Spark to your hand.",
+    "UPGRADE_DESCRIPTION": "Whenever you gain Block, add an Upgraded Spark to your hand."
+  },
+  "ChargeUpSpray": {
+    "NAME": "Charge-Up Spray",
+    "DESCRIPTION": "Deal !D! damage. NL If this card consumes Charge-up, gain [B] and draw !M! cards.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "EnergyRecoil": {
+    "NAME": "Energy Recoil",
+    "DESCRIPTION": "Gain Block equal to your Charge-up.",
+    "UPGRADE_DESCRIPTION": "Gain Block equal to your Charge-up + 3.",
+    "EXTENDED_DESCRIPTION":[
+      " NL (Gain ",
+      " Block.)"
+    ]
+  },
+  "GalacticHalo": {
+    "NAME": "Galactic Halo",
+    "DESCRIPTION": "Gain !B! Block and !M! Charge-up.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "ManaConvection": {
+    "NAME": "Mana Convection",
+    "DESCRIPTION": "Draw !M! cards. Exhaust 2 cards. NL If you have 8 or more Charge-up, lose 8 Charge-up and gain  [B]  [B]  .",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "ManaRampage": {
+    "NAME": "Mana Rampage",
+    "DESCRIPTION": "Play X random Attacks.",
+    "UPGRADE_DESCRIPTION": "Play X random Upgraded Attacks."
+  },
+  "StarBarrage": {
+    "NAME": "Star Barrage",
+    "DESCRIPTION": "Deal !D! damage !M! time. NL Every time this card is played, it deals damage 1 additional time for this combat.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "AFriendsGift": {
+    "NAME": "A Friend's Gift",
+    "DESCRIPTION": "Unplayable. Transform to a random card of three specific cards.",
+    "UPGRADE_DESCRIPTION": "Retain. Deal !D! damage. Increase damage by 2 when your turn starts. Exhaust. NL Amplify  [B]  : Deal !B! damage instead, don't Exhaust."
+  },
+  "BinaryStars": {
+    "NAME": "Binary Stars",
+    "DESCRIPTION": "Choose to add either Black Flare Star or White Dwarf to your hand. Exhaust. NL Amplify  [B]  : Add both to your hand instead.",
+    "UPGRADE_DESCRIPTION": "Choose to add and upgrade either Black Flare Star or White Dwarf to your hand. Exhaust. NL Amplify  [B]  : Add both to your hand instead."
+  },
+  "CollectingQuirk": {
+    "NAME": "Collecting Quirk",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for every !M! Relics you have.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
+    "EXTENDED_DESCRIPTION":[
+      "(Deals damage !B! time(s))",
+      ""
+    ]
+  },
+  "FungusSplash": {
+    "NAME": "Fungus Brew",
+    "DESCRIPTION": " Exhaust a card. Throw a potion at your target. NL The type of potion depends on the type of the card you exhausted. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Exhaust a card. Throw a potion at your target. NL The type of potion depends on the type of the card you exhausted ."
+  },
+  "PropBag": {
+    "NAME": "Portable Prop Bag",
+    "DESCRIPTION": "Randomly get either Orichalcum, Amplification Wand or Art Of War. NL Lose that relic when the battle ends. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Innate. NL Randomly get either Orichalcum, Amplification Wand or Art Of War. NL Lose that relic when the battle ends. NL Exhaust."
+  },
+  "BlackFlareStar": {
+    "NAME": "Black Flare Star",
+    "DESCRIPTION": "Can only be played when you have 4 or more cards in your hand. NL Discard any number of cards from your hand and gain !B! Block for each.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
+    "EXTENDED_DESCRIPTION":[
+      "I don't have 4 cards in my hand.",
+      ""
+    ]
+  },
+  "WhiteDwarf": {
+    "NAME": "White Dwarf",
+    "DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. NL Deal !B! damage (1.5 × size of your discard pile). Add 2 Burns to your hand.",
+    "UPGRADE_DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. NL Deal !B! damage (2 × size of your discard pile). Add 2 Burns to your hand.",
+    "EXTENDED_DESCRIPTION":[
+      "I have more than 4 cards in my hand.",
+      ""
+    ]
+  },
+  "FairyDestructionRay": {
+    "NAME": "Fairy Destruction Ray",
+    "DESCRIPTION": "Deal !D! damage to all enemies. Amplify  [B]  [B] : Instant-kill those with !M! or less HP.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "Orbital": {
+    "NAME": "Orbital",
+    "DESCRIPTION": " Unplayable. When this card is drawn, draw 1 card. NL If this card is Exhausted, place !M! card(s) from your exhaust pile into your hand.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "SillyJoke": {
+    "NAME": "Mana Phantom",
+    "DESCRIPTION": "Cast a Magic that is only shown to true Magicians. NL Exhaust. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Cast a splendid Magic that is only shown to true Magicians. NL Exhaust. NL Ethereal."
+  },
+  "ExplosiveMarionette": {
+    "NAME": "Explosive Marionette",
+    "DESCRIPTION": " Retain. Deal !D! damage. NL Amplify [B] : Deal double damage. Exhaust.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "OpticalCamouflage": {
+    "NAME": "Optical Camouflage",
+    "DESCRIPTION": " Retain. Gain !B! Block. NL Amplify [B] : Gain double amount. Exhaust.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "FiveColoredTalisman": {
+    "NAME": "Five-Colored Talisman",
+    "DESCRIPTION": "Retain. Add a random skill to your hand at the start of your turn.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "AlicesGift": {
+    "NAME": "Alice's Gift",
+    "DESCRIPTION": " Retain. Deal !D! Damage. Exhaust . NL Amplify [B]  [B] : Deals triple damage.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "Exhaustion_MRS": {
+    "NAME": "Exhaustion",
+    "DESCRIPTION": "Unplayable. NL While in hand, you cannot gain or consume Charge-up.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "UltimateShortwave": {
+    "NAME": "Ultimate Shortwave",
+    "DESCRIPTION": "Gain !B! [B] and !M! Charge-up. Increase the Charge-up gain of this card by !D! and energy gain by 1 for this battle.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "NebulaRing": {
+    "NAME": "Nebula Ring",
+    "DESCRIPTION": "Gain !M! Plated Armor whenever you lose Block from enemies or cards.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "SprinkleStarSeal": {
+    "NAME": "Sprinkle Star Seal",
+    "DESCRIPTION": "Apply 99 Weak. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "WWWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWW",
+    "DESCRIPTION": "WWWWWWWWWWW",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  }
+}
