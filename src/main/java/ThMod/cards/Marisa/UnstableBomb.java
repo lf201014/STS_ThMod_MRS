@@ -56,6 +56,10 @@ public class UnstableBomb
     );
   }
 
+  @Override
+  public void calculateCardDamage(AbstractMonster mo){
+  }
+
   public AbstractCard makeCopy() {
     return new UnstableBomb();
   }

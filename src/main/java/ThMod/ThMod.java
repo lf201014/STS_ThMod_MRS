@@ -169,14 +169,18 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String CARD_STRING = "localization/ThMod_Fnh_cards.json";
   private static final String CARD_STRING_JP = "localization/ThMod_Fnh_cards-jp.json";
   private static final String CARD_STRING_ZH = "localization/ThMod_Fnh_cards-zh.json";
+  private static final String CARD_STRING_ZHT = "localization/ThMod_Fnh_cards-zht.json";
   private static final String RELIC_STRING = "localization/ThMod_Fnh_relics.json";
   private static final String RELIC_STRING_JP = "localization/ThMod_Fnh_relics-jp.json";
   private static final String RELIC_STRING_ZH = "localization/ThMod_Fnh_relics-zh.json";
+  private static final String RELIC_STRING_ZHT = "localization/ThMod_Fnh_relics-zht.json";
   private static final String POWER_STRING = "localization/ThMod_Fnh_powers.json";
   private static final String POWER_STRING_ZH = "localization/ThMod_Fnh_powers-zh.json";
+  private static final String POWER_STRING_ZHT = "localization/ThMod_Fnh_powers-zht.json";
   private static final String POTION_STRING = "localization/ThMod_MRS_potions.json";
   private static final String POTION_STRING_JP = "localization/ThMod_MRS_potions-jp.json";
   private static final String POTION_STRING_ZH = "localization/ThMod_MRS_potions-zh.json";
+  private static final String POTION_STRING_ZHT = "localization/ThMod_MRS_potions-zht.json";
 
   public static int typhoonCounter = 0;
 
@@ -662,7 +666,14 @@ public class ThMod implements PostExhaustSubscriber,
       relic = RELIC_STRING_JP;
       power = POWER_STRING;
       potion = POTION_STRING_JP;
-    } else {
+    }else if (Settings.language == Settings.GameLanguage.ZHT){
+      logger.info("lang == zht");
+      card = CARD_STRING_ZHT;
+      relic = RELIC_STRING_ZHT;
+      power = POWER_STRING_ZHT;
+      potion = POTION_STRING_ZHT;
+    }
+    else {
       logger.info("lang == eng");
       card = CARD_STRING;
       relic = RELIC_STRING;
