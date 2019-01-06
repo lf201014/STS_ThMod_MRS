@@ -1,0 +1,17 @@
+﻿{
+  "ShroomBrew": {
+    "NAME": "蘑菇藥劑",
+    "DESCRIPTIONS": [
+      "消耗 1張牌。 NL 此藥劑的效果取決於所消耗牌的種類。",
+      "詳細",
+      "攻擊：恐懼藥水； NL 技能：虛弱藥水； NL 能力：毒素藥水； NL 狀態：火焰藥水； NL 詛咒：煙霧彈"
+    ]
+  },
+  "WWWWWW": {
+    "NAME": "WWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWW",
+      "WWWWW"
+    ]
+  }
+}
