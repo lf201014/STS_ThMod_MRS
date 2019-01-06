@@ -167,6 +167,7 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String MARISA_PORTRAIT = "img/charSelect/marisaPortrait.jpg";
 
   private static final String CARD_STRING = "localization/ThMod_Fnh_cards.json";
+  private static final String CARD_STRING_JP = "localization/ThMod_Fnh_cards-jp.json";
   private static final String CARD_STRING_ZH = "localization/ThMod_Fnh_cards-zh.json";
   private static final String RELIC_STRING = "localization/ThMod_Fnh_relics.json";
   private static final String RELIC_STRING_JP = "localization/ThMod_Fnh_relics-jp.json";
@@ -623,7 +624,7 @@ public class ThMod implements PostExhaustSubscriber,
     BaseMod.addKeyword(new String[]{"\u30c1\u30e3\u30fc\u30b8"},
             "8\u30b9\u30bf\u30c3\u30af\u3054\u3068\u306b\u3001\u30c0\u30e1\u30fc\u30b8\u304c2\u500d\u306b\u306a\u308b\u3002");
     BaseMod.addKeyword(new String[]{"\u5897\u5e45"},
-            "\u5341\u5206\u306a\u30a8\u30cd\u30eb\u30ae\u30fc [B] \u3092\u6301\u3063\u3066\u3044\u308b\u3068\u304d\u3001\u4e0a\u4f4d\u306e\u52b9\u679c\u306e\u305f\u3081\u30a8\u30cd\u30eb\u30ae\u30fc [B] \u3092\u652f\u6255\u3046\u3002");
+            "\u5341\u5206\u306a [B] \u3092\u6301\u3063\u3066\u3044\u308b\u3068\u304d\u3001\u4e0a\u4f4d\u306e\u52b9\u679c\u306e\u305f\u3081 [B] \u3092\u652f\u6255\u3046\u3002");
 
     BaseMod.addKeyword(new String[]{"amplify", "Amplify"},
         "Pay extra energy for its effect when you have enough  [B] .");
@@ -657,7 +658,7 @@ public class ThMod implements PostExhaustSubscriber,
       potion = POTION_STRING_ZH;
     } else if (Settings.language == Settings.GameLanguage.JPN) {
       logger.info("lang == jpn");
-      card = CARD_STRING;
+      card = CARD_STRING_JP;
       relic = RELIC_STRING_JP;
       power = POWER_STRING;
       potion = POTION_STRING_JP;
