@@ -329,7 +329,7 @@
   },
   "GasGiant": {
     "NAME": "氣態巨行星",
-    "DESCRIPTION": "獲得 !B! 點 格擋 ，將 !M! 張 灼傷 加入手牌 ",
+    "DESCRIPTION": "獲得 !B! 點 格擋 ，將 !M! 張 灼傷 加入手牌",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "CasketOfStar": {
@@ -348,7 +348,7 @@
     "UPGRADE_DESCRIPTION": "獲得等同於擁有的 蓄力 層數+3的 格擋",
     "EXTENDED_DESCRIPTION":[
       "NL （獲得",
-      "點 格擋 。）"
+      "點 格擋 ）"
     ]
   },
   "GalacticHalo": {
@@ -397,8 +397,8 @@
   },
   "PropBag": {
     "NAME": "便攜道具包",
-    "DESCRIPTION": "獲得 奧利哈鋼、孫子兵法或增副魔杖其中一個遺物。 NL 戰鬥結束後失去該 遺物 。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "固有 。 獲得 奧利哈鋼、孫子兵法或增副魔杖其中一個遺物。 NL 戰鬥結束後失去該 遺物 。 NL 消耗"
+    "DESCRIPTION": "獲得 奧利哈鋼、孫子兵法或增幅魔杖其中一個遺物。 NL 戰鬥結束後失去該 遺物 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "固有 。 獲得 奧利哈鋼、孫子兵法或增幅魔杖其中一個遺物。 NL 戰鬥結束後失去該 遺物 。 NL 消耗"
   },
   "BlackFlareStar": {
     "NAME": "黑耀星",
@@ -435,12 +435,12 @@
   },
   "ExplosiveMarionette": {
     "NAME": "人偶炸彈",
-    "DESCRIPTION": "保留 。造成 !D! 傷害。 NL 增幅 [B] : 造成雙倍傷害。 消耗 ",
+    "DESCRIPTION": "保留 。造成 !D! 傷害。 NL 增幅 [B] : 造成雙倍傷害。 消耗",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "OpticalCamouflage": {
     "NAME": "光學迷彩",
-    "DESCRIPTION": "保留 。獲得 !B! 格擋 。 NL 增幅 [B] : 獲得雙倍格擋。 消耗 ",
+    "DESCRIPTION": "保留 。獲得 !B! 格擋 。 NL 增幅 [B] : 獲得雙倍格擋。 消耗",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "FiveColoredTalisman": {
