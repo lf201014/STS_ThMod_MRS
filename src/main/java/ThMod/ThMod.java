@@ -170,17 +170,21 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String CARD_STRING_JP = "localization/ThMod_Fnh_cards-jp.json";
   private static final String CARD_STRING_ZH = "localization/ThMod_Fnh_cards-zh.json";
   private static final String CARD_STRING_ZHT = "localization/ThMod_Fnh_cards-zht.json";
+  private static final String CARD_STRING_KR = "localization/ThMod_Fnh_cards-kr.json";
   private static final String RELIC_STRING = "localization/ThMod_Fnh_relics.json";
   private static final String RELIC_STRING_JP = "localization/ThMod_Fnh_relics-jp.json";
   private static final String RELIC_STRING_ZH = "localization/ThMod_Fnh_relics-zh.json";
   private static final String RELIC_STRING_ZHT = "localization/ThMod_Fnh_relics-zht.json";
+  private static final String RELIC_STRING_KR = "localization/ThMod_Fnh_relics-kr.json";
   private static final String POWER_STRING = "localization/ThMod_Fnh_powers.json";
   private static final String POWER_STRING_ZH = "localization/ThMod_Fnh_powers-zh.json";
   private static final String POWER_STRING_ZHT = "localization/ThMod_Fnh_powers-zht.json";
+  private static final String POWER_STRING_KR = "localization/ThMod_Fnh_powers-kr.json";
   private static final String POTION_STRING = "localization/ThMod_MRS_potions.json";
   private static final String POTION_STRING_JP = "localization/ThMod_MRS_potions-jp.json";
   private static final String POTION_STRING_ZH = "localization/ThMod_MRS_potions-zh.json";
   private static final String POTION_STRING_ZHT = "localization/ThMod_MRS_potions-zht.json";
+  private static final String POTION_STRING_KR = "localization/ThMod_MRS_potions-kr.json";
 
   public static int typhoonCounter = 0;
 
@@ -631,6 +635,18 @@ public class ThMod implements PostExhaustSubscriber,
     BaseMod.addKeyword(new String[]{"\u5897\u5e45"},
         "\u5341\u5206\u306a [B] \u3092\u6301\u3063\u3066\u3044\u308b\u3068\u304d\u3001\u4e0a\u4f4d\u306e\u52b9\u679c\u306e\u305f\u3081 [B] \u3092\u652f\u6255\u3046\u3002");
 
+    //Korean Localization
+    BaseMod.addKeyword(new String[]{"\uc99d\ud3ed"},
+        "\ucda9\ubd84\ud55c [B] \uac00 \uc788\ub2e4\uba74 \ucd94\uac00\ub85c \uc18c\ubaa8\ud574 \ud6a8\uacfc\ub97c \uac15\ud654\ud569\ub2c8\ub2e4.");
+    BaseMod.addKeyword(new String[]{"\uace0\uac08"},
+        "\uc99d\ud3ed, \ucda9\uc804 \ud6a8\uacfc\ub97c \ubc1c\ub3d9 \ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.");
+    BaseMod.addKeyword(new String[]{"\uc2a4\ud30c\ud06c"},
+        "\ube44\uc6a9\uc774 0\uc778 \uacf5\uaca9\uce74\ub4dc\uc785\ub2c8\ub2e4.");
+    BaseMod.addKeyword(new String[]{"\ucda9\uc804"},
+        "\ucda9\uc804\uc774 8\uc774 \ub418\uba74 \ub2e4\uc74c\uc5d0 \uc8fc\ub294 \ud53c\ud574\uac00 2 \ubc30\uac00 \ub429\ub2c8\ub2e4.");
+    BaseMod.addKeyword(new String[]{"\uc18c\uba78\uc2dc\ud0a8 \uce74\ub4dc\uc758 \uc885\ub958"},
+        "\uacf5\uaca9 : \uacf5\ud3ec \ud3ec\uc158 ; NL \uc2a4\ud0ac : \uc57d\ud654 \ud3ec\uc158 ; NL \ud30c\uc6cc : \uc911\ub3c5 \ud3ec\uc158 ; NL \uc0c1\ud0dc\uc774\uc0c1 : \ud654\uc5fc \ud3ec\uc158 ; NL \uc800\uc8fc : \uc5f0\ub9c9\ud0c4.");
+
     BaseMod.addKeyword(new String[]{"amplify", "Amplify"},
         "Pay extra energy for its effect when you have enough  [B] .");
     BaseMod.addKeyword(new String[]{"Exhaustion", "exhaustion"},
@@ -673,6 +689,12 @@ public class ThMod implements PostExhaustSubscriber,
       relic = RELIC_STRING_ZHT;
       power = POWER_STRING_ZHT;
       potion = POTION_STRING_ZHT;
+    } else if (Settings.language == Settings.GameLanguage.KOR) {
+      logger.info("lang == kor");
+      card = CARD_STRING_KR;
+      relic = RELIC_STRING_KR;
+      power = POWER_STRING_KR;
+      potion = POTION_STRING_KR;
     } else {
       logger.info("lang == eng");
       card = CARD_STRING;

@@ -1,0 +1,17 @@
+{
+  "ShroomBrew": {
+    "NAME": "버섯 양조주",
+    "DESCRIPTIONS": [
+      "카드 1 장을 소멸시킵니다. NL 포션의 효과는 소멸시킨 카드의 종류 에 따라 정해집니다.",
+      "상세",
+      "공격 : 공포 포션 ; NL 스킬 : 약화 포션 ; NL 파워 : 중독 포션 ; NL 상태이상 : 화염 포션 ; NL 저주 : 연막탄."
+    ]
+  },
+  "WWWWWW": {
+    "NAME": "WWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWW",
+      "WWWWW"
+    ]
+  }
+}
