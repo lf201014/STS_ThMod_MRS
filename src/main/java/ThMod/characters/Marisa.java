@@ -161,6 +161,8 @@ public class Marisa extends CustomPlayer {
       title = "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f";
     }else if (Settings.language == GameLanguage.JPN) {
       title = "\u666e\u901a\u306e\u9b54\u6cd5\u4f7f\u3044";
+    }else if (Settings.language == GameLanguage.ZHT) {
+      title = "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f";
     }else {
       title = "The Ordinary Magician";
     }
@@ -193,7 +195,7 @@ public class Marisa extends CustomPlayer {
   }
 
   public String getLocalizedCharacterName() {
-    if (Settings.language == Settings.GameLanguage.JPN) {
+    if (Settings.language == Settings.GameLanguage.JPN)||(Settings.language == Settings.GameLanguage.ZHS)||(Settings.language == Settings.GameLanguage.ZHT) {
       return "\u9b54\u7406\u6c99";
     }
     return "Marisa";
