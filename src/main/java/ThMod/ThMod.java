@@ -614,67 +614,70 @@ public class ThMod implements PostExhaustSubscriber,
     logger.info("Setting up custom keywords");
 
     if (Settings.language == Settings.GameLanguage.ZHS) {
-    BaseMod.addKeyword(new String[]{"\u529b\u7aed"},
-        "\u529b\u7aed\u4f1a\u4f7f\u4f60\u65e0\u6cd5\u83b7\u5f97\u6216\u4f7f\u7528 \u84c4\u529b \u3002");
-    BaseMod.addKeyword(new String[]{"\u53d6\u51b3\u4e8e\u6240\u6d88\u8017\u5361\u7684\u79cd\u7c7b"},
-        "\u653b\u51fb\uff1a\u6050\u60e7\u836f\u6c34\uff1b\u6280\u80fd\uff1a\u865a\u5f31\u836f\u6c34\uff1b\u80fd\u529b\uff1a\u6bd2\u7d20\u836f\u6c34\uff1b\u72b6\u6001\uff1a\u706b\u7130\u836f\u6c34\uff1b\u8bc5\u5492\uff1a\u70df\u96fe\u0020\u5f39\u0020\u3002");
-    BaseMod.addKeyword(new String[]{"\u706b\u82b1"},
-        "\u706b\u82b1\u662f\u4e00\u5f20\u6d88\u8017\u4e3a\u0030\u7684\u653b\u51fb\u724c");
-    BaseMod.addKeyword(new String[]{"\u84c4\u529b"},
-        "\u6bcf8\u5c42\u84c4\u529b\u4f1a\u4f7f\u4f60\u7684\u4e0b\u4e00\u6b21\u653b\u51fb\u4f24\u5bb3\u7ffb\u4e00\u500d\u3002");
-    BaseMod.addKeyword(new String[]{"\u589e\u5e45"},
-        "\u5f53\u4f60\u7684\u8d39\u7528\u8db3\u591f\u4f7f\u7528\u8fd9\u5f20\u724c\u66f4\u9ad8\u7ea7\u7684\u6548\u679c\u65f6\uff0c\u4f7f\u7528\u66f4\u9ad8\u7ea7\u7684\u6548\u679c\u3002");
+      BaseMod.addKeyword(new String[]{"\u529b\u7aed"},
+          "\u529b\u7aed\u4f1a\u4f7f\u4f60\u65e0\u6cd5\u83b7\u5f97\u6216\u4f7f\u7528 \u84c4\u529b \u3002");
+      BaseMod
+          .addKeyword(new String[]{"\u53d6\u51b3\u4e8e\u6240\u6d88\u8017\u5361\u7684\u79cd\u7c7b"},
+              "\u653b\u51fb\uff1a\u6050\u60e7\u836f\u6c34\uff1b\u6280\u80fd\uff1a\u865a\u5f31\u836f\u6c34\uff1b\u80fd\u529b\uff1a\u6bd2\u7d20\u836f\u6c34\uff1b\u72b6\u6001\uff1a\u706b\u7130\u836f\u6c34\uff1b\u8bc5\u5492\uff1a\u70df\u96fe\u0020\u5f39\u0020\u3002");
+      BaseMod.addKeyword(new String[]{"\u706b\u82b1"},
+          "\u706b\u82b1\u662f\u4e00\u5f20\u6d88\u8017\u4e3a\u0030\u7684\u653b\u51fb\u724c");
+      BaseMod.addKeyword(new String[]{"\u84c4\u529b"},
+          "\u6bcf8\u5c42\u84c4\u529b\u4f1a\u4f7f\u4f60\u7684\u4e0b\u4e00\u6b21\u653b\u51fb\u4f24\u5bb3\u7ffb\u4e00\u500d\u3002");
+      BaseMod.addKeyword(new String[]{"\u589e\u5e45"},
+          "\u5f53\u4f60\u7684\u8d39\u7528\u8db3\u591f\u4f7f\u7528\u8fd9\u5f20\u724c\u66f4\u9ad8\u7ea7\u7684\u6548\u679c\u65f6\uff0c\u4f7f\u7528\u66f4\u9ad8\u7ea7\u7684\u6548\u679c\u3002");
     } else if (Settings.language == Settings.GameLanguage.ZHT) {
-	BaseMod.addKeyword(new String[]{"\u529b\u7aed"},
-        "\u529b\u7aed\u6642\u7121\u6cd5\u7372\u5f97\u6216\u4f7f\u7528 \u84c4\u529b");
-    BaseMod.addKeyword(new String[]{"\u53d6\u6c7a\u65bc\u6240\u6d88\u8017\u724c\u7684\u7a2e\u985e"},
-        "\u653b\u64ca\uff1a\u6050\u61fc\u85e5\u6c34\uff1b\u6280\u80fd\uff1a\u865b\u5f31\u85e5\u6c34\uff1b\u80fd\u529b\uff1a\u6bd2\u7d20\u85e5\u6c34\uff1b\u72c0\u614b\uff1a\u706b\u7130\u85e5\u6c34\uff1b\u8a5b\u5492\uff1a\u7159\u9727\u5f48");
-    BaseMod.addKeyword(new String[]{"\u706b\u82b1"},
-        "\u5c0f\u5200\u662f\u6703\u6d88\u8017\u7684 #b0 \u8017\u80fd\u653b\u64ca\u724c");
-    BaseMod.addKeyword(new String[]{"\u84c4\u529b"},
-        "\u6bcf\u0038\u5c64\u84c4\u529b\u6703\u4f7f\u4f60\u7684\u4e0b\u4e00\u6b21\u653b\u64ca\u50b7\u5bb3\u52a0\u500d");
-    BaseMod.addKeyword(new String[]{"\u589e\u5e45"},
-        "\u7576\u6709\u8db3\u5920\u7684 [B] \u6642\uff0c\u4f7f\u7528\u5176\u9032\u968e\u6548\u679c");
+      BaseMod.addKeyword(new String[]{"\u529b\u7aed"},
+          "\u529b\u7aed\u6642\u7121\u6cd5\u7372\u5f97\u6216\u4f7f\u7528 \u84c4\u529b");
+      BaseMod
+          .addKeyword(new String[]{"\u53d6\u6c7a\u65bc\u6240\u6d88\u8017\u724c\u7684\u7a2e\u985e"},
+              "\u653b\u64ca\uff1a\u6050\u61fc\u85e5\u6c34\uff1b\u6280\u80fd\uff1a\u865b\u5f31\u85e5\u6c34\uff1b\u80fd\u529b\uff1a\u6bd2\u7d20\u85e5\u6c34\uff1b\u72c0\u614b\uff1a\u706b\u7130\u85e5\u6c34\uff1b\u8a5b\u5492\uff1a\u7159\u9727\u5f48");
+      BaseMod.addKeyword(new String[]{"\u706b\u82b1"},
+          "\u5c0f\u5200\u662f\u6703\u6d88\u8017\u7684 #b0 \u8017\u80fd\u653b\u64ca\u724c");
+      BaseMod.addKeyword(new String[]{"\u84c4\u529b"},
+          "\u6bcf\u0038\u5c64\u84c4\u529b\u6703\u4f7f\u4f60\u7684\u4e0b\u4e00\u6b21\u653b\u64ca\u50b7\u5bb3\u52a0\u500d");
+      BaseMod.addKeyword(new String[]{"\u589e\u5e45"},
+          "\u7576\u6709\u8db3\u5920\u7684 [B] \u6642\uff0c\u4f7f\u7528\u5176\u9032\u968e\u6548\u679c");
     } else {
-    BaseMod.addKeyword(new String[]{"\u67af\u6e07"},
-        "\u67af\u6e07\u3059\u308b\u3068\u3001 \u30c1\u30e3\u30fc\u30b8 \u3092\u5f97\u305f\u308a\u4f7f\u7528\u3059\u308b\u3053\u3068\u304c\u3067\u304d\u306a\u304f\u306a\u308b\u3002");
-    BaseMod.addKeyword(new String[]{"\u30ab\u30fc\u30c9\u306b\u3088\u3063\u3066\u7570\u306a\u308b"},
-        "\u653b\u6483 \uff1a \u6050\u6016\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30b9\u30ad\u30eb \uff1a \u8131\u529b\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30d1\u30ef\u30fc \uff1a \u6bd2\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30b9\u30c6\u30fc\u30bf\u30b9 \uff1a \u706b\u708e\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u546a\u3044 \uff1a \u7159\u7389");
-    BaseMod.addKeyword(new String[]{"\u30b9\u30d1\u30fc\u30af"},
-        "\u30b9\u30d1\u30fc\u30af\u306f\u30b3\u30b9\u30c80\u306e\u653b\u6483\u30ab\u30fc\u30c9");
-    BaseMod.addKeyword(new String[]{"\u30c1\u30e3\u30fc\u30b8"},
-        "8\u30b9\u30bf\u30c3\u30af\u3054\u3068\u306b\u3001\u30c0\u30e1\u30fc\u30b8\u304c2\u500d\u306b\u306a\u308b\u3002");
-    BaseMod.addKeyword(new String[]{"\u5897\u5e45"},
-        "\u5341\u5206\u306a [B] \u3092\u6301\u3063\u3066\u3044\u308b\u3068\u304d\u3001\u4e0a\u4f4d\u306e\u52b9\u679c\u306e\u305f\u3081 [B] \u3092\u652f\u6255\u3046\u3002");
+      BaseMod.addKeyword(new String[]{"\u67af\u6e07"},
+          "\u67af\u6e07\u3059\u308b\u3068\u3001 \u30c1\u30e3\u30fc\u30b8 \u3092\u5f97\u305f\u308a\u4f7f\u7528\u3059\u308b\u3053\u3068\u304c\u3067\u304d\u306a\u304f\u306a\u308b\u3002");
+      BaseMod
+          .addKeyword(new String[]{"\u30ab\u30fc\u30c9\u306b\u3088\u3063\u3066\u7570\u306a\u308b"},
+              "\u653b\u6483 \uff1a \u6050\u6016\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30b9\u30ad\u30eb \uff1a \u8131\u529b\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30d1\u30ef\u30fc \uff1a \u6bd2\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30b9\u30c6\u30fc\u30bf\u30b9 \uff1a \u706b\u708e\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u546a\u3044 \uff1a \u7159\u7389");
+      BaseMod.addKeyword(new String[]{"\u30b9\u30d1\u30fc\u30af"},
+          "\u30b9\u30d1\u30fc\u30af\u306f\u30b3\u30b9\u30c80\u306e\u653b\u6483\u30ab\u30fc\u30c9");
+      BaseMod.addKeyword(new String[]{"\u30c1\u30e3\u30fc\u30b8"},
+          "8\u30b9\u30bf\u30c3\u30af\u3054\u3068\u306b\u3001\u30c0\u30e1\u30fc\u30b8\u304c2\u500d\u306b\u306a\u308b\u3002");
+      BaseMod.addKeyword(new String[]{"\u5897\u5e45"},
+          "\u5341\u5206\u306a [B] \u3092\u6301\u3063\u3066\u3044\u308b\u3068\u304d\u3001\u4e0a\u4f4d\u306e\u52b9\u679c\u306e\u305f\u3081 [B] \u3092\u652f\u6255\u3046\u3002");
 
-    //Korean Localization
-    BaseMod.addKeyword(new String[]{"\uc99d\ud3ed"},
-        "\ucda9\ubd84\ud55c [B] \uac00 \uc788\ub2e4\uba74 \ucd94\uac00\ub85c \uc18c\ubaa8\ud574 \ud6a8\uacfc\ub97c \uac15\ud654\ud569\ub2c8\ub2e4.");
-    BaseMod.addKeyword(new String[]{"\uace0\uac08"},
-        "\uc99d\ud3ed, \ucda9\uc804 \ud6a8\uacfc\ub97c \ubc1c\ub3d9 \ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.");
-    BaseMod.addKeyword(new String[]{"\uc2a4\ud30c\ud06c"},
-        "\ube44\uc6a9\uc774 0\uc778 \uacf5\uaca9\uce74\ub4dc\uc785\ub2c8\ub2e4.");
-    BaseMod.addKeyword(new String[]{"\ucda9\uc804"},
-        "\ucda9\uc804\uc774 8\uc774 \ub418\uba74 \ub2e4\uc74c\uc5d0 \uc8fc\ub294 \ud53c\ud574\uac00 2 \ubc30\uac00 \ub429\ub2c8\ub2e4.");
-    BaseMod.addKeyword(new String[]{"\uc18c\uba78\uc2dc\ud0a8 \uce74\ub4dc\uc758 \uc885\ub958"},
-        "\uacf5\uaca9 : \uacf5\ud3ec \ud3ec\uc158 ; NL \uc2a4\ud0ac : \uc57d\ud654 \ud3ec\uc158 ; NL \ud30c\uc6cc : \uc911\ub3c5 \ud3ec\uc158 ; NL \uc0c1\ud0dc\uc774\uc0c1 : \ud654\uc5fc \ud3ec\uc158 ; NL \uc800\uc8fc : \uc5f0\ub9c9\ud0c4.");
+      //Korean Localization
+      BaseMod.addKeyword(new String[]{"\uc99d\ud3ed"},
+          "\ucda9\ubd84\ud55c [B] \uac00 \uc788\ub2e4\uba74 \ucd94\uac00\ub85c \uc18c\ubaa8\ud574 \ud6a8\uacfc\ub97c \uac15\ud654\ud569\ub2c8\ub2e4.");
+      BaseMod.addKeyword(new String[]{"\uace0\uac08"},
+          "\uc99d\ud3ed, \ucda9\uc804 \ud6a8\uacfc\ub97c \ubc1c\ub3d9 \ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.");
+      BaseMod.addKeyword(new String[]{"\uc2a4\ud30c\ud06c"},
+          "\ube44\uc6a9\uc774 0\uc778 \uacf5\uaca9\uce74\ub4dc\uc785\ub2c8\ub2e4.");
+      BaseMod.addKeyword(new String[]{"\ucda9\uc804"},
+          "\ucda9\uc804\uc774 8\uc774 \ub418\uba74 \ub2e4\uc74c\uc5d0 \uc8fc\ub294 \ud53c\ud574\uac00 2 \ubc30\uac00 \ub429\ub2c8\ub2e4.");
+      BaseMod.addKeyword(new String[]{"\uc18c\uba78\uc2dc\ud0a8 \uce74\ub4dc\uc758 \uc885\ub958"},
+          "\uacf5\uaca9 : \uacf5\ud3ec \ud3ec\uc158 ; NL \uc2a4\ud0ac : \uc57d\ud654 \ud3ec\uc158 ; NL \ud30c\uc6cc : \uc911\ub3c5 \ud3ec\uc158 ; NL \uc0c1\ud0dc\uc774\uc0c1 : \ud654\uc5fc \ud3ec\uc158 ; NL \uc800\uc8fc : \uc5f0\ub9c9\ud0c4.");
 
-    BaseMod.addKeyword(new String[]{"amplify", "Amplify"},
-        "Pay extra energy for its effect when you have enough  [B] .");
-    BaseMod.addKeyword(new String[]{"Exhaustion", "exhaustion"},
-        "Exhaustion prevent you from gaining or using Charge-Up .");
-    BaseMod.addKeyword(new String[]{"Spark", "spark"},
-        "Spark is an attack card cost 0 energy.");
-    BaseMod.addKeyword(new String[]{"Charge-up", "charge-up", "chargeup", "ChargeUp"},
-        "For every 8 stacks,double your damage.");
-    BaseMod.addKeyword(new String[]{
-            "Depends On The Type Of The Card",
-            "depends on the type of the card"
-        },
-        "Attack : Fear Potion ; NL Skill : Weak Potion ; NL Power : Poison Potion ; Status : Fire Potion ; Curse : Smoke Bomb ."
-    );
-	}
-	
+      BaseMod.addKeyword(new String[]{"amplify", "Amplify"},
+          "Pay extra energy for its effect when you have enough  [B] .");
+      BaseMod.addKeyword(new String[]{"Exhaustion", "exhaustion"},
+          "Exhaustion prevent you from gaining or using Charge-Up .");
+      BaseMod.addKeyword(new String[]{"Spark", "spark"},
+          "Spark is an attack card cost 0 energy.");
+      BaseMod.addKeyword(new String[]{"Charge-up", "charge-up", "chargeup", "ChargeUp"},
+          "For every 8 stacks,double your damage.");
+      BaseMod.addKeyword(new String[]{
+              "Depends On The Type Of The Card",
+              "depends on the type of the card"
+          },
+          "Attack : Fear Potion ; NL Skill : Weak Potion ; NL Power : Poison Potion ; Status : Fire Potion ; Curse : Smoke Bomb ."
+      );
+    }
+
     logger.info("Keywords setting finished.");
   }
 

@@ -34,7 +34,8 @@ public class EnhancedBroom extends CustomRelic {
   }
 
   public void onUseCard(AbstractCard card, UseCardAction action) {
-    if (card.costForTurn == 0) {
+    if ((card.costForTurn == 0) || (card.costForTurn <= -2) || ((card.costForTurn == -1) && (
+        AbstractDungeon.player.energy.energy <= 0))) {
       this.counter += 1;
       if (this.counter >= 3) {
         this.counter = 0;

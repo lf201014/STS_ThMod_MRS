@@ -38,7 +38,8 @@ public class SingularityPower
   }
 
   public void onAfterUseCard(AbstractCard card, UseCardAction action) {
-    if ((card.costForTurn == 0) || (card.costForTurn <= -2)) {
+    if ((card.costForTurn == 0) || (card.costForTurn <= -2) || ((card.costForTurn == -1) && (
+        AbstractDungeon.player.energy.energy <= 0))) {
       ThMod.logger.info("SingularityPower : applying upgrade :");
       this.flash();
       ArrayList<AbstractCard> pool = new ArrayList<>();
