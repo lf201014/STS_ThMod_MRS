@@ -123,7 +123,7 @@
   },
   "UltraShortWave": {
     "NAME": "얼티밋 쇼트웨이브",
-    "DESCRIPTION": "!B!개의 [B] 를 얻고 충전을 !M! 얻습니다. 이번 전투에서 이 카드의 효과를 1 씩 증가시킵니다.",
+    "DESCRIPTION": "[B] 를 !B! 얻고 충전 을 !M! 얻습니다. 이번 전투에서 이 카드의 효과를 1 씩 증가시킵니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MillisecondPulsars": {
@@ -462,7 +462,7 @@
   },
   "UltimateShortwave": {
     "NAME": "얼티밋 쇼트웨이브",
-    "DESCRIPTION": "!B!개의 [B] 를 얻고 충전을 !M! 얻습니다. 이번 전투에서 이 카드의 효과를 1 씩 증가시킵니다",
+    "DESCRIPTION": "[B] 를 !B! 얻고 충전 을 !M! 얻습니다. 이번 전투에서 이 카드의 효과를 1 씩 증가시킵니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "NebulaRing": {
