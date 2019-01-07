@@ -613,6 +613,7 @@ public class ThMod implements PostExhaustSubscriber,
   public void receiveEditKeywords() {
     logger.info("Setting up custom keywords");
 
+    if (Settings.language == Settings.GameLanguage.ZHS) {
     BaseMod.addKeyword(new String[]{"\u529b\u7aed"},
         "\u529b\u7aed\u4f1a\u4f7f\u4f60\u65e0\u6cd5\u83b7\u5f97\u6216\u4f7f\u7528 \u84c4\u529b \u3002");
     BaseMod.addKeyword(new String[]{"\u53d6\u51b3\u4e8e\u6240\u6d88\u8017\u5361\u7684\u79cd\u7c7b"},
@@ -623,7 +624,18 @@ public class ThMod implements PostExhaustSubscriber,
         "\u6bcf8\u5c42\u84c4\u529b\u4f1a\u4f7f\u4f60\u7684\u4e0b\u4e00\u6b21\u653b\u51fb\u4f24\u5bb3\u7ffb\u4e00\u500d\u3002");
     BaseMod.addKeyword(new String[]{"\u589e\u5e45"},
         "\u5f53\u4f60\u7684\u8d39\u7528\u8db3\u591f\u4f7f\u7528\u8fd9\u5f20\u724c\u66f4\u9ad8\u7ea7\u7684\u6548\u679c\u65f6\uff0c\u4f7f\u7528\u66f4\u9ad8\u7ea7\u7684\u6548\u679c\u3002");
-
+    } else if (Settings.language == Settings.GameLanguage.ZHT) {
+	BaseMod.addKeyword(new String[]{"\u529b\u7aed"},
+        "\u529b\u7aed\u6642\u7121\u6cd5\u7372\u5f97\u6216\u4f7f\u7528 \u84c4\u529b");
+    BaseMod.addKeyword(new String[]{"\u53d6\u6c7a\u65bc\u6240\u6d88\u8017\u724c\u7684\u7a2e\u985e"},
+        "\u653b\u64ca\uff1a\u6050\u61fc\u85e5\u6c34\uff1b\u6280\u80fd\uff1a\u865b\u5f31\u85e5\u6c34\uff1b\u80fd\u529b\uff1a\u6bd2\u7d20\u85e5\u6c34\uff1b\u72c0\u614b\uff1a\u706b\u7130\u85e5\u6c34\uff1b\u8a5b\u5492\uff1a\u7159\u9727\u5f48");
+    BaseMod.addKeyword(new String[]{"\u706b\u82b1"},
+        "\u5c0f\u5200\u662f\u6703\u6d88\u8017\u7684 #b0 \u8017\u80fd\u653b\u64ca\u724c");
+    BaseMod.addKeyword(new String[]{"\u84c4\u529b"},
+        "\u6bcf\u0038\u5c64\u84c4\u529b\u6703\u4f7f\u4f60\u7684\u4e0b\u4e00\u6b21\u653b\u64ca\u50b7\u5bb3\u52a0\u500d");
+    BaseMod.addKeyword(new String[]{"\u589e\u5e45"},
+        "\u7576\u6709\u8db3\u5920\u7684 [B] \u6642\uff0c\u4f7f\u7528\u5176\u9032\u968e\u6548\u679c");
+    } else {
     BaseMod.addKeyword(new String[]{"\u67af\u6e07"},
         "\u67af\u6e07\u3059\u308b\u3068\u3001 \u30c1\u30e3\u30fc\u30b8 \u3092\u5f97\u305f\u308a\u4f7f\u7528\u3059\u308b\u3053\u3068\u304c\u3067\u304d\u306a\u304f\u306a\u308b\u3002");
     BaseMod.addKeyword(new String[]{"\u30ab\u30fc\u30c9\u306b\u3088\u3063\u3066\u7570\u306a\u308b"},
@@ -661,7 +673,8 @@ public class ThMod implements PostExhaustSubscriber,
         },
         "Attack : Fear Potion ; NL Skill : Weak Potion ; NL Power : Poison Potion ; Status : Fire Potion ; Curse : Smoke Bomb ."
     );
-
+	}
+	
     logger.info("Keywords setting finished.");
   }
 
