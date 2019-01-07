@@ -48,7 +48,7 @@ public class EarthLightRay extends CustomCard {
   public void use(AbstractPlayer p, AbstractMonster m) {
     if (!p.discardPile.isEmpty()) {
       if (ThMod.Amplified(this, AMP)) {
-        if (this.upgraded) {
+        if ((this.upgraded) && (!p.discardPile.isEmpty())) {
           AbstractDungeon.actionManager.addToBottom(
               new DiscardPileToHandAction(1)
           );
