@@ -287,7 +287,7 @@
   },
   "6A": {
     "NAME": "6A",
-    "DESCRIPTION": "Deal !D! damage. Gain Block equal to the damage dealt.",
+    "DESCRIPTION": "Deal !D! damage. Gain Block equal to the unblocked damage dealt.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "CircumpolarStar": {

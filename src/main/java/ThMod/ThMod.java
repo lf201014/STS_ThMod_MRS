@@ -573,7 +573,7 @@ public class ThMod implements PostExhaustSubscriber,
   @Override
   public void receivePostBattle(AbstractRoom r) {
     typhoonCounter = 0;
-    logger.info("ThMod : PostBattle");
+    logger.info("ThMod : PostBattle ; typhoon-counter reset");
   }
 
   @Override
@@ -582,6 +582,7 @@ public class ThMod implements PostExhaustSubscriber,
     if ((card.costForTurn == 0) || (card.costForTurn <= -2) || ((card.costForTurn == -1) && (
         AbstractDungeon.player.energy.energy <= 0))) {
       typhoonCounter++;
+      ThMod.logger.info("typhoon-counter increased , now :" + typhoonCounter);
     }
     if (card.retain) {
       card.retain = false;
@@ -620,15 +621,15 @@ public class ThMod implements PostExhaustSubscriber,
         "\u5f53\u4f60\u7684\u8d39\u7528\u8db3\u591f\u4f7f\u7528\u8fd9\u5f20\u724c\u66f4\u9ad8\u7ea7\u7684\u6548\u679c\u65f6\uff0c\u4f7f\u7528\u66f4\u9ad8\u7ea7\u7684\u6548\u679c\u3002");
 
     BaseMod.addKeyword(new String[]{"\u67af\u6e07"},
-            "\u67af\u6e07\u3059\u308b\u3068\u3001 \u30c1\u30e3\u30fc\u30b8 \u3092\u5f97\u305f\u308a\u4f7f\u7528\u3059\u308b\u3053\u3068\u304c\u3067\u304d\u306a\u304f\u306a\u308b\u3002");
+        "\u67af\u6e07\u3059\u308b\u3068\u3001 \u30c1\u30e3\u30fc\u30b8 \u3092\u5f97\u305f\u308a\u4f7f\u7528\u3059\u308b\u3053\u3068\u304c\u3067\u304d\u306a\u304f\u306a\u308b\u3002");
     BaseMod.addKeyword(new String[]{"\u30ab\u30fc\u30c9\u306b\u3088\u3063\u3066\u7570\u306a\u308b"},
-            "\u653b\u6483 \uff1a \u6050\u6016\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30b9\u30ad\u30eb \uff1a \u8131\u529b\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30d1\u30ef\u30fc \uff1a \u6bd2\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30b9\u30c6\u30fc\u30bf\u30b9 \uff1a \u706b\u708e\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u546a\u3044 \uff1a \u7159\u7389");
+        "\u653b\u6483 \uff1a \u6050\u6016\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30b9\u30ad\u30eb \uff1a \u8131\u529b\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30d1\u30ef\u30fc \uff1a \u6bd2\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30b9\u30c6\u30fc\u30bf\u30b9 \uff1a \u706b\u708e\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u546a\u3044 \uff1a \u7159\u7389");
     BaseMod.addKeyword(new String[]{"\u30b9\u30d1\u30fc\u30af"},
-            "\u30b9\u30d1\u30fc\u30af\u306f\u30b3\u30b9\u30c80\u306e\u653b\u6483\u30ab\u30fc\u30c9");
+        "\u30b9\u30d1\u30fc\u30af\u306f\u30b3\u30b9\u30c80\u306e\u653b\u6483\u30ab\u30fc\u30c9");
     BaseMod.addKeyword(new String[]{"\u30c1\u30e3\u30fc\u30b8"},
-            "8\u30b9\u30bf\u30c3\u30af\u3054\u3068\u306b\u3001\u30c0\u30e1\u30fc\u30b8\u304c2\u500d\u306b\u306a\u308b\u3002");
+        "8\u30b9\u30bf\u30c3\u30af\u3054\u3068\u306b\u3001\u30c0\u30e1\u30fc\u30b8\u304c2\u500d\u306b\u306a\u308b\u3002");
     BaseMod.addKeyword(new String[]{"\u5897\u5e45"},
-            "\u5341\u5206\u306a [B] \u3092\u6301\u3063\u3066\u3044\u308b\u3068\u304d\u3001\u4e0a\u4f4d\u306e\u52b9\u679c\u306e\u305f\u3081 [B] \u3092\u652f\u6255\u3046\u3002");
+        "\u5341\u5206\u306a [B] \u3092\u6301\u3063\u3066\u3044\u308b\u3068\u304d\u3001\u4e0a\u4f4d\u306e\u52b9\u679c\u306e\u305f\u3081 [B] \u3092\u652f\u6255\u3046\u3002");
 
     BaseMod.addKeyword(new String[]{"amplify", "Amplify"},
         "Pay extra energy for its effect when you have enough  [B] .");
@@ -666,14 +667,13 @@ public class ThMod implements PostExhaustSubscriber,
       relic = RELIC_STRING_JP;
       power = POWER_STRING;
       potion = POTION_STRING_JP;
-    }else if (Settings.language == Settings.GameLanguage.ZHT){
+    } else if (Settings.language == Settings.GameLanguage.ZHT) {
       logger.info("lang == zht");
       card = CARD_STRING_ZHT;
       relic = RELIC_STRING_ZHT;
       power = POWER_STRING_ZHT;
       potion = POTION_STRING_ZHT;
-    }
-    else {
+    } else {
       logger.info("lang == eng");
       card = CARD_STRING;
       relic = RELIC_STRING;
