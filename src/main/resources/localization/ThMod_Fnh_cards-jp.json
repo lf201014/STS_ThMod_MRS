@@ -50,7 +50,7 @@
   },
   "GrandCross": {
     "NAME": "グランドクロス",
-    "DESCRIPTION": "!D! ダメージを与える。 NL このターン中増幅を使用していれば、コストが0になる。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL このターン中 増幅 を使用していれば、コストが0になる。"
   },
   "GravityBeat": {
     "NAME": "グラビティビート",
@@ -127,9 +127,9 @@
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MillisecondPulsars": {
-    "NAME": "Millisecond Pulsars",
-    "DESCRIPTION": "Amplify effects cost no  [B]  this combat.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Amplify effects cost no  [B]  this combat."
+    "NAME": "ミリ秒パルサー",
+    "DESCRIPTION": "この戦闘中、増幅 効果のコスト [B] をなくす。",
+    "UPGRADE_DESCRIPTION": "天賦 。  NL この戦闘中、増幅 効果のコスト [B] をなくす。"
   },
   "Spark": {
     "NAME": "スパーク",
@@ -137,7 +137,7 @@
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "UpSweep": {
-    "NAME": "ライジングスウィープ",
+    "NAME": "アップスウィープ",
     "DESCRIPTION": "!D! ダメージを与える。 !M! チャージ を増加する。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
@@ -147,8 +147,8 @@
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "OrrerysSun": {
-    "NAME": "Orrerys Sun",
-    "DESCRIPTION": "Whenever Charge-up is consumed, deal !M! damage to ALL enemies.",
+    "NAME": "オーレリーズサン",
+    "DESCRIPTION": "チャージ が使用されるたび、すべての敵に !M! ダメージを与える。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ChargingUp": {
@@ -162,9 +162,9 @@
     "UPGRADE_DESCRIPTION": "手札のカード数の3倍のダメージを与える。 NL Amplify  [B]  : 代わりに現在の [B] の5倍のダメージを与える。"
   },
   "OpenUniverse": {
-    "NAME": "Open Universe",
-    "DESCRIPTION": "Shuffle 5 random cards into your draw pile. Draw !M! cards. Each card has a !D! % chance to be Upgraded.",
-    "UPGRADE_DESCRIPTION": "Shuffle 5 random cards into your draw pile. Draw !M! cards."
+    "NAME": "オープンユニバース",
+    "DESCRIPTION": "5枚のランダムなカードを山札に入れシャッフルする。 !M! 枚のカードを引く。 各カードは !D! ％の確率で アップグレード される。",
+    "UPGRADE_DESCRIPTION": "5枚のランダムなカードを山札に入れシャッフルする。 !M! 枚のカードを引く。 各カードは !D! ％の確率で アップグレード される。"
   },
   "BlazeAway": {
     "NAME": "ブレイズアウェイ",
@@ -177,27 +177,27 @@
     ]
   },
   "MaximisePower": {
-    "NAME": "Max Power",
-    "DESCRIPTION": "Convert your Charge-up stacks into energy. Add 1 Exhaustion to your hand. Your attack damage is doubled this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Convert your Charge-up stacks into energy. Add 1 Exhaustion to your hand. NL Your attack damage is doubled this turn."
+    "NAME": "「弾幕はパワーだぜ」",
+    "DESCRIPTION": "チャージ スタックを [B] に変換する. 手札に 1 枚 枯渇 を追加する。 このターン、攻撃ダメージは2倍になる。 NL 廃棄 ",
+    "UPGRADE_DESCRIPTION": "チャージ スタックを [B] に変換する. 手札に 1 枚 枯渇 を追加する。 このターン、攻撃ダメージは2倍になる。"
   },
   "StarlightTyphoon": {
-    "NAME": "Starlight Typhoon",
-    "DESCRIPTION": "Deal damage equal to !M! times the number of cards that cost 0 you played this combat to ALL enemies.",
-    "UPGRADE_DESCRIPTION": " Exhaust ALL non-Attack cards in your hand. Add the same number of upgraded Sparks to your hand.",
+    "NAME": "スターライトタイフーン",
+    "DESCRIPTION": "この戦闘中に使用したコスト 0 カードの枚数の2倍をダメージとしてすべての敵に与える。",
+    "UPGRADE_DESCRIPTION": " 手札にある全ての非攻撃カードを 廃棄 する。 同数の アップグレード した スパーク を手札に加える。",
     "EXTENDED_DESCRIPTION": [
-      " NL (Deals !B! damage.)",
+      " NL ( !B! ダメージを与える。)",
       ""
     ]
   },
   "StarlightTyphoon_D": {
-    "NAME": "Starlight Typhoon",
-    "DESCRIPTION": " Exhaust ALL non-Attack cards in your hand. Add the same number of Sparks to your hand.",
-    "UPGRADE_DESCRIPTION": " Exhaust ALL non-Attack cards in your hand. Add the same number of Upgraded Sparks to your hand."
+    "NAME": "スターライトタイフーン",
+    "DESCRIPTION": "  手札にある全ての非攻撃カードを 廃棄 する。 同数の スパーク を手札に加える。",
+    "UPGRADE_DESCRIPTION": "  手札にある全ての非攻撃カードを 廃棄 する。 同数の アップグレード した スパーク を手札に加える。"
   },
   "SuperPerseids": {
-    "NAME": "Super Perseids",
-    "DESCRIPTION": "Unplayable. When this card is drawn, gain [B]. NL If this card is Exhausted, deal !D! damage to a random enemy.",
+    "NAME": "スーパーペルセイド",
+    "DESCRIPTION": "使用不可 。  このカードを引いた時、 [B] 増加する。 NL このカードが廃棄された場合、 ランダムな敵に !D! ダメージを与える。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MysteriousBeam": {
@@ -226,14 +226,14 @@
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "JA": {
-    "NAME": "Warming Up",
-    "DESCRIPTION": "Deal !D! damage. Add a 623B, a Spark and a Witch Leyline to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a 623B, a Spark and a Witch Leyline to your hand and Upgrade them."
+    "NAME": "ウォーミングアップ",
+    "DESCRIPTION": " !D! ダメージを与える。 アップスウィープ 、 スパーク 、 ウィッチレイライン を手札に追加する。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 アップグレード した アップスウィープ 、 スパーク 、 ウィッチレイライン を手札に追加する。"
   },
   "AbsoluteMagnitude": {
-    "NAME": "Absolute Magnitude",
-    "DESCRIPTION": "Deal damage equal to 2.5 times your Charge-up (Deals !B! damage).",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to 3.5 times your Charge-up (Deals !B! damage)."
+    "NAME": "絶対等級",
+    "DESCRIPTION": "チャージ の2.5倍のダメージを与える (!B! ダメージを与える)。",
+    "UPGRADE_DESCRIPTION": "チャージ の3.5倍のダメージを与える (!B! ダメージを与える)。"
   },
   "DragonMeteor": {
     "NAME": "ドラゴンメテオ",
@@ -246,18 +246,18 @@
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "PulseMagic": {
-    "NAME": "Pulse Magic",
-    "DESCRIPTION": "Next turn, gain  [B]  . Amplify [B]  : Amplify effects cost no [B] this turn.",
-    "UPGRADE_DESCRIPTION": "Next turn, gain [B]  [B]  . Amplify [B]  : Amplify effects cost no [B] this turn."
+    "NAME": "パルスマジック",
+    "DESCRIPTION": "次のターン、  [B] 増加. 増幅 [B]  : このターン、増幅効果の [B] を支払う必要がない。",
+    "UPGRADE_DESCRIPTION": "次のターン、 [B] [B] 増加. 増幅 [B]  : このターン、増幅効果の [B] を支払う必要がない。"
   },
   "D6C": {
     "NAME": "66C",
-    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Deals double damage if there are no cards in your discard pile.",
+    "DESCRIPTION": "天賦 。 NL !D! ダメージを与える。 NL 捨て札にカードがない場合、2倍のダメージを与える。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Singularity": {
-    "NAME": "Singularity",
-    "DESCRIPTION": "Whenever you play a card that costs 0, increase the damage of a random Attack in your hand by !M! .",
+    "NAME": "特異点",
+    "DESCRIPTION": "コスト0のカードを使用するたび、手札にあるランダムな攻撃のダメージを !M! 増やす。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "SporeBomb": {
@@ -266,8 +266,8 @@
     "UPGRADE_DESCRIPTION": "すべての敵に 脆弱化 !M! を付与する。 NL 増幅  [B]  : 1 スタック増加する。"
   },
   "FluorensentBeam": {
-    "NAME": "Fluorensent Beam",
-    "DESCRIPTION": "ALL enemies lose !D! HP. NL Amplify  [B]  [B]  : Deal  !B! instead.",
+    "NAME": "フローレスントビーム",
+    "DESCRIPTION": "すべての敵はHP !D! を失う。 NL 増幅  [B]  [B]  : 代わりに !B! ダメージを与える。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WitchOfGreed": {
@@ -281,8 +281,8 @@
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Robbery": {
-    "NAME": "Robbery",
-    "DESCRIPTION": "Deal !D! damage. Gain gold equal to the unblocked damage dealt. NL Exhaust. NL Amplify [B] : Double the gold you gain.",
+    "NAME": "強盗",
+    "DESCRIPTION": "!D! ダメージを与える。 ブロックされていないダメージと同じ ゴールド を得る。 NL 廃棄 NL 増幅 [B] : 2倍の ゴールド を得る。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "6A": {
@@ -291,8 +291,8 @@
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "CircumpolarStar": {
-    "NAME": "Circumpolar Star",
-    "DESCRIPTION": "Gain !B! Block. Draw !M! card(s). Increase this card's draw amount by 1 for this combat.",
+    "NAME": "周極星",
+    "DESCRIPTION": "!B! ブロックを得る。  !M! カードを引く。 この戦闘で、このカードが引く枚数を1増やす。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "RefractionSpark": {
@@ -306,56 +306,56 @@
     "UPGRADE_DESCRIPTION": " 保留 。 !M! 枚のカードをこのターン 保留 する。 次のターンまでカードのコストを1減らす。"
   },
   "UnstableBomb": {
-    "NAME": "Unstable Bomb",
-    "DESCRIPTION": "Deal random damage ( !D! to !B! ) to a random enemy 4 times.",
+    "NAME": "マジカル産廃再利用ボム",
+    "DESCRIPTION": "ランダムな敵に4回 ランダムなダメージ( !D! to !B! )を与える。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "SuperNova": {
-    "NAME": "Supernova",
-    "DESCRIPTION": "No longer take damage from Burn. Whenever you Exhaust a Burn, gain 1 Strength. NL Exhaust your hand at the end of each turn.",
-    "UPGRADE_DESCRIPTION": "No longer take damage from Burn. Whenever you Exhaust a Curse or Status, gain 1 Strength. NL Exhaust your hand at the end of each turn."
+    "NAME": "スーパーノヴァ",
+    "DESCRIPTION": "火傷 からダメージを受けなくなる。  火傷 を 廃棄 したとき、 筋力 1 を得る。 NL 各ターンの終わりに手札を 破棄 する。",
+    "UPGRADE_DESCRIPTION": "火傷 からダメージを受けなくなる。  呪い か 状態異常 を 廃棄 したとき、 筋力 1 を得る。 NL 各ターンの終わりに手札を 破棄 する。No longer take damage from Burn. Whenever you Exhaust a Curse or Status, gain 1 Strength. NL Exhaust your hand at the end of each turn."
   },
   "MoraleDepletion": {
-    "NAME": "One Time Off",
-    "DESCRIPTION": "Gain !B! Block. You can't activate Amplify effects or consume Charge-up this turn. NL Next turn, draw !M! card(s).",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. You can't activate Amplify effects or consume Charge-up this turn. NL Next turn, draw !M! cards."
+    "NAME": "一回休み",
+    "DESCRIPTION": "!B! ブロックを得る。このターン、 増幅 効果を発動したり、 チャージ を消費することができない。 NL 次のターン、 !M! 枚カードを引く。",
+    "UPGRADE_DESCRIPTION": "!B! ブロックを得る。このターン、 増幅 効果を発動したり、 チャージ を消費することができない。 NL 次のターン、 !M! 枚カードを引く。"
   },
   "DarkMatter": {
-    "NAME": "Dark Matter",
-    "DESCRIPTION": "Can only be played once per turn. NL Shuffle 2 copies of this card into your draw pile. Draw 1 card. When this card is Exhausted, gain !B! Block. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "Can only be played once per turn. NL Shuffle 2 copies of this card into your draw pile. Draw 1 card. When this card is Exhausted, gain !B! Block. NL Ethereal .",
+    "NAME": "ダークマター",
+    "DESCRIPTION": "1ターンに1回しか使用できない。 NL このカードの 複製 を2枚 山札に混ぜシャッフルする。 カードを1枚引く。このカードが廃棄されたとき、 !B! ブロックを得る。 NL エセリアル",
+    "UPGRADE_DESCRIPTION": "1ターンに1回しか使用できない。 NL このカードの 複製 を2枚 山札に混ぜシャッフルする。 カードを1枚引く。このカードが廃棄されたとき、 !B! ブロックを得る。 NL エセリアル",
     "EXTENDED_DESCRIPTION":[
-      "I can't play Dark Matter again this turn.",
+      "このターンではもう ダークマター を使用できない。",
       ""
     ]
   },
   "GasGiant": {
-    "NAME": "Gas Giant",
-    "DESCRIPTION": "Gain !B! Block. Add !M! Burns to your hand.",
+    "NAME": "ガスジャイアント",
+    "DESCRIPTION": "!B! ブロックを得る。手札に 火傷 を !M! 枚追加する",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "CasketOfStar": {
-    "NAME": "Casket Of Star",
-    "DESCRIPTION": "Whenever you gain Block, add a Spark to your hand.",
-    "UPGRADE_DESCRIPTION": "Whenever you gain Block, add an Upgraded Spark to your hand."
+    "NAME": "星の器",
+    "DESCRIPTION": "自身が ブロック を得るたび、手札に スパーク を1枚加える。",
+    "UPGRADE_DESCRIPTION": "自身が ブロック を得るたび、手札に アップグレード した スパーク を1枚加える。"
   },
   "ChargeUpSpray": {
-    "NAME": "Charge-Up Spray",
-    "DESCRIPTION": "Deal !D! damage. NL If this card consumes Charge-up, gain [B] and draw !M! cards.",
+    "NAME": "チャージ放出",
+    "DESCRIPTION": "!D! ダメージを与える。 このカードが チャージ を消費した場合、 [B] を得てカードを !M! 枚引く。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "EnergyRecoil": {
-    "NAME": "Energy Recoil",
-    "DESCRIPTION": "Gain Block equal to your Charge-up.",
-    "UPGRADE_DESCRIPTION": "Gain Block equal to your Charge-up + 3.",
+    "NAME": "エネルギーの反動",
+    "DESCRIPTION": "チャージ と同じ ブロック を得る。",
+    "UPGRADE_DESCRIPTION": "チャージ +3 の ブロック を得る。",
     "EXTENDED_DESCRIPTION":[
-      " NL (Gain ",
-      " Block.)"
+      " NL ( ",
+      " のブロックを得る。)"
     ]
   },
   "GalacticHalo": {
-    "NAME": "Galactic Halo",
-    "DESCRIPTION": "Gain !B! Block and !M! Charge-up.",
+    "NAME": "ギャラクティックハロー",
+    "DESCRIPTION": "!B! ブロックを得て チャージ を !M! 増加させる。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ManaConvection": {
@@ -369,14 +369,14 @@
     "UPGRADE_DESCRIPTION": "X 枚のランダムな アップグレード した攻撃カードを使用する。"
   },
   "StarBarrage": {
-    "NAME": "Star Barrage",
-    "DESCRIPTION": "Deal !D! damage !M! time. NL Every time this card is played, it deals damage 1 additional time for this combat.",
+    "NAME": "魔法の星弾幕",
+    "DESCRIPTION": "!D! ダメージを !M! 回与える。 NL この戦闘中、使用されるたび、このカードの攻撃回数を1回増やす。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "AFriendsGift": {
-    "NAME": "A Friend's Gift",
-    "DESCRIPTION": "Unplayable. Transform to a random card of three specific cards.",
-    "UPGRADE_DESCRIPTION": "Retain. Deal !D! damage. Increase damage by 2 when your turn starts. Exhaust. NL Amplify  [B]  : Deal !B! damage instead, don't Exhaust."
+    "NAME": "友人からの贈り物",
+    "DESCRIPTION": "使用不可 。 特定の3枚のカードの中から変化する。",
+    "UPGRADE_DESCRIPTION": "保留 。 !D! ダメージを与える。 ターン開始時、ダメージを2増加させる。 廃棄  NL 増加  [B]  : 代わりに  !B! ダメージを与え、 廃棄 しない"
   },
   "BinaryStars": {
     "NAME": "連星",
