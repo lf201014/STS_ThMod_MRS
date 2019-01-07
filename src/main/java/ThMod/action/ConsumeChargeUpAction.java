@@ -42,6 +42,7 @@ public class ConsumeChargeUpAction extends AbstractGameAction {
     if (p.hasPower("OrrerysSunPower")) {
       p.getPower("OrrerysSunPower").onSpecificTrigger();
     }
+    c.updateDescription();
     this.isDone = true;
   }
 }

@@ -359,7 +359,7 @@
   "ManaConvection": {
     "NAME": "魔力对流",
     "DESCRIPTION": "抽 !M! 张卡，然后消耗2张卡。 NL 如果你的 蓄力 层数大于或等于8层，则消耗8层蓄力，获得  [B]  [B] 。",
-    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+    "UPGRADE_DESCRIPTION": "抽 !M! 张卡，然后消耗2张卡。 NL 如果你的 蓄力 层数大于或等于8层，则消耗6层蓄力，获得  [B]  [B] 。"
   },
   "ManaRampage": {
     "NAME": "魔力暴走",

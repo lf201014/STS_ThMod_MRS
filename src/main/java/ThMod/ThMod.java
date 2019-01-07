@@ -573,7 +573,7 @@ public class ThMod implements PostExhaustSubscriber,
   @Override
   public void receivePostBattle(AbstractRoom r) {
     typhoonCounter = 0;
-    logger.info("ThMod : PostBattle");
+    logger.info("ThMod : PostBattle ; typhoon-counter reset");
   }
 
   @Override
