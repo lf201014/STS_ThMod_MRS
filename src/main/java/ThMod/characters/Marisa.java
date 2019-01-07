@@ -200,7 +200,7 @@ public class Marisa extends CustomPlayer {
 
   public String getLocalizedCharacterName() {
     String char_name;
-    if (Settings.language == Settings.GameLanguage.JPN)||(Settings.language == Settings.GameLanguage.ZHS)||(Settings.language == Settings.GameLanguage.ZHT) {
+    if ((Settings.language == Settings.GameLanguage.JPN)||(Settings.language == Settings.GameLanguage.ZHS)||(Settings.language == Settings.GameLanguage.ZHT)) {
       char_name = "\u9b54\u7406\u6c99";
     } else if (Settings.language == Settings.GameLanguage.KOR) {
       char_name = "\ub9c8\ub9ac\uc0ac";
