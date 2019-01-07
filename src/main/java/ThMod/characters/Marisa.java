@@ -124,6 +124,9 @@ public class Marisa extends CustomPlayer {
     }else if (Settings.language == Settings.GameLanguage.JPN) {
       title = "\u666e\u901a\u306e\u9b54\u6cd5\u4f7f\u3044";
       flavor = "\u9b54\u6cd5\u306e\u68ee\u306b\u4f4f\u3093\u3067\u3044\u308b\u666e\u901a\u306e\u9b54\u6cd5\u4f7f\u3044\u3002 NL \u5149\u3068\u71b1\u306e\u9b54\u6cd5\u304c\u5f97\u610f\u3002";
+    }else if (Settings.language == Settings.GameLanguage.ZHT) {
+      title = "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f";
+      flavor = "\u4f4f\u5728\u9b54\u6cd5\u68ee\u6797\u7684\u9b54\u6cd5\u4f7f\u3002 NL \u5584\u9577\u65bc\u5149\u548c\u71b1\u7684\u9b54\u6cd5\u3002";
     }
     else {
       title = "The Ordinary Magician";
@@ -158,6 +161,8 @@ public class Marisa extends CustomPlayer {
       title = "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f";
     }else if (Settings.language == GameLanguage.JPN) {
       title = "\u666e\u901a\u306e\u9b54\u6cd5\u4f7f\u3044";
+    }else if (Settings.language == GameLanguage.ZHT) {
+      title = "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f";
     }else {
       title = "The Ordinary Magician";
     }
@@ -190,7 +195,7 @@ public class Marisa extends CustomPlayer {
   }
 
   public String getLocalizedCharacterName() {
-    if (Settings.language == Settings.GameLanguage.JPN) {
+    if (Settings.language == Settings.GameLanguage.JPN)||(Settings.language == Settings.GameLanguage.ZHS)||(Settings.language == Settings.GameLanguage.ZHT) {
       return "\u9b54\u7406\u6c99";
     }
     return "Marisa";
