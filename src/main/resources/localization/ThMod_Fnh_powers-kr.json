@@ -1,0 +1,278 @@
+{
+  "DarkMatterPower": {
+    "NAME": "암흑 물질",
+    "DESCRIPTIONS": [
+      "이번 턴에 #y암흑 #y물질 카드를 사용할 수 없습니다.",
+      ""
+    ]
+  },
+  "ExtraDraw": {
+    "NAME": "제 n우주속도",
+    "DESCRIPTIONS": [
+      "턴이 시작될 때 카드를 #b",
+      " 장 더 뽑고 #y화상 카드를 #b",
+      " 장 얻습니다"
+    ]
+  },
+  "EventHorizonPower": {
+    "NAME": "사건의 지평선",
+    "DESCRIPTIONS": [
+      "증폭 효과를 발동하면 버린 카드 더미에서 공격 카드를 가져옵니다. #b",
+      " 번 남았습니다."
+    ]
+  },
+  "IllusionStarPower": {
+    "NAME": "일루전 스타",
+    "DESCRIPTIONS": [
+      "매턴 시작 시 손에 있는 카드 #b",
+      " 장을 변화시킵니다."
+    ]
+  },
+  "MilliPulsaPower": {
+    "NAME": "밀리세컨드 펄서",
+    "DESCRIPTIONS": [
+      "이번 전투에서 #y증폭 효과가 [B] 를 추가로 소모하지 않습니다.",
+      ""
+    ]
+  },
+  "SatellIllusPower": {
+    "NAME": "새틀라이트 일루전",
+    "DESCRIPTIONS": [
+      "덱에 없는 카드를 사용하면 카드를 #b",
+      " 장 뽑습니다."
+    ]
+  },
+  "TempStrength": {
+    "NAME": "일시적 힘",
+    "DESCRIPTIONS": [
+      "다음 공격이 #b",
+      " 의 추가피해를 줍니다."
+    ]
+  },
+  "TempStrengthLoss": {
+    "NAME": "일시적 약화",
+    "DESCRIPTIONS": [
+      "이번 턴에 적이 주는 피해를 #b",
+      " 감소시킵니다."
+    ]
+  },
+  "ExtraEnergyPower": {
+    "NAME": "추가 에너지",
+    "DESCRIPTIONS": [
+      "매 턴",
+      " 추가 에너지를 얻습니다."
+    ]
+  },
+  "ChargeUpPower": {
+    "NAME": "충전",
+    "DESCRIPTIONS": [
+      "#y충전 이 #b",
+      " 이 되면",
+      " 다음 공격은 #b",
+      " 배의 피해를 줍니다"
+    ]
+  },
+  "PolarisUniquePower": {
+    "NAME": "길잡이 별",
+    "DESCRIPTIONS": [
+      "매턴 시작 시 #y길잡이 #y별 카드가 뽑을 카드 더미에 있으면 [B] 를 얻습니다."
+    ]
+  },
+  "OrrerysSunPower": {
+    "NAME": "모형 태양",
+    "DESCRIPTIONS": [
+      "#y충전 효과를 발동 할 때마다 적 전체에게 피해를 #b",
+      " 줍니다."
+    ]
+  },
+  "Charged": {
+    "NAME": "충전 완료!",
+    "DESCRIPTIONS": [
+      "다음 공격이 #b",
+      " 배의 피해를 줍니다"
+    ]
+  },
+  "BlazeAwayPower": {
+    "NAME": "블레이즈 어웨이",
+    "DESCRIPTIONS": [
+      "다음에 사용하는 공격 카드를 #b",
+      " 장 복사합니다."
+    ]
+  },
+  "MPPower": {
+    "NAME": "최대 출력",
+    "DESCRIPTIONS": [
+      "이번 턴에 공격 카드의 피해가 #b",
+      " 배가 됩니다."
+    ]
+  },
+  "EnergyFlowPower": {
+    "NAME": "에너지 흐름",
+    "DESCRIPTIONS": [
+      "턴이 끝날 때 #y충전 을 #b",
+      " 얻습니다."
+    ]
+  },
+  "PulseMagicPower": {
+    "NAME": "펄스 마법",
+    "DESCRIPTIONS": [
+      "이번 턴에 #y증폭 효과의 [B] 소모를 제거합니다.",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "SingularityPower": {
+    "NAME": "특이점",
+    "DESCRIPTIONS": [
+      "비용이 0 인 카드를 사용할 때마다 손에 있는 무작위 #y공격 카드의 피해가 #b",
+      " 증가합니다."
+    ]
+  },
+  "WitchOfGreedGold": {
+    "NAME": "욕심쟁이 마녀",
+    "DESCRIPTIONS": [
+      "전투가 끝나면 #b",
+      " 골드를 얻습니다."
+    ]
+  },
+  "WitchOfGreedPotion": {
+    "NAME": "욕심쟁이 마녀",
+    "DESCRIPTIONS": [
+      "전투가 끝나면 무작위 포션을 #b",
+      " 개 얻습니다."
+    ]
+  },
+  "MoraleDepletionPlusPower": {
+    "NAME": "잠깐의 휴식",
+    "DESCRIPTIONS": [
+      "이번 턴에 #y증폭 , #y충전 효과를 발동할 수 없습니다.",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "MoraleDepletionPower": {
+    "NAME": "잠깐의 휴식",
+    "DESCRIPTIONS": [
+      "이번 턴에 #y증폭 효과를 발동할 수 없습니다.",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "SuperNovaPower": {
+    "NAME": "초신성",
+    "DESCRIPTIONS": [
+      "#y화상 카드 #y소멸 시 #b",
+      " , #y저주 나 #y상태이상 카드 #y소멸 시 #b",
+      " 의 #y힘 을 얻습니다. NL #y화상 카드의 피해를 받지 않습니다. NL 턴이 끝나면 손에 있는 카드를 #y소멸 시킵니다."
+    ]
+  },
+  "CasketOfStarPlusPower": {
+    "NAME": "별이 담긴 상자",
+    "DESCRIPTIONS": [
+      "#y방어도 를 얻으면 #y강화된 #y스파크 카드를 #b",
+      " 장 얻습니다."
+    ]
+  },
+  "CasketOfStarPower": {
+    "NAME": "별이 담긴 상자",
+    "DESCRIPTIONS": [
+      "#y방어도 를 얻으면 #y스파크 카드를 #b",
+      " 장 얻습니다."
+    ]
+  },
+  "GalacticHaloPower": {
+    "NAME": "은하 헤일로",
+    "DESCRIPTIONS": [
+      "턴이 끝나면 사용한 #y공격 카드마다 #y방어도 를 #b",
+      " 얻습니다."
+    ]
+  },
+  "ManaRampagePower": {
+    "NAME": "마나 폭주",
+    "DESCRIPTIONS": [
+      "무작위 #y공격 카드를 #b",
+      " 번 사용합니다."
+    ]
+  },
+  "PropBagPower": {
+    "NAME": "휴대용 가방",
+    "DESCRIPTIONS": [
+      "전투가 끝나면 #y",
+      " 유물이 사라집니다."
+    ]
+  },
+  "UltraShortWavePower": {
+    "NAME": "얼티밋 쇼트웨이브",
+    "DESCRIPTIONS": [
+      "#y얼티밋 #y쇼트웨이브 의 효과가 #b",
+      " #y증가 되었습니다."
+    ]
+  },
+  "DarkSparkPower": {
+    "NAME": "다크 스파크",
+    "DESCRIPTIONS": [
+      "이름에 '스파크'가 들어가는 카드를 사용할 때마다 #y충전 을 #b",
+      " 얻습니다."
+    ]
+  },
+  "MagicChantPower": {
+    "NAME": "마법 노래",
+    "DESCRIPTIONS": [
+      "다음 턴까지 비용이 #b",
+      " 감소됩니다."
+    ]
+  },
+  "SatelIllusPower": {
+    "NAME": "새틀라이트 일루전",
+    "DESCRIPTIONS": [
+      "자신의 턴 동안 뽑을 카드 더미가 증가하면 [B] 를 #b",
+      " 얻습니다."
+    ]
+  },
+  "GrandCrossPower": {
+    "NAME": "증폭",
+    "DESCRIPTIONS": [
+      "이번 턴에 #y증폭 효과를 발동했습니다.",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "Diaspora": {
+    "NAME": "집단 이주",
+    "DESCRIPTIONS": [
+      "턴이 끝나면 체력이 #b 보다 낮은 적을 죽입니다",
+      " ."
+    ]
+  },
+  "TalismanPower": {
+    "NAME": "오색 탈리스만",
+    "DESCRIPTIONS": [
+      "매턴 시작 시 무작위 #y스킬 카드를 #b",
+      " 장 얻습니다."
+    ]
+  },
+  "Wraith": {
+    "NAME": "망령",
+    "DESCRIPTIONS": [
+      "매턴 시작 시 손에 있는 무작위 카드를 #y소멸 시킵니다.",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "LimboContact": {
+    "NAME": "죽은 자와의 조우",
+    "DESCRIPTIONS": [
+      "이 적에게 피해를 받으면 #y망령 을 얻습니다.",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "Nebula": {
+    "NAME": "네뷸라",
+    "DESCRIPTIONS": [
+      "적이나 카드로 방어도를 잃을 때마다",
+      " 판금 갑옷을 얻습니다."
+    ]
+  },
+  "WWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWW",
+      "WWWWWWWWWWW"
+    ]
+  }
+}
