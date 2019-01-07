@@ -195,3 +195,11 @@ v0.0.101
 *Refraction Spark : damage from 3 ( 4 ) / 5 ( 7 ) increased to 4 ( 5 ) / 6 ( 8 )
 *Refraction Spark : damage increase will only apply to Cards with "Spark" in their name
 *Mana Convection is Common card now
+
+v0.14.8
+*Starlight Typhoon : cost increase to 2
+*Fix the issue that sometimes when Charge-Up is consumed,its tooltip is not updated in time
+*Trying to fix the issue that the 0 cost card counter may go wrong in certain case for Starlight Typhoon
+*Trying to fix the issue that random target multi-segment attack damages calculation errors when attacking different targets
+*Add Traditional Chinese Language Support
+*Add Japanese Language Support(incomplete)
