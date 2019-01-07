@@ -462,7 +462,7 @@
   },
   "UltimateShortwave": {
     "NAME": "얼티밋 쇼트웨이브",
-    "DESCRIPTION": "[B] 를 !B! 얻고 충전 을 !M! 얻습니다. 이번 전투에서 이 카드의 효과를 1 씩 증가시킵니다.",
+    "DESCRIPTION": "[B] 를 !B! 얻고 충전 을 !M! 얻습니다. 이번 전투동안 이 카드로 얻는 충전이 !D! 증가하고 얻는 [B] 가 1 증가합니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "NebulaRing": {
