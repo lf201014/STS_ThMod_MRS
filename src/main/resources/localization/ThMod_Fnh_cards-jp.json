@@ -359,120 +359,120 @@
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ManaConvection": {
-    "NAME": "マナの還流",
-    "DESCRIPTION": " !M! 枚カードを引く。  2 枚のカードを廃棄する。 NL チャージ が6以上ならば、 チャージ を8失い、 [B]  [B] を得る",
+    "NAME": "魔力対流",
+    "DESCRIPTION": "カードを !M! 枚引く。 カードを 2 枚 廃棄 する。 NL チャージが 8 以上の場合、チャージを 8 失い、  [B]  [B]  を得る。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ManaRampage": {
-    "NAME": "マナランページ",
-    "DESCRIPTION": "X 枚のランダムな攻撃カードを使用する 。",
-    "UPGRADE_DESCRIPTION": "X 枚のランダムな アップグレード した攻撃カードを使用する。"
+    "NAME": "魔力暴走",
+    "DESCRIPTION": "ランダムな アタック を X 回 プレイ する。",
+    "UPGRADE_DESCRIPTION": "ランダムな アップグレード 済みの アタック を X 回 プレイ する。"
   },
   "StarBarrage": {
-    "NAME": "魔法の星弾幕",
-    "DESCRIPTION": "!D! ダメージを !M! 回与える。 NL この戦闘中、使用されるたび、このカードの攻撃回数を1回増やす。",
+    "NAME": "魔法星弾幕",
+    "DESCRIPTION": "!D! ダメージを !M! 回与える。 NL このカードがプレイされるたび、 この戦闘中、 攻撃回数が 1 増加する。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "AFriendsGift": {
-    "NAME": "友人からの贈り物",
-    "DESCRIPTION": "使用不可 。 特定の3枚のカードの中から変化する。",
-    "UPGRADE_DESCRIPTION": "保留 。 !D! ダメージを与える。 ターン開始時、ダメージを2増加させる。 廃棄  NL 増加  [B]  : 代わりに  !B! ダメージを与え、 廃棄 しない"
+    "NAME": "友達の贈り物",
+    "DESCRIPTION": "使用不可 。 特定の 3 枚のカードに 変化 する。",
+    "UPGRADE_DESCRIPTION": "保留 。 !D! ダメージを与える。 ターン開始時、ダメージを 2 増加する。 廃棄 。 NL 増幅  [B]  : !D! ダメージを与え、 廃棄 されない。"
   },
   "BinaryStars": {
-    "NAME": "連星",
-    "DESCRIPTION": "手札に 黒い閃光星 か 白い矮星 を追加する。 廃棄 NL 増幅  [B]  : 代わりに両方手札に加える。",
-    "UPGRADE_DESCRIPTION": "手札に アップグレード した 黒い閃光星 か 白い矮星 を追加する。 廃棄 NL 増幅  [B]  : 代わりに両方手札に加える。"
+    "NAME": "バイナリスター",
+    "DESCRIPTION": "手札に ブラックフレアスター か ホワイトドワーフ のどちらかを加える。 廃棄 。 NL 増幅  [B]  : 両方を加える。",
+    "UPGRADE_DESCRIPTION": "手札に ブラックフレアスター + か ホワイトドワーフ + のどちらかを加える。 廃棄 。 NL 増幅  [B]  : 両方を加える。"
   },
   "CollectingQuirk": {
-    "NAME": "Collecting Quirk",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for every !M! Relics you have.",
+    "NAME": "收集癖",
+    "DESCRIPTION": "ランダムな敵に !D! ダメージを、レリック !M! 個につき 1 回与える ",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
-    "EXTENDED_DESCRIPTION":[
-      "(Deals damage !B! time(s))",
+    "EXTENDED_DESCRIPTION": [
+      "(ダメージを !B! 回与える。)",
       ""
     ]
   },
   "FungusSplash": {
-    "NAME": "Fungus Brew",
-    "DESCRIPTION": " Exhaust a card. Throw a potion at your target. NL The type of potion depends on the type of the card you exhausted. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": " Exhaust a card. Throw a potion at your target. NL The type of potion depends on the type of the card you exhausted ."
+    "NAME": "茸薬",
+    "DESCRIPTION": " 手札を 1 枚 廃棄 する。 対象にポーションを投げる。 NL ポーションの種類は廃棄した カードによって異なる 。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": " 手札を 1 枚 廃棄 する。 対象にポーションを投げる。 NL ポーションの種類は廃棄した カードによって異なる 。"
   },
   "PropBag": {
-    "NAME": "小物入れのバッグ",
-    "DESCRIPTION": "ランダムに オリハルコン 、 増幅の杖  、 孫子兵法 を手に入れる。 NL 戦闘終了時、手に入れたレリックを失う。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": " 天賦 。 NL ランダムに オリハルコン 、 増幅の杖  、 孫子兵法 を手に入れる。 NL 戦闘終了時、手に入れたレリックを失う。 NL 廃棄"
+    "NAME": "携帯道具袋",
+    "DESCRIPTION": "オリハルコン、孫子兵法、増幅の杖のいずれかを取得する。戦闘終了時、取得したレリックを失う。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": " 天賦 。 オリハルコン、孫子兵法、増幅の杖のいずれかを取得する。戦闘終了時、取得したレリックを失う。 NL 廃棄 。"
   },
   "BlackFlareStar": {
-    "NAME": "黒い閃光星",
-    "DESCRIPTION": "手札のカードが4枚以上の場合にのみ使用できる。 NL 手札から何までもカードを捨て、捨てた分の応じて !B! ブロック を得る。",
+    "NAME": "ブラックフレアスター",
+    "DESCRIPTION": "手札が4枚以上の時のみプレイ可能。 NL 手札のカードを任意の枚数捨て、捨てた枚数の !B! 倍の ブロック を得る。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
-    "EXTENDED_DESCRIPTION":[
-      "手札に4枚以上のカードがない。",
+    "EXTENDED_DESCRIPTION": [
+      "手札が4枚以上無い。",
       ""
     ]
   },
   "WhiteDwarf": {
-    "NAME": "白い矮星",
-    "DESCRIPTION": "手札のカードが4枚以下の場合にのみ使用できる。 NL !B! ダメージを与える (1.5 × 捨て札の枚数). 2 枚 火傷 を手札に追加する。",
-    "UPGRADE_DESCRIPTION": "手札のカードが4枚以下の場合にのみ使用できる。 NL !B! ダメージを与える (2 × 捨て札の枚数). 2 枚 火傷 を手札に追加する。",
-    "EXTENDED_DESCRIPTION":[
-      "手札に4枚以上のカードがあります。",
+    "NAME": "ホワイトドワーフ",
+    "DESCRIPTION": "手札が4枚以下の時のみプレイ可能。 NL !B!  ダメージを与える (1。5 × 捨て札の枚数)。手札に 火傷 を 2 枚加える。",
+    "UPGRADE_DESCRIPTION": "手札が4枚以下の時のみプレイ可能。 NL !B! ダメージを与える (2 × 捨て札の枚数)。手札に 火傷 を 2 枚加える。",
+    "EXTENDED_DESCRIPTION": [
+      "手札が4枚以下ではない",
       ""
     ]
   },
   "FairyDestructionRay": {
-    "NAME": "Fairy Destruction Ray",
-    "DESCRIPTION": "Deal !D! damage to all enemies. Amplify  [B]  [B] : Instant-kill those with !M! or less HP.",
+    "NAME": "妖精尽滅光",
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 増幅  [B]  [B] : !M! 以下のHPの敵を即死させる。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Orbital": {
-    "NAME": "Orbital",
-    "DESCRIPTION": " Unplayable. When this card is drawn, draw 1 card. NL If this card is Exhausted, place !M! card(s) from your exhaust pile into your hand.",
+    "NAME": "オービタル",
+    "DESCRIPTION": " 使用不可 。 このカードを引いた時、 カードを 1 枚引く。 NL このカードを 廃棄 した時、 廃棄 したカードから !M! 枚を手札に加える。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "SillyJoke": {
-    "NAME": "Mana Phantom",
-    "DESCRIPTION": "Cast a Magic that is only shown to true Magicians. NL Exhaust. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "Cast a splendid Magic that is only shown to true Magicians. NL Exhaust. NL Ethereal."
+    "NAME": "無限泡影",
+    "DESCRIPTION": "真の魔術師にしか見せられない魔術を詠唱する。 NL 廃棄 。 NL エセリアル 。",
+    "UPGRADE_DESCRIPTION": "真の魔術師にしか見せられない素晴らしい魔術を詠唱する。 NL 廃棄 。 NL エセリアル 。"
   },
   "ExplosiveMarionette": {
-    "NAME": "Explosive Marionette",
-    "DESCRIPTION": " Retain. Deal !D! damage. NL Amplify [B] : Deal double damage. Exhaust.",
+    "NAME": "アーティフルサクリファイス",
+    "DESCRIPTION": " 保留 。 !D! ダメージを与える。 NL 増幅  [B] : 2 倍のダメージを与える。 廃棄 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "OpticalCamouflage": {
-    "NAME": "Optical Camouflage",
-    "DESCRIPTION": " Retain. Gain !B! Block. NL Amplify [B] : Gain double amount. Exhaust.",
+    "NAME": "オプティカルカモフラージュ",
+    "DESCRIPTION": " 保留 。 !B! ブロック を得る。 NL 増幅  [B] : 2倍のブロックを得る。 廃棄 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "FiveColoredTalisman": {
-    "NAME": "Five-Colored Talisman",
-    "DESCRIPTION": "Retain. Add a random skill to your hand at the start of your turn.",
+    "NAME": "5色のタリスマン",
+    "DESCRIPTION": "保留 。 ターン開始時、ランダムな スキル を 手札に加える。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "AlicesGift": {
-    "NAME": "Alice's Gift",
-    "DESCRIPTION": " Retain. Deal !D! Damage. Exhaust . NL Amplify [B]  [B] : Deals triple damage.",
+    "NAME": "アリスの贈り物",
+    "DESCRIPTION": " 保留 。 !D! ダメージを与える。 廃棄 。 NL 増幅  [B]  [B] : 3 倍のダメージを与える。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Exhaustion_MRS": {
-    "NAME": "Exhaustion",
-    "DESCRIPTION": "Unplayable. NL While in hand, you cannot gain or consume Charge-up.",
+    "NAME": "枯渇",
+    "DESCRIPTION": "使用不可 。 NL 手札にある間、 チャージ を得たり消費する事が出来ない。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "UltimateShortwave": {
-    "NAME": "Ultimate Shortwave",
-    "DESCRIPTION": "Gain !B! [B] and !M! Charge-up. Increase the Charge-up gain of this card by !D! and energy gain by 1 for this battle.",
+    "NAME": "アルティメットショートウェーブ",
+    "DESCRIPTION": "!B! [B] と !M! チャージ を得る。 戦闘中、このカードの チャージ 増加量を !D! 増加し、 エナジー増加量を 1 増やす。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "NebulaRing": {
     "NAME": "ネビュラリング",
-    "DESCRIPTION": "敵やカードから自身の ブロック を失うたび !M! プレートアーマーを得る。",
+    "DESCRIPTION": " ブロック を失うたび、 プレートアーマー !M! を得る。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "SprinkleStarSeal": {
     "NAME": "スプリンクルスター封印",
-    "DESCRIPTION": " 脱力 99 を付与する。 NL 廃棄",
+    "DESCRIPTION": " 脱力 99 を 与える。 NL 廃棄 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WWWWWWWWWWWWWW": {
