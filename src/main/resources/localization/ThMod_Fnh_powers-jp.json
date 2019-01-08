@@ -1,0 +1,280 @@
+{
+  "DarkMatterPower": {
+    "NAME": "ダークマター",
+    "DESCRIPTIONS": [
+      "このターン  #yダークマター  をプレイすることはできない。",
+      ""
+    ]
+  },
+  "ExtraDraw": {
+    "NAME": "エスケープベロシティ",
+    "DESCRIPTIONS": [
+      "ターン開始時、カード 2 #b",
+      " 枚を引き、 #y火傷  #b",
+      " 枚を手札に加える。"
+    ]
+  },
+  "EventHorizonPower": {
+    "NAME": "イベントホライズン",
+    "DESCRIPTIONS": [
+      "1 ターンに #b",
+      "回 増幅効果を使用するたび、 捨て札の アタック を 手札に戻す。",
+      "( 残り回数: ",
+      " )"
+    ]
+  },
+  "IllusionStarPower": {
+    "NAME": "イリュージョンスター",
+    "DESCRIPTIONS": [
+      "ターン開始時、 手札の #b",
+      " 枚のカードを 変化 する。."
+    ]
+  },
+  "MilliPulsaPower": {
+    "NAME": "ミリ秒パルサー",
+    "DESCRIPTIONS": [
+      " #y増幅 効果の  [B]  が不要になる。",
+      ""
+    ]
+  },
+  "SatellIllusPower": {
+    "NAME": "サテライトイリュージョン",
+    "DESCRIPTIONS": [
+      "デッキに存在しないカードをプレイするたび、 カードを #b",
+      " 枚引く。"
+    ]
+  },
+  "TempStrength": {
+    "NAME": "一時的な筋力",
+    "DESCRIPTIONS": [
+      "次に与えるダメージに #b",
+      " を追加。"
+    ]
+  },
+  "TempStrengthLoss": {
+    "NAME": "一時的な筋力喪失",
+    "DESCRIPTIONS": [
+      "このターンの 与えるダメージが #b",
+      " 低下。"
+    ]
+  },
+  "ExtraEnergyPower": {
+    "NAME": "余分なエネルギー",
+    "DESCRIPTIONS": [
+      "毎ターン",
+      " [B]を得る。"
+    ]
+  },
+  "ChargeUpPower": {
+    "NAME": "チャージ",
+    "DESCRIPTIONS": [
+      "#b",
+      " スタックの #yチャージ がある ",
+      "#b",
+      " 倍のダメージを与える。"
+    ]
+  },
+  "PolarisUniquePower": {
+    "NAME": "ガイディングスター",
+    "DESCRIPTIONS": [
+      " #yガイディングスター が山札にある場合, ターン開始時に [B] を得る。"
+    ]
+  },
+  "OrrerysSunPower": {
+    "NAME": "オーレリーズサン",
+    "DESCRIPTIONS": [
+      "チャージ が使用されるたび、敵全体に  #b",
+      " ダメージを与える。"
+    ]
+  },
+  "Charged": {
+    "NAME": "チャージ!",
+    "DESCRIPTIONS": [
+      "次の攻撃は、  #b",
+      " 倍のダメージを与える。"
+    ]
+  },
+  "BlazeAwayPower": {
+    "NAME": "ブレイズアウェイ",
+    "DESCRIPTIONS": [
+      "次に使用する アタック の複製 #b",
+      " 枚を手札に加える。"
+    ]
+  },
+  "MPPower": {
+    "NAME": "マックスパワー",
+    "DESCRIPTIONS": [
+      "このターン、与えるダメージ  #b",
+      " 倍。"
+    ]
+  },
+  "EnergyFlowPower": {
+    "NAME": "エナジーフロー",
+    "DESCRIPTIONS": [
+      "ターン終了時、 #yチャージ #b",
+      " を得る"
+    ]
+  },
+  "PulseMagicPower": {
+    "NAME": "パルスマジック",
+    "DESCRIPTIONS": [
+      "このターン、 #y増幅 効果に  [B]  は不要。",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "SingularityPower": {
+    "NAME": "シンギュラリティ",
+    "DESCRIPTIONS": [
+      "コストが #b0 のカードを使用するたび、手札のランダムな #yアタック のダメージを #b",
+      " 増加する。"
+    ]
+  },
+  "WitchOfGreedGold": {
+    "NAME": "魔女の強欲",
+    "DESCRIPTIONS": [
+      "戦闘終了時、  #b",
+      " ゴールドを得る。 "
+    ]
+  },
+  "WitchOfGreedPotion": {
+    "NAME": "魔女の強欲",
+    "DESCRIPTIONS": [
+      "戦闘終了時、  #b",
+      " ゴールドと、ランダムなポーションを得る。"
+    ]
+  },
+  "MoraleDepletionPlusPower": {
+    "NAME": "1回休み",
+    "DESCRIPTIONS": [
+      "このターン、 #y増幅 効果を使用したり、 #yチャージ を消費する事ができない。",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "MoraleDepletionPower": {
+    "NAME": "1回休み",
+    "DESCRIPTIONS": [
+      "このターン、 #y増幅 効果を使用する事ができない。",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "SuperNovaPower": {
+    "NAME": "スーパーノヴァ",
+    "DESCRIPTIONS": [
+      "#y火傷 を #y廃棄 するたび、 #y筋力  #b",
+      "#y呪い や #y状態異常 を #y廃棄 するたび、 #y筋力  #b",
+      "を得る。 #y火傷 によるダメージを受けなくなる。 . NL ターン終了時手札を #y廃棄 する。"
+    ]
+  },
+  "CasketOfStarPlusPower": {
+    "NAME": "星の器",
+    "DESCRIPTIONS": [
+      " #yブロック を得るたび、 #yスパーク #y+ を #b",
+      " 枚手札に加える。"
+    ]
+  },
+  "CasketOfStarPower": {
+    "NAME": "星の器",
+    "DESCRIPTIONS": [
+      " #yブロック を得るたび、 #yスパーク を #b",
+      " 枚手札に加える。"
+    ]
+  },
+  "GalacticHaloPower": {
+    "NAME": "ギャラクティックハロー",
+    "DESCRIPTIONS": [
+      " このターンにプレイした #yアタック の枚数分 #b",
+      " #yブロック を得る。"
+    ]
+  },
+  "ManaRampagePower": {
+    "NAME": "魔力暴走",
+    "DESCRIPTIONS": [
+      "次にプレイする #yアタック を、 #b",
+      " 回プレイする。 ."
+    ]
+  },
+  "PropBagPower": {
+    "NAME": "携帯道具袋",
+    "DESCRIPTIONS": [
+      "戦闘終了時、  #y",
+      "を失う。"
+    ]
+  },
+  "UltraShortWavePower": {
+    "NAME": "アルティメットショートウェーブ",
+    "DESCRIPTIONS": [
+      "アルティメットショートウェーブの効果が #b",
+      " 回 #y増幅 された。"
+    ]
+  },
+  "DarkSparkPower": {
+    "NAME": "ダークスパーク",
+    "DESCRIPTIONS": [
+      "このターン、名前に スパーク と付くカードをプレイするたび、  #b",
+      " #yチャージ を付与する。"
+    ]
+  },
+  "MagicChantPower": {
+    "NAME": "魔術詠唱",
+    "DESCRIPTIONS": [
+      "コストを削減  #b",
+      " 次のターン"
+    ]
+  },
+  "SatelIllusPower": {
+    "NAME": "サテライトイリュージョン",
+    "DESCRIPTIONS": [
+      "プレイヤーのターン中、山札のカードが増加するたび #b",
+      " [B] を得る。"
+    ]
+  },
+  "GrandCrossPower": {
+    "NAME": "グランドクロス",
+    "DESCRIPTIONS": [
+      "このターン #y増幅 を使用しました",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "Diaspora": {
+    "NAME": "ディアスポラ",
+    "DESCRIPTIONS": [
+      "ターン終了時に、体力が #b",
+      "以下の時、即死する。"
+    ]
+  },
+  "TalismanPower": {
+    "NAME": "5色のタリスマン",
+    "DESCRIPTIONS": [
+      "ターン開始時、 #b",
+      " ランダムな #yスキル を手札に加える。"
+    ]
+  },
+  "Wraith": {
+    "NAME": "レイス",
+    "DESCRIPTIONS": [
+      "ターン開始時、 手札のランダムなカード #b1 枚を #y廃棄 する。",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "LimboContact": {
+    "NAME": "アンデッドコンタクト",
+    "DESCRIPTIONS": [
+      "この敵からダメージを受けるたび、 #yレイス 1 を得る。",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "Nebula": {
+    "NAME": "ネビュラ",
+    "DESCRIPTIONS": [
+      "ブロック を失うたび、 プレートアーマー ",
+      " を得る。"
+    ]
+  },
+  "WWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWW",
+      "WWWWWWWWWWW"
+    ]
+  }
+}
