@@ -1,0 +1,34 @@
+{
+  "keywords": [
+    {
+      "NAMES": [
+        "枯渇"
+      ],
+      "DESCRIPTION": "枯渇すると、 チャージ を得たり使用することができなくなる。"
+    },
+    {
+      "NAMES": [
+        "スパーク"
+      ],
+      "DESCRIPTION": "スパークはコスト0の攻撃カード"
+    },
+    {
+      "NAMES": [
+        "チャージ"
+      ],
+      "DESCRIPTION": " #b8 スタックごとに、ダメージが #b2 倍になる。"
+    },
+    {
+      "NAMES": [
+        "増幅"
+      ],
+      "DESCRIPTION": "十分な [B] を持っているとき、上位の効果のため [B] を支払う。"
+    },
+    {
+      "NAMES": [
+        "WWWWWWWWWWWWWWWWWWW"
+      ],
+      "DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWW"
+    }
+  ]
+}

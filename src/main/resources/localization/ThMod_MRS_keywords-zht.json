@@ -1,0 +1,34 @@
+{
+  "keywords": [
+    {
+      "NAMES": [
+        "力竭"
+      ],
+      "DESCRIPTION": "力竭時無法獲得或使用 蓄力"
+    },
+    {
+      "NAMES": [
+        "火花"
+      ],
+      "DESCRIPTION": "小刀是會消耗的 #b0 耗能攻擊牌"
+    },
+    {
+      "NAMES": [
+        "蓄力"
+      ],
+      "DESCRIPTION": "每 #b8 層蓄力會使你的下一次攻擊傷害加倍"
+    },
+    {
+      "NAMES": [
+        "增幅"
+      ],
+      "DESCRIPTION": "當有足夠的 [B] 時，使用其進階效果"
+    },
+    {
+      "NAMES": [
+        "WWWWWWWWWWWWWWWWWWW"
+      ],
+      "DESCRIPTION":"WWWWWWWWWWWWWWWWWWWWW"
+    }
+  ]
+}
