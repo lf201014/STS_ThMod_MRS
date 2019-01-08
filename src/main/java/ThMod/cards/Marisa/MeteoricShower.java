@@ -42,6 +42,9 @@ public class MeteoricShower
     this.baseDamage = ATK_DMG;
   }
 
+  @Override
+  public void calculateCardDamage(AbstractMonster mo){}
+
   public void use(AbstractPlayer p, AbstractMonster m) {
     int cnt = EnergyPanel.totalCount + 1;
     if (p.hasRelic("Chemical X")) {

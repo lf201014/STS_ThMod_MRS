@@ -124,6 +124,9 @@ public class Marisa extends CustomPlayer {
     } else if (Settings.language == Settings.GameLanguage.JPN) {
       title = "\u666e\u901a\u306e\u9b54\u6cd5\u4f7f\u3044";
       flavor = "\u9b54\u6cd5\u306e\u68ee\u306b\u4f4f\u3093\u3067\u3044\u308b\u666e\u901a\u306e\u9b54\u6cd5\u4f7f\u3044\u3002 NL \u5149\u3068\u71b1\u306e\u9b54\u6cd5\u304c\u5f97\u610f\u3002";
+    }else if (Settings.language == Settings.GameLanguage.ZHT) {
+      title = "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f";
+      flavor = "\u4f4f\u5728\u9b54\u6cd5\u68ee\u6797\u7684\u9b54\u6cd5\u4f7f\u3002 NL \u5584\u9577\u65bc\u5149\u548c\u71b1\u7684\u9b54\u6cd5\u3002";
     } else if (Settings.language == Settings.GameLanguage.KOR) {
       title = "\ud3c9\ubc94\ud55c \ub9c8\ubc95\uc0ac";
       flavor = "\ub9c8\ubc95\uc758 \uc232\uc5d0 \uc0ac\ub294 \"\ud3c9\ubc94\ud55c\" \ub9c8\ubc95\uc0ac \uc785\ub2c8\ub2e4. NL \ube5b\uacfc \uc5f4 \ub9c8\ubc95\uc774 \ud2b9\uae30\uc785\ub2c8\ub2e4.";
@@ -160,6 +163,8 @@ public class Marisa extends CustomPlayer {
       title = "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f";
     } else if (Settings.language == GameLanguage.JPN) {
       title = "\u666e\u901a\u306e\u9b54\u6cd5\u4f7f\u3044";
+    }else if (Settings.language == GameLanguage.ZHT) {
+      title = "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f";
     } else if (Settings.language == GameLanguage.KOR) {
       title = "\ud3c9\ubc94\ud55c \ub9c8\ubc95\uc0ac";
     } else {
@@ -195,7 +200,7 @@ public class Marisa extends CustomPlayer {
 
   public String getLocalizedCharacterName() {
     String char_name;
-    if (Settings.language == Settings.GameLanguage.JPN) {
+    if ((Settings.language == Settings.GameLanguage.JPN)||(Settings.language == Settings.GameLanguage.ZHS)||(Settings.language == Settings.GameLanguage.ZHT)) {
       char_name = "\u9b54\u7406\u6c99";
     } else if (Settings.language == Settings.GameLanguage.KOR) {
       char_name = "\ub9c8\ub9ac\uc0ac";

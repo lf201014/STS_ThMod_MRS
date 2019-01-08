@@ -107,8 +107,8 @@
   },
   "PolarisUnique": {
     "NAME": "唯一的北极星",
-    "DESCRIPTION": " 固有 。 将1张 北极星 洗入抽卡堆。在你的回合开始时如果 北极星 在你的抽卡堆中，获得1点能量。",
-    "UPGRADE_DESCRIPTION": " 固有 。 将1张 北极星 洗入抽卡堆。在你的回合开始时如果 北极星 在你的抽卡堆中，获得1点能量。"
+    "DESCRIPTION": " 固有 。 将1张 北极星 洗入抽卡堆。在你的回合开始时如果 北极星 在你的抽卡堆中，获得  [B]  。",
+    "UPGRADE_DESCRIPTION": " 固有 。 将1张 北极星 洗入抽卡堆。在你的回合开始时如果 北极星 在你的抽卡堆中，获得  [B]  。"
   },
   "SatelliteIllusion": {
     "NAME": "卫星幻觉",
@@ -296,7 +296,7 @@
   },
   "RefractionSpark": {
     "NAME": "折射火花",
-    "DESCRIPTION": "造成 !D! 点伤害，手牌中所有名字中有火花的卡伤害增加造成伤害的数值。 NL  增幅  [B]  :伤害变为 !B! 点。",
+    "DESCRIPTION": "造成 !D! 点伤害，手牌中所有名字中有火花的卡伤害增加未被格挡的伤害的数值。 NL  增幅  [B]  :伤害变为 !B! 点。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MagicChant": {
