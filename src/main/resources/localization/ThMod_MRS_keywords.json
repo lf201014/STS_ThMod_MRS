@@ -1,0 +1,50 @@
+{
+  "keywords": [
+    {
+      "NAMES": [
+        "amplify",
+        "Amplify"
+      ],
+      "DESCRIPTION": "Pay extra energy for its effect when you have enough  [B] ."
+    },
+    {
+      "NAMES": [
+        "true Magicians",
+        "true magicians",
+        "True Magicians"
+      ],
+      "DESCRIPTION": "Perhaps Marisa is not one though."
+    },
+    {
+      "NAMES": [
+        "is only shown to",
+        "Is Only Shown To"
+      ],
+      "DESCRIPTION": "Well...That means you may not able to see it..."
+    },
+    {
+      "NAMES": [
+        "Exhaustion", "exhaustion"
+      ],
+      "DESCRIPTION":"Exhaustion prevent you from gaining or using Charge-Up ."
+    },
+    {
+      "NAMES": [
+        "Spark", "spark"
+      ],
+      "DESCRIPTION":"Spark is an attack card costs #b0 energy and exhausts upon use."
+    },
+    {
+      "NAMES": [
+        "Charge-up", "charge-up", "chargeup", "ChargeUp"
+      ],
+      "DESCRIPTION":"For every #b8 stacks,double the damage of your next Attack."
+    },
+    {
+      "NAMES": [
+        "WWWWWWWWWWWWWWWWWWW"
+      ],
+      "DESCRIPTION":"WWWWWWWWWWWWWWWWWWWWW"
+    }
+  ]
+}

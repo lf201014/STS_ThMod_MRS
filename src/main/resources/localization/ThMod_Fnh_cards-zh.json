@@ -281,12 +281,12 @@
   },
   "Robbery": {
     "NAME": "强取豪夺",
-    "DESCRIPTION": "造成 !D! 点伤害。获得造成伤害数量的金币。 NL 消耗 。 NL 增幅  [B]  :获得双倍的金币。",
+    "DESCRIPTION": "造成 !D! 点伤害。获得造成的未被格挡伤害数量的金币。 NL 消耗 。 NL 增幅  [B]  :获得双倍的金币。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "6A": {
     "NAME": "尻击",
-    "DESCRIPTION": "造成 !D! 点伤害，获得造成伤害数量的 格挡 。",
+    "DESCRIPTION": "造成 !D! 点伤害，获得未被格挡的造成伤害数量的 格挡 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "CircumpolarStar": {

@@ -1,0 +1,46 @@
+{
+  "keywords": [
+    {
+      "NAMES": [
+        "真正的魔法使"
+      ],
+      "DESCRIPTION": "貌似魔理沙并不能算是"
+    },
+    {
+      "NAMES": [
+        "才能看到"
+      ],
+      "DESCRIPTION": "嗯……或许你是看不到了"
+    },
+    {
+      "NAMES": [
+        "力竭"
+      ],
+      "DESCRIPTION":"力竭会使你无法获得或使用 蓄力"
+    },
+    {
+      "NAMES": [
+        "火花"
+      ],
+      "DESCRIPTION":"火花是一张费用为 #b0 并且会 消耗 的攻击牌"
+    },
+    {
+      "NAMES": [
+        "蓄力"
+      ],
+      "DESCRIPTION":"每 #b8 层蓄力会使你的下一次攻击伤害翻一倍"
+    },
+    {
+      "NAMES": [
+        "增幅"
+      ],
+      "DESCRIPTION":"当你拥有足够 [B] 时，支付额外的 [B] 使用更高级的效果"
+    },
+    {
+      "NAMES": [
+        "WWWWWWWWWWWWWWWWWWW"
+      ],
+      "DESCRIPTION":"WWWWWWWWWWWWWWWWWWWWW"
+    }
+  ]
+}

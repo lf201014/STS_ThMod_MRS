@@ -9,6 +9,8 @@ import ThMod.cards.Marisa.ManaRampage;
 import ThMod.cards.Marisa.SprinkleStarSeal;
 import ThMod.cards.derivations.Exhaustion_MRS;
 import ThMod.potions.ShroomBrew;
+import com.google.gson.Gson;
+import com.megacrit.cardcrawl.localization.Keyword;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import java.nio.charset.StandardCharsets;
 
@@ -177,6 +179,7 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String RELIC_STRING_ZHT = "localization/ThMod_Fnh_relics-zht.json";
   private static final String RELIC_STRING_KR = "localization/ThMod_Fnh_relics-kr.json";
   private static final String POWER_STRING = "localization/ThMod_Fnh_powers.json";
+  private static final String POWER_STRING_JP = "localization/ThMod_Fnh_powers-jp.json";
   private static final String POWER_STRING_ZH = "localization/ThMod_Fnh_powers-zh.json";
   private static final String POWER_STRING_ZHT = "localization/ThMod_Fnh_powers-zht.json";
   private static final String POWER_STRING_KR = "localization/ThMod_Fnh_powers-kr.json";
@@ -185,6 +188,11 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String POTION_STRING_ZH = "localization/ThMod_MRS_potions-zh.json";
   private static final String POTION_STRING_ZHT = "localization/ThMod_MRS_potions-zht.json";
   private static final String POTION_STRING_KR = "localization/ThMod_MRS_potions-kr.json";
+  private static final String KEYWORD_STRING = "localization/ThMod_MRS_keywords.json";
+  private static final String KEYWORD_STRING_JP = "localization/ThMod_MRS_keywords-zh.json";
+  private static final String KEYWORD_STRING_KR = "localization/ThMod_MRS_keywords-kr.json";
+  private static final String KEYWORD_STRING_ZHS = "localization/ThMod_MRS_keywords-zh.json";
+  private static final String KEYWORD_STRING_ZHT = "localization/ThMod_MRS_keywords-zht.json";
 
   public static int typhoonCounter = 0;
 
@@ -609,10 +617,41 @@ public class ThMod implements PostExhaustSubscriber,
     // TODO Auto-generated method stub
   }
 
+  private static String loadJson(String jsonPath) {
+    return Gdx.files.internal(jsonPath).readString(String.valueOf(StandardCharsets.UTF_8));
+  }
+
   @Override
   public void receiveEditKeywords() {
     logger.info("Setting up custom keywords");
 
+    String keywordsPath;
+    switch (Settings.language) {
+      case ZHT:
+        keywordsPath = KEYWORD_STRING_ZHT;
+        break;
+      case ZHS:
+        keywordsPath = KEYWORD_STRING_ZHS;
+        break;
+      case KOR:
+        keywordsPath = KEYWORD_STRING_KR;
+        break;
+      case JPN:
+        keywordsPath = KEYWORD_STRING_JP;
+        break;
+      default:
+        keywordsPath = KEYWORD_STRING;
+        break;
+    }
+
+    Gson gson = new Gson();
+    Keywords keywords;
+    keywords = gson.fromJson(loadJson(keywordsPath), Keywords.class);
+    for (Keyword key : keywords.keywords) {
+      logger.info("Loading keyword : " + key.NAMES[0]);
+      BaseMod.addKeyword(key.NAMES, key.DESCRIPTION);
+    }
+/*
     if (Settings.language == Settings.GameLanguage.ZHS) {
       BaseMod.addKeyword(new String[]{"\u529b\u7aed"},
           "\u529b\u7aed\u4f1a\u4f7f\u4f60\u65e0\u6cd5\u83b7\u5f97\u6216\u4f7f\u7528 \u84c4\u529b \u3002");
@@ -638,17 +677,17 @@ public class ThMod implements PostExhaustSubscriber,
       BaseMod.addKeyword(new String[]{"\u589e\u5e45"},
           "\u7576\u6709\u8db3\u5920\u7684 [B] \u6642\uff0c\u4f7f\u7528\u5176\u9032\u968e\u6548\u679c");
     } else {
-      BaseMod.addKeyword(new String[]{"\u67af\u6e07"},
-          "\u67af\u6e07\u3059\u308b\u3068\u3001 \u30c1\u30e3\u30fc\u30b8 \u3092\u5f97\u305f\u308a\u4f7f\u7528\u3059\u308b\u3053\u3068\u304c\u3067\u304d\u306a\u304f\u306a\u308b\u3002");
-      BaseMod
-          .addKeyword(new String[]{"\u30ab\u30fc\u30c9\u306b\u3088\u3063\u3066\u7570\u306a\u308b"},
-              "\u653b\u6483 \uff1a \u6050\u6016\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30b9\u30ad\u30eb \uff1a \u8131\u529b\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30d1\u30ef\u30fc \uff1a \u6bd2\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30b9\u30c6\u30fc\u30bf\u30b9 \uff1a \u706b\u708e\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u546a\u3044 \uff1a \u7159\u7389");
-      BaseMod.addKeyword(new String[]{"\u30b9\u30d1\u30fc\u30af"},
-          "\u30b9\u30d1\u30fc\u30af\u306f\u30b3\u30b9\u30c80\u306e\u653b\u6483\u30ab\u30fc\u30c9");
-      BaseMod.addKeyword(new String[]{"\u30c1\u30e3\u30fc\u30b8"},
-          "8\u30b9\u30bf\u30c3\u30af\u3054\u3068\u306b\u3001\u30c0\u30e1\u30fc\u30b8\u304c2\u500d\u306b\u306a\u308b\u3002");
-      BaseMod.addKeyword(new String[]{"\u5897\u5e45"},
-          "\u5341\u5206\u306a [B] \u3092\u6301\u3063\u3066\u3044\u308b\u3068\u304d\u3001\u4e0a\u4f4d\u306e\u52b9\u679c\u306e\u305f\u3081 [B] \u3092\u652f\u6255\u3046\u3002");
+     
+    BaseMod.addKeyword(new String[]{"\u6d88\u8017"},
+            "\u6d88\u8017\u3059\u308b\u3068\u3001 \u30c1\u30e3\u30fc\u30b8 \u3092\u5f97\u305f\u308a\u6d88\u8cbb\u3059\u308b\u4e8b\u304c\u51fa\u6765\u306a\u3044\u3002");
+    BaseMod.addKeyword(new String[]{"\u30ab\u30fc\u30c9\u306b\u3088\u3063\u3066\u7570\u306a\u308b"},
+            "\u30a2\u30bf\u30c3\u30af \uff1a \u6050\u6016\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30b9\u30ad\u30eb \uff1a \u8131\u529b\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30d1\u30ef\u30fc \uff1a \u6bd2\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u72b6\u614b\u7570\u5e38 \uff1a \u706b\u708e\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u546a\u3044 \uff1a \u7159\u7389");
+    BaseMod.addKeyword(new String[]{"\u30b9\u30d1\u30fc\u30af"},
+            "\u30b9\u30d1\u30fc\u30af\u306f\u30b3\u30b9\u30c8 #b0 \u306e \u30a2\u30bf\u30c3\u30af \u30ab\u30fc\u30c9");
+    BaseMod.addKeyword(new String[]{"\u30c1\u30e3\u30fc\u30b8"},
+            "#b8 \u30b9\u30bf\u30c3\u30af\u3054\u3068\u306b\u3001\u4e0e\u3048\u308b\u30c0\u30e1\u30fc\u30b8\u304c #b2 \u500d\u306b\u306a\u308b\u3002");
+    BaseMod.addKeyword(new String[]{"\u5897\u5e45"},
+            "\u5897\u5e45\u306b\u5fc5\u8981\u306a [B] \u3092\u6301\u3063\u3066\u3044\u308b\u5834\u5408\u3001[B] \u3092\u6d88\u8cbb\u3057\u3000\u5897\u5e45\u52b9\u679c\u3092\u5f97\u308b");
 
       //Korean Localization
       BaseMod.addKeyword(new String[]{"\uc99d\ud3ed"},
@@ -677,7 +716,7 @@ public class ThMod implements PostExhaustSubscriber,
           "Attack : Fear Potion ; NL Skill : Weak Potion ; NL Power : Poison Potion ; Status : Fire Potion ; Curse : Smoke Bomb ."
       );
     }
-
+*/
     logger.info("Keywords setting finished.");
   }
 
@@ -697,7 +736,7 @@ public class ThMod implements PostExhaustSubscriber,
       logger.info("lang == jpn");
       card = CARD_STRING_JP;
       relic = RELIC_STRING_JP;
-      power = POWER_STRING;
+      power = POWER_STRING_JP;
       potion = POTION_STRING_JP;
     } else if (Settings.language == Settings.GameLanguage.ZHT) {
       logger.info("lang == zht");
@@ -746,6 +785,11 @@ public class ThMod implements PostExhaustSubscriber,
     BaseMod
         .addPotion(ShroomBrew.class, Color.NAVY.cpy(), Color.LIME.cpy(), Color.OLIVE, "ShroomBrew",
             MARISA);
+  }
+
+  class Keywords {
+
+    Keyword[] keywords;
   }
 	/*
 	
