@@ -178,8 +178,8 @@
   },
   "MaximisePower": {
     "NAME": "マックスパワー",
-    "DESCRIPTION": "チャージ スタックを [B] に変換する。枯渇 を 1 枚手札に加える。 このターン与えるダメージが 2 倍になる。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "チャージ スタックを [B] に変換する。 枯渇 を 1 枚手札に加える。 このターン与えるダメージが 2 倍になる。"
+    "DESCRIPTION": "チャージ スタックを [B] に変換する。 消耗 を 1 枚手札に加える。 このターン与えるダメージが 2 倍になる。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "チャージ スタックを [B] に変換する。 消耗 を 1 枚手札に加える。 このターン与えるダメージが 2 倍になる。"
   },
   "StarlightTyphoon": {
     "NAME": "スターライトタイフーン",
@@ -297,7 +297,7 @@
   },
   "RefractionSpark": {
     "NAME": "リフレクションスパーク",
-    "DESCRIPTION": "!D! ダメージを与える。 手札の全ての、名前に「 スパーク 」の入ったカードのダメージを与えたダメージ分増加する。 NL 増幅  [B]  : 与えるダメージを !D! に増加",
+    "DESCRIPTION": "!D! ダメージを与える。 手札の全ての、名前に「スパーク」の入ったカードのダメージを与えたダメージ分増加する。 NL 増幅  [B]  : 与えるダメージを !D! に増加",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MagicChant": {
@@ -456,7 +456,7 @@
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Exhaustion_MRS": {
-    "NAME": "枯渇",
+    "NAME": "消耗",
     "DESCRIPTION": "使用不可 。 NL 手札にある間、 チャージ を得たり消費する事が出来ない。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
