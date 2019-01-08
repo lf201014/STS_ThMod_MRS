@@ -81,7 +81,7 @@
   },
   "MeteoricShower": {
     "NAME": "流星雨",
-    "DESCRIPTION": " 消耗最多X+1張手牌，每消耗一張，隨機造成 !D! 點2次，消耗的牌是 灼傷 的話，則3次"
+    "DESCRIPTION": "消耗 最多X+1張手牌。每 消耗 1張，隨機造成 !D! 點傷害2次， 消耗 的牌是 灼傷 的話，則3次"
   },
   "MilkyWay": {
     "NAME": "銀河",
@@ -132,8 +132,8 @@
   },
   "MillisecondPulsars": {
     "NAME": "毫秒脈衝星",
-    "DESCRIPTION": "不再需要消耗額外 [B] 來發動 增幅",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 不再需要消耗額外 [B] 來發動 增幅"
+    "DESCRIPTION": "不再需要花費額外 [B] 來發動 增幅",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 不再需要花費額外 [B] 來發動 增幅"
   },
   "Spark": {
     "NAME": "火花",
@@ -197,7 +197,7 @@
   "StarlightTyphoon_D": {
     "NAME": "星光颱風",
     "DESCRIPTION": "消耗 手牌中所有的非攻擊牌，然後將 相同數量 的 火花 加入手牌",
-    "UPGRADE_DESCRIPTION": " 消耗 手牌中所有的非攻擊牌，然後將 相同數量 的 已 升級 的 火花 加入手牌"
+    "UPGRADE_DESCRIPTION": "消耗 手牌中所有的非攻擊牌，然後將 相同數量 的 已升級 火花 加入手牌"
   },
   "SuperPerseids": {
     "NAME": "超級英仙座",
@@ -241,7 +241,7 @@
   },
   "DragonMeteor": {
     "NAME": "龍隕星",
-    "DESCRIPTION": "造成 !B! 點傷害。 NL 消耗區每有1張卡，此牌傷害增加 !M! ",
+    "DESCRIPTION": "造成 !B! 點傷害。 NL 本場戰鬥中每 消耗 1張牌，此牌傷害增加 !M! ",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "PulseMagic": {
@@ -311,8 +311,8 @@
   },
   "SuperNova": {
     "NAME": "超新星",
-    "DESCRIPTION": "使你不再受到 灼傷 的傷害。 NL 每 消耗 一張 灼傷 ，獲得1點 力量 。 NL 在回合結束時 消耗 所有手牌",
-    "UPGRADE_DESCRIPTION": "使你不再受到 灼傷 的傷害。 NL 每 消耗 一張 詛咒 或 狀態 ，獲得1點 力量 。 NL 在回合結束時 消耗 所有手牌"
+    "DESCRIPTION": "不再受到 灼傷 的傷害。 NL 每 消耗 1張 灼傷 ，獲得1點 力量 。 NL 在回合結束時 消耗 所有手牌",
+    "UPGRADE_DESCRIPTION": "不再受到 灼傷 的傷害。 NL 每 消耗 1張 詛咒 或 狀態 ，獲得1點 力量 。 NL 在回合結束時 消耗 所有手牌"
   },
   "MoraleDepletion": {
     "NAME": "一回休",
@@ -358,7 +358,7 @@
   },
   "ManaConvection": {
     "NAME": "魔力對流",
-    "DESCRIPTION": "抽 !M! 張牌並 消耗 2張手牌。 NL 如果 蓄力 層數大於或等於8層，則消耗8層 蓄力 並獲得 [B] [B] ",
+    "DESCRIPTION": "抽 !M! 張牌並 消耗 2張手牌。 NL 如果 蓄力 層數大於或等於8層，則減少8層 蓄力 並獲得 [B] [B] ",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ManaRampage": {
@@ -392,8 +392,8 @@
   },
   "FungusSplash": {
     "NAME": "蘑菇藥劑",
-    "DESCRIPTION": "消耗 1張手牌，對目標使用1瓶 藥劑 。 NL 藥劑 的種類 取決於所消耗卡的種類 。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "消耗 1張手牌，對目標使用1瓶 藥劑 。 NL 藥劑 的種類 取決於所消耗卡的種類 "
+    "DESCRIPTION": "消耗 1張手牌，對目標使用1瓶 藥劑 。 NL 藥劑 的種類 取決於所 消耗 卡的種類 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "消耗 1張手牌，對目標使用1瓶 藥劑 。 NL 藥劑 的種類 取決於所 消耗 卡的種類 "
   },
   "PropBag": {
     "NAME": "便攜道具包",
@@ -425,7 +425,7 @@
   },
   "Orbital": {
     "NAME": "星軌",
-    "DESCRIPTION": "無法打出 。 抽到這張牌時，再抽1張牌。 NL 當這張牌被 消耗 時，從消耗堆選擇 !M! 張牌加入到手牌",
+    "DESCRIPTION": "無法打出 。 抽到這張牌時，再抽1張牌。 NL 當這張牌被 消耗 時，選擇 !M! 張已 消耗 的牌，將其放入手牌",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "SillyJoke": {
