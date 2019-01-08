@@ -201,5 +201,13 @@ v0.14.8
 *Fix the issue that sometimes when Charge-Up is consumed,its tooltip is not updated in time
 *Trying to fix the issue that the 0 cost card counter may go wrong in certain case for Starlight Typhoon
 *Trying to fix the issue that random target multi-segment attack damages calculation errors when attacking different targets
-*Add Traditional Chinese Language Support
-*Add Japanese Language Support(incomplete)
+*Add Traditional Chinese Language Support(thanks to GitHub user : rainfoxest)
+*Add Japanese Language Support(incomplete)(thanks to GitHub user : sisizanohito)
+
+v0.14.9 1/8/2019
+*Rewrite the method of MeteoricShower
+*Fix 0-cost cards related issues
+*Fix the issue that in certain case,using Earthlight Ray while Event Horizon applied will cause the game stuck
+*Fix the bug that the counter of Starlight Typhoon does not reset when S&L
+*Add Korean Language Support(Thanks to GitHub user : Katinor)
+*Improved Traditional Chinese Language localizations(GitHub user : rainfoxest)

@@ -282,7 +282,7 @@
   },
   "Robbery": {
     "NAME": "Robbery",
-    "DESCRIPTION": "Deal !D! damage. Gain gold equal to the unblocked damage dealt. NL Exhaust. NL Amplify [B] : Double the gold you gain.",
+    "DESCRIPTION": "Deal !D! damage. Gain gold equal to unblocked damage dealt. NL Exhaust. NL Amplify [B] : Double the gold you gain.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "6A": {

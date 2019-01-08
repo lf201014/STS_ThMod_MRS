@@ -9,6 +9,8 @@ import ThMod.cards.Marisa.ManaRampage;
 import ThMod.cards.Marisa.SprinkleStarSeal;
 import ThMod.cards.derivations.Exhaustion_MRS;
 import ThMod.potions.ShroomBrew;
+import com.google.gson.Gson;
+import com.megacrit.cardcrawl.localization.Keyword;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import java.nio.charset.StandardCharsets;
 
@@ -186,6 +188,11 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String POTION_STRING_ZH = "localization/ThMod_MRS_potions-zh.json";
   private static final String POTION_STRING_ZHT = "localization/ThMod_MRS_potions-zht.json";
   private static final String POTION_STRING_KR = "localization/ThMod_MRS_potions-kr.json";
+  private static final String KEYWORD_STRING = "localization/ThMod_MRS_keywords.json";
+  private static final String KEYWORD_STRING_JP = "localization/ThMod_MRS_keywords-zh.json";
+  private static final String KEYWORD_STRING_KR = "localization/ThMod_MRS_keywords-kr.json";
+  private static final String KEYWORD_STRING_ZHS = "localization/ThMod_MRS_keywords-zh.json";
+  private static final String KEYWORD_STRING_ZHT = "localization/ThMod_MRS_keywords-zht.json";
 
   public static int typhoonCounter = 0;
 
@@ -610,10 +617,41 @@ public class ThMod implements PostExhaustSubscriber,
     // TODO Auto-generated method stub
   }
 
+  private static String loadJson(String jsonPath) {
+    return Gdx.files.internal(jsonPath).readString(String.valueOf(StandardCharsets.UTF_8));
+  }
+
   @Override
   public void receiveEditKeywords() {
     logger.info("Setting up custom keywords");
 
+    String keywordsPath;
+    switch (Settings.language) {
+      case ZHT:
+        keywordsPath = KEYWORD_STRING_ZHT;
+        break;
+      case ZHS:
+        keywordsPath = KEYWORD_STRING_ZHS;
+        break;
+      case KOR:
+        keywordsPath = KEYWORD_STRING_KR;
+        break;
+      case JPN:
+        keywordsPath = KEYWORD_STRING_JP;
+        break;
+      default:
+        keywordsPath = KEYWORD_STRING;
+        break;
+    }
+
+    Gson gson = new Gson();
+    Keywords keywords;
+    keywords = gson.fromJson(loadJson(keywordsPath), Keywords.class);
+    for (Keyword key : keywords.keywords) {
+      logger.info("Loading keyword : " + key.NAMES[0]);
+      BaseMod.addKeyword(key.NAMES, key.DESCRIPTION);
+    }
+/*
     if (Settings.language == Settings.GameLanguage.ZHS) {
       BaseMod.addKeyword(new String[]{"\u529b\u7aed"},
           "\u529b\u7aed\u4f1a\u4f7f\u4f60\u65e0\u6cd5\u83b7\u5f97\u6216\u4f7f\u7528 \u84c4\u529b \u3002");
@@ -678,7 +716,7 @@ public class ThMod implements PostExhaustSubscriber,
           "Attack : Fear Potion ; NL Skill : Weak Potion ; NL Power : Poison Potion ; Status : Fire Potion ; Curse : Smoke Bomb ."
       );
     }
-
+*/
     logger.info("Keywords setting finished.");
   }
 
@@ -747,6 +785,11 @@ public class ThMod implements PostExhaustSubscriber,
     BaseMod
         .addPotion(ShroomBrew.class, Color.NAVY.cpy(), Color.LIME.cpy(), Color.OLIVE, "ShroomBrew",
             MARISA);
+  }
+
+  class Keywords {
+
+    Keyword[] keywords;
   }
 	/*
 	
