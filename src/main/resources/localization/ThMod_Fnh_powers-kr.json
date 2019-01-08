@@ -7,7 +7,7 @@
     ]
   },
   "ExtraDraw": {
-    "NAME": "제 n우주속도",
+    "NAME": "탈출 속도",
     "DESCRIPTIONS": [
       "턴이 시작될 때 카드를 #b",
       " 장 더 뽑고 #y화상 카드를 #b",
@@ -68,10 +68,10 @@
   "ChargeUpPower": {
     "NAME": "충전",
     "DESCRIPTIONS": [
-      "#y충전 이 #b",
-      " 이 되면",
+      "현재 #b",
+      " 의 #y충전 을 가지고 있습니다.",
       " 다음 공격은 #b",
-      " 배의 피해를 줍니다"
+      " 배의 피해를 줍니다."
     ]
   },
   "PolarisUniquePower": {
