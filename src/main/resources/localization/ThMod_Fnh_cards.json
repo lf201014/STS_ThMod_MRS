@@ -287,7 +287,7 @@
   },
   "6A": {
     "NAME": "6A",
-    "DESCRIPTION": "Deal !D! damage. Gain Block equal to the damage dealt.",
+    "DESCRIPTION": "Deal !D! damage. Gain Block equal to the unblocked damage dealt.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "CircumpolarStar": {
@@ -297,7 +297,7 @@
   },
   "RefractionSpark": {
     "NAME": "Refraction Spark",
-    "DESCRIPTION": "Deal !D! damage. Increase the damage of ALL Spark cards in your hand by the damage dealt. NL Amplify  [B]  : Deal !B! damage instead.",
+    "DESCRIPTION": "Deal !D! damage. Increase the damage of ALL Spark cards in your hand by the unblocked damage dealt. NL Amplify  [B]  : Deal !B! damage instead.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MagicChant": {

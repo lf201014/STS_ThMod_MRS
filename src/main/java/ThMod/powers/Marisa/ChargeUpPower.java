@@ -24,10 +24,10 @@ public class ChargeUpPower
   public static final String NAME = powerStrings.NAME;
   public static final String[] DESCRIPTIONS =
       powerStrings.DESCRIPTIONS;
+  private static final int ACT_STACK = 8;
+  private static final int IMPR_STACK = 6;
   private int cnt;
   private int stc;
-  private int ACT_STACK = 8;
-  private int IMPR_STACK = 6;
 
   public ChargeUpPower(AbstractCreature owner, int amount) {
     this.name = NAME;

@@ -56,12 +56,10 @@ public class StarlightTyphoon extends AmplifiedAttack {
     */
     counter = ThMod.typhoonCounter;
 
-    if (counter > 0) {
-      this.ampNumber = this.magicNumber * counter;
-      this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
-      initializeDescription();
-      super.applyPowers();
-    }
+    this.ampNumber = this.magicNumber * counter;
+    this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+    initializeDescription();
+    super.applyPowers();
   }
 
   public void onMoveToDiscard() {

@@ -51,13 +51,14 @@ public class MeteoricShowerAction extends AbstractGameAction {
       AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
       AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();
       if (cnt > 0) {
-        for (int i = 0; i < cnt; i++) {
-          AbstractDungeon.actionManager.addToBottom(
-              new DamageRandomEnemyAction(
-                  new DamageInfo(p, dmg, DamageType.NORMAL),
-                  AttackEffect.FIRE)
-          );
-        }
+        AbstractDungeon.actionManager.addToTop(
+            new UnstableBombAction(
+                AbstractDungeon.getMonsters().getRandomMonster(true),
+                dmg,
+                dmg,
+                cnt
+            )
+        );
       }
     }
     tickDuration();
