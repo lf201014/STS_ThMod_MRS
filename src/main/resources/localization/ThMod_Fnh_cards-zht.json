@@ -9,15 +9,15 @@
   },
   "AsteroidBelt": {
     "NAME": "小行星帶",
-    "DESCRIPTION": "獲得 !B! 格擋 。 NL 增幅 [B] :在下回合獲得 !B! 點 格擋"
+    "DESCRIPTION": "獲得 !B! 格擋 。 NL 增幅 [E] :在下回合獲得 !B! 點 格擋"
   },
   "BigCrunch": {
     "NAME": "大坍縮",
-    "DESCRIPTION": "消耗 抽牌堆和棄牌堆中各一半的牌，每 消耗 !M! 張牌，抽 1 張牌並獲得 [B] 。 NL 消耗"
+    "DESCRIPTION": "消耗 抽牌堆和棄牌堆中各一半的牌，每 消耗 !M! 張牌，抽 1 張牌並獲得 [E] 。 NL 消耗"
   },
   "BlazingStar": {
     "NAME": "彗星",
-    "DESCRIPTION": "造成 !B! 點傷害，手牌每有1張 灼傷 ，傷害增加 !M! 點。 NL 增幅 [B] :造成2倍傷害"
+    "DESCRIPTION": "造成 !B! 點傷害，手牌每有1張 灼傷 ，傷害增加 !M! 點。 NL 增幅 [E] :造成2倍傷害"
   },
   "DarkSpark": {
     "NAME": "暗色火花",
@@ -26,7 +26,7 @@
   },
   "DeepEcoloBomb": {
     "NAME": "重生態炸彈",
-    "DESCRIPTION": "對隨機1名敵人造成 !D! 點傷害，使其失去 !M! 點 力量 1回合。 NL 增幅 [B] :再發動一次"
+    "DESCRIPTION": "對隨機1名敵人造成 !D! 點傷害，使其失去 !M! 點 力量 1回合。 NL 增幅 [E] :再發動一次"
   },
   "DoubleSpark": {
     "NAME": "雙重火花",
@@ -35,8 +35,8 @@
   },
   "EarthLightRay": {
     "NAME": "地球光",
-    "DESCRIPTION": "恢復 !M! 點生命。 NL 消耗 。 NL 增幅 [B] :將棄牌堆中的1張隨機牌放入手牌",
-    "UPGRADE_DESCRIPTION": "恢復 !M! 點生命。 NL 消耗 。 NL 增幅 [B]  :將棄牌堆中的1張牌放入手牌"
+    "DESCRIPTION": "恢復 !M! 點生命。 NL 消耗 。 NL 增幅 [E] :將棄牌堆中的1張隨機牌放入手牌",
+    "UPGRADE_DESCRIPTION": "恢復 !M! 點生命。 NL 消耗 。 NL 增幅 [E]  :將棄牌堆中的1張牌放入手牌"
   },
   "EscapeVelocity": {
     "NAME": "第二宇宙速度",
@@ -49,8 +49,8 @@
   },
   "FinalSpark": {
     "NAME": "究極火花",
-    "DESCRIPTION": "本場戰鬥中每打出1張 火花 ，耗能減少1 [B] 。 NL 對所有敵人造成 !D! 點傷害。 NL 打出後重設耗能",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 本場戰鬥中每打出1張 火花 ，耗能減少1 [B] 。 NL 對所有敵人造成 !D! 點傷害。 NL 打出後重設耗能"
+    "DESCRIPTION": "本場戰鬥中每打出1張 火花 ，耗能減少1 [E] 。 NL 對所有敵人造成 !D! 點傷害。 NL 打出後重設耗能",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 本場戰鬥中每打出1張 火花 ，耗能減少1 [E] 。 NL 對所有敵人造成 !D! 點傷害。 NL 打出後重設耗能"
   },
   "GrandCross": {
     "NAME": "大十字",
@@ -76,8 +76,8 @@
   },
   "MasterSpark": {
     "NAME": "極限火花",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 增幅  [B]  :傷害變為 !B! 點",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 增幅  [B]  :傷害增加 9 點"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 增幅  [E]  :傷害變為 !B! 點",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 增幅  [E]  :傷害增加 9 點"
   },
   "MeteoricShower": {
     "NAME": "流星雨",
@@ -102,22 +102,22 @@
   },
   "OortCloud": {
     "NAME": "奧爾特雲",
-    "DESCRIPTION": "獲得 !M! 層多層護甲。 NL 增幅  [B] :獲得額外 !B! 層",
-    "UPGRADE_DESCRIPTION": "獲得 !M! 層 多層護甲。 NL 增幅 [B] :獲得額外3層"
+    "DESCRIPTION": "獲得 !M! 層多層護甲。 NL 增幅  [E] :獲得額外 !B! 層",
+    "UPGRADE_DESCRIPTION": "獲得 !M! 層 多層護甲。 NL 增幅 [E] :獲得額外3層"
   },
   "PolarisUnique": {
     "NAME": "唯一的北極星",
-    "DESCRIPTION": "固有 。 將1張 引導星 洗入抽牌堆。若在你的回合開始時 引導星 在抽牌堆中，獲得 [B]",
-    "UPGRADE_DESCRIPTION": "固有 。 將1張 引導星 洗入抽牌堆。若在你的回合開始時 引導星 在抽牌堆中，獲得 [B]"
+    "DESCRIPTION": "固有 。 將1張 引導星 洗入抽牌堆。若在你的回合開始時 引導星 在抽牌堆中，獲得 [E]",
+    "UPGRADE_DESCRIPTION": "固有 。 將1張 引導星 洗入抽牌堆。若在你的回合開始時 引導星 在抽牌堆中，獲得 [E]"
   },
   "SatelliteIllusion": {
     "NAME": "衛星幻覺",
-    "DESCRIPTION": "在你的回合內，當抽牌堆的牌數增加時，獲得 [B]",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 在你的回合內，當抽牌堆的牌數增加時，獲得 [B]"
+    "DESCRIPTION": "在你的回合內，當抽牌堆的牌數增加時，獲得 [E]",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 在你的回合內，當抽牌堆的牌數增加時，獲得 [E]"
   },
   "ShootTheMoon": {
     "NAME": "射月",
-    "DESCRIPTION": "造成 !D! 點傷害。若目標不是首領，移除其1個增益效果。 NL 增幅 [B] :傷害變為 !B! 點，移除其所有增益效果",
+    "DESCRIPTION": "造成 !D! 點傷害。若目標不是首領，移除其1個增益效果。 NL 增幅 [E] :傷害變為 !B! 點，移除其所有增益效果",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWW"
   },
   "StarDustReverie": {
@@ -127,13 +127,13 @@
   },
   "UltraShortWave": {
     "NAME": "極超短波",
-    "DESCRIPTION": "獲得 !B! [B] 與 !M! 層 蓄力 。使這張牌在本場戰鬥中 [B] 與 蓄力 獲得量+1",
+    "DESCRIPTION": "獲得 !B! [E] 與 !M! 層 蓄力 。使這張牌在本場戰鬥中 [E] 與 蓄力 獲得量+1",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MillisecondPulsars": {
     "NAME": "毫秒脈衝星",
-    "DESCRIPTION": "不需要花費額外 [B] 來發動 增幅",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 不需要花費額外 [B] 來發動 增幅"
+    "DESCRIPTION": "不需要花費額外 [E] 來發動 增幅",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 不需要花費額外 [E] 來發動 增幅"
   },
   "Spark": {
     "NAME": "火花",
@@ -158,12 +158,12 @@
   "ChargingUp": {
     "NAME": "魔炮準備",
     "DESCRIPTION": "獲得 !M! 層 蓄力 。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "獲得 !M! 層 蓄力 。 NL 增幅 [B] :獲得額外3層"
+    "UPGRADE_DESCRIPTION": "獲得 !M! 層 蓄力 。 NL 增幅 [E] :獲得額外3層"
   },
   "LuminesStrike": {
     "NAME": "聲光衝擊",
-    "DESCRIPTION": "造成 !D! 點傷害 (手牌數之2倍)。 NL 增幅 [B] :傷害變為 !B! 點(現時能量之4倍)",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害 (手牌數之3倍)。 NL 增幅 [B] :傷害變為 !B! 點(現時能量之5倍)"
+    "DESCRIPTION": "造成 !D! 點傷害 (手牌數之2倍)。 NL 增幅 [E] :傷害變為 !B! 點(現時能量之4倍)",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害 (手牌數之3倍)。 NL 增幅 [E] :傷害變為 !B! 點(現時能量之5倍)"
   },
   "OpenUniverse": {
     "NAME": "開放宇宙",
@@ -182,8 +182,8 @@
   },
   "MaximisePower": {
     "NAME": "火力全開！",
-    "DESCRIPTION": "將 蓄力 層數變成 [B] 。增加1張 力竭 到手牌。本回合內的攻擊傷害翻倍。NL 消耗",
-    "UPGRADE_DESCRIPTION": "將 蓄力 層數變成 [B] 。本回合內的攻擊傷害翻倍"
+    "DESCRIPTION": "將 蓄力 層數變成 [E] 。增加1張 力竭 到手牌。本回合內的攻擊傷害翻倍。NL 消耗",
+    "UPGRADE_DESCRIPTION": "將 蓄力 層數變成 [E] 。本回合內的攻擊傷害翻倍"
   },
   "StarlightTyphoon": {
     "NAME": "星光颱風",
@@ -201,7 +201,7 @@
   },
   "SuperPerseids": {
     "NAME": "超級英仙座",
-    "DESCRIPTION": "無法打出 。抽到這張牌時，獲得 [B] 。 NL 這張牌被 消耗 時，對隨機1名敵人造成 !D! 點傷害",
+    "DESCRIPTION": "無法打出 。抽到這張牌時，獲得 [E] 。 NL 這張牌被 消耗 時，對隨機1名敵人造成 !D! 點傷害",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MysteriousBeam": {
@@ -246,8 +246,8 @@
   },
   "PulseMagic": {
     "NAME": "脈衝魔術",
-    "DESCRIPTION": "下回合獲得 [B] 。 NL 增幅 [B] :本回合內不需要花費額外 [B] 來發動 增幅",
-    "UPGRADE_DESCRIPTION": "下回合獲得 [B] [B] 。 NL 增幅 [B] :本回合內不需要花費額外 [B] 來發動 增幅"
+    "DESCRIPTION": "下回合獲得 [E] 。 NL 增幅 [E] :本回合內不需要花費額外 [E] 來發動 增幅",
+    "UPGRADE_DESCRIPTION": "下回合獲得 [E] [E] 。 NL 增幅 [E] :本回合內不需要花費額外 [E] 來發動 增幅"
   },
   "D6C": {
     "NAME": "迎頭痛擊",
@@ -261,17 +261,17 @@
   },
   "SporeBomb": {
     "NAME": "孢子炸彈",
-    "DESCRIPTION": "給予 !M! 層 易傷 。 NL 增幅 [B] :改為給予所有敵人 易傷 ",
-    "UPGRADE_DESCRIPTION": "給予所有敵人 !M! 層 易傷 。 NL 增幅 [B] :再加1層"
+    "DESCRIPTION": "給予 !M! 層 易傷 。 NL 增幅 [E] :改為給予所有敵人 易傷 ",
+    "UPGRADE_DESCRIPTION": "給予所有敵人 !M! 層 易傷 。 NL 增幅 [E] :再加1層"
   },
   "FluorensentBeam": {
     "NAME": "螢光射線",
-    "DESCRIPTION": "所有敵人失去 !D! 點生命。 NL 增幅 [B] [B] :改為失去 !B! 點",
+    "DESCRIPTION": "所有敵人失去 !D! 點生命。 NL 增幅 [E] [E] :改為失去 !B! 點",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WitchOfGreed": {
     "NAME": "強欲魔女",
-    "DESCRIPTION": "戰鬥結束時，額外獲得 !M! 金幣 。 NL 增幅 [B] :額外獲得1瓶隨機藥劑",
+    "DESCRIPTION": "戰鬥結束時，額外獲得 !M! 金幣 。 NL 增幅 [E] :額外獲得1瓶隨機藥劑",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "TreasureHunter": {
@@ -281,7 +281,7 @@
   },
   "Robbery": {
     "NAME": "強取豪奪",
-    "DESCRIPTION": "造成 !D! 點傷害。獲得造成傷害數量的金幣。 NL 消耗 。 NL 增幅 [B] :獲得雙倍的金幣",
+    "DESCRIPTION": "造成 !D! 點傷害。獲得造成傷害數量的金幣。 NL 消耗 。 NL 增幅 [E] :獲得雙倍的金幣",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "6A": {
@@ -296,7 +296,7 @@
   },
   "RefractionSpark": {
     "NAME": "折射火花",
-    "DESCRIPTION": "造成 !D! 點傷害，手牌中所有名字中有 火花 的牌傷害增加造成傷害的數值。 NL 增幅 [B] :傷害變為 !B! 點",
+    "DESCRIPTION": "造成 !D! 點傷害，手牌中所有名字中有 火花 的牌傷害增加造成傷害的數值。 NL 增幅 [E] :傷害變為 !B! 點",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MagicChant": {
@@ -339,7 +339,7 @@
   },
   "ChargeUpSpray": {
     "NAME": "蓄力噴射",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 若這張牌受到 蓄力 影響，獲得 [B] 並抽 !M! 張牌",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 若這張牌受到 蓄力 影響，獲得 [E] 並抽 !M! 張牌",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "EnergyRecoil": {
@@ -358,7 +358,7 @@
   },
   "ManaConvection": {
     "NAME": "魔力對流",
-    "DESCRIPTION": "抽 !M! 張牌並 消耗 2張手牌。 NL 若 蓄力 層數大於或等於8層，則減少8層 蓄力 並獲得 [B] [B] ",
+    "DESCRIPTION": "抽 !M! 張牌並 消耗 2張手牌。 NL 若 蓄力 層數大於或等於8層，則減少8層 蓄力 並獲得 [E] [E] ",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ManaRampage": {
@@ -378,8 +378,8 @@
   },
   "BinaryStars": {
     "NAME": "雙星",
-    "DESCRIPTION": "從 黑耀星 和 白矮星 中選擇其中1張牌加入手牌。 消耗 。 NL 增幅 [B] :將2張都加入手牌",
-    "UPGRADE_DESCRIPTION": "從 已升級 的 黑耀星 和 白矮星 中選擇其中1張牌加入手牌。 消耗 。 NL 增幅 [B] :將2張都加入手牌"
+    "DESCRIPTION": "從 黑耀星 和 白矮星 中選擇其中1張牌加入手牌。 消耗 。 NL 增幅 [E] :將2張都加入手牌",
+    "UPGRADE_DESCRIPTION": "從 已升級 的 黑耀星 和 白矮星 中選擇其中1張牌加入手牌。 消耗 。 NL 增幅 [E] :將2張都加入手牌"
   },
   "CollectingQuirk": {
     "NAME": "收集癖",
@@ -420,7 +420,7 @@
   },
   "FairyDestructionRay": {
     "NAME": "妖精盡滅光",
-    "DESCRIPTION": "對所有敵人造成 !D! 傷害。 NL 增幅 [B] [B] :立即消滅生命值低於 !M! 的敵人",
+    "DESCRIPTION": "對所有敵人造成 !D! 傷害。 NL 增幅 [E] [E] :立即消滅生命值低於 !M! 的敵人",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Orbital": {
@@ -435,12 +435,12 @@
   },
   "ExplosiveMarionette": {
     "NAME": "人偶炸彈",
-    "DESCRIPTION": "保留 。造成 !D! 傷害。 NL 增幅 [B] : 造成2倍傷害。 消耗",
+    "DESCRIPTION": "保留 。造成 !D! 傷害。 NL 增幅 [E] : 造成2倍傷害。 消耗",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "OpticalCamouflage": {
     "NAME": "光學迷彩",
-    "DESCRIPTION": "保留 。獲得 !B! 格擋 。 NL 增幅 [B] : 獲得2倍格擋。 消耗",
+    "DESCRIPTION": "保留 。獲得 !B! 格擋 。 NL 增幅 [E] : 獲得2倍格擋。 消耗",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "FiveColoredTalisman": {
@@ -450,7 +450,7 @@
   },
   "AlicesGift": {
     "NAME": "友人之贈",
-    "DESCRIPTION": "保留 。造成 !D! 傷害。 消耗 。 NL 增幅 [B] [B] : 造成3倍傷害",
+    "DESCRIPTION": "保留 。造成 !D! 傷害。 消耗 。 NL 增幅 [E] [E] : 造成3倍傷害",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Exhaustion_MRS": {
@@ -460,7 +460,7 @@
   },
   "UltimateShortwave": {
     "NAME": "極超短波",
-    "DESCRIPTION": "獲得 !B! [B] 與 !M! 層 蓄力 。使這張牌在這場戰鬥中 蓄力 獲得量增加 !D! ，能量獲得量增加1",
+    "DESCRIPTION": "獲得 !B! [E] 與 !M! 層 蓄力 。使這張牌在這場戰鬥中 蓄力 獲得量增加 !D! ，能量獲得量增加1",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "NebulaRing": {

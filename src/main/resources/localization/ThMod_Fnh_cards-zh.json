@@ -127,7 +127,7 @@
   },
   "UltraShortWave": {
     "NAME": "极超短波",
-    "DESCRIPTION": "获得 !B! 能量与 !M! 层 蓄力 。使这张卡在这场战斗中 能量与 蓄力 获得量+1。",
+    "DESCRIPTION": "获得 !B! 能量与 !M! 层 蓄力 。使这张卡在这场战斗中  [E]  与 蓄力 获得量+1。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MillisecondPulsars": {

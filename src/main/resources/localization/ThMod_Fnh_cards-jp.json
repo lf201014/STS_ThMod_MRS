@@ -9,15 +9,15 @@
   },
   "AsteroidBelt": {
     "NAME": "アステロイドベルト",
-    "DESCRIPTION": "!B! ブロック を得る。 NL 増幅  [B]  : 次のターン !B! ブロック を得る。"
+    "DESCRIPTION": "!B! ブロック を得る。 NL 増幅  [E]  : 次のターン !B! ブロック を得る。"
   },
   "BigCrunch": {
     "NAME": "ビッグクランチ",
-    "DESCRIPTION": "山札と捨て札の半分を廃棄する。廃棄したカード !M! 枚につき  [B]  を得て 1 枚カードを引く。 NL 廃棄 。"
+    "DESCRIPTION": "山札と捨て札の半分を廃棄する。廃棄したカード !M! 枚につき  [E]  を得て 1 枚カードを引く。 NL 廃棄 。"
   },
   "BlazingStar": {
     "NAME": "ブレイジングスター",
-    "DESCRIPTION": "!D! ダメージを与える。 手札の 火傷 1 枚につき !M! の追加ダメージを与える。 NL 増幅  [B]  : 2 倍のダメージを与える。 "
+    "DESCRIPTION": "!D! ダメージを与える。 手札の 火傷 1 枚につき !M! の追加ダメージを与える。 NL 増幅  [E]  : 2 倍のダメージを与える。 "
   },
   "DarkSpark": {
     "NAME": "ダークスパーク",
@@ -26,7 +26,7 @@
   },
   "DeepEcoloBomb": {
     "NAME": "ディープエコロジカルボム",
-    "DESCRIPTION": "ランダムな敵に !D! ダメージを与える。 このターン、筋力 !M! を失う。 NL 増幅  [B]  : カードの効果を 2 度得る。"
+    "DESCRIPTION": "ランダムな敵に !D! ダメージを与える。 このターン、筋力 !M! を失う。 NL 増幅  [E]  : カードの効果を 2 度得る。"
   },
   "DoubleSpark": {
     "NAME": "ダブルスパーク",
@@ -35,8 +35,8 @@
   },
   "EarthLightRay": {
     "NAME": "アースライトレイ",
-    "DESCRIPTION": "HPを !M! 回復する。 廃棄 。 NL 増幅  [B]  : 捨て札からランダムなカードを手札に加える。",
-    "UPGRADE_DESCRIPTION": "HPを !M! 回復する。 廃棄 。 NL 増幅  [B]  : 捨て札からカードを手札に加える。"
+    "DESCRIPTION": "HPを !M! 回復する。 廃棄 。 NL 増幅  [E]  : 捨て札からランダムなカードを手札に加える。",
+    "UPGRADE_DESCRIPTION": "HPを !M! 回復する。 廃棄 。 NL 増幅  [E]  : 捨て札からカードを手札に加える。"
   },
   "EscapeVelocity": {
     "NAME": "エスケープベロシティ",
@@ -72,8 +72,8 @@
   },
   "MasterSpark": {
     "NAME": "マスタースパーク",
-    "DESCRIPTION": "!D! ダメージを与える。 NL 増幅  [B]  : !B! ダメージを与える。",
-    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 増幅  [B]  : 9 ダメージを与える。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 増幅  [E]  : !B! ダメージを与える。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL 増幅  [E]  : 9 ダメージを与える。"
   },
   "MeteoricShower": {
     "NAME": "メテオニックシャワー",
@@ -98,22 +98,22 @@
   },
   "OortCloud": {
     "NAME": "オールトクラウド",
-    "DESCRIPTION": " プレートアーマー !M! を得る。 NL 増幅  [B]  : 追加で プレートアーマー !B! を得る。",
-    "UPGRADE_DESCRIPTION": " プレートアーマー !M! を得る。 NL 増幅  [B]  : 追加で プレートアーマー !B! を得る。"
+    "DESCRIPTION": " プレートアーマー !M! を得る。 NL 増幅  [E]  : 追加で プレートアーマー !B! を得る。",
+    "UPGRADE_DESCRIPTION": " プレートアーマー !M! を得る。 NL 増幅  [E]  : 追加で プレートアーマー !B! を得る。"
   },
   "PolarisUnique": {
     "NAME": "ポラリスユニーク",
-    "DESCRIPTION": "天賦 。  ガイディングスター  をデッキに加える。 そのカードがデッキにある間、ターン開始時、  [B]  を得る。",
-    "UPGRADE_DESCRIPTION": "天賦 。  ガイディングスター  をデッキに加える。 そのカードがデッキにある間、ターン開始時、  [B]  を得る。"
+    "DESCRIPTION": "天賦 。  ガイディングスター  をデッキに加える。 そのカードがデッキにある間、ターン開始時、  [E]  を得る。",
+    "UPGRADE_DESCRIPTION": "天賦 。  ガイディングスター  をデッキに加える。 そのカードがデッキにある間、ターン開始時、  [E]  を得る。"
   },
   "SatelliteIllusion": {
     "NAME": "サテライトイリュージョン",
-    "DESCRIPTION": "プレイヤーのターン中、山札のカードが増加するたび  [B]  を得る。",
-    "UPGRADE_DESCRIPTION": "天賦 。 プレイヤーのターン中、山札のカードが増加するたび  [B]  を得る。"
+    "DESCRIPTION": "プレイヤーのターン中、山札のカードが増加するたび  [E]  を得る。",
+    "UPGRADE_DESCRIPTION": "天賦 。 プレイヤーのターン中、山札のカードが増加するたび  [E]  を得る。"
   },
   "ShootTheMoon": {
     "NAME": "シュート・ザ・ムーン",
-    "DESCRIPTION": "対象がボスでない場合、対象の バフ を 1 つ取り除く。 !D! ダメージを与える。 NL 増幅  [B]  : 全ての バフ を取り除き、 !B! ダメージを与える",
+    "DESCRIPTION": "対象がボスでない場合、対象の バフ を 1 つ取り除く。 !D! ダメージを与える。 NL 増幅  [E]  : 全ての バフ を取り除き、 !B! ダメージを与える",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWW"
   },
   "StarDustReverie": {
@@ -123,13 +123,13 @@
   },
   "UltraShortWave": {
     "NAME": "アルティメットショートウェーブ",
-    "DESCRIPTION": "!B!  [B]  と !M! チャージ を得る。 このカードの [B] と チャージ の増加量を 1 増加する。",
+    "DESCRIPTION": "!B!  [E]  と !M! チャージ を得る。 このカードの [E] と チャージ の増加量を 1 増加する。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MillisecondPulsars": {
     "NAME": "ミリ秒パルサー",
-    "DESCRIPTION": "増幅 の  [B]  が不要になる。",
-    "UPGRADE_DESCRIPTION": "天賦 。 増幅 の  [B]  が不要になる。"
+    "DESCRIPTION": "増幅 の  [E]  が不要になる。",
+    "UPGRADE_DESCRIPTION": "天賦 。 増幅 の  [E]  が不要になる。"
   },
   "Spark": {
     "NAME": " スパーク ",
@@ -154,12 +154,12 @@
   "ChargingUp": {
     "NAME": "チャージアップ",
     "DESCRIPTION": "チャージ !M! を得る。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "チャージ !M! を得る。 NL 増幅  [B]  : 追加で 3 スタック得る。"
+    "UPGRADE_DESCRIPTION": "チャージ !M! を得る。 NL 増幅  [E]  : 追加で 3 スタック得る。"
   },
   "LuminesStrike": {
     "NAME": "ルミネスストライク",
-    "DESCRIPTION": "手札のカード枚数の 2 倍のダメージを与える。 NL 増幅  [B]  : 現在のエナジーの 4 倍 のダメージを与える。 ",
-    "UPGRADE_DESCRIPTION": "手札のカード枚数の 3 倍のダメージを与える。 NL 増幅  [B]  : 現在のエナジーの 5 倍 のダメージを与える。"
+    "DESCRIPTION": "手札のカード枚数の 2 倍のダメージを与える。 NL 増幅  [E]  : 現在のエナジーの 4 倍 のダメージを与える。 ",
+    "UPGRADE_DESCRIPTION": "手札のカード枚数の 3 倍のダメージを与える。 NL 増幅  [E]  : 現在のエナジーの 5 倍 のダメージを与える。"
   },
   "OpenUniverse": {
     "NAME": "オープンユニバース",
@@ -178,8 +178,8 @@
   },
   "MaximisePower": {
     "NAME": "マックスパワー",
-    "DESCRIPTION": "チャージ スタックを [B] に変換する。 消耗 を 1 枚手札に加える。 このターン与えるダメージが 2 倍になる。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "チャージ スタックを [B] に変換する。 消耗 を 1 枚手札に加える。 このターン与えるダメージが 2 倍になる。"
+    "DESCRIPTION": "チャージ スタックを [E] に変換する。 消耗 を 1 枚手札に加える。 このターン与えるダメージが 2 倍になる。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "チャージ スタックを [E] に変換する。 消耗 を 1 枚手札に加える。 このターン与えるダメージが 2 倍になる。"
   },
   "StarlightTyphoon": {
     "NAME": "スターライトタイフーン",
@@ -197,7 +197,7 @@
   },
   "SuperPerseids": {
     "NAME": "スーパーペルセイド",
-    "DESCRIPTION": "使用不可 。 このカードを引いた時、  [B]  を得る。 NL このカードを廃棄した時、ランダムな敵に !D! ダメージを与える。",
+    "DESCRIPTION": "使用不可 。 このカードを引いた時、  [E]  を得る。 NL このカードを廃棄した時、ランダムな敵に !D! ダメージを与える。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MysteriousBeam": {
@@ -247,8 +247,8 @@
   },
   "PulseMagic": {
     "NAME": "パルスマジック",
-    "DESCRIPTION": "次のターン、  [B]  を得る。 増幅  [B]  : このターン増幅の [B] が不要",
-    "UPGRADE_DESCRIPTION": "次のターン、  [B]  [B]  を得る。 増幅  [B]  : このターン増幅の [B] が不要"
+    "DESCRIPTION": "次のターン、  [E]  を得る。 増幅  [E]  : このターン増幅の [E] が不要",
+    "UPGRADE_DESCRIPTION": "次のターン、  [E]  [E]  を得る。 増幅  [E]  : このターン増幅の [E] が不要"
   },
   "D6C": {
     "NAME": "66C",
@@ -262,17 +262,17 @@
   },
   "SporeBomb": {
     "NAME": "胞子爆弾",
-    "DESCRIPTION": "弱体 !M! を与える。 NL 増幅  [B]  : 敵全体に 弱体 !M! を与える。",
-    "UPGRADE_DESCRIPTION": "敵全体に 弱体 !M! を与える。 NL 増幅  [B]  : 追加で 1 スタック与える。"
+    "DESCRIPTION": "弱体 !M! を与える。 NL 増幅  [E]  : 敵全体に 弱体 !M! を与える。",
+    "UPGRADE_DESCRIPTION": "敵全体に 弱体 !M! を与える。 NL 増幅  [E]  : 追加で 1 スタック与える。"
   },
   "FluorensentBeam": {
     "NAME": "フローレンストビーム",
-    "DESCRIPTION": "敵全体はHPを !D! 失う。 NL 増幅  [B]  [B]  : 失うHPを !B! に",
+    "DESCRIPTION": "敵全体はHPを !D! 失う。 NL 増幅  [E]  [E]  : 失うHPを !B! に",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WitchOfGreed": {
     "NAME": "魔女の強欲",
-    "DESCRIPTION": "戦闘終了時、 !M!ゴールドを得る。  NL  増幅  [B] : また、ランダムなポーションを入手する。",
+    "DESCRIPTION": "戦闘終了時、 !M!ゴールドを得る。  NL  増幅  [E] : また、ランダムなポーションを入手する。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "TreasureHunter": {
@@ -282,7 +282,7 @@
   },
   "Robbery": {
     "NAME": "強盗",
-    "DESCRIPTION": "!D! ダメージを与える。 ブロックされなかったダメージに等しいゴールドを得る。 NL 廃棄 。 NL 増幅  [B] : ゴールドを2倍得る。",
+    "DESCRIPTION": "!D! ダメージを与える。 ブロックされなかったダメージに等しいゴールドを得る。 NL 廃棄 。 NL 増幅  [E] : ゴールドを2倍得る。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "6A": {
@@ -297,7 +297,7 @@
   },
   "RefractionSpark": {
     "NAME": "リフレクションスパーク",
-    "DESCRIPTION": "!D! ダメージを与える。 手札の全ての、名前に「スパーク」の入ったカードのダメージを与えたダメージ分増加する。 NL 増幅  [B]  : 与えるダメージを !D! に増加",
+    "DESCRIPTION": "!D! ダメージを与える。 手札の全ての、名前に「スパーク」の入ったカードのダメージを与えたダメージ分増加する。 NL 増幅  [E]  : 与えるダメージを !D! に増加",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MagicChant": {
@@ -341,7 +341,7 @@
   },
   "ChargeUpSpray": {
     "NAME": "チャージ発射",
-    "DESCRIPTION": "!D! ダメージを与える。 NL このカードが チャージ を使用した場合,  [B]  を得て、カードを !M! 枚引く。",
+    "DESCRIPTION": "!D! ダメージを与える。 NL このカードが チャージ を使用した場合,  [E]  を得て、カードを !M! 枚引く。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "EnergyRecoil": {
@@ -360,7 +360,7 @@
   },
   "ManaConvection": {
     "NAME": "魔力対流",
-    "DESCRIPTION": "カードを !M! 枚引く。 カードを 2 枚 廃棄 する。 NL チャージが 8 以上の場合、チャージを 8 失い、  [B]  [B]  を得る。",
+    "DESCRIPTION": "カードを !M! 枚引く。 カードを 2 枚 廃棄 する。 NL チャージが 8 以上の場合、チャージを 8 失い、  [E]  [E]  を得る。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ManaRampage": {
@@ -376,12 +376,12 @@
   "AFriendsGift": {
     "NAME": "友達の贈り物",
     "DESCRIPTION": "使用不可 。 特定の 3 枚のカードに 変化 する。",
-    "UPGRADE_DESCRIPTION": "保留 。 !D! ダメージを与える。 ターン開始時、ダメージを 2 増加する。 廃棄 。 NL 増幅  [B]  : !D! ダメージを与え、 廃棄 されない。"
+    "UPGRADE_DESCRIPTION": "保留 。 !D! ダメージを与える。 ターン開始時、ダメージを 2 増加する。 廃棄 。 NL 増幅  [E]  : !D! ダメージを与え、 廃棄 されない。"
   },
   "BinaryStars": {
     "NAME": "バイナリスター",
-    "DESCRIPTION": "手札に ブラックフレアスター か ホワイトドワーフ のどちらかを加える。 廃棄 。 NL 増幅  [B]  : 両方を加える。",
-    "UPGRADE_DESCRIPTION": "手札に ブラックフレアスター + か ホワイトドワーフ + のどちらかを加える。 廃棄 。 NL 増幅  [B]  : 両方を加える。"
+    "DESCRIPTION": "手札に ブラックフレアスター か ホワイトドワーフ のどちらかを加える。 廃棄 。 NL 増幅  [E]  : 両方を加える。",
+    "UPGRADE_DESCRIPTION": "手札に ブラックフレアスター + か ホワイトドワーフ + のどちらかを加える。 廃棄 。 NL 増幅  [E]  : 両方を加える。"
   },
   "CollectingQuirk": {
     "NAME": "收集癖",
@@ -422,7 +422,7 @@
   },
   "FairyDestructionRay": {
     "NAME": "妖精尽滅光",
-    "DESCRIPTION": "敵全体に !D! ダメージを与える。 増幅  [B]  [B] : !M! 以下のHPの敵を即死させる。",
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 増幅  [E]  [E] : !M! 以下のHPの敵を即死させる。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Orbital": {
@@ -437,12 +437,12 @@
   },
   "ExplosiveMarionette": {
     "NAME": "アーティフルサクリファイス",
-    "DESCRIPTION": " 保留 。 !D! ダメージを与える。 NL 増幅  [B] : 2 倍のダメージを与える。 廃棄 。",
+    "DESCRIPTION": " 保留 。 !D! ダメージを与える。 NL 増幅  [E] : 2 倍のダメージを与える。 廃棄 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "OpticalCamouflage": {
     "NAME": "オプティカルカモフラージュ",
-    "DESCRIPTION": " 保留 。 !B! ブロック を得る。 NL 増幅  [B] : 2倍のブロックを得る。 廃棄 。",
+    "DESCRIPTION": " 保留 。 !B! ブロック を得る。 NL 増幅  [E] : 2倍のブロックを得る。 廃棄 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "FiveColoredTalisman": {
@@ -452,7 +452,7 @@
   },
   "AlicesGift": {
     "NAME": "アリスの贈り物",
-    "DESCRIPTION": " 保留 。 !D! ダメージを与える。 廃棄 。 NL 増幅  [B]  [B] : 3 倍のダメージを与える。",
+    "DESCRIPTION": " 保留 。 !D! ダメージを与える。 廃棄 。 NL 増幅  [E]  [E] : 3 倍のダメージを与える。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Exhaustion_MRS": {
@@ -462,7 +462,7 @@
   },
   "UltimateShortwave": {
     "NAME": "アルティメットショートウェーブ",
-    "DESCRIPTION": "!B! [B] と !M! チャージ を得る。 戦闘中、このカードの チャージ 増加量を !D! 増加し、 エナジー増加量を 1 増やす。",
+    "DESCRIPTION": "!B! [E] と !M! チャージ を得る。 戦闘中、このカードの チャージ 増加量を !D! 増加し、 エナジー増加量を 1 増やす。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "NebulaRing": {

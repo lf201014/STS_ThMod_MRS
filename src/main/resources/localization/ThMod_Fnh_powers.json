@@ -33,7 +33,7 @@
   "MilliPulsaPower": {
     "NAME": "Millisecond Pulsars",
     "DESCRIPTIONS": [
-      " #yAmplify effects no longer need extra  [B]  to activate.",
+      " #yAmplify effects no longer need extra  [E]  to activate.",
       ""
     ]
   },
@@ -77,7 +77,7 @@
   "PolarisUniquePower": {
     "NAME": "Guiding Star",
     "DESCRIPTIONS": [
-      "If #yGuidingStar is in your draw pile, gain extra [B] at the start of each turn,."
+      "If #yGuidingStar is in your draw pile, gain extra [E] at the start of each turn,."
     ]
   },
   "OrrerysSunPower": {
@@ -118,7 +118,7 @@
   "PulseMagicPower": {
     "NAME": "Pulse Magic",
     "DESCRIPTIONS": [
-      "You don't need to pay  [B]  to activate #yAmplify effects this turn.",
+      "You don't need to pay  [E]  to activate #yAmplify effects this turn.",
       "WWWWWWWWWWW"
     ]
   },
@@ -225,7 +225,7 @@
     "NAME": "Satellite Illusion",
     "DESCRIPTIONS": [
       "During your turn,when the number of cards in your draw pile increases, gain  #b",
-      " [B] ."
+      " [E] ."
     ]
   },
   "GrandCrossPower": {
