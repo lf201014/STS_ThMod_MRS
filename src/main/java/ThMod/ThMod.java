@@ -189,7 +189,7 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String POTION_STRING_ZHT = "localization/ThMod_MRS_potions-zht.json";
   private static final String POTION_STRING_KR = "localization/ThMod_MRS_potions-kr.json";
   private static final String KEYWORD_STRING = "localization/ThMod_MRS_keywords.json";
-  private static final String KEYWORD_STRING_JP = "localization/ThMod_MRS_keywords-zh.json";
+  private static final String KEYWORD_STRING_JP = "localization/ThMod_MRS_keywords-jp.json";
   private static final String KEYWORD_STRING_KR = "localization/ThMod_MRS_keywords-kr.json";
   private static final String KEYWORD_STRING_ZHS = "localization/ThMod_MRS_keywords-zh.json";
   private static final String KEYWORD_STRING_ZHT = "localization/ThMod_MRS_keywords-zht.json";

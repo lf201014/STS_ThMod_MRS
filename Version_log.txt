@@ -211,3 +211,11 @@ v0.14.9 1/8/2019
 *Fix the bug that the counter of Starlight Typhoon does not reset when S&L
 *Add Korean Language Support(Thanks to GitHub user : Katinor)
 *Improved Traditional Chinese Language localizations(GitHub user : rainfoxest)
+
+v0.14.10 1/9/2019
+*Improve some decriptions of cards
+*Rewrite the method of loading keywords(now they are put into json files by language)
+*Fix the issue that when in Korean language,using Event Horizon causes game crush
+*Update Japanese language texts(Github user : sisizanohito)
+*Update Korean language texts(Github user : Katinor)
+*Update Traditional Chinese language texts(GitHub user : rainfoxest))
