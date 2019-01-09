@@ -1,0 +1,483 @@
+{
+  "Strike_MRS": {
+    "NAME": "Petite étincelle",
+    "DESCRIPTION": "Infligez !D! dégat(s)."
+  },
+  "Defend_MRS": {
+    "NAME": "Défense",
+    "DESCRIPTION": "Gagnez !B! d'Armure."
+  },
+  "AsteroidBelt": {
+    "NAME": "Ceinture d'astéroïdes",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Amplifier  [E]  : Au Prochain tour, Gagnez !B! d'Armure."
+  },
+  "BigCrunch": {
+    "NAME": "Cassure",
+    "DESCRIPTION": "Épuisez la moitié des cartes dans votre défausse et votre pioche. Gagnez  [E] et piochez 1 carte pour chaques !M! cartes épuisez. NL Épuisement."
+  },
+  "BlazingStar": {
+    "NAME": "Étoile flamboyante",
+    "DESCRIPTION": "Infligez !B! dégats. Infligez !M! dégats additionnels pour chaque brûlure dans votre main. NL Amplifier  [E]  : Infligez double dégats. "
+  },
+  "DarkSpark": {
+    "NAME": "Étincelle sombre",
+    "DESCRIPTION": "Épuisez toutes les cartes en main sauf attaques. NL Infligez !D! dégats à TOUS les ennemis.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
+  },
+  "DeepEcoloBomb": {
+    "NAME": "Bombe écologique",
+    "DESCRIPTION": "Infligez !D! dégats à un ennemi aléatoire, réduisez sa force de !M! se tour. NL Amplifier  [E]  : Appliquer à nouveau cet effet."
+  },
+  "DoubleSpark": {
+    "NAME": "Double éclair",
+    "DESCRIPTION": "Infligez !D! dégats. Ajoutez 1 étincelle à votre main.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégats. Ajoutez 1 étincelle améliorée à votre main."
+  },
+  "EarthLightRay": {
+    "NAME": "Rayon de lumière",
+    "DESCRIPTION": "Soignez !M! PV. Épuisement. NL Amplifier  [E]  : Ajoutez une carte aléatoire de votre défausse à votre main.",
+    "UPGRADE_DESCRIPTION": "Soignez !M! PV. Épuisement. NL Amplifier  [E]  : Ajoutez une carte de votre défausse à votre main."
+  },
+  "EscapeVelocity": {
+    "NAME": "Vitesse de fuite",
+    "DESCRIPTION": "Au début de chaque tour, piochez 2 cartes supplémentaires et ajouter une brûlure à votre main.",
+    "UPGRADE_DESCRIPTION": "Inné. Au début de chaque tour, piochez 2 cartes supplémentaires et ajouter une brûlure à votre main."
+  },
+  "FinalSpark": {
+    "NAME": "Super étincelle",
+    "DESCRIPTION": "Coûte 1 [E] de moins pour chaque étincelle jouer ce combat. NL Infligez !D! dégats à TOUS les ennemis. NL Réinitialisez le coût de cette carte.",
+    "UPGRADE_DESCRIPTION": "NL Conservez.  Coûte 1 [E] de moins pour chaque étincelle jouer ce combat. NL Infligez !D! dégats à TOUS les ennemis. NL Réinitialisez le coût de cette carte."
+  },
+  "GrandCross": {
+    "NAME": "Grande croix",
+    "DESCRIPTION": "Infligez !D! dégats. NL Coûte 0 si vous avez activer un effet amplifier se tour."
+  },
+  "GravityBeat": {
+    "NAME": "Battement de gravité",
+    "DESCRIPTION": "Infligez !D! dégats et appliques !M! faiblesse à TOUS les ennemis."
+  },
+  "IllusionStar": {
+    "NAME": "Étoile illusoire",
+    "DESCRIPTION": "Ajoutez !M! cartes aléatoire à votre main. Ajoutez une carte de votre main sur la haut de votre pioche. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Ajoutez !M! cartes aléatoire à votre main. Ajoutez une carte de votre main sur la haut de votre pioche."
+  },
+  "MachineGunSpark": {
+    "NAME": "Mitraille d'étincelles",
+    "DESCRIPTION": "Infligez !D! dégats !M! fois. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégats 8 fois. NL Épuisement."
+  },
+  "MagicAbsorber": {
+    "NAME": "Absorbeur de magie",
+    "DESCRIPTION": "Gagnez !B! d'Armure. Retirez aléatoirement un de vos malus. NL Épuisement."
+  },
+  "MasterSpark": {
+    "NAME": "Étincelle de maître",
+    "DESCRIPTION": "Infligez !D! dégats. NL Amplifier  [E]  : Infligez !B! à la place.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégats. NL Amplifier  [E]  : Infligez 9 dégats en plus."
+  },
+  "MeteoricShower": {
+    "NAME": "Douche métonique",
+    "DESCRIPTION": "Épuisez jusqu'à X + 1 cartes. NL Infligez !D! dégats 2 fois pour chaques cartes Épuisées , ou 3 fois pour chaques brûlures Épuisées."
+  },
+  "MilkyWay": {
+    "NAME": "Voie lactée",
+    "DESCRIPTION": "Gagnez !B! d'Armure. Piochez 1 carte . NL TOUTES les attaques dans votre main inflige !M! dégats supplémentaires ce combat."
+  },
+  "NonDirectionalLaser": {
+    "NAME": "Laser incontrôlable",
+    "DESCRIPTION": "Infligez !D! dégats à TOUS les ennemis, puis Infligez !D! dégats à un ennemis aléatoire."
+  },
+  "Occultation": {
+    "NAME": "Occultation",
+    "DESCRIPTION": "Défaussez votre pioche. Gagnez 1 d'Armure pour chaque carte défaussée.",
+    "UPGRADE_DESCRIPTION": "Défaussez votre pioche. Gagnez 1 d'Armure pour chaque carte défaussée +3.",
+    "EXTENDED_DESCRIPTION": [
+      "(Gagnez !B! au total.)",
+      ""
+      ]
+  },
+  "OortCloud": {
+    "NAME": "Nuage d'Oort",
+    "DESCRIPTION": "Gagnez !M! d'Armure plaquée. NL Amplifier  [E]  : Gagnez !B! d'Armure plaquée en plus.",
+    "UPGRADE_DESCRIPTION": "Gagnez !M! d'Armure plaquée. NL Amplifier  [E]  : Gagnez 3 d'Armure plaquée en plus."
+  },
+  "PolarisUnique": {
+    "NAME": "Polaris Unique",
+    "DESCRIPTION": "Inné. Ajoutez une étoile guidante à votre pioche. Gagnez  [E] au début de votre tour lorsque tant qu'elle est dans votre pioche.",
+    "UPGRADE_DESCRIPTION": "Inné. Ajoutez une étoile guidante à votre pioche. Gagnez  [E] au début de votre tour lorsque tant qu'elle est dans votre pioche."
+  },
+  "SatelliteIllusion": {
+    "NAME": "Illusion Satellite",
+    "DESCRIPTION": "Gagnez  [E]  lorsque le nombre de carte de votre pioche augmente lors de votre tour.",
+    "UPGRADE_DESCRIPTION": "Inné. Gagnez  [E]  lorsque le nombre de carte de votre pioche augmente lors de votre tour."
+  },
+  "ShootTheMoon": {
+    "NAME": "Visez la lune",
+    "DESCRIPTION": "Retirez un buff aléatoirement si votre ennemi n'est pas un boss. Infligez !D! dégats. NL Amplifier  [E]  : Retirez TOUS les buffs et infligez !B! dégats.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWW"
+  },
+  "StarDustReverie": {
+    "NAME": "Rêverie d'étoiles",
+    "DESCRIPTION": " Mélangez votre main à votre pioche, puis ajoutez autant de carte aléatoirement à votre main. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Mélangez votre main à votre pioche, puis ajoutez autant de carte améliorée aléatoirement à votre main. NL Épuisement."
+  },
+  "UltraShortWave": {
+    "NAME": "Onde courte ultime",
+    "DESCRIPTION": "Gagnez !B!  [E]  et !M! Charges. Augment l'énergie et la charge gagnée de cette carte de 1 pour ce combat.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "MillisecondPulsars": {
+    "NAME": "Pulsar",
+    "DESCRIPTION": "L'effet Amplifier ne coûte pas de [E] ce combat.",
+    "UPGRADE_DESCRIPTION": "Inné. L'effet NL Amplifier ne coûte pas de [E] ce combat."
+  },
+  "Spark": {
+    "NAME": "Étincelle",
+    "DESCRIPTION": "Infligez !D! dégats. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "UpSweep": {
+    "NAME": "Balayage ascendant",
+    "DESCRIPTION": "Infligez !D! dégats. Gagnez !M! Charge.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "GuidingStar": {
+    "NAME": "Étoile guidante",
+    "DESCRIPTION": "Ajoutez une copie de cette carte à votre pioche. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "OrrerysSun": {
+    "NAME": "Soleil planétaire",
+    "DESCRIPTION": "Quand une charge est consumée, Infligez !M! dégats à TOUS les ennemis.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "ChargingUp": {
+    "NAME": "Charge",
+    "DESCRIPTION": "Gagnez !M! Charge. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Gagnez !M! Charge. NL Amplifier  [E]  : Gagnez 3 charge additionnels."
+  },
+  "LuminesStrike": {
+    "NAME": "Coup lumineux",
+    "DESCRIPTION": " Inflige des dégats égaux à 2 fois le nombre de carte dans votre main. NL Amplifier [E]  : Inflige des dégats égaux à 4 fois votre énergie à la place.",
+    "UPGRADE_DESCRIPTION": "Inflige des dégats égaux à 3 fois le nombre de carte dans votre main. NL Amplifier [E]  : Inflige des dégats égaux à 5 fois votre énergie à la place."
+  },
+  "OpenUniverse": {
+    "NAME": "Univers ouvert",
+    "DESCRIPTION": "Ajoutez 5 cartes aléatoires dans votre pioche. Piochez !M! cartes. Chaque carte à  !D! % de chance d'être améliorée.",
+    "UPGRADE_DESCRIPTION": "Shuffle 5 random cards into your draw pile. Draw !M! cards."
+  },
+  "BlazeAway": {
+    "NAME": "Flambée",
+    "DESCRIPTION": "Ajouter une copie de la dernière attaque jouée ce tour dans votre main. NL Elle coûte 0 ce tour ci. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Ajouter 2 copies de la dernière attaque jouée ce tour dans votre main. NL Elle coûte 0 ce tour ci. NL Épuisement.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Dernière attaque : ",
+      " ).",
+      " NL (Vous n'avez pas jouer d'attaque ce tour ci.)"
+    ]
+  },
+  "MaximisePower": {
+    "NAME": "Puissance maximale",
+    "DESCRIPTION": "Convertissez vos charges en énergie.Ajouter 1 Épuisement à votre main. Vos dégats d'attaques sont doublés ce tour ci. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Convertissez vos charges en énergie.Ajouter 1 Épuisement à votre main. Vos dégats d'attaques sont doublés ce tour ci."
+  },
+  "StarlightTyphoon": {
+    "NAME": "Typhon de lumière",
+    "DESCRIPTION": "Infligez des dégats égaux à to !M! fois le nombre de carte qui coûte 0 jouées ce combat à TOUS les ennemis.",
+    "UPGRADE_DESCRIPTION": " Épuisez TOUTES les cartes qui ne sont pas des attaques dans votre main. Ajouter le même nombre d'Étincelles améliorées à votre main.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Inflige !B! dégats.)",
+      ""
+    ]
+  },
+  "StarlightTyphoon_D": {
+    "NAME": "Typhon de lumière",
+    "DESCRIPTION": " Épuisez TOUTES les cartes qui ne sont pas des attaques dans votre main. Ajouter le même nombre d'Étincelles à votre main.",
+    "UPGRADE_DESCRIPTION": " Épuisez TOUTES les cartes qui ne sont pas des attaques dans votre main. Ajouter le même nombre d'Étincelles améliorées à votre main."
+  },
+  "SuperPerseids": {
+    "NAME": "Super Perséides",
+    "DESCRIPTION": "Injouable. Quand cette carte est piochée, gagnez[E]. NL Si cette carte est épuisée, infligez !D! dégats à un ennemi au hasard.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "MysteriousBeam": {
+    "NAME": "Rayon mystérieux",
+    "DESCRIPTION": "Ajouter un attaque aléatoire à votre main. Infligez des dégats égaux aux dégats de la carte ajoutée.",
+    "UPGRADE_DESCRIPTION": "Ajouter un attaque améliorée aléatoire à votre main. Infligez des dégats égaux aux dégats de la carte ajoutée."
+  },
+  "ShootingEcho": {
+    "NAME": "Écho de tir",
+    "DESCRIPTION": " Épuisez une carte au hasard. Ajoutez un écho de tir à votre main. NL Infligez !D! dégats. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Épuisez une carte. Ajoutez un écho de tir à votre main. NL Infligez !D! dégats. NL Épuisement."
+  },
+  "EnergyFlow": {
+    "NAME": "Flux d'énergie",
+    "DESCRIPTION": "Gagnez !M! Charge à la fin de votre tour.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "PowerUp": {
+    "NAME": "Amélioration!",
+    "DESCRIPTION": "TOUTES les attaques dans votre main inflige !M! dégats additionnels ce combat.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "WitchLeyline": {
+    "NAME": "ligne de sorcière",
+    "DESCRIPTION": "Infligez !D! dégats. Ajoutez 2 brûlures à votre main.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "JA": {
+    "NAME": "Échauffement !",
+    "DESCRIPTION": "Infligez !D! dégats. Ajoutez 623B, étincelle et ligne de sorcière à votre main.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégats. Ajoutez 623B, étincelle et ligne de sorcière à votre main et améliorées les."
+  },
+  "AbsoluteMagnitude": {
+    "NAME": "Magnitude absolue",
+    "DESCRIPTION": "Inflige des dégats égaux à 2.5 fois votre charge.(Infligez !B! dégats).",
+    "UPGRADE_DESCRIPTION": "Inflige des dégats égaux à 3.5 fois votre charge.(Infligez !B! dégats)."
+  },
+  "DragonMeteor": {
+    "NAME": "Météor draconique",
+    "DESCRIPTION": "Infligez !B! dégats. NL infligez !M! dégats additionnels pour chaques cartes épuisées.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "EventHorizon": {
+    "NAME": "Horizon des événements",
+    "DESCRIPTION": "!M! fois par tour, lorsque vous enclenchez un effet amplifier, vous pouvez mettre une attaque de votre défausse dans votre main.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "PulseMagic": {
+    "NAME": "Magie du pouls",
+    "DESCRIPTION": "Au prochain tour, Gagnez [E] . Amplifier [E] : Les effets amplifier ne coûte pas de [E] ce tour ci.",
+    "UPGRADE_DESCRIPTION": "Au prochain tour, Gagnez [E]  [E] . Amplifier [E] : Les effets amplifier ne coûte pas de [E] ce tour ci."
+  },
+  "D6C": {
+    "NAME": "66C",
+    "DESCRIPTION": "Inné. NL Infligez !D! dégats. NL Infligez double dégats si il n'y a aucune carte dans votre défauss.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "Singularity": {
+    "NAME": "Singularité",
+    "DESCRIPTION": "Lorsque vous jouez un carte qui coûte 0, augmentez les dégats d'une carte au hasard dans votre main de !M!.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "SporeBomb": {
+    "NAME": "Explosion de spore",
+    "DESCRIPTION": "Appliquez !M! Vulnérabilité à un ennemi. NL Amplifier  [E]  : Appliquer !M! Vulnérabilité à TOUS les ennemis à la place.",
+    "UPGRADE_DESCRIPTION": "Appliquez !M! Vulnerabilité à TOUS les ennemis. NL Amplifier  [E]  : 1 Vulnerabilité en plus."
+  },
+  "FluorensentBeam": {
+    "NAME": "Rayon fluorescent",
+    "DESCRIPTION": "TOUS les ennemis perdent !D! PV. NL Amplifier  [E]  [E]  : Infligez  !B! à la place.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "WitchOfGreed": {
+    "NAME": "Sorcière de la cupidité",
+    "DESCRIPTION": "À la fin du combat, gagnez !M! or. NL Amplifier [E] : Obtenez également une potion au hasard.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "TreasureHunter": {
+    "NAME": "Chasseur de trésor",
+    "DESCRIPTION": "Infligez !D! dégats. NL si cela tue un ennemi qui n'est pas un sbire d'élite ou de boss, à la fin du combat obtenez une relique au hasard. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "Robbery": {
+    "NAME": "Vol",
+    "DESCRIPTION": "Infligez !D! dégats. Gagnez autant d'or que de dégats non bloqués. NL Épuisement. NL Amplifier [E] : Doublez l'or obtenu.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "6A": {
+    "NAME": "6A",
+    "DESCRIPTION": "Infligez !D! dégats. Gagnez autant d'armure que de dégats infligez.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "CircumpolarStar": {
+    "NAME": "Étoile circumpolaire",
+    "DESCRIPTION": "Gagnez !B! d'armure. Piochez !M! carte(s). Augmente le coût de cette carte de 1 pour le combat.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "RefractionSpark": {
+    "NAME": "Étincelle de réfraction",
+    "DESCRIPTION": "Infligez !D! dégats. Augmente les dégats de TOUTES les cartes étincelles dans votre main par les dégats infligés. NL Amplifier  [E]  : Infligez !B! dégats à la place.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "MagicChant": {
+    "NAME": "Chant magique",
+    "DESCRIPTION": "Choisissez !M! cartes à améliorer et conservez là ce tour.",
+    "UPGRADE_DESCRIPTION": "Conservez. Choisissez !M! à conserver ce tour. Réduit le coût de la carte choisie de 1 le prochain tour."
+  },
+  "UnstableBomb": {
+    "NAME": "Bombe instable",
+    "DESCRIPTION": "Infligez des dégats aléatoires ( !D! à !B! ) à un ennemi au hasard 4 fois.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "SuperNova": {
+    "NAME": "Supernova",
+    "DESCRIPTION": "Vous ne prenez plus de dégats des brûlures. Lorsque vous Épuisez une brûlure gagnez 1 de force. NL Épuisez votre main à la fin de chaque tours.",
+    "UPGRADE_DESCRIPTION": "Vous ne prenez plus de dégats des brûlures. Lorsque vous Épuisez une malédiction ou un statut gagnez 1 de force. NL Épuisez votre main à la fin de chaque tours."
+  },
+  "MoraleDepletion": {
+    "NAME": "Temps d'arrêt.",
+    "DESCRIPTION": "Gagnez !B! d'Armures. Vous ne pouvez pas activer d'effet amplifier ou de consommer de charge ce tour. NL Au prochain tour, piochez !M! carte(s).",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armures. Vous ne pouvez pas activer d'effet amplifier ou de consommer de charge ce tour. NL Au prochain tour, piochez !M! carte(s)."
+  },
+  "DarkMatter": {
+    "NAME": "Matière noire",
+    "DESCRIPTION": "Ne peut-être jouer qu'une seule fois par tour.NL Ajoutez 2 copies de cette carte à votre pioche. Piochez 1 carte. Lorsque cette carte est Épuisée, gagnez !B! d'Armures. NL Éthérée.",
+    "UPGRADE_DESCRIPTION": "Ne peut-être jouer qu'une seule fois par tour.NL Ajoutez 2 copies de cette carte à votre pioche. Piochez 1 carte. Lorsque cette carte est Épuisée, gagnez !B! d'Armures. NL Éthérée.",
+    "EXTENDED_DESCRIPTION":[
+      "Je ne pas jouer matière noire à nouveau ce tour-ci.",
+      ""
+    ]
+  },
+  "GasGiant": {
+    "NAME": "Géante Gazeuse",
+    "DESCRIPTION": "Gagnez !B! d'Armure. Ajoutez !M! brûlure à votre main.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "CasketOfStar": {
+    "NAME": "Cercueil d'étoiles",
+    "DESCRIPTION": "Lorsque vous gagnez de l'Armure, Ajoutez une étincelle à votre main. ",
+    "UPGRADE_DESCRIPTION": "Lorsque vous gagnez de l'Armure, Ajoutez une étincelle améliorée à votre main."
+  },
+  "ChargeUpSpray": {
+    "NAME": "Vaporisateur de charges",
+    "DESCRIPTION": "Infligez !D! dégats. NL si cette carte consomme des charges, Gagnez [E] et piochez !M! cartes.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "EnergyRecoil": {
+    "NAME": "Recul d'énergie",
+    "DESCRIPTION": "Gagnez autant d'Armure que vous avez de charge.",
+    "UPGRADE_DESCRIPTION": "Gagnez autant d'Armure que vous avez de charge+3.",
+    "EXTENDED_DESCRIPTION":[
+      " NL (Gagnez ",
+      " d'Armure.)"
+    ]
+  },
+  "GalacticHalo": {
+    "NAME": "Halo galactique",
+    "DESCRIPTION": "Gagnez !B! d'Armure et !M! charge(s).",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "ManaConvection": {
+    "NAME": "Convection de mana",
+    "DESCRIPTION": "Piochez !M! cartes. Épuisez 2 cartes. NL Si vous avez 8 charges ou plus, perdes 8 charges et gagnez [E]  [E]  .",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "ManaRampage": {
+    "NAME": "Déchainement de mana",
+    "DESCRIPTION": "Jouer X attaques aléatoires.",
+    "UPGRADE_DESCRIPTION": "Jouer X attaques améliorées aléatoires."
+  },
+  "StarBarrage": {
+    "NAME": "Barrage d'étoiles",
+    "DESCRIPTION": "Infligez !D! dégats !M! fois. NL Chaques fois que cette carte est jouée, elle inflige 1 dégat additionnel ce combat.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "AFriendsGift": {
+    "NAME": "Un cadeau d'ami.",
+    "DESCRIPTION": "Injouable. Transforme une carte aléatoire en trois cartes spécifiques.",
+    "UPGRADE_DESCRIPTION": "Conservez. Ajoutez !D! dégats. Augmentez par 2 vos dégats lorsque votre tour commence. Épuisement. NL Amplifier [E] : Infligez !B! dégats à la place et ne s'épuise pas."
+  },
+  "BinaryStars": {
+    "NAME": "Étoiles binaires",
+    "DESCRIPTION": "Choisissez d'ajoutez soit un trou noir soit une naine blanche à votre main. Épuisement. NL Amplifier  [E]  : Ajouter les deux cartes dans votre main.",
+    "UPGRADE_DESCRIPTION": "Choisissez d'ajoutez soit un trou noir amélioré soit une naine blanche améliorée à votre main. Épuisement. NL Amplifier  [E]  : Ajouter les deux cartes dans votre main."
+  },
+  "CollectingQuirk": {
+    "NAME": "Collection bizarre",
+    "DESCRIPTION": "Infligez !D! dégats à un ennemi aléatoire pour chaques !M! reliques en votre possession.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
+    "EXTENDED_DESCRIPTION":[
+      "(Inflige les dégats !B! fois",
+      ""
+    ]
+  },
+  "FungusSplash": {
+    "NAME": "infusion de champignons",
+    "DESCRIPTION": " Épuisez une carte. Lancez une potion sur votre cible. NL Le type de potion dépend du type de carte épuisée . NL Épuisement.",
+    "UPGRADE_DESCRIPTION": " Épuisez une carte. Lancez une potion sur votre cible. NL Le type de potion dépend du type de carte épuisée . "
+  },
+  "PropBag": {
+    "NAME": "Sac d'objets portable",
+    "DESCRIPTION": "Obtenez aléatoirement Orichalque,Batôn d'amplification ou l'Art de la guerre. NL Perdez cette relique à la fin du combat. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": " Inné. NL Obtenez aléatoirement Orichalque,Batôn d'amplification ou l'Art de la guerre. NL Perdez cette relique à la fin du combat. NL Épuisement."
+  },
+  "BlackFlareStar": {
+    "NAME": "Trou noir",
+    "DESCRIPTION": "Peut seulement être joué lorsque vous avez 4 cartes ou plus dans votre main. NL Défaussez n'importe quel nombre de cartes dans votre main et gagnez !B! d'Armure pour chacune.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
+    "EXTENDED_DESCRIPTION":[
+      "Je n'ai pas 4 cartes en main.",
+      ""
+    ]
+  },
+  "WhiteDwarf": {
+    "NAME": "Naine blanche",
+    "DESCRIPTION": "Peut seulement être joué lorsque vous avez 4 cartes ou moins dans votre main. NL Infligez !B! dégats (1.5 × la taille de votre défausse). Ajoutez 2 brûlures à votre main.",
+    "UPGRADE_DESCRIPTION": "Peut seulement être joué lorsque vous avez 4 cartes ou moins dans votre main. NL Infligez !B! dégats (2 × la taille de votre défausse). Ajoutez 2 brûlures à votre main.",
+    "EXTENDED_DESCRIPTION":[
+      "J'ai plus de 4 cartes en main.",
+      ""
+    ]
+  },
+  "FairyDestructionRay": {
+    "NAME": "rayon de destruction féérique.",
+    "DESCRIPTION": "Infligez !D! dégats à TOUS les ennemis. Amplifier [E]  [E] : Tuez instantanément ceux qui ont !M! ou moins PV.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "Orbital": {
+    "NAME": "Orbital",
+    "DESCRIPTION": " Injouable. Lorsque cette carte est piochée, piochez une carte. NL Si cette carte est Épuisée, placez !M! carte(s) parmis vos cartes épuisées dans votre main.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "SillyJoke": {
+    "NAME": "Fantôme de mana",
+    "DESCRIPTION": "Incanter une magie qui ne peut-être vue que par les véritables magiciens. NL Épuisement. NL Éthérée.",
+    "UPGRADE_DESCRIPTION": "Incanter une magie magnifique qui ne peut-être vue que par les véritables magiciens. NL Épuisement. NL Éthérée."
+  },
+  "ExplosiveMarionette": {
+    "NAME": "Marionnette explosive",
+    "DESCRIPTION": " Conservez. Infligez !D! dégats. NL Amplifier [E] : Infligez double dégats. Épuisement.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "OpticalCamouflage": {
+    "NAME": "Camouflage optique",
+    "DESCRIPTION": " Conservez. Gagnez !B! d'Armure. NL Amplifier [E] : Gagnez le double. Épuisement.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "FiveColoredTalisman": {
+    "NAME": "Talisman aux cinqs couleurs",
+    "DESCRIPTION": "Conservez. Ajoutez un pouvoir au hasard dans votre main au début de votre tour.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "AlicesGift": {
+    "NAME": "Cadeau d'alice",
+    "DESCRIPTION": " Conservez. Infligez !D! Dégats. Épuisement . NL Amplifier [E]  [E] : Infligez triple dégats.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "Exhaustion_MRS": {
+    "NAME": "Plus de jus",
+    "DESCRIPTION": "Injouable. NL Lorsqu'En main, vous ne pouvez pas gagner ou consummer de charge.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "UltimateShortwave": {
+    "NAME": "Ondes-courtes ultimes",
+    "DESCRIPTION": "Gagnez !B! [E] et !M! Charges. Augmentez la charge gagnez de cette carte par !D! et energie gagnée par 1 pour ce combat.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "NebulaRing": {
+    "NAME": "Anneau nébuleux",
+    "DESCRIPTION": "Gagnez !M! d'armure plaquée lorsque vous perdez votre armure à cause d'ennemis ou de cartes.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "SprinkleStarSeal": {
+    "NAME": "Étoile de sceaux",
+    "DESCRIPTION": "Ajoutez 99 Faiblesses. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "WWWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWW",
+    "DESCRIPTION": "WWWWWWWWWWW",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  }
+}

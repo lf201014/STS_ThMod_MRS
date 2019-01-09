@@ -1,0 +1,280 @@
+{
+  "DarkMatterPower": {
+    "NAME": "Matière noire",
+    "DESCRIPTIONS": [
+      "Vous ne pouvez plus jouer de #yMatière #yNoire ce tour-ci.",
+      ""
+    ]
+  },
+  "ExtraDraw": {
+    "NAME": "Vitesse de fuite",
+    "DESCRIPTIONS": [
+      "Piochez #b",
+      " cartes supplémentaires et ajoutez #b",
+      " #yBrûlure(s) à votre main au début de chaque tours."
+    ]
+  },
+  "EventHorizonPower": {
+    "NAME": "Horizon des événements",
+    "DESCRIPTIONS": [
+      "Vous pouvez mettre une attaque de votre défausse dans votre main lorsque vous enclenchez un effet amplifier, jusqu'à #b",
+      " fois chaques tours.",
+      "( ",
+      " charge(s) restantes)"
+    ]
+  },
+  "IllusionStarPower": {
+    "NAME": "Étoile illusoire",
+    "DESCRIPTIONS": [
+      "Au debut de votre tour , transformez  #b",
+      "carte(s) de votre main."
+    ]
+  },
+  "MilliPulsaPower": {
+    "NAME": "Pulsar",
+    "DESCRIPTIONS": [
+      "Les effets #yAmplifier ne nécessite plus de [B] supplémentaires pour être activés.",
+      ""
+    ]
+  },
+  "SatellIllusPower": {
+    "NAME": " Illusion Satellite",
+    "DESCRIPTIONS": [
+      "Lorsque vous utilisez une carte qui n'existe pas dans votre deck principal, piochez #b",
+      " cartes."
+    ]
+  },
+  "TempStrength": {
+    "NAME": "Temproy Strength",
+    "DESCRIPTIONS": [
+      "Your next blow deals additional  #b",
+      " damage."
+    ]
+  },
+  "TempStrengthLoss": {
+    "NAME": "Perte de force temporaire",
+    "DESCRIPTIONS": [
+      "Les dégats de cette créature est diminuée de #b",
+      " ce tour-ci."
+    ]
+  },
+  "ExtraEnergyPower": {
+    "NAME": "Energie supplémentaire",
+    "DESCRIPTIONS": [
+      "Gagnez ",
+      " énergie supplémentaire chaque tours."
+    ]
+  },
+  "ChargeUpPower": {
+    "NAME": "Charge",
+    "DESCRIPTIONS": [
+      "Vous avez  #b",
+      " #yCharge ",
+      "vous donnant  #b",
+      " fois de dégats."
+    ]
+  },
+  "PolarisUniquePower": {
+    "NAME": "Étoile guidante",
+    "DESCRIPTIONS": [
+      "Si #yÉtoile guidante est dans votre pioches, gagnez un [B] supplémentaire au début de chaque tour."
+    ]
+  },
+  "OrrerysSunPower": {
+    "NAME": "Soleil planétaire",
+    "DESCRIPTIONS": [
+      "Lorsque vous consommez une #yCharge, infligez  #b",
+      " à TOUS les ennemis."
+    ]
+  },
+  "Charged": {
+    "NAME": "Chargé!",
+    "DESCRIPTIONS": [
+      "Votre prochaine exlosion infligera #b",
+      " fois les dégats"
+    ]
+  },
+  "BlazeAwayPower": {
+    "NAME": "Flambée",
+    "DESCRIPTIONS": [
+      "Vous ajouterez #b",
+      " copie(s) de la prochaine attaque utilisée."
+    ]
+  },
+  "MPPower": {
+    "NAME": "Puissance maximale",
+    "DESCRIPTIONS": [
+      "Vos dégats sont multipliés par  #b",
+      " ce tour."
+    ]
+  },
+  "EnergyFlowPower": {
+    "NAME": "Flux d'énergie",
+    "DESCRIPTIONS": [
+      "A la fin du tour,gagnez #b",
+      " #yCharge ."
+    ]
+  },
+  "PulseMagicPower": {
+    "NAME": "Magie du pouls",
+    "DESCRIPTIONS": [
+      "Vous n'avez pas à payer de [B]  pour activer les effets #yAmplifier ce tour-ci.",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "SingularityPower": {
+    "NAME": "Singualrité",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez une carte qui coûte 0, ajoutez une #yAttack à votre main infligeant #b",
+      " dégats additionnels ce combat."
+    ]
+  },
+  "WitchOfGreedGold": {
+    "NAME": "Sorcière de la cupidité",
+    "DESCRIPTIONS": [
+      "A la fin du combat, gagnez  #b",
+      " or ."
+    ]
+  },
+  "WitchOfGreedPotion": {
+    "NAME": "Sorcière de la cupidité",
+    "DESCRIPTIONS": [
+      "A la fin du combat, obtenez  #b",
+      " potion(s) aléatoire(s)."
+    ]
+  },
+  "MoraleDepletionPlusPower": {
+    "NAME": "Temps d'arrêts",
+    "DESCRIPTIONS": [
+      "Vous n'activerez pas d' #yAmplifier ou de #yCharge ce tour.",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "MoraleDepletionPower": {
+    "NAME": "temps d'arrêts",
+    "DESCRIPTIONS": [
+      "Vous n'activerez pas d' #yAmplifier ce tour.",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "SuperNovaPower": {
+    "NAME": "SuperNova",
+    "DESCRIPTIONS": [
+      "Lorsque vous #yExhaust une #yBrûlure ,Gagnez  #b",
+      "Lorsque vous #yExhaust une #yMalédiction or un #Statut ,Gagnez  #b",
+      " #yStrength . NL Vous ne prenez plus de dégats des #yBrûlure . NL #yExhaust votre main lorsque votre tour ce termine."
+    ]
+  },
+  "CasketOfStarPlusPower": {
+    "NAME": "Cercueil d'étoiles",
+    "DESCRIPTIONS": [
+      "Ajoutez #b",
+      " #yupgraded #yÉtincelle à votre main lorsque vous gagnez de l'#yArmure ."
+    ]
+  },
+  "CasketOfStarPower": {
+    "NAME": "Cercueil d'étoiles",
+    "DESCRIPTIONS": [
+      "Ajoutez  #b",
+      " #ySpark à votre main lorsque vous gagnez de l'#yArmure ."
+    ]
+  },
+  "GalacticHaloPower": {
+    "NAME": "Halo galactique",
+    "DESCRIPTIONS": [
+      "A la fin du tour,gagnez  #b",
+      " #yArmure pour chaques #yAttaque que vous avez jouez ce tour."
+    ]
+  },
+  "ManaRampagePower": {
+    "NAME": "Déchainement de man",
+    "DESCRIPTIONS": [
+      "Votre prochaine #yAttaque sera jouée  #b",
+      " fois supplémentaire ce tour."
+    ]
+  },
+  "PropBagPower": {
+    "NAME": "Sac d'objets portable",
+    "DESCRIPTIONS": [
+      "Lorsque le combat se termine, vous perdrez #y",
+      "."
+    ]
+  },
+  "UltraShortWavePower": {
+    "NAME": "ondes-Courtes ultimes",
+    "DESCRIPTIONS": [
+      "Votre effet #yOndes-Courtes #yUltimes est #yAmplifier  #b",
+      " fois."
+    ]
+  },
+  "DarkSparkPower": {
+    "NAME": "Étincelle sombre",
+    "DESCRIPTIONS": [
+      "Chaques cartes avec ''étincelle' dans son nom que vous jouez vous donne #b",
+      "#yCharge additionnels ce tour."
+    ]
+  },
+  "MagicChantPower": {
+    "NAME": "Magic Chant",
+    "DESCRIPTIONS": [
+      "Réduit le coût de #b",
+      " ce tour."
+    ]
+  },
+  "SatelIllusPower": {
+    "NAME": "Illusion Satellite",
+    "DESCRIPTIONS": [
+      "Pendant ce tour, lorsque le nombre de cartes dans votre pioche augmente, gagnez  #b",
+      " [B] ."
+    ]
+  },
+  "GrandCrossPower": {
+    "NAME": "Amplifié",
+    "DESCRIPTIONS": [
+      "Vous avez activer un effet #yAmplifier ce tour.",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "Diaspora": {
+    "NAME": "Diaspora",
+    "DESCRIPTIONS": [
+      "A la fin du tour, tuez instantanément cette créature si sa vi est inférieur à #b",
+      " ."
+    ]
+  },
+  "TalismanPower": {
+    "NAME": "Talisman aux cinqs couleurs",
+    "DESCRIPTIONS": [
+      "Au début de votre tour,ajoutez #b",
+      "  #yCompétence au hasard dans votre main."
+    ]
+  },
+  "Wraith": {
+    "NAME": "Spectre",
+    "DESCRIPTIONS": [
+      "#yÉpuisez une carte aléaoitre de votre main après le début de votre tour.",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "LimboContact": {
+    "NAME": "Contact mort-vivant",
+    "DESCRIPTIONS": [
+      "Lorsque vous prenez des dégats de cet ennemi, gagner un de #yFantôme .",
+      "WWWWWWWWWWW"
+    ]
+  },
+  "Nebula": {
+    "NAME": "Nebuleuse",
+    "DESCRIPTIONS": [
+      "Gagnez ",
+      " Armure plaquée lorsque vous perdez votre Armure de la part d'ennemis ou de cartes."
+    ]
+  },
+  "WWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWW",
+      "WWWWWWWWWWW"
+    ]
+  }
+}
