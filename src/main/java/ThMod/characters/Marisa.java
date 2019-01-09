@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings.GameLanguage;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import java.util.ArrayList;
 
@@ -124,7 +125,7 @@ public class Marisa extends CustomPlayer {
     } else if (Settings.language == Settings.GameLanguage.JPN) {
       title = "\u666e\u901a\u306e\u9b54\u6cd5\u4f7f\u3044";
       flavor = "\u9b54\u6cd5\u306e\u68ee\u306b\u4f4f\u3093\u3067\u3044\u308b\u666e\u901a\u306e\u9b54\u6cd5\u4f7f\u3044\u3002 NL \u5149\u3068\u71b1\u306e\u9b54\u6cd5\u304c\u5f97\u610f\u3002";
-    }else if (Settings.language == Settings.GameLanguage.ZHT) {
+    } else if (Settings.language == Settings.GameLanguage.ZHT) {
       title = "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f";
       flavor = "\u4f4f\u5728\u9b54\u6cd5\u68ee\u6797\u7684\u9b54\u6cd5\u4f7f\u3002 NL \u5584\u9577\u65bc\u5149\u548c\u71b1\u7684\u9b54\u6cd5\u3002";
     } else if (Settings.language == Settings.GameLanguage.KOR) {
@@ -163,7 +164,7 @@ public class Marisa extends CustomPlayer {
       title = "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f";
     } else if (Settings.language == GameLanguage.JPN) {
       title = "\u666e\u901a\u306e\u9b54\u6cd5\u4f7f\u3044";
-    }else if (Settings.language == GameLanguage.ZHT) {
+    } else if (Settings.language == GameLanguage.ZHT) {
       title = "\u666e\u901a\u7684\u9b54\u6cd5\u4f7f";
     } else if (Settings.language == GameLanguage.KOR) {
       title = "\ud3c9\ubc94\ud55c \ub9c8\ubc95\uc0ac";
@@ -186,7 +187,7 @@ public class Marisa extends CustomPlayer {
   }
 
   public void doCharSelectScreenSelectEffect() {
-    CardCrawlGame.sound.playA("ATTACK_MAGIC_BEAM_SHORT", MathUtils.random(-0.2F, 0.2F));
+    CardCrawlGame.sound.playA("SELECT_MRS", MathUtils.random(-0.1F, 0.1F));
     CardCrawlGame.screenShake.shake(
         ScreenShake.ShakeIntensity.MED,
         ScreenShake.ShakeDur.SHORT,
@@ -195,12 +196,13 @@ public class Marisa extends CustomPlayer {
   }
 
   public String getCustomModeCharacterButtonSoundKey() {
-    return "ATTACK_MAGIC_BEAM_SHORT";
+    return "SELECT_MRS";
   }
 
   public String getLocalizedCharacterName() {
     String char_name;
-    if ((Settings.language == Settings.GameLanguage.JPN)||(Settings.language == Settings.GameLanguage.ZHS)||(Settings.language == Settings.GameLanguage.ZHT)) {
+    if ((Settings.language == Settings.GameLanguage.JPN) || (Settings.language
+        == Settings.GameLanguage.ZHS) || (Settings.language == Settings.GameLanguage.ZHT)) {
       char_name = "\u9b54\u7406\u6c99";
     } else if (Settings.language == Settings.GameLanguage.KOR) {
       char_name = "\ub9c8\ub9ac\uc0ac";
@@ -228,7 +230,7 @@ public class Marisa extends CustomPlayer {
   }
 
   public TextureAtlas.AtlasRegion getOrb() {
-    return AbstractCard.orb_blue;
+    return new TextureAtlas.AtlasRegion(ImageMaster.loadImage(ThMod.CARD_ENERGY_ORB), 0, 0, 24, 24);
   }
 
   public Color getSlashAttackColor() {
@@ -259,6 +261,15 @@ public class Marisa extends CustomPlayer {
       e.setTimeScale(1.0F);
     }
     super.damage(info);
+  }
+
+  public void applyPreCombatLogic() {
+    super.applyPreCombatLogic();
+    ThMod.typhoonCounter = 0;
+    ThMod.logger.info(
+        "Marisa : applyPreCombatLogic : I just reset the god damn typhoon counter ! current counter : "
+            + ThMod.typhoonCounter
+    );
   }
 
 }

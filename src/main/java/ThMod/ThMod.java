@@ -9,7 +9,9 @@ import ThMod.cards.Marisa.ManaRampage;
 import ThMod.cards.Marisa.SprinkleStarSeal;
 import ThMod.cards.derivations.Exhaustion_MRS;
 import ThMod.potions.ShroomBrew;
+import com.badlogic.gdx.graphics.Texture;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.Keyword;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import java.nio.charset.StandardCharsets;
@@ -152,6 +154,8 @@ public class ThMod implements PostExhaustSubscriber,
 
   public static final Logger logger = LogManager.getLogger(ThMod.class.getName());
 
+  private static final String MOD_BADGE = "img/UI/badge.png";
+
   //card backgrounds
   private static final String ATTACK_CC = "img/512/bg_attack_MRS_s.png";
   private static final String SKILL_CC = "img/512/bg_skill_MRS_s.png";
@@ -164,6 +168,7 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String ENERGY_ORB_CC_PORTRAIT = "img/1024/cardOrb.png";
 
   public static final Color STARLIGHT = CardHelper.getColor(0f, 10f, 125.0f);
+  public static final String CARD_ENERGY_ORB = "img/UI/energyOrb.png";
 
   private static final String MY_CHARACTER_BUTTON = "img/charSelect/MarisaButton.png";
   private static final String MARISA_PORTRAIT = "img/charSelect/marisaPortrait.jpg";
@@ -301,7 +306,8 @@ public class ThMod implements PostExhaustSubscriber,
         ATTACK_CC_PORTRAIT,
         SKILL_CC_PORTRAIT,
         POWER_CC_PORTRAIT,
-        ENERGY_ORB_CC_PORTRAIT
+        ENERGY_ORB_CC_PORTRAIT,
+        CARD_ENERGY_ORB
     );
     BaseMod.addColor(
         AbstractCardEnum.MARISA_DERIVATIONS,
@@ -319,7 +325,8 @@ public class ThMod implements PostExhaustSubscriber,
         ATTACK_CC_PORTRAIT,
         SKILL_CC_PORTRAIT,
         POWER_CC_PORTRAIT,
-        ENERGY_ORB_CC_PORTRAIT
+        ENERGY_ORB_CC_PORTRAIT,
+        CARD_ENERGY_ORB
     );
   }
 
@@ -782,9 +789,22 @@ public class ThMod implements PostExhaustSubscriber,
   public void receivePostInitialize() {
     // TODO Auto-generated method stub
     //BaseMod.addEvent(Mushrooms_MRS.ID, Mushrooms_MRS.class, Exordium.ID);
-    BaseMod
-        .addPotion(ShroomBrew.class, Color.NAVY.cpy(), Color.LIME.cpy(), Color.OLIVE, "ShroomBrew",
-            MARISA);
+    BaseMod.addPotion(
+        ShroomBrew.class,
+        Color.NAVY.cpy(),
+        Color.LIME.cpy(),
+        Color.OLIVE,
+        "ShroomBrew",
+        MARISA
+    );
+    final Texture badge = ImageMaster.loadImage(MOD_BADGE);
+    BaseMod.registerModBadge(
+        badge,
+        "MarisaMod",
+        "Flynn , Hell , Hohner_257 , Samsara",
+        "A Mod of the poor blonde hair girl from Touhou Project(",
+        null
+    );
   }
 
   class Keywords {
