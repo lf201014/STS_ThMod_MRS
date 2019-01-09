@@ -103,8 +103,8 @@
   },
   "PolarisUnique": {
     "NAME": "Polaris Unique",
-    "DESCRIPTION": "Inné. Ajoutez une étoile guidante à votre pioche. Gagnez  [E] au début de votre tour lorsque tant qu'elle est dans votre pioche.",
-    "UPGRADE_DESCRIPTION": "Inné. Ajoutez une étoile guidante à votre pioche. Gagnez  [E] au début de votre tour lorsque tant qu'elle est dans votre pioche."
+    "DESCRIPTION": "Inné. Ajoutez une étoile guidante à votre pioche. Gagnez  [E] au début de votre tour  tant qu'elle est dans votre pioche.",
+    "UPGRADE_DESCRIPTION": "Inné. Ajoutez une étoile guidante à votre pioche. Gagnez  [E] au début de votre tour  tant qu'elle est dans votre pioche."
   },
   "SatelliteIllusion": {
     "NAME": "Illusion Satellite",
@@ -252,7 +252,7 @@
   },
   "D6C": {
     "NAME": "66C",
-    "DESCRIPTION": "Inné. NL Infligez !D! dégats. NL Infligez double dégats si il n'y a aucune carte dans votre défauss.",
+    "DESCRIPTION": "Inné. NL Infligez !D! dégats. NL Infligez double dégats si il n'y a aucune carte dans votre défausse.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Singularity": {
