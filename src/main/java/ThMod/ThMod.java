@@ -174,26 +174,31 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String MARISA_PORTRAIT = "img/charSelect/marisaPortrait.jpg";
 
   private static final String CARD_STRING = "localization/ThMod_Fnh_cards.json";
+  private static final String CARD_STRING_FR = "localization/ThMod_Fnh_cards-fr.json";
   private static final String CARD_STRING_JP = "localization/ThMod_Fnh_cards-jp.json";
   private static final String CARD_STRING_ZH = "localization/ThMod_Fnh_cards-zh.json";
   private static final String CARD_STRING_ZHT = "localization/ThMod_Fnh_cards-zht.json";
   private static final String CARD_STRING_KR = "localization/ThMod_Fnh_cards-kr.json";
   private static final String RELIC_STRING = "localization/ThMod_Fnh_relics.json";
+  private static final String RELIC_STRING_FR = "localization/ThMod_Fnh_relics-fr.json";
   private static final String RELIC_STRING_JP = "localization/ThMod_Fnh_relics-jp.json";
   private static final String RELIC_STRING_ZH = "localization/ThMod_Fnh_relics-zh.json";
   private static final String RELIC_STRING_ZHT = "localization/ThMod_Fnh_relics-zht.json";
   private static final String RELIC_STRING_KR = "localization/ThMod_Fnh_relics-kr.json";
   private static final String POWER_STRING = "localization/ThMod_Fnh_powers.json";
+  private static final String POWER_STRING_FR = "localization/ThMod_Fnh_powers-fr.json";
   private static final String POWER_STRING_JP = "localization/ThMod_Fnh_powers-jp.json";
   private static final String POWER_STRING_ZH = "localization/ThMod_Fnh_powers-zh.json";
   private static final String POWER_STRING_ZHT = "localization/ThMod_Fnh_powers-zht.json";
   private static final String POWER_STRING_KR = "localization/ThMod_Fnh_powers-kr.json";
   private static final String POTION_STRING = "localization/ThMod_MRS_potions.json";
+  private static final String POTION_STRING_FR = "localization/ThMod_MRS_potions-fr.json";
   private static final String POTION_STRING_JP = "localization/ThMod_MRS_potions-jp.json";
   private static final String POTION_STRING_ZH = "localization/ThMod_MRS_potions-zh.json";
   private static final String POTION_STRING_ZHT = "localization/ThMod_MRS_potions-zht.json";
   private static final String POTION_STRING_KR = "localization/ThMod_MRS_potions-kr.json";
   private static final String KEYWORD_STRING = "localization/ThMod_MRS_keywords.json";
+  private static final String KEYWORD_STRING_FR = "localization/ThMod_MRS_keywords-fr.json";
   private static final String KEYWORD_STRING_JP = "localization/ThMod_MRS_keywords-jp.json";
   private static final String KEYWORD_STRING_KR = "localization/ThMod_MRS_keywords-kr.json";
   private static final String KEYWORD_STRING_ZHS = "localization/ThMod_MRS_keywords-zh.json";
@@ -646,6 +651,9 @@ public class ThMod implements PostExhaustSubscriber,
       case JPN:
         keywordsPath = KEYWORD_STRING_JP;
         break;
+      case FRA:
+      keywordsPath = KEYWORD_STRING_FR;
+      break;
       default:
         keywordsPath = KEYWORD_STRING;
         break;
@@ -684,7 +692,7 @@ public class ThMod implements PostExhaustSubscriber,
       BaseMod.addKeyword(new String[]{"\u589e\u5e45"},
           "\u7576\u6709\u8db3\u5920\u7684 [B] \u6642\uff0c\u4f7f\u7528\u5176\u9032\u968e\u6548\u679c");
     } else {
-     
+
     BaseMod.addKeyword(new String[]{"\u6d88\u8017"},
             "\u6d88\u8017\u3059\u308b\u3068\u3001 \u30c1\u30e3\u30fc\u30b8 \u3092\u5f97\u305f\u308a\u6d88\u8cbb\u3059\u308b\u4e8b\u304c\u51fa\u6765\u306a\u3044\u3002");
     BaseMod.addKeyword(new String[]{"\u30ab\u30fc\u30c9\u306b\u3088\u3063\u3066\u7570\u306a\u308b"},
@@ -757,12 +765,19 @@ public class ThMod implements PostExhaustSubscriber,
       relic = RELIC_STRING_KR;
       power = POWER_STRING_KR;
       potion = POTION_STRING_KR;
+    } else if(Settings.language == Settings.GameLanguage.FRA) {
+      logger.info("lang == fra");
+      card = CARD_STRING_FR;
+      relic = RELIC_STRING_FR;
+      power = POWER_STRING_FR;
+      potion = POTION_STRING_FR;
     } else {
       logger.info("lang == eng");
       card = CARD_STRING;
       relic = RELIC_STRING;
       power = POWER_STRING;
       potion = POTION_STRING;
+
     }
 
     relicStrings = Gdx.files.internal(relic).readString(
@@ -812,7 +827,7 @@ public class ThMod implements PostExhaustSubscriber,
     Keyword[] keywords;
   }
 	/*
-	
+
 
 
 ............................................................................................................................................
@@ -869,8 +884,6 @@ public class ThMod implements PostExhaustSubscriber,
 ............................................................................................................................................
 ............................................................................................................................................
 ............................................................................................................................................
-                                                                      
+
 	 */
 }
-	
-
