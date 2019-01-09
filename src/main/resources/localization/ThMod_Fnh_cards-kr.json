@@ -432,8 +432,8 @@
   },
   "SillyJoke": {
     "NAME": "마나 유령",
-    "DESCRIPTION": "진정한 마법사만이 사용하는 마법을 사용합니다. NL 소멸. NL 휘발성.",
-    "UPGRADE_DESCRIPTION": "진정한 마법사만이 사용하는 화려한 마법을 사용합니다. NL 소멸. NL 휘발성."
+    "DESCRIPTION": "진정한 마법사 만이 사용하는 마법 을 사용합니다. NL 소멸. NL 휘발성.",
+    "UPGRADE_DESCRIPTION": "진정한 마법사 만이 사용하는 화려한 마법 을 사용합니다. NL 소멸. NL 휘발성."
   },
   "ExplosiveMarionette": {
     "NAME": "폭발성 꼭두각시",
