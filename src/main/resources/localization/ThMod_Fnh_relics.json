@@ -31,14 +31,14 @@
     "NAME": "Amplify Wand",
     "FLAVOR": "A Wand seems to not be used often.",
     "DESCRIPTIONS": [
-      "Every time you activate 3 #yAmplify effects, gain [B]  [B] ."
+      "Every time you activate 3 #yAmplify effects, gain [E]  [E] ."
     ]
   },
   "RampagingMagicTools": {
     "NAME": "Rampaging Magic Tool",
     "FLAVOR": "It's been so long since anyone last used them. Who knows what could happen?",
     "DESCRIPTIONS": [
-      "Gain [B] at the start of each turn. NL Apply a random debuff/buff ( #b2 #yFrail , #b2 #yWeak , #b2 #yVulnerable , #b3 #yPoison , #b8 #yCharge-up )to you at the start of each combat."
+      "Gain [E] at the start of each turn. NL Apply a random debuff/buff ( #b2 #yFrail , #b2 #yWeak , #b2 #yVulnerable , #b3 #yPoison , #b8 #yCharge-up )to you at the start of each combat."
     ]
   },
   "ExperimentalFamiliar": {
@@ -66,7 +66,7 @@
     "NAME": "Handmade Grimoire",
     "FLAVOR": "A notebook full of experiment records and magic material recipes;just how Marisa develops her Magics.",
     "DESCRIPTIONS": [
-      "At the start of battle, for every 15 cards in your master deck, gain [B] and draw a card."
+      "At the start of battle, for every 15 cards in your master deck, gain [E] and draw a card."
     ]
   },
   "ShroomBag": {
