@@ -131,6 +131,9 @@ public class Marisa extends CustomPlayer {
     } else if (Settings.language == Settings.GameLanguage.KOR) {
       title = "\ud3c9\ubc94\ud55c \ub9c8\ubc95\uc0ac";
       flavor = "\ub9c8\ubc95\uc758 \uc232\uc5d0 \uc0ac\ub294 \"\ud3c9\ubc94\ud55c\" \ub9c8\ubc95\uc0ac \uc785\ub2c8\ub2e4. NL \ube5b\uacfc \uc5f4 \ub9c8\ubc95\uc774 \ud2b9\uae30\uc785\ub2c8\ub2e4.";
+    } else if(Settings.language == Settings.GameLanguage.FRA) {
+      title = "La magicienne ordinaire";
+      flavor = "La magicienne \"ordinaire\" vie dans la for\u00eat magique.  NL Sp\u00e9cialis\u00e9es dans la magie de la lumi\u00e8re et de la chaleur.";
     } else {
       title = "The Ordinary Magician";
       flavor = "The \"ordinary\" magician lives in the Forest of Magic. NL Specializes in light and heat magic.";
