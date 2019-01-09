@@ -6,15 +6,27 @@ import com.megacrit.cardcrawl.audio.SoundMaster;
 import com.megacrit.cardcrawl.core.Settings;
 import java.util.HashMap;
 
-@SpirePatch(cls = "com.megacrit.cardcrawl.audio.SoundMaster", method = "playA", paramtypes = {"java.lang.String", "float"})
+@SpirePatch(cls = "com.megacrit.cardcrawl.audio.SoundMaster", method = "playA", paramtypes = {
+    "java.lang.String", "float"})
 public class SoundMasterPlayAPatch {
 
   public static HashMap<String, Sfx> map = new HashMap();
 
   public static long Postfix(long res, SoundMaster _inst, String key, float pitchAdjust) {
     if (map.containsKey(key)) {
-      return ((Sfx) map.get(key))
-          .play(Settings.SOUND_VOLUME * Settings.MASTER_VOLUME, 1.0F + pitchAdjust, 0.0F);
+      if (key.equals("SELECT_MRS")) {
+        return ((Sfx) map.get(key)).play(
+            Settings.SOUND_VOLUME * Settings.MASTER_VOLUME * 0.25F,
+            1.0F + pitchAdjust,
+            0.0F
+        );
+      } else {
+        return ((Sfx) map.get(key)).play(
+            Settings.SOUND_VOLUME * Settings.MASTER_VOLUME,
+            1.0F + pitchAdjust,
+            0.0F
+        );
+      }
     }
     return 0L;
   }
