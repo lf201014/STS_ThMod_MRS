@@ -167,8 +167,8 @@
   },
   "OpenUniverse": {
     "NAME": "開放宇宙",
-    "DESCRIPTION": "增加5張隨機牌到抽牌堆，該牌有 !D! % 機率 升級 ，洗牌並抽 !M! 張牌",
-    "UPGRADE_DESCRIPTION": "增加5張隨機牌到抽牌堆，該牌有 !D! % 機率 升級 ，洗牌並抽 !M! 張牌"
+    "DESCRIPTION": "增加5張隨機牌到抽牌堆，該牌有 !D! % 機率 升級 ，抽 !M! 張牌",
+    "UPGRADE_DESCRIPTION": "增加5張隨機牌到抽牌堆，該牌有 !D! % 機率 升級 ，抽 !M! 張牌"
   },
   "BlazeAway": {
     "NAME": "連續發射",
