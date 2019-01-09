@@ -33,7 +33,7 @@
   "MilliPulsaPower": {
     "NAME": "毫秒脈衝星",
     "DESCRIPTIONS": [
-      "不需要花費額外 [B] 來發動 #y增幅 ",
+      "不需要花費額外 [E] 來發動 #y增幅 ",
       ""
     ]
   },
@@ -77,7 +77,7 @@
   "PolarisUniquePower": {
     "NAME": "北極星",
     "DESCRIPTIONS": [
-      "在回合開始時，如果 #y引導星 在抽牌堆裡，則獲得 [B]"
+      "在回合開始時，如果 #y引導星 在抽牌堆裡，則獲得 [E]"
     ]
   },
   "OrrerysSunPower": {
@@ -118,7 +118,7 @@
   "PulseMagicPower": {
     "NAME": "脈衝魔術",
     "DESCRIPTIONS": [
-      "本回合內不需要花費額外 [B] 來發動 #y增幅",
+      "本回合內不需要花費額外 [E] 來發動 #y增幅",
       "WWWWWWWWWWW"
     ]
   },
@@ -225,7 +225,7 @@
     "NAME": "衛星幻覺",
     "DESCRIPTIONS": [
       "在你的回合內，當抽牌堆裡的卡牌數量增加時，獲得 #b",
-      "  [B]"
+      "  [E]"
     ]
   },
   "GrandCrossPower": {

@@ -33,7 +33,7 @@
   "MilliPulsaPower": {
     "NAME": "ミリ秒パルサー",
     "DESCRIPTIONS": [
-      " #y増幅 効果の  [B]  が不要になる。",
+      " #y増幅 効果の  [E]  が不要になる。",
       ""
     ]
   },
@@ -62,7 +62,7 @@
     "NAME": "余分なエネルギー",
     "DESCRIPTIONS": [
       "毎ターン",
-      " [B]を得る。"
+      " [E]を得る。"
     ]
   },
   "ChargeUpPower": {
@@ -77,7 +77,7 @@
   "PolarisUniquePower": {
     "NAME": "ガイディングスター",
     "DESCRIPTIONS": [
-      " #yガイディングスター が山札にある場合, ターン開始時に [B] を得る。"
+      " #yガイディングスター が山札にある場合, ターン開始時に [E] を得る。"
     ]
   },
   "OrrerysSunPower": {
@@ -118,7 +118,7 @@
   "PulseMagicPower": {
     "NAME": "パルスマジック",
     "DESCRIPTIONS": [
-      "このターン、 #y増幅 効果に  [B]  は不要。",
+      "このターン、 #y増幅 効果に  [E]  は不要。",
       "WWWWWWWWWWW"
     ]
   },
@@ -225,7 +225,7 @@
     "NAME": "サテライトイリュージョン",
     "DESCRIPTIONS": [
       "プレイヤーのターン中、山札のカードが増加するたび #b",
-      " [B] を得る。"
+      " [E] を得る。"
     ]
   },
   "GrandCrossPower": {

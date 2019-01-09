@@ -9,15 +9,15 @@
   },
   "AsteroidBelt": {
     "NAME": "소행성대",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 증폭 [B] : 다음 턴에 방어도를 !B! 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 증폭 [E] : 다음 턴에 방어도를 !B! 얻습니다."
   },
   "BigCrunch": {
     "NAME": "빅 크런치",
-    "DESCRIPTION": "버린 카드 더미와 뽑을 카드 더미의 반을 소멸시킵니다. 소멸된 카드 !M! 개 만큼 [B] 를 얻고 카드를 뽑습니다. NL 소멸."
+    "DESCRIPTION": "버린 카드 더미와 뽑을 카드 더미의 반을 소멸시킵니다. 소멸된 카드 !M! 개 만큼 [E] 를 얻고 카드를 뽑습니다. NL 소멸."
   },
   "BlazingStar": {
     "NAME": "블레이징 스타",
-    "DESCRIPTION": "피해를 !B! 줍니다. 손에 있는 화상 카드마다 피해를 !M! 줍니다. NL 증폭 [B] : 2 배의 피해를 줍니다. "
+    "DESCRIPTION": "피해를 !B! 줍니다. 손에 있는 화상 카드마다 피해를 !M! 줍니다. NL 증폭 [E] : 2 배의 피해를 줍니다. "
   },
   "DarkSpark": {
     "NAME": "다크 스파크",
@@ -26,7 +26,7 @@
   },
   "DeepEcoloBomb": {
     "NAME": "친환경 폭탄",
-    "DESCRIPTION": "무작위 적에게 피해를 !D! 주고 이번 턴에만 힘을 !M! 감소시킵니다. NL 증폭 [B] : 이 효과를 한 번 더 발동합니다."
+    "DESCRIPTION": "무작위 적에게 피해를 !D! 주고 이번 턴에만 힘을 !M! 감소시킵니다. NL 증폭 [E] : 이 효과를 한 번 더 발동합니다."
   },
   "DoubleSpark": {
     "NAME": "더블 스파크",
@@ -35,8 +35,8 @@
   },
   "EarthLightRay": {
     "NAME": "지구복사",
-    "DESCRIPTION": "체력을 !M! 회복합니다. 소멸. NL 증폭 [B] : 버린 카드 더미에서 카드 1 장을 무작위로 가져옵니다.",
-    "UPGRADE_DESCRIPTION": "체력을 !M! 회복합니다. 소멸. NL 증폭 [B] : 버린 카드 더미에서 카드 1 장을 선택해 가져옵니다."
+    "DESCRIPTION": "체력을 !M! 회복합니다. 소멸. NL 증폭 [E] : 버린 카드 더미에서 카드 1 장을 무작위로 가져옵니다.",
+    "UPGRADE_DESCRIPTION": "체력을 !M! 회복합니다. 소멸. NL 증폭 [E] : 버린 카드 더미에서 카드 1 장을 선택해 가져옵니다."
   },
   "EscapeVelocity": {
     "NAME": "탈출 속도",
@@ -45,8 +45,8 @@
   },
   "FinalSpark": {
     "NAME": "파이널 스파크",
-    "DESCRIPTION": "이 전투에서 이름에 '스파크'가 들어가는 카드를 사용할 때마다 비용이 [B] 감소합니다. NL 적 전체에게 피해를 !D! 줍니다. NL 카드의 비용이 초기화 됩니다.",
-    "UPGRADE_DESCRIPTION": "보존. NL 이 전투에서 이름에 '스파크'가 들어가는 카드를 사용할 때마다 비용이 [B] 감소합니다. NL 적 전체에게 피해를 !D! 줍니다. NL 카드의 비용이 초기화 됩니다"
+    "DESCRIPTION": "이 전투에서 이름에 '스파크'가 들어가는 카드를 사용할 때마다 비용이 [E] 감소합니다. NL 적 전체에게 피해를 !D! 줍니다. NL 카드의 비용이 초기화 됩니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 이 전투에서 이름에 '스파크'가 들어가는 카드를 사용할 때마다 비용이 [E] 감소합니다. NL 적 전체에게 피해를 !D! 줍니다. NL 카드의 비용이 초기화 됩니다"
   },
   "GrandCross": {
     "NAME": "그랜드 크로스",
@@ -72,8 +72,8 @@
   },
   "MasterSpark": {
     "NAME": "마스터 스파크",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 증폭 [B] : 대신 피해를 !B! 줍니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 증폭 [B] : 대신 피해를 9 더 줍니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 증폭 [E] : 대신 피해를 !B! 줍니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 증폭 [E] : 대신 피해를 9 더 줍니다."
   },
   "MeteoricShower": {
     "NAME": "유성우",
@@ -98,22 +98,22 @@
   },
   "OortCloud": {
     "NAME": "오르트 구름",
-    "DESCRIPTION": "!M! 의 판금 갑옷을 얻습니다. NL 증폭 [B] : !B! 의 판금 갑옷을 추가로 얻습니다.",
-    "UPGRADE_DESCRIPTION": "!M! 의 판금 갑옷을 얻습니다. NL 증폭 [B] : 3 의 판금 갑옷을 추가로 얻습니다."
+    "DESCRIPTION": "!M! 의 판금 갑옷을 얻습니다. NL 증폭 [E] : !B! 의 판금 갑옷을 추가로 얻습니다.",
+    "UPGRADE_DESCRIPTION": "!M! 의 판금 갑옷을 얻습니다. NL 증폭 [E] : 3 의 판금 갑옷을 추가로 얻습니다."
   },
   "PolarisUnique": {
     "NAME": "단 하나의 북극성",
-    "DESCRIPTION": "선천성. 뽑을 카드 더미에 길잡이 별 카드를 1 장 넣습니다. 매턴 시작 시 길잡이 별 카드가 뽑을 카드 더미에 있으면 [B] 를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. 뽑을 카드 더미에 길잡이 별 카드를 1 장 넣습니다. 매턴 시작 시 길잡이 별 카드가 뽑을 카드 더미에 있으면 [B] 를 얻습니다."
+    "DESCRIPTION": "선천성. 뽑을 카드 더미에 길잡이 별 카드를 1 장 넣습니다. 매턴 시작 시 길잡이 별 카드가 뽑을 카드 더미에 있으면 [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. 뽑을 카드 더미에 길잡이 별 카드를 1 장 넣습니다. 매턴 시작 시 길잡이 별 카드가 뽑을 카드 더미에 있으면 [E] 를 얻습니다."
   },
   "SatelliteIllusion": {
     "NAME": "새틀라이트 일루전",
-    "DESCRIPTION": "자신의 턴 동안 뽑을 카드 더미가 증가하면 [B] 를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. 자신의 턴 동안 뽑을 카드 더미가 증가하면 [B] 를 얻습니다."
+    "DESCRIPTION": "자신의 턴 동안 뽑을 카드 더미가 증가하면 [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. 자신의 턴 동안 뽑을 카드 더미가 증가하면 [E] 를 얻습니다."
   },
   "ShootTheMoon": {
     "NAME": "달을 향해 쏴라",
-    "DESCRIPTION": "보스가 아닌 적의 무작위 버프를 하나 제거합니다. 피해를 !D! 줍니다. NL 증폭 [B] : 대신 모든 버프를 제거하고 피해를 !B! 줍니다.",
+    "DESCRIPTION": "보스가 아닌 적의 무작위 버프를 하나 제거합니다. 피해를 !D! 줍니다. NL 증폭 [E] : 대신 모든 버프를 제거하고 피해를 !B! 줍니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWW"
   },
   "StarDustReverie": {
@@ -123,13 +123,13 @@
   },
   "UltraShortWave": {
     "NAME": "얼티밋 쇼트웨이브",
-    "DESCRIPTION": "[B] 를 !B! 얻고 충전 을 !M! 얻습니다. 이번 전투에서 이 카드의 효과를 1 씩 증가시킵니다.",
+    "DESCRIPTION": "[E] 를 !B! 얻고 충전 을 !M! 얻습니다. 이번 전투에서 이 카드의 효과를 1 씩 증가시킵니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MillisecondPulsars": {
     "NAME": "밀리세컨드 펄서",
-    "DESCRIPTION": "이번 전투에서 증폭 효과의 추가 [B] 소모를 제거합니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 이번 전투에서 증폭 효과의 추가 [B] 소모를 제거합니다."
+    "DESCRIPTION": "이번 전투에서 증폭 효과의 추가 [E] 소모를 제거합니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 이번 전투에서 증폭 효과의 추가 [E] 소모를 제거합니다."
   },
   "Spark": {
     "NAME": "스파크",
@@ -154,12 +154,12 @@
   "ChargingUp": {
     "NAME": "충전 완료!",
     "DESCRIPTION": "충전을 !M! 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "충전을 !M! 얻습니다. NL 증폭 [B] : 충전을 3 얻습니다."
+    "UPGRADE_DESCRIPTION": "충전을 !M! 얻습니다. NL 증폭 [E] : 충전을 3 얻습니다."
   },
   "LuminesStrike": {
     "NAME": "루미너스 스트라이크",
-    "DESCRIPTION": "손에 있는 카드 수의 2 배 만큼 피해를 줍니다. NL 증폭 [B] : 대신 현재 에너지의 4 배 만큼 피해를 줍니다.",
-    "UPGRADE_DESCRIPTION": "손에 있는 카드 수의 3 배 만큼 피해를 줍니다. NL 증폭 [B] : 대신 현재 에너지의 5 배 만큼 피해를 줍니다."
+    "DESCRIPTION": "손에 있는 카드 수의 2 배 만큼 피해를 줍니다. NL 증폭 [E] : 대신 현재 에너지의 4 배 만큼 피해를 줍니다.",
+    "UPGRADE_DESCRIPTION": "손에 있는 카드 수의 3 배 만큼 피해를 줍니다. NL 증폭 [E] : 대신 현재 에너지의 5 배 만큼 피해를 줍니다."
   },
   "OpenUniverse": {
     "NAME": "열린 우주",
@@ -197,7 +197,7 @@
   },
   "SuperPerseids": {
     "NAME": "슈퍼 페르세이드",
-    "DESCRIPTION": "사용 불가. 이 카드를 뽑으면 [B] 를 얻습니다. NL 이 카드가 소멸되면 무작위 적에게 데미지를 !D! 줍니다.",
+    "DESCRIPTION": "사용 불가. 이 카드를 뽑으면 [E] 를 얻습니다. NL 이 카드가 소멸되면 무작위 적에게 데미지를 !D! 줍니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MysteriousBeam": {
@@ -247,8 +247,8 @@
   },
   "PulseMagic": {
     "NAME": "펄스 마법",
-    "DESCRIPTION": "다음 턴에 [B] 를 얻습니다. 증폭 [B] : 이번 턴에 증폭 효과의 추가 [B] 소모가 제거됩니다.",
-    "UPGRADE_DESCRIPTION": "다음 턴에 [B] [B] 를 얻습니다. 증폭 [B] : 이번 턴에 증폭 효과의 추가 [B] 소모가 제거됩니다."
+    "DESCRIPTION": "다음 턴에 [E] 를 얻습니다. 증폭 [E] : 이번 턴에 증폭 효과의 추가 [E] 소모가 제거됩니다.",
+    "UPGRADE_DESCRIPTION": "다음 턴에 [E] [E] 를 얻습니다. 증폭 [E] : 이번 턴에 증폭 효과의 추가 [E] 소모가 제거됩니다."
   },
   "D6C": {
     "NAME": "66C",
@@ -262,17 +262,17 @@
   },
   "SporeBomb": {
     "NAME": "포자 폭탄",
-    "DESCRIPTION": "적에게 취약 효과를 !M! 부여합니다. NL 증폭 [B] : 대신 적 전체에게 취약 효과를 !M! 부여합니다.",
-    "UPGRADE_DESCRIPTION": "적 전체에게 취약 효과를 !M! 부여합니다. NL 증폭 [B] : 취약 효과를 1 만큼 더 부여합니다."
+    "DESCRIPTION": "적에게 취약 효과를 !M! 부여합니다. NL 증폭 [E] : 대신 적 전체에게 취약 효과를 !M! 부여합니다.",
+    "UPGRADE_DESCRIPTION": "적 전체에게 취약 효과를 !M! 부여합니다. NL 증폭 [E] : 취약 효과를 1 만큼 더 부여합니다."
   },
   "FluorensentBeam": {
     "NAME": "플루오레센트 빔",
-    "DESCRIPTION": "모든 적이 체력을 !D! 잃습니다. NL 증폭 [B] [B] : 대신 피해를 !B! 줍니다.",
+    "DESCRIPTION": "모든 적이 체력을 !D! 잃습니다. NL 증폭 [E] [E] : 대신 피해를 !B! 줍니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WitchOfGreed": {
     "NAME": "욕심쟁이 마녀",
-    "DESCRIPTION": "전투가 끝나면 골드를 !M! 얻습니다.  NL 증폭 [B] : 무작위 포션을 1개 추가로 얻습니다.",
+    "DESCRIPTION": "전투가 끝나면 골드를 !M! 얻습니다.  NL 증폭 [E] : 무작위 포션을 1개 추가로 얻습니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "TreasureHunter": {
@@ -282,7 +282,7 @@
   },
   "Robbery": {
     "NAME": "도둑",
-    "DESCRIPTION": "피해를 !D! 줍니다. 막히지 않은 피해만큼 골드를 얻습니다. NL 소멸. NL 증폭 [B] : 골드를 2 배 얻습니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. 막히지 않은 피해만큼 골드를 얻습니다. NL 소멸. NL 증폭 [E] : 골드를 2 배 얻습니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "6A": {
@@ -297,7 +297,7 @@
   },
   "RefractionSpark": {
     "NAME": "굴절 스파크",
-    "DESCRIPTION": "피해를 !D! 줍니다. 이 카드의 피해량만큼 손에 있는 스파크 카드의 피해를 증가시킵니다. NL 증폭 [B] : 주는 피해가 !B! 이 됩니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. 이 카드의 피해량만큼 손에 있는 스파크 카드의 피해를 증가시킵니다. NL 증폭 [E] : 주는 피해가 !B! 이 됩니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MagicChant": {
@@ -341,7 +341,7 @@
   },
   "ChargeUpSpray": {
     "NAME": "충전 스프레이",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드로 충전 효과를 발동시키면 [B] 를 얻고 카드를 !M! 장 뽑습니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드로 충전 효과를 발동시키면 [E] 를 얻고 카드를 !M! 장 뽑습니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "EnergyRecoil": {
@@ -360,7 +360,7 @@
   },
   "ManaConvection": {
     "NAME": "마나 전달",
-    "DESCRIPTION": "카드를 !M! 뽑습니다. 카드를 2 장 선택해 소멸시킵니다. NL 충전이 8 이상이면, 충전을 8 잃고 [B] [B] 를 얻습니다.",
+    "DESCRIPTION": "카드를 !M! 뽑습니다. 카드를 2 장 선택해 소멸시킵니다. NL 충전이 8 이상이면, 충전을 8 잃고 [E] [E] 를 얻습니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ManaRampage": {
@@ -376,12 +376,12 @@
   "AFriendsGift": {
     "NAME": "친구의 선물",
     "DESCRIPTION": "사용 불가. 무작위 카드 3 장 중 하나로 변화시킵니다",
-    "UPGRADE_DESCRIPTION": "보존. 피해를 !D! 줍니다. 매턴 시작 시 피해가 2 증가합니다. 소멸. NL 증폭 [B] : 대신 피해를 !B! 주고 소멸하지 않습니다."
+    "UPGRADE_DESCRIPTION": "보존. 피해를 !D! 줍니다. 매턴 시작 시 피해가 2 증가합니다. 소멸. NL 증폭 [E] : 대신 피해를 !B! 주고 소멸하지 않습니다."
   },
   "BinaryStars": {
     "NAME": "쌍성",
-    "DESCRIPTION": "블랙 플레어 스타 또는 화이트 드워프 카드를 선택해 얻습니다. 소멸. NL 증폭 [B] : 2 개의 카드를 모두 얻습니다.",
-    "UPGRADE_DESCRIPTION": "강화된 블랙 플레어 스타 또는 화이트 드워프 카드를 선택해 얻습니다. 소멸. NL 증폭 [B] : 2 개의 카드를 모두 얻습니다."
+    "DESCRIPTION": "블랙 플레어 스타 또는 화이트 드워프 카드를 선택해 얻습니다. 소멸. NL 증폭 [E] : 2 개의 카드를 모두 얻습니다.",
+    "UPGRADE_DESCRIPTION": "강화된 블랙 플레어 스타 또는 화이트 드워프 카드를 선택해 얻습니다. 소멸. NL 증폭 [E] : 2 개의 카드를 모두 얻습니다."
   },
   "CollectingQuirk": {
     "NAME": "골동품 수집",
@@ -422,7 +422,7 @@
   },
   "FairyDestructionRay": {
     "NAME": "요정 파괴 광선",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. 증폭 [B] [B] : 피해를 받은 후 체력이 !M! 이하가 된 적은 죽습니다.",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. 증폭 [E] [E] : 피해를 받은 후 체력이 !M! 이하가 된 적은 죽습니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Orbital": {
@@ -437,12 +437,12 @@
   },
   "ExplosiveMarionette": {
     "NAME": "폭발성 꼭두각시",
-    "DESCRIPTION": "보존. 피해를 !D! 줍니다. NL 증폭 [B] : 2 배의 피해를 줍니다. 소멸.",
+    "DESCRIPTION": "보존. 피해를 !D! 줍니다. NL 증폭 [E] : 2 배의 피해를 줍니다. 소멸.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "OpticalCamouflage": {
     "NAME": "광학 미채",
-    "DESCRIPTION": "보존. 방어도를 !B! 얻습니다. NL 증폭 [B] : 2 배의 방어도를 얻습니다. 소멸.",
+    "DESCRIPTION": "보존. 방어도를 !B! 얻습니다. NL 증폭 [E] : 2 배의 방어도를 얻습니다. 소멸.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "FiveColoredTalisman": {
@@ -452,7 +452,7 @@
   },
   "AlicesGift": {
     "NAME": "앨리스의 선물",
-    "DESCRIPTION": "보존. 피해를 !D! 줍니다. 소멸. NL 증폭 [B] [B] : 3 배의 피해를 줍니다.",
+    "DESCRIPTION": "보존. 피해를 !D! 줍니다. 소멸. NL 증폭 [E] [E] : 3 배의 피해를 줍니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Exhaustion_MRS": {
@@ -462,7 +462,7 @@
   },
   "UltimateShortwave": {
     "NAME": "얼티밋 쇼트웨이브",
-    "DESCRIPTION": "[B] 를 !B! 얻고 충전 을 !M! 얻습니다. 이번 전투동안 이 카드로 얻는 충전이 !D! 증가하고 얻는 [B] 가 1 증가합니다.",
+    "DESCRIPTION": "[E] 를 !B! 얻고 충전 을 !M! 얻습니다. 이번 전투동안 이 카드로 얻는 충전이 !D! 증가하고 얻는 [E] 가 1 증가합니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "NebulaRing": {
