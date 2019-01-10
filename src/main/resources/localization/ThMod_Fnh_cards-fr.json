@@ -183,7 +183,7 @@
   },
   "StarlightTyphoon": {
     "NAME": "Typhon de lumière",
-    "DESCRIPTION": "Infligez des dégats égaux à to !M! fois le nombre de carte qui coûte 0 jouées ce combat à TOUS les ennemis.",
+    "DESCRIPTION": "Infligez des dégats égaux à !M! fois le nombre de carte qui coûte 0 jouées ce combat à TOUS les ennemis.",
     "UPGRADE_DESCRIPTION": " Épuisez TOUTES les cartes qui ne sont pas des attaques dans votre main. Ajouter le même nombre d'Étincelles améliorées à votre main.",
     "EXTENDED_DESCRIPTION": [
       " NL (Inflige !B! dégats.)",
@@ -322,7 +322,7 @@
   },
   "DarkMatter": {
     "NAME": "Matière noire",
-    "DESCRIPTION": "Ne peut-être jouer qu'une seule fois par tour.NL Ajoutez 2 copies de cette carte à votre pioche. Piochez 1 carte. Lorsque cette carte est Épuisée, gagnez !B! d'Armures. NL Éthérée.",
+    "DESCRIPTION": "Ne peut-être jouer qu'une seule fois par tour. NL Ajoutez 2 copies de cette carte à votre pioche. Piochez 1 carte. Lorsque cette carte est Épuisée, gagnez !B! d'Armures. NL Éthérée.",
     "UPGRADE_DESCRIPTION": "Ne peut-être jouer qu'une seule fois par tour.NL Ajoutez 2 copies de cette carte à votre pioche. Piochez 1 carte. Lorsque cette carte est Épuisée, gagnez !B! d'Armures. NL Éthérée.",
     "EXTENDED_DESCRIPTION":[
       "Je ne pas jouer matière noire à nouveau ce tour-ci.",
