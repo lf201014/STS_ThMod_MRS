@@ -281,7 +281,7 @@
   },
   "Robbery": {
     "NAME": "強取豪奪",
-    "DESCRIPTION": "造成 !D! 點傷害。獲得造成傷害數量的金幣。 NL 消耗 。 NL 增幅 [E] :獲得雙倍的金幣",
+    "DESCRIPTION": "造成 !D! 點傷害。獲得未被 格擋 的攻擊傷害數量的金幣。 NL 消耗 。 NL 增幅 [E] :獲得2倍的金幣",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "6A": {
