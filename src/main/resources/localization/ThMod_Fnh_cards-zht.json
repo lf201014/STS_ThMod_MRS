@@ -276,7 +276,7 @@
   },
   "TreasureHunter": {
     "NAME": "寶物獵手",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 若在精英或首領房中以這張牌殺死一名不是「爪牙」的敵人，戰鬥獎勵增加1件隨機遺物。 NL 消耗",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 若這張牌殺死一名是「精英」或「首領」的敵人，戰鬥獎勵增加1件隨機遺物。 NL 消耗",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Robbery": {
@@ -430,8 +430,8 @@
   },
   "SillyJoke": {
     "NAME": "幻象泡影",
-    "DESCRIPTION": "施展一個只有 真正的魔法使 才能看到 的華麗魔術。 NL 消耗 。 NL 虛無",
-    "UPGRADE_DESCRIPTION": "施展一個只有 真正的魔法使 才能看到 的超級華麗魔術。 NL 消耗 。 NL 虛無"
+    "DESCRIPTION": "施展一個只有 真正的魔法使 才能看到 的華麗魔法。 NL 消耗 。 NL 虛無",
+    "UPGRADE_DESCRIPTION": "施展一個只有 真正的魔法使 才能看到 的超級華麗魔法。 NL 消耗 。 NL 虛無"
   },
   "ExplosiveMarionette": {
     "NAME": "人偶炸彈",
