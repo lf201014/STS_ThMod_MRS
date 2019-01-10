@@ -2,9 +2,21 @@
   "keywords": [
     {
       "NAMES": [
+        "真正的魔法使"
+      ],
+      "DESCRIPTION": "貌似魔理沙並不能算是"
+    },
+    {
+      "NAMES": [
+        "才能看到"
+      ],
+      "DESCRIPTION": "嗯……或許你是看不到了"
+    },
+    {
+      "NAMES": [
         "力竭"
       ],
-      "DESCRIPTION": "力竭時無法獲得或使用 蓄力"
+      "DESCRIPTION": "力竭是 無法打出 的 狀態 牌。無法獲得或使用 蓄力"
     },
     {
       "NAMES": [
