@@ -231,3 +231,10 @@ v0.14.11 1/9/2019
 
 v0.14.12 1/10/2019
 *Lower the volume of the sfx for character selection
+
+v0.14.13 1/11/2019
+*Treasture Hunter : the reward is available in event combats now
+*Starlight Typhoon : cards played for free by certain methods will increase the counter now
+*Fix various issues caused by playing Mana Rampage
+*Rewrite the method of Mana Rampage
+*Update Tradional Chinese texts(GitHub user : rainfoxest)
