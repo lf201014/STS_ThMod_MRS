@@ -276,7 +276,7 @@
   },
   "TreasureHunter": {
     "NAME": "寶物獵手",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 若在精英或首領房中以這張牌殺死一名不是「爪牙」的敵人，戰鬥獎勵增加1件隨機遺物。 NL 消耗",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 若這張牌殺死一名是「精英」或「首領」的敵人，戰鬥獎勵增加1件隨機遺物。 NL 消耗",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Robbery": {
