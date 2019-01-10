@@ -430,8 +430,8 @@
   },
   "SillyJoke": {
     "NAME": "幻象泡影",
-    "DESCRIPTION": "施展一個只有 真正的魔法使 才能看到 的華麗魔術。 NL 消耗 。 NL 虛無",
-    "UPGRADE_DESCRIPTION": "施展一個只有 真正的魔法使 才能看到 的超級華麗魔術。 NL 消耗 。 NL 虛無"
+    "DESCRIPTION": "施展一個只有 真正的魔法使 才能看到 的華麗魔法。 NL 消耗 。 NL 虛無",
+    "UPGRADE_DESCRIPTION": "施展一個只有 真正的魔法使 才能看到 的超級華麗魔法。 NL 消耗 。 NL 虛無"
   },
   "ExplosiveMarionette": {
     "NAME": "人偶炸彈",
