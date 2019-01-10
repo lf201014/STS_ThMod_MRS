@@ -49,8 +49,8 @@
   },
   "FinalSpark": {
     "NAME": "究極火花",
-    "DESCRIPTION": "本場戰鬥中每打出1張 火花 ，耗能減少1 [E] 。 NL 對所有敵人造成 !D! 點傷害。 NL 打出後重設耗能",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 本場戰鬥中每打出1張 火花 ，耗能減少1 [E] 。 NL 對所有敵人造成 !D! 點傷害。 NL 打出後重設耗能"
+    "DESCRIPTION": "本場戰鬥中每打出1張 火花 ，這張牌的耗能減少1。 NL 對所有敵人造成 !D! 點傷害。 NL 打出後重設耗能",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 本場戰鬥中每打出1張 火花 ，這張牌的耗能減少1。 NL 對所有敵人造成 !D! 點傷害。 NL 打出後重設耗能"
   },
   "GrandCross": {
     "NAME": "大十字",
@@ -182,7 +182,7 @@
   },
   "MaximisePower": {
     "NAME": "火力全開！",
-    "DESCRIPTION": "將 蓄力 層數變成 [E] 。增加1張 力竭 到手牌。本回合內的攻擊傷害翻倍。NL 消耗",
+    "DESCRIPTION": "將 蓄力 層數變成 [E] 。增加1張 力竭 到手牌。本回合內的攻擊傷害翻倍。 NL 消耗",
     "UPGRADE_DESCRIPTION": "將 蓄力 層數變成 [E] 。本回合內的攻擊傷害翻倍"
   },
   "StarlightTyphoon": {
@@ -251,17 +251,17 @@
   },
   "D6C": {
     "NAME": "迎頭痛擊",
-    "DESCRIPTION": "固有 。 造成 !D! 點傷害，若棄牌堆裡沒有牌，造成雙倍傷害",
+    "DESCRIPTION": "固有 。造成 !D! 點傷害。若棄牌堆沒有牌，造成2倍傷害",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Singularity": {
     "NAME": "奇點",
-    "DESCRIPTION": "每打出1張耗能為0的牌時，手牌內1張隨機攻擊牌攻擊力增加 !M! 點",
+    "DESCRIPTION": "每打出1張耗能為0的牌時，手牌中1張隨機攻擊牌攻擊傷害增加 !M! 點",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "SporeBomb": {
     "NAME": "孢子炸彈",
-    "DESCRIPTION": "給予 !M! 層 易傷 。 NL 增幅 [E] :改為給予所有敵人 易傷 ",
+    "DESCRIPTION": "給予 !M! 層 易傷 。 NL 增幅 [E] :改為給予所有敵人 易傷",
     "UPGRADE_DESCRIPTION": "給予所有敵人 !M! 層 易傷 。 NL 增幅 [E] :再加1層"
   },
   "FluorensentBeam": {
@@ -271,7 +271,7 @@
   },
   "WitchOfGreed": {
     "NAME": "強欲魔女",
-    "DESCRIPTION": "戰鬥結束時，額外獲得 !M! 金幣 。 NL 增幅 [E] :額外獲得1瓶隨機藥劑",
+    "DESCRIPTION": "戰鬥結束時，額外獲得 !M! 金幣。 NL 增幅 [E] :額外獲得1瓶隨機藥劑",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "TreasureHunter": {
@@ -281,7 +281,7 @@
   },
   "Robbery": {
     "NAME": "強取豪奪",
-    "DESCRIPTION": "造成 !D! 點傷害。獲得造成傷害數量的金幣。 NL 消耗 。 NL 增幅 [E] :獲得雙倍的金幣",
+    "DESCRIPTION": "造成 !D! 點傷害。獲得未被 格擋 的攻擊傷害數量的金幣。 NL 消耗 。 NL 增幅 [E] :獲得2倍金幣",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "6A": {
@@ -291,7 +291,7 @@
   },
   "CircumpolarStar": {
     "NAME": "拱極星",
-    "DESCRIPTION": "獲得 !B! 點 格擋 ，抽 !M! 張卡。使這張牌在本場戰鬥中抽牌數+1",
+    "DESCRIPTION": "獲得 !B! 點 格擋 ，抽 !M! 張牌。使這張牌在本場戰鬥中抽牌數+1",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "RefractionSpark": {
@@ -334,8 +334,8 @@
   },
   "CasketOfStar": {
     "NAME": "星之器",
-    "DESCRIPTION": "每獲得 格擋 ，增加1張 火花 到手牌",
-    "UPGRADE_DESCRIPTION": "每獲得 格擋 ，增加1張 已升級 火花 到手牌"
+    "DESCRIPTION": "每當你獲得 格擋 時，增加1張 火花 到手牌",
+    "UPGRADE_DESCRIPTION": "每當你獲得 格擋 時，增加1張 已升級 火花 到手牌"
   },
   "ChargeUpSpray": {
     "NAME": "蓄力噴射",
@@ -352,13 +352,13 @@
     ]
   },
   "GalacticHalo": {
-    "NAME": "星暈",
+    "NAME": "銀暈",
     "DESCRIPTION": "獲得 !B! 點 格擋， !M! 層 蓄力",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ManaConvection": {
     "NAME": "魔力對流",
-    "DESCRIPTION": "抽 !M! 張牌並 消耗 2張手牌。 NL 若 蓄力 層數大於或等於8層，則減少8層 蓄力 並獲得 [E] [E] ",
+    "DESCRIPTION": "抽 !M! 張牌並 消耗 2張手牌。 NL 若 蓄力 層數大於或等於8層，則減少8層 蓄力 並獲得 [E] [E]",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ManaRampage": {
@@ -368,7 +368,7 @@
   },
   "StarBarrage": {
     "NAME": "魔法星彈",
-    "DESCRIPTION": "造成 !D! 點傷害 !M! 次，並使這張卡在這場戰鬥中傷害段數增加1",
+    "DESCRIPTION": "造成 !D! 點傷害 !M! 次。在本場戰鬥中，這張牌的傷害次數增加1",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "AFriendsGift": {
@@ -430,8 +430,8 @@
   },
   "SillyJoke": {
     "NAME": "幻象泡影",
-    "DESCRIPTION": "施展一個只有真正的魔法使才能看到的華麗魔術。 NL 消耗 。 NL 虛無",
-    "UPGRADE_DESCRIPTION": "施展一個只有真正的魔法使才能看到的超級華麗魔術。 NL 消耗 。 NL 虛無"
+    "DESCRIPTION": "施展一個只有 真正的魔法使 才能看到 的華麗魔術。 NL 消耗 。 NL 虛無",
+    "UPGRADE_DESCRIPTION": "施展一個只有 真正的魔法使 才能看到 的超級華麗魔術。 NL 消耗 。 NL 虛無"
   },
   "ExplosiveMarionette": {
     "NAME": "人偶炸彈",
@@ -460,12 +460,12 @@
   },
   "UltimateShortwave": {
     "NAME": "極超短波",
-    "DESCRIPTION": "獲得 !B! [E] 與 !M! 層 蓄力 。使這張牌在這場戰鬥中 蓄力 獲得量增加 !D! ，能量獲得量增加1",
+    "DESCRIPTION": "獲得 !B! [E] 與 !M! 層 蓄力 。在本場戰鬥中，這張牌的 蓄力 獲得量增加 !D! ， [E] 獲得量增加1",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "NebulaRing": {
     "NAME": "星雲環",
-    "DESCRIPTION": "每當你因敵人或卡牌損失 格擋 ，獲得 !M! 層 多層護甲",
+    "DESCRIPTION": "每當你因敵人或卡牌損失 格擋 時，獲得 !M! 層 多層護甲",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "SprinkleStarSeal": {
