@@ -182,7 +182,7 @@
   },
   "MaximisePower": {
     "NAME": "火力全開！",
-    "DESCRIPTION": "將 蓄力 層數變成 [E] 。增加1張 力竭 到手牌。本回合內的攻擊傷害翻倍。NL 消耗",
+    "DESCRIPTION": "將 蓄力 層數變成 [E] 。增加1張 力竭 到手牌。本回合內的攻擊傷害翻倍。 NL 消耗",
     "UPGRADE_DESCRIPTION": "將 蓄力 層數變成 [E] 。本回合內的攻擊傷害翻倍"
   },
   "StarlightTyphoon": {
@@ -430,8 +430,8 @@
   },
   "SillyJoke": {
     "NAME": "幻象泡影",
-    "DESCRIPTION": "施展一個只有真正的魔法使才能看到的華麗魔術。 NL 消耗 。 NL 虛無",
-    "UPGRADE_DESCRIPTION": "施展一個只有真正的魔法使才能看到的超級華麗魔術。 NL 消耗 。 NL 虛無"
+    "DESCRIPTION": "施展一個只有 真正的魔法使 才能看到 的華麗魔術。 NL 消耗 。 NL 虛無",
+    "UPGRADE_DESCRIPTION": "施展一個只有 真正的魔法使 才能看到 的超級華麗魔術。 NL 消耗 。 NL 虛無"
   },
   "ExplosiveMarionette": {
     "NAME": "人偶炸彈",
