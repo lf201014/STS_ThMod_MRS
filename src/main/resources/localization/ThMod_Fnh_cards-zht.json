@@ -296,7 +296,7 @@
   },
   "RefractionSpark": {
     "NAME": "折射火花",
-    "DESCRIPTION": "造成 !D! 點傷害，手牌中所有名字中有 火花 的牌傷害增加造成傷害的數值。 NL 增幅 [E] :傷害變為 !B! 點",
+    "DESCRIPTION": "造成 !D! 點傷害，按照未被 格擋 的攻擊傷害增加名字中有 火花 的手牌的攻擊。 NL 增幅 [E] :傷害變為 !B! 點",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MagicChant": {
