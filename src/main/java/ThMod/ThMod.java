@@ -601,7 +601,6 @@ public class ThMod implements PostExhaustSubscriber,
     if (
         (card.costForTurn == 0) ||
             (card.costForTurn <= -2) ||
-            (card.freeToPlayOnce) ||
             ((card.costForTurn == -1) && (AbstractDungeon.player.energy.energy <= 0))
     ) {
       typhoonCounter++;
