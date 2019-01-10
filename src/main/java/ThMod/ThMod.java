@@ -598,8 +598,12 @@ public class ThMod implements PostExhaustSubscriber,
   @Override
   public void receiveCardUsed(AbstractCard card) {
     ThMod.logger.info("ThMod : Card used : " + card.cardID + " ; cost : " + card.costForTurn);
-    if ((card.costForTurn == 0) || (card.costForTurn <= -2) || ((card.costForTurn == -1) && (
-        AbstractDungeon.player.energy.energy <= 0))) {
+    if (
+        (card.costForTurn == 0) ||
+            (card.costForTurn <= -2) ||
+            (card.freeToPlayOnce) ||
+            ((card.costForTurn == -1) && (AbstractDungeon.player.energy.energy <= 0))
+    ) {
       typhoonCounter++;
       ThMod.logger.info("typhoon-counter increased , now :" + typhoonCounter);
     }

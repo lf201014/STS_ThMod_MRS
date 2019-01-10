@@ -45,9 +45,11 @@ public class ManaRampage extends CustomCard {
       cnt += 2;
     }
 
-    AbstractDungeon.actionManager.addToBottom(
-        new ManaRampageAction(cnt,this.upgraded)
-    );
+    if (cnt > 0) {
+      AbstractDungeon.actionManager.addToBottom(
+          new ManaRampageAction(cnt, this.upgraded)
+      );
+    }
 
     if (!this.freeToPlayOnce) {
       p.energy.use(EnergyPanel.totalCount);
