@@ -353,7 +353,7 @@
   },
   "GalacticHalo": {
     "NAME": "銀暈",
-    "DESCRIPTION": "獲得 !B! 點 格擋， !M! 層 蓄力",
+    "DESCRIPTION": "獲得 !B! 點 格擋 ， !M! 層 蓄力",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ManaConvection": {
@@ -397,15 +397,15 @@
   },
   "PropBag": {
     "NAME": "便攜道具包",
-    "DESCRIPTION": "獲得 奧利哈鋼、孫子兵法或增幅魔杖其中一個遺物。 NL 戰鬥結束後失去該 遺物 。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "固有 。 獲得 奧利哈鋼、孫子兵法或增幅魔杖其中一個遺物。 NL 戰鬥結束後失去該 遺物 。 NL 消耗"
+    "DESCRIPTION": "獲得奧利哈鋼、孫子兵法或增幅魔杖其中一個遺物。 NL 戰鬥結束後失去該遺物。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "固有 。獲得奧利哈鋼、孫子兵法或增幅魔杖其中一個遺物。 NL 戰鬥結束後失去該遺物。 NL 消耗"
   },
   "BlackFlareStar": {
     "NAME": "黑耀星",
     "DESCRIPTION": "手牌數大於等於 4 時才能打出。 NL 丟棄任意張牌，每丟棄1張獲得 !B! 格擋",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
     "EXTENDED_DESCRIPTION":[
-      "手牌數小於 #r4",
+      "手牌數小於 4",
       ""
     ]
   },
@@ -414,7 +414,7 @@
     "DESCRIPTION": "手牌數小於等於4時才能打出。 NL 造成 !B! 傷害 (棄牌堆牌數之1.5倍)。增加2張 灼傷 到手牌",
     "UPGRADE_DESCRIPTION": "手牌數小於等於4時才能打出。 NL 造成 !B! 傷害 (棄牌堆牌數之2倍)。增加2張 灼傷 到手牌",
     "EXTENDED_DESCRIPTION":[
-      "手牌數大於 #r4",
+      "手牌數大於 4",
       ""
     ]
   },
@@ -440,7 +440,7 @@
   },
   "OpticalCamouflage": {
     "NAME": "光學迷彩",
-    "DESCRIPTION": "保留 。獲得 !B! 格擋 。 NL 增幅 [E] : 獲得2倍格擋。 消耗",
+    "DESCRIPTION": "保留 。獲得 !B! 格擋 。 NL 增幅 [E] : 獲得2倍 格擋 。 消耗",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "FiveColoredTalisman": {
