@@ -245,3 +245,6 @@ v0.14.14 1/11/2019
 
 v0.14.15 1/11/2019
 *Add French Language Support(thanks to GitHub user : LenSama)
+
+v0.14.16 1/11/2019
+*Adapt to new version of base game(
