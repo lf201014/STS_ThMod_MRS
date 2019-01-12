@@ -1,16 +1,25 @@
 package ThMod.patches;
 
-import java.util.regex.*;
-import org.apache.logging.log4j.*;
-import com.badlogic.gdx.graphics.*;
-import basemod.*;
-import com.megacrit.cardcrawl.core.*;
-import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.megacrit.cardcrawl.cards.*;
-import javassist.*;
-import javassist.expr.*;
-import com.badlogic.gdx.graphics.g2d.*;
-import com.megacrit.cardcrawl.helpers.*;
+import basemod.BaseMod;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.modthespire.lib.ByRef;
+import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DescriptionLine;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import java.util.regex.Pattern;
+import javassist.CannotCompileException;
+import javassist.expr.ExprEditor;
+import javassist.expr.FieldAccess;
+import javassist.expr.MethodCall;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class EnergyTextPatch {
 
@@ -95,7 +104,7 @@ public class EnergyTextPatch {
         public void edit(final MethodCall m) throws CannotCompileException {
           if (m.getClassName().equals("java.lang.String") && m.getMethodName().equals("equals")) {
             m.replace(
-                "{ $_ = thmod.patches.EnergyTextPatch.RenderDescriptionEnergy.replaceEquals(tmp, (java.lang.String)$1); }");
+                "{ $_ = ThMod.patches.EnergyTextPatch.RenderDescriptionEnergy.replaceEquals(tmp, (java.lang.String)$1); }");
           }
         }
 
@@ -103,7 +112,7 @@ public class EnergyTextPatch {
           if (m.getClassName().equals("com.megacrit.cardcrawl.helpers.ImageMaster") && m
               .getFieldName().equals("GREEN_ORB")) {
             m.replace(
-                "{ $_ = thmod.patches.EnergyTextPatch.RenderDescriptionEnergy.replaceOrbField(tmp, this.card); }");
+                "{ $_ = ThMod.patches.EnergyTextPatch.RenderDescriptionEnergy.replaceOrbField(tmp, this.card); }");
           }
         }
       };

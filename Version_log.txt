@@ -238,3 +238,13 @@ v0.14.13 1/11/2019
 *Fix various issues caused by playing Mana Rampage
 *Rewrite the method of Mana Rampage
 *Update Tradional Chinese texts(GitHub user : rainfoxest)
+
+v0.14.14 1/11/2019
+*revert last change about Starlight Typhoon
+*Update Tradional Chinese texts(GitHub user : rainfoxest)
+
+v0.14.15 1/11/2019
+*Add French Language Support(thanks to GitHub user : LenSama)
+
+v0.14.16 1/11/2019
+*Adapt to new version of base game(
