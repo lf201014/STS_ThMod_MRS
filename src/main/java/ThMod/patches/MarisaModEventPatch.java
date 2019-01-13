@@ -40,7 +40,7 @@ public class MarisaModEventPatch {
               " PlayerCharacter  : " +
               AbstractDungeon.player.title +
               " ; retVal event : " +
-              _retVal.DESCRIPTIONS[0]
+              _retVal.toString()
       );
       return _retVal;
     }
