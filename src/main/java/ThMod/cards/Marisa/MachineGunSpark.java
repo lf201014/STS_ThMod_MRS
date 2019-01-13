@@ -1,5 +1,7 @@
 package ThMod.cards.Marisa;
 
+import static ThMod.patches.CardTagEnum.SPARK;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,7 +12,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
-import ThMod.action.SparkCostAction;
 import ThMod.patches.AbstractCardEnum;
 
 public class MachineGunSpark
@@ -42,6 +43,7 @@ public class MachineGunSpark
     this.baseDamage = ATTACK_DMG;
     this.magicNumber = this.baseMagicNumber = CNT;
     this.exhaust = true;
+    this.tags.add(SPARK);
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
@@ -55,7 +57,6 @@ public class MachineGunSpark
           )
       );
     }
-    AbstractDungeon.actionManager.addToBottom(new SparkCostAction());
   }
 
   public AbstractCard makeCopy() {

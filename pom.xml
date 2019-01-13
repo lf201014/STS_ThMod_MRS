@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ThMod_FnH</groupId>
-  <artifactId>ThMod_FnH</artifactId>
-  <version>v0.14.5</version>
+  <groupId>ThMod</groupId>
+  <artifactId>ThMod</artifactId>
+  <version>v0.14.17</version>
   <packaging>jar</packaging>
 
 
