@@ -2,7 +2,9 @@ package ThMod;
 
 import static ThMod.patches.AbstractCardEnum.MARISA_COLOR;
 import static ThMod.patches.ThModClassEnum.MARISA;
+import static ThMod.patches.CardTagEnum.SPARK;
 
+import ThMod.action.SparkCostAction;
 import ThMod.cards.Marisa.AlicesGift;
 import ThMod.cards.Marisa.EnergyRecoil;
 import ThMod.cards.Marisa.ManaRampage;
@@ -613,6 +615,11 @@ public class ThMod implements PostExhaustSubscriber,
     }
     if (card.retain) {
       card.retain = false;
+    }
+    if (card.hasTag(SPARK)){
+      AbstractDungeon.actionManager.addToTop(
+          new SparkCostAction()
+      );
     }
   }
 

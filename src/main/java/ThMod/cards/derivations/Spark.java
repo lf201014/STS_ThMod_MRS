@@ -1,5 +1,7 @@
 package ThMod.cards.derivations;
 
+import static ThMod.patches.CardTagEnum.SPARK;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,7 +12,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
-import ThMod.action.SparkCostAction;
 import ThMod.patches.AbstractCardEnum;
 
 public class Spark extends CustomCard {
@@ -39,7 +40,7 @@ public class Spark extends CustomCard {
 
     this.exhaust = true;
     this.baseDamage = ATTACK_DMG;
-
+    this.tags.add(SPARK);
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
@@ -49,9 +50,6 @@ public class Spark extends CustomCard {
             new DamageInfo(p, this.damage, this.damageTypeForTurn),
             AbstractGameAction.AttackEffect.SLASH_DIAGONAL
         )
-    );
-    AbstractDungeon.actionManager.addToBottom(
-        new SparkCostAction()
     );
   }
 

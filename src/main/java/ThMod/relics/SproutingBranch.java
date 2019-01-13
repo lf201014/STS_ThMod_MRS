@@ -33,6 +33,11 @@ public class SproutingBranch extends CustomRelic {
     return new SproutingBranch();
   }
 
+  @Override
+  public void onEquip() {
+    AbstractDungeon.rareRelicPool.remove("Dead Branch");
+  }
+
   public void atBattleStart() {
     AbstractDungeon.actionManager.addToBottom(
         new RelicAboveCreatureAction(AbstractDungeon.player, this)
@@ -42,7 +47,7 @@ public class SproutingBranch extends CustomRelic {
             AbstractDungeon.player,
             AbstractDungeon.player,
             new RegenPower(AbstractDungeon.player, 5),
-            1
+            5
         )
     );
   }

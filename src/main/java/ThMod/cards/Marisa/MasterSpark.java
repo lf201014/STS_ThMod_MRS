@@ -1,5 +1,7 @@
 package ThMod.cards.Marisa;
 
+import static ThMod.patches.CardTagEnum.SPARK;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -14,7 +16,6 @@ import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 
 import ThMod.ThMod;
 import ThMod.abstracts.AmplifiedAttack;
-import ThMod.action.SparkCostAction;
 import ThMod.patches.AbstractCardEnum;
 
 public class MasterSpark
@@ -49,6 +50,7 @@ public class MasterSpark
     this.baseDamage = ATK_DMG;
     this.ampNumber = AMP_DMG;
     this.baseBlock = this.baseDamage + this.ampNumber;
+    this.tags.add(SPARK);
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
@@ -59,9 +61,6 @@ public class MasterSpark
         )
     );
 
-    AbstractDungeon.actionManager.addToBottom(
-        new SparkCostAction()
-    );
     if (ThMod.Amplified(this, AMP)) {
       AbstractDungeon.actionManager.addToBottom(
           new DamageAction(

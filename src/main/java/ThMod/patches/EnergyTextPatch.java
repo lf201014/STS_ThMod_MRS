@@ -1,5 +1,5 @@
 package ThMod.patches;
-
+/*
 import basemod.BaseMod;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -131,3 +131,4 @@ public class EnergyTextPatch {
   }
 }
 
+*/
