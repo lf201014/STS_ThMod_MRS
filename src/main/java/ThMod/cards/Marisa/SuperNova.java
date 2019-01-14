@@ -39,10 +39,12 @@ public class SuperNova extends CustomCard {
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
+    /*
     if ((this.upgraded) && (p.hasPower("SuperNovaPower"))) {
       SuperNovaPower po = (SuperNovaPower) p.getPower("SuperNovaPower");
       po.upgraded = true;
     }
+    */
     AbstractDungeon.actionManager.addToBottom(
         new ApplyPowerAction(
             p,

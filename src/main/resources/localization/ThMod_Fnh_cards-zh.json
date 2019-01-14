@@ -49,8 +49,8 @@
   },
   "FinalSpark": {
     "NAME": "究极火花",
-    "DESCRIPTION": "本场战斗中你每打出一张 “火花”牌，此卡的费用-1。 NL 对所有敌人造成 !D! 点伤害。 NL 此卡在使用后重置费用。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 本场战斗中你每打出一张 “火花”牌，此卡的费用-1。 NL 对所有敌人造成 !D! 点伤害。 NL 此卡在使用后重置费用。"
+    "DESCRIPTION": "本场战斗中你每打出一张 “火花”牌，此卡的费用减少1。 NL 对所有敌人造成 !D! 点伤害。 NL 此卡在使用后重置费用。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 本场战斗中你每打出一张 “火花”牌，此卡的费用减少1。 NL 对所有敌人造成 !D! 点伤害。 NL 此卡在使用后重置费用。"
   },
   "GrandCross": {
     "NAME": "大十字",
@@ -81,7 +81,7 @@
   },
   "MeteoricShower": {
     "NAME": "流星雨",
-    "DESCRIPTION": " 消耗最多X+1张手牌，每消耗一张，随机造成 !D! 点2次，消耗的牌中每有一张 灼伤 ，攻击次数+1。"
+    "DESCRIPTION": " 消耗最多X+1张手牌。每消耗一张，随机造成 !D! 点2次，若消耗的牌是 灼伤 ，则造成3次。"
   },
   "MilkyWay": {
     "NAME": "银河",
@@ -132,8 +132,8 @@
   },
   "MillisecondPulsars": {
     "NAME": "毫秒脉冲星",
-    "DESCRIPTION": "不再需要支付额外能量来发动 增幅 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 不再需要支付额外能量来发动 增幅 。"
+    "DESCRIPTION": "本场战斗不再需要支付额外能量来发动 增幅 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 本场战斗不再需要支付额外能量来发动 增幅 。"
   },
   "Spark": {
     "NAME": "火花",
@@ -221,7 +221,7 @@
   },
   "PowerUp": {
     "NAME": "强化！",
-    "DESCRIPTION": "手牌中所有攻击卡伤害增加 !M! 点。",
+    "DESCRIPTION": "使手牌中所有攻击卡在本场战斗中伤害增加 !M! 点。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WitchLeyline": {

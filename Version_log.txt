@@ -257,3 +257,14 @@ v0.14.17 1/13/2019
 *Fix the bug that one may obtain more than one Sprouting Branch in a single run
 *Rewrite "Spark" related methods
 *Update Tradintional Chinese texts(GitHub user : rainfoxest)
+
+v0.14.18 1/14/2019
+*Update descriptions of cards
+*Energy Recoil : rarity changed to Uncommon
+*SuperNova : upgrade effect changed to reduce its cost to 2
+*Absolute Magnitude : damage multiplier reduced to 2 ( 3 )
+*Bewitched Hakkero : thorn-typed damage(Burn,thorn power of monsters,Beat of Death of Corrupt Heart & etc.) and hp_loss-typed damage( Regret,Pain,Offering,etc. ) are no longer considered as attack( which means taking these kinds of damage won't trigger the Charging-Up granting effect of Bewitched Hakkero )
+*Fix the bug that upgraded Orbital would make the player draw one more card than it should when drawn
+*Refract out-dated codes
+*Update Korean texts(Github user : Katinor)
+*Update Traditional Chinese texts(GitHub user : rainfoxest)
