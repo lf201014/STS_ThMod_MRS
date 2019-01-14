@@ -316,8 +316,8 @@
   },
   "OneTimeOff": {
     "NAME": "一回休",
-    "DESCRIPTION": "獲得 !B! 點 格擋 ，本回合不能發動 增幅 和 蓄力 。 NL 下回合抽 !M! 張牌",
-    "UPGRADE_DESCRIPTION": "獲得 !B! 點 格擋 ，本回合不能發動 增幅 和 蓄力"
+    "DESCRIPTION": "獲得 !B! 點 格擋 ，本回合不能發動 增幅 和 蓄力 。 NL 下回合抽 !M! 張牌。",
+    "UPGRADE_DESCRIPTION": "獲得 !B! 點 格擋 ，本回合不能發動 增幅 和 蓄力 。 NL 下回合抽 !M! 張牌。"
   },
   "DarkMatter": {
     "NAME": "暗物質",

@@ -236,8 +236,8 @@
   },
   "AbsoluteMagnitude": {
     "NAME": "绝对星等",
-    "DESCRIPTION": "造成 !B! 点伤害( 2.5 × 你的 蓄力 层数)。",
-    "UPGRADE_DESCRIPTION": "造成 !B! 点伤害( 3.5 × 你的 蓄力 层数)。"
+    "DESCRIPTION": "造成 !B! 点伤害( 2 × 你的 蓄力 层数)。",
+    "UPGRADE_DESCRIPTION": "造成 !B! 点伤害( 3 × 你的 蓄力 层数)。"
   },
   "DragonMeteor": {
     "NAME": "龙陨星",
@@ -317,7 +317,7 @@
   "OneTimeOff": {
     "NAME": "一回休",
     "DESCRIPTION": "获得 !B! 点 格挡  ，这回合你将不能发动 增幅 和 蓄力 效果。 NL 下回合抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡  ，这回合你将不能发动 增幅 和 蓄力 效果。"
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡  ，这回合你将不能发动 增幅 和 蓄力 效果。 NL 下回合抽 !M! 张牌。"
   },
   "DarkMatter": {
     "NAME": "暗物质",
