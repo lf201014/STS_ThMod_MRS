@@ -25,9 +25,9 @@ public class OneTimeOff extends CustomCard {
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   private static final int COST = 1;
   private static final int BLOCK_AMT = 5;
-  private static final int UPGRADE_PLUS_BLOCK = 3;
+  private static final int UPGRADE_PLUS_BLOCK = 2;
   private static final int DRAW = 1;
-  //private static final int UPGRADE_PLUS_DRAW = 1;
+  private static final int UPGRADE_PLUS_DRAW = 1;
 
   public OneTimeOff() {
     super(
@@ -57,6 +57,7 @@ public class OneTimeOff extends CustomCard {
             this.magicNumber
         )
     );
+    /*
     if (this.upgraded) {
       AbstractDungeon.actionManager.addToBottom(
           new ApplyPowerAction(
@@ -74,6 +75,14 @@ public class OneTimeOff extends CustomCard {
           )
       );
     }
+    */
+    AbstractDungeon.actionManager.addToBottom(
+        new ApplyPowerAction(
+            p,
+            p,
+            new OneTimeOffPlusPower(p)
+        )
+    );
   }
 
   public AbstractCard makeCopy() {
@@ -84,7 +93,7 @@ public class OneTimeOff extends CustomCard {
     if (!this.upgraded) {
       upgradeName();
       upgradeBlock(UPGRADE_PLUS_BLOCK);
-      //upgradeMagicNumber(UPGRADE_PLUS_DRAW);
+      upgradeMagicNumber(UPGRADE_PLUS_DRAW);
       this.rawDescription = DESCRIPTION_UPG;
       initializeDescription();
     }
