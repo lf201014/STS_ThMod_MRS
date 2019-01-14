@@ -9,9 +9,9 @@
   "ExtraDraw": {
     "NAME": "第二宇宙速度",
     "DESCRIPTIONS": [
-      "每回合額外抽 #b",
-      " 張牌，並將 #b",
-      " 張 #y灼傷 加入手牌"
+      "在每回合開始時，額外抽 #b",
+      " 張牌，並增加 #b",
+      " 張 #y灼傷 到手牌"
     ]
   },
   "EventHorizonPower": {
@@ -33,7 +33,7 @@
   "MilliPulsaPower": {
     "NAME": "毫秒脈衝星",
     "DESCRIPTIONS": [
-      "不需要支付額外的能量來發動 #y增幅 ",
+      "不需要花費額外 [E] 來發動 #y增幅 ",
       ""
     ]
   },
@@ -41,7 +41,7 @@
     "NAME": "衛星幻覺",
     "DESCRIPTIONS": [
       "每使用1張不在牌組中的牌時，抽 #b",
-      " 張卡"
+      " 張牌"
     ]
   },
   "TempStrength": {
@@ -66,7 +66,7 @@
     ]
   },
   "ChargeUpPower": {
-    "NAME": " 蓄力 ",
+    "NAME": "蓄力",
     "DESCRIPTIONS": [
       "現在有",
       "層 #y蓄力 ",
@@ -77,18 +77,18 @@
   "PolarisUniquePower": {
     "NAME": "北極星",
     "DESCRIPTIONS": [
-      "在回合開始時，如果 #y引導星 在抽牌堆裡，則獲得 [B]"
+      "在回合開始時，如果 #y引導星 在抽牌堆裡，則獲得 [E]"
     ]
   },
   "OrrerysSunPower": {
     "NAME": "太陽儀",
     "DESCRIPTIONS": [
-      "每次消耗 #y蓄力 層數，都會對所有敵人造成 #b",
+      "每當使用掉 #y蓄力 層數，對所有敵人造成 #b",
       " 點傷害"
     ]
   },
   "Charged": {
-    "NAME": "蓄力!",
+    "NAME": "蓄力完成！",
     "DESCRIPTIONS": [
       "你的下一次攻擊造成 ",
       " 倍傷害"
@@ -118,14 +118,14 @@
   "PulseMagicPower": {
     "NAME": "脈衝魔術",
     "DESCRIPTIONS": [
-      "本回合內不再需要支付額外能量來發動 #y增幅",
+      "本回合內不需要花費額外 [E] 來發動 #y增幅",
       "WWWWWWWWWWW"
     ]
   },
   "SingularityPower": {
     "NAME": "奇點",
     "DESCRIPTIONS": [
-      "每使用1張費用為 0 的牌時，使手牌內1張隨機攻擊牌攻擊力增加 #b",
+      "每打出1張耗能為0的牌時，手牌內1張隨機攻擊牌攻擊力增加 #b",
       " 點"
     ]
   },
@@ -218,14 +218,14 @@
     "NAME": "詠唱",
     "DESCRIPTIONS": [
       "下一回合，使 #b",
-      " 的費用減1。"
+      " 的耗能減1"
     ]
   },
   "SatelIllusPower": {
     "NAME": "衛星幻覺",
     "DESCRIPTIONS": [
       "在你的回合內，當抽牌堆裡的卡牌數量增加時，獲得 #b",
-      "  [B]"
+      "  [E]"
     ]
   },
   "GrandCrossPower": {

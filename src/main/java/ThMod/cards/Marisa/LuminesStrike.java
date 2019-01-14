@@ -55,6 +55,16 @@ public class LuminesStrike
     AbstractPlayer player = AbstractDungeon.player;
     this.damage = player.hand.size() * this.baseMagicNumber + this.baseDamage;
     this.block = EnergyPanel.totalCount * this.baseBlock + this.baseDamage;
+    ThMod.logger.info(
+        "LuminesStrike : applyPowers : player hand size :" +
+            player.hand.size() +
+            " ; damage : " +
+            damage +
+            " ; current energy : " +
+            EnergyPanel.totalCount +
+            " ; amplified : " +
+            block
+    );
     super.applyPowers();
   }
 
@@ -66,8 +76,16 @@ public class LuminesStrike
   @Override
   public void calculateCardDamage(AbstractMonster mo) {
     AbstractPlayer player = AbstractDungeon.player;
-    ThMod.logger
-        .info("LuminesStrike : calculateCardDamage : player hand size :" + player.hand.size());
+    ThMod.logger.info(
+        "LuminesStrike : calculateCardDamage : player hand size :" +
+            player.hand.size() +
+            " ; damage : " +
+            damage +
+            " ; current energy : " +
+            EnergyPanel.totalCount +
+            " ; amplified : " +
+            block
+    );
     this.damage = player.hand.size() * this.baseMagicNumber + this.baseDamage;
     this.block = EnergyPanel.totalCount * this.baseBlock + this.baseDamage;
     super.calculateCardDamage(mo);

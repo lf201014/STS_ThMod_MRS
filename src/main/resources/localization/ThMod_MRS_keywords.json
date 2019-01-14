@@ -5,7 +5,7 @@
         "amplify",
         "Amplify"
       ],
-      "DESCRIPTION": "Pay extra energy for its effect when you have enough  [B] ."
+      "DESCRIPTION": "Pay extra energy for its effect when you have enough  [E] ."
     },
     {
       "NAMES": [
@@ -42,7 +42,19 @@
     },
     {
       "NAMES": [
-        "WWWWWWWWWWWWWWWWWWW"
+        "Black Flare Star","black flare star"
+      ],
+      "DESCRIPTION":"Black Flare Star is a skill card costs #b0 and grants you Block by discarding cards."
+    },
+    {
+      "NAMES": [
+        "White Dwarf","White Dwarf"
+      ],
+      "DESCRIPTION":"White Dwarf is a attack card costs #b0 and deals damage depending on the size of your discard pile."
+    },
+    {
+      "NAMES": [
+        "WWWWWWWWWWWWWWWWWWW","WWWWWWWWWWWWWWWWW"
       ],
       "DESCRIPTION":"WWWWWWWWWWWWWWWWWWWWW"
     }

@@ -1,5 +1,7 @@
 package ThMod.cards.Marisa;
 
+import static ThMod.patches.CardTagEnum.SPARK;
+
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,7 +13,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import ThMod.ThMod;
 import ThMod.abstracts.AmplifiedAttack;
 import ThMod.action.RefractionSparkAction;
-import ThMod.action.SparkCostAction;
 import ThMod.patches.AbstractCardEnum;
 
 public class RefractionSpark
@@ -47,13 +48,10 @@ public class RefractionSpark
     this.baseDamage = ATK_DMG;
     this.ampNumber = AMP_DMG;
     this.baseBlock = this.baseDamage + this.ampNumber;
+    this.tags.add(SPARK);
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-    AbstractDungeon.actionManager.addToBottom(
-        new SparkCostAction()
-    );
-
     if (ThMod.Amplified(this, AMP)) {
       AbstractDungeon.actionManager.addToBottom(
           new RefractionSparkAction(

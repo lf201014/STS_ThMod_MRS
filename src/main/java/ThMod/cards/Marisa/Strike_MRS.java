@@ -1,5 +1,7 @@
 package ThMod.cards.Marisa;
 
+import static ThMod.patches.CardTagEnum.SPARK;
+
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -11,7 +13,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import ThMod.action.SparkCostAction;
 import ThMod.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
@@ -40,6 +41,7 @@ public class Strike_MRS
         CardTarget.ENEMY
     );
     this.tags.add(BaseModCardTags.BASIC_STRIKE);
+    this.tags.add(SPARK);
     this.baseDamage = ATTACK_DMG;
   }
 
@@ -50,9 +52,6 @@ public class Strike_MRS
             new DamageInfo(p, this.damage, this.damageTypeForTurn),
             AbstractGameAction.AttackEffect.SLASH_DIAGONAL
         )
-    );
-    AbstractDungeon.actionManager.addToBottom(
-        new SparkCostAction()
     );
   }
 

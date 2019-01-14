@@ -1,5 +1,8 @@
 package ThMod.cards.Marisa;
 
+
+import static ThMod.patches.CardTagEnum.SPARK;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -11,7 +14,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import ThMod.action.SparkCostAction;
 import ThMod.cards.derivations.Spark;
 import ThMod.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
@@ -44,7 +46,7 @@ public class DoubleSpark
     );
 
     this.baseDamage = ATK_DMG;
-
+    this.tags.add(SPARK);
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
@@ -67,9 +69,6 @@ public class DoubleSpark
     }
     AbstractDungeon.actionManager.addToBottom(
         new MakeTempCardInHandAction(c, 1)
-    );
-    AbstractDungeon.actionManager.addToBottom(
-        new SparkCostAction()
     );
   }
 

@@ -218,4 +218,33 @@ v0.14.10 1/9/2019
 *Fix the issue that when in Korean language,using Event Horizon causes game crush
 *Update Japanese language texts(Github user : sisizanohito)
 *Update Korean language texts(Github user : Katinor)
-*Update Traditional Chinese language texts(GitHub user : rainfoxest))
+*Update Traditional Chinese language texts(GitHub user : rainfoxest)
+
+v0.14.11 1/9/2019
+*Add custom energy orb for descriptions
+*Add mod badge icon for mod list
+*Update illustrasion for card:Oort Cloud
+*Update sfx for character selection
+*Fix the bug that the counter of Starlight Typhoon does not reset when S&L(I'm sure it IS fixed this time)
+*Update Korean language texts(Github user : Katinor)
+*Update Traditional Chinese language texts(GitHub user : rainfoxest)
+
+v0.14.12 1/10/2019
+*Lower the volume of the sfx for character selection
+
+v0.14.13 1/11/2019
+*Treasture Hunter : the reward is available in event combats now
+*Starlight Typhoon : cards played for free by certain methods will increase the counter now
+*Fix various issues caused by playing Mana Rampage
+*Rewrite the method of Mana Rampage
+*Update Tradional Chinese texts(GitHub user : rainfoxest)
+
+v0.14.14 1/11/2019
+*revert last change about Starlight Typhoon
+*Update Tradional Chinese texts(GitHub user : rainfoxest)
+
+v0.14.15 1/11/2019
+*Add French Language Support(thanks to GitHub user : LenSama)
+
+v0.14.16 1/11/2019
+*Adapt to new version of base game(
