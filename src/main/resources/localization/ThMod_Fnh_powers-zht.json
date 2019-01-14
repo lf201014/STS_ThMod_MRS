@@ -143,15 +143,15 @@
       " 瓶隨機藥劑"
     ]
   },
-  "MoraleDepletionPlusPower": {
+  "OneTimeOffPlusPower": {
     "NAME": "一回休",
     "DESCRIPTIONS": [
       "本回合不能發動 #y增幅 和 #y蓄力",
       "WWWWWWWWWWW"
     ]
   },
-  "MoraleDepletionPower": {
-    "NAME": "戰意喪失",
+  "OneTimeOffPower": {
+    "NAME": "一回休",
     "DESCRIPTIONS": [
       "本回合不能發動 #y增幅",
       "WWWWWWWWWWW"

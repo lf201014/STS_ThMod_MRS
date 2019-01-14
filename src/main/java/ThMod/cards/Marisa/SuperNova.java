@@ -47,7 +47,8 @@ public class SuperNova extends CustomCard {
         new ApplyPowerAction(
             p,
             p,
-            new SuperNovaPower(p, 1, this.upgraded),
+            //new SuperNovaPower(p, 1, this.upgraded),
+            new SuperNovaPower(p,1,false),
             1
         )
     );
@@ -60,8 +61,9 @@ public class SuperNova extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      this.rawDescription = DESCRIPTION_UPG;
-      initializeDescription();
+      upgradeBaseCost(2);
+      //this.rawDescription = DESCRIPTION_UPG;
+      //initializeDescription();
     }
   }
 }

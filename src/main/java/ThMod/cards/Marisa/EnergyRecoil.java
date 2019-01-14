@@ -31,7 +31,7 @@ public class EnergyRecoil extends CustomCard {
         DESCRIPTION,
         AbstractCard.CardType.SKILL,
         AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.COMMON,
+        AbstractCard.CardRarity.UNCOMMON,
         AbstractCard.CardTarget.SELF
     );
     this.baseBlock = this.block = 0;

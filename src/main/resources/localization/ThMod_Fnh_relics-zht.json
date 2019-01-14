@@ -6,7 +6,7 @@
       "每打出1張牌，獲得1層 #y蓄力"
     ]
   },
-  "EnhancedHakkero": {
+  "BewitchedHakkero": {
     "NAME": "妖器八卦爐",
     "FLAVOR": "妖器化的八卦爐火力前所未有地強大，不過這樣好像不太安全……",
     "DESCRIPTIONS": [
@@ -20,7 +20,7 @@
       "每抽到1張 #y詛咒 或 #y狀態 ，獲得 5 點 格擋"
     ]
   },
-  "EnhancedBroom": {
+  "MagicBroom": {
     "NAME": "魔法笤帚",
     "FLAVOR": "魔理沙用來騎著飛來飛去的魔法掃帚。",
     "DESCRIPTIONS": [

@@ -51,7 +51,7 @@ public class ChargeUpSpray
     if (p.hasRelic("SimpleLauncher")) {
       cnt = 6;
     }
-    if ((p.hasPower("ChargeUpPower")) && (!p.hasPower("MoraleDepletionPlusPower"))) {
+    if ((p.hasPower("ChargeUpPower")) && (!p.hasPower("OneTimeOffPlusPower"))) {
       if (p.getPower("ChargeUpPower").amount >= cnt) {
         AbstractDungeon.actionManager.addToTop(
             new DrawCardAction(AbstractDungeon.player, this.magicNumber)

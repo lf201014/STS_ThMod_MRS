@@ -83,7 +83,7 @@ public class ChargeUpPower
 
   @Override
   public void onPlayCard(AbstractCard card, AbstractMonster m) {
-    if ((this.owner.hasPower("MoraleDepletionPlusPower")) || (ThMod.ExhaustionCheck())) {
+    if ((this.owner.hasPower("OneTimeOffPlusPower")) || (ThMod.ExhaustionCheck())) {
       return;
     }
     if ((this.cnt > 0) && (card.type == CardType.ATTACK)) {
@@ -107,7 +107,7 @@ public class ChargeUpPower
 
   @Override
   public float atDamageFinalGive(float damage, DamageInfo.DamageType type) {
-    if ((this.owner.hasPower("MoraleDepletionPlusPower")) || (ThMod.ExhaustionCheck())) {
+    if ((this.owner.hasPower("OneTimeOffPlusPower")) || (ThMod.ExhaustionCheck())) {
       return damage;
     }
     if (cnt > 0) {

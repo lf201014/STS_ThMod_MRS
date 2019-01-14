@@ -8,9 +8,11 @@ import ThMod.action.SparkCostAction;
 import ThMod.cards.Marisa.AlicesGift;
 import ThMod.cards.Marisa.EnergyRecoil;
 import ThMod.cards.Marisa.ManaRampage;
+import ThMod.cards.Marisa.OneTimeOff;
 import ThMod.cards.Marisa.SprinkleStarSeal;
 import ThMod.cards.derivations.Exhaustion_MRS;
 import ThMod.potions.ShroomBrew;
+import ThMod.relics.BewitchedHakkero;
 import com.badlogic.gdx.graphics.Texture;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -75,7 +77,6 @@ import ThMod.cards.Marisa.MaximisePower;
 import ThMod.cards.Marisa.MeteoricShower;
 import ThMod.cards.Marisa.MilkyWay;
 import ThMod.cards.Marisa.MillisecondPulsars;
-import ThMod.cards.Marisa.MoraleDepletion;
 import ThMod.cards.Marisa.MysteriousBeam;
 import ThMod.cards.Marisa.NonDirectionalLaser;
 import ThMod.cards.Marisa.Occultation;
@@ -117,8 +118,7 @@ import ThMod.patches.AbstractCardEnum;
 import ThMod.powers.Marisa.GrandCrossPower;
 import ThMod.relics.AmplifyWand;
 import ThMod.relics.BreadOfAWashokuLover;
-import ThMod.relics.EnhancedBroom;
-import ThMod.relics.EnhancedHakkero;
+import ThMod.relics.MagicBroom;
 import ThMod.relics.ExperimentalFamiliar;
 import ThMod.relics.HandmadeGrimoire;
 import ThMod.relics.MiniHakkero;
@@ -242,8 +242,8 @@ public class ThMod implements PostExhaustSubscriber,
             + card.costForTurn
     );
     AbstractPlayer p = AbstractDungeon.player;
-    if (p.hasPower("MoraleDepletionPlusPower")) {
-      logger.info("ThMod.Amplified :MoraleDepletionPower detected,returning false.");
+    if ((p.hasPower("OneTimeOffPlusPower"))||(p.hasPower("OneTimeOffPower"))) {
+      logger.info("ThMod.Amplified :OneTimeOff detected,returning false.");
       return false;
     }
 
@@ -358,11 +358,11 @@ public class ThMod implements PostExhaustSubscriber,
         MARISA_COLOR
     );
     BaseMod.addRelicToCustomPool(
-        new EnhancedHakkero(),
+        new BewitchedHakkero(),
         MARISA_COLOR
     );
     BaseMod.addRelicToCustomPool(
-        new EnhancedBroom(),
+        new MagicBroom(),
         MARISA_COLOR
     );
     BaseMod.addRelicToCustomPool(
@@ -511,8 +511,8 @@ public class ThMod implements PostExhaustSubscriber,
     UnlockTracker.unlockCard("DarkMatter");
     BaseMod.addCard(new MagicChant());
     UnlockTracker.unlockCard("MagicChant");
-    BaseMod.addCard(new MoraleDepletion());
-    UnlockTracker.unlockCard("MoraleDepletion");
+    BaseMod.addCard(new OneTimeOff());
+    UnlockTracker.unlockCard("OneTimeOff");
     BaseMod.addCard(new ManaConvection());
     UnlockTracker.unlockCard("ManaConvection");
     BaseMod.addCard(new PropBag());

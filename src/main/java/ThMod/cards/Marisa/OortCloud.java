@@ -21,7 +21,7 @@ public class OortCloud extends CustomCard {
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   private static final int COST = 1;
-  private static final int ARMOR_GAIN = 4;
+  private static final int ARMOR_GAIN = 3;
   private static final int UPG_ARMOR = 1;
   private static final int AMP_ARMOR = 2;
   private static final int UPG_AMP = 1;

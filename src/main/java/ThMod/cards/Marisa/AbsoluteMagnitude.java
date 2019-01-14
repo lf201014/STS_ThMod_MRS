@@ -24,9 +24,9 @@ public class AbsoluteMagnitude
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   public static final String IMG_PATH = "img/cards/temp/AbsoMagni.png";
   private static final int COST = 2;
-  private static final float ATK_MULT = 2.50F;
-  private static final float ATK_MULT_UPG = 3.50F;
-  private float multipler;
+  private static final float ATK_MULT = 2F;
+  private static final float ATK_MULT_UPG = 3F;
+  private float multiplier;
 
   public AbsoluteMagnitude() {
     super(
@@ -42,14 +42,14 @@ public class AbsoluteMagnitude
     );
 
     this.damage = this.baseDamage = 0;
-    this.multipler = ATK_MULT;
+    this.multiplier = ATK_MULT;
     this.block = this.baseBlock = 0;
   }
 
   public void applyPowers() {
     AbstractPlayer p = AbstractDungeon.player;
     if (p.hasPower("ChargeUpPower")) {
-      this.ampNumber = (int) (p.getPower("ChargeUpPower").amount * this.multipler);
+      this.ampNumber = (int) (p.getPower("ChargeUpPower").amount * this.multiplier);
     }
     super.applyPowers();
     this.isBlockModified = true;
@@ -77,7 +77,7 @@ public class AbsoluteMagnitude
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      this.multipler = ATK_MULT_UPG;
+      this.multiplier = ATK_MULT_UPG;
       this.rawDescription = DESCRIPTION_UPG;
       initializeDescription();
     }

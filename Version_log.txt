@@ -248,3 +248,12 @@ v0.14.15 1/11/2019
 
 v0.14.16 1/11/2019
 *Adapt to new version of base game(
+
+v0.14.17 1/13/2019
+*Update illustration for card : Max Power
+*Add "Black Flare Star" and "White Dwarf" to keywords
+*Charge-Up Spray : no longer trigger the energy-granting and card-drawing effect when you have "one turn off" buff
+*Sprouting Branch : now the Regen power it grants stacks normally with Regen powers applied by other source
+*Fix the bug that one may obtain more than one Sprouting Branch in a single run
+*Rewrite "Spark" related methods
+*Update Tradintional Chinese texts(GitHub user : rainfoxest)

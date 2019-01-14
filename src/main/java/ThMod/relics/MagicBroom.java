@@ -10,13 +10,13 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomRelic;
 
-public class EnhancedBroom extends CustomRelic {
+public class MagicBroom extends CustomRelic {
 
-  public static final String ID = "EnhancedBroom";
+  public static final String ID = "MagicBroom";
   private static final String IMG = "img/relics/Broom_s.png";
   private static final String IMG_OTL = "img/relics/outline/Broom_s.png";
 
-  public EnhancedBroom() {
+  public MagicBroom() {
     super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL), RelicTier.RARE,
         LandingSound.FLAT);
   }
@@ -26,7 +26,7 @@ public class EnhancedBroom extends CustomRelic {
   }
 
   public AbstractRelic makeCopy() {
-    return new EnhancedBroom();
+    return new MagicBroom();
   }
 
   public void atBattleStart() {

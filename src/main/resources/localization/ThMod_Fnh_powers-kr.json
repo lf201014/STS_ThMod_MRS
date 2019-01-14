@@ -143,14 +143,14 @@
       " 개 얻습니다."
     ]
   },
-  "MoraleDepletionPlusPower": {
+  "OneTimeOffPlusPower": {
     "NAME": "잠깐의 휴식",
     "DESCRIPTIONS": [
       "이번 턴에 #y증폭 , #y충전 효과를 발동할 수 없습니다.",
       "WWWWWWWWWWW"
     ]
   },
-  "MoraleDepletionPower": {
+  "OneTimeOffPower": {
     "NAME": "잠깐의 휴식",
     "DESCRIPTIONS": [
       "이번 턴에 #y증폭 효과를 발동할 수 없습니다.",

@@ -6,7 +6,7 @@
       "每打出一张卡，获得一层 #y蓄力 。"
     ]
   },
-  "EnhancedHakkero": {
+  "BewitchedHakkero": {
     "NAME": "妖器八卦炉",
     "FLAVOR": "妖器化的八卦炉火力前所未有地强大，不过这样好像不太安全……",
     "DESCRIPTIONS": [
@@ -20,7 +20,7 @@
       "每当你抽到一张 #y诅咒 或 #y状态 ，获得 5 格挡 。"
     ]
   },
-  "EnhancedBroom": {
+  "MagicBroom": {
     "NAME": "魔法笤帚",
     "FLAVOR": "魔理沙用来骑着飞来飞去的魔法扫帚。",
     "DESCRIPTIONS": [

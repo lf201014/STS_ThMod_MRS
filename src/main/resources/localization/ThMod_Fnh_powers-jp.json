@@ -143,14 +143,14 @@
       " ゴールドと、ランダムなポーションを得る。"
     ]
   },
-  "MoraleDepletionPlusPower": {
+  "OneTimeOffPlusPower": {
     "NAME": "1回休み",
     "DESCRIPTIONS": [
       "このターン、 #y増幅 効果を使用したり、 #yチャージ を消費する事ができない。",
       "WWWWWWWWWWW"
     ]
   },
-  "MoraleDepletionPower": {
+  "OneTimeOffPower": {
     "NAME": "1回休み",
     "DESCRIPTIONS": [
       "このターン、 #y増幅 効果を使用する事ができない。",

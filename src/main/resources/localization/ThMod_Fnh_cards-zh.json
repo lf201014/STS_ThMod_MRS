@@ -107,7 +107,7 @@
   },
   "PolarisUnique": {
     "NAME": "唯一的北极星",
-    "DESCRIPTION": " 固有 。 将1张 北极星 洗入抽卡堆。在你的回合开始时如果 北极星 在你的抽卡堆中，获得  [E]  。",
+    "DESCRIPTION": " 固有 。 将1张 北极星 洗入抽卡堆。在你的回合开始时如果 北极星 在你的抽卡堆中，获得  [E]  （该效果不可叠加）。",
     "UPGRADE_DESCRIPTION": " 固有 。 将1张 北极星 洗入抽卡堆。在你的回合开始时如果 北极星 在你的抽卡堆中，获得  [E]  。"
   },
   "SatelliteIllusion": {
@@ -314,7 +314,7 @@
     "DESCRIPTION": "不再受到 灼伤 的伤害。 NL 每 消耗 一张 灼伤 ，获得一点 力量 。 NL 在回合结束时 消耗 所有手牌。",
     "UPGRADE_DESCRIPTION": "不再受到 灼伤 的伤害。 NL 每 消耗 一张 诅咒 或 状态 ，获得一点 力量 。 NL 在回合结束时 消耗 所有手牌。"
   },
-  "MoraleDepletion": {
+  "OneTimeOff": {
     "NAME": "一回休",
     "DESCRIPTION": "获得 !B! 点 格挡  ，这回合你将不能发动 增幅 和 蓄力 效果。 NL 下回合抽 !M! 张牌。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡  ，这回合你将不能发动 增幅 和 蓄力 效果。"
