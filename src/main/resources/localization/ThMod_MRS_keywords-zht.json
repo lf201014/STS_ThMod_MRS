@@ -38,6 +38,18 @@
     },
     {
       "NAMES": [
+        "黑耀星"
+      ],
+      "DESCRIPTION": "黑耀星是通過丟棄手牌來獲得格擋的 #b0 耗能技能牌"
+    },
+    {
+      "NAMES": [
+        "白矮星"
+      ],
+      "DESCRIPTION": "白矮星是根據棄牌堆牌數來造成傷害的 #b0 耗能攻擊牌"
+    },
+    {
+      "NAMES": [
         "WWWWWWWWWWWWWWWWWWW"
       ],
       "DESCRIPTION":"WWWWWWWWWWWWWWWWWWWWW"
