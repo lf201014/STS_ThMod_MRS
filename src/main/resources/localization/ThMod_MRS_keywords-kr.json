@@ -38,6 +38,18 @@
     },
     {
       "NAMES": [
+        "블랙 플레어 스타"
+      ],
+      "DESCRIPTION":"다른 카드들을 원하는 만큼 버림으로서 방어도를 얻는 비용이 #b0 인 스킬카드입니다."
+    },
+    {
+      "NAMES": [
+        "화이트 드워프"
+      ],
+      "DESCRIPTION":"버린 카드더미의 크기에 비례해 피해를 주는 비용이 #b0 인 공격카드입니다."
+    },
+    {
+      "NAMES": [
         "WWWWWWWWWWWWWWWWWWW"
       ],
       "DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWW"
