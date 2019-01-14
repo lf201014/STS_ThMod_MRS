@@ -48,6 +48,7 @@ public class LuminesStrike
     this.baseBlock = A0;
     this.baseDamage = 0;
     this.isException = true;
+    this.tags.add(CardTags.STRIKE);
   }
 
   @Override
