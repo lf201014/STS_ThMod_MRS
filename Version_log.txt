@@ -268,3 +268,10 @@ v0.14.18 1/14/2019
 *Refract out-dated codes
 *Update Korean texts(Github user : Katinor)
 *Update Traditional Chinese texts(GitHub user : rainfoxest)
+
+v0.14.19 1/15/2019
+*Update descritptions of cards
+*Add a customized Mushroom event for Marisa
+*Refract out-dated codes
+*No longer unlock all cards for card list in compedium(for better loading speed)
+*Update Traditional Chinese texts(GitHub user : rainfoxest)
