@@ -49,7 +49,7 @@
   },
   "FinalSpark": {
     "NAME": "究極火花",
-    "DESCRIPTION": "本場戰鬥中每打出1張 火花 ，這張牌的耗能減少1。 NL 對所有敵人造成 !D! 點傷害。 NL 打出後重設耗能",
+    "DESCRIPTION": "本場戰鬥中每打出1張名字中有「火花」的牌，這張牌的耗能減少1。 NL 對所有敵人造成 !D! 點傷害。 NL 打出後重設耗能",
     "UPGRADE_DESCRIPTION": "保留 。 NL 本場戰鬥中每打出1張 火花 ，這張牌的耗能減少1。 NL 對所有敵人造成 !D! 點傷害。 NL 打出後重設耗能"
   },
   "GrandCross": {
@@ -81,7 +81,7 @@
   },
   "MeteoricShower": {
     "NAME": "流星雨",
-    "DESCRIPTION": "消耗 最多X+1張手牌。每 消耗 1張，對隨機1名敵人造成 !D! 點傷害2次， 消耗 的牌是 灼傷 的話，則3次"
+    "DESCRIPTION": "消耗 最多X+1張手牌。每 消耗 1張，隨機對敵人造成 !D! 點傷害2次，若 消耗 的牌是 灼傷 ，則造成3次"
   },
   "MilkyWay": {
     "NAME": "銀河",
@@ -107,7 +107,7 @@
   },
   "PolarisUnique": {
     "NAME": "唯一的北極星",
-    "DESCRIPTION": "固有 。 將1張 引導星 洗入抽牌堆。若在你的回合開始時 引導星 在抽牌堆中，獲得 [E]",
+    "DESCRIPTION": "固有 。 將1張 引導星 放入抽牌堆。若在你的回合開始時 引導星 在抽牌堆中，獲得 [E] (此效果不能疊加)",
     "UPGRADE_DESCRIPTION": "固有 。 將1張 引導星 洗入抽牌堆。若在你的回合開始時 引導星 在抽牌堆中，獲得 [E]"
   },
   "SatelliteIllusion": {
@@ -132,8 +132,8 @@
   },
   "MillisecondPulsars": {
     "NAME": "毫秒脈衝星",
-    "DESCRIPTION": "不需要花費額外 [E] 來發動 增幅",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 不需要花費額外 [E] 來發動 增幅"
+    "DESCRIPTION": "本場戰鬥中，不需要花費額外 [E] 來發動 增幅",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 本場戰鬥中，不需要花費額外 [E] 來發動 增幅"
   },
   "Spark": {
     "NAME": "火花",
@@ -221,7 +221,7 @@
   },
   "PowerUp": {
     "NAME": "強化！",
-    "DESCRIPTION": "手牌中所有攻擊牌傷害增加 !M! 點",
+    "DESCRIPTION": "使手牌中所有攻擊牌在本場戰鬥中增加傷害 !M! 點",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WitchLeyline": {
@@ -296,7 +296,7 @@
   },
   "RefractionSpark": {
     "NAME": "折射火花",
-    "DESCRIPTION": "造成 !D! 點傷害，按照未被 格擋 的攻擊傷害增加名字中有 火花 的手牌的攻擊。 NL 增幅 [E] :傷害變為 !B! 點",
+    "DESCRIPTION": "造成 !D! 點傷害，按照未被 格擋 的攻擊傷害增加名字中有「火花」的手牌的攻擊。 NL 增幅 [E] :傷害變為 !B! 點",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MagicChant": {
@@ -314,10 +314,10 @@
     "DESCRIPTION": "不再受到 灼傷 的傷害。 NL 每 消耗 1張 灼傷 ，獲得1點 力量 。 NL 在回合結束時 消耗 所有手牌",
     "UPGRADE_DESCRIPTION": "不再受到 灼傷 的傷害。 NL 每 消耗 1張 詛咒 或 狀態 ，獲得1點 力量 。 NL 在回合結束時 消耗 所有手牌"
   },
-  "OneTimeOff": {
+  "MoraleDepletion": {
     "NAME": "一回休",
-    "DESCRIPTION": "獲得 !B! 點 格擋 ，本回合不能發動 增幅 和 蓄力 。 NL 下回合抽 !M! 張牌。",
-    "UPGRADE_DESCRIPTION": "獲得 !B! 點 格擋 ，本回合不能發動 增幅 和 蓄力 。 NL 下回合抽 !M! 張牌。"
+    "DESCRIPTION": "獲得 !B! 點 格擋 ，本回合不能發動 增幅 和 蓄力 。 NL 下回合抽 !M! 張牌",
+    "UPGRADE_DESCRIPTION": "獲得 !B! 點 格擋 ，本回合不能發動 增幅 和 蓄力 。 NL 下回合抽 !M! 張牌"
   },
   "DarkMatter": {
     "NAME": "暗物質",
