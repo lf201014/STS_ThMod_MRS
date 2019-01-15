@@ -19,8 +19,10 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+//import com.megacrit.cardcrawl.relics.AbstractRelic;
 import java.nio.charset.StandardCharsets;
 
+import java.util.ArrayList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -212,6 +214,10 @@ public class ThMod implements PostExhaustSubscriber,
 
   public static int typhoonCounter = 0;
 
+  private ArrayList<AbstractCard> cardsToAdd = new ArrayList<>();
+  //private ArrayList<AbstractRelic> relicsToAdd = new ArrayList<>();
+
+  /*
   //For Spark Themed cards
   public static boolean isSpark(AbstractCard card) {
     return (
@@ -224,7 +230,7 @@ public class ThMod implements PostExhaustSubscriber,
             (card.cardID.equals("MachineGunSpark")) ||
             (card.cardID.equals("MasterSpark"))
     );
-  }
+  }*/
 
   //For the FXXKING Exhaustion curse
   public static boolean ExhaustionCheck() {
@@ -266,11 +272,6 @@ public class ThMod implements PostExhaustSubscriber,
     } else {
       if (EnergyPanel.totalCount >= (card.costForTurn + AMP)) {
         logger.info("ThMod.Amplified : Sufficient energy ,adding and returning true;");
-        /*
-        if ((card.costForTurn == 0) && (card.cost == 0)) {
-          p.energy.use(AMP);
-        }
-        */
         card.costForTurn += AMP;
         res = true;
       }
@@ -407,186 +408,15 @@ public class ThMod implements PostExhaustSubscriber,
   }
 
   public void receiveEditCards() {
-    logger.info("begin editting cards");
+    logger.info("starting editing cards");
 
-    logger.info("add cards for MARISA");
-    //starter:4
-    BaseMod.addCard(new Strike_MRS());
-    UnlockTracker.unlockCard("Strike_MRS");
-    BaseMod.addCard(new Defend_MRS());
-    UnlockTracker.unlockCard("Defend_MRS");
-    BaseMod.addCard(new MasterSpark());
-    UnlockTracker.unlockCard("MasterSpark");
-    BaseMod.addCard(new UpSweep());
-    UnlockTracker.unlockCard("UpSweep");
-    //attack:31
-    //Common: 10
-    BaseMod.addCard(new DoubleSpark());
-    UnlockTracker.unlockCard("DoubleSpark");
-    BaseMod.addCard(new NonDirectionalLaser());
-    UnlockTracker.unlockCard("NonDirectionalLaser");
-    BaseMod.addCard(new LuminesStrike());
-    UnlockTracker.unlockCard("LuminesStrike");
-    BaseMod.addCard(new MysteriousBeam());
-    UnlockTracker.unlockCard("MysteriousBeam");
-    BaseMod.addCard(new WitchLeyline());
-    UnlockTracker.unlockCard("WitchLeyline");
-    BaseMod.addCard(new D6C());
-    UnlockTracker.unlockCard("D6C");
-    BaseMod.addCard(new _6A());
-    UnlockTracker.unlockCard("6A");
-    BaseMod.addCard(new UnstableBomb());
-    UnlockTracker.unlockCard("UnstableBomb");
-    BaseMod.addCard(new StarBarrage());
-    UnlockTracker.unlockCard("StarBarrage_0");
-    BaseMod.addCard(new ShootingEcho());
-    UnlockTracker.unlockCard("ShootingEcho");
-    //Uncommon: 12
-    BaseMod.addCard(new MachineGunSpark());
-    UnlockTracker.unlockCard("MachineGunSpark");
-    BaseMod.addCard(new DarkSpark());
-    UnlockTracker.unlockCard("DarkSpark");
-    BaseMod.addCard(new DeepEcologicalBomb());
-    UnlockTracker.unlockCard("DeepEcoloBomb");
-    BaseMod.addCard(new MeteoricShower());
-    UnlockTracker.unlockCard("MeteoricShower");
-    BaseMod.addCard(new GravityBeat());
-    UnlockTracker.unlockCard("GravityBeat");
-    BaseMod.addCard(new GrandCross());
-    UnlockTracker.unlockCard("GrandCross");
-    BaseMod.addCard(new DragonMeteor());
-    UnlockTracker.unlockCard("DragonMeteor");
-    BaseMod.addCard(new RefractionSpark());
-    UnlockTracker.unlockCard("RefractionSpark");
-    BaseMod.addCard(new Robbery());
-    UnlockTracker.unlockCard("Robbery");
-    BaseMod.addCard(new ChargeUpSpray());
-    UnlockTracker.unlockCard("ChargeUpSpray");
-    BaseMod.addCard(new AlicesGift());
-    UnlockTracker.unlockCard("AlicesGift");
-    BaseMod.addCard(new FairyDestructionRay());
-    UnlockTracker.unlockCard("FairyDestructionRay");
-    //Rare:  7
-    BaseMod.addCard(new BlazingStar());
-    UnlockTracker.unlockCard("BlazingStar");
-    BaseMod.addCard(new ShootTheMoon());
-    UnlockTracker.unlockCard("ShootTheMoon");
-    BaseMod.addCard(new FinalSpark());
-    UnlockTracker.unlockCard("FinalSpark");
-    BaseMod.addCard(new JA());
-    UnlockTracker.unlockCard("JA");
-    BaseMod.addCard(new AbsoluteMagnitude());
-    UnlockTracker.unlockCard("AbsoluteMagnitude");
-    BaseMod.addCard(new TreasureHunter());
-    UnlockTracker.unlockCard("TreasureHunter");
-    BaseMod.addCard(new CollectingQuirk());
-    UnlockTracker.unlockCard("CollectingQuirk");
+    loadCardsToAdd();
 
-    //skill:28
-    //Common : 6
-    BaseMod.addCard(new MilkyWay());
-    UnlockTracker.unlockCard("MilkyWay");
-    BaseMod.addCard(new AsteroidBelt());
-    UnlockTracker.unlockCard("AsteroidBelt");
-    BaseMod.addCard(new PowerUp());
-    UnlockTracker.unlockCard("PowerUp");
-    BaseMod.addCard(new SporeBomb());
-    UnlockTracker.unlockCard("SporeBomb");
-    BaseMod.addCard(new IllusionStar());
-    UnlockTracker.unlockCard("IllusionStar");
-    BaseMod.addCard(new EnergyRecoil());
-    UnlockTracker.unlockCard("EnergyRecoil");
-    //Uncommon : 17
-    BaseMod.addCard(new GasGiant());
-    UnlockTracker.unlockCard("GasGiant");
-    BaseMod.addCard(new StarDustReverie());
-    UnlockTracker.unlockCard("StarDustReverie");
-    BaseMod.addCard(new MagicAbsorber());
-    UnlockTracker.unlockCard("MagicAbsorber");
-    BaseMod.addCard(new Occultation());
-    UnlockTracker.unlockCard("Occultation");
-    BaseMod.addCard(new EarthLightRay());
-    UnlockTracker.unlockCard("EarthLightRay");
-    BaseMod.addCard(new BlazeAway());
-    UnlockTracker.unlockCard("BlazeAway");
-    BaseMod.addCard(new ChargingUp());
-    UnlockTracker.unlockCard("ChargingUp");
-    BaseMod.addCard(new DarkMatter());
-    UnlockTracker.unlockCard("DarkMatter");
-    BaseMod.addCard(new MagicChant());
-    UnlockTracker.unlockCard("MagicChant");
-    BaseMod.addCard(new OneTimeOff());
-    UnlockTracker.unlockCard("OneTimeOff");
-    BaseMod.addCard(new ManaConvection());
-    UnlockTracker.unlockCard("ManaConvection");
-    BaseMod.addCard(new PropBag());
-    UnlockTracker.unlockCard("PropBag");
-    BaseMod.addCard(new SprinkleStarSeal());
-    UnlockTracker.unlockCard("SprinkleStarSeal");
-    BaseMod.addCard(new GalacticHalo());
-    UnlockTracker.unlockCard("GalacticHalo");
-    BaseMod.addCard(new SuperPerseids());
-    UnlockTracker.unlockCard("SuperPerseids");
-    BaseMod.addCard(new PulseMagic());
-    UnlockTracker.unlockCard("PulseMagic");
-    BaseMod.addCard(new Orbital());
-    UnlockTracker.unlockCard("Orbital");
-    //Rare : 7
-    BaseMod.addCard(new BigCrunch());
-    UnlockTracker.unlockCard("BigCrunch");
-    BaseMod.addCard(new OpenUniverse());
-    UnlockTracker.unlockCard("OpenUniverse");
-    BaseMod.addCard(new StarlightTyphoon());
-    UnlockTracker.unlockCard("StarlightTyphoon");
-    BaseMod.addCard(new MaximisePower());
-    UnlockTracker.unlockCard("MaximisePower");
-    BaseMod.addCard(new UltraShortWave());
-    UnlockTracker.unlockCard("UltraShortWave");
-    BaseMod.addCard(new ManaRampage());
-    UnlockTracker.unlockCard("ManaRampage");
-    BaseMod.addCard(new BinaryStars());
-    UnlockTracker.unlockCard("BinaryStars");
+    logger.info("adding cards for MARISA");
 
-    //power:12
-    //common:1
-    BaseMod.addCard(new WitchOfGreed());
-    UnlockTracker.unlockCard("WitchOfGreed");
-    //uncommon: 7
-    BaseMod.addCard(new SatelliteIllusion());
-    UnlockTracker.unlockCard("SatelliteIllusion");
-    BaseMod.addCard(new OortCloud());
-    UnlockTracker.unlockCard("OortCloud");
-    BaseMod.addCard(new OrrerysSun());
-    UnlockTracker.unlockCard("OrrerysSun");
-    BaseMod.addCard(new EnergyFlow());
-    UnlockTracker.unlockCard("EnergyFlow");
-    BaseMod.addCard(new EventHorizon());
-    UnlockTracker.unlockCard("EventHorizon");
-    BaseMod.addCard(new Singularity());
-    UnlockTracker.unlockCard("Singularity");
-    BaseMod.addCard(new CasketOfStar());
-    UnlockTracker.unlockCard("CasketOfStar");
-    //rare: 4
-    BaseMod.addCard(new PolarisUnique());
-    UnlockTracker.unlockCard("PolarisUnique");
-    BaseMod.addCard(new EscapeVelocity());
-    UnlockTracker.unlockCard("EscapeVelocity");
-    BaseMod.addCard(new MillisecondPulsars());
-    UnlockTracker.unlockCard("MillisecondPulsars");
-    BaseMod.addCard(new SuperNova());
-    UnlockTracker.unlockCard("SuperNova");
-
-    //derivations:4
-    BaseMod.addCard(new Spark());
-    UnlockTracker.unlockCard("Spark");
-    BaseMod.addCard(new GuidingStar());
-    UnlockTracker.unlockCard("GuidingStar");
-    BaseMod.addCard(new BlackFlareStar());
-    UnlockTracker.unlockCard("BlackFlareStar");
-    BaseMod.addCard(new WhiteDwarf());
-    UnlockTracker.unlockCard("WhiteDwarf");
-    BaseMod.addCard(new Exhaustion_MRS());
-    UnlockTracker.unlockCard("Exhaustion_MRS");
+    for (AbstractCard card : cardsToAdd) {
+      BaseMod.addCard(card);
+    }
 
     logger.info("done editing cards");
   }
@@ -785,6 +615,95 @@ public class ThMod implements PostExhaustSubscriber,
         "A Mod of the poor blonde hair girl from Touhou Project(",
         null
     );
+  }
+
+  private void loadCardsToAdd() {
+    cardsToAdd.clear();
+
+    cardsToAdd.add(new Strike_MRS());
+    cardsToAdd.add(new Defend_MRS());
+    cardsToAdd.add(new MasterSpark());
+    cardsToAdd.add(new UpSweep());
+
+    cardsToAdd.add(new DoubleSpark());
+    cardsToAdd.add(new NonDirectionalLaser());
+    cardsToAdd.add(new LuminesStrike());
+    cardsToAdd.add(new MysteriousBeam());
+    cardsToAdd.add(new WitchLeyline());
+    cardsToAdd.add(new D6C());
+    cardsToAdd.add(new _6A());
+    cardsToAdd.add(new UnstableBomb());
+    cardsToAdd.add(new StarBarrage());
+    cardsToAdd.add(new ShootingEcho());
+    cardsToAdd.add(new MachineGunSpark());
+    cardsToAdd.add(new DarkSpark());
+    cardsToAdd.add(new DeepEcologicalBomb());
+    cardsToAdd.add(new MeteoricShower());
+    cardsToAdd.add(new GravityBeat());
+    cardsToAdd.add(new GrandCross());
+    cardsToAdd.add(new DragonMeteor());
+    cardsToAdd.add(new RefractionSpark());
+    cardsToAdd.add(new Robbery());
+    cardsToAdd.add(new ChargeUpSpray());
+    cardsToAdd.add(new AlicesGift());
+    cardsToAdd.add(new FairyDestructionRay());
+    cardsToAdd.add(new BlazingStar());
+    cardsToAdd.add(new ShootTheMoon());
+    cardsToAdd.add(new FinalSpark());
+    cardsToAdd.add(new JA());
+    cardsToAdd.add(new AbsoluteMagnitude());
+    cardsToAdd.add(new TreasureHunter());
+    cardsToAdd.add(new CollectingQuirk());
+
+    cardsToAdd.add(new MilkyWay());
+    cardsToAdd.add(new AsteroidBelt());
+    cardsToAdd.add(new PowerUp());
+    cardsToAdd.add(new SporeBomb());
+    cardsToAdd.add(new IllusionStar());
+    cardsToAdd.add(new EnergyRecoil());
+    cardsToAdd.add(new GasGiant());
+    cardsToAdd.add(new StarDustReverie());
+    cardsToAdd.add(new MagicAbsorber());
+    cardsToAdd.add(new Occultation());
+    cardsToAdd.add(new EarthLightRay());
+    cardsToAdd.add(new BlazeAway());
+    cardsToAdd.add(new ChargingUp());
+    cardsToAdd.add(new DarkMatter());
+    cardsToAdd.add(new MagicChant());
+    cardsToAdd.add(new OneTimeOff());
+    cardsToAdd.add(new ManaConvection());
+    cardsToAdd.add(new PropBag());
+    cardsToAdd.add(new SprinkleStarSeal());
+    cardsToAdd.add(new GalacticHalo());
+    cardsToAdd.add(new SuperPerseids());
+    cardsToAdd.add(new PulseMagic());
+    cardsToAdd.add(new Orbital());
+    cardsToAdd.add(new BigCrunch());
+    cardsToAdd.add(new OpenUniverse());
+    cardsToAdd.add(new StarlightTyphoon());
+    cardsToAdd.add(new MaximisePower());
+    cardsToAdd.add(new UltraShortWave());
+    cardsToAdd.add(new ManaRampage());
+    cardsToAdd.add(new BinaryStars());
+
+    cardsToAdd.add(new WitchOfGreed());
+    cardsToAdd.add(new SatelliteIllusion());
+    cardsToAdd.add(new OortCloud());
+    cardsToAdd.add(new OrrerysSun());
+    cardsToAdd.add(new EnergyFlow());
+    cardsToAdd.add(new EventHorizon());
+    cardsToAdd.add(new Singularity());
+    cardsToAdd.add(new CasketOfStar());
+    cardsToAdd.add(new PolarisUnique());
+    cardsToAdd.add(new EscapeVelocity());
+    cardsToAdd.add(new MillisecondPulsars());
+    cardsToAdd.add(new SuperNova());
+    cardsToAdd.add(new Spark());
+    cardsToAdd.add(new GuidingStar());
+    cardsToAdd.add(new BlackFlareStar());
+    cardsToAdd.add(new WhiteDwarf());
+    cardsToAdd.add(new Exhaustion_MRS());
+    cardsToAdd.add(new Strike_MRS());
   }
 
   class Keywords {
