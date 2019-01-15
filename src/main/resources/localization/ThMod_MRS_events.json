@@ -1,0 +1,43 @@
+{
+  "Mushrooms_MRS": {
+    "NAME": "Mushrooms",
+    "DESCRIPTIONS": [
+      "You give in to the unnatural desire to eat. As you consume mushroom after mushroom, you feel yourself entering into a daze and pass out. As you awake, you feel very odd. NL You #gHeal #b25% of your HP, but you also get #rinfected.",
+      "#r@Ambushed!!@ NL Rodents infested by the mushrooms appear out of nowhere!",
+      "You enter a corridor full of #b~hypnotizing~ #b~colored~ #b~mushrooms.~ NL These mushrooms are nothing like any other ones you've seen before. NL You want to collect some of them, but feel oddly compelled to eat #b~one...~"
+    ],
+    "OPTIONS": [
+      "[Collect] #rAnger #rthe #rMushrooms.",
+      "[Eat] #gHeal #g",
+      " #gHP. #rBecome #rCursed #r- #rParasite.",
+      "[Fight]",
+      "[Leave]"
+    ]
+  },
+  "WWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWWWW",
+      "WWWWWWWWWWWWW",
+      "WWWWWWWWWWWWW"
+    ],
+    "OPTIONS": [
+      "WWWWWWWWWWWWW",
+      "WWWWWWWWWWWWW",
+      "WWWWWWWWWWWWW"
+    ]
+  },
+  "WWWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWWWWW",
+      "WWWWWWWWWWWWWW",
+      "WWWWWWWWWWWWWW"
+    ],
+    "OPTIONS": [
+      "WWWWWWWWWWWWWW",
+      "WWWWWWWWWWWWWW",
+      "WWWWWWWWWWWWWW"
+    ]
+  }
+}

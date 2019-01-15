@@ -1,0 +1,43 @@
+{
+  "Mushrooms": {
+    "NAME": "蘑菇",
+    "DESCRIPTIONS": [
+      "你順從了這份不自然的食慾，吃下一個又一個蘑菇後，你覺得自己有點暈暈的，然後就失去了意識。當你醒來時，你覺得有點怪怪的 NL 你 #g回復 生命值的 #b25% ，但同時被 #r感染 了。",
+      "#r@有埋伏！！@ NL 被蘑菇感染的囓齒類動物們不知從哪裡冒了出來！",
+      "你走進一條遍地是 #b~五彩斑斕蘑菇~ 的走廊， 這些蘑菇和你之前見過的種類都不一樣。 NL 你想要將它們收集起來，但卻又有一種奇怪的衝動想要去吃一個 #b~蘑菇……~"
+    ],
+    "OPTIONS": [
+      "[收集] #r激怒蘑菇們",
+      "[吃下]  #g回復 #g",
+      " #g生命。 #r被詛咒──寄生",
+      "[戰鬥]",
+      "[離開]"
+    ]
+  },
+  "WWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWWWW",
+      "WWWWWWWWWWWWW",
+      "WWWWWWWWWWWWW"
+    ],
+    "OPTIONS": [
+      "WWWWWWWWWWWWW",
+      "WWWWWWWWWWWWW",
+      "WWWWWWWWWWWWW"
+    ]
+  },
+  "WWWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWWWWW",
+      "WWWWWWWWWWWWWW",
+      "WWWWWWWWWWWWWW"
+    ],
+    "OPTIONS": [
+      "WWWWWWWWWWWWWW",
+      "WWWWWWWWWWWWWW",
+      "WWWWWWWWWWWWWW"
+    ]
+  }
+}

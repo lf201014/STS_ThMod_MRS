@@ -14,13 +14,14 @@ public class SoundMasterPlayAPatch {
 
   public static long Postfix(long res, SoundMaster _inst, String key, float pitchAdjust) {
     if (map.containsKey(key)) {
+      /*
       if (key.equals("SELECT_MRS")) {
         return ((Sfx) map.get(key)).play(
             Settings.SOUND_VOLUME * Settings.MASTER_VOLUME * 0.25F,
             1.0F + pitchAdjust,
             0.0F
         );
-      } else {
+      } else*/ {
         return ((Sfx) map.get(key)).play(
             Settings.SOUND_VOLUME * Settings.MASTER_VOLUME,
             1.0F + pitchAdjust,
