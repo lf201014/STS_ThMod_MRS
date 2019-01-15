@@ -63,7 +63,7 @@ public class Orbital extends CustomCard {
 
   public void triggerWhenDrawn() {
     AbstractDungeon.actionManager.addToBottom(
-        new DrawCardAction(AbstractDungeon.player, this.magicNumber)
+        new DrawCardAction(AbstractDungeon.player, DRAW)
     );
   }
 

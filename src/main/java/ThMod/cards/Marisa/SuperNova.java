@@ -39,15 +39,18 @@ public class SuperNova extends CustomCard {
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
+    /*
     if ((this.upgraded) && (p.hasPower("SuperNovaPower"))) {
       SuperNovaPower po = (SuperNovaPower) p.getPower("SuperNovaPower");
       po.upgraded = true;
     }
+    */
     AbstractDungeon.actionManager.addToBottom(
         new ApplyPowerAction(
             p,
             p,
-            new SuperNovaPower(p, 1, this.upgraded),
+            //new SuperNovaPower(p, 1, this.upgraded),
+            new SuperNovaPower(p,1,false),
             1
         )
     );
@@ -60,8 +63,9 @@ public class SuperNova extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      this.rawDescription = DESCRIPTION_UPG;
-      initializeDescription();
+      upgradeBaseCost(2);
+      //this.rawDescription = DESCRIPTION_UPG;
+      //initializeDescription();
     }
   }
 }

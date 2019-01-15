@@ -8,16 +8,21 @@ import ThMod.action.SparkCostAction;
 import ThMod.cards.Marisa.AlicesGift;
 import ThMod.cards.Marisa.EnergyRecoil;
 import ThMod.cards.Marisa.ManaRampage;
+import ThMod.cards.Marisa.OneTimeOff;
 import ThMod.cards.Marisa.SprinkleStarSeal;
 import ThMod.cards.derivations.Exhaustion_MRS;
 import ThMod.potions.ShroomBrew;
+import ThMod.relics.BewitchedHakkero;
 import com.badlogic.gdx.graphics.Texture;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+//import com.megacrit.cardcrawl.relics.AbstractRelic;
 import java.nio.charset.StandardCharsets;
 
+import java.util.ArrayList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -75,7 +80,6 @@ import ThMod.cards.Marisa.MaximisePower;
 import ThMod.cards.Marisa.MeteoricShower;
 import ThMod.cards.Marisa.MilkyWay;
 import ThMod.cards.Marisa.MillisecondPulsars;
-import ThMod.cards.Marisa.MoraleDepletion;
 import ThMod.cards.Marisa.MysteriousBeam;
 import ThMod.cards.Marisa.NonDirectionalLaser;
 import ThMod.cards.Marisa.Occultation;
@@ -117,8 +121,7 @@ import ThMod.patches.AbstractCardEnum;
 import ThMod.powers.Marisa.GrandCrossPower;
 import ThMod.relics.AmplifyWand;
 import ThMod.relics.BreadOfAWashokuLover;
-import ThMod.relics.EnhancedBroom;
-import ThMod.relics.EnhancedHakkero;
+import ThMod.relics.MagicBroom;
 import ThMod.relics.ExperimentalFamiliar;
 import ThMod.relics.HandmadeGrimoire;
 import ThMod.relics.MiniHakkero;
@@ -205,9 +208,16 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String KEYWORD_STRING_KR = "localization/ThMod_MRS_keywords-kr.json";
   private static final String KEYWORD_STRING_ZHS = "localization/ThMod_MRS_keywords-zh.json";
   private static final String KEYWORD_STRING_ZHT = "localization/ThMod_MRS_keywords-zht.json";
+  private static final String EVENT_PATH = "localization/ThMod_MRS_events.json";
+  private static final String EVENT_PATH_ZHS = "localization/ThMod_MRS_events-zh.json";
+  private static final String EVENT_PATH_ZHT = "localization/ThMod_MRS_events-zht.json";
 
   public static int typhoonCounter = 0;
 
+  private ArrayList<AbstractCard> cardsToAdd = new ArrayList<>();
+  //private ArrayList<AbstractRelic> relicsToAdd = new ArrayList<>();
+
+  /*
   //For Spark Themed cards
   public static boolean isSpark(AbstractCard card) {
     return (
@@ -220,7 +230,7 @@ public class ThMod implements PostExhaustSubscriber,
             (card.cardID.equals("MachineGunSpark")) ||
             (card.cardID.equals("MasterSpark"))
     );
-  }
+  }*/
 
   //For the FXXKING Exhaustion curse
   public static boolean ExhaustionCheck() {
@@ -242,8 +252,8 @@ public class ThMod implements PostExhaustSubscriber,
             + card.costForTurn
     );
     AbstractPlayer p = AbstractDungeon.player;
-    if (p.hasPower("MoraleDepletionPlusPower")) {
-      logger.info("ThMod.Amplified :MoraleDepletionPower detected,returning false.");
+    if ((p.hasPower("OneTimeOffPlusPower")) || (p.hasPower("OneTimeOffPower"))) {
+      logger.info("ThMod.Amplified :OneTimeOff detected,returning false.");
       return false;
     }
 
@@ -262,11 +272,6 @@ public class ThMod implements PostExhaustSubscriber,
     } else {
       if (EnergyPanel.totalCount >= (card.costForTurn + AMP)) {
         logger.info("ThMod.Amplified : Sufficient energy ,adding and returning true;");
-        /*
-        if ((card.costForTurn == 0) && (card.cost == 0)) {
-          p.energy.use(AMP);
-        }
-        */
         card.costForTurn += AMP;
         res = true;
       }
@@ -358,11 +363,11 @@ public class ThMod implements PostExhaustSubscriber,
         MARISA_COLOR
     );
     BaseMod.addRelicToCustomPool(
-        new EnhancedHakkero(),
+        new BewitchedHakkero(),
         MARISA_COLOR
     );
     BaseMod.addRelicToCustomPool(
-        new EnhancedBroom(),
+        new MagicBroom(),
         MARISA_COLOR
     );
     BaseMod.addRelicToCustomPool(
@@ -403,186 +408,15 @@ public class ThMod implements PostExhaustSubscriber,
   }
 
   public void receiveEditCards() {
-    logger.info("begin editting cards");
+    logger.info("starting editing cards");
 
-    logger.info("add cards for MARISA");
-    //starter:4
-    BaseMod.addCard(new Strike_MRS());
-    UnlockTracker.unlockCard("Strike_MRS");
-    BaseMod.addCard(new Defend_MRS());
-    UnlockTracker.unlockCard("Defend_MRS");
-    BaseMod.addCard(new MasterSpark());
-    UnlockTracker.unlockCard("MasterSpark");
-    BaseMod.addCard(new UpSweep());
-    UnlockTracker.unlockCard("UpSweep");
-    //attack:31
-    //Common: 10
-    BaseMod.addCard(new DoubleSpark());
-    UnlockTracker.unlockCard("DoubleSpark");
-    BaseMod.addCard(new NonDirectionalLaser());
-    UnlockTracker.unlockCard("NonDirectionalLaser");
-    BaseMod.addCard(new LuminesStrike());
-    UnlockTracker.unlockCard("LuminesStrike");
-    BaseMod.addCard(new MysteriousBeam());
-    UnlockTracker.unlockCard("MysteriousBeam");
-    BaseMod.addCard(new WitchLeyline());
-    UnlockTracker.unlockCard("WitchLeyline");
-    BaseMod.addCard(new D6C());
-    UnlockTracker.unlockCard("D6C");
-    BaseMod.addCard(new _6A());
-    UnlockTracker.unlockCard("6A");
-    BaseMod.addCard(new UnstableBomb());
-    UnlockTracker.unlockCard("UnstableBomb");
-    BaseMod.addCard(new StarBarrage());
-    UnlockTracker.unlockCard("StarBarrage_0");
-    BaseMod.addCard(new ShootingEcho());
-    UnlockTracker.unlockCard("ShootingEcho");
-    //Uncommon: 12
-    BaseMod.addCard(new MachineGunSpark());
-    UnlockTracker.unlockCard("MachineGunSpark");
-    BaseMod.addCard(new DarkSpark());
-    UnlockTracker.unlockCard("DarkSpark");
-    BaseMod.addCard(new DeepEcologicalBomb());
-    UnlockTracker.unlockCard("DeepEcoloBomb");
-    BaseMod.addCard(new MeteoricShower());
-    UnlockTracker.unlockCard("MeteoricShower");
-    BaseMod.addCard(new GravityBeat());
-    UnlockTracker.unlockCard("GravityBeat");
-    BaseMod.addCard(new GrandCross());
-    UnlockTracker.unlockCard("GrandCross");
-    BaseMod.addCard(new DragonMeteor());
-    UnlockTracker.unlockCard("DragonMeteor");
-    BaseMod.addCard(new RefractionSpark());
-    UnlockTracker.unlockCard("RefractionSpark");
-    BaseMod.addCard(new Robbery());
-    UnlockTracker.unlockCard("Robbery");
-    BaseMod.addCard(new ChargeUpSpray());
-    UnlockTracker.unlockCard("ChargeUpSpray");
-    BaseMod.addCard(new AlicesGift());
-    UnlockTracker.unlockCard("AlicesGift");
-    BaseMod.addCard(new FairyDestructionRay());
-    UnlockTracker.unlockCard("FairyDestructionRay");
-    //Rare:  7
-    BaseMod.addCard(new BlazingStar());
-    UnlockTracker.unlockCard("BlazingStar");
-    BaseMod.addCard(new ShootTheMoon());
-    UnlockTracker.unlockCard("ShootTheMoon");
-    BaseMod.addCard(new FinalSpark());
-    UnlockTracker.unlockCard("FinalSpark");
-    BaseMod.addCard(new JA());
-    UnlockTracker.unlockCard("JA");
-    BaseMod.addCard(new AbsoluteMagnitude());
-    UnlockTracker.unlockCard("AbsoluteMagnitude");
-    BaseMod.addCard(new TreasureHunter());
-    UnlockTracker.unlockCard("TreasureHunter");
-    BaseMod.addCard(new CollectingQuirk());
-    UnlockTracker.unlockCard("CollectingQuirk");
+    loadCardsToAdd();
 
-    //skill:28
-    //Common : 6
-    BaseMod.addCard(new MilkyWay());
-    UnlockTracker.unlockCard("MilkyWay");
-    BaseMod.addCard(new AsteroidBelt());
-    UnlockTracker.unlockCard("AsteroidBelt");
-    BaseMod.addCard(new PowerUp());
-    UnlockTracker.unlockCard("PowerUp");
-    BaseMod.addCard(new SporeBomb());
-    UnlockTracker.unlockCard("SporeBomb");
-    BaseMod.addCard(new IllusionStar());
-    UnlockTracker.unlockCard("IllusionStar");
-    BaseMod.addCard(new EnergyRecoil());
-    UnlockTracker.unlockCard("EnergyRecoil");
-    //Uncommon : 17
-    BaseMod.addCard(new GasGiant());
-    UnlockTracker.unlockCard("GasGiant");
-    BaseMod.addCard(new StarDustReverie());
-    UnlockTracker.unlockCard("StarDustReverie");
-    BaseMod.addCard(new MagicAbsorber());
-    UnlockTracker.unlockCard("MagicAbsorber");
-    BaseMod.addCard(new Occultation());
-    UnlockTracker.unlockCard("Occultation");
-    BaseMod.addCard(new EarthLightRay());
-    UnlockTracker.unlockCard("EarthLightRay");
-    BaseMod.addCard(new BlazeAway());
-    UnlockTracker.unlockCard("BlazeAway");
-    BaseMod.addCard(new ChargingUp());
-    UnlockTracker.unlockCard("ChargingUp");
-    BaseMod.addCard(new DarkMatter());
-    UnlockTracker.unlockCard("DarkMatter");
-    BaseMod.addCard(new MagicChant());
-    UnlockTracker.unlockCard("MagicChant");
-    BaseMod.addCard(new MoraleDepletion());
-    UnlockTracker.unlockCard("MoraleDepletion");
-    BaseMod.addCard(new ManaConvection());
-    UnlockTracker.unlockCard("ManaConvection");
-    BaseMod.addCard(new PropBag());
-    UnlockTracker.unlockCard("PropBag");
-    BaseMod.addCard(new SprinkleStarSeal());
-    UnlockTracker.unlockCard("SprinkleStarSeal");
-    BaseMod.addCard(new GalacticHalo());
-    UnlockTracker.unlockCard("GalacticHalo");
-    BaseMod.addCard(new SuperPerseids());
-    UnlockTracker.unlockCard("SuperPerseids");
-    BaseMod.addCard(new PulseMagic());
-    UnlockTracker.unlockCard("PulseMagic");
-    BaseMod.addCard(new Orbital());
-    UnlockTracker.unlockCard("Orbital");
-    //Rare : 7
-    BaseMod.addCard(new BigCrunch());
-    UnlockTracker.unlockCard("BigCrunch");
-    BaseMod.addCard(new OpenUniverse());
-    UnlockTracker.unlockCard("OpenUniverse");
-    BaseMod.addCard(new StarlightTyphoon());
-    UnlockTracker.unlockCard("StarlightTyphoon");
-    BaseMod.addCard(new MaximisePower());
-    UnlockTracker.unlockCard("MaximisePower");
-    BaseMod.addCard(new UltraShortWave());
-    UnlockTracker.unlockCard("UltraShortWave");
-    BaseMod.addCard(new ManaRampage());
-    UnlockTracker.unlockCard("ManaRampage");
-    BaseMod.addCard(new BinaryStars());
-    UnlockTracker.unlockCard("BinaryStars");
+    logger.info("adding cards for MARISA");
 
-    //power:12
-    //common:1
-    BaseMod.addCard(new WitchOfGreed());
-    UnlockTracker.unlockCard("WitchOfGreed");
-    //uncommon: 7
-    BaseMod.addCard(new SatelliteIllusion());
-    UnlockTracker.unlockCard("SatelliteIllusion");
-    BaseMod.addCard(new OortCloud());
-    UnlockTracker.unlockCard("OortCloud");
-    BaseMod.addCard(new OrrerysSun());
-    UnlockTracker.unlockCard("OrrerysSun");
-    BaseMod.addCard(new EnergyFlow());
-    UnlockTracker.unlockCard("EnergyFlow");
-    BaseMod.addCard(new EventHorizon());
-    UnlockTracker.unlockCard("EventHorizon");
-    BaseMod.addCard(new Singularity());
-    UnlockTracker.unlockCard("Singularity");
-    BaseMod.addCard(new CasketOfStar());
-    UnlockTracker.unlockCard("CasketOfStar");
-    //rare: 4
-    BaseMod.addCard(new PolarisUnique());
-    UnlockTracker.unlockCard("PolarisUnique");
-    BaseMod.addCard(new EscapeVelocity());
-    UnlockTracker.unlockCard("EscapeVelocity");
-    BaseMod.addCard(new MillisecondPulsars());
-    UnlockTracker.unlockCard("MillisecondPulsars");
-    BaseMod.addCard(new SuperNova());
-    UnlockTracker.unlockCard("SuperNova");
-
-    //derivations:4
-    BaseMod.addCard(new Spark());
-    UnlockTracker.unlockCard("Spark");
-    BaseMod.addCard(new GuidingStar());
-    UnlockTracker.unlockCard("GuidingStar");
-    BaseMod.addCard(new BlackFlareStar());
-    UnlockTracker.unlockCard("BlackFlareStar");
-    BaseMod.addCard(new WhiteDwarf());
-    UnlockTracker.unlockCard("WhiteDwarf");
-    BaseMod.addCard(new Exhaustion_MRS());
-    UnlockTracker.unlockCard("Exhaustion_MRS");
+    for (AbstractCard card : cardsToAdd) {
+      BaseMod.addCard(card);
+    }
 
     logger.info("done editing cards");
   }
@@ -616,7 +450,7 @@ public class ThMod implements PostExhaustSubscriber,
     if (card.retain) {
       card.retain = false;
     }
-    if (card.hasTag(SPARK)){
+    if (card.hasTag(SPARK)) {
       AbstractDungeon.actionManager.addToTop(
           new SparkCostAction()
       );
@@ -662,8 +496,8 @@ public class ThMod implements PostExhaustSubscriber,
         keywordsPath = KEYWORD_STRING_JP;
         break;
       case FRA:
-      keywordsPath = KEYWORD_STRING_FR;
-      break;
+        keywordsPath = KEYWORD_STRING_FR;
+        break;
       default:
         keywordsPath = KEYWORD_STRING;
         break;
@@ -676,72 +510,6 @@ public class ThMod implements PostExhaustSubscriber,
       logger.info("Loading keyword : " + key.NAMES[0]);
       BaseMod.addKeyword(key.NAMES, key.DESCRIPTION);
     }
-/*
-    if (Settings.language == Settings.GameLanguage.ZHS) {
-      BaseMod.addKeyword(new String[]{"\u529b\u7aed"},
-          "\u529b\u7aed\u4f1a\u4f7f\u4f60\u65e0\u6cd5\u83b7\u5f97\u6216\u4f7f\u7528 \u84c4\u529b \u3002");
-      BaseMod
-          .addKeyword(new String[]{"\u53d6\u51b3\u4e8e\u6240\u6d88\u8017\u5361\u7684\u79cd\u7c7b"},
-              "\u653b\u51fb\uff1a\u6050\u60e7\u836f\u6c34\uff1b\u6280\u80fd\uff1a\u865a\u5f31\u836f\u6c34\uff1b\u80fd\u529b\uff1a\u6bd2\u7d20\u836f\u6c34\uff1b\u72b6\u6001\uff1a\u706b\u7130\u836f\u6c34\uff1b\u8bc5\u5492\uff1a\u70df\u96fe\u0020\u5f39\u0020\u3002");
-      BaseMod.addKeyword(new String[]{"\u706b\u82b1"},
-          "\u706b\u82b1\u662f\u4e00\u5f20\u6d88\u8017\u4e3a\u0030\u7684\u653b\u51fb\u724c");
-      BaseMod.addKeyword(new String[]{"\u84c4\u529b"},
-          "\u6bcf8\u5c42\u84c4\u529b\u4f1a\u4f7f\u4f60\u7684\u4e0b\u4e00\u6b21\u653b\u51fb\u4f24\u5bb3\u7ffb\u4e00\u500d\u3002");
-      BaseMod.addKeyword(new String[]{"\u589e\u5e45"},
-          "\u5f53\u4f60\u7684\u8d39\u7528\u8db3\u591f\u4f7f\u7528\u8fd9\u5f20\u724c\u66f4\u9ad8\u7ea7\u7684\u6548\u679c\u65f6\uff0c\u4f7f\u7528\u66f4\u9ad8\u7ea7\u7684\u6548\u679c\u3002");
-    } else if (Settings.language == Settings.GameLanguage.ZHT) {
-      BaseMod.addKeyword(new String[]{"\u529b\u7aed"},
-          "\u529b\u7aed\u6642\u7121\u6cd5\u7372\u5f97\u6216\u4f7f\u7528 \u84c4\u529b");
-      BaseMod
-          .addKeyword(new String[]{"\u53d6\u6c7a\u65bc\u6240\u6d88\u8017\u724c\u7684\u7a2e\u985e"},
-              "\u653b\u64ca\uff1a\u6050\u61fc\u85e5\u6c34\uff1b\u6280\u80fd\uff1a\u865b\u5f31\u85e5\u6c34\uff1b\u80fd\u529b\uff1a\u6bd2\u7d20\u85e5\u6c34\uff1b\u72c0\u614b\uff1a\u706b\u7130\u85e5\u6c34\uff1b\u8a5b\u5492\uff1a\u7159\u9727\u5f48");
-      BaseMod.addKeyword(new String[]{"\u706b\u82b1"},
-          "\u706b\u82b1\u662f\u6703\u6d88\u8017\u7684 #b0 \u8017\u80fd\u653b\u64ca\u724c");
-      BaseMod.addKeyword(new String[]{"\u84c4\u529b"},
-          "\u6bcf\u0038\u5c64\u84c4\u529b\u6703\u4f7f\u4f60\u7684\u4e0b\u4e00\u6b21\u653b\u64ca\u50b7\u5bb3\u52a0\u500d");
-      BaseMod.addKeyword(new String[]{"\u589e\u5e45"},
-          "\u7576\u6709\u8db3\u5920\u7684 [B] \u6642\uff0c\u4f7f\u7528\u5176\u9032\u968e\u6548\u679c");
-    } else {
-
-    BaseMod.addKeyword(new String[]{"\u6d88\u8017"},
-            "\u6d88\u8017\u3059\u308b\u3068\u3001 \u30c1\u30e3\u30fc\u30b8 \u3092\u5f97\u305f\u308a\u6d88\u8cbb\u3059\u308b\u4e8b\u304c\u51fa\u6765\u306a\u3044\u3002");
-    BaseMod.addKeyword(new String[]{"\u30ab\u30fc\u30c9\u306b\u3088\u3063\u3066\u7570\u306a\u308b"},
-            "\u30a2\u30bf\u30c3\u30af \uff1a \u6050\u6016\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30b9\u30ad\u30eb \uff1a \u8131\u529b\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u30d1\u30ef\u30fc \uff1a \u6bd2\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u72b6\u614b\u7570\u5e38 \uff1a \u706b\u708e\u30dd\u30fc\u30b7\u30e7\u30f3 NL \u546a\u3044 \uff1a \u7159\u7389");
-    BaseMod.addKeyword(new String[]{"\u30b9\u30d1\u30fc\u30af"},
-            "\u30b9\u30d1\u30fc\u30af\u306f\u30b3\u30b9\u30c8 #b0 \u306e \u30a2\u30bf\u30c3\u30af \u30ab\u30fc\u30c9");
-    BaseMod.addKeyword(new String[]{"\u30c1\u30e3\u30fc\u30b8"},
-            "#b8 \u30b9\u30bf\u30c3\u30af\u3054\u3068\u306b\u3001\u4e0e\u3048\u308b\u30c0\u30e1\u30fc\u30b8\u304c #b2 \u500d\u306b\u306a\u308b\u3002");
-    BaseMod.addKeyword(new String[]{"\u5897\u5e45"},
-            "\u5897\u5e45\u306b\u5fc5\u8981\u306a [B] \u3092\u6301\u3063\u3066\u3044\u308b\u5834\u5408\u3001[B] \u3092\u6d88\u8cbb\u3057\u3000\u5897\u5e45\u52b9\u679c\u3092\u5f97\u308b");
-
-      //Korean Localization
-      BaseMod.addKeyword(new String[]{"\uc99d\ud3ed"},
-          "\ucda9\ubd84\ud55c [B] \uac00 \uc788\ub2e4\uba74 \ucd94\uac00\ub85c \uc18c\ubaa8\ud574 \ud6a8\uacfc\ub97c \uac15\ud654\ud569\ub2c8\ub2e4.");
-      BaseMod.addKeyword(new String[]{"\uace0\uac08"},
-          "\uc99d\ud3ed, \ucda9\uc804 \ud6a8\uacfc\ub97c \ubc1c\ub3d9 \ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.");
-      BaseMod.addKeyword(new String[]{"\uc2a4\ud30c\ud06c"},
-          "\ube44\uc6a9\uc774 0\uc778 \uacf5\uaca9\uce74\ub4dc\uc785\ub2c8\ub2e4.");
-      BaseMod.addKeyword(new String[]{"\ucda9\uc804"},
-          "\ucda9\uc804\uc774 8 \uc313\uc77c \ub54c \ub9c8\ub2e4 \ub2e4\uc74c \uc0ac\uc6a9\ud558\ub294 \uacf5\uaca9 \uce74\ub4dc\uc758 \ud53c\ud574\uac00 2\ubc30\uc529 \uc99d\uac00\ud558\uba70 \ucda9\uc804\uc744 \uc18c\ubaa8\ud569\ub2c8\ub2e4.");
-      BaseMod.addKeyword(new String[]{"\uc18c\uba78\uc2dc\ud0a8 \uce74\ub4dc\uc758 \uc885\ub958"},
-          "\uacf5\uaca9 : \uacf5\ud3ec \ud3ec\uc158 ; NL \uc2a4\ud0ac : \uc57d\ud654 \ud3ec\uc158 ; NL \ud30c\uc6cc : \uc911\ub3c5 \ud3ec\uc158 ; NL \uc0c1\ud0dc\uc774\uc0c1 : \ud654\uc5fc \ud3ec\uc158 ; NL \uc800\uc8fc : \uc5f0\ub9c9\ud0c4.");
-
-      BaseMod.addKeyword(new String[]{"amplify", "Amplify"},
-          "Pay extra energy for its effect when you have enough  [B] .");
-      BaseMod.addKeyword(new String[]{"Exhaustion", "exhaustion"},
-          "Exhaustion prevent you from gaining or using Charge-Up .");
-      BaseMod.addKeyword(new String[]{"Spark", "spark"},
-          "Spark is an attack card cost 0 energy.");
-      BaseMod.addKeyword(new String[]{"Charge-up", "charge-up", "chargeup", "ChargeUp"},
-          "For every 8 stacks,double your damage.");
-      BaseMod.addKeyword(new String[]{
-              "Depends On The Type Of The Card",
-              "depends on the type of the card"
-          },
-          "Attack : Fear Potion ; NL Skill : Weak Potion ; NL Power : Poison Potion ; Status : Fire Potion ; Curse : Smoke Bomb ."
-      );
-    }
-*/
     logger.info("Keywords setting finished.");
   }
 
@@ -749,7 +517,16 @@ public class ThMod implements PostExhaustSubscriber,
   public void receiveEditStrings() {
     logger.info("start editing strings");
 
-    String relicStrings, cardStrings, powerStrings, potionStrings, relic, card, power, potion;
+    String relicStrings,
+        cardStrings,
+        powerStrings,
+        potionStrings,
+        eventStrings,
+        relic,
+        card,
+        power,
+        potion,
+        event;
 
     if (Settings.language == Settings.GameLanguage.ZHS) {
       logger.info("lang == zhs");
@@ -757,37 +534,42 @@ public class ThMod implements PostExhaustSubscriber,
       relic = RELIC_STRING_ZH;
       power = POWER_STRING_ZH;
       potion = POTION_STRING_ZH;
+      event = EVENT_PATH_ZHS;
     } else if (Settings.language == Settings.GameLanguage.JPN) {
       logger.info("lang == jpn");
       card = CARD_STRING_JP;
       relic = RELIC_STRING_JP;
       power = POWER_STRING_JP;
       potion = POTION_STRING_JP;
+      event = EVENT_PATH;
     } else if (Settings.language == Settings.GameLanguage.ZHT) {
       logger.info("lang == zht");
       card = CARD_STRING_ZHT;
       relic = RELIC_STRING_ZHT;
       power = POWER_STRING_ZHT;
       potion = POTION_STRING_ZHT;
+      event = EVENT_PATH_ZHT;
     } else if (Settings.language == Settings.GameLanguage.KOR) {
       logger.info("lang == kor");
       card = CARD_STRING_KR;
       relic = RELIC_STRING_KR;
       power = POWER_STRING_KR;
       potion = POTION_STRING_KR;
-    } else if(Settings.language == Settings.GameLanguage.FRA) {
+      event = EVENT_PATH;
+    } else if (Settings.language == Settings.GameLanguage.FRA) {
       logger.info("lang == fra");
       card = CARD_STRING_FR;
       relic = RELIC_STRING_FR;
       power = POWER_STRING_FR;
       potion = POTION_STRING_FR;
+      event = EVENT_PATH;
     } else {
       logger.info("lang == eng");
       card = CARD_STRING;
       relic = RELIC_STRING;
       power = POWER_STRING;
       potion = POTION_STRING;
-
+      event = EVENT_PATH;
     }
 
     relicStrings = Gdx.files.internal(relic).readString(
@@ -806,7 +588,10 @@ public class ThMod implements PostExhaustSubscriber,
         String.valueOf(StandardCharsets.UTF_8)
     );
     BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
-
+    eventStrings = Gdx.files.internal(event).readString(
+        String.valueOf(StandardCharsets.UTF_8)
+    );
+    BaseMod.loadCustomStrings(EventStrings.class, eventStrings);
     logger.info("done editing strings");
   }
 
@@ -830,6 +615,95 @@ public class ThMod implements PostExhaustSubscriber,
         "A Mod of the poor blonde hair girl from Touhou Project(",
         null
     );
+  }
+
+  private void loadCardsToAdd() {
+    cardsToAdd.clear();
+
+    cardsToAdd.add(new Strike_MRS());
+    cardsToAdd.add(new Defend_MRS());
+    cardsToAdd.add(new MasterSpark());
+    cardsToAdd.add(new UpSweep());
+
+    cardsToAdd.add(new DoubleSpark());
+    cardsToAdd.add(new NonDirectionalLaser());
+    cardsToAdd.add(new LuminesStrike());
+    cardsToAdd.add(new MysteriousBeam());
+    cardsToAdd.add(new WitchLeyline());
+    cardsToAdd.add(new D6C());
+    cardsToAdd.add(new _6A());
+    cardsToAdd.add(new UnstableBomb());
+    cardsToAdd.add(new StarBarrage());
+    cardsToAdd.add(new ShootingEcho());
+    cardsToAdd.add(new MachineGunSpark());
+    cardsToAdd.add(new DarkSpark());
+    cardsToAdd.add(new DeepEcologicalBomb());
+    cardsToAdd.add(new MeteoricShower());
+    cardsToAdd.add(new GravityBeat());
+    cardsToAdd.add(new GrandCross());
+    cardsToAdd.add(new DragonMeteor());
+    cardsToAdd.add(new RefractionSpark());
+    cardsToAdd.add(new Robbery());
+    cardsToAdd.add(new ChargeUpSpray());
+    cardsToAdd.add(new AlicesGift());
+    cardsToAdd.add(new FairyDestructionRay());
+    cardsToAdd.add(new BlazingStar());
+    cardsToAdd.add(new ShootTheMoon());
+    cardsToAdd.add(new FinalSpark());
+    cardsToAdd.add(new JA());
+    cardsToAdd.add(new AbsoluteMagnitude());
+    cardsToAdd.add(new TreasureHunter());
+    cardsToAdd.add(new CollectingQuirk());
+
+    cardsToAdd.add(new MilkyWay());
+    cardsToAdd.add(new AsteroidBelt());
+    cardsToAdd.add(new PowerUp());
+    cardsToAdd.add(new SporeBomb());
+    cardsToAdd.add(new IllusionStar());
+    cardsToAdd.add(new EnergyRecoil());
+    cardsToAdd.add(new GasGiant());
+    cardsToAdd.add(new StarDustReverie());
+    cardsToAdd.add(new MagicAbsorber());
+    cardsToAdd.add(new Occultation());
+    cardsToAdd.add(new EarthLightRay());
+    cardsToAdd.add(new BlazeAway());
+    cardsToAdd.add(new ChargingUp());
+    cardsToAdd.add(new DarkMatter());
+    cardsToAdd.add(new MagicChant());
+    cardsToAdd.add(new OneTimeOff());
+    cardsToAdd.add(new ManaConvection());
+    cardsToAdd.add(new PropBag());
+    cardsToAdd.add(new SprinkleStarSeal());
+    cardsToAdd.add(new GalacticHalo());
+    cardsToAdd.add(new SuperPerseids());
+    cardsToAdd.add(new PulseMagic());
+    cardsToAdd.add(new Orbital());
+    cardsToAdd.add(new BigCrunch());
+    cardsToAdd.add(new OpenUniverse());
+    cardsToAdd.add(new StarlightTyphoon());
+    cardsToAdd.add(new MaximisePower());
+    cardsToAdd.add(new UltraShortWave());
+    cardsToAdd.add(new ManaRampage());
+    cardsToAdd.add(new BinaryStars());
+
+    cardsToAdd.add(new WitchOfGreed());
+    cardsToAdd.add(new SatelliteIllusion());
+    cardsToAdd.add(new OortCloud());
+    cardsToAdd.add(new OrrerysSun());
+    cardsToAdd.add(new EnergyFlow());
+    cardsToAdd.add(new EventHorizon());
+    cardsToAdd.add(new Singularity());
+    cardsToAdd.add(new CasketOfStar());
+    cardsToAdd.add(new PolarisUnique());
+    cardsToAdd.add(new EscapeVelocity());
+    cardsToAdd.add(new MillisecondPulsars());
+    cardsToAdd.add(new SuperNova());
+    cardsToAdd.add(new Spark());
+    cardsToAdd.add(new GuidingStar());
+    cardsToAdd.add(new BlackFlareStar());
+    cardsToAdd.add(new WhiteDwarf());
+    cardsToAdd.add(new Exhaustion_MRS());
+    cardsToAdd.add(new Strike_MRS());
   }
 
   class Keywords {

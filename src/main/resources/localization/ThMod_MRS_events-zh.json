@@ -1,0 +1,43 @@
+{
+  "Mushrooms_MRS": {
+    "NAME": "蘑菇",
+    "DESCRIPTIONS": [
+      "你顺从了这份不自然的食欲，吃下一个又一个蘑菇后，你觉得自己有点晕晕的，然后就失去了意识。当你醒来时，你觉得有点怪怪的 NL 你 #g回复 生命值的 #b25% ，但同时被 #r感染 了。",
+      "#r@有埋伏！！@ NL 被蘑菇感染的啮齿类动物们不知从哪里冒了出来！",
+      "你走进一条遍地是 #b~五彩斑斓蘑菇~ 的走廊， NL 这些蘑菇和你之前见过的完全不一样。 NL 你想要将它们收集起来，但却又有一种奇怪的冲动想要去吃一个 #b~蘑菇……~"
+    ],
+    "OPTIONS": [
+      "[收集] #r激怒蘑菇们。",
+      "[吃下]  #g回复 #g",
+      " #g点生命。 #r被诅咒——寄生。",
+      "[战斗]",
+      "[离开]"
+    ]
+  },
+  "WWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWWWW",
+      "WWWWWWWWWWWWW",
+      "WWWWWWWWWWWWW"
+    ],
+    "OPTIONS": [
+      "WWWWWWWWWWWWW",
+      "WWWWWWWWWWWWW",
+      "WWWWWWWWWWWWW"
+    ]
+  },
+  "WWWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWWWWW",
+      "WWWWWWWWWWWWWW",
+      "WWWWWWWWWWWWWW"
+    ],
+    "OPTIONS": [
+      "WWWWWWWWWWWWWW",
+      "WWWWWWWWWWWWWW",
+      "WWWWWWWWWWWWWW"
+    ]
+  }
+}

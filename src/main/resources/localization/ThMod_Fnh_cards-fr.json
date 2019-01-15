@@ -232,8 +232,8 @@
   },
   "AbsoluteMagnitude": {
     "NAME": "Magnitude absolue",
-    "DESCRIPTION": "Inflige des dégats égaux à 2.5 fois votre charge.(Infligez !B! dégats).",
-    "UPGRADE_DESCRIPTION": "Inflige des dégats égaux à 3.5 fois votre charge.(Infligez !B! dégats)."
+    "DESCRIPTION": "Inflige des dégats égaux à 2 fois votre charge.(Infligez !B! dégats).",
+    "UPGRADE_DESCRIPTION": "Inflige des dégats égaux à 3 fois votre charge.(Infligez !B! dégats)."
   },
   "DragonMeteor": {
     "NAME": "Météor draconique",
@@ -315,7 +315,7 @@
     "DESCRIPTION": "Vous ne prenez plus de dégats des brûlures. Lorsque vous Épuisez une brûlure gagnez 1 de force. NL Épuisez votre main à la fin de chaque tours.",
     "UPGRADE_DESCRIPTION": "Vous ne prenez plus de dégats des brûlures. Lorsque vous Épuisez une malédiction ou un statut gagnez 1 de force. NL Épuisez votre main à la fin de chaque tours."
   },
-  "MoraleDepletion": {
+  "OneTimeOff": {
     "NAME": "Temps d'arrêt.",
     "DESCRIPTION": "Gagnez !B! d'Armures. Vous ne pouvez pas activer d'effet amplifier ou de consommer de charge ce tour. NL Au prochain tour, piochez !M! carte(s).",
     "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armures. Vous ne pouvez pas activer d'effet amplifier ou de consommer de charge ce tour. NL Au prochain tour, piochez !M! carte(s)."

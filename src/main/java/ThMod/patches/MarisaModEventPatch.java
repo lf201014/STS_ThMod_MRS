@@ -2,10 +2,13 @@ package ThMod.patches;
 
 import ThMod.ThMod;
 
+import ThMod.characters.Marisa;
+import ThMod.event.Mushrooms_MRS;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractEvent;
+import com.megacrit.cardcrawl.events.exordium.Mushrooms;
 
 public class MarisaModEventPatch {
 
@@ -42,6 +45,10 @@ public class MarisaModEventPatch {
               " ; retVal event : " +
               _retVal.toString()
       );
+      if ((_retVal instanceof Mushrooms)&&(AbstractDungeon.player instanceof Marisa)) {
+        ThMod.logger.info("Swapping mushroom event");
+        return new Mushrooms_MRS();
+      }
       return _retVal;
     }
   }

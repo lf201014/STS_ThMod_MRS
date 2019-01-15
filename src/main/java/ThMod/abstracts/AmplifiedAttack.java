@@ -42,7 +42,6 @@ public abstract class AmplifiedAttack
   }
 
   public void applyPowers() {
-    AbstractPlayer player = AbstractDungeon.player;
     if (!this.isException) {
       this.damage = this.baseDamage;
       this.ampDamage = (this.baseDamage + this.ampNumber);
@@ -50,107 +49,57 @@ public abstract class AmplifiedAttack
     }
     this.isDamageModified = false;
     this.isBlockModified = false;
-    if (!this.isMultiDamage) {
-      float tmp = this.damage;
-      float amp = this.block;
-      if ((AbstractDungeon.player.hasRelic("WristBlade")) && (this.costForTurn == 0)) {
-        tmp += 3.0F;
-        amp += 3.0F;
-        if (this.baseDamage != (int) tmp) {
-          this.isDamageModified = true;
-        }
-      }
-      for (AbstractPower p : player.powers) {
-        tmp = p.atDamageGive(tmp, this.damageTypeForTurn);
-        amp = p.atDamageGive(amp, this.damageTypeForTurn);
-        if (this.baseDamage != (int) tmp) {
-          this.isDamageModified = true;
-        }
-        if (this.ampDamage != (int) amp) {
-          this.isBlockModified = true;
-        }
-      }
-      for (AbstractPower p : player.powers) {
-        tmp = p.atDamageFinalGive(tmp, this.damageTypeForTurn);
-        amp = p.atDamageFinalGive(amp, this.damageTypeForTurn);
-        if (this.baseDamage != (int) tmp) {
-          this.isDamageModified = true;
-        }
-        if (this.ampDamage != (int) amp) {
-          this.isBlockModified = true;
-        }
-      }
-      if (tmp < 0.0F) {
-        tmp = 0.0F;
-      }
-      if (amp < 0.0F) {
-        amp = 0.0F;
-      }
-      this.damage = MathUtils.floor(tmp);
-      this.block = MathUtils.floor(amp);
-    } else {
-      ArrayList<AbstractMonster> m = AbstractDungeon.getCurrRoom().monsters.monsters;
-      float[] tmp = new float[m.size()];
-      float[] amp = new float[m.size()];
-      for (int i = 0; i < tmp.length; i++) {
-        tmp[i] = this.damage;
-      }
-      for (int i = 0; i < tmp.length; i++) {
-        amp[i] = this.ampDamage;
-      }
-      for (int i = 0; i < tmp.length; i++) {
-        if ((AbstractDungeon.player.hasRelic("WristBlade")) && (this.cost == 0)) {
-          tmp[i] += 3.0F;
-          amp[i] += 3.0F;
-          if (this.baseDamage != (int) tmp[i]) {
-            this.isDamageModified = true;
-          }
-          if (this.ampDamage != (int) amp[i]) {
-            this.isBlockModified = true;
-          }
-        }
-        for (AbstractPower p : player.powers) {
-          tmp[i] = p.atDamageGive(tmp[i], this.damageTypeForTurn);
-          amp[i] = p.atDamageGive(amp[i], this.damageTypeForTurn);
-          if (this.baseDamage != (int) tmp[i]) {
-            this.isDamageModified = true;
-          }
-          if (this.ampDamage != (int) amp[i]) {
-            this.isBlockModified = true;
-          }
-        }
-      }
-      for (int i = 0; i < tmp.length; i++) {
-        for (AbstractPower p : player.powers) {
-          tmp[i] = p.atDamageFinalGive(tmp[i], this.damageTypeForTurn);
-          amp[i] = p.atDamageFinalGive(amp[i], this.damageTypeForTurn);
-          if (this.baseDamage != (int) tmp[i]) {
-            this.isDamageModified = true;
-          }
-          if (this.ampDamage != (int) amp[i]) {
-            this.isBlockModified = true;
-          }
-        }
-      }
-      for (int i = 0; i < tmp.length; i++) {
-        if (tmp[i] < 0.0F) {
-          tmp[i] = 0.0F;
-        }
-        if (amp[i] < 0.0F) {
-          amp[i] = 0.0F;
-        }
-      }
-      this.multiDamage = new int[tmp.length];
-      for (int i = 0; i < tmp.length; i++) {
-        this.multiDamage[i] = MathUtils.floor(tmp[i]);
-      }
-      this.multiAmpDamage = new int[amp.length];
-      for (int i = 0; i < amp.length; i++) {
-        this.multiAmpDamage[i] = MathUtils.floor(amp[i]);
-      }
-      this.damage = this.multiDamage[0];
-      this.block = this.multiAmpDamage[0];
+    float tmp = this.damage;
+    float amp = this.block;
+    tmp = calculate(tmp, null);
+    amp = calculate(amp, null);
+    if (this.baseDamage != (int) tmp) {
+      this.isDamageModified = true;
     }
+    if (this.ampDamage != (int) amp) {
+      this.isBlockModified = true;
+    }
+    this.damage = MathUtils.floor(tmp);
+    this.block = MathUtils.floor(amp);
+    if (this.isMultiDamage) {
+      ArrayList<AbstractMonster> m = AbstractDungeon.getCurrRoom().monsters.monsters;
+      this.multiDamage = new int[m.size()];
+      for (int i = 0; i < m.size(); i++) {
+        this.multiDamage[i] = MathUtils.floor(tmp);
+      }
+      this.multiAmpDamage = new int[m.size()];
+      for (int i = 0; i < m.size(); i++) {
+        this.multiAmpDamage[i] = MathUtils.floor(amp);
+      }
+    }
+  }
+
+  private float calculate(float base, AbstractMonster target) {
+    float temp = base;
+    AbstractPlayer player = AbstractDungeon.player;
+    if ((AbstractDungeon.player.hasRelic("WristBlade")) && (this.costForTurn == 0)) {
+      temp += 3.0f;
+    }
+    for (AbstractPower p : player.powers) {
+      temp = p.atDamageGive(temp, this.damageTypeForTurn);
+    }
+    if (target != null) {
+      for (AbstractPower p : target.powers) {
+        temp = p.atDamageReceive(temp, this.damageTypeForTurn);
+      }
+    }
+    for (AbstractPower p : player.powers) {
+      temp = p.atDamageFinalGive(temp, this.damageTypeForTurn);
+    }
+    if (target != null) {
+      for (AbstractPower p : target.powers) {
+        temp = p.atDamageFinalReceive(temp, this.damageTypeForTurn);
+      }
+    }
+    if (temp < 0) {
+      temp = 0;
+    }
+    return temp;
   }
 
   public void calculateDamageDisplay(AbstractMonster mo) {
@@ -158,7 +107,6 @@ public abstract class AmplifiedAttack
   }
 
   public void calculateCardDamage(AbstractMonster mo) {
-    AbstractPlayer player = AbstractDungeon.player;
     if (!this.isException) {
       this.damage = this.baseDamage;
       this.ampDamage = (this.baseDamage + this.ampNumber);
@@ -169,59 +117,13 @@ public abstract class AmplifiedAttack
     if ((!this.isMultiDamage) && (mo != null)) {
       float tmp = this.damage;
       float amp = this.block;
-      if ((AbstractDungeon.player.hasRelic("WristBlade")) && (this.costForTurn == 0)) {
-        tmp += 3.0F;
-        amp += 3.0F;
-        if (this.baseDamage != (int) tmp) {
-          this.isDamageModified = true;
-        }
-        if (this.ampDamage != (int) amp) {
-          this.isBlockModified = true;
-        }
+      tmp = calculate(tmp, mo);
+      amp = calculate(amp, mo);
+      if (this.baseDamage != (int) tmp) {
+        this.isDamageModified = true;
       }
-      for (AbstractPower p : player.powers) {
-        tmp = p.atDamageGive(tmp, this.damageTypeForTurn);
-        amp = p.atDamageGive(amp, this.damageTypeForTurn);
-        if (this.baseDamage != (int) tmp) {
-          this.isDamageModified = true;
-        }
-        if (this.ampDamage != (int) amp) {
-          this.isBlockModified = true;
-        }
-      }
-      if (mo != null) {
-        for (AbstractPower p : mo.powers) {
-          tmp = p.atDamageReceive(tmp, this.damageTypeForTurn);
-          amp = p.atDamageReceive(amp, this.damageTypeForTurn);
-        }
-      }
-      for (AbstractPower p : player.powers) {
-        tmp = p.atDamageFinalGive(tmp, this.damageTypeForTurn);
-        amp = p.atDamageFinalGive(amp, this.damageTypeForTurn);
-        if (this.baseDamage != (int) tmp) {
-          this.isDamageModified = true;
-        }
-        if (this.ampDamage != (int) amp) {
-          this.isBlockModified = true;
-        }
-      }
-      if (mo != null) {
-        for (AbstractPower p : mo.powers) {
-          tmp = p.atDamageFinalReceive(tmp, this.damageTypeForTurn);
-          amp = p.atDamageFinalReceive(amp, this.damageTypeForTurn);
-          if (this.baseDamage != (int) tmp) {
-            this.isDamageModified = true;
-          }
-          if (this.ampDamage != (int) amp) {
-            this.isBlockModified = true;
-          }
-        }
-      }
-      if (tmp < 0.0F) {
-        tmp = 0.0F;
-      }
-      if (amp < 0.0F) {
-        amp = 0.0F;
+      if (this.ampDamage != (int) amp) {
+        this.isBlockModified = true;
       }
       this.damage = MathUtils.floor(tmp);
       this.block = MathUtils.floor(amp);
@@ -229,77 +131,21 @@ public abstract class AmplifiedAttack
       ArrayList<AbstractMonster> m = AbstractDungeon.getCurrRoom().monsters.monsters;
       float[] tmp = new float[m.size()];
       float[] amp = new float[m.size()];
-      for (int i = 0; i < tmp.length; i++) {
-        tmp[i] = this.damage;
-      }
-      for (int i = 0; i < tmp.length; i++) {
-        amp[i] = this.ampDamage;
-      }
-      for (int i = 0; i < tmp.length; i++) {
-        if ((AbstractDungeon.player.hasRelic("WristBlade")) && (this.cost == 0)) {
-          tmp[i] += 3.0F;
-          amp[i] += 3.0F;
-          if (this.baseDamage != (int) tmp[i]) {
-            this.isDamageModified = true;
-          }
-          if (this.ampDamage != (int) amp[i]) {
-            this.isBlockModified = true;
-          }
+      for (int i = 0; i < m.size(); i++) {
+        tmp[i] = calculate(damage, m.get(i));
+        amp[i] = calculate(block, m.get(i));
+        if (this.baseDamage != (int) tmp[i]) {
+          this.isDamageModified = true;
         }
-        for (AbstractPower p : player.powers) {
-          tmp[i] = p.atDamageGive(tmp[i], this.damageTypeForTurn);
-          amp[i] = p.atDamageGive(amp[i], this.damageTypeForTurn);
-          if (this.baseDamage != (int) tmp[i]) {
-            this.isDamageModified = true;
-          }
-          if (this.ampDamage != (int) amp[i]) {
-            this.isBlockModified = true;
-          }
+        if (this.ampDamage != (int) amp[i]) {
+          this.isBlockModified = true;
         }
       }
-      for (int i = 0; i < tmp.length; i++) {
-        for (AbstractPower p : ((AbstractMonster) m.get(i)).powers) {
-          if ((!((AbstractMonster) m.get(i)).isDying) && (!((AbstractMonster) m
-              .get(i)).isEscaping)) {
-            tmp[i] = p.atDamageReceive(tmp[i], this.damageTypeForTurn);
-            amp[i] = p.atDamageReceive(amp[i], this.damageTypeForTurn);
-          }
-        }
-      }
-      for (int i = 0; i < tmp.length; i++) {
-        for (AbstractPower p : player.powers) {
-          tmp[i] = p.atDamageFinalGive(tmp[i], this.damageTypeForTurn);
-          amp[i] = p.atDamageFinalGive(amp[i], this.damageTypeForTurn);
-          if (this.baseDamage != (int) tmp[i]) {
-            this.isDamageModified = true;
-          }
-          if (this.ampDamage != (int) amp[i]) {
-            this.isBlockModified = true;
-          }
-        }
-      }
-      for (int i = 0; i < tmp.length; i++) {
-        for (AbstractPower p : ((AbstractMonster) m.get(i)).powers) {
-          if ((!((AbstractMonster) m.get(i)).isDying) && (!((AbstractMonster) m
-              .get(i)).isEscaping)) {
-            tmp[i] = p.atDamageFinalReceive(tmp[i], this.damageTypeForTurn);
-            amp[i] = p.atDamageFinalReceive(amp[i], this.damageTypeForTurn);
-          }
-        }
-      }
-      for (int i = 0; i < tmp.length; i++) {
-        if (tmp[i] < 0.0F) {
-          tmp[i] = 0.0F;
-        }
-        if (amp[i] < 0.0F) {
-          amp[i] = 0.0F;
-        }
-      }
-      this.multiDamage = new int[tmp.length];
+      this.multiDamage = new int[m.size()];
       for (int i = 0; i < tmp.length; i++) {
         this.multiDamage[i] = MathUtils.floor(tmp[i]);
       }
-      this.multiAmpDamage = new int[amp.length];
+      this.multiAmpDamage = new int[m.size()];
       for (int i = 0; i < amp.length; i++) {
         this.multiAmpDamage[i] = MathUtils.floor(amp[i]);
       }

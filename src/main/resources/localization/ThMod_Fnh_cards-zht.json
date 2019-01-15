@@ -236,8 +236,8 @@
   },
   "AbsoluteMagnitude": {
     "NAME": "絕對星等",
-    "DESCRIPTION": "造成 !B! 點傷害( 蓄力 層數之2.5倍)",
-    "UPGRADE_DESCRIPTION": "造成 !B! 點傷害( 蓄力 層數之3.5倍)"
+    "DESCRIPTION": "造成 !B! 點傷害( 蓄力 層數之2倍)",
+    "UPGRADE_DESCRIPTION": "造成 !B! 點傷害( 蓄力 層數之3倍)"
   },
   "DragonMeteor": {
     "NAME": "龍隕星",
@@ -314,10 +314,10 @@
     "DESCRIPTION": "不再受到 灼傷 的傷害。 NL 每 消耗 1張 灼傷 ，獲得1點 力量 。 NL 在回合結束時 消耗 所有手牌",
     "UPGRADE_DESCRIPTION": "不再受到 灼傷 的傷害。 NL 每 消耗 1張 詛咒 或 狀態 ，獲得1點 力量 。 NL 在回合結束時 消耗 所有手牌"
   },
-  "MoraleDepletion": {
+  "OneTimeOff": {
     "NAME": "一回休",
-    "DESCRIPTION": "獲得 !B! 點 格擋 ，本回合不能發動 增幅 和 蓄力 。 NL 下回合抽 !M! 張牌",
-    "UPGRADE_DESCRIPTION": "獲得 !B! 點 格擋 ，本回合不能發動 增幅 和 蓄力"
+    "DESCRIPTION": "獲得 !B! 點 格擋 ，本回合不能發動 增幅 和 蓄力 。 NL 下回合抽 !M! 張牌。",
+    "UPGRADE_DESCRIPTION": "獲得 !B! 點 格擋 ，本回合不能發動 增幅 和 蓄力 。 NL 下回合抽 !M! 張牌。"
   },
   "DarkMatter": {
     "NAME": "暗物質",

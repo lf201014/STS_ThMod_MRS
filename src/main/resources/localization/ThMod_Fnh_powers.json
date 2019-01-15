@@ -143,14 +143,14 @@
       " random potion."
     ]
   },
-  "MoraleDepletionPlusPower": {
+  "OneTimeOffPlusPower": {
     "NAME": "One Time Off",
     "DESCRIPTIONS": [
       "You won't trigger #yAmplify and #yCharge-up this turn.",
       "WWWWWWWWWWW"
     ]
   },
-  "MoraleDepletionPower": {
+  "OneTimeOffPower": {
     "NAME": "One Time Off",
     "DESCRIPTIONS": [
       "You won't trigger #yAmplify this turn.",

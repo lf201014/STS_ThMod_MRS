@@ -103,7 +103,7 @@
   },
   "PolarisUnique": {
     "NAME": "Polaris Unique",
-    "DESCRIPTION": "Innate. Shuffle a Guiding Star into your draw pile. Gain  [E]  at the start of your turn while it is in your draw pile.",
+    "DESCRIPTION": "Innate. Shuffle a Guiding Star into your draw pile. Gain  [E]  at the start of your turn while it is in your draw pile(does not stack).",
     "UPGRADE_DESCRIPTION": "Innate. Shuffle a Guiding Star into your draw pile. Gain  [E]  at the start of your turn while it is in your draw pile."
   },
   "SatelliteIllusion": {
@@ -232,8 +232,8 @@
   },
   "AbsoluteMagnitude": {
     "NAME": "Absolute Magnitude",
-    "DESCRIPTION": "Deal damage equal to 2.5 times your Charge-up (Deals !B! damage).",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to 3.5 times your Charge-up (Deals !B! damage)."
+    "DESCRIPTION": "Deal damage equal to 2 times your Charge-up (Deals !B! damage).",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to 3 times your Charge-up (Deals !B! damage)."
   },
   "DragonMeteor": {
     "NAME": "Dragon Meteor",
@@ -315,10 +315,10 @@
     "DESCRIPTION": "No longer take damage from Burn. Whenever you Exhaust a Burn, gain 1 Strength. NL Exhaust your hand at the end of each turn.",
     "UPGRADE_DESCRIPTION": "No longer take damage from Burn. Whenever you Exhaust a Curse or Status, gain 1 Strength. NL Exhaust your hand at the end of each turn."
   },
-  "MoraleDepletion": {
+  "OneTimeOff": {
     "NAME": "One Time Off",
-    "DESCRIPTION": "Gain !B! Block. You can't activate Amplify effects or consume Charge-up this turn. NL Next turn, draw !M! card(s).",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. You can't activate Amplify effects or consume Charge-up this turn. NL Next turn, draw !M! cards."
+    "DESCRIPTION": "Gain !B! Block. You can't activate Amplify effects this turn. NL Draw !M! card(s) next turn.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. You can't activate Amplify effects or consume Charge-up this turn. NL Draw !M! card(s) next turn."
   },
   "DarkMatter": {
     "NAME": "Dark Matter",

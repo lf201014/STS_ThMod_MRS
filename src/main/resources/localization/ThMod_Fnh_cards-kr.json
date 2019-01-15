@@ -232,8 +232,8 @@
   },
   "AbsoluteMagnitude": {
     "NAME": "절대등급",
-    "DESCRIPTION": "충전의 2.5 배 만큼 피해를 줍니다. (피해를 !B! 줍니다)",
-    "UPGRADE_DESCRIPTION": "충전의 3.5 배 만큼 피해를 줍니다. (피해를 !B! 줍니다)"
+    "DESCRIPTION": "충전의 2 배 만큼 피해를 줍니다. (피해를 !B! 줍니다)",
+    "UPGRADE_DESCRIPTION": "충전의 3 배 만큼 피해를 줍니다. (피해를 !B! 줍니다)"
   },
   "DragonMeteor": {
     "NAME": "드래곤 미티어",
@@ -315,7 +315,7 @@
     "DESCRIPTION": "더 이상 화상 카드의 피해를 받지 않습니다. 화상 카드가 소멸 될 때마다 힘을 1 얻습니다. NL 턴이 끝나면 손에 있는 카드가 소멸됩니다.",
     "UPGRADE_DESCRIPTION": "더 이상 화상 카드의 피해를 받지 않습니다. 저주 또는 상태이상 카드가 소멸 될 때마다 힘을 1 얻습니다. NL 턴이 끝나면 손에 있는 카드가 소멸 됩니다."
   },
-  "MoraleDepletion": {
+  "OneTimeOff": {
     "NAME": "잠깐의 휴식",
     "DESCRIPTION": "방어도를 !B! 얻습니다. 이번 턴에 증폭, 충전 효과를 발동할 수 없습니다. NL 다음 턴에 카드를 !M! 장 뽑습니다.",
     "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. 이번 턴에 증폭 효과를 발동할 수 없습니다. NL 다음 턴에 카드를 !M! 장 뽑습니다."

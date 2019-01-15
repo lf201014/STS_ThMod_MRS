@@ -13,7 +13,7 @@ public class BewitchedHakkeroObtainPatch {
 
     @SpirePostfixPatch
     public static String Postfix(String retVal, RelicTier tier) {
-      if ((retVal.equals("EnhancedHakkero")) && (!AbstractDungeon.player.hasRelic("MiniHakkero"))) {
+      if ((retVal.equals("BewitchedHakkero")) && (!AbstractDungeon.player.hasRelic("MiniHakkero"))) {
         return AbstractDungeon.returnRandomRelicKey(tier);
       }
       return retVal;
@@ -25,7 +25,7 @@ public class BewitchedHakkeroObtainPatch {
 
     @SpirePostfixPatch
     public static String Postfix(String retVal, RelicTier tier) {
-      if ((retVal.equals("EnhancedHakkero")) && (!AbstractDungeon.player.hasRelic("MiniHakkero"))) {
+      if ((retVal.equals("BewitchedHakkero")) && (!AbstractDungeon.player.hasRelic("MiniHakkero"))) {
         return AbstractDungeon.returnEndRandomRelicKey(tier);
       }
       return retVal;
