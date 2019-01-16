@@ -1,5 +1,5 @@
 package ThMod.patches;
-
+/*
 import ThMod.ThMod;
 
 import ThMod.characters.Marisa;
@@ -53,3 +53,4 @@ public class MarisaModEventPatch {
     }
   }
 }
+*/
