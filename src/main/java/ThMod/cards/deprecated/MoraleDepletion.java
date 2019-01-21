@@ -1,5 +1,6 @@
-package ThMod.cards.Marisa;
+package ThMod.cards.deprecated;
 
+import ThMod.powers.Marisa.OneTimeOffPlusPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,9 +11,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import ThMod.patches.AbstractCardEnum;
-import ThMod.powers.Marisa.MoraleDepletionPlusPower;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 
+@Deprecated
 public class MoraleDepletion extends CustomCard {
 
   public static final String ID = "MoraleDepletion";
@@ -59,7 +60,7 @@ public class MoraleDepletion extends CustomCard {
         new ApplyPowerAction(
             p,
             p,
-            new MoraleDepletionPlusPower(p)
+            new OneTimeOffPlusPower(p)
         )
     );
   }

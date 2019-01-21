@@ -6,7 +6,7 @@
       "Whenever you play a card, gain #b1  #yCharge-up ."
     ]
   },
-  "EnhancedHakkero": {
+  "BewitchedHakkero": {
     "NAME": "Bewitched Hakkero",
     "FLAVOR": "Its firepower is on a new level, but is it ok to use a bewitched tool?",
     "DESCRIPTIONS": [
@@ -20,7 +20,7 @@
       "Whenever you draw a Status or Curse, gain 5 Block ."
     ]
   },
-  "EnhancedBroom": {
+  "MagicBroom": {
     "NAME": "Magic Broom",
     "FLAVOR": "Marisa always travels on her flying broom.",
     "DESCRIPTIONS": [
@@ -71,7 +71,7 @@
   },
   "ShroomBag": {
     "NAME": "Shroom Bag",
-    "FLAVOR": "All witches have an abnormal ethusiasm for mushrooms... NL Or is it just Marisa...?",
+    "FLAVOR": "All witches have an abnormal ethusiasm for mushrooms... Or is it just Marisa...?",
     "DESCRIPTIONS": [
       "Upon pickup, obtain 2 #yParasite. Parasite cards can now be played. Playing a #yParasite will heal #b3 HP and Exhausts the card."
     ]

@@ -143,14 +143,14 @@
       " potion(s) aléatoire(s)."
     ]
   },
-  "MoraleDepletionPlusPower": {
+  "OneTimeOffPlusPower": {
     "NAME": "Temps d'arrêts",
     "DESCRIPTIONS": [
       "Vous n'activerez pas d' #yAmplifier ou de #yCharge ce tour.",
       "WWWWWWWWWWW"
     ]
   },
-  "MoraleDepletionPower": {
+  "OneTimeOffPower": {
     "NAME": "temps d'arrêts",
     "DESCRIPTIONS": [
       "Vous n'activerez pas d' #yAmplifier ce tour.",

@@ -6,7 +6,7 @@
       "Lorsque vous jouez une carte, gagnez #b1  #yCharge ."
     ]
   },
-  "EnhancedHakkero": {
+  "BewitchedHakkero": {
     "NAME": "Hakkero enchanté",
     "FLAVOR": "Sa puissance de feu est à un autre niveau, mais est-ce que c'est bon d'utiliser un outil enchanté ?",
     "DESCRIPTIONS": [
@@ -20,7 +20,7 @@
       "Lorsque vous piochez un statut ou une malédiction, gain 5 Block ."
     ]
   },
-  "EnhancedBroom": {
+  "MagicBroom": {
     "NAME": "Balais Magique",
     "FLAVOR": "Marisa voyage toujours sur son balais volant.",
     "DESCRIPTIONS": [
@@ -71,7 +71,7 @@
   },
   "ShroomBag": {
     "NAME": "Sac de champignons",
-    "FLAVOR": "Toutes les sorcières ont un enthousiasme anormal pouur les champignons... NL Ou est-ce juste Marisa...?",
+    "FLAVOR": "Toutes les sorcières ont un enthousiasme anormal pouur les champignons... Ou est-ce juste Marisa...?",
     "DESCRIPTIONS": [
       "Lorsque obtenu, obtenez 2 #yParasite. Les cartes parasites peuvent-être jouées. Jouer un #yParasite vous soigneza #b3 PV et épuisera la carte."
     ]

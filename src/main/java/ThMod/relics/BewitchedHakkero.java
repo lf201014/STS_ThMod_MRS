@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -14,13 +15,13 @@ import ThMod.powers.Marisa.ChargeUpPower;
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 
-public class EnhancedHakkero extends CustomRelic {
+public class BewitchedHakkero extends CustomRelic {
 
-  public static final String ID = "EnhancedHakkero";
+  public static final String ID = "BewitchedHakkero";
   private static final String IMG = "img/relics/Hakkero_1_s.png";
   private static final String IMG_OTL = "img/relics/outline/Hakkero_1_s.png";
 
-  public EnhancedHakkero() {
+  public BewitchedHakkero() {
     super(
         ID,
         ImageMaster.loadImage(IMG),
@@ -35,7 +36,7 @@ public class EnhancedHakkero extends CustomRelic {
   }
 
   public AbstractRelic makeCopy() {
-    return new EnhancedHakkero();
+    return new BewitchedHakkero();
   }
 
   public void obtain() {
@@ -49,7 +50,7 @@ public class EnhancedHakkero extends CustomRelic {
   public void onUseCard(AbstractCard card, UseCardAction action) {
     flash();
     ThMod.logger.info(
-        "EnhancedHakkero : Applying ChargeUpPower for using card : " + card.cardID
+        "BewitchedHakkero : Applying ChargeUpPower for using card : " + card.cardID
     );
     AbstractDungeon.actionManager.addToTop(
         new ApplyPowerAction(
@@ -66,7 +67,10 @@ public class EnhancedHakkero extends CustomRelic {
 
   @Override
   public int onAttacked(DamageInfo info, int damageAmount) {
-    if (AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT) {
+    if (
+        (AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT) &&
+            (info.type == DamageType.NORMAL)
+    ) {
       flash();
       AbstractDungeon.actionManager.addToBottom(
           new ApplyPowerAction(

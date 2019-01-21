@@ -32,7 +32,7 @@ public class DarkSparkPower extends AbstractPower {
     updateDescription();
     this.img = new Texture("img/powers/hemokinesis.png");
   }
-
+/*
   public void onPlayCard(AbstractCard card, AbstractMonster m) {
     if (ThMod.isSpark(card)) {
       flash();
@@ -46,7 +46,7 @@ public class DarkSparkPower extends AbstractPower {
       );
     }
   }
-
+*/
   public void atEndOfTurn(boolean isPlayer) {
     if (isPlayer) {
       AbstractDungeon.actionManager.addToBottom(

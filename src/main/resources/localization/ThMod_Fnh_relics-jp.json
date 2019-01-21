@@ -6,7 +6,7 @@
       "カードをプレイするたび、 #yチャージ  #b1 を得る。"
     ]
   },
-  "EnhancedHakkero": {
+  "BewitchedHakkero": {
     "NAME": "妖器「ミニ八卦炉」",
     "FLAVOR": "妖器と化したミニ八卦炉はこれまでにない威力を出すが、安全かどうかは分からない……",
     "DESCRIPTIONS": [
@@ -20,7 +20,7 @@
       " #y呪い や #y状態異常 を引くたび、 #b5  #yブロック を得る。"
     ]
   },
-  "EnhancedBroom": {
+  "MagicBroom": {
     "NAME": "魔法の箒",
     "FLAVOR": "魔理沙が飛び回るのに使用している箒",
     "DESCRIPTIONS": [
