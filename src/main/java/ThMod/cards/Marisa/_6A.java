@@ -22,7 +22,7 @@ public class _6A
   public static final String IMG_PATH = "img/cards/temp/Butt.png";
   private static final int COST = 1;
   private static final int ATTACK_DMG = 4;
-  private static final int UPGRADE_PLUS_DMG = 1;
+  //private static final int UPGRADE_PLUS_DMG = 1;
   private static final int UPG_COST = 0;
 
   public _6A() {
@@ -49,7 +49,7 @@ public class _6A
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      upgradeDamage(UPGRADE_PLUS_DMG);
+      //upgradeDamage(UPGRADE_PLUS_DMG);
       upgradeBaseCost(UPG_COST);
     }
   }
