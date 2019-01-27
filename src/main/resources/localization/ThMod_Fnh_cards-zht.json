@@ -147,7 +147,7 @@
   },
   "GuidingStar": {
     "NAME": "引導星",
-    "DESCRIPTION": "複製 1 張此牌到抽牌堆。 NL  消耗",
+    "DESCRIPTION": "複製 1 張此牌到抽牌堆。 NL 將棄牌堆洗回抽牌堆。 NL  消耗",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "OrrerysSun": {

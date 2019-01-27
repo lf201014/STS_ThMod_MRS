@@ -40,7 +40,6 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import ThMod.cards.Marisa.AbsoluteMagnitude;
 import ThMod.cards.Marisa.AsteroidBelt;
