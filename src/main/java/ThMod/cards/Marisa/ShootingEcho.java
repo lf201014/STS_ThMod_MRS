@@ -26,7 +26,7 @@ public class ShootingEcho
   public static final String IMG_PATH = "img/cards/temp/Echo.png";
   private static final int COST = 1;
   private static final int ATTACK_DMG = 9;
-  //private static final int UPGRADE_PLUS_DMG = 3;
+  private static final int UPGRADE_PLUS_DMG = 2;
 
   public ShootingEcho() {
     super(
@@ -76,7 +76,7 @@ public class ShootingEcho
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      //upgradeDamage(UPGRADE_PLUS_DMG);
+      upgradeDamage(UPGRADE_PLUS_DMG);
       this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
       initializeDescription();
     }

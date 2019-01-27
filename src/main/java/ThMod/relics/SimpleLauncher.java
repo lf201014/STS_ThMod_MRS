@@ -10,6 +10,7 @@ public class SimpleLauncher extends CustomRelic {
   public static final String ID = "SimpleLauncher";
   private static final String IMG = "img/relics/FlashLight.png";
   private static final String IMG_OTL = "img/relics/outline/FlashLight.png";
+  private static final int PRICE = 300;
 
   public SimpleLauncher() {
     super(
@@ -23,6 +24,11 @@ public class SimpleLauncher extends CustomRelic {
 
   public String getUpdatedDescription() {
     return DESCRIPTIONS[0];
+  }
+
+  @Override
+  public int getPrice() {
+    return PRICE;
   }
 
   public AbstractRelic makeCopy() {

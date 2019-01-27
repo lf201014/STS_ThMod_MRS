@@ -143,7 +143,7 @@
   },
   "GuidingStar": {
     "NAME": "길잡이 별",
-    "DESCRIPTION": "이 카드를 복사하여 뽑을 카드 더미에 섞어 넣습니다. NL 소멸.",
+    "DESCRIPTION": "이 카드를 복사하여 뽑을 카드 더미에 섞어 넣습니다. NL 버린 카드 더미를 뽑을 카드 더미에 넣고 섞습니다.  NL 소멸.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "OrrerysSun": {

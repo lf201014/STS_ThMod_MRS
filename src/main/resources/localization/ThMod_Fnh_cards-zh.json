@@ -147,7 +147,7 @@
   },
   "GuidingStar": {
     "NAME": "北极星",
-    "DESCRIPTION": "将此卡的一张复制加入抽牌堆。 NL  消耗 。",
+    "DESCRIPTION": "将此卡的一张复制加入抽牌堆。 NL 将你的弃牌堆洗入你的抽牌堆。 NL  消耗 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "OrrerysSun": {
