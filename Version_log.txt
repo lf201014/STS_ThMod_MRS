@@ -275,3 +275,9 @@ v0.14.19 1/15/2019
 *Refract out-dated codes
 *No longer unlock all cards for card list in compedium(for better loading speed)
 *Update Traditional Chinese texts(GitHub user : rainfoxest)
+
+v0.14.20 1/27/2019
+*6A : cost:0 -> 1( 0 ) ;base damage : 3 ( 4 )  -> 4;
+*Shooting Echo:base damage : 9 -> 9 ( 11 );
+*Guiding Star : Rework : derivation ; cost : 1 ( 0 ) ; effect :Shuffle a copy of this card into draw pile.Shuffle discard pile into draw pile. Exhuast.
+*Simple Launcher : base price:200 -> 300;
