@@ -634,8 +634,8 @@ public class ThMod implements PostExhaustSubscriber,
         zombieFairy = ZOMBIE_FAIRY_ENC;
         break;
     }
-    BaseMod.addMonster(orin, orin, () -> new Orin());
-    BaseMod.addMonster(zombieFairy, zombieFairy, () -> new ZombieFairy());
+    //BaseMod.addMonster(orin, orin, () -> new Orin());
+    //BaseMod.addMonster(zombieFairy, zombieFairy, () -> new ZombieFairy());
     final Texture badge = ImageMaster.loadImage(MOD_BADGE);
     BaseMod.registerModBadge(
         badge,
