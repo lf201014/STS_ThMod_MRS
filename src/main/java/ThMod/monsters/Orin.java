@@ -4,6 +4,7 @@ import ThMod.ThMod;
 import ThMod.action.OrinsDebuffAction;
 import ThMod.action.SpawnFairyAction;
 import ThMod.powers.monsters.InfernoClaw;
+import basemod.BaseMod;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
@@ -35,7 +36,7 @@ import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import org.apache.logging.log4j.Logger;
 
-public class Orin extends AbstractMonster {
+public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
 
   private static final Logger logger = ThMod.logger;
   public static final String ID = "Orin";
@@ -76,8 +77,10 @@ public class Orin extends AbstractMonster {
   private int executeDmg;
   private int turnCount = 0;
   private static final String tempImgUrl = "img/monsters/Orin/Orin_.png";
-  private static final String MODEL_ATLAS = "img/monsters/Orin/Orin.atlas";
-  private static final String MODEL_JSON = "img/monsters/Orin/Orin.json";
+  private static final String MODEL_HUMANOID_ATLAS = "img/monsters/Orin/Orin.atlas";
+  private static final String MODEL_HUMANOID_JSON = "img/monsters/Orin/Orin.json";
+  private static final String MODEL_CAT_ATLAS = "";
+  private static final String MODEL_CAT_JSON = "";
 
   public Orin() {
     super(NAME, "Orin", STAGE_1_HP, 0.0F, -30.0F, 220.0F, 320.0F, tempImgUrl, -20.0F, -10.0F);
@@ -110,7 +113,7 @@ public class Orin extends AbstractMonster {
 
     this.type = AbstractMonster.EnemyType.ELITE;
 
-    loadAnimation(MODEL_ATLAS, MODEL_JSON, 1.0F);
+    loadAnimation(MODEL_HUMANOID_ATLAS, MODEL_HUMANOID_JSON, 1.0F);
     AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
     e.setTime(e.getEndTime() * MathUtils.random());
     /*
@@ -332,7 +335,7 @@ public class Orin extends AbstractMonster {
   private int fairyCount() {
     int aliveCount = 0;
 
-    for (AbstractMonster m:AbstractDungeon.getMonsters().monsters){
+    for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
       if (m != this && !m.isDying) {
         ++aliveCount;
       }
@@ -502,5 +505,10 @@ public class Orin extends AbstractMonster {
       }
     }
   }
-
+/*
+  @Override
+  public AbstractMonster get() {
+    return new Orin();
+  }
+  */
 }

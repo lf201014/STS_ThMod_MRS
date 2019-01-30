@@ -31,6 +31,10 @@ public class ZombieFairy extends AbstractMonster {
     this.damage.add(new DamageInfo(this, DMG));
   }
 
+  public ZombieFairy(){
+    this(0.0f,0.0f);
+  }
+
   public void takeTurn() {
     switch (this.nextMove) {
       case 1:

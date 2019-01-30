@@ -52,7 +52,7 @@ public class MeteoricShower
     }
 
     AbstractDungeon.actionManager.addToBottom(
-        new MeteoricShowerAction(cnt, this.damage)
+        new MeteoricShowerAction(cnt, this.baseDamage)
     );
 
     if (!this.freeToPlayOnce) {

@@ -11,6 +11,8 @@ import ThMod.cards.Marisa.ManaRampage;
 import ThMod.cards.Marisa.OneTimeOff;
 import ThMod.cards.Marisa.SprinkleStarSeal;
 import ThMod.cards.derivations.Exhaustion_MRS;
+import ThMod.monsters.Orin;
+import ThMod.monsters.ZombieFairy;
 import ThMod.potions.ShroomBrew;
 import ThMod.relics.BewitchedHakkero;
 import ThMod.relics.BigShroomBag;
@@ -161,6 +163,10 @@ public class ThMod implements PostExhaustSubscriber,
 
   public static final Logger logger = LogManager.getLogger(ThMod.class.getName());
 
+  private static final String ORIN_ENCOUNTER = "Orin";
+  private static final String ORIN_ENCOUNTER_ZHS = "\u963f\u71d0";
+  private static final String ZOMBIE_FAIRY_ENC = "ZombieFairy";
+  private static final String ZOMBIE_FAIRY_ENC_ZHS = "\u50f5\u5c38\u5996\u7cbe";
   private static final String MOD_BADGE = "img/UI/badge.png";
 
   //card backgrounds
@@ -617,6 +623,19 @@ public class ThMod implements PostExhaustSubscriber,
         "ShroomBrew",
         MARISA
     );
+    String orin, zombieFairy;
+    switch (Settings.language) {
+      case ZHS:
+        orin = ORIN_ENCOUNTER_ZHS;
+        zombieFairy = ZOMBIE_FAIRY_ENC_ZHS;
+        break;
+      default:
+        orin = ORIN_ENCOUNTER;
+        zombieFairy = ZOMBIE_FAIRY_ENC;
+        break;
+    }
+    BaseMod.addMonster(orin, orin, () -> new Orin());
+    BaseMod.addMonster(zombieFairy, zombieFairy, () -> new ZombieFairy());
     final Texture badge = ImageMaster.loadImage(MOD_BADGE);
     BaseMod.registerModBadge(
         badge,
