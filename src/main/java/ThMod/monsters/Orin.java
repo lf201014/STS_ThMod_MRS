@@ -17,7 +17,6 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.common.SetMoveAction;
 import com.megacrit.cardcrawl.actions.common.SuicideAction;
 import com.megacrit.cardcrawl.actions.unique.CanLoseAction;
 import com.megacrit.cardcrawl.actions.utility.HideHealthBarAction;
@@ -29,13 +28,11 @@ import com.megacrit.cardcrawl.core.Settings.GameLanguage;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
-import java.util.Iterator;
+import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import org.apache.logging.log4j.Logger;
 
 public class Orin extends AbstractMonster {
@@ -43,12 +40,14 @@ public class Orin extends AbstractMonster {
   private static final Logger logger = ThMod.logger;
   public static final String ID = "Orin";
   public static final String NAME = "Orin";
+  /*
   public static final String[] MOVES = {
       ""
   };
   public static final String[] DIALOG = {
       ""
   };
+  */
   private boolean form1 = true;
   private boolean firstTurn = true;
   private static final int STAGE_1_HP = 76;
@@ -203,6 +202,11 @@ public class Orin extends AbstractMonster {
           );
         }
         AbstractDungeon.actionManager.addToBottom(
+            new VFXAction(
+                this,
+                new IntenseZoomEffect(this.hb.cX, this.hb.cY, true), 0.05F, true)
+        );
+        AbstractDungeon.actionManager.addToBottom(
             new ChangeStateAction(this, "TRANSFORM")
         );
         break;
@@ -247,7 +251,7 @@ public class Orin extends AbstractMonster {
         break;
       case 7:
         //spawnFairy firstTurn
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < SUMMON_FIRST; i++) {
           AbstractDungeon.actionManager.addToBottom(
               new SpawnFairyAction(this)
           );
@@ -255,12 +259,12 @@ public class Orin extends AbstractMonster {
         break;
       case 8:
         //spawnFairy normal
-        AbstractDungeon.actionManager.addToBottom(
-            new SpawnFairyAction(this)
-        );
-        AbstractDungeon.actionManager.addToBottom(
-            new SpawnFairyAction(this)
-        );
+        for (int i = 0; i < SUMMON; i++) {
+          AbstractDungeon.actionManager.addToBottom(
+              new SpawnFairyAction(this)
+          );
+        }
+        break;
       case 9:
         //execute
         //missing vfx
@@ -325,22 +329,16 @@ public class Orin extends AbstractMonster {
     setMove((byte) 9, Intent.ATTACK, this.executeDmg, 6, true);
   }
 
-  private boolean canSummon() {
+  private int fairyCount() {
     int aliveCount = 0;
-    Iterator var2 = AbstractDungeon.getMonsters().monsters.iterator();
 
-    while (var2.hasNext()) {
-      AbstractMonster m = (AbstractMonster) var2.next();
+    for (AbstractMonster m:AbstractDungeon.getMonsters().monsters){
       if (m != this && !m.isDying) {
         ++aliveCount;
       }
     }
 
-    if (aliveCount > 3) {
-      return false;
-    } else {
-      return true;
-    }
+    return aliveCount;
   }
 
   private boolean canExecute() {
@@ -353,10 +351,14 @@ public class Orin extends AbstractMonster {
 
   protected void getMove(int num) {
     if (this.form1) {
+      turnCount++;
       if (this.firstTurn) {
         setDoubleTapAction();
         this.firstTurn = false;
         return;
+      }
+      if (turnCount >= 5) {
+        setMove((byte) 3, Intent.ATTACK, this.hellFireDmg, 6, true);
       }
       if (num > 50) {
         setDoubleTapAction();
@@ -364,7 +366,8 @@ public class Orin extends AbstractMonster {
         setBuffAction();
       }
     } else {
-      if (this.firstTurn) {
+      int fairyCount = fairyCount();
+      if ((this.firstTurn)) {
         setSummonAction();
         return;
       }
@@ -372,17 +375,49 @@ public class Orin extends AbstractMonster {
         setExecuteAction();
         return;
       }
-      if (canSummon()){
-        if (num < 50){
-          setSummonAction();
-          return;
-        }
-        if (num < 34) {
-
-        }
+      if (fairyCount < SUMMON_THRESHOLD) {
+        setSummonAction();
+        return;
       }
-      if (num < 33){
-
+      int[] actions = new int[4];
+      int act_cnt = 0;
+      if ((fairyCount == SUMMON_THRESHOLD) || (!lastMove((byte) 7) || (!lastMove((byte) 8)))) {
+        actions[act_cnt] = 0;//summon : 0
+        act_cnt++;
+      }
+      if (!lastMove((byte) 4)) {
+        actions[act_cnt] = 1;//double : 1
+        act_cnt++;
+      }
+      if (!lastMove((byte) 5)) {
+        actions[act_cnt] = 2;//multi : 2
+        act_cnt++;
+      }
+      if (!lastMove((byte) 6)) {
+        actions[act_cnt] = 3;//debuff : 3
+        act_cnt++;
+      }
+      switch (actions[num / 100 * act_cnt]) {
+        case 0:
+          setSummonAction();
+          break;
+        case 1:
+          setDoubleTapAction();
+          break;
+        case 2:
+          setMultiAttackAction();
+          break;
+        case 3:
+          setBuffAction();
+          break;
+        default:
+          logger.info(
+              "Orin : getMove : error : " +
+                  actions[num / 100 * act_cnt] +
+                  " is not a valid action code"
+          );
+          setBuffAction();
+          break;
       }
     }
   }
@@ -393,9 +428,11 @@ public class Orin extends AbstractMonster {
       if (AbstractDungeon.getCurrRoom().cannotLose) {
         this.halfDead = true;
       }
+      /*
       for (AbstractPower p : this.powers) {
         p.onDeath();
       }
+      */
       for (AbstractRelic r : AbstractDungeon.player.relics) {
         r.onMonsterDeath(this);
       }
@@ -405,12 +442,9 @@ public class Orin extends AbstractMonster {
       setMove((byte) 3, AbstractMonster.Intent.UNKNOWN);
       createIntent();
       //AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DIALOG[0]));
-      AbstractDungeon.actionManager.addToBottom(
-          new SetMoveAction(this, (byte) 3, AbstractMonster.Intent.UNKNOWN)
-      );
+      setMultiAttackAction();
       applyPowers();
       this.firstTurn = true;
-      this.form1 = false;
     }
   }
 
@@ -431,6 +465,7 @@ public class Orin extends AbstractMonster {
         }
         //this.state.setAnimation(0, "Idle_2", true);
         this.halfDead = false;
+        this.form1 = false;
 
         AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, this.maxHealth));
         AbstractDungeon.actionManager.addToBottom(new CanLoseAction());
