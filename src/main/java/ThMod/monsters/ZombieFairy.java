@@ -28,7 +28,7 @@ public class ZombieFairy extends AbstractMonster {
   public ZombieFairy(float x, float y) {
     super(
         NAME
-        , "Dagger"
+        , ID
         , HP
         , 0.0F
         , -50.0F

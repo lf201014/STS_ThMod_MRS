@@ -1,0 +1,272 @@
+
+Orin.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Skull01
+  rotate: false
+  xy: 1127, 471
+  size: 61, 57
+  orig: 61, 57
+  offset: 0, 0
+  index: -1
+Skull02
+  rotate: false
+  xy: 1176, 921
+  size: 75, 82
+  orig: 75, 82
+  offset: 0, 0
+  index: -1
+Skull03
+  rotate: false
+  xy: 1066, 547
+  size: 71, 57
+  orig: 71, 57
+  offset: 0, 0
+  index: -1
+HairRibbonL
+  rotate: false
+  xy: 1048, 91
+  size: 16, 22
+  orig: 16, 22
+  offset: 0, 0
+  index: -1
+BraidR
+  rotate: false
+  xy: 964, 678
+  size: 85, 174
+  orig: 85, 174
+  offset: 0, 0
+  index: -1
+UpperArm
+  rotate: false
+  xy: 1075, 800
+  size: 109, 119
+  orig: 109, 119
+  offset: 0, 0
+  index: -1
+ForeArmR
+  rotate: false
+  xy: 1010, 91
+  size: 36, 118
+  orig: 36, 118
+  offset: 0, 0
+  index: -1
+HandR
+  rotate: false
+  xy: 941, 233
+  size: 50, 49
+  orig: 50, 49
+  offset: 0, 0
+  index: -1
+HairSide
+  rotate: false
+  xy: 1051, 800
+  size: 20, 32
+  orig: 20, 32
+  offset: 0, 0
+  index: -1
+Tail2
+  rotate: false
+  xy: 616, 1
+  size: 120, 349
+  orig: 120, 349
+  offset: 0, 0
+  index: -1
+Tail\
+  rotate: false
+  xy: 1, 468
+  size: 321, 395
+  orig: 321, 395
+  offset: 0, 0
+  index: -1
+ThighR
+  rotate: false
+  xy: 383, 1
+  size: 231, 460
+  orig: 231, 460
+  offset: 0, 0
+  index: -1
+LegR
+  rotate: false
+  xy: 608, 463
+  size: 148, 288
+  orig: 148, 288
+  offset: 0, 0
+  index: -1
+FootR
+  rotate: false
+  xy: 1127, 391
+  size: 48, 78
+  orig: 48, 78
+  offset: 0, 0
+  index: -1
+ThighL
+  rotate: false
+  xy: 608, 753
+  size: 131, 242
+  orig: 131, 242
+  offset: 0, 0
+  index: -1
+LegL
+  rotate: false
+  xy: 738, 1
+  size: 135, 287
+  orig: 135, 287
+  offset: 0, 0
+  index: -1
+FootL
+  rotate: false
+  xy: 616, 352
+  size: 106, 76
+  orig: 106, 76
+  offset: 0, 0
+  index: -1
+SkirtFront
+  rotate: false
+  xy: 1, 1
+  size: 380, 465
+  orig: 380, 465
+  offset: 0, 0
+  index: -1
+Torso
+  rotate: false
+  xy: 324, 468
+  size: 282, 415
+  orig: 282, 415
+  offset: 0, 0
+  index: -1
+Neck
+  rotate: false
+  xy: 1010, 1
+  size: 52, 88
+  orig: 52, 88
+  offset: 0, 0
+  index: -1
+HairBack
+  rotate: false
+  xy: 1, 865
+  size: 165, 117
+  orig: 165, 117
+  offset: 0, 0
+  index: -1
+Face2
+  rotate: false
+  xy: 964, 854
+  size: 109, 120
+  orig: 109, 120
+  offset: 0, 0
+  index: -1
+Face
+  rotate: false
+  xy: 1051, 678
+  size: 109, 120
+  orig: 109, 120
+  offset: 0, 0
+  index: -1
+Ribbon
+  rotate: false
+  xy: 168, 865
+  size: 127, 147
+  orig: 127, 147
+  offset: 0, 0
+  index: -1
+UpperArmL
+  rotate: false
+  xy: 1066, 391
+  size: 59, 154
+  orig: 59, 154
+  offset: 0, 0
+  index: -1
+UpperArmR
+  rotate: false
+  xy: 875, 233
+  size: 64, 50
+  orig: 64, 50
+  offset: 0, 0
+  index: -1
+HandL
+  rotate: false
+  xy: 1010, 211
+  size: 52, 55
+  orig: 52, 55
+  offset: 0, 0
+  index: -1
+EarL
+  rotate: false
+  xy: 1253, 921
+  size: 88, 60
+  orig: 88, 60
+  offset: 0, 0
+  index: -1
+FrontHair
+  rotate: false
+  xy: 297, 885
+  size: 121, 117
+  orig: 121, 117
+  offset: 0, 0
+  index: -1
+EarR
+  rotate: false
+  xy: 1075, 921
+  size: 99, 80
+  orig: 99, 80
+  offset: 0, 0
+  index: -1
+BraidF
+  rotate: false
+  xy: 875, 1
+  size: 133, 230
+  orig: 133, 230
+  offset: 0, 0
+  index: -1
+HairRibbon
+  rotate: false
+  xy: 420, 885
+  size: 160, 87
+  orig: 160, 87
+  offset: 0, 0
+  index: -1
+Fire02a
+  rotate: false
+  xy: 1066, 1
+  size: 96, 388
+  orig: 96, 388
+  offset: 0, 0
+  index: -1
+Fire03a
+  rotate: false
+  xy: 868, 290
+  size: 97, 386
+  orig: 97, 386
+  offset: 0, 0
+  index: -1
+Fire04a
+  rotate: false
+  xy: 861, 678
+  size: 101, 341
+  orig: 101, 341
+  offset: 0, 0
+  index: -1
+Fire05a
+  rotate: false
+  xy: 758, 290
+  size: 108, 352
+  orig: 108, 352
+  offset: 0, 0
+  index: -1
+Fire06a
+  rotate: false
+  xy: 967, 290
+  size: 97, 386
+  orig: 97, 386
+  offset: 0, 0
+  index: -1
+Fire01
+  rotate: false
+  xy: 758, 644
+  size: 101, 353
+  orig: 101, 353
+  offset: 0, 0
+  index: -1

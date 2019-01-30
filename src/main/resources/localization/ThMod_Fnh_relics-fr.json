@@ -98,6 +98,13 @@
       "Lorsque vous enclenchez un effet #yAmplifier , Gagnez #b4  #yArmure ."
     ]
   },
+  "CatCart": {
+    "NAME": "Cat Cart",
+    "FLAVOR": "When you fall in battle,your loyal kitties will bring you back to life with this.",
+    "DESCRIPTIONS": [
+      "Gain 1 charge when you climb a floor.When you would die,consume all charges and heal #5 hp for each of them."
+    ]
+  },
   "WWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWW",
     "FLAVOR": "WWWWWWWWWWWWWWW",

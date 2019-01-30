@@ -76,7 +76,9 @@ public class Orin extends AbstractMonster {
   private int strength;
   private int debuff;
   private int executeDmg;
-  private static final String tempImgUrl = "img/monsters/Orin/Orin.png";
+  private static final String tempImgUrl = "img/monsters/Orin/Orin_.png";
+  private static final String MODEL_ATLAS = "img/monsters/Orin/Orin.atlas";
+  private static final String MODEL_JSON = "img/monsters/Orin/Orin.json";
 
   public Orin() {
     super(NAME, "Orin", STAGE_1_HP, 0.0F, -30.0F, 220.0F, 320.0F, tempImgUrl, -20.0F, -10.0F);
@@ -110,18 +112,16 @@ public class Orin extends AbstractMonster {
     this.type = AbstractMonster.EnemyType.ELITE;
 
 
-    /*
-    loadAnimation("images/monsters/theForest/mage/skeleton.atlas",
-        "images/monsters/theForest/mage/skeleton.json", 1.0F);
-    this.damage.add(new DamageInfo(this, DOUBLE_TAP));
-    this.damage.add(new DamageInfo(this, HELL_FIRE));
+
+    loadAnimation(MODEL_ATLAS,MODEL_JSON, 1.0F);
     AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+    e.setTime(e.getEndTime() * MathUtils.random());
+    /*
     this.stateData.setMix("Idle", "Sumon", 0.1F);
     this.stateData.setMix("Sumon", "Idle", 0.1F);
     this.stateData.setMix("Hurt", "Idle", 0.1F);
     this.stateData.setMix("Idle", "Hurt", 0.1F);
     this.stateData.setMix("Attack", "Idle", 0.1F);
-    e.setTime(e.getEndTime() * MathUtils.random());
     */
   }
 

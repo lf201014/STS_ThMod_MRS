@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-//import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import java.nio.charset.StandardCharsets;
 
 import java.util.ArrayList;
@@ -288,8 +288,8 @@ public class ThMod implements PostExhaustSubscriber,
         p.getPower("EventHorizonPower").onSpecificTrigger();
       }
       if (p.hasRelic("AmplifyWand")) {
-        AmplifyWand r = (AmplifyWand) p.getRelic("AmplifyWand");
-        r.onSpecificTrigger();
+        AbstractRelic r = p.getRelic("AmplifyWand");
+        r.onTrigger();
       }
     }
     logger.info(
@@ -403,7 +403,7 @@ public class ThMod implements PostExhaustSubscriber,
     );
     //BaseMod.addRelicToCustomPool(new Cape_1(), AbstractCardEnum.MARISA_COLOR);
 
-    logger.info("Relics editting finished.");
+    logger.info("Relics editing finished.");
   }
 
   public void receiveEditCards() {
