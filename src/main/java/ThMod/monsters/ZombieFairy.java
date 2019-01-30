@@ -1,8 +1,6 @@
 package ThMod.monsters;
 
 import ThMod.ThMod;
-import ThMod.powers.monsters.LimboContactPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -26,18 +24,7 @@ public class ZombieFairy extends AbstractMonster {
   private int turnNum = 0;
 
   public ZombieFairy(float x, float y) {
-    super(
-        NAME
-        , ID
-        , HP
-        , 0.0F
-        , -50.0F
-        , 140.0F
-        , 130.0F
-        , null
-        , x
-        , y + 25.0F
-    );
+    super(NAME, ID, HP, 0.0F, -50.0F, 140.0F, 130.0F, null, x, y + 25.0F);
     if (AbstractDungeon.ascensionLevel >= 8) {
       this.setHp(HP_A);
     }
@@ -91,16 +78,18 @@ public class ZombieFairy extends AbstractMonster {
     }
   }
 
-  public void usePreBattleAction() {
-    AbstractDungeon.actionManager.addToBottom(
-        new ApplyPowerAction(
-            this
-            , this
-            , new LimboContactPower(this))
-    );
-  }
-
+  /*
+    public void usePreBattleAction() {
+      AbstractDungeon.actionManager.addToBottom(
+          new ApplyPowerAction(
+              this
+              , this
+              , new LimboContactPower(this))
+      );
+    }
+  */
   protected void getMove(int num) {
+    this.turnNum++;
     if (num <= 50) {
       if (!lastMove((byte) 1)) {
         setAttackAction();
@@ -128,12 +117,12 @@ public class ZombieFairy extends AbstractMonster {
     setMove((byte) 2, Intent.DEFEND);
   }
 
+  /*
   public void changeState(String stateName) {
 
   }
 
   public void damage(DamageInfo info) {
-
   }
-
+  */
 }

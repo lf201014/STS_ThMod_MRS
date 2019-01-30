@@ -13,6 +13,9 @@ import ThMod.cards.Marisa.SprinkleStarSeal;
 import ThMod.cards.derivations.Exhaustion_MRS;
 import ThMod.potions.ShroomBrew;
 import ThMod.relics.BewitchedHakkero;
+import ThMod.relics.BigShroomBag;
+import ThMod.relics.CatCart;
+import basemod.helpers.RelicType;
 import com.badlogic.gdx.graphics.Texture;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -400,6 +403,14 @@ public class ThMod implements PostExhaustSubscriber,
     BaseMod.addRelicToCustomPool(
         new SproutingBranch(),
         MARISA_COLOR
+    );
+    BaseMod.addRelicToCustomPool(
+        new BigShroomBag(),
+        MARISA_COLOR
+    );
+    BaseMod.addRelic(
+        new CatCart(),
+        RelicType.SHARED
     );
     //BaseMod.addRelicToCustomPool(new Cape_1(), AbstractCardEnum.MARISA_COLOR);
 

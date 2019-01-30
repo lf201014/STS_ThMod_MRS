@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 public class CatCart extends CustomRelic {
 
@@ -28,6 +29,11 @@ public class CatCart extends CustomRelic {
     return DESCRIPTIONS[0];
   }
 
+  public void onEnterRoom(AbstractRoom room) {
+    flash();
+    this.counter++;
+  }
+
   public void onTrigger() {
     if (this.counter > 0) {
       flash();
@@ -36,12 +42,11 @@ public class CatCart extends CustomRelic {
       );
       int healAmt = this.counter * HEAL_PER_CHARGE;
       AbstractDungeon.player.heal(healAmt, true);
-      setCounter(0);
+      this.counter = 0;
     }
   }
 
   public AbstractRelic makeCopy() {
     return new CatCart();
   }
-
 }

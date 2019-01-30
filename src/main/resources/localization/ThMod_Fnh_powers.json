@@ -256,6 +256,13 @@
       "WWWWWWWWWWW"
     ]
   },
+  "Nebula": {
+    "NAME": "Nebula",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " Plated Armor whenever you lose Block from enemies or cards."
+    ]
+  },
   "LimboContact": {
     "NAME": "Undead Contact",
     "DESCRIPTIONS": [
@@ -263,11 +270,11 @@
       "WWWWWWWWWWW"
     ]
   },
-  "Nebula": {
-    "NAME": "Nebula",
+  "InfernoClaw": {
+    "NAME": "Inferno Claw",
     "DESCRIPTIONS": [
-      "Gain ",
-      " Plated Armor whenever you lose Block from enemies or cards."
+      "Whenever you receive attack damage from this enemy, add a #yBurn into your draw pile.",
+      "WWWWWWWWWWW"
     ]
   },
   "WWWWWWWWWWWWW": {

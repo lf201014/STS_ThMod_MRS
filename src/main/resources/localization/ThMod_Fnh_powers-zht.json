@@ -277,6 +277,13 @@
       " 層 多層護甲"
     ]
   },
+  "InfernoClaw": {
+    "NAME": "Inferno Claw",
+    "DESCRIPTIONS": [
+      "Whenever you receive attack damage from this enemy, add a #yBurn into your draw pile.",
+      "WWWWWWWWWWW"
+    ]
+  },
   "WWWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [

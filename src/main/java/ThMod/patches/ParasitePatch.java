@@ -23,7 +23,7 @@ public class ParasitePatch {
         AbstractPlayer p,
         AbstractMonster m
     ) {
-      if (AbstractDungeon.player.hasRelic("ShroomBag")) {
+      if ((AbstractDungeon.player.hasRelic("ShroomBag"))||(AbstractDungeon.player.hasRelic("BigShroomBag"))) {
         AbstractRelic r = p.getRelic("ShroomBag");
 
         r.flash();

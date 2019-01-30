@@ -105,6 +105,13 @@
       "每爬一層獲得一個計數。當你要被殺死時，若計數不為0，則免死並消耗所有計數，每個計數回复 #5 生命。"
     ]
   },
+  "BigShroomBag": {
+    "NAME": "Big Shroom Bag",
+    "FLAVOR": "A large version of shroom bag.",
+    "DESCRIPTIONS": [
+      "Replaces #rShroom #rBag . NL Parasite cards can now be played. Playing a #yParasite will heal #b3 HP and Exhausts the card."
+    ]
+  },
   "WWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWW",
     "FLAVOR": "WWWWWWWWWWWWWWW",

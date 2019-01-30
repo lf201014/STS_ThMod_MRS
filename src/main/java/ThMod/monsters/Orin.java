@@ -3,20 +3,20 @@ package ThMod.monsters;
 import ThMod.ThMod;
 import ThMod.action.OrinsDebuffAction;
 import ThMod.action.SpawnFairyAction;
+import ThMod.powers.monsters.InfernoClaw;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.ClearCardQueueAction;
-import com.megacrit.cardcrawl.actions.GameActionManager;
-import com.megacrit.cardcrawl.actions.animations.ShoutAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ChangeStateAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.common.SetMoveAction;
 import com.megacrit.cardcrawl.actions.common.SuicideAction;
 import com.megacrit.cardcrawl.actions.unique.CanLoseAction;
@@ -24,7 +24,6 @@ import com.megacrit.cardcrawl.actions.utility.HideHealthBarAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.core.Settings.GameLanguage;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -33,7 +32,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import java.util.Iterator;
@@ -52,10 +51,10 @@ public class Orin extends AbstractMonster {
   };
   private boolean form1 = true;
   private boolean firstTurn = true;
-  public static final int STAGE_1_HP = 76;
-  public static final int S_1_HP = 82;
-  public static final int STAGE_2_HP = 208;
-  public static final int S_2_HP = 215;
+  private static final int STAGE_1_HP = 76;
+  private static final int S_1_HP = 82;
+  private static final int STAGE_2_HP = 208;
+  private static final int S_2_HP = 215;
   private static final int STR = 4;
   private static final int STR_A = 5;
   private static final int DOUBLE_TAP = 10;
@@ -76,6 +75,7 @@ public class Orin extends AbstractMonster {
   private int strength;
   private int debuff;
   private int executeDmg;
+  private int turnCount = 0;
   private static final String tempImgUrl = "img/monsters/Orin/Orin_.png";
   private static final String MODEL_ATLAS = "img/monsters/Orin/Orin.atlas";
   private static final String MODEL_JSON = "img/monsters/Orin/Orin.json";
@@ -111,9 +111,7 @@ public class Orin extends AbstractMonster {
 
     this.type = AbstractMonster.EnemyType.ELITE;
 
-
-
-    loadAnimation(MODEL_ATLAS,MODEL_JSON, 1.0F);
+    loadAnimation(MODEL_ATLAS, MODEL_JSON, 1.0F);
     AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
     e.setTime(e.getEndTime() * MathUtils.random());
     /*
@@ -128,6 +126,11 @@ public class Orin extends AbstractMonster {
 
   public void usePreBattleAction() {
     AbstractDungeon.getCurrRoom().cannotLose = true;
+    AbstractDungeon.actionManager.addToTop(
+        new ApplyPowerAction(
+            this, this, new InfernoClaw(this)
+        )
+    );
   }
 
   public void takeTurn() {
@@ -270,6 +273,11 @@ public class Orin extends AbstractMonster {
               )
           );
         }
+        AbstractDungeon.actionManager.addToBottom(
+            new RemoveSpecificPowerAction(
+                p, this, "Wraith"
+            )
+        );
         break;
       default:
         logger.info(
@@ -278,59 +286,109 @@ public class Orin extends AbstractMonster {
                 + " should never be called."
         );
     }
+  }
 
+  private void setDoubleTapAction() {
+    if (this.form1) {
+      setMove((byte) 1, Intent.ATTACK_DEFEND, this.catTap, 2, true);
+    } else {
+      setMove((byte) 4, Intent.ATTACK_DEFEND, this.doubleTap, 2, true);
+    }
+  }
+
+  private void setMultiAttackAction() {
+    if (this.form1) {
+      setMove((byte) 3, Intent.ATTACK_BUFF, this.hellFireDmg, 6, true);
+    } else {
+      setMove((byte) 5, Intent.ATTACK, this.hellFireDmg, 4, true);
+    }
+  }
+
+  private void setBuffAction() {
+    if (this.form1) {
+      setMove((byte) 2, Intent.BUFF);
+    } else {
+      setMove((byte) 6, Intent.DEBUFF);
+    }
+  }
+
+  private void setSummonAction() {
+    if (this.firstTurn) {
+      setMove((byte) 7, Intent.UNKNOWN);
+      this.firstTurn = false;
+    } else {
+      setMove((byte) 8, Intent.UNKNOWN);
+    }
+  }
+
+  private void setExecuteAction() {
+    setMove((byte) 9, Intent.ATTACK, this.executeDmg, 6, true);
+  }
+
+  private boolean canSummon() {
+    int aliveCount = 0;
+    Iterator var2 = AbstractDungeon.getMonsters().monsters.iterator();
+
+    while (var2.hasNext()) {
+      AbstractMonster m = (AbstractMonster) var2.next();
+      if (m != this && !m.isDying) {
+        ++aliveCount;
+      }
+    }
+
+    if (aliveCount > 3) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  private boolean canExecute() {
+    if (!AbstractDungeon.player.hasPower("Wraith")) {
+      return false;
+    } else {
+      return AbstractDungeon.player.getPower("Wraith").amount >= 10;
+    }
   }
 
   protected void getMove(int num) {
     if (this.form1) {
       if (this.firstTurn) {
-        setMove((byte) 1, Intent.ATTACK, DOUBLE_TAP, 2, true);
+        setDoubleTapAction();
         this.firstTurn = false;
         return;
       }
-      if (num < 50) {
-        if (!lastMove((byte) 2)) {
-          setMove((byte) 2, Intent.BUFF);
-        } else {
-          setMove((byte) 1, AbstractMonster.Intent.ATTACK, 20);
-        }
-      } else if (!lastMove((byte) 1)) {
-        setMove((byte) 1, AbstractMonster.Intent.ATTACK, 20);
+      if (num > 50) {
+        setDoubleTapAction();
       } else {
-        setMove((byte) 2, Intent.BUFF);
+        setBuffAction();
       }
     } else {
       if (this.firstTurn) {
-        setMove((byte) 7, Intent.UNKNOWN);
-        this.firstTurn = false;
+        setSummonAction();
         return;
       }
-      if (num < 50) {
-        if (!lastTwoMoves((byte) 6)) {
-          setMove((byte) 6, AbstractMonster.Intent.ATTACK_DEBUFF, 18);
-        } else {
-          setMove((byte) 8, AbstractMonster.Intent.ATTACK, 10, 3, true);
+      if (canExecute()) {
+        setExecuteAction();
+        return;
+      }
+      if (canSummon()){
+        if (num < 50){
+          setSummonAction();
+          return;
         }
-      } else if (!lastTwoMoves((byte) 8)) {
-        setMove((byte) 8, AbstractMonster.Intent.ATTACK, 10, 3, true);
-      } else {
-        setMove((byte) 6, AbstractMonster.Intent.ATTACK_DEBUFF, 18);
+        if (num < 34) {
+
+        }
+      }
+      if (num < 33){
+
       }
     }
   }
 
   public void damage(DamageInfo info) {
     super.damage(info);
-    /*
-    if ((info.owner != null) && (info.type != DamageInfo.DamageType.THORNS) && (info.output > 0)) {
-      this.state.setAnimation(0, "Hit", false);
-      if (this.form1) {
-        this.state.addAnimation(0, "Idle_1", true, 0.0F);
-      } else {
-        this.state.addAnimation(0, "Idle_2", true, 0.0F);
-      }
-    }
-    */
     if ((this.currentHealth <= 0) && (!this.halfDead)) {
       if (AbstractDungeon.getCurrRoom().cannotLose) {
         this.halfDead = true;
