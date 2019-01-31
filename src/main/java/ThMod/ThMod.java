@@ -241,6 +241,7 @@ public class ThMod implements PostExhaustSubscriber,
   }*/
 
   //For the FXXKING Exhaustion curse
+  /*
   public static boolean ExhaustionCheck() {
     boolean res = false;
     for (AbstractCard c : AbstractDungeon.player.hand.group) {
@@ -250,7 +251,7 @@ public class ThMod implements PostExhaustSubscriber,
     }
     return res;
   }
-
+*/
   //For Amplify cards
   public static boolean Amplified(AbstractCard card, int AMP) {
     logger.info(
@@ -634,14 +635,14 @@ public class ThMod implements PostExhaustSubscriber,
         zombieFairy = ZOMBIE_FAIRY_ENC;
         break;
     }
-    //BaseMod.addMonster(orin, orin, () -> new Orin());
-    //BaseMod.addMonster(zombieFairy, zombieFairy, () -> new ZombieFairy());
+    BaseMod.addMonster(orin, orin, () -> new Orin());
+    BaseMod.addMonster(zombieFairy, zombieFairy, () -> new ZombieFairy());
     final Texture badge = ImageMaster.loadImage(MOD_BADGE);
     BaseMod.registerModBadge(
         badge,
         "MarisaMod",
         "Flynn , Hell , Hohner_257 , Samsara",
-        "A Mod of the poor blonde hair girl from Touhou Project(",
+        "A Mod of the poor blonde girl from Touhou Project(",
         null
     );
   }

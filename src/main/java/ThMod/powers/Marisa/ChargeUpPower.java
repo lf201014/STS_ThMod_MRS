@@ -1,5 +1,6 @@
 package ThMod.powers.Marisa;
 
+import ThMod.cards.derivations.Exhaustion_MRS;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
@@ -9,7 +10,6 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import ThMod.ThMod;
@@ -33,7 +33,7 @@ public class ChargeUpPower
     this.name = NAME;
     this.ID = POWER_ID;
     this.owner = owner;
-    if (ThMod.ExhaustionCheck()) {
+    if (ExhaustionCheck()) {
       this.amount = 0;
     } else {
       this.amount = amount;
@@ -43,12 +43,12 @@ public class ChargeUpPower
     this.img = new Texture("img/powers/generator.png");
 
     getDivider();
-    this.cnt = (int) Math.floor(this.amount / this.stc);
+    this.cnt = this.amount / this.stc;
   }
 
   @Override
   public void stackPower(int stackAmount) {
-    if (ThMod.ExhaustionCheck()) {
+    if (ExhaustionCheck()) {
       return;
     }
     this.fontScale = 8.0F;
@@ -66,7 +66,7 @@ public class ChargeUpPower
             + this.amount
     );
 
-    this.cnt = (int) Math.floor(this.amount / this.stc);
+    this.cnt = this.amount / this.stc;
   }
 
   public void updateDescription() {
@@ -82,8 +82,8 @@ public class ChargeUpPower
   }
 
   @Override
-  public void onPlayCard(AbstractCard card, AbstractMonster m) {
-    if ((this.owner.hasPower("OneTimeOffPlusPower")) || (ThMod.ExhaustionCheck())) {
+  public void onAfterCardPlayed(AbstractCard card) {
+    if ((this.owner.hasPower("OneTimeOffPlusPower")) || (ExhaustionCheck())) {
       return;
     }
     if ((this.cnt > 0) && (card.type == CardType.ATTACK)) {
@@ -107,7 +107,7 @@ public class ChargeUpPower
 
   @Override
   public float atDamageFinalGive(float damage, DamageInfo.DamageType type) {
-    if ((this.owner.hasPower("OneTimeOffPlusPower")) || (ThMod.ExhaustionCheck())) {
+    if ((this.owner.hasPower("OneTimeOffPlusPower")) || (ExhaustionCheck())) {
       return damage;
     }
     if (cnt > 0) {
@@ -124,5 +124,14 @@ public class ChargeUpPower
     } else {
       this.stc = ACT_STACK;
     }
+  }
+  private boolean ExhaustionCheck() {
+    boolean res = false;
+    for (AbstractCard c : AbstractDungeon.player.hand.group) {
+      if (c instanceof Exhaustion_MRS) {
+        res = true;
+      }
+    }
+    return res;
   }
 }
