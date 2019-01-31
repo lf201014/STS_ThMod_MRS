@@ -23,8 +23,16 @@ public class ParasitePatch {
         AbstractPlayer p,
         AbstractMonster m
     ) {
-      if ((AbstractDungeon.player.hasRelic("ShroomBag"))||(AbstractDungeon.player.hasRelic("BigShroomBag"))) {
-        AbstractRelic r = p.getRelic("ShroomBag");
+      if ((AbstractDungeon.player.hasRelic("ShroomBag")) || (AbstractDungeon.player.hasRelic("BigShroomBag"))) {
+        AbstractRelic r;
+        int heal_amt;
+        if (AbstractDungeon.player.hasRelic("BigShroomBag")) {
+          r = p.getRelic("BigShroomBag");
+          heal_amt = 5;
+        } else {
+          r = p.getRelic("ShroomBag");
+          heal_amt = 3;
+        }
 
         r.flash();
         AbstractDungeon.actionManager.addToBottom(
@@ -32,7 +40,7 @@ public class ParasitePatch {
         );
         _inst.exhaust = true;
         AbstractDungeon.actionManager.addToBottom(
-            new HealAction(p, p, 3)
+            new HealAction(p, p, heal_amt)
         );
         return SpireReturn.Return(null);
       }
@@ -50,7 +58,7 @@ public class ParasitePatch {
         AbstractPlayer p,
         AbstractMonster m
     ) {
-      if ((_inst.cardID.equals("Parasite")) && (p.hasRelic("ShroomBag"))) {
+      if ((_inst.cardID.equals("Parasite")) && ((p.hasRelic("ShroomBag"))||(p.hasRelic("BigShroomBag")))) {
         return SpireReturn.Return(true);
       }
       return SpireReturn.Continue();
