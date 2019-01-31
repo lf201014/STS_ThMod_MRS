@@ -281,3 +281,7 @@ v0.14.20 1/27/2019
 *Shooting Echo:base damage : 9 -> 9 ( 11 );
 *Guiding Star : Rework : derivation ; cost : 1 ( 0 ) ; effect :Shuffle a copy of this card into draw pile.Shuffle discard pile into draw pile. Exhuast.
 *Simple Launcher : base price:200 -> 300;
+
+v0.14.21 1/31/2019
+*Trying to fix the random target multi-segment attack damages calculation errors
+*Add support for Googly Eye(thanks to github user:KAMAQUEEN)
