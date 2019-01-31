@@ -264,7 +264,7 @@
     ]
   },
   "LimboContact": {
-    "NAME": "UndeadContact",
+    "NAME": "Undead Contact",
     "DESCRIPTIONS": [
       "Whenever you take damage from this enemy, gain a stack of #yWraith .",
       "WWWWWWWWWWW"
@@ -275,6 +275,13 @@
     "DESCRIPTIONS": [
       "每当你因敌人或卡牌损失 格挡 ，获得 ",
       " 层 多层护甲 。"
+    ]
+  },
+  "InfernoClaw": {
+    "NAME": "Inferno Claw",
+    "DESCRIPTIONS": [
+      "Whenever you receive attack damage from this enemy, add a #yBurn into your draw pile.",
+      "WWWWWWWWWWW"
     ]
   },
   "WWWWWWWWWWWWWWW": {

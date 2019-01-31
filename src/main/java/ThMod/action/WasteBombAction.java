@@ -20,6 +20,7 @@ public class WasteBombAction
   private int num;
   private int stacks;
   private AbstractCreature target;
+  private DamageInfo info;
 
   public WasteBombAction(AbstractCreature target, int dmg, int numTimes, int stacks) {
     this.actionType = AbstractGameAction.ActionType.DAMAGE;
@@ -28,6 +29,7 @@ public class WasteBombAction
     this.target = target;
     this.num = numTimes;
     this.stacks = stacks;
+    this.info = new DamageInfo(AbstractDungeon.player, this.damage, DamageType.NORMAL);
   }
 
   public void update() {
@@ -61,9 +63,9 @@ public class WasteBombAction
           )
       );
 
-      this.target.damage(
-          new DamageInfo(AbstractDungeon.player, this.damage, DamageType.NORMAL)
-      );
+      this.info.applyPowers(this.info.owner,target);
+
+      this.target.damage(this.info);
 
       if ((!this.target.isDeadOrEscaped()) && (!this.target.isDying)) {
         AbstractDungeon.actionManager.addToBottom(

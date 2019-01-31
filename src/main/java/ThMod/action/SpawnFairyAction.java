@@ -2,6 +2,7 @@ package ThMod.action;
 
 
 import ThMod.monsters.ZombieFairy;
+import ThMod.powers.monsters.LimboContactPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -17,6 +18,7 @@ import com.megacrit.cardcrawl.monsters.beyond.SnakeDagger;
 import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.powers.SlowPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class SpawnFairyAction
     extends AbstractGameAction {
@@ -80,6 +82,9 @@ public class SpawnFairyAction
             )
         );
       }
+      AbstractDungeon.actionManager.addToBottom(
+          new FairyWraithAction()
+      );
     }
     tickDuration();
   }

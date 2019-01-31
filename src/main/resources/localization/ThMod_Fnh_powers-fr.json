@@ -270,6 +270,13 @@
       " Armure plaquée lorsque vous perdez votre Armure de la part d'ennemis ou de cartes."
     ]
   },
+  "InfernoClaw": {
+    "NAME": "Inferno Claw",
+    "DESCRIPTIONS": [
+      "Whenever you receive attack damage from this enemy, add a #yBurn into your draw pile.",
+      "WWWWWWWWWWW"
+    ]
+  },
   "WWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [

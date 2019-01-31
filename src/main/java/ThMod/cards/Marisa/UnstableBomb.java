@@ -49,8 +49,8 @@ public class UnstableBomb
     AbstractDungeon.actionManager.addToBottom(
         new UnstableBombAction(
             AbstractDungeon.getMonsters().getRandomMonster(true),
-            this.damage,
-            this.block,
+            this.baseDamage,
+            this.baseBlock,
             4
         )
     );

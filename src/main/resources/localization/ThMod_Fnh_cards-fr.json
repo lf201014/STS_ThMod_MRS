@@ -227,8 +227,8 @@
   },
   "JA": {
     "NAME": "Échauffement !",
-    "DESCRIPTION": "Infligez !D! dégats. Ajoutez 623B, étincelle et ligne de sorcière à votre main.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégats. Ajoutez 623B, étincelle et ligne de sorcière à votre main et améliorées les."
+    "DESCRIPTION": "Infligez !D! dégats. Ajoutez Balayage ascendant, étincelle et ligne de sorcière à votre main.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégats. Ajoutez Balayage ascendant, étincelle et ligne de sorcière à votre main et améliorées les."
   },
   "AbsoluteMagnitude": {
     "NAME": "Magnitude absolue",

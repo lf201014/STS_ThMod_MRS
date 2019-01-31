@@ -56,7 +56,7 @@ public class DeepEcologicalBomb
     AbstractDungeon.actionManager.addToBottom(
         new WasteBombAction(
             AbstractDungeon.getMonsters().getRandomMonster(true),
-            this.damage,
+            this.baseDamage,
             num,
             this.magicNumber
         )
