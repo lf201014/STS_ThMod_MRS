@@ -98,6 +98,20 @@
       "#y증폭 효과가 발동할 때 마다 방어도를 #b4 얻습니다."
     ]
   },
+  "CatCart": {
+    "NAME": "Cat Cart",
+    "FLAVOR": "When you fall in battle,your loyal kitties will bring you back to life with this.",
+    "DESCRIPTIONS": [
+      "Gain 1 charge when you climb a floor.When you would die,consume all charges and heal #5 hp for each of them."
+    ]
+  },
+  "BigShroomBag": {
+    "NAME": "Big Shroom Bag",
+    "FLAVOR": "A large version of shroom bag.",
+    "DESCRIPTIONS": [
+      "Replaces #rShroom #rBag . NL Parasite cards can now be played. Playing a #yParasite will heal #b3 HP and Exhausts the card."
+    ]
+  },
   "WWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWW",
     "FLAVOR": "WWWWWWWWWWWWWWWW",

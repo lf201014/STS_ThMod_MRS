@@ -1,0 +1,209 @@
+
+ZombieFairy.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hairr
+  rotate: false
+  xy: 1, 1
+  size: 244, 317
+  orig: 244, 317
+  offset: 0, 0
+  index: -1
+wingrr
+  rotate: false
+  xy: 172, 320
+  size: 206, 89
+  orig: 206, 89
+  offset: 0, 0
+  index: -1
+wingr
+  rotate: false
+  xy: 172, 411
+  size: 152, 95
+  orig: 152, 95
+  offset: 0, 0
+  index: -1
+wingll
+  rotate: false
+  xy: 247, 230
+  size: 125, 82
+  orig: 125, 82
+  offset: 0, 0
+  index: -1
+wingl
+  rotate: false
+  xy: 380, 320
+  size: 155, 109
+  orig: 155, 109
+  offset: 0, 0
+  index: -1
+hairl
+  rotate: false
+  xy: 633, 354
+  size: 32, 99
+  orig: 32, 99
+  offset: 0, 0
+  index: -1
+skirtB
+  rotate: false
+  xy: 326, 431
+  size: 209, 55
+  orig: 209, 55
+  offset: 0, 0
+  index: -1
+footr
+  rotate: false
+  xy: 594, 354
+  size: 37, 99
+  orig: 37, 99
+  offset: 0, 0
+  index: -1
+footl
+  rotate: false
+  xy: 596, 103
+  size: 52, 152
+  orig: 52, 152
+  offset: 0, 0
+  index: -1
+skirt
+  rotate: false
+  xy: 247, 1
+  size: 282, 227
+  orig: 282, 227
+  offset: 0, 0
+  index: -1
+torso
+  rotate: false
+  xy: 593, 257
+  size: 61, 95
+  orig: 61, 95
+  offset: 0, 0
+  index: -1
+armr
+  rotate: false
+  xy: 701, 1
+  size: 46, 86
+  orig: 46, 86
+  offset: 0, 0
+  index: -1
+neck
+  rotate: false
+  xy: 498, 230
+  size: 19, 21
+  orig: 19, 21
+  offset: 0, 0
+  index: -1
+ArmL
+  rotate: false
+  xy: 636, 1
+  size: 63, 94
+  orig: 63, 94
+  offset: 0, 0
+  index: -1
+shawl
+  rotate: false
+  xy: 1, 320
+  size: 169, 134
+  orig: 169, 134
+  offset: 0, 0
+  index: -1
+handll
+  rotate: false
+  xy: 594, 455
+  size: 60, 54
+  orig: 60, 54
+  offset: 0, 0
+  index: -1
+handl
+  rotate: false
+  xy: 537, 384
+  size: 55, 110
+  orig: 55, 110
+  offset: 0, 0
+  index: -1
+ribbon
+  rotate: false
+  xy: 650, 159
+  size: 41, 48
+  orig: 41, 48
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 650, 97
+  size: 78, 60
+  orig: 78, 60
+  offset: 0, 0
+  index: -1
+eyebrow
+  rotate: false
+  xy: 441, 247
+  size: 44, 4
+  orig: 44, 4
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: false
+  xy: 636, 97
+  size: 3, 1
+  orig: 3, 1
+  offset: 0, 0
+  index: -1
+eye_
+  rotate: false
+  xy: 656, 455
+  size: 63, 39
+  orig: 63, 39
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 374, 230
+  size: 65, 19
+  orig: 65, 19
+  offset: 0, 0
+  index: -1
+eyee
+  rotate: false
+  xy: 441, 230
+  size: 55, 15
+  orig: 55, 15
+  offset: 0, 0
+  index: -1
+handr
+  rotate: false
+  xy: 537, 256
+  size: 54, 126
+  orig: 54, 126
+  offset: 0, 0
+  index: -1
+hairf
+  rotate: false
+  xy: 531, 1
+  size: 103, 100
+  orig: 103, 100
+  offset: 0, 0
+  index: -1
+hairrr
+  rotate: false
+  xy: 531, 103
+  size: 63, 151
+  orig: 63, 151
+  offset: 0, 0
+  index: -1
+halo_
+  rotate: false
+  xy: 374, 256
+  size: 149, 31
+  orig: 149, 31
+  offset: 0, 0
+  index: -1
+halo
+  rotate: false
+  xy: 1, 456
+  size: 164, 47
+  orig: 164, 47
+  offset: 0, 0
+  index: -1

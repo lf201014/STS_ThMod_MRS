@@ -1,5 +1,6 @@
 package ThMod.event;
 
+import ThMod.relics.BigShroomBag;
 import ThMod.relics.ShroomBag;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -15,7 +16,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.relics.OddMushroom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import org.apache.logging.log4j.Logger;
 
@@ -77,7 +77,7 @@ public class Mushrooms_MRS extends AbstractEvent {
           }
 
           if (AbstractDungeon.player.hasRelic("ShroomBag")) {
-            AbstractDungeon.getCurrRoom().addRelicToRewards(new OddMushroom());
+            AbstractDungeon.getCurrRoom().addRelicToRewards(new BigShroomBag());
           } else {
             AbstractDungeon.getCurrRoom().addRelicToRewards(new ShroomBag());
           }

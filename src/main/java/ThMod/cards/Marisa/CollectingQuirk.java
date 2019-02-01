@@ -84,8 +84,8 @@ public class CollectingQuirk
       AbstractDungeon.actionManager.addToBottom(
           new UnstableBombAction(
               AbstractDungeon.getMonsters().getRandomMonster(true),
-              this.damage,
-              this.damage,
+              this.baseDamage,
+              this.baseDamage,
               this.counter
           )
       );

@@ -143,7 +143,7 @@
   },
   "GuidingStar": {
     "NAME": "길잡이 별",
-    "DESCRIPTION": "이 카드를 복사하여 뽑을 카드 더미에 섞어 넣습니다. NL 소멸.",
+    "DESCRIPTION": "이 카드를 복사하여 뽑을 카드 더미에 섞어 넣습니다. NL 버린 카드 더미를 뽑을 카드 더미에 넣고 섞습니다.  NL 소멸.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "OrrerysSun": {
@@ -227,8 +227,8 @@
   },
   "JA": {
     "NAME": "준비 운동",
-    "DESCRIPTION": "피해를 !D! 줍니다. 623B, 스파크, 위치 레이라인 카드를 1 장씩 얻습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 강화된 623B, 스파크, 위치 레이라인 카드를 1 장씩 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. 라이징 스위프, 스파크, 위치 레이라인 카드를 1 장씩 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 강화된 라이징 스위프, 스파크, 위치 레이라인 카드를 1 장씩 얻습니다."
   },
   "AbsoluteMagnitude": {
     "NAME": "절대등급",

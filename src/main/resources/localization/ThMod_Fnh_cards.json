@@ -94,7 +94,7 @@
     "EXTENDED_DESCRIPTION": [
       "(Gain !B! in total.)",
       ""
-      ]
+    ]
   },
   "OortCloud": {
     "NAME": "OortCloud",
@@ -143,7 +143,7 @@
   },
   "GuidingStar": {
     "NAME": "Guiding Star",
-    "DESCRIPTION": "Shuffle a copy of this card into your draw pile. NL Exhaust.",
+    "DESCRIPTION": "Shuffle a copy of this card into your draw pile. NL Shuffle your discard pile into your draw pile. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "OrrerysSun": {
@@ -227,8 +227,8 @@
   },
   "JA": {
     "NAME": "Warming Up",
-    "DESCRIPTION": "Deal !D! damage. Add a 623B, a Spark and a Witch Leyline to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a 623B, a Spark and a Witch Leyline to your hand and Upgrade them."
+    "DESCRIPTION": "Deal !D! damage. Add a Rising Sweep, a Spark and a Witch Leyline to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a Rising Sweep, a Spark and a Witch Leyline to your hand and Upgrade them."
   },
   "AbsoluteMagnitude": {
     "NAME": "Absolute Magnitude",
@@ -324,7 +324,7 @@
     "NAME": "Dark Matter",
     "DESCRIPTION": "Can only be played once per turn. NL Shuffle 2 copies of this card into your draw pile. Draw 1 card. When this card is Exhausted, gain !B! Block. NL Ethereal.",
     "UPGRADE_DESCRIPTION": "Can only be played once per turn. NL Shuffle 2 copies of this card into your draw pile. Draw 1 card. When this card is Exhausted, gain !B! Block. NL Ethereal .",
-    "EXTENDED_DESCRIPTION":[
+    "EXTENDED_DESCRIPTION": [
       "I can't play Dark Matter again this turn.",
       ""
     ]
@@ -348,7 +348,7 @@
     "NAME": "Energy Recoil",
     "DESCRIPTION": "Gain Block equal to your Charge-up.",
     "UPGRADE_DESCRIPTION": "Gain Block equal to your Charge-up + 3.",
-    "EXTENDED_DESCRIPTION":[
+    "EXTENDED_DESCRIPTION": [
       " NL (Gain ",
       " Block.)"
     ]
@@ -387,7 +387,7 @@
     "NAME": "Collecting Quirk",
     "DESCRIPTION": "Deal !D! damage to a random enemy for every !M! Relics you have.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
-    "EXTENDED_DESCRIPTION":[
+    "EXTENDED_DESCRIPTION": [
       "(Deals damage !B! time(s))",
       ""
     ]
@@ -406,7 +406,7 @@
     "NAME": "Black Flare Star",
     "DESCRIPTION": "Can only be played when you have 4 or more cards in your hand. NL Discard any number of cards from your hand and gain !B! Block for each.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
-    "EXTENDED_DESCRIPTION":[
+    "EXTENDED_DESCRIPTION": [
       "I don't have 4 cards in my hand.",
       ""
     ]
@@ -415,7 +415,7 @@
     "NAME": "White Dwarf",
     "DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. NL Deal !B! damage (1.5 × size of your discard pile). Add 2 Burns to your hand.",
     "UPGRADE_DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. NL Deal !B! damage (2 × size of your discard pile). Add 2 Burns to your hand.",
-    "EXTENDED_DESCRIPTION":[
+    "EXTENDED_DESCRIPTION": [
       "I have more than 4 cards in my hand.",
       ""
     ]

@@ -33,7 +33,7 @@ public class AmplifyWand extends CustomRelic {
     return new AmplifyWand();
   }
 
-  public void onSpecificTrigger() {
+  public void onTrigger() {
     this.flash();
     AbstractDungeon.actionManager.addToBottom(
         new RelicAboveCreatureAction(AbstractDungeon.player, this)

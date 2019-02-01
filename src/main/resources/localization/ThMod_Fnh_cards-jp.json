@@ -143,7 +143,7 @@
   },
   "GuidingStar": {
     "NAME": " ガイディングスター ",
-    "DESCRIPTION": "このカードの複製を山札に加える。 NL 廃棄 。",
+    "DESCRIPTION": "このカードの複製を山札に加える。 NL 捨て札すべてを山札に戻す。  NL 廃棄 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "OrrerysSun": {
