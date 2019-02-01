@@ -217,6 +217,7 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String KEYWORD_STRING_ZHS = "localization/ThMod_MRS_keywords-zh.json";
   private static final String KEYWORD_STRING_ZHT = "localization/ThMod_MRS_keywords-zht.json";
   private static final String EVENT_PATH = "localization/ThMod_MRS_events.json";
+  private static final String EVENT_PATH_KR = "localization/ThMod_MRS_events-kr.json";
   private static final String EVENT_PATH_ZHS = "localization/ThMod_MRS_events-zh.json";
   private static final String EVENT_PATH_ZHT = "localization/ThMod_MRS_events-zht.json";
 
@@ -571,7 +572,7 @@ public class ThMod implements PostExhaustSubscriber,
       relic = RELIC_STRING_KR;
       power = POWER_STRING_KR;
       potion = POTION_STRING_KR;
-      event = EVENT_PATH;
+      event = EVENT_PATH_KR;
     } else if (Settings.language == Settings.GameLanguage.FRA) {
       logger.info("lang == fra");
       card = CARD_STRING_FR;

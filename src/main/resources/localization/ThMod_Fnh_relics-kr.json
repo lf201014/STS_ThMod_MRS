@@ -99,17 +99,17 @@
     ]
   },
   "CatCart": {
-    "NAME": "Cat Cart",
-    "FLAVOR": "When you fall in battle,your loyal kitties will bring you back to life with this.",
+    "NAME": "고양이 수레",
+    "FLAVOR": "당신이 전투에서 쓰러지면, 당신의 충성스러운 고양이들이 이 수레를 타고 당신을 구해줄겁니다.",
     "DESCRIPTIONS": [
-      "Gain 1 charge when you climb a floor.When you would die,consume all charges and heal #5 hp for each of them."
+      "층을 오를 때 마다 중첩을 하나 얻습니다. 사망시 모든 중첩을 소모하고, 소모한 중첩마다 #5 의 체력으로 살아납니다."
     ]
   },
   "BigShroomBag": {
-    "NAME": "Big Shroom Bag",
-    "FLAVOR": "A large version of shroom bag.",
+    "NAME": "큰 버섯 가방",
+    "FLAVOR": "더 큰 버섯 가방입니다.",
     "DESCRIPTIONS": [
-      "Replaces #rShroom #rBag . NL Parasite cards can now be played. Playing a #yParasite will heal #b3 HP and Exhausts the card."
+      "#r버섯 #r가방 과 교체됩니다. NL #y기생충 카드를 사용할 수 있게 됩니다. 사용 시 체력을 #b3 회복하고 소멸 합니다."
     ]
   },
   "WWWWWWWWWWWW": {
