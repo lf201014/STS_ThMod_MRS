@@ -1,5 +1,6 @@
 package ThMod.cards.Marisa;
 
+import ThMod.action.ManaRampAction;
 import ThMod.action.ManaRampageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -47,7 +48,7 @@ public class ManaRampage extends CustomCard {
 
     if (cnt > 0) {
       AbstractDungeon.actionManager.addToBottom(
-          new ManaRampageAction(cnt, this.upgraded)
+          new ManaRampAction(cnt, this.upgraded)
       );
     }
 

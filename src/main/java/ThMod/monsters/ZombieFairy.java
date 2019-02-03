@@ -1,8 +1,10 @@
 package ThMod.monsters;
 
 import ThMod.ThMod;
+import ThMod.powers.monsters.LimboContactPower;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -90,16 +92,15 @@ public class ZombieFairy extends AbstractMonster {
     }
   }
 
-  /*
-    public void usePreBattleAction() {
-      AbstractDungeon.actionManager.addToBottom(
-          new ApplyPowerAction(
-              this
-              , this
-              , new LimboContactPower(this))
-      );
-    }
-  */
+  public void usePreBattleAction() {
+    AbstractDungeon.actionManager.addToBottom(
+        new ApplyPowerAction(
+            this
+            , this
+            , new LimboContactPower(this))
+    );
+  }
+
   protected void getMove(int num) {
     this.turnNum++;
     if (num <= 50) {

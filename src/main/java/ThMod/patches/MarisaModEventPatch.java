@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.events.exordium.Mushrooms;
 
 public class MarisaModEventPatch {
 
-  @SpirePatch(cls = "com.megacrit.cardcrawl.dungeons.Exordium", method = "initializeEventList")
+  @SpirePatch(clz=AbstractDungeon.class, method="initializeCardPools")
   public static class EventPatch {
 
     @SpirePostfixPatch
@@ -23,6 +23,13 @@ public class MarisaModEventPatch {
               + AbstractDungeon.player.title
       );
       String events = new String();
+      for (String tempStr : AbstractDungeon.eventList) {
+        events += tempStr + " ; ";
+      }
+      ThMod.logger.info("MarisaModEventPatch : current event list : " + events);
+      ThMod.logger.info("Removing Mushroom_MRS");
+      AbstractDungeon.eventList.remove("Mushrooms_MRS");
+      events = "";
       for (String tempStr : AbstractDungeon.eventList) {
         events += tempStr + " ; ";
       }
@@ -45,7 +52,7 @@ public class MarisaModEventPatch {
               " ; retVal event : " +
               _retVal.toString()
       );
-      if ((_retVal instanceof Mushrooms)&&(AbstractDungeon.player instanceof Marisa)) {
+      if ((_retVal instanceof Mushrooms) && (AbstractDungeon.player instanceof Marisa)) {
         ThMod.logger.info("Swapping mushroom event");
         return new Mushrooms_MRS();
       }
