@@ -301,7 +301,7 @@
   },
   "MagicChant": {
     "NAME": "咏唱",
-    "DESCRIPTION": "选择 !M! 张卡 升级 并 保留 到下一回合。",
+    "DESCRIPTION": "选择最多 !M! 张卡 升级 并 保留 到下一回合。",
     "UPGRADE_DESCRIPTION": " 保留 。选择 !M! 张卡 保留 到下一回合。所选卡牌在下回合 费用 减少1 。"
   },
   "UnstableBomb": {

@@ -1,7 +1,6 @@
 package ThMod.cards.Marisa;
 
 import ThMod.action.ManaRampAction;
-import ThMod.action.ManaRampageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
