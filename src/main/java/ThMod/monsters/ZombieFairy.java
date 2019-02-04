@@ -1,6 +1,10 @@
 package ThMod.monsters;
 
 import ThMod.ThMod;
+import ThMod.powers.monsters.LimboContactPower;
+import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -22,6 +26,8 @@ public class ZombieFairy extends AbstractMonster {
   private static final byte POWER_UP = 3;
   private static final AbstractPlayer p = AbstractDungeon.player;
   private int turnNum = 0;
+  private static final String MODEL_ATLAS = "img/monsters/ZombieFairy/ZombieFairy.atlas";
+  private static final String MODEL_JSON = "img/monsters/ZombieFairy/ZombieFairy.json";
 
   public ZombieFairy(float x, float y) {
     super(NAME, ID, HP, 0.0F, -50.0F, 140.0F, 130.0F, null, x, y + 25.0F);
@@ -29,10 +35,14 @@ public class ZombieFairy extends AbstractMonster {
       this.setHp(HP_A);
     }
     this.damage.add(new DamageInfo(this, DMG));
+
+    loadAnimation(MODEL_ATLAS, MODEL_JSON, 2.0F);
+    AnimationState.TrackEntry e = this.state.setAnimation(0, "newAnimation", true);
+    e.setTime(e.getEndTime() * MathUtils.random());
   }
 
-  public ZombieFairy(){
-    this(0.0f,0.0f);
+  public ZombieFairy() {
+    this(0.0f, 0.0f);
   }
 
   public void takeTurn() {
@@ -82,16 +92,15 @@ public class ZombieFairy extends AbstractMonster {
     }
   }
 
-  /*
-    public void usePreBattleAction() {
-      AbstractDungeon.actionManager.addToBottom(
-          new ApplyPowerAction(
-              this
-              , this
-              , new LimboContactPower(this))
-      );
-    }
-  */
+  public void usePreBattleAction() {
+    AbstractDungeon.actionManager.addToBottom(
+        new ApplyPowerAction(
+            this
+            , this
+            , new LimboContactPower(this))
+    );
+  }
+
   protected void getMove(int num) {
     this.turnNum++;
     if (num <= 50) {

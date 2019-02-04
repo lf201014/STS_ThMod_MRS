@@ -1,0 +1,153 @@
+
+rincat.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+houxiaR
+  rotate: false
+  xy: 388, 397
+  size: 31, 57
+  orig: 31, 57
+  offset: 0, 0
+  index: -1
+houshangR
+  rotate: false
+  xy: 1, 423
+  size: 57, 74
+  orig: 57, 74
+  offset: 0, 0
+  index: -1
+houzhangR
+  rotate: false
+  xy: 481, 307
+  size: 37, 20
+  orig: 37, 20
+  offset: 0, 0
+  index: -1
+qianshangR
+  rotate: false
+  xy: 702, 1
+  size: 50, 118
+  orig: 50, 118
+  offset: 0, 0
+  index: -1
+qianxia_R
+  rotate: false
+  xy: 60, 423
+  size: 43, 86
+  orig: 43, 86
+  offset: 0, 0
+  index: -1
+qianzhangR
+  rotate: false
+  xy: 168, 423
+  size: 45, 30
+  orig: 45, 30
+  offset: 0, 0
+  index: -1
+wei01
+  rotate: false
+  xy: 1, 1
+  size: 235, 420
+  orig: 235, 420
+  offset: 0, 0
+  index: -1
+wei02
+  rotate: false
+  xy: 521, 1
+  size: 124, 349
+  orig: 124, 349
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 238, 1
+  size: 281, 171
+  orig: 281, 171
+  offset: 0, 0
+  index: -1
+houzhangL
+  rotate: false
+  xy: 163, 474
+  size: 45, 34
+  orig: 45, 34
+  offset: 0, 0
+  index: -1
+houxiaL
+  rotate: false
+  xy: 423, 174
+  size: 62, 131
+  orig: 62, 131
+  offset: 0, 0
+  index: -1
+houshang_L
+  rotate: false
+  xy: 583, 352
+  size: 102, 133
+  orig: 102, 133
+  offset: 0, 0
+  index: -1
+qianshang_L
+  rotate: false
+  xy: 647, 1
+  size: 53, 150
+  orig: 53, 150
+  offset: 0, 0
+  index: -1
+qianxia_L
+  rotate: false
+  xy: 647, 153
+  size: 66, 107
+  orig: 66, 107
+  offset: 0, 0
+  index: -1
+qianzhang_L
+  rotate: false
+  xy: 105, 474
+  size: 56, 35
+  orig: 56, 35
+  offset: 0, 0
+  index: -1
+hudieR
+  rotate: false
+  xy: 423, 307
+  size: 56, 40
+  orig: 56, 40
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 238, 174
+  size: 183, 221
+  orig: 183, 221
+  offset: 0, 0
+  index: -1
+erL
+  rotate: false
+  xy: 238, 397
+  size: 70, 108
+  orig: 70, 108
+  offset: 0, 0
+  index: -1
+erR
+  rotate: false
+  xy: 310, 397
+  size: 76, 95
+  orig: 76, 95
+  offset: 0, 0
+  index: -1
+hudieL
+  rotate: false
+  xy: 105, 423
+  size: 61, 49
+  orig: 61, 49
+  offset: 0, 0
+  index: -1
+lingjie
+  rotate: false
+  xy: 423, 352
+  size: 158, 152
+  orig: 158, 152
+  offset: 0, 0
+  index: -1

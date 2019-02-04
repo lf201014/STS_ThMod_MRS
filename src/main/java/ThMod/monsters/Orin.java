@@ -4,7 +4,6 @@ import ThMod.ThMod;
 import ThMod.action.OrinsDebuffAction;
 import ThMod.action.SpawnFairyAction;
 import ThMod.powers.monsters.InfernoClaw;
-import basemod.BaseMod;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
@@ -79,8 +78,8 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   private static final String tempImgUrl = "img/monsters/Orin/Orin_.png";
   private static final String MODEL_HUMANOID_ATLAS = "img/monsters/Orin/Orin.atlas";
   private static final String MODEL_HUMANOID_JSON = "img/monsters/Orin/Orin.json";
-  private static final String MODEL_CAT_ATLAS = "";
-  private static final String MODEL_CAT_JSON = "";
+  private static final String MODEL_CAT_ATLAS = "img/monsters/Orin/rincat.atlas";
+  private static final String MODEL_CAT_JSON = "img/monsters/Orin/rincat.json";
 
   public Orin() {
     super(NAME, "Orin", STAGE_1_HP, 0.0F, -30.0F, 220.0F, 320.0F, tempImgUrl, -20.0F, -10.0F);
@@ -113,8 +112,8 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
 
     this.type = AbstractMonster.EnemyType.ELITE;
 
-    loadAnimation(MODEL_HUMANOID_ATLAS, MODEL_HUMANOID_JSON, 1.0F);
-    AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+    loadAnimation(MODEL_CAT_ATLAS, MODEL_CAT_JSON, 2.0F);
+    AnimationState.TrackEntry e = this.state.setAnimation(0, "newAnimation", true);
     e.setTime(e.getEndTime() * MathUtils.random());
     /*
     this.stateData.setMix("Idle", "Sumon", 0.1F);
@@ -296,6 +295,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   }
 
   private void setDoubleTapAction() {
+    logger.info("Orin : setDoubleTapAction : form1 : " + form1);
     if (this.form1) {
       setMove((byte) 1, Intent.ATTACK_DEFEND, this.catTap, 2, true);
     } else {
@@ -304,6 +304,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   }
 
   private void setMultiAttackAction() {
+    logger.info("Orin : setMultiAttackAction : form1 : " + form1);
     if (this.form1) {
       setMove((byte) 3, Intent.ATTACK_BUFF, this.hellFireDmg, 6, true);
     } else {
@@ -312,6 +313,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   }
 
   private void setBuffAction() {
+    logger.info("Orin : setBuffAction : form1 : " + form1);
     if (this.form1) {
       setMove((byte) 2, Intent.BUFF);
     } else {
@@ -320,6 +322,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   }
 
   private void setSummonAction() {
+    logger.info("Orin : setSummonAction : firstTurn : " + firstTurn);
     if (this.firstTurn) {
       setMove((byte) 7, Intent.UNKNOWN);
       this.firstTurn = false;
@@ -353,6 +356,14 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   }
 
   protected void getMove(int num) {
+    logger.info(
+        "Orin : GetMove : turnCount : " +
+            turnCount +
+            " ; firstTurn : " +
+            firstTurn +
+            " ; num : " +
+            num
+    );
     if (this.form1) {
       turnCount++;
       if (this.firstTurn) {
@@ -361,7 +372,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
         return;
       }
       if (turnCount >= 5) {
-        setMove((byte) 3, Intent.ATTACK, this.hellFireDmg, 6, true);
+        setMultiAttackAction();
       }
       if (num > 50) {
         setDoubleTapAction();
@@ -472,6 +483,10 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
 
         AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, this.maxHealth));
         AbstractDungeon.actionManager.addToBottom(new CanLoseAction());
+
+        loadAnimation(MODEL_HUMANOID_ATLAS, MODEL_HUMANOID_JSON, 2.0F);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+        e.setTime(e.getEndTime() * MathUtils.random());
         break;
         /*
       case "ATTACK_1":
@@ -487,21 +502,23 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   }
 
   public void die() {
-    for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-      if ((!m.isDead) && (!m.isDying)) {
-        AbstractDungeon.actionManager.addToTop(
-            new HideHealthBarAction(m)
-        );
-        AbstractDungeon.actionManager.addToTop(
-            new SuicideAction(m)
-        );
-        AbstractDungeon.actionManager.addToTop(
-            new VFXAction(
-                m
-                , new InflameEffect(m)
-                , 0.2F
-            )
-        );
+    if (!AbstractDungeon.getCurrRoom().cannotLose) {
+      for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+        if ((!m.isDead) && (!m.isDying)) {
+          AbstractDungeon.actionManager.addToTop(
+              new HideHealthBarAction(m)
+          );
+          AbstractDungeon.actionManager.addToTop(
+              new SuicideAction(m)
+          );
+          AbstractDungeon.actionManager.addToTop(
+              new VFXAction(
+                  m
+                  , new InflameEffect(m)
+                  , 0.2F
+              )
+          );
+        }
       }
     }
   }

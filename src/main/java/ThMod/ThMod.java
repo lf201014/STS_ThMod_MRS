@@ -11,6 +11,7 @@ import ThMod.cards.Marisa.ManaRampage;
 import ThMod.cards.Marisa.OneTimeOff;
 import ThMod.cards.Marisa.SprinkleStarSeal;
 import ThMod.cards.derivations.Exhaustion_MRS;
+import ThMod.event.Mushrooms_MRS;
 import ThMod.monsters.Orin;
 import ThMod.monsters.ZombieFairy;
 import ThMod.potions.ShroomBrew;
@@ -20,6 +21,7 @@ import ThMod.relics.CatCart;
 import basemod.helpers.RelicType;
 import com.badlogic.gdx.graphics.Texture;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
@@ -241,6 +243,7 @@ public class ThMod implements PostExhaustSubscriber,
   }*/
 
   //For the FXXKING Exhaustion curse
+  /*
   public static boolean ExhaustionCheck() {
     boolean res = false;
     for (AbstractCard c : AbstractDungeon.player.hand.group) {
@@ -250,7 +253,7 @@ public class ThMod implements PostExhaustSubscriber,
     }
     return res;
   }
-
+*/
   //For Amplify cards
   public static boolean Amplified(AbstractCard card, int AMP) {
     logger.info(
@@ -614,7 +617,7 @@ public class ThMod implements PostExhaustSubscriber,
   @Override
   public void receivePostInitialize() {
     // TODO Auto-generated method stub
-    //BaseMod.addEvent(Mushrooms_MRS.ID, Mushrooms_MRS.class, Exordium.ID);
+    BaseMod.addEvent(Mushrooms_MRS.ID, Mushrooms_MRS.class, Exordium.ID);
     BaseMod.addPotion(
         ShroomBrew.class,
         Color.NAVY.cpy(),
@@ -634,14 +637,14 @@ public class ThMod implements PostExhaustSubscriber,
         zombieFairy = ZOMBIE_FAIRY_ENC;
         break;
     }
-    //BaseMod.addMonster(orin, orin, () -> new Orin());
-    //BaseMod.addMonster(zombieFairy, zombieFairy, () -> new ZombieFairy());
+    BaseMod.addMonster(orin, orin, () -> new Orin());
+    BaseMod.addMonster(zombieFairy, zombieFairy, () -> new ZombieFairy());
     final Texture badge = ImageMaster.loadImage(MOD_BADGE);
     BaseMod.registerModBadge(
         badge,
         "MarisaMod",
         "Flynn , Hell , Hohner_257 , Samsara",
-        "A Mod of the poor blonde hair girl from Touhou Project(",
+        "A Mod of the poor blonde girl from Touhou Project(",
         null
     );
   }
