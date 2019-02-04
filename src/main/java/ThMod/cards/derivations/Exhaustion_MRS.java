@@ -38,7 +38,9 @@ public class Exhaustion_MRS extends CustomCard {
     if (p.hasRelic("Medical Kit")) {
       useMedicalKit(p);
     } else {
-      AbstractDungeon.actionManager.addToBottom(new UseCardAction(this));
+      AbstractDungeon.actionManager.addToBottom(
+          new UseCardAction(this)
+      );
     }
   }
 

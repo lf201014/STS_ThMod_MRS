@@ -11,6 +11,7 @@ import ThMod.cards.Marisa.ManaRampage;
 import ThMod.cards.Marisa.OneTimeOff;
 import ThMod.cards.Marisa.SprinkleStarSeal;
 import ThMod.cards.derivations.Exhaustion_MRS;
+import ThMod.cards.derivations.Wraith;
 import ThMod.event.Mushrooms_MRS;
 import ThMod.monsters.Orin;
 import ThMod.monsters.ZombieFairy;
@@ -435,6 +436,7 @@ public class ThMod implements PostExhaustSubscriber,
     logger.info("adding cards for MARISA");
 
     for (AbstractCard card : cardsToAdd) {
+      logger.info("Adding card : " + card.name);
       BaseMod.addCard(card);
     }
 
@@ -638,8 +640,8 @@ public class ThMod implements PostExhaustSubscriber,
         zombieFairy = ZOMBIE_FAIRY_ENC;
         break;
     }
-    BaseMod.addMonster(orin, orin, () -> new Orin());
-    BaseMod.addMonster(zombieFairy, zombieFairy, () -> new ZombieFairy());
+    BaseMod.addMonster(ORIN_ENCOUNTER, orin, () -> new Orin());
+    BaseMod.addMonster(ZOMBIE_FAIRY_ENC, zombieFairy, () -> new ZombieFairy());
     final Texture badge = ImageMaster.loadImage(MOD_BADGE);
     BaseMod.registerModBadge(
         badge,
@@ -731,12 +733,14 @@ public class ThMod implements PostExhaustSubscriber,
     cardsToAdd.add(new EscapeVelocity());
     cardsToAdd.add(new MillisecondPulsars());
     cardsToAdd.add(new SuperNova());
+
     cardsToAdd.add(new Spark());
     cardsToAdd.add(new GuidingStar());
     cardsToAdd.add(new BlackFlareStar());
     cardsToAdd.add(new WhiteDwarf());
     cardsToAdd.add(new Exhaustion_MRS());
     cardsToAdd.add(new Strike_MRS());
+    cardsToAdd.add(new Wraith());
   }
 
   class Keywords {

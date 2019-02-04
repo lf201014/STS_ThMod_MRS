@@ -14,17 +14,18 @@
       "[离开]"
     ]
   },
-  "WWWWWWWWWWWWW": {
-    "NAME": "WWWWWWWWWWWWW",
+  "OrinTheCat": {
+    "NAME": "黑猫",
     "DESCRIPTIONS": [
-      "WWWWWWWWWWWWW",
-      "WWWWWWWWWWWWW",
-      "WWWWWWWWWWWWW"
+      "不知从哪里钻出来的 #b~黑猫~ 停在了你的面前,挡住了你的去路。 NL 不知道是不是错觉，这只猫散发着 #r~不祥的气息~ ，看你的眼神也让你感觉脊背发凉。 NL 它向你喵了一声，似乎想要引起你的注意。",
+      "看来猫咪并不想让你通过。它弓起了身子，露出了爪子和獠牙，向你扑了过来",
+      "猫咪似乎很满意，径自跑掉了。但你感觉它身上 #r~不祥的气息~ 并没有随着它离开……"
     ],
     "OPTIONS": [
-      "WWWWWWWWWWWWW",
-      "WWWWWWWWWWWWW",
-      "WWWWWWWWWWWWW"
+      "[抚摸猫咪] #r被诅咒——怨灵。 ",
+      "[无视猫咪] #g尝试直接离开。 ",
+      "[战斗]",
+      "[离开]"
     ]
   },
   "WWWWWWWWWWWWWW": {
