@@ -271,9 +271,9 @@
     ]
   },
   "InfernoClaw": {
-    "NAME": "Inferno Claw",
+    "NAME": "불타는 발톱",
     "DESCRIPTIONS": [
-      "Whenever you receive attack damage from this enemy, add a #yBurn into your draw pile.",
+      "체력을 잃을 때 마다 #y화상 카드를 뽑을 카드 더미에 추가합니다.",
       "WWWWWWWWWWW"
     ]
   },

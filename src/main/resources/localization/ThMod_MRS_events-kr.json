@@ -1,0 +1,43 @@
+{
+  "Mushrooms_MRS": {
+    "NAME": "버섯들",
+    "DESCRIPTIONS": [
+      "비이성적인 식욕이 당신을 지배합니다. 버섯을 먹고 또 먹다보니 멍해지다가 결국 정신을 잃었습니다. 깨어나보니 매우 이상한 기분이 듭니다. NL 당신은 최대 체력의 #b25% 만큼 #g회복 되었지만 #r기생충 에 감염되었습니다.",
+      "#r@기습입니다!!@ NL 버섯에 감염된 짐승들이 나타났습니다!",
+      "#b~현기증~ 날 정도로 #b~알록달록~ 한 #b~버섯~ 으로 가득한 복도에 들어왔습니다. NL 여태까지 봐왔던 버섯들과 별반 차이는 없어 보입니다. NL 당신은 #b~그것~ 들을 가져가고 싶다고 생각하지만, 바로 먹어버리고 싶은 기분이 끊임없이 듭니다."
+    ],
+    "OPTIONS": [
+      "[가져간다] #r버섯들이 #r분노합니다.",
+      "[먹는다] #g체력을 #g",
+      " #g회복 합니다. #r기생충 #r저주를 #r받습니다.",
+      "[싸운다]",
+      "[떠난다]"
+    ]
+  },
+  "WWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWWWW",
+      "WWWWWWWWWWWWW",
+      "WWWWWWWWWWWWW"
+    ],
+    "OPTIONS": [
+      "WWWWWWWWWWWWW",
+      "WWWWWWWWWWWWW",
+      "WWWWWWWWWWWWW"
+    ]
+  },
+  "WWWWWWWWWWWWWW": {
+    "NAME": "WWWWWWWWWWWWWW",
+    "DESCRIPTIONS": [
+      "WWWWWWWWWWWWWW",
+      "WWWWWWWWWWWWWW",
+      "WWWWWWWWWWWWWW"
+    ],
+    "OPTIONS": [
+      "WWWWWWWWWWWWWW",
+      "WWWWWWWWWWWWWW",
+      "WWWWWWWWWWWWWW"
+    ]
+  }
+}
