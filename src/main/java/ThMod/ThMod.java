@@ -13,6 +13,7 @@ import ThMod.cards.Marisa.SprinkleStarSeal;
 import ThMod.cards.derivations.Exhaustion_MRS;
 import ThMod.cards.derivations.Wraith;
 import ThMod.event.Mushrooms_MRS;
+import ThMod.event.OrinTheCat;
 import ThMod.monsters.Orin;
 import ThMod.monsters.ZombieFairy;
 import ThMod.potions.ShroomBrew;
@@ -23,6 +24,7 @@ import basemod.helpers.RelicType;
 import com.badlogic.gdx.graphics.Texture;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
@@ -621,6 +623,7 @@ public class ThMod implements PostExhaustSubscriber,
   public void receivePostInitialize() {
     // TODO Auto-generated method stub
     BaseMod.addEvent(Mushrooms_MRS.ID, Mushrooms_MRS.class, Exordium.ID);
+    BaseMod.addEvent(OrinTheCat.ID, OrinTheCat.class, TheBeyond.ID);
     BaseMod.addPotion(
         ShroomBrew.class,
         Color.NAVY.cpy(),

@@ -14,6 +14,20 @@
       "[떠난다]"
     ]
   },
+  "OrinTheCat": {
+    "NAME": "BlackCat",
+    "DESCRIPTIONS": [
+      "A #yblack #bcat appearing out of nowhere stopped in front of you,and blocked your path. NL The cat reeks of #r~Death~ #r~and~ #r~Misfortune~ ,and when it looks at you,you feel chill in your spine. NL It meows at you,attempting to draw your attention.",
+      "Seems the cat doesn't want to let you walk away like that.It showed its claws and fangs and rushed over to you...",
+      "The cat seems satisfied and ran away,but you feel the smell of #r~Death~ #r~and~ #r~Misfortune~ remained..."
+    ],
+    "OPTIONS": [
+      "[Pet the cat] #rBecome #rCursed #r- #rWraith.",
+      "[Ignore the cat] #gTry #gleaving #gimmediately.",
+      "[Fight]",
+      "[Leave]"
+    ]
+  },
   "WWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWWWW",
     "DESCRIPTIONS": [

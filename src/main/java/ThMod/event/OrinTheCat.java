@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 public class OrinTheCat
     extends AbstractEvent {
 
-  private static final String ID = "OrinTheCat";
+  public static final String ID = "OrinTheCat";
   private static final EventStrings eventStrings = CardCrawlGame.languagePack.getEventString(ID);
   public static final String NAME = eventStrings.NAME;
   private static final String[] DESCRIPTIONS = eventStrings.DESCRIPTIONS;
@@ -28,8 +28,13 @@ public class OrinTheCat
   }
 
   public OrinTheCat() {
-    initializeImage("images/events/sphereClosed.png", 1120.0F * Settings.scale,
-        AbstractDungeon.floorY - 50.0F * Settings.scale);
+    initializeImage(
+        "images/events/sphereClosed.png",
+        1120.0F * Settings.scale,
+        AbstractDungeon.floorY - 50.0F * Settings.scale
+    );
+
+    this.roomEventText.clear();
 
     this.body = INTRO_MSG;
     this.roomEventText.addDialogOption(OPTIONS[0]);

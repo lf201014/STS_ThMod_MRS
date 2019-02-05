@@ -4,6 +4,7 @@ package ThMod.cards.derivations;
 
 
 import ThMod.powers.monsters.WraithPower;
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SetDontTriggerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,7 +16,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Wraith
-    extends AbstractCard {
+    extends CustomCard {
 
   public static final String ID = "Wraith";
   private static final CardStrings cardStrings =

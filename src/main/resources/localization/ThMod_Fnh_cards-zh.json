@@ -472,5 +472,10 @@
     "NAME": "洒星封印",
     "DESCRIPTION": "给予99层 虚弱 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "Wraith": {
+    "NAME": "怨灵",
+    "DESCRIPTION": " 不能被打出 。 NL 在你的回合结束时，获得1层 怨灵 。",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   }
 }
