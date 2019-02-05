@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.common.RollMoveAction;
 import com.megacrit.cardcrawl.actions.common.SuicideAction;
 import com.megacrit.cardcrawl.actions.unique.CanLoseAction;
 import com.megacrit.cardcrawl.actions.utility.HideHealthBarAction;
@@ -112,7 +113,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
 
     this.type = AbstractMonster.EnemyType.ELITE;
 
-    loadAnimation(MODEL_CAT_ATLAS, MODEL_CAT_JSON, 2.0F);
+    loadAnimation(MODEL_CAT_ATLAS, MODEL_CAT_JSON, 2.5F);
     AnimationState.TrackEntry e = this.state.setAnimation(0, "newAnimation", true);
     e.setTime(e.getEndTime() * MathUtils.random());
     /*
@@ -124,7 +125,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
     */
   }
 
-
+  @Override
   public void usePreBattleAction() {
     AbstractDungeon.getCurrRoom().cannotLose = true;
     AbstractDungeon.actionManager.addToTop(
@@ -134,6 +135,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
     );
   }
 
+  @Override
   public void takeTurn() {
     AbstractPlayer p = AbstractDungeon.player;
     switch (this.nextMove) {
@@ -258,6 +260,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
               new SpawnFairyAction(this)
           );
         }
+        this.firstTurn = false;
         break;
       case 8:
         //spawnFairy normal
@@ -291,7 +294,9 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
                 + this.nextMove
                 + " should never be called."
         );
+        break;
     }
+    AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
   }
 
   private void setDoubleTapAction() {
@@ -355,6 +360,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
     }
   }
 
+  @Override
   protected void getMove(int num) {
     logger.info(
         "Orin : GetMove : turnCount : " +
@@ -381,7 +387,8 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
       }
     } else {
       int fairyCount = fairyCount();
-      if ((this.firstTurn)) {
+      ThMod.logger.info("Orin : getMove : fairyCount : " + fairyCount);
+      if (this.firstTurn) {
         setSummonAction();
         return;
       }
@@ -393,24 +400,37 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
         setSummonAction();
         return;
       }
+      logger.info("Orin : getMove : roll Action phase");
       int[] actions = new int[4];
       int act_cnt = 0;
       if ((fairyCount == SUMMON_THRESHOLD) || (!lastMove((byte) 7) || (!lastMove((byte) 8)))) {
+        logger.info("Orin : getMove : roll action : adding summon action");
         actions[act_cnt] = 0;//summon : 0
         act_cnt++;
       }
       if (!lastMove((byte) 4)) {
+        logger.info("Orin : getMove : roll action : adding double attack action");
         actions[act_cnt] = 1;//double : 1
         act_cnt++;
       }
       if (!lastMove((byte) 5)) {
+        logger.info("Orin : getMove : roll action : adding multi attack action");
         actions[act_cnt] = 2;//multi : 2
         act_cnt++;
       }
       if (!lastMove((byte) 6)) {
+        logger.info("Orin : getMove : roll action : adding debuff action");
         actions[act_cnt] = 3;//debuff : 3
         act_cnt++;
       }
+      logger.info(
+          "Orin : getMove : roll action : action count : " +
+              act_cnt +
+              " ; res code: " +
+              num / 100 * act_cnt +
+              " ; res : " +
+              actions[num / 100 * act_cnt]
+      );
       switch (actions[num / 100 * act_cnt]) {
         case 0:
           setSummonAction();
@@ -453,7 +473,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
       AbstractDungeon.actionManager.addToTop(
           new ClearCardQueueAction()
       );
-      setMove((byte) 3, AbstractMonster.Intent.UNKNOWN);
+      setMultiAttackAction();
       createIntent();
       //AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DIALOG[0]));
       setMultiAttackAction();
@@ -484,7 +504,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
         AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, this.maxHealth));
         AbstractDungeon.actionManager.addToBottom(new CanLoseAction());
 
-        loadAnimation(MODEL_HUMANOID_ATLAS, MODEL_HUMANOID_JSON, 2.0F);
+        loadAnimation(MODEL_HUMANOID_ATLAS, MODEL_HUMANOID_JSON, 2.5F);
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
         break;

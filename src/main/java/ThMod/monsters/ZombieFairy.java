@@ -7,6 +7,7 @@ import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.RollMoveAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -90,6 +91,7 @@ public class ZombieFairy extends AbstractMonster {
         );
         break;
     }
+    AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
   }
 
   public void usePreBattleAction() {
@@ -102,6 +104,7 @@ public class ZombieFairy extends AbstractMonster {
   }
 
   protected void getMove(int num) {
+    ThMod.logger.info("ZombieFairy : GetMove : num : " + num + " ; turnNum : " + turnNum);
     this.turnNum++;
     if (num <= 50) {
       if (!lastMove((byte) 1)) {
