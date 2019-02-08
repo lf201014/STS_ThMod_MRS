@@ -29,8 +29,8 @@ public class Mushrooms_MRS extends AbstractEvent {
   private static final EventStrings eventStrings;
   public static final String NAME;
   public static final String[] DESCRIPTIONS;
-  public static final String[] OPTIONS;
-  public static final String ENC_NAME = "The Mushroom Lair";
+  private static final String[] OPTIONS;
+  private static final String ENC_NAME = "The Mushroom Lair";
   private Texture fgImg = ImageMaster.loadImage("images/events/fgShrooms.png");
   private Texture bgImg = ImageMaster.loadImage("images/events/bgShrooms.png");
   private static final float HEAL_AMT = 0.25F;

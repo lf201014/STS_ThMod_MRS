@@ -31,13 +31,13 @@ public class ZombieFairy extends AbstractMonster {
   private static final String MODEL_JSON = "img/monsters/ZombieFairy/ZombieFairy.json";
 
   public ZombieFairy(float x, float y) {
-    super(NAME, ID, HP, 0.0F, -50.0F, 140.0F, 130.0F, null, x, y + 25.0F);
+    super(NAME, ID, HP, 0.0F, 0.0F, 140.0F, 130.0F, null, x, y + 25.0F);
     if (AbstractDungeon.ascensionLevel >= 8) {
       this.setHp(HP_A);
     }
     this.damage.add(new DamageInfo(this, DMG));
 
-    loadAnimation(MODEL_ATLAS, MODEL_JSON, 2.0F);
+    loadAnimation(MODEL_ATLAS, MODEL_JSON, 3.0F);
     AnimationState.TrackEntry e = this.state.setAnimation(0, "newAnimation", true);
     e.setTime(e.getEndTime() * MathUtils.random());
   }
@@ -131,6 +131,13 @@ public class ZombieFairy extends AbstractMonster {
 
   private void setDefendAction() {
     setMove((byte) 2, Intent.DEFEND);
+  }
+
+  public void revive(){
+    loadAnimation(MODEL_ATLAS, MODEL_JSON, 3.0F);
+    AnimationState.TrackEntry e = this.state.setAnimation(0, "newAnimation", true);
+    e.setTime(e.getEndTime() * MathUtils.random());
+    turnNum = 0;
   }
 
   /*

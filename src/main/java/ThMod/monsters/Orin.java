@@ -196,20 +196,13 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
       case 3:
         //hell fire
         //missing vfx
-        for (int i = 0; i < 6; i++) {
-          AbstractDungeon.actionManager.addToBottom(
-              new DamageAction(
-                  p
-                  , this.damage.get(1)
-                  , AttackEffect.FIRE
-              )
-          );
-        }
+
         AbstractDungeon.actionManager.addToBottom(
             new VFXAction(
                 this,
                 new IntenseZoomEffect(this.hb.cX, this.hb.cY, true), 0.05F, true)
         );
+
         AbstractDungeon.actionManager.addToBottom(
             new ChangeStateAction(this, "TRANSFORM")
         );
@@ -403,7 +396,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
       logger.info("Orin : getMove : roll Action phase");
       int[] actions = new int[4];
       int act_cnt = 0;
-      if ((fairyCount == SUMMON_THRESHOLD) || (!lastMove((byte) 7) || (!lastMove((byte) 8)))) {
+      if ((fairyCount == SUMMON_THRESHOLD) && (!lastMove((byte) 7) && (!lastMove((byte) 8)))) {
         logger.info("Orin : getMove : roll action : adding summon action");
         actions[act_cnt] = 0;//summon : 0
         act_cnt++;
@@ -427,11 +420,11 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
           "Orin : getMove : roll action : action count : " +
               act_cnt +
               " ; res code: " +
-              num / 100 * act_cnt +
+              num * act_cnt / 100 +
               " ; res : " +
-              actions[num / 100 * act_cnt]
+              actions[num * act_cnt / 100]
       );
-      switch (actions[num / 100 * act_cnt]) {
+      switch (actions[num * act_cnt / 100]) {
         case 0:
           setSummonAction();
           break;
@@ -483,31 +476,41 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   }
 
   public void changeState(String key) {
-    switch (key) {
-      case "TRANSFORM":
-        if (AbstractDungeon.ascensionLevel >= 9) {
-          this.maxHealth = S_2_HP;
-        } else {
-          this.maxHealth = STAGE_2_HP;
-        }
-        if ((Settings.isEndless) && (AbstractDungeon.player.hasBlight("ToughEnemies"))) {
-          float mod = AbstractDungeon.player.getBlight("ToughEnemies").effectFloat();
-          this.maxHealth = ((int) (this.maxHealth * mod));
-        }
-        if (ModHelper.isModEnabled("MonsterHunter")) {
-          this.currentHealth = ((int) (this.currentHealth * 1.5F));
-        }
-        //this.state.setAnimation(0, "Idle_2", true);
-        this.halfDead = false;
-        this.form1 = false;
+    if (key.equals("TRANSFORM")) {
+      if (AbstractDungeon.ascensionLevel >= 9) {
+        this.maxHealth = S_2_HP;
+      } else {
+        this.maxHealth = STAGE_2_HP;
+      }
+      if ((Settings.isEndless) && (AbstractDungeon.player.hasBlight("ToughEnemies"))) {
+        float mod = AbstractDungeon.player.getBlight("ToughEnemies").effectFloat();
+        this.maxHealth = ((int) (this.maxHealth * mod));
+      }
+      if (ModHelper.isModEnabled("MonsterHunter")) {
+        this.currentHealth = ((int) (this.currentHealth * 1.5F));
+      }
+      //this.state.setAnimation(0, "Idle_2", true);
+      this.halfDead = false;
+      this.form1 = false;
 
-        AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, this.maxHealth));
-        AbstractDungeon.actionManager.addToBottom(new CanLoseAction());
+      AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, this.maxHealth));
+      AbstractDungeon.actionManager.addToBottom(new CanLoseAction());
 
-        loadAnimation(MODEL_HUMANOID_ATLAS, MODEL_HUMANOID_JSON, 2.5F);
-        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
-        e.setTime(e.getEndTime() * MathUtils.random());
-        break;
+      loadAnimation(MODEL_HUMANOID_ATLAS, MODEL_HUMANOID_JSON, 2.5F);
+      AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+      e.setTime(e.getEndTime() * MathUtils.random());
+
+      for (int i = 0; i < 6; i++) {
+        AbstractDungeon.actionManager.addToTop(
+            new DamageAction(
+                AbstractDungeon.player
+                , this.damage.get(1)
+                , AttackEffect.FIRE
+                , true
+            )
+        );
+      }
+
         /*
       case "ATTACK_1":
         this.state.setAnimation(0, "Attack_1", false);

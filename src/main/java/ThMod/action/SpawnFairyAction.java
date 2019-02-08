@@ -4,29 +4,23 @@ package ThMod.action;
 import ThMod.monsters.ZombieFairy;
 import ThMod.powers.monsters.LimboContactPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ReviveMonsterAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.MonsterGroup;
-import com.megacrit.cardcrawl.monsters.beyond.SnakeDagger;
 import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.powers.SlowPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class SpawnFairyAction
     extends AbstractGameAction {
 
-  public static final float pos0X = 210.0F;
-  public static final float pos0Y = 50.0F;
-  public static final float pos1X = -220.0F;
-  public static final float pos1Y = 90.0F;
+  private static final float pos0X = 210.0F;
+  private static final float pos0Y = 50.0F;
+  private static final float pos1X = -220.0F;
+  private static final float pos1Y = 90.0F;
   private static final float pos2X = 180.0F;
   private static final float pos2Y = 320.0F;
   private static final float pos3X = -250.0F;
@@ -47,13 +41,16 @@ public class SpawnFairyAction
     if (this.duration == Settings.ACTION_DUR_XFAST) {
       int count = 0;
       for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-        if (m != this.source) {
+        if ((m != this.source) && (m instanceof ZombieFairy)) {
           if (m.isDying) {
             AbstractDungeon.actionManager.addToTop(
-                new ApplyPowerAction(m, m, new MinionPower(this.source))
+                new ReviveFairyAction(m, this.source)
             );
             AbstractDungeon.actionManager.addToTop(
-                new ReviveMonsterAction(m, this.source, false)
+                new ApplyPowerAction(m, m, new MinionPower(m))
+            );
+            AbstractDungeon.actionManager.addToTop(
+                new ApplyPowerAction(m, m, new LimboContactPower(m))
             );
             if (AbstractDungeon.player.hasRelic("Philosopher's Stone")) {
               m.addPower(new StrengthPower(m, 1));
@@ -82,9 +79,6 @@ public class SpawnFairyAction
             )
         );
       }
-      AbstractDungeon.actionManager.addToBottom(
-          new FairyWraithAction()
-      );
     }
     tickDuration();
   }

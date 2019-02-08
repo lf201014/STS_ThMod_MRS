@@ -31,7 +31,7 @@ public class MagicChantAction extends AbstractGameAction{
 		if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved){
 			if (AbstractDungeon.handCardSelectScreen.selectedCards.size()>0) {
 				for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group){
-					ThMod.logger.info("RetainNBlockAction : Retaining :"+c.name);
+					ThMod.logger.info("MagicChantAction : Retaining :"+c.name);
 					
 					if (c.canUpgrade()) {
 						c.upgrade();
