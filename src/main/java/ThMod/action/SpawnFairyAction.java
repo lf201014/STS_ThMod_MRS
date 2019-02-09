@@ -79,6 +79,9 @@ public class SpawnFairyAction
             )
         );
       }
+      AbstractDungeon.actionManager.addToTop(
+          new FairyWraithAction()
+      );
     }
     tickDuration();
   }

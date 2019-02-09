@@ -107,17 +107,9 @@ public class ZombieFairy extends AbstractMonster {
     ThMod.logger.info("ZombieFairy : GetMove : num : " + num + " ; turnNum : " + turnNum);
     this.turnNum++;
     if (num <= 50) {
-      if (!lastMove((byte) 1)) {
-        setAttackAction();
-      } else {
-        setDefendAction();
-      }
+      setAttackAction();
     } else {
-      if (!lastMove((byte) 2)) {
-        setDefendAction();
-      } else {
-        setAttackAction();
-      }
+      setDefendAction();
     }
   }
 
@@ -133,7 +125,7 @@ public class ZombieFairy extends AbstractMonster {
     setMove((byte) 2, Intent.DEFEND);
   }
 
-  public void revive(){
+  public void revive() {
     loadAnimation(MODEL_ATLAS, MODEL_JSON, 3.0F);
     AnimationState.TrackEntry e = this.state.setAnimation(0, "newAnimation", true);
     e.setTime(e.getEndTime() * MathUtils.random());

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.RoomEventDialog;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
@@ -37,7 +38,7 @@ public class OrinTheCat
     this.roomEventText.clear();
 
     this.body = INTRO_MSG;
-    this.roomEventText.addDialogOption(OPTIONS[0]);
+    this.roomEventText.addDialogOption(OPTIONS[0], CardLibrary.getCopy("Wraith"));
     this.roomEventText.addDialogOption(OPTIONS[1]);
 
     this.hasDialog = true;

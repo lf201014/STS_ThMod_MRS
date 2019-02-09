@@ -21,6 +21,7 @@ public class ReviveFairyAction extends AbstractGameAction {
   public ReviveFairyAction(AbstractMonster target, AbstractCreature source) {
     this.setValues(target, source, 0);
     this.actionType = ActionType.SPECIAL;
+    target.addPower(new LimboContactPower(target));
     if (AbstractDungeon.player.hasRelic("Philosopher's Stone")) {
       target.addPower(new StrengthPower(target, 1));
     }
@@ -35,8 +36,9 @@ public class ReviveFairyAction extends AbstractGameAction {
       ((AbstractMonster) this.target).tint = new TintEffect();
       ((AbstractMonster) this.target).tintFadeOutCalled = false;
       ((AbstractMonster) this.target).isDead = false;
-      this.target.powers.clear();
-      if (this.target instanceof ZombieFairy) {
+      //this.target.powers.clear();
+      //if (this.target instanceof ZombieFairy)
+      {
         ((ZombieFairy) this.target).revive();
       }
 
@@ -46,9 +48,7 @@ public class ReviveFairyAction extends AbstractGameAction {
       AbstractDungeon.actionManager.addToTop(
           new ApplyPowerAction(target, target, new LimboContactPower(target))
       );
-      AbstractDungeon.actionManager.addToTop(
-          new ApplyPowerAction(target, target, new StrengthPower(target, 1))
-      );
+      ((AbstractMonster)target).usePreBattleAction();
     }
     if (ModHelper.isModEnabled("Lethality")) {
       AbstractDungeon.actionManager.addToBottom(

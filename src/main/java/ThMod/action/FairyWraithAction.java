@@ -23,7 +23,7 @@ public class FairyWraithAction extends AbstractGameAction {
     this.isDone=false;
 
     for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-      if ((m instanceof ZombieFairy) && (!m.hasPower("LimboContact"))) {
+      if ((m instanceof ZombieFairy)) {
         AbstractDungeon.actionManager.addToTop(
             new ApplyPowerAction(m, m, new LimboContactPower(m))
         );

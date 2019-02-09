@@ -323,7 +323,6 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
     logger.info("Orin : setSummonAction : firstTurn : " + firstTurn);
     if (this.firstTurn) {
       setMove((byte) 7, Intent.UNKNOWN);
-      this.firstTurn = false;
     } else {
       setMove((byte) 8, Intent.UNKNOWN);
     }
@@ -372,6 +371,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
       }
       if (turnCount >= 5) {
         setMultiAttackAction();
+        return;
       }
       if (num > 50) {
         setDoubleTapAction();
@@ -499,6 +499,8 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
       loadAnimation(MODEL_HUMANOID_ATLAS, MODEL_HUMANOID_JSON, 2.5F);
       AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
       e.setTime(e.getEndTime() * MathUtils.random());
+
+      this.updateHitbox(0.0F, -30.0f, 220.0F, 350.0F);
 
       for (int i = 0; i < 6; i++) {
         AbstractDungeon.actionManager.addToTop(
