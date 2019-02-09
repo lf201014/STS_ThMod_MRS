@@ -50,6 +50,12 @@
     },
     {
       "NAMES": [
+        "怨靈"
+      ],
+      "DESCRIPTION":"怨靈是會在回合開始之後隨機 #y消耗 掉你一張手牌的負面狀態。"
+    },
+    {
+      "NAMES": [
         "WWWWWWWWWWWWWWWWWWW"
       ],
       "DESCRIPTION":"WWWWWWWWWWWWWWWWWWWWW"

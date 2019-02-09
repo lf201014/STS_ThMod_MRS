@@ -94,12 +94,7 @@ public class SuperNovaPower extends AbstractPower {
   }
 
   private boolean discardCheck(AbstractCard card) {
-    if (
-        (card instanceof Decay)
-            || (card instanceof Shame)
-            || (card instanceof Regret)
-            || (card instanceof Doubt)
-    ) {
+    if ((card.type == CardType.CURSE) || (card.type == CardType.STATUS)) {
       ThMod.logger.info("SuperNovaPower : discardCheck : " + card.cardID + " detected.");
       return true;
     }

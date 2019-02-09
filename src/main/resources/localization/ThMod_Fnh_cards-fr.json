@@ -475,6 +475,11 @@
     "DESCRIPTION": "Ajoutez 99 Faiblesses. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
+  "Wraith": {
+    "NAME": "Wraith",
+    "DESCRIPTION": "Unplayable. NL At the end of your turn, gain 1 Wraith .",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
   "WWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTION": "WWWWWWWWWWW",

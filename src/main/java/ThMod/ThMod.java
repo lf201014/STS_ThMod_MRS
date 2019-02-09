@@ -11,7 +11,9 @@ import ThMod.cards.Marisa.ManaRampage;
 import ThMod.cards.Marisa.OneTimeOff;
 import ThMod.cards.Marisa.SprinkleStarSeal;
 import ThMod.cards.derivations.Exhaustion_MRS;
+import ThMod.cards.derivations.Wraith;
 import ThMod.event.Mushrooms_MRS;
+import ThMod.event.OrinTheCat;
 import ThMod.monsters.Orin;
 import ThMod.monsters.ZombieFairy;
 import ThMod.potions.ShroomBrew;
@@ -22,6 +24,7 @@ import basemod.helpers.RelicType;
 import com.badlogic.gdx.graphics.Texture;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
@@ -435,6 +438,7 @@ public class ThMod implements PostExhaustSubscriber,
     logger.info("adding cards for MARISA");
 
     for (AbstractCard card : cardsToAdd) {
+      logger.info("Adding card : " + card.name);
       BaseMod.addCard(card);
     }
 
@@ -619,6 +623,7 @@ public class ThMod implements PostExhaustSubscriber,
   public void receivePostInitialize() {
     // TODO Auto-generated method stub
     BaseMod.addEvent(Mushrooms_MRS.ID, Mushrooms_MRS.class, Exordium.ID);
+    BaseMod.addEvent(OrinTheCat.ID, OrinTheCat.class, TheBeyond.ID);
     BaseMod.addPotion(
         ShroomBrew.class,
         Color.NAVY.cpy(),
@@ -638,8 +643,8 @@ public class ThMod implements PostExhaustSubscriber,
         zombieFairy = ZOMBIE_FAIRY_ENC;
         break;
     }
-    BaseMod.addMonster(orin, orin, () -> new Orin());
-    BaseMod.addMonster(zombieFairy, zombieFairy, () -> new ZombieFairy());
+    BaseMod.addMonster(ORIN_ENCOUNTER, orin, () -> new Orin());
+    BaseMod.addMonster(ZOMBIE_FAIRY_ENC, zombieFairy, () -> new ZombieFairy());
     final Texture badge = ImageMaster.loadImage(MOD_BADGE);
     BaseMod.registerModBadge(
         badge,
@@ -731,12 +736,14 @@ public class ThMod implements PostExhaustSubscriber,
     cardsToAdd.add(new EscapeVelocity());
     cardsToAdd.add(new MillisecondPulsars());
     cardsToAdd.add(new SuperNova());
+
     cardsToAdd.add(new Spark());
     cardsToAdd.add(new GuidingStar());
     cardsToAdd.add(new BlackFlareStar());
     cardsToAdd.add(new WhiteDwarf());
     cardsToAdd.add(new Exhaustion_MRS());
     cardsToAdd.add(new Strike_MRS());
+    cardsToAdd.add(new Wraith());
   }
 
   class Keywords {
