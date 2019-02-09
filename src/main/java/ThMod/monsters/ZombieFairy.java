@@ -31,7 +31,7 @@ public class ZombieFairy extends AbstractMonster {
   private static final String MODEL_JSON = "img/monsters/ZombieFairy/ZombieFairy.json";
 
   public ZombieFairy(float x, float y) {
-    super(NAME, ID, HP, 0.0F, 0.0F, 140.0F, 130.0F, null, x, y + 25.0F);
+    super(NAME, ID, HP, 0.0F, 0.0F, 140.0F, 210.0F, null, x, y + 25.0F);
     if (AbstractDungeon.ascensionLevel >= 8) {
       this.setHp(HP_A);
     }

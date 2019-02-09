@@ -18,9 +18,9 @@ public class SpawnFairyAction
     extends AbstractGameAction {
 
   private static final float pos0X = 210.0F;
-  private static final float pos0Y = 50.0F;
+  private static final float pos0Y = 10.0F;
   private static final float pos1X = -220.0F;
-  private static final float pos1Y = 90.0F;
+  private static final float pos1Y = 50.0F;
   private static final float pos2X = 180.0F;
   private static final float pos2Y = 320.0F;
   private static final float pos3X = -250.0F;

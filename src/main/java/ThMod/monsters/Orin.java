@@ -500,7 +500,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
       AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
       e.setTime(e.getEndTime() * MathUtils.random());
 
-      this.updateHitbox(0.0F, -30.0f, 220.0F, 350.0F);
+      this.updateHitbox(0.0F, -30.0f, 220.0F, 450.0F);
 
       for (int i = 0; i < 6; i++) {
         AbstractDungeon.actionManager.addToTop(
