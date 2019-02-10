@@ -13,19 +13,19 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import ThMod.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class D6C
+public class DC
     extends CustomCard {
 
-  public static final String ID = "D6C";
+  public static final String ID = "DC";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-  public static final String IMG_PATH = "img/cards/temp/D6C.png";
+  public static final String IMG_PATH = "img/cards/DC.png";
   private static final int COST = 1;
   private static final int ATTACK_DMG = 8;
   private static final int UPGRADE_PLUS_DMG = 3;
 
-  public D6C() {
+  public DC() {
     super(
         ID,
         NAME,
@@ -63,7 +63,7 @@ public class D6C
   }
 
   public AbstractCard makeCopy() {
-    return new D6C();
+    return new DC();
   }
 
   public void upgrade() {

@@ -1,14 +1,11 @@
 package ThMod.powers.Marisa;
 
+import ThMod.ThMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
-import com.megacrit.cardcrawl.cards.curses.Decay;
-import com.megacrit.cardcrawl.cards.curses.Doubt;
-import com.megacrit.cardcrawl.cards.curses.Regret;
-import com.megacrit.cardcrawl.cards.curses.Shame;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -17,8 +14,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-
-import ThMod.ThMod;
 
 public class SuperNovaPower extends AbstractPower {
 
@@ -68,19 +63,19 @@ public class SuperNovaPower extends AbstractPower {
 
   @Override
   public void onDrawOrDiscard() {
-    ThMod.logger.info("SuperNovaPower : onDrawOrDiscard : ExhaustDiscard");
+    //ThMod.logger.info("SuperNovaPower : onDrawOrDiscard : ExhaustDiscard");
     ExhaustDiscard();
   }
 
   @Override
   public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-    ThMod.logger.info("SuperNovaPower : onApplyPower : ExhaustDiscard");
+    //ThMod.logger.info("SuperNovaPower : onApplyPower : ExhaustDiscard");
     ExhaustDiscard();
   }
 
   @Override
   public void onInitialApplication() {
-    ThMod.logger.info("SuperNovaPower : onInitialApplication : ExhaustDiscard");
+    //ThMod.logger.info("SuperNovaPower : onInitialApplication : ExhaustDiscard");
     ExhaustDiscard();
   }
 

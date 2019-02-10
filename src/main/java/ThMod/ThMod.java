@@ -6,6 +6,7 @@ import static ThMod.patches.CardTagEnum.SPARK;
 
 import ThMod.action.SparkCostAction;
 import ThMod.cards.Marisa.AlicesGift;
+import ThMod.cards.Marisa.DC;
 import ThMod.cards.Marisa.EnergyRecoil;
 import ThMod.cards.Marisa.ManaRampage;
 import ThMod.cards.Marisa.OneTimeOff;
@@ -61,7 +62,6 @@ import ThMod.cards.Marisa.CasketOfStar;
 import ThMod.cards.Marisa.ChargeUpSpray;
 import ThMod.cards.Marisa.ChargingUp;
 import ThMod.cards.Marisa.CollectingQuirk;
-import ThMod.cards.Marisa.D6C;
 import ThMod.cards.Marisa.DarkMatter;
 import ThMod.cards.Marisa.DarkSpark;
 import ThMod.cards.Marisa.DeepEcologicalBomb;
@@ -624,6 +624,7 @@ public class ThMod implements PostExhaustSubscriber,
     // TODO Auto-generated method stub
     BaseMod.addEvent(Mushrooms_MRS.ID, Mushrooms_MRS.class, Exordium.ID);
     BaseMod.addEvent(OrinTheCat.ID, OrinTheCat.class, TheBeyond.ID);
+
     BaseMod.addPotion(
         ShroomBrew.class,
         Color.NAVY.cpy(),
@@ -668,7 +669,7 @@ public class ThMod implements PostExhaustSubscriber,
     cardsToAdd.add(new LuminesStrike());
     cardsToAdd.add(new MysteriousBeam());
     cardsToAdd.add(new WitchLeyline());
-    cardsToAdd.add(new D6C());
+    cardsToAdd.add(new DC());
     cardsToAdd.add(new _6A());
     cardsToAdd.add(new UnstableBomb());
     cardsToAdd.add(new StarBarrage());

@@ -250,7 +250,7 @@
     "DESCRIPTION": "Au prochain tour, Gagnez [E] . Amplifier [E] : Les effets amplifier ne coûte pas de [E] ce tour ci.",
     "UPGRADE_DESCRIPTION": "Au prochain tour, Gagnez [E]  [E] . Amplifier [E] : Les effets amplifier ne coûte pas de [E] ce tour ci."
   },
-  "D6C": {
+  "DC": {
     "NAME": "66C",
     "DESCRIPTION": "Inné. NL Infligez !D! dégats. NL Infligez double dégats si il n'y a aucune carte dans votre défausse.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"

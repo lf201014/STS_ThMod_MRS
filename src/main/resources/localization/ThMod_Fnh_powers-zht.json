@@ -266,7 +266,7 @@
   "LimboContact": {
     "NAME": "死靈之觸",
     "DESCRIPTIONS": [
-      "每當這個敵人對你造成傷害，你會獲得一層 #y怨靈 。",
+      "每當這個敵人攻擊你，你會獲得一層 #y怨靈 。",
       "WWWWWWWWWWW"
     ]
   },

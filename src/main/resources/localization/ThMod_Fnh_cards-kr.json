@@ -250,7 +250,7 @@
     "DESCRIPTION": "다음 턴에 [E] 를 얻습니다. 증폭 [E] : 이번 턴에 증폭 효과의 추가 [E] 소모가 제거됩니다.",
     "UPGRADE_DESCRIPTION": "다음 턴에 [E] [E] 를 얻습니다. 증폭 [E] : 이번 턴에 증폭 효과의 추가 [E] 소모가 제거됩니다."
   },
-  "D6C": {
+  "DC": {
     "NAME": "66C",
     "DESCRIPTION": "선천성. NL 피해를 !D! 줍니다. NL 버린 카드 더미에 카드가 없을 경우 2 배의 피해를 줍니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
