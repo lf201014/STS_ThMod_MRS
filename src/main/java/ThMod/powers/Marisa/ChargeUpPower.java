@@ -58,14 +58,14 @@ public class ChargeUpPower
     }
 
     getDivider();
-
+/*
     ThMod.logger.info(
         "ChargeUpPower : Checking stack divider :"
             + this.stc
             + " ; Checking stack number :"
             + this.amount
     );
-
+*/
     this.cnt = this.amount / this.stc;
   }
 
@@ -92,13 +92,14 @@ public class ChargeUpPower
       flash();
 
       getDivider();
-
+/*
       ThMod.logger.info("ChargeUpPower : onPlayCard :"
           + " Checking stack number : "
           + this.stc
           + " ; Checking square counter : "
           + this.cnt
       );
+      */
       AbstractDungeon.actionManager.addToTop(
           new ConsumeChargeUpAction(cnt * this.stc)
       );
@@ -125,6 +126,7 @@ public class ChargeUpPower
       this.stc = ACT_STACK;
     }
   }
+
   private boolean ExhaustionCheck() {
     boolean res = false;
     for (AbstractCard c : AbstractDungeon.player.hand.group) {

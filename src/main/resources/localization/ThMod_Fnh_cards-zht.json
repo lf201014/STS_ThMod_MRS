@@ -249,7 +249,7 @@
     "DESCRIPTION": "下回合獲得 [E] 。 NL 增幅 [E] :本回合內不需要花費額外 [E] 來發動 增幅",
     "UPGRADE_DESCRIPTION": "下回合獲得 [E] [E] 。 NL 增幅 [E] :本回合內不需要花費額外 [E] 來發動 增幅"
   },
-  "D6C": {
+  "DC": {
     "NAME": "迎頭痛擊",
     "DESCRIPTION": "固有 。造成 !D! 點傷害。若棄牌堆沒有牌，造成2倍傷害",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"

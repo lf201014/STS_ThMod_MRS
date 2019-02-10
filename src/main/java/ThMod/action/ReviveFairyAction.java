@@ -2,6 +2,8 @@ package ThMod.action;
 
 //public class ReviveFairyAction {
 
+import static ThMod.ThMod.logger;
+
 import ThMod.monsters.ZombieFairy;
 import ThMod.powers.monsters.LimboContactPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -11,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster.Intent;
+import com.megacrit.cardcrawl.powers.FlightPower;
 import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.powers.SlowPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -21,26 +24,32 @@ public class ReviveFairyAction extends AbstractGameAction {
   public ReviveFairyAction(AbstractMonster target, AbstractCreature source) {
     this.setValues(target, source, 0);
     this.actionType = ActionType.SPECIAL;
+    /*
     target.addPower(new LimboContactPower(target));
+    target.addPower(new FlightPower(target, 99));
+    */
     if (AbstractDungeon.player.hasRelic("Philosopher's Stone")) {
       target.addPower(new StrengthPower(target, 1));
+      AbstractDungeon.onModifyPower();
     }
   }
 
   public void update() {
-    if (this.duration == 0.5F && this.target instanceof AbstractMonster) {
+    if (this.target instanceof ZombieFairy) {
+      logger.info("ReviveFairyAction : setting values;");
+      ZombieFairy fairy = (ZombieFairy) this.target;
       this.target.isDying = false;
       this.target.heal(this.target.maxHealth, false);
       this.target.healthBarRevivedEvent();
-      ((AbstractMonster) this.target).deathTimer = 0.0F;
-      ((AbstractMonster) this.target).tint = new TintEffect();
-      ((AbstractMonster) this.target).tintFadeOutCalled = false;
-      ((AbstractMonster) this.target).isDead = false;
+      fairy.deathTimer = 0.0F;
+      fairy.tint = new TintEffect();
+      fairy.tintFadeOutCalled = false;
+      fairy.isDead = false;
       //this.target.powers.clear();
-      //if (this.target instanceof ZombieFairy)
-      {
-        ((ZombieFairy) this.target).revive();
-      }
+      fairy.revive();
+      fairy.turnNum = 0;
+
+      logger.info("ReviveFairyAction : applying powers;");
 
       AbstractDungeon.actionManager.addToTop(
           new ApplyPowerAction(target, target, new MinionPower(target))
@@ -48,22 +57,28 @@ public class ReviveFairyAction extends AbstractGameAction {
       AbstractDungeon.actionManager.addToTop(
           new ApplyPowerAction(target, target, new LimboContactPower(target))
       );
-      ((AbstractMonster)target).usePreBattleAction();
-    }
-    if (ModHelper.isModEnabled("Lethality")) {
-      AbstractDungeon.actionManager.addToBottom(
-          new ApplyPowerAction(target, target, new StrengthPower(target, 3), 3)
+      AbstractDungeon.actionManager.addToTop(
+          new ApplyPowerAction(target, target, new FlightPower(fairy, 99))
       );
-    }
-    if (ModHelper.isModEnabled("Time Dilation")) {
-      AbstractDungeon.actionManager.addToBottom(
-          new ApplyPowerAction(target, target, new SlowPower(target, 0))
-      );
-    }
+      //fairy.usePreBattleAction();
+      if (ModHelper.isModEnabled("Lethality")) {
+        AbstractDungeon.actionManager.addToBottom(
+            new ApplyPowerAction(target, target, new StrengthPower(target, 3), 3)
+        );
+      }
+      if (ModHelper.isModEnabled("Time Dilation")) {
+        AbstractDungeon.actionManager.addToBottom(
+            new ApplyPowerAction(target, target, new SlowPower(target, 0))
+        );
+      }
 
-    ((AbstractMonster) this.target).intent = Intent.NONE;
-    ((AbstractMonster) this.target).rollMove();
+      fairy.intent = Intent.NONE;
+      fairy.rollMove();
 
-    this.tickDuration();
+      logger.info("ReviveFairyAction : done applying power;");
+    } else {
+      logger.info("ReviveFairyAction : error : target is not ZombieFairy : " + target.name);
+    }
+    this.isDone = true;
   }
 }

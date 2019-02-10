@@ -250,7 +250,7 @@
     "DESCRIPTION": "Next turn, gain  [E]  . Amplify [E]  : Amplify effects cost no [E] this turn.",
     "UPGRADE_DESCRIPTION": "Next turn, gain [E]  [E]  . Amplify [E]  : Amplify effects cost no [E] this turn."
   },
-  "D6C": {
+  "DC": {
     "NAME": "66C",
     "DESCRIPTION": "Innate. NL Deal !D! damage. NL Deals double damage if there are no cards in your discard pile.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"

@@ -249,7 +249,7 @@
     "DESCRIPTION": "下回合开始时获得  [E]  。 NL 增幅  [E]  ：本回合内你不再需要支付额外能量来发动 增幅 效果。",
     "UPGRADE_DESCRIPTION": " NL 下回合开始时获得  [E]  [E]  。 NL 增幅  [E]  ：本回合内你不再需要支付额外能量来发动 增幅 效果。"
   },
-  "D6C": {
+  "DC": {
     "NAME": "迎头痛击",
     "DESCRIPTION": " 固有 。 造成 !D! 点伤害，若此时你的弃卡堆里没有卡，造成双倍伤害。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"

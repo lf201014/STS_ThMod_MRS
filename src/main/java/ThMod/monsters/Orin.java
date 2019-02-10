@@ -2,7 +2,7 @@ package ThMod.monsters;
 
 import ThMod.ThMod;
 import ThMod.action.OrinsDebuffAction;
-import ThMod.action.SpawnFairyAction;
+import ThMod.action.SummonFairyAction;
 import ThMod.powers.monsters.InfernoClaw;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
@@ -50,6 +50,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   };
   */
   private boolean form1 = true;
+  private boolean att = true;
   private boolean firstTurn = true;
   private static final int STAGE_1_HP = 76;
   private static final int S_1_HP = 82;
@@ -250,16 +251,15 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
         //spawnFairy firstTurn
         for (int i = 0; i < SUMMON_FIRST; i++) {
           AbstractDungeon.actionManager.addToBottom(
-              new SpawnFairyAction(this)
+              new SummonFairyAction(this)
           );
         }
-        this.firstTurn = false;
         break;
       case 8:
         //spawnFairy normal
         for (int i = 0; i < SUMMON; i++) {
           AbstractDungeon.actionManager.addToBottom(
-              new SpawnFairyAction(this)
+              new SummonFairyAction(this)
           );
         }
         break;
@@ -320,10 +320,12 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   }
 
   private void setSummonAction() {
-    logger.info("Orin : setSummonAction : firstTurn : " + firstTurn);
+    logger.info("Orin : setSummonAction : firstTurn : ");/*
     if (this.firstTurn) {
       setMove((byte) 7, Intent.UNKNOWN);
-    } else {
+    } else
+      */
+    {
       setMove((byte) 8, Intent.UNKNOWN);
     }
   }
@@ -357,19 +359,33 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
     logger.info(
         "Orin : GetMove : turnCount : " +
             turnCount +
-            " ; firstTurn : " +
-            firstTurn +
             " ; num : " +
             num
     );
     if (this.form1) {
       turnCount++;
+      switch (turnCount) {
+        case 1:
+          setBuffAction();
+          return;
+        case 2:
+          setDoubleTapAction();
+          return;
+        case 3:
+          setMultiAttackAction();
+          return;
+        default:
+          logger.info("Orin : form 1 :getMove : error : turnCount :" + turnCount);
+          break;
+      }
+      /*
       if (this.firstTurn) {
-        setDoubleTapAction();
+        setBuffAction();
         this.firstTurn = false;
         return;
       }
-      if (turnCount >= 5) {
+      */
+      if (turnCount >= 4) {
         setMultiAttackAction();
         return;
       }
@@ -381,17 +397,23 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
     } else {
       int fairyCount = fairyCount();
       ThMod.logger.info("Orin : getMove : fairyCount : " + fairyCount);
+      /*
       if (this.firstTurn) {
         setSummonAction();
         return;
       }
+      */
       if (canExecute()) {
         setExecuteAction();
         return;
       }
-      if (fairyCount < SUMMON_THRESHOLD) {
-        setSummonAction();
-        return;
+      if (!firstTurn) {
+        if (fairyCount < SUMMON_THRESHOLD) {
+          setSummonAction();
+          return;
+        }
+      } else {
+        firstTurn = false;
       }
       logger.info("Orin : getMove : roll Action phase");
       int[] actions = new int[4];
@@ -466,12 +488,13 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
       AbstractDungeon.actionManager.addToTop(
           new ClearCardQueueAction()
       );
-      setMultiAttackAction();
+      att = false;
+      setMove((byte) 3, Intent.UNKNOWN);
       createIntent();
       //AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DIALOG[0]));
-      setMultiAttackAction();
+      setMove((byte) 3, Intent.UNKNOWN);
       applyPowers();
-      this.firstTurn = true;
+      //this.firstTurn = true;
     }
   }
 
@@ -502,15 +525,23 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
 
       this.updateHitbox(0.0F, -30.0f, 220.0F, 450.0F);
 
-      for (int i = 0; i < 6; i++) {
-        AbstractDungeon.actionManager.addToTop(
-            new DamageAction(
-                AbstractDungeon.player
-                , this.damage.get(1)
-                , AttackEffect.FIRE
-                , true
-            )
+      for (int i = 0; i < SUMMON_FIRST; i++) {
+        AbstractDungeon.actionManager.addToBottom(
+            new SummonFairyAction(this)
         );
+      }
+
+      if (att) {
+        for (int i = 0; i < 6; i++) {
+          AbstractDungeon.actionManager.addToTop(
+              new DamageAction(
+                  AbstractDungeon.player
+                  , this.damage.get(1)
+                  , AttackEffect.FIRE
+                  , true
+              )
+          );
+        }
       }
 
         /*
