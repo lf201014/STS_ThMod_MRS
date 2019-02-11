@@ -50,6 +50,12 @@
     },
     {
       "NAMES": [
+        "怨靈"
+      ],
+      "DESCRIPTION":"怨靈是一個負面狀態，會在你的回合開始時， #y消耗 1張隨機手牌"
+    },
+    {
+      "NAMES": [
         "WWWWWWWWWWWWWWWWWWW"
       ],
       "DESCRIPTION":"WWWWWWWWWWWWWWWWWWWWW"

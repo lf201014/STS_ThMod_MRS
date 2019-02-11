@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 public class CatCart extends CustomRelic {
 
   public static final String ID = "CatCart";
-  private static final String IMG = "img/relics/test6.png";
-  private static final String IMG_OTL = "img/relics/outline/test6.png";
+  private static final String IMG = "img/relics/CatCart.png";
+  private static final String IMG_OTL = "img/relics/outline/CatCart.png";
   private static final int HEAL_PER_CHARGE = 5;
 
   public CatCart() {

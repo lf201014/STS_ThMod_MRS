@@ -39,6 +39,12 @@
     },
     {
       "NAMES": [
+        "Wraith","wraith"
+      ],
+      "DESCRIPTION":"Wraith will exhaust a random card in your hand after the start of your turn."
+    },
+    {
+      "NAMES": [
         "WWWWWWWWWWWWWWWWWWW"
       ],
       "DESCRIPTION":"WWWWWWWWWWWWWWWWWWWWW"

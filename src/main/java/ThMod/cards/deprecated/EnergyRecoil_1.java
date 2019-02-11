@@ -1,5 +1,5 @@
 package ThMod.cards.deprecated;
-
+/*
 import ThMod.ThMod;
 import ThMod.action.ConsumeChargeUpAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -93,4 +93,4 @@ public class EnergyRecoil_1 extends CustomCard {
       upgradeBlock(UPG_PLUS_BLC);
     }
   }
-}
+}*/

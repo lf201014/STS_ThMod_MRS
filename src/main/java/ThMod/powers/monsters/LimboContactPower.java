@@ -36,14 +36,17 @@ public class LimboContactPower
   public void stackPower(int amount) {
   }
 
-  public void onInflictDamage(DamageInfo info, int damageAmount, AbstractCreature target) {
-    AbstractPlayer p = AbstractDungeon.player;
-    if (damageAmount > 0) {
-      AbstractDungeon.actionManager.addToBottom(
-          new ApplyPowerAction(
-              p, p, new WraithPower(p, 1), 1
-          )
-      );
+  public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+    {
+      AbstractPlayer p = AbstractDungeon.player;
+      //if (damageAmount > 0)
+      if (target == p) {
+        AbstractDungeon.actionManager.addToBottom(
+            new ApplyPowerAction(
+                p, p, new WraithPower(p, 1), 1
+            )
+        );
+      }
     }
   }
 }

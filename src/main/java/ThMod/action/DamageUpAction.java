@@ -1,12 +1,11 @@
 package ThMod.action;
 
+import ThMod.ThMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-
-import ThMod.ThMod;
 
 public class DamageUpAction
     extends AbstractGameAction {
@@ -24,10 +23,10 @@ public class DamageUpAction
           ThMod.logger.info(("Milky Way Action : add " + this.amount + " damage to " + c.cardID));
           c.baseDamage += this.amount;
           c.applyPowers();
+          c.flash();
         }
       }
     }
     tickDuration();
-    return;
   }
 }

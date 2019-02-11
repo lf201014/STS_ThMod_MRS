@@ -1,6 +1,7 @@
 package ThMod.action;
 
 import ThMod.ThMod;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import ThMod.powers.Marisa.TempStrengthLoss;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 public class WasteBombAction
@@ -63,7 +65,23 @@ public class WasteBombAction
           )
       );
 
-      this.info.applyPowers(this.info.owner,target);
+      float tmp = info.output;
+      for (AbstractPower p : target.powers) {
+        tmp = p.atDamageReceive(tmp, info.type);
+        if (info.base != (int) tmp) {
+          info.isModified = true;
+        }
+      }
+      for (AbstractPower p : target.powers) {
+        tmp = p.atDamageFinalReceive(tmp, info.type);
+        if (info.base != (int) tmp) {
+          info.isModified = true;
+        }
+      }
+      info.output = MathUtils.floor(tmp);
+      if (info.output < 0) {
+        info.output = 0;
+      }
 
       this.target.damage(this.info);
 
@@ -91,7 +109,9 @@ public class WasteBombAction
       }
     }
 
-    AbstractDungeon.actionManager.addToTop(new WaitAction(0.2F));
+    AbstractDungeon.actionManager.addToTop(new
+
+        WaitAction(0.2F));
 
     this.isDone = true;
   }

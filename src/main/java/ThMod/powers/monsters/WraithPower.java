@@ -22,9 +22,9 @@ public class WraithPower
     this.name = NAME;
     this.ID = POWER_ID;
     this.owner = owner;
-    this.type = AbstractPower.PowerType.BUFF;
+    this.type = AbstractPower.PowerType.DEBUFF;
     updateDescription();
-    this.img = new Texture("img/powers/electricField.png");
+    this.img = new Texture("img/powers/exhaustion.png");
     this.amount = amount;
   }
 
@@ -34,7 +34,7 @@ public class WraithPower
     AbstractDungeon.actionManager.addToBottom(
         new ExhaustAction(AbstractDungeon.player, AbstractDungeon.player, 1, true)
     );
-    this.amount -= 1;
+    this.amount --;
     if (this.amount <= 0) {
       AbstractDungeon.actionManager.addToBottom(
           new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, this)

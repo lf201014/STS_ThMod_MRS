@@ -264,9 +264,9 @@
     ]
   },
   "LimboContact": {
-    "NAME": "Undead Contact",
+    "NAME": "死灵之触",
     "DESCRIPTIONS": [
-      "Whenever you take damage from this enemy, gain a stack of #yWraith .",
+      "每当这个敌人攻击你，你会获得一层 #y怨灵 。",
       "WWWWWWWWWWW"
     ]
   },
@@ -278,9 +278,9 @@
     ]
   },
   "InfernoClaw": {
-    "NAME": "Inferno Claw",
+    "NAME": "地狱之爪",
     "DESCRIPTIONS": [
-      "Whenever you receive attack damage from this enemy, add a #yBurn into your draw pile.",
+      "每当这个敌人对你造成伤害，在你的抽牌堆里增加一张 #y灼伤 。",
       "WWWWWWWWWWW"
     ]
   },

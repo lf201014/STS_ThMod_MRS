@@ -1,4 +1,4 @@
-package ThMod.action;
+package ThMod.action.deprecated;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.UnlimboAction;
@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import ThMod.ThMod;
 import java.util.ArrayList;
 
+@Deprecated
 public class ManaRampageAction
     extends AbstractGameAction {
 

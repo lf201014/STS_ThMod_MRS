@@ -249,7 +249,7 @@
     "DESCRIPTION": "下回合开始时获得  [E]  。 NL 增幅  [E]  ：本回合内你不再需要支付额外能量来发动 增幅 效果。",
     "UPGRADE_DESCRIPTION": " NL 下回合开始时获得  [E]  [E]  。 NL 增幅  [E]  ：本回合内你不再需要支付额外能量来发动 增幅 效果。"
   },
-  "D6C": {
+  "DC": {
     "NAME": "迎头痛击",
     "DESCRIPTION": " 固有 。 造成 !D! 点伤害，若此时你的弃卡堆里没有卡，造成双倍伤害。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
@@ -301,7 +301,7 @@
   },
   "MagicChant": {
     "NAME": "咏唱",
-    "DESCRIPTION": "选择 !M! 张卡 升级 并 保留 到下一回合。",
+    "DESCRIPTION": "选择最多 !M! 张卡 升级 并 保留 到下一回合。",
     "UPGRADE_DESCRIPTION": " 保留 。选择 !M! 张卡 保留 到下一回合。所选卡牌在下回合 费用 减少1 。"
   },
   "UnstableBomb": {
@@ -471,6 +471,11 @@
   "SprinkleStarSeal": {
     "NAME": "洒星封印",
     "DESCRIPTION": "给予99层 虚弱 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "Wraith": {
+    "NAME": "怨灵",
+    "DESCRIPTION": " 不能被打出 。 NL 在你的回合结束时，获得1层 怨灵 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   }
 }

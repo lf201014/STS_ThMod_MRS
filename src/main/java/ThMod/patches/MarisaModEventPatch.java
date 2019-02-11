@@ -1,5 +1,7 @@
 package ThMod.patches;
 
+import static ThMod.ThMod.logger;
+
 import ThMod.ThMod;
 
 import ThMod.characters.Marisa;
@@ -12,21 +14,34 @@ import com.megacrit.cardcrawl.events.exordium.Mushrooms;
 
 public class MarisaModEventPatch {
 
-  @SpirePatch(cls = "com.megacrit.cardcrawl.dungeons.Exordium", method = "initializeEventList")
+  @SpirePatch(clz = AbstractDungeon.class, method = "initializeCardPools")
   public static class EventPatch {
 
     @SpirePostfixPatch
     public static void EventListPatch(AbstractDungeon _exordium) {
-      ThMod.logger.info(
+      logger.info(
           "MarisaModEventPatch : EventListPatch :"
               + " PlayerCharacter : "
               + AbstractDungeon.player.title
       );
-      String events = new String();
+      String events = "";
       for (String tempStr : AbstractDungeon.eventList) {
         events += tempStr + " ; ";
       }
-      ThMod.logger.info("MarisaModEventPatch : current event list : " + events);
+      logger.info("MarisaModEventPatch : current event list : " + events);
+
+      if (AbstractDungeon.player instanceof Marisa) {
+        logger.info("Marisa detected,removing Mushroom_MRS");
+        AbstractDungeon.eventList.remove("Mushrooms");
+      } else {
+        logger.info("removing Mushroom_MRS");
+        AbstractDungeon.eventList.remove("Mushrooms_MRS");
+      }
+      events = "";
+      for (String tempStr : AbstractDungeon.eventList) {
+        events += tempStr + " ; ";
+      }
+      logger.info("MarisaModEventPatch : current event list : " + events);
     }
   }
 
@@ -38,18 +53,25 @@ public class MarisaModEventPatch {
         AbstractEvent _retVal,
         com.megacrit.cardcrawl.random.Random rng
     ) {
-      ThMod.logger.info(
+      logger.info(
           "MarisaModEventPatch : GetEventPatch :" +
               " PlayerCharacter  : " +
               AbstractDungeon.player.title +
               " ; retVal event : " +
               _retVal.toString()
       );
-      if ((_retVal instanceof Mushrooms)&&(AbstractDungeon.player instanceof Marisa)) {
-        ThMod.logger.info("Swapping mushroom event");
+      /*
+      if ((_retVal instanceof Mushrooms) && (AbstractDungeon.player instanceof Marisa)) {
+        logger.info("Swapping mushroom event");
         return new Mushrooms_MRS();
       }
       return _retVal;
+      */
+      if ((_retVal instanceof Mushrooms_MRS) && (AbstractDungeon.floorNum <= 6)) {
+        return AbstractDungeon.getEvent(AbstractDungeon.eventRng);
+      } else {
+        return _retVal;
+      }
     }
   }
 }

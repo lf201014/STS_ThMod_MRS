@@ -259,14 +259,14 @@
   "Wraith": {
     "NAME": "怨靈",
     "DESCRIPTIONS": [
-      "在你的回合開始後，隨機 #y消耗 1張手牌",
+      "在你的回合開始時， #y消耗 1張隨機手牌",
       "WWWWWWWWWWW"
     ]
   },
   "LimboContact": {
-    "NAME": "UndeadContact",
+    "NAME": "死靈之觸",
     "DESCRIPTIONS": [
-      "Whenever you take damage from this enemy, gain a stack of #yWraith .",
+      "每當這個敵人攻擊你，你會獲得1層 #y怨靈",
       "WWWWWWWWWWW"
     ]
   },
@@ -278,9 +278,9 @@
     ]
   },
   "InfernoClaw": {
-    "NAME": "Inferno Claw",
+    "NAME": "地獄之爪",
     "DESCRIPTIONS": [
-      "Whenever you receive attack damage from this enemy, add a #yBurn into your draw pile.",
+      "每當這個敵人對你造成傷害，在你的抽牌堆裡增加一張 #y灼傷 。",
       "WWWWWWWWWWW"
     ]
   },

@@ -285,3 +285,11 @@ v0.14.20 1/27/2019
 v0.14.21 1/31/2019
 *Trying to fix the random target multi-segment attack damages calculation errors
 *Add support for Googly Eye(thanks to github user:KAMAQUEEN)
+
+v0.14.22 2/11/2019
+*Update illustration for cards : 6A,Open Universe,Witch Leyline,Starlight Typhoon,66C,Binary Stars,Sprinkle Seal,BlazeAway
+*Add a new event,two related enemies and one related relic
+*Fix a event related bug
+*Refract out-dated codes
+*Update Korean texts(Github user : Katinor)
+*Update support for Googly Eye(Github user:KAMAQUEEN)

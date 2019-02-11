@@ -249,7 +249,7 @@
     "DESCRIPTION": "下回合獲得 [E] 。 NL 增幅 [E] :本回合內不需要花費額外 [E] 來發動 增幅",
     "UPGRADE_DESCRIPTION": "下回合獲得 [E] [E] 。 NL 增幅 [E] :本回合內不需要花費額外 [E] 來發動 增幅"
   },
-  "D6C": {
+  "DC": {
     "NAME": "迎頭痛擊",
     "DESCRIPTION": "固有 。造成 !D! 點傷害。若棄牌堆沒有牌，造成2倍傷害",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
@@ -471,6 +471,11 @@
   "SprinkleStarSeal": {
     "NAME": "灑星封印",
     "DESCRIPTION": "給予99層 虛弱 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "Wraith": {
+    "NAME": "怨靈",
+    "DESCRIPTION": "無法打出 。 NL 在你的回合結束時，獲得1層 怨靈",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   }
 }

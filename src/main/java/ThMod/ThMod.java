@@ -6,11 +6,15 @@ import static ThMod.patches.CardTagEnum.SPARK;
 
 import ThMod.action.SparkCostAction;
 import ThMod.cards.Marisa.AlicesGift;
+import ThMod.cards.Marisa.DC;
 import ThMod.cards.Marisa.EnergyRecoil;
 import ThMod.cards.Marisa.ManaRampage;
 import ThMod.cards.Marisa.OneTimeOff;
 import ThMod.cards.Marisa.SprinkleStarSeal;
 import ThMod.cards.derivations.Exhaustion_MRS;
+import ThMod.cards.derivations.Wraith;
+import ThMod.event.Mushrooms_MRS;
+import ThMod.event.OrinTheCat;
 import ThMod.monsters.Orin;
 import ThMod.monsters.ZombieFairy;
 import ThMod.potions.ShroomBrew;
@@ -20,6 +24,8 @@ import ThMod.relics.CatCart;
 import basemod.helpers.RelicType;
 import com.badlogic.gdx.graphics.Texture;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
@@ -56,7 +62,6 @@ import ThMod.cards.Marisa.CasketOfStar;
 import ThMod.cards.Marisa.ChargeUpSpray;
 import ThMod.cards.Marisa.ChargingUp;
 import ThMod.cards.Marisa.CollectingQuirk;
-import ThMod.cards.Marisa.D6C;
 import ThMod.cards.Marisa.DarkMatter;
 import ThMod.cards.Marisa.DarkSpark;
 import ThMod.cards.Marisa.DeepEcologicalBomb;
@@ -242,6 +247,7 @@ public class ThMod implements PostExhaustSubscriber,
   }*/
 
   //For the FXXKING Exhaustion curse
+  /*
   public static boolean ExhaustionCheck() {
     boolean res = false;
     for (AbstractCard c : AbstractDungeon.player.hand.group) {
@@ -251,7 +257,7 @@ public class ThMod implements PostExhaustSubscriber,
     }
     return res;
   }
-
+*/
   //For Amplify cards
   public static boolean Amplified(AbstractCard card, int AMP) {
     logger.info(
@@ -432,6 +438,7 @@ public class ThMod implements PostExhaustSubscriber,
     logger.info("adding cards for MARISA");
 
     for (AbstractCard card : cardsToAdd) {
+      logger.info("Adding card : " + card.name);
       BaseMod.addCard(card);
     }
 
@@ -615,7 +622,9 @@ public class ThMod implements PostExhaustSubscriber,
   @Override
   public void receivePostInitialize() {
     // TODO Auto-generated method stub
-    //BaseMod.addEvent(Mushrooms_MRS.ID, Mushrooms_MRS.class, Exordium.ID);
+    BaseMod.addEvent(Mushrooms_MRS.ID, Mushrooms_MRS.class, Exordium.ID);
+    BaseMod.addEvent(OrinTheCat.ID, OrinTheCat.class, TheBeyond.ID);
+
     BaseMod.addPotion(
         ShroomBrew.class,
         Color.NAVY.cpy(),
@@ -635,14 +644,14 @@ public class ThMod implements PostExhaustSubscriber,
         zombieFairy = ZOMBIE_FAIRY_ENC;
         break;
     }
-    //BaseMod.addMonster(orin, orin, () -> new Orin());
-    //BaseMod.addMonster(zombieFairy, zombieFairy, () -> new ZombieFairy());
+    BaseMod.addMonster(ORIN_ENCOUNTER, orin, () -> new Orin());
+    BaseMod.addMonster(ZOMBIE_FAIRY_ENC, zombieFairy, () -> new ZombieFairy());
     final Texture badge = ImageMaster.loadImage(MOD_BADGE);
     BaseMod.registerModBadge(
         badge,
         "MarisaMod",
         "Flynn , Hell , Hohner_257 , Samsara",
-        "A Mod of the poor blonde hair girl from Touhou Project(",
+        "A Mod of the poor blonde girl from Touhou Project(",
         null
     );
   }
@@ -660,7 +669,7 @@ public class ThMod implements PostExhaustSubscriber,
     cardsToAdd.add(new LuminesStrike());
     cardsToAdd.add(new MysteriousBeam());
     cardsToAdd.add(new WitchLeyline());
-    cardsToAdd.add(new D6C());
+    cardsToAdd.add(new DC());
     cardsToAdd.add(new _6A());
     cardsToAdd.add(new UnstableBomb());
     cardsToAdd.add(new StarBarrage());
@@ -728,12 +737,14 @@ public class ThMod implements PostExhaustSubscriber,
     cardsToAdd.add(new EscapeVelocity());
     cardsToAdd.add(new MillisecondPulsars());
     cardsToAdd.add(new SuperNova());
+
     cardsToAdd.add(new Spark());
     cardsToAdd.add(new GuidingStar());
     cardsToAdd.add(new BlackFlareStar());
     cardsToAdd.add(new WhiteDwarf());
     cardsToAdd.add(new Exhaustion_MRS());
     cardsToAdd.add(new Strike_MRS());
+    cardsToAdd.add(new Wraith());
   }
 
   class Keywords {

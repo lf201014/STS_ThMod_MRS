@@ -17,7 +17,7 @@
   },
   "BlazingStar": {
     "NAME": "Blazing Star",
-    "DESCRIPTION": "Deal !B! damage. Deals !M! additional damage for each Burn in your hand. NL Amplify  [E]  : Deals double damage. "
+    "DESCRIPTION": "Deal !B! damage. Deals !M! additional damage for each Burn in your hand. NL Amplify  [E]  : Deal double damage. "
   },
   "DarkSpark": {
     "NAME": "Dark Spark",
@@ -77,7 +77,7 @@
   },
   "MeteoricShower": {
     "NAME": "Meteonic Shower",
-    "DESCRIPTION": "Exhaust up to X + 1 cards. NL Deal !D! damage 2 times for each card you Exhausted, or 3 times for each Burn Exhausted."
+    "DESCRIPTION": "Exhaust up to X + 1 cards. NL Deal !D! damage to a random enemy 2 times for each card you Exhausted, or 3 times for each Burn Exhausted."
   },
   "MilkyWay": {
     "NAME": "Milky Way",
@@ -250,7 +250,7 @@
     "DESCRIPTION": "Next turn, gain  [E]  . Amplify [E]  : Amplify effects cost no [E] this turn.",
     "UPGRADE_DESCRIPTION": "Next turn, gain [E]  [E]  . Amplify [E]  : Amplify effects cost no [E] this turn."
   },
-  "D6C": {
+  "DC": {
     "NAME": "66C",
     "DESCRIPTION": "Innate. NL Deal !D! damage. NL Deals double damage if there are no cards in your discard pile.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
@@ -302,7 +302,7 @@
   },
   "MagicChant": {
     "NAME": "Magic Chant",
-    "DESCRIPTION": "Choose !M! cards to Upgrade and Retain this turn.",
+    "DESCRIPTION": "Choose up to !M! cards to Upgrade and Retain this turn.",
     "UPGRADE_DESCRIPTION": "Retain. Choose !M! to retain this turn. Reduce the cost of the chosen cards by 1 next turn."
   },
   "UnstableBomb": {
@@ -452,7 +452,7 @@
   },
   "AlicesGift": {
     "NAME": "Alice's Gift",
-    "DESCRIPTION": " Retain. Deal !D! Damage. Exhaust . NL Amplify [E]  [E] : Deals triple damage.",
+    "DESCRIPTION": " Retain. Deal !D! Damage. Exhaust . NL Amplify [E]  [E] : Deal triple damage.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Exhaustion_MRS": {
@@ -473,6 +473,11 @@
   "SprinkleStarSeal": {
     "NAME": "Sprinkle Star Seal",
     "DESCRIPTION": "Apply 99 Weak. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "Wraith": {
+    "NAME": "Wraith",
+    "DESCRIPTION": "Unplayable. NL At the end of your turn, gain 1 Wraith .",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WWWWWWWWWWWWWW": {

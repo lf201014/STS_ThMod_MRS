@@ -48,9 +48,15 @@
     },
     {
       "NAMES": [
-        "White Dwarf","White Dwarf"
+        "White Dwarf","white dwarf"
       ],
       "DESCRIPTION":"White Dwarf is a attack card costs #b0 and deals damage depending on the size of your discard pile."
+    },
+    {
+      "NAMES": [
+        "Wraith","wraith"
+      ],
+      "DESCRIPTION":"Wraith will exhaust a random card in your hand after the start of your turn."
     },
     {
       "NAMES": [

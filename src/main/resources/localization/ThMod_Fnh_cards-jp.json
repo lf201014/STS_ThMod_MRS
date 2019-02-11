@@ -250,7 +250,7 @@
     "DESCRIPTION": "次のターン、  [E]  を得る。 増幅  [E]  : このターン増幅の [E] が不要",
     "UPGRADE_DESCRIPTION": "次のターン、  [E]  [E]  を得る。 増幅  [E]  : このターン増幅の [E] が不要"
   },
-  "D6C": {
+  "DC": {
     "NAME": "66C",
     "DESCRIPTION": "天賦 。 NL !D! ダメージを与える。 NL 捨て札にカードが無い場合、2 倍のダメージを与える。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
@@ -473,6 +473,11 @@
   "SprinkleStarSeal": {
     "NAME": "スプリンクルスター封印",
     "DESCRIPTION": " 脱力 99 を 与える。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "Wraith": {
+    "NAME": "Wraith",
+    "DESCRIPTION": "Unplayable. NL At the end of your turn, gain 1 Wraith .",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WWWWWWWWWWWWWW": {
