@@ -73,7 +73,7 @@
     "NAME": "蘑菇袋",
     "FLAVOR": "所有的魔女都對蘑菇有異樣的熱情……或者只是魔理沙有？",
     "DESCRIPTIONS": [
-      "拾取時向卡組中加入 #b2 張 #y寄生 。使你可以將 #y寄生 打出，從而將其 #y消耗 並回復 #b3 點生命值"
+      "拾取時向卡組中加入 #b2 張 #y寄生 。使你可以將 #y寄生 打出，從而將其 #y消耗 並回復 #b3 點生命"
     ]
   },
   "Cape": {
@@ -102,14 +102,14 @@
     "NAME": "貓車",
     "FLAVOR": "在你力盡倒下的時候，忠誠的貓貓會用這個把你救活。",
     "DESCRIPTIONS": [
-      "每爬一層獲得一個計數。當你要被殺死時，若計數不為0，則免死並消耗所有計數，每個計數回复 #g5 生命。"
+      "每攀爬一層樓層獲得一個計數。當你要被殺死時，若計數不為0，則免死並消耗所有計數，每個計數回復 #b5 點生命"
     ]
   },
   "BigShroomBag": {
-    "NAME": "Big Shroom Bag",
-    "FLAVOR": "A large version of shroom bag.",
+    "NAME": "大型蘑菇袋",
+    "FLAVOR": "一個更大的蘑菇袋。",
     "DESCRIPTIONS": [
-      "Replaces #rShroom #rBag . NL Parasite cards can now be played. Playing a #yParasite will heal #b3 HP and Exhausts the card."
+      "取代 #r蘑菇袋 NL 可以將 #y寄生 打出，打出後將其 #y消耗 並回復 #b3 點生命"
     ]
   },
   "WWWWWWWWWWW": {

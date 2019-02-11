@@ -475,7 +475,7 @@
   },
   "Wraith": {
     "NAME": "怨靈",
-    "DESCRIPTION": " 不能被打出 。 NL 在你的回合結束時，獲得1層 怨靈 。",
+    "DESCRIPTION": "無法打出 。 NL 在你的回合結束時，獲得1層 怨靈",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   }
 }
