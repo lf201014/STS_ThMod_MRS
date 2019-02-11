@@ -50,9 +50,9 @@
     },
     {
       "NAMES": [
-        "Wraith","wraith"
+        "망령"
       ],
-      "DESCRIPTION":"Wraith will exhaust a random card in your hand after the start of your turn."
+      "DESCRIPTION":"내턴 시작 시 손에 있는 무작위 카드를 소멸시킵니다."
     },
     {
       "NAMES": [

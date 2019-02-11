@@ -15,20 +15,20 @@
     ]
   },
   "OrinTheCat": {
-    "NAME": "BlackCat",
+    "NAME": "검은 고양이",
     "DESCRIPTIONS": [
-      "A #yblack #bcat appearing out of nowhere stopped in front of you,and blocked your path. NL The cat reeks of #r~Death~ #r~and~ #r~Misfortune~ ,and when it looks at you,you feel chill in your spine. NL It meows at you,attempting to draw your attention.",
-      "Seems the cat doesn't want to let you walk away like that.It showed its claws and fangs and rushed over to you...",
-      "The cat seems satisfied and ran away,but you feel the smell of #r~Death~ #r~and~ #r~Misfortune~ remained...",
-      "The cat jumped into your embrace...Seems you have company now.",
-      "Seeing you ignoring it,the cat just left."
+      "#y검은 #y고양이 가 갑자기 당신앞에 서서 길을 막습니다. NL 이 고양이는 #r~죽음과~ #r~불운~ 을 풍기면서 당신의 등골을 오싹하게 만들고 있습니다. NL 당신의 이목을 끌려는 것인지, 울음소리를 내고 있습니다.",
+      "그다지 당신을 지나가게 보고만 있지는 않을 것 같습니다. 그 고양이는 발톱과 이빨을 드러내며 당신을 향해 달려들었습니다.",
+      "그 고양이는 만족하고 도망가버렸습니다. 하지만 #r~죽음과~ #r~불운~ 은 여전히 당신을 맴돕니다.",
+      "고양이가 당신의 품으로 뛰어듭니다... 당신은 길동무를 얻은 것 같네요.",
+      "당신이 자신을 무시하는것을 깨닫고, 그 고양이는 떠나버렸습니다."
     ],
     "OPTIONS": [
-      "[Pet the cat] #rBecome #rCursed #r- #rWraith.",
-      "[Ignore the cat] #gTry #gleaving #gimmediately.",
-      "[Fight]",
-      "[Leave]",
-      "[Pet the cat]"
+      "[쓰다듬는다] #r망령 #r저주를 #r받습니다.",
+      "[무시한다] #g자리를 #g피해봅니다.",
+      "[싸운다]",
+      "[떠난다]",
+      "[쓰다듬는다]"
     ]
   },
   "WWWWWWWWWWWWW": {
