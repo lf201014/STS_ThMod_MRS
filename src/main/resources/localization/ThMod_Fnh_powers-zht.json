@@ -259,14 +259,14 @@
   "Wraith": {
     "NAME": "怨靈",
     "DESCRIPTIONS": [
-      "在你的回合開始後，隨機 #y消耗 1張手牌",
+      "在你的回合開始時， #y消耗 1張隨機手牌",
       "WWWWWWWWWWW"
     ]
   },
   "LimboContact": {
     "NAME": "死靈之觸",
     "DESCRIPTIONS": [
-      "每當這個敵人攻擊你，你會獲得一層 #y怨靈 。",
+      "每當這個敵人攻擊你，你會獲得1層 #y怨靈",
       "WWWWWWWWWWW"
     ]
   },
