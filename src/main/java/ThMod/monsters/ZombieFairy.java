@@ -20,10 +20,10 @@ public class ZombieFairy extends AbstractMonster {
   private static final Logger logger = ThMod.logger;
   public static final String ID = "ZombieFairy";
   public static final String NAME = "Zombie Fairy";
-  private static final int HP = 18;
-  private static final int HP_ = 18;
-  private static final int HP_A = 20;
-  private static final int HP_A_ = 20;
+  private static final int HP = 12;
+  private static final int HP_ = 16;
+  private static final int HP_A = 14;
+  private static final int HP_A_ = 18;
   private static final int DMG = 8;
   private static final int BLOCK = 4;
   private static final int BLOCK_UPG = 10;
@@ -34,7 +34,7 @@ public class ZombieFairy extends AbstractMonster {
   private static final String MODEL_JSON = "img/monsters/ZombieFairy/ZombieFairy.json";
 
   public ZombieFairy(float x, float y) {
-    super(NAME, ID, HP, 0.0F, 0.0F, 140.0F, 210.0F, null, x, y + 25.0F);
+    super(NAME, ID, HP, 0.0F, 0.0F, 140.0F, 170.0f, null, x, y + 25.0F);
     if (AbstractDungeon.ascensionLevel >= 8) {
       this.setHp(HP_A, HP_A_);
     } else {
