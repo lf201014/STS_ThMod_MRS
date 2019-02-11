@@ -59,8 +59,11 @@ public class TreasureHunterDamageAction extends AbstractGameAction {
       );
 
       reward = (curRoom.eliteTrigger) ||
-          (curRoom instanceof MonsterRoomBoss) ||
-          AbstractDungeon.lastCombatMetricKey.equals("Mind Bloom Boss Battle");
+          (curRoom instanceof MonsterRoomBoss)
+          || AbstractDungeon.lastCombatMetricKey.equals("Mind Bloom Boss Battle")
+          || AbstractDungeon.lastCombatMetricKey.equals("3 Sentries")
+          || AbstractDungeon.lastCombatMetricKey.equals("Gremlin Nob")
+          || AbstractDungeon.lastCombatMetricKey.equals("Lagavulin Event");
 
       if (
           !(curRoom instanceof MonsterRoomBoss) && (

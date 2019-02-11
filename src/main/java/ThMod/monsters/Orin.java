@@ -84,7 +84,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   private static final String MODEL_CAT_JSON = "img/monsters/Orin/rincat.json";
 
   public Orin() {
-    super(NAME, "Orin", STAGE_1_HP, 0.0F, -30.0F, 220.0F, 320.0F, tempImgUrl, -20.0F, -10.0F);
+    super(NAME, "Orin", STAGE_1_HP, 0.0F, -30.0F, 220.0F, 200.0F, tempImgUrl, -20.0F, -10.0F);
     if (Settings.language == GameLanguage.ZHS) {
       this.name = "\u963f\u71d0";
     }
@@ -114,7 +114,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
 
     this.type = AbstractMonster.EnemyType.ELITE;
 
-    loadAnimation(MODEL_CAT_ATLAS, MODEL_CAT_JSON, 2.5F);
+    loadAnimation(MODEL_CAT_ATLAS, MODEL_CAT_JSON, 3.0f);
     AnimationState.TrackEntry e = this.state.setAnimation(0, "newAnimation", true);
     e.setTime(e.getEndTime() * MathUtils.random());
     /*
@@ -519,11 +519,11 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
       AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, this.maxHealth));
       AbstractDungeon.actionManager.addToBottom(new CanLoseAction());
 
-      loadAnimation(MODEL_HUMANOID_ATLAS, MODEL_HUMANOID_JSON, 2.5F);
+      loadAnimation(MODEL_HUMANOID_ATLAS, MODEL_HUMANOID_JSON, 3.0F);
       AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
       e.setTime(e.getEndTime() * MathUtils.random());
 
-      this.updateHitbox(0.0F, -30.0f, 220.0F, 450.0F);
+      this.updateHitbox(0.0F, -30.0f, 220.0F, 350.0F);
 
       for (int i = 0; i < SUMMON_FIRST; i++) {
         AbstractDungeon.actionManager.addToBottom(

@@ -28,7 +28,7 @@ public class OrinTheCat
   private static final String INTRO_MSG = DESCRIPTIONS[0];
   private CurScreen screen = CurScreen.INTRO;
   private AbstractMonster orin;
-  private boolean satori = false;
+  private boolean satori;
 
   enum CurScreen {
     INTRO, PRE_COMBAT, END
@@ -85,6 +85,9 @@ public class OrinTheCat
               return;
             } else {
               this.screen = CurScreen.END;
+              if (orin != null) {
+                AbstractDungeon.actionManager.addToBottom(new EscapeAction(orin));
+              }
               this.roomEventText.updateBodyText(DESCRIPTIONS[2]);
               this.roomEventText.updateDialogOption(0, OPTIONS[3]);
               this.roomEventText.clearRemainingOptions();
@@ -133,6 +136,7 @@ public class OrinTheCat
         AbstractDungeon.getCurrRoom().addRelicToRewards(
             new CatCart()
         );
+        AbstractDungeon.getCurrRoom().eliteTrigger = true;
         //this.img = ImageMaster.loadImage("images/events/sphereOpen.png");
 
         enterCombat();
