@@ -15,6 +15,7 @@ import ThMod.cards.derivations.Exhaustion_MRS;
 import ThMod.cards.derivations.Wraith;
 import ThMod.event.Mushrooms_MRS;
 import ThMod.event.OrinTheCat;
+import ThMod.event.TestEvent;
 import ThMod.monsters.Orin;
 import ThMod.monsters.ZombieFairy;
 import ThMod.potions.ShroomBrew;
@@ -26,6 +27,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
+import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
@@ -227,6 +229,8 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String EVENT_PATH_ZHT = "localization/ThMod_MRS_events-zht.json";
 
   public static int typhoonCounter = 0;
+
+  public static boolean OrinEvent = false;
 
   private ArrayList<AbstractCard> cardsToAdd = new ArrayList<>();
   //private ArrayList<AbstractRelic> relicsToAdd = new ArrayList<>();
@@ -624,7 +628,12 @@ public class ThMod implements PostExhaustSubscriber,
     // TODO Auto-generated method stub
     BaseMod.addEvent(Mushrooms_MRS.ID, Mushrooms_MRS.class, Exordium.ID);
     BaseMod.addEvent(OrinTheCat.ID, OrinTheCat.class, TheBeyond.ID);
-
+/*
+    //BaseMod.addEvent(TestEvent.ID, TestEvent.class);
+    BaseMod.addEvent(TestEvent.ID, TestEvent.class, Exordium.ID);
+    BaseMod.addEvent(TestEvent.ID, TestEvent.class, TheBeyond.ID);
+    BaseMod.addEvent(TestEvent.ID, TestEvent.class, TheCity.ID);
+*/
     BaseMod.addPotion(
         ShroomBrew.class,
         Color.NAVY.cpy(),
@@ -633,6 +642,7 @@ public class ThMod implements PostExhaustSubscriber,
         "ShroomBrew",
         MARISA
     );
+    /*
     String orin, zombieFairy;
     switch (Settings.language) {
       case ZHS:
@@ -644,8 +654,9 @@ public class ThMod implements PostExhaustSubscriber,
         zombieFairy = ZOMBIE_FAIRY_ENC;
         break;
     }
-    BaseMod.addMonster(ORIN_ENCOUNTER, orin, () -> new Orin());
-    BaseMod.addMonster(ZOMBIE_FAIRY_ENC, zombieFairy, () -> new ZombieFairy());
+    */
+    BaseMod.addMonster(ORIN_ENCOUNTER, () -> new Orin());
+    BaseMod.addMonster(ZOMBIE_FAIRY_ENC, () -> new ZombieFairy());
     final Texture badge = ImageMaster.loadImage(MOD_BADGE);
     BaseMod.registerModBadge(
         badge,

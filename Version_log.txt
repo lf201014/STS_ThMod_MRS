@@ -293,3 +293,8 @@ v0.14.22 2/11/2019
 *Refract out-dated codes
 *Update Korean texts(Github user : Katinor)
 *Update support for Googly Eye(Github user:KAMAQUEEN)
+
+v0.14.23 2/13/2019
+*Update Korean texts(Github user : Katinor)
+*Update Traditional Chinese texts(GitHub user : rainfoxest)
+*Update support for Googly Eye(Github user:KAMAQUEEN)

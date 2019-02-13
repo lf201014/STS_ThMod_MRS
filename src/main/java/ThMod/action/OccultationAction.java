@@ -46,6 +46,5 @@ public class OccultationAction
 		}
 		//AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, cnt));
 		this.isDone = true;
-		return;
 	}
 }

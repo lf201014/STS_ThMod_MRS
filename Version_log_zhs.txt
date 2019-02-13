@@ -694,3 +694,8 @@ v0.14.22 2/11/2019
 *重构了部分过时的代码
 *更新了韩语的文本（GitHub用户 : Katinor）
 *更新了对Gooly Eye的支持（github用户:KAMAQUEEN）
+
+v0.14.23 2/13/2019
+*更新了韩语的文本（GitHub用户 : Katinor）
+*更新了繁体中文的文本（GitHub 用户 : rainfoxest）
+*更新了对Gooly Eye的支持（github用户:KAMAQUEEN）
