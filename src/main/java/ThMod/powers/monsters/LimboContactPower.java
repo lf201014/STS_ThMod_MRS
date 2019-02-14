@@ -8,7 +8,9 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class LimboContactPower
     extends AbstractPower {
@@ -43,8 +45,26 @@ public class LimboContactPower
       if (target == p) {
         AbstractDungeon.actionManager.addToBottom(
             new ApplyPowerAction(
-                p, p, new WraithPower(p, 1), 1
+                p, this.owner, new WraithPower(p, 1), 1
             )
+        );
+      }
+    }
+  }
+
+  @Override
+  public void onDeath() {
+    super.onDeath();
+    AbstractPlayer p = AbstractDungeon.player;
+    AbstractDungeon.actionManager.addToBottom(
+        new ApplyPowerAction(
+            p, null, new WraithPower(p, 1), 1
+        )
+    );
+    for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+      if (!m.isDeadOrEscaped()) {
+        AbstractDungeon.actionManager.addToBottom(
+            new ApplyPowerAction(m, null, new StrengthPower(m, 1), 1)
         );
       }
     }

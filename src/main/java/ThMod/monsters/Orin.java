@@ -54,8 +54,8 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   private boolean firstTurn = true;
   private static final int STAGE_1_HP = 76;
   private static final int S_1_HP = 82;
-  private static final int STAGE_2_HP = 208;
-  private static final int S_2_HP = 215;
+  private static final int STAGE_2_HP = 208 + 90;
+  private static final int S_2_HP = 215 + 100;
   private static final int STR = 4;
   private static final int STR_A = 5;
   private static final int DOUBLE_TAP = 10;
@@ -69,7 +69,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   private static final int SUMMON_FIRST = 4;
   private static final int SUMMON_THRESHOLD = 2;
   private static final int EXECUTE = 8;
-  private static final int EXECUTE_A = 10;
+  private static final int EXECUTE_A = 10 - 4;
   private int doubleTap;
   private int catTap;
   private int hellFireDmg;

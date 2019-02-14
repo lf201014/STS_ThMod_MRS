@@ -28,7 +28,6 @@ public class ZombieFairy extends AbstractMonster {
   private static final int BLOCK = 4;
   private static final int BLOCK_UPG = 10;
   private static final byte POWER_UP = 3;
-  private static final AbstractPlayer p = AbstractDungeon.player;
   public int turnNum = 0;
   private static final String MODEL_ATLAS = "img/monsters/ZombieFairy/ZombieFairy.atlas";
   private static final String MODEL_JSON = "img/monsters/ZombieFairy/ZombieFairy.json";
@@ -52,8 +51,24 @@ public class ZombieFairy extends AbstractMonster {
   }
 
   public void takeTurn() {
+    AbstractPlayer p = AbstractDungeon.player;
     switch (this.nextMove) {
       case 1:
+        logger.info(
+            "ZombieFairy : take Turn : Attack : turnNum : "
+                + turnNum
+                + " ; damage : "
+                + this.damage.get(0).base
+                + " ; ActionCancel check:"
+                + " ; target null : "
+                + (p == null)
+                + " ; source null : "
+                + (this.damage.get(0).owner != null)
+                + " ; source dying : "
+                + (this.damage.get(0).owner.isDying)
+                + " ; target dead or escaped : "
+                + (p.isDeadOrEscaped())
+        );
         AbstractDungeon.actionManager.addToBottom(
             new DamageAction(
                 p

@@ -46,8 +46,8 @@ public class OrinsDebuffAction extends AbstractGameAction {
         new ApplyPowerAction(
             p,
             orin,
-            new WraithPower(p, stack),
-            stack
+            new WraithPower(p, stc),
+            stc
         )
     );
     this.isDone = true;

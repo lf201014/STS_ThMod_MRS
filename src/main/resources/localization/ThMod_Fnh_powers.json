@@ -266,7 +266,7 @@
   "LimboContact": {
     "NAME": "Undead Contact",
     "DESCRIPTIONS": [
-      "Whenever you are attacked by this enemy, gain a stack of #yWraith .",
+      "Whenever you are attacked by this enemy, gain a stack of #yWraith . NL On death,apply #b1 #yWraith to you and #b1 #yStrength to all enemies alive.",
       "WWWWWWWWWWW"
     ]
   },
