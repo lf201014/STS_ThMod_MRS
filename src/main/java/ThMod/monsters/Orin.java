@@ -376,6 +376,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
           return;
         default:
           logger.info("Orin : form 1 :getMove : error : turnCount :" + turnCount);
+          setMultiAttackAction();
           break;
       }
       /*

@@ -1,5 +1,8 @@
 package ThMod.cards.Marisa;
 
+import ThMod.action.MeteoricShowerAction;
+import ThMod.patches.AbstractCardEnum;
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -7,10 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-
-import ThMod.action.MeteoricShowerAction;
-import ThMod.patches.AbstractCardEnum;
-import basemod.abstracts.CustomCard;
 
 public class MeteoricShower
     extends CustomCard {
@@ -52,12 +51,13 @@ public class MeteoricShower
     }
 
     AbstractDungeon.actionManager.addToBottom(
-        new MeteoricShowerAction(cnt, this.damage)
+        new MeteoricShowerAction(cnt, this.damage,this.freeToPlayOnce)
     );
-
+/*
     if (!this.freeToPlayOnce) {
       p.energy.use(EnergyPanel.totalCount);
     }
+    */
   }
 
   public AbstractCard makeCopy() {
