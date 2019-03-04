@@ -45,8 +45,8 @@
   },
   "FinalSpark": {
     "NAME": "Final Spark",
-    "DESCRIPTION": "Cost 1 less  [E]  for each Spark card played this combat. NL Deal !D! damage to ALL enemies. NL Reset the cost of this card.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Cost 1 less  [E]  for each Spark card played this combat. NL Deal !D! damage to ALL enemies. NL Reset the cost of this card."
+    "DESCRIPTION": "Cost 1 less  [E]  for each card containing \"Spark\" played this combat. NL Deal !D! damage to ALL enemies. NL Reset the cost of this card.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Cost 1 less  [E]  for each card containing \"Spark\" played this combat. NL Deal !D! damage to ALL enemies. NL Reset the cost of this card."
   },
   "GrandCross": {
     "NAME": "Grand Cross",

@@ -47,7 +47,7 @@ public class SatelIllusPower extends AbstractPower {
     this.amount = amount;
     this.type = AbstractPower.PowerType.BUFF;
     updateDescription();
-    this.img = new Texture("img/powers/absorb.png");
+    this.img = new Texture("img/powers/satelIllu.png");
     counter = AbstractDungeon.player.drawPile.size();
   }
 

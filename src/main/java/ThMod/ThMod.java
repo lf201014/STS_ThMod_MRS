@@ -15,7 +15,6 @@ import ThMod.cards.derivations.Exhaustion_MRS;
 import ThMod.cards.derivations.Wraith;
 import ThMod.event.Mushrooms_MRS;
 import ThMod.event.OrinTheCat;
-import ThMod.event.TestEvent;
 import ThMod.monsters.Orin;
 import ThMod.monsters.ZombieFairy;
 import ThMod.potions.ShroomBrew;
@@ -27,7 +26,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
-import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
@@ -171,9 +169,9 @@ public class ThMod implements PostExhaustSubscriber,
   public static final Logger logger = LogManager.getLogger(ThMod.class.getName());
 
   private static final String ORIN_ENCOUNTER = "Orin";
-  private static final String ORIN_ENCOUNTER_ZHS = "\u963f\u71d0";
+  //private static final String ORIN_ENCOUNTER_ZHS = "\u963f\u71d0";
   private static final String ZOMBIE_FAIRY_ENC = "ZombieFairy";
-  private static final String ZOMBIE_FAIRY_ENC_ZHS = "\u50f5\u5c38\u5996\u7cbe";
+  //private static final String ZOMBIE_FAIRY_ENC_ZHS = "\u50f5\u5c38\u5996\u7cbe";
   private static final String MOD_BADGE = "img/UI/badge.png";
 
   //card backgrounds
@@ -230,7 +228,7 @@ public class ThMod implements PostExhaustSubscriber,
 
   public static int typhoonCounter = 0;
 
-  public static boolean OrinEvent = false;
+  //public static boolean OrinEvent = false;
 
   private ArrayList<AbstractCard> cardsToAdd = new ArrayList<>();
   //private ArrayList<AbstractRelic> relicsToAdd = new ArrayList<>();

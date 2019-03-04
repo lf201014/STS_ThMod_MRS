@@ -27,18 +27,20 @@ public class EventHorizonPower
     this.owner = owner;
     this.amount = amount;
     this.type = AbstractPower.PowerType.BUFF;
-    updateDescription();
-    this.img = new Texture("img/powers/darkness.png");
+    this.img = new Texture("img/powers/eventHorizon.png");
     this.cnt = amount;
+    updateDescription();
   }
 
   public void atStartOfTurnPostDraw() {
     this.cnt = this.amount;
+    updateDescription();
   }
 
   public void stackPower(int stackAmount) {
     super.stackPower(stackAmount);
     this.cnt += stackAmount;
+    updateDescription();
   }
 
   public void onSpecificTrigger() {
@@ -55,6 +57,7 @@ public class EventHorizonPower
           new DiscToHandATKOnly(1)
       );
       this.cnt--;
+      updateDescription();
     }
 
     ThMod.logger.info("EventHorizonPower : Done ; counter : " + this.cnt);
