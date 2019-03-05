@@ -46,7 +46,7 @@
   "FinalSpark": {
     "NAME": "Super étincelle",
     "DESCRIPTION": "Coûte 1 [E] en moins pour chaque Étincelle jouée ce combat. NL Infligez !D! dégâts à TOUS les ennemis. NL Réinitialise le coût de cette carte.",
-    "UPGRADE_DESCRIPTION": "NL Conservez. Coûte 1 [E] en moins pour chaque Étincelle jouée ce combat. NL Infligez !D! dégâts à TOUS les ennemis. NL Réinitialise le coût de cette carte."
+    "UPGRADE_DESCRIPTION": "Conservez. Coûte 1 [E] en moins pour chaque Étincelle jouée ce combat. NL Infligez !D! dégâts à TOUS les ennemis. NL Réinitialise le coût de cette carte."
   },
   "GrandCross": {
     "NAME": "Grande croix",
@@ -277,7 +277,7 @@
   },
   "TreasureHunter": {
     "NAME": "Chasseur de trésor",
-    "DESCRIPTION": "Infligez !D! dégâts. NL si cela tue un ennemi qui n'est pas un sbire d'élite ou de boss, à la fin du combat obtenez une relique au hasard. NL Épuisement.",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Si cela tue un ennemi qui n'est pas un sbire d'élite ou de boss, à la fin du combat obtenez une relique au hasard. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "Robbery": {
@@ -323,7 +323,7 @@
   "DarkMatter": {
     "NAME": "Matière noire",
     "DESCRIPTION": "Ne peut-être jouée qu'une seule fois par tour. NL Ajoutez 2 copies de cette carte à votre pioche. Piochez 1 carte. Lorsque cette carte est Épuisée, gagnez !B! d'Armure. NL Éthérée.",
-    "UPGRADE_DESCRIPTION": "Ne peut-être jouée qu'une seule fois par tour.NL Ajoutez 2 copies de cette carte à votre pioche. Piochez 1 carte. Lorsque cette carte est Épuisée, gagnez !B! d'Armure. NL Éthérée.",
+    "UPGRADE_DESCRIPTION": "Ne peut-être jouée qu'une seule fois par tour. NL Ajoutez 2 copies de cette carte à votre pioche. Piochez 1 carte. Lorsque cette carte est Épuisée, gagnez !B! d'Armure. NL Éthérée.",
     "EXTENDED_DESCRIPTION":[
       "Je ne peux pas jouer Matière noire à nouveau ce tour.",
       ""
