@@ -1,7 +1,7 @@
 {
   "Strike_MRS": {
     "NAME": "Petite étincelle",
-    "DESCRIPTION": "Infligez !D! dégat(s)."
+    "DESCRIPTION": "Infligez !D! dégât(s)."
   },
   "Defend_MRS": {
     "NAME": "Défense",
@@ -9,62 +9,62 @@
   },
   "AsteroidBelt": {
     "NAME": "Ceinture d'astéroïdes",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Amplifier  [E]  : Au Prochain tour, Gagnez !B! d'Armure."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Amplifier  [E]  : Au prochain tour, gagnez !B! d'Armure."
   },
   "BigCrunch": {
     "NAME": "Cassure",
-    "DESCRIPTION": "Épuisez la moitié des cartes dans votre défausse et votre pioche. Gagnez  [E] et piochez 1 carte pour chaques !M! cartes épuisez. NL Épuisement."
+    "DESCRIPTION": "Épuisez la moitié des cartes dans votre défausse et votre pioche. Gagnez  [E] et piochez 1 carte pour chaque !M! carte épuisée. NL Épuisement."
   },
   "BlazingStar": {
     "NAME": "Étoile flamboyante",
-    "DESCRIPTION": "Infligez !B! dégats. Infligez !M! dégats additionnels pour chaque brûlure dans votre main. NL Amplifier  [E]  : Infligez double dégats. "
+    "DESCRIPTION": "Infligez !B! dégâts. Infligez !M! dégats additionnels pour chaque brûlure dans votre main. NL Amplifier  [E]  : Infligez le double de dégâts. "
   },
   "DarkSpark": {
     "NAME": "Étincelle sombre",
-    "DESCRIPTION": "Épuisez toutes les cartes en main sauf attaques. NL Infligez !D! dégats à TOUS les ennemis.",
+    "DESCRIPTION": "Épuisez toutes les cartes de votre main (sauf Attaques). NL Infligez !D! dégâts à TOUS les ennemis.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   },
   "DeepEcoloBomb": {
     "NAME": "Bombe écologique",
-    "DESCRIPTION": "Infligez !D! dégats à un ennemi aléatoire, réduisez sa force de !M! se tour. NL Amplifier  [E]  : Appliquer à nouveau cet effet."
+    "DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire, réduisez sa force de !M! ce tour. NL Amplifier  [E]  : Applique à nouveau cet effet."
   },
   "DoubleSpark": {
     "NAME": "Double éclair",
-    "DESCRIPTION": "Infligez !D! dégats. Ajoutez 1 étincelle à votre main.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégats. Ajoutez 1 étincelle améliorée à votre main."
+    "DESCRIPTION": "Infligez !D! dégâts. Ajoutez 1 étincelle à votre main.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. Ajoutez 1 étincelle améliorée à votre main."
   },
   "EarthLightRay": {
     "NAME": "Rayon de lumière",
-    "DESCRIPTION": "Soignez !M! PV. Épuisement. NL Amplifier  [E]  : Ajoutez une carte aléatoire de votre défausse à votre main.",
-    "UPGRADE_DESCRIPTION": "Soignez !M! PV. Épuisement. NL Amplifier  [E]  : Ajoutez une carte de votre défausse à votre main."
+    "DESCRIPTION": "Soigne !M! PV. Épuisement. NL Amplifier  [E]  : Ajoutez une carte aléatoire de votre défausse à votre main.",
+    "UPGRADE_DESCRIPTION": "Soigne !M! PV. Épuisement. NL Amplifier  [E]  : Ajoutez une carte de votre défausse à votre main."
   },
   "EscapeVelocity": {
     "NAME": "Vitesse de fuite",
-    "DESCRIPTION": "Au début de chaque tour, piochez 2 cartes supplémentaires et ajouter une brûlure à votre main.",
-    "UPGRADE_DESCRIPTION": "Inné. Au début de chaque tour, piochez 2 cartes supplémentaires et ajouter une brûlure à votre main."
+    "DESCRIPTION": "Au début de chaque tour, piochez 2 cartes supplémentaires et ajoutez une brûlure à votre main.",
+    "UPGRADE_DESCRIPTION": "Inné. Au début de chaque tour, piochez 2 cartes supplémentaires et ajoutez une brûlure à votre main."
   },
   "FinalSpark": {
     "NAME": "Super étincelle",
-    "DESCRIPTION": "Coûte 1 [E] de moins pour chaque étincelle jouer ce combat. NL Infligez !D! dégats à TOUS les ennemis. NL Réinitialisez le coût de cette carte.",
-    "UPGRADE_DESCRIPTION": "NL Conservez.  Coûte 1 [E] de moins pour chaque étincelle jouer ce combat. NL Infligez !D! dégats à TOUS les ennemis. NL Réinitialisez le coût de cette carte."
+    "DESCRIPTION": "Coûte 1 [E] en moins pour chaque étincelle jouée ce combat. NL Infligez !D! dégâts à TOUS les ennemis. NL Réinitialise le coût de cette carte.",
+    "UPGRADE_DESCRIPTION": "NL Conservez.  Coûte 1 [E] en moins pour chaque étincelle jouée ce combat. NL Infligez !D! dégâts à TOUS les ennemis. NL Réinitialise le coût de cette carte."
   },
   "GrandCross": {
     "NAME": "Grande croix",
-    "DESCRIPTION": "Infligez !D! dégats. NL Coûte 0 si vous avez activer un effet amplifier se tour."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Coûte 0 si vous avez activé un effet Amplifier se tour."
   },
   "GravityBeat": {
     "NAME": "Battement de gravité",
-    "DESCRIPTION": "Infligez !D! dégats et appliques !M! faiblesse à TOUS les ennemis."
+    "DESCRIPTION": "Infligez !D! dégâts et appliquez !M! faiblesse à TOUS les ennemis."
   },
   "IllusionStar": {
     "NAME": "Étoile illusoire",
-    "DESCRIPTION": "Ajoutez !M! cartes aléatoire à votre main. Ajoutez une carte de votre main sur la haut de votre pioche. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Ajoutez !M! cartes aléatoire à votre main. Ajoutez une carte de votre main sur la haut de votre pioche."
+    "DESCRIPTION": "Ajoutez !M! cartes aléatoires à votre main. Placez une carte de votre main sur la haut de votre pioche. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Ajoutez !M! cartes aléatoire à votre main. Placez une carte de votre main sur la haut de votre pioche."
   },
   "MachineGunSpark": {
     "NAME": "Mitraille d'étincelles",
-    "DESCRIPTION": "Infligez !D! dégats !M! fois. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégats 8 fois. NL Épuisement."
+    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts 8 fois. NL Épuisement."
   },
   "MagicAbsorber": {
     "NAME": "Absorbeur de magie",
@@ -72,20 +72,20 @@
   },
   "MasterSpark": {
     "NAME": "Étincelle de maître",
-    "DESCRIPTION": "Infligez !D! dégats. NL Amplifier  [E]  : Infligez !B! à la place.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégats. NL Amplifier  [E]  : Infligez 9 dégats en plus."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Amplifier  [E]  : Infligez !B! à la place.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Amplifier  [E]  : Infligez 9 dégâts en plus."
   },
   "MeteoricShower": {
     "NAME": "Douche métonique",
-    "DESCRIPTION": "Épuisez jusqu'à X + 1 cartes. NL Infligez !D! dégats 2 fois pour chaques cartes Épuisées , ou 3 fois pour chaques brûlures Épuisées."
+    "DESCRIPTION": "Épuisez jusqu'à X + 1 cartes. NL Infligez !D! dégâts 2 fois pour chaque carte Épuisée, ou 3 fois pour chaque brûlure Épuisée."
   },
   "MilkyWay": {
     "NAME": "Voie lactée",
-    "DESCRIPTION": "Gagnez !B! d'Armure. Piochez 1 carte . NL TOUTES les attaques dans votre main inflige !M! dégats supplémentaires ce combat."
+    "DESCRIPTION": "Gagnez !B! d'Armure. Piochez 1 carte . NL TOUTES les attaques dans votre main infligent !M! dégâts supplémentaires ce combat."
   },
   "NonDirectionalLaser": {
     "NAME": "Laser incontrôlable",
-    "DESCRIPTION": "Infligez !D! dégats à TOUS les ennemis, puis Infligez !D! dégats à un ennemis aléatoire."
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis, puis infligez !D! dégâts à un ennemi aléatoire."
   },
   "Occultation": {
     "NAME": "Occultation",
@@ -103,17 +103,17 @@
   },
   "PolarisUnique": {
     "NAME": "Polaris Unique",
-    "DESCRIPTION": "Inné. Ajoutez une étoile guidante à votre pioche. Gagnez  [E] au début de votre tour  tant qu'elle est dans votre pioche.",
-    "UPGRADE_DESCRIPTION": "Inné. Ajoutez une étoile guidante à votre pioche. Gagnez  [E] au début de votre tour  tant qu'elle est dans votre pioche."
+    "DESCRIPTION": "Inné. Ajoutez une étoile guidante à votre pioche. Gagnez  [E] au début de votre tour tant qu'elle est dans votre pioche (ne s'additionne pas).",
+    "UPGRADE_DESCRIPTION": "Inné. Ajoutez une étoile guidante à votre pioche. Gagnez  [E] au début de votre tour tant qu'elle est dans votre pioche."
   },
   "SatelliteIllusion": {
-    "NAME": "Illusion Satellite",
-    "DESCRIPTION": "Gagnez  [E]  lorsque le nombre de carte de votre pioche augmente lors de votre tour.",
-    "UPGRADE_DESCRIPTION": "Inné. Gagnez  [E]  lorsque le nombre de carte de votre pioche augmente lors de votre tour."
+    "NAME": "Illusion satellite",
+    "DESCRIPTION": "Gagnez  [E]  lorsque le nombre de cartes de votre pioche augmente durant votre tour.",
+    "UPGRADE_DESCRIPTION": "Inné. Gagnez  [E]  lorsque le nombre de cartes de votre pioche augmente durant votre tour."
   },
   "ShootTheMoon": {
     "NAME": "Visez la lune",
-    "DESCRIPTION": "Retirez un buff aléatoirement si votre ennemi n'est pas un boss. Infligez !D! dégats. NL Amplifier  [E]  : Retirez TOUS les buffs et infligez !B! dégats.",
+    "DESCRIPTION": "Retirez un buff aléatoirement si votre ennemi n'est pas un boss. Infligez !D! dégâts. NL Amplifier  [E]  : Retirez TOUS les buffs et infligez !B! dégâts.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWW"
   },
   "StarDustReverie": {
