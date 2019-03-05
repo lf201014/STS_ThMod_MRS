@@ -45,10 +45,10 @@
     ]
   },
   "TempStrength": {
-    "NAME": "Temproy Strength",
+    "NAME": "Force temporaire",
     "DESCRIPTIONS": [
-      "Your next blow deals additional  #b",
-      " damage."
+      "Votre prochaine explosion cause  #b",
+      " dégat(s) additionnels."
     ]
   },
   "TempStrengthLoss": {
@@ -62,7 +62,7 @@
     "NAME": "Energie supplémentaire",
     "DESCRIPTIONS": [
       "Gagnez ",
-      " énergie supplémentaire chaque tours."
+      " énergie supplémentaire chaque tour."
     ]
   },
   "ChargeUpPower": {
@@ -90,7 +90,7 @@
   "Charged": {
     "NAME": "Chargé !",
     "DESCRIPTIONS": [
-      "Votre prochaine exlosion infligera #b",
+      "Votre prochaine explosion infligera #b",
       " fois les dégats"
     ]
   },
@@ -111,7 +111,7 @@
   "EnergyFlowPower": {
     "NAME": "Flux d'énergie",
     "DESCRIPTIONS": [
-      "A la fin du tour, gagnez #b",
+      "À la fin du tour, gagnez #b",
       " #yCharge ."
     ]
   },
@@ -132,14 +132,14 @@
   "WitchOfGreedGold": {
     "NAME": "Sorcière de la cupidité",
     "DESCRIPTIONS": [
-      "A la fin du combat, gagnez  #b",
+      "À la fin du combat, gagnez  #b",
       " or."
     ]
   },
   "WitchOfGreedPotion": {
     "NAME": "Sorcière de la cupidité",
     "DESCRIPTIONS": [
-      "A la fin du combat, obtenez  #b",
+      "À la fin du combat, obtenez  #b",
       " potion(s) aléatoire(s)."
     ]
   },
@@ -182,7 +182,7 @@
   "GalacticHaloPower": {
     "NAME": "Halo galactique",
     "DESCRIPTIONS": [
-      "A la fin du tour, gagnez  #b",
+      "À la fin du tour, gagnez  #b",
       " #yArmure pour chaque #yAttaque que vous avez joué ce tour."
     ]
   },
@@ -238,7 +238,7 @@
   "Diaspora": {
     "NAME": "Diaspora",
     "DESCRIPTIONS": [
-      "A la fin du tour, tuez instantanément cette créature si ses points de vie sont inférieurs à #b",
+      "À la fin du tour, tuez instantanément cette créature si ses points de vie sont inférieurs à #b",
       " ."
     ]
   },
@@ -259,7 +259,7 @@
   "LimboContact": {
     "NAME": "Contact mort-vivant",
     "DESCRIPTIONS": [
-      "Lorsque vous prenez des dégats de cet ennemi, gagnez un de #yFantôme .",
+      "Lorsque vous recevez des dégats de cet ennemi, gagnez un de #yFantôme .",
       "WWWWWWWWWWW"
     ]
   },
@@ -273,7 +273,7 @@
   "InfernoClaw": {
     "NAME": "Inferno Claw",
     "DESCRIPTIONS": [
-      "Whenever you receive attack damage from this enemy, add a #yBurn into your draw pile.",
+      "Chaque fois que cet ennemi vous inflige des dégats d'attaque, ajoutez une  #yBrûlure  dans votre pile.",
       "WWWWWWWWWWW"
     ]
   },
