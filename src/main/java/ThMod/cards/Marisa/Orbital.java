@@ -15,7 +15,7 @@ import basemod.abstracts.CustomCard;
 public class Orbital extends CustomCard {
 
   public static final String ID = "Orbital";
-  public static final String IMG_PATH = "img/cards/temp/orbit.png";
+  public static final String IMG_PATH = "img/cards/orbit.png";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;

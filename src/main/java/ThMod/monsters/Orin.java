@@ -69,7 +69,8 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   private static final int SUMMON_FIRST = 4;
   private static final int SUMMON_THRESHOLD = 2;
   private static final int EXECUTE = 8;
-  private static final int EXECUTE_A = 10 - 4;
+  private static final int EXECUTE_A = 10;
+  private static final int EXECUTE_THRESHOLD = 6;
   private int doubleTap;
   private int catTap;
   private int hellFireDmg;
@@ -350,7 +351,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
     if (!AbstractDungeon.player.hasPower("Wraith")) {
       return false;
     } else {
-      return AbstractDungeon.player.getPower("Wraith").amount >= 10;
+      return AbstractDungeon.player.getPower("Wraith").amount > EXECUTE_THRESHOLD;
     }
   }
 
@@ -363,6 +364,9 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
             num
     );
     if (this.form1) {
+      if (this.halfDead){
+        return;
+      }
       turnCount++;
       switch (turnCount) {
         case 1:
