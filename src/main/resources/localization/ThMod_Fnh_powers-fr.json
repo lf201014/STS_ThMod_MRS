@@ -48,13 +48,13 @@
     "NAME": "Force temporaire",
     "DESCRIPTIONS": [
       "Votre prochaine explosion cause  #b",
-      " dégat(s) additionnels."
+      " dégât(s) additionnels."
     ]
   },
   "TempStrengthLoss": {
     "NAME": "Perte de force temporaire",
     "DESCRIPTIONS": [
-      "Les dégats de cette créature sont diminués de #b",
+      "Les dégâts de cette créature sont diminués de #b",
       " ce tour-ci."
     ]
   },
@@ -71,7 +71,7 @@
       "Vous avez  #b",
       " #yCharge ",
       "vous donnant  #b",
-      " fois de dégats."
+      " fois de dégâts."
     ]
   },
   "PolarisUniquePower": {
@@ -91,7 +91,7 @@
     "NAME": "Chargé !",
     "DESCRIPTIONS": [
       "Votre prochaine explosion infligera #b",
-      " fois les dégats"
+      " fois les dégâts"
     ]
   },
   "BlazeAwayPower": {
@@ -104,7 +104,7 @@
   "MPPower": {
     "NAME": "Puissance maximale",
     "DESCRIPTIONS": [
-      "Vos dégats sont multipliés par  #b",
+      "Vos dégâts sont multipliés par  #b",
       " ce tour."
     ]
   },
@@ -126,7 +126,7 @@
     "NAME": "Singualrité",
     "DESCRIPTIONS": [
       "Lorsque vous jouez une carte qui coûte 0, ajoutez une #yAttack à votre main infligeant #b",
-      " dégats additionnels ce combat."
+      " dégâts additionnels ce combat."
     ]
   },
   "WitchOfGreedGold": {
@@ -162,7 +162,7 @@
     "DESCRIPTIONS": [
       "Lorsque vous #yExhaust une #yBrûlure , gagnez  #b",
       "Lorsque vous #yExhaust une #yMalédiction or un #Statut , gagnez  #b",
-      " #yStrength . NL Vous ne prenez plus de dégats des #yBrûlure . NL #yExhaust votre main lorsque votre tour se termine."
+      " #yStrength . NL Vous ne prenez plus de dégâts des #yBrûlure . NL #yExhaust votre main lorsque votre tour se termine."
     ]
   },
   "CasketOfStarPlusPower": {
@@ -259,7 +259,7 @@
   "LimboContact": {
     "NAME": "Contact mort-vivant",
     "DESCRIPTIONS": [
-      "Lorsque vous recevez des dégats de cet ennemi, gagnez un de #yFantôme .",
+      "Lorsque vous recevez des dégâts de cet ennemi, gagnez un de #yFantôme .",
       "WWWWWWWWWWW"
     ]
   },
