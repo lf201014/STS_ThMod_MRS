@@ -29,7 +29,7 @@
       "NAMES": [
         "Étincelle", "étincelle"
       ],
-      "DESCRIPTION":"Étincelle est une carte attaque coûtant #b0 énergie et s'épuise après utilisation."
+      "DESCRIPTION":"Étincelle est une carte attaque coûtant #b0 énergie et s'épuisant après utilisation."
     },
     {
       "NAMES": [
@@ -39,9 +39,9 @@
     },
     {
       "NAMES": [
-        "Wraith","wraith"
+        "Spectre","spectre"
       ],
-      "DESCRIPTION":"Wraith will exhaust a random card in your hand after the start of your turn."
+      "DESCRIPTION":"Spectre épuise une carte aléatoire dans votre main après le début de votre tour."
     },
     {
       "NAMES": [
