@@ -1,7 +1,7 @@
 {
   "Strike_MRS": {
     "NAME": "Petite étincelle",
-    "DESCRIPTION": "Infligez !D! dégât(s)."
+    "DESCRIPTION": "Infligez !D! dégâts."
   },
   "Defend_MRS": {
     "NAME": "Défense",
@@ -13,7 +13,7 @@
   },
   "BigCrunch": {
     "NAME": "Cassure",
-    "DESCRIPTION": "Épuisez la moitié des cartes dans votre défausse et votre pioche. Gagnez  [E] et piochez 1 carte pour chaque !M! carte épuisée. NL Épuisement."
+    "DESCRIPTION": "Épuisez la moitié des cartes dans votre défausse et votre pioche. Gagnez  [E] et piochez 1 carte pour chaque !M! cartes épuisées. NL Épuisement."
   },
   "BlazingStar": {
     "NAME": "Étoile flamboyante",
@@ -30,8 +30,8 @@
   },
   "DoubleSpark": {
     "NAME": "Double éclair",
-    "DESCRIPTION": "Infligez !D! dégâts. Ajoutez 1 étincelle à votre main.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. Ajoutez 1 étincelle améliorée à votre main."
+    "DESCRIPTION": "Infligez !D! dégâts. Ajoutez 1 Étincelle à votre main.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. Ajoutez 1 Étincelle améliorée à votre main."
   },
   "EarthLightRay": {
     "NAME": "Rayon de lumière",
@@ -45,8 +45,8 @@
   },
   "FinalSpark": {
     "NAME": "Super étincelle",
-    "DESCRIPTION": "Coûte 1 [E] en moins pour chaque étincelle jouée ce combat. NL Infligez !D! dégâts à TOUS les ennemis. NL Réinitialise le coût de cette carte.",
-    "UPGRADE_DESCRIPTION": "NL Conservez.  Coûte 1 [E] en moins pour chaque étincelle jouée ce combat. NL Infligez !D! dégâts à TOUS les ennemis. NL Réinitialise le coût de cette carte."
+    "DESCRIPTION": "Coûte 1 [E] en moins pour chaque Étincelle jouée ce combat. NL Infligez !D! dégâts à TOUS les ennemis. NL Réinitialise le coût de cette carte.",
+    "UPGRADE_DESCRIPTION": "NL Conservez. Coûte 1 [E] en moins pour chaque Étincelle jouée ce combat. NL Infligez !D! dégâts à TOUS les ennemis. NL Réinitialise le coût de cette carte."
   },
   "GrandCross": {
     "NAME": "Grande croix",
@@ -112,33 +112,33 @@
     "UPGRADE_DESCRIPTION": "Inné. Gagnez  [E]  lorsque le nombre de cartes de votre pioche augmente durant votre tour."
   },
   "ShootTheMoon": {
-    "NAME": "Visez la lune",
+    "NAME": "Viser la lune",
     "DESCRIPTION": "Retirez un buff aléatoirement si votre ennemi n'est pas un boss. Infligez !D! dégâts. NL Amplifier  [E]  : Retirez TOUS les buffs et infligez !B! dégâts.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWW"
   },
   "StarDustReverie": {
     "NAME": "Rêverie d'étoiles",
-    "DESCRIPTION": " Mélangez votre main à votre pioche, puis ajoutez autant de carte aléatoirement à votre main. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Mélangez votre main à votre pioche, puis ajoutez autant de carte améliorée aléatoirement à votre main. NL Épuisement."
+    "DESCRIPTION": "Mélangez votre main à votre pioche, puis ajoutez autant de cartes aléatoires à votre main. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Mélangez votre main à votre pioche, puis ajoutez autant de cartes aléatoires améliorées à votre main. NL Épuisement."
   },
   "UltraShortWave": {
     "NAME": "Onde courte ultime",
-    "DESCRIPTION": "Gagnez !B!  [E]  et !M! Charges. Augment l'énergie et la charge gagnée de cette carte de 1 pour ce combat.",
+    "DESCRIPTION": "Gagnez !B!  [E] et !M! Charges. Augmente l'énergie et la charge de cette carte de 1 pour ce combat.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MillisecondPulsars": {
     "NAME": "Pulsar",
     "DESCRIPTION": "L'effet Amplifier ne coûte pas de [E] ce combat.",
-    "UPGRADE_DESCRIPTION": "Inné. L'effet NL Amplifier ne coûte pas de [E] ce combat."
+    "UPGRADE_DESCRIPTION": "Inné. L'effet Amplifier ne coûte pas de [E] ce combat."
   },
   "Spark": {
     "NAME": "Étincelle",
-    "DESCRIPTION": "Infligez !D! dégats. NL Épuisement.",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "UpSweep": {
     "NAME": "Balayage ascendant",
-    "DESCRIPTION": "Infligez !D! dégats. Gagnez !M! Charge.",
+    "DESCRIPTION": "Infligez !D! dégâts. Gagnez !M! Charge.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "GuidingStar": {
@@ -148,67 +148,67 @@
   },
   "OrrerysSun": {
     "NAME": "Soleil planétaire",
-    "DESCRIPTION": "Quand une charge est consumée, Infligez !M! dégats à TOUS les ennemis.",
+    "DESCRIPTION": "Quand une charge est consumée, infligez !M! dégâts à TOUS les ennemis.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ChargingUp": {
     "NAME": "Charge",
     "DESCRIPTION": "Gagnez !M! Charge. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Gagnez !M! Charge. NL Amplifier  [E]  : Gagnez 3 charge additionnels."
+    "UPGRADE_DESCRIPTION": "Gagnez !M! Charge. NL Amplifier  [E]  : Gagnez 3 charges additionnelles."
   },
   "LuminesStrike": {
     "NAME": "Coup lumineux",
-    "DESCRIPTION": " Inflige des dégats égaux à 2 fois le nombre de carte dans votre main. NL Amplifier [E]  : Inflige des dégats égaux à 4 fois votre énergie à la place.",
-    "UPGRADE_DESCRIPTION": "Inflige des dégats égaux à 3 fois le nombre de carte dans votre main. NL Amplifier [E]  : Inflige des dégats égaux à 5 fois votre énergie à la place."
+    "DESCRIPTION": "Infligez des dégâts égaux à 2 fois le nombre de cartes dans votre main. NL Amplifier [E]  : Infligez des dégats égaux à 4 fois votre énergie à la place ( !B! dégâts).",
+    "UPGRADE_DESCRIPTION": "Infligez des dégats égaux à 3 fois le nombre de cartes dans votre main. NL Amplifier [E]  : Infligez des dégats égaux à 5 fois votre énergie à la place ( !B! dégâts)."
   },
   "OpenUniverse": {
     "NAME": "Univers ouvert",
-    "DESCRIPTION": "Ajoutez 5 cartes aléatoires dans votre pioche. Piochez !M! cartes. Chaque carte à  !D! % de chance d'être améliorée.",
-    "UPGRADE_DESCRIPTION": "Shuffle 5 random cards into your draw pile. Draw !M! cards."
+    "DESCRIPTION": "Ajoutez 5 cartes aléatoires à votre pioche. Piochez !M! cartes. Chaque carte à  !D! % de chances d'être améliorée.",
+    "UPGRADE_DESCRIPTION": "Ajoutez 5 cartes aléatoires à votre pioche. Piochez !M! cartes."
   },
   "BlazeAway": {
     "NAME": "Flambée",
-    "DESCRIPTION": "Ajouter une copie de la dernière attaque jouée ce tour dans votre main. NL Elle coûte 0 ce tour ci. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Ajouter 2 copies de la dernière attaque jouée ce tour dans votre main. NL Elle coûte 0 ce tour ci. NL Épuisement.",
+    "DESCRIPTION": "Ajoutez une copie de la dernière Attaque jouée ce tour dans votre main. NL Elle coûte 0 ce tour. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Ajoutez 2 copies de la dernière Attaque jouée ce tour dans votre main. NL Elle coûte 0 ce tour. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
       " NL (Dernière attaque : ",
       " ).",
-      " NL (Vous n'avez pas jouer d'attaque ce tour ci.)"
+      " NL (Vous n'avez pas joué d'Attaque ce tour.)"
     ]
   },
   "MaximisePower": {
     "NAME": "Puissance maximale",
-    "DESCRIPTION": "Convertissez vos charges en énergie.Ajouter 1 Épuisement à votre main. Vos dégats d'attaques sont doublés ce tour ci. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Convertissez vos charges en énergie.Ajouter 1 Épuisement à votre main. Vos dégats d'attaques sont doublés ce tour ci."
+    "DESCRIPTION": "Convertissez vos charges en énergie. Ajoute 1 Épuisement à votre main. Vos dégâts d'attaque sont doublés ce tour. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Convertissez vos charges en énergie. Ajoute 1 Épuisement à votre main. Vos dégâts d'attaque sont doublés ce tour."
   },
   "StarlightTyphoon": {
     "NAME": "Typhon de lumière",
-    "DESCRIPTION": "Infligez des dégats égaux à !M! fois le nombre de carte qui coûte 0 jouées ce combat à TOUS les ennemis.",
-    "UPGRADE_DESCRIPTION": " Épuisez TOUTES les cartes qui ne sont pas des attaques dans votre main. Ajouter le même nombre d'Étincelles améliorées à votre main.",
+    "DESCRIPTION": "Infligez des dégâts égaux à !M! fois le nombre de cartes qui coûtent 0 jouées ce combat à TOUS les ennemis.",
+    "UPGRADE_DESCRIPTION": "Épuisez TOUTES les cartes qui ne sont pas des Attaques dans votre main. Ajoutez le même nombre d'Étincelles améliorées à votre main.",
     "EXTENDED_DESCRIPTION": [
-      " NL (Inflige !B! dégats.)",
+      " NL (Inflige !B! dégâts.)",
       ""
     ]
   },
   "StarlightTyphoon_D": {
     "NAME": "Typhon de lumière",
-    "DESCRIPTION": " Épuisez TOUTES les cartes qui ne sont pas des attaques dans votre main. Ajouter le même nombre d'Étincelles à votre main.",
-    "UPGRADE_DESCRIPTION": " Épuisez TOUTES les cartes qui ne sont pas des attaques dans votre main. Ajouter le même nombre d'Étincelles améliorées à votre main."
+    "DESCRIPTION": "Épuisez TOUTES les cartes qui ne sont pas des Attaques dans votre main. Ajoutez le même nombre d'Étincelles à votre main.",
+    "UPGRADE_DESCRIPTION": "Épuisez TOUTES les cartes qui ne sont pas des Attaques dans votre main. Ajoutez le même nombre d'Étincelles améliorées à votre main."
   },
   "SuperPerseids": {
     "NAME": "Super Perséides",
-    "DESCRIPTION": "Injouable. Quand cette carte est piochée, gagnez[E]. NL Si cette carte est épuisée, infligez !D! dégats à un ennemi au hasard.",
+    "DESCRIPTION": "Injouable. Quand cette carte est piochée, gagnez[E]. NL Si cette carte est épuisée, infligez !D! dégâts à un ennemi au hasard.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MysteriousBeam": {
     "NAME": "Rayon mystérieux",
-    "DESCRIPTION": "Ajouter un attaque aléatoire à votre main. Infligez des dégats égaux aux dégats de la carte ajoutée.",
-    "UPGRADE_DESCRIPTION": "Ajouter un attaque améliorée aléatoire à votre main. Infligez des dégats égaux aux dégats de la carte ajoutée."
+    "DESCRIPTION": "Ajoutez un Attaque aléatoire à votre main. Infligez des dégâts égaux aux dégâts de la carte ajoutée.",
+    "UPGRADE_DESCRIPTION": "Ajoutez un Attaque améliorée aléatoire à votre main. Infligez des dégâts égaux aux dégâts de la carte ajoutée."
   },
   "ShootingEcho": {
     "NAME": "Écho de tir",
-    "DESCRIPTION": " Épuisez une carte au hasard. Ajoutez un écho de tir à votre main. NL Infligez !D! dégats. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Épuisez une carte. Ajoutez un écho de tir à votre main. NL Infligez !D! dégats. NL Épuisement."
+    "DESCRIPTION": " Épuisez une carte au hasard. Ajoutez un Écho de tir à votre main. NL Infligez !D! dégâts. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Épuisez une carte. Ajoutez un Écho de tir à votre main. NL Infligez !D! dégâts. NL Épuisement."
   },
   "EnergyFlow": {
     "NAME": "Flux d'énergie",
@@ -217,27 +217,27 @@
   },
   "PowerUp": {
     "NAME": "Amélioration!",
-    "DESCRIPTION": "TOUTES les attaques dans votre main inflige !M! dégats additionnels ce combat.",
+    "DESCRIPTION": "TOUTES les Attaques dans votre main infligent !M! dégâts additionnels ce combat.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WitchLeyline": {
-    "NAME": "ligne de sorcière",
-    "DESCRIPTION": "Infligez !D! dégats. Ajoutez 2 brûlures à votre main.",
+    "NAME": "Ligne de sorcière",
+    "DESCRIPTION": "Infligez !D! dégâts. Ajoutez 2 brûlures à votre main.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "JA": {
     "NAME": "Échauffement !",
-    "DESCRIPTION": "Infligez !D! dégats. Ajoutez Balayage ascendant, étincelle et ligne de sorcière à votre main.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégats. Ajoutez Balayage ascendant, étincelle et ligne de sorcière à votre main et améliorées les."
+    "DESCRIPTION": "Infligez !D! dégâts. Ajoutez Balayage ascendant, Étincelle et Ligne de sorcière à votre main.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. Ajoutez Balayage ascendant, Étincelle et Ligne de sorcière à votre main et améliorez les."
   },
   "AbsoluteMagnitude": {
     "NAME": "Magnitude absolue",
-    "DESCRIPTION": "Inflige des dégats égaux à 2 fois votre charge.(Infligez !B! dégats).",
-    "UPGRADE_DESCRIPTION": "Inflige des dégats égaux à 3 fois votre charge.(Infligez !B! dégats)."
+    "DESCRIPTION": "Infligez des dégâts égaux à 2 fois votre Charge (Infligez !B! dégâts).",
+    "UPGRADE_DESCRIPTION": "Infligez des dégâts égaux à 3 fois votre Charge (Infligez !B! dégâts)."
   },
   "DragonMeteor": {
     "NAME": "Météor draconique",
-    "DESCRIPTION": "Infligez !B! dégats. NL infligez !M! dégats additionnels pour chaques cartes épuisées.",
+    "DESCRIPTION": "Infligez !B! dégâts. NL Infligez !M! dégâts additionnels pour chaque carte épuisée ce combat.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "EventHorizon": {
