@@ -11,14 +11,14 @@
     "DESCRIPTIONS": [
       "Piochez #b",
       " cartes supplémentaires et ajoutez #b",
-      " #yBrûlure(s) à votre main au début de chaque tours."
+      " #yBrûlure(s) à votre main au début de chaque tour."
     ]
   },
   "EventHorizonPower": {
     "NAME": "Horizon des événements",
     "DESCRIPTIONS": [
-      "Vous pouvez mettre une attaque de votre défausse dans votre main lorsque vous enclenchez un effet amplifier, jusqu'à #b",
-      " fois chaques tours.",
+      "Vous pouvez mettre une attaque de votre défausse dans votre main lorsque vous enclenchez un effet amplifié, jusqu'à #b",
+      " fois chaque tour.",
       "( ",
       " charge(s) restantes)"
     ]
@@ -33,7 +33,7 @@
   "MilliPulsaPower": {
     "NAME": "Pulsar",
     "DESCRIPTIONS": [
-      "Les effets #yAmplifier ne nécessite plus de [B] supplémentaires pour être activés.",
+      "Les effets #yAmplifier ne nécessitent plus de [B] supplémentaires pour être activés.",
       ""
     ]
   },
@@ -45,16 +45,16 @@
     ]
   },
   "TempStrength": {
-    "NAME": "Temproy Strength",
+    "NAME": "Force temporaire",
     "DESCRIPTIONS": [
-      "Your next blow deals additional  #b",
-      " damage."
+      "Votre prochaine explosion cause  #b",
+      " dégât(s) additionnels."
     ]
   },
   "TempStrengthLoss": {
     "NAME": "Perte de force temporaire",
     "DESCRIPTIONS": [
-      "Les dégats de cette créature est diminuée de #b",
+      "Les dégâts de cette créature sont diminués de #b",
       " ce tour-ci."
     ]
   },
@@ -62,7 +62,7 @@
     "NAME": "Energie supplémentaire",
     "DESCRIPTIONS": [
       "Gagnez ",
-      " énergie supplémentaire chaque tours."
+      " énergie supplémentaire chaque tour."
     ]
   },
   "ChargeUpPower": {
@@ -71,13 +71,13 @@
       "Vous avez  #b",
       " #yCharge ",
       "vous donnant  #b",
-      " fois de dégats."
+      " fois de dégâts."
     ]
   },
   "PolarisUniquePower": {
     "NAME": "Étoile guidante",
     "DESCRIPTIONS": [
-      "Si #yÉtoile guidante est dans votre pioches, gagnez un [B] supplémentaire au début de chaque tour."
+      "Si #yÉtoile guidante est dans votre pioche, gagnez un [B] supplémentaire au début de chaque tour."
     ]
   },
   "OrrerysSunPower": {
@@ -88,10 +88,10 @@
     ]
   },
   "Charged": {
-    "NAME": "Chargé!",
+    "NAME": "Chargé !",
     "DESCRIPTIONS": [
-      "Votre prochaine exlosion infligera #b",
-      " fois les dégats"
+      "Votre prochaine explosion infligera #b",
+      " fois les dégâts"
     ]
   },
   "BlazeAwayPower": {
@@ -104,14 +104,14 @@
   "MPPower": {
     "NAME": "Puissance maximale",
     "DESCRIPTIONS": [
-      "Vos dégats sont multipliés par  #b",
+      "Vos dégâts sont multipliés par  #b",
       " ce tour."
     ]
   },
   "EnergyFlowPower": {
     "NAME": "Flux d'énergie",
     "DESCRIPTIONS": [
-      "A la fin du tour,gagnez #b",
+      "À la fin du tour, gagnez #b",
       " #yCharge ."
     ]
   },
@@ -126,20 +126,20 @@
     "NAME": "Singualrité",
     "DESCRIPTIONS": [
       "Lorsque vous jouez une carte qui coûte 0, ajoutez une #yAttack à votre main infligeant #b",
-      " dégats additionnels ce combat."
+      " dégâts additionnels ce combat."
     ]
   },
   "WitchOfGreedGold": {
     "NAME": "Sorcière de la cupidité",
     "DESCRIPTIONS": [
-      "A la fin du combat, gagnez  #b",
-      " or ."
+      "À la fin du combat, gagnez  #b",
+      " or."
     ]
   },
   "WitchOfGreedPotion": {
     "NAME": "Sorcière de la cupidité",
     "DESCRIPTIONS": [
-      "A la fin du combat, obtenez  #b",
+      "À la fin du combat, obtenez  #b",
       " potion(s) aléatoire(s)."
     ]
   },
@@ -151,7 +151,7 @@
     ]
   },
   "OneTimeOffPower": {
-    "NAME": "temps d'arrêts",
+    "NAME": "Temps d'arrêts",
     "DESCRIPTIONS": [
       "Vous n'activerez pas d' #yAmplifier ce tour.",
       "WWWWWWWWWWW"
@@ -160,9 +160,9 @@
   "SuperNovaPower": {
     "NAME": "SuperNova",
     "DESCRIPTIONS": [
-      "Lorsque vous #yExhaust une #yBrûlure ,Gagnez  #b",
-      "Lorsque vous #yExhaust une #yMalédiction or un #Statut ,Gagnez  #b",
-      " #yStrength . NL Vous ne prenez plus de dégats des #yBrûlure . NL #yExhaust votre main lorsque votre tour ce termine."
+      "Lorsque vous #yExhaust une #yBrûlure , gagnez  #b",
+      "Lorsque vous #yExhaust une #yMalédiction or un #Statut , gagnez  #b",
+      " #yStrength . NL Vous ne prenez plus de dégâts des #yBrûlure . NL #yExhaust votre main lorsque votre tour se termine."
     ]
   },
   "CasketOfStarPlusPower": {
@@ -182,15 +182,15 @@
   "GalacticHaloPower": {
     "NAME": "Halo galactique",
     "DESCRIPTIONS": [
-      "A la fin du tour,gagnez  #b",
-      " #yArmure pour chaques #yAttaque que vous avez jouez ce tour."
+      "À la fin du tour, gagnez  #b",
+      " #yArmure pour chaque #yAttaque que vous avez joué ce tour."
     ]
   },
   "ManaRampagePower": {
     "NAME": "Déchainement de man",
     "DESCRIPTIONS": [
       "Votre prochaine #yAttaque sera jouée  #b",
-      " fois supplémentaire ce tour."
+      " fois supplémentaires ce tour."
     ]
   },
   "PropBagPower": {
@@ -210,8 +210,8 @@
   "DarkSparkPower": {
     "NAME": "Étincelle sombre",
     "DESCRIPTIONS": [
-      "Chaques cartes avec ''étincelle' dans son nom que vous jouez vous donne #b",
-      "#yCharge additionnels ce tour."
+      "Chaque carte que vous jouez avec ''étincelle' dans son nom, vous donne #b",
+      "#yCharge additionnelles ce tour."
     ]
   },
   "MagicChantPower": {
@@ -231,35 +231,35 @@
   "GrandCrossPower": {
     "NAME": "Amplifié",
     "DESCRIPTIONS": [
-      "Vous avez activer un effet #yAmplifier ce tour.",
+      "Vous avez activé un effet #yAmplifier ce tour.",
       "WWWWWWWWWWW"
     ]
   },
   "Diaspora": {
     "NAME": "Diaspora",
     "DESCRIPTIONS": [
-      "A la fin du tour, tuez instantanément cette créature si sa vi est inférieur à #b",
+      "À la fin du tour, tuez instantanément cette créature si ses points de vie sont inférieurs à #b",
       " ."
     ]
   },
   "TalismanPower": {
     "NAME": "Talisman aux cinqs couleurs",
     "DESCRIPTIONS": [
-      "Au début de votre tour,ajoutez #b",
+      "Au début de votre tour, ajoutez #b",
       "  #yCompétence au hasard dans votre main."
     ]
   },
   "Wraith": {
     "NAME": "Spectre",
     "DESCRIPTIONS": [
-      "#yÉpuisez une carte aléaoitre de votre main après le début de votre tour.",
+      "#yÉpuisez une carte aléatoire de votre main après le début de votre tour.",
       "WWWWWWWWWWW"
     ]
   },
   "LimboContact": {
     "NAME": "Contact mort-vivant",
     "DESCRIPTIONS": [
-      "Lorsque vous prenez des dégats de cet ennemi, gagner un de #yFantôme .",
+      "Lorsque vous recevez des dégâts de cet ennemi, gagnez un de #yFantôme .",
       "WWWWWWWWWWW"
     ]
   },
@@ -273,7 +273,7 @@
   "InfernoClaw": {
     "NAME": "Inferno Claw",
     "DESCRIPTIONS": [
-      "Whenever you receive attack damage from this enemy, add a #yBurn into your draw pile.",
+      "Chaque fois que cet ennemi vous inflige des dégats d'attaque, ajoutez une  #yBrûlure  dans votre pile.",
       "WWWWWWWWWWW"
     ]
   },
