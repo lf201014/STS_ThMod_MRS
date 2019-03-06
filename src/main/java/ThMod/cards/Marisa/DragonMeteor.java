@@ -1,5 +1,7 @@
 package ThMod.cards.Marisa;
 
+import ThMod.abstracts.AmplifiedAttack;
+import ThMod.patches.AbstractCardEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -13,9 +15,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 
-import ThMod.abstracts.AmplifiedAttack;
-import ThMod.patches.AbstractCardEnum;
-
 public class DragonMeteor
     extends AmplifiedAttack {
 
@@ -26,7 +25,7 @@ public class DragonMeteor
   public static final String IMG_PATH = "img/cards/DragonMeteor.png";
   private static final int COST = 2;
   private static final int ATK_DMG = 14;
-  private static final int UPG_DMG = 6;
+  //private static final int UPG_DMG = 6;
   private static final int DMG_GAIN = 1;
   private static final int UPG_GAIN = 1;
 
@@ -52,6 +51,9 @@ public class DragonMeteor
   public void applyPowers() {
     this.block = this.baseDamage + AbstractDungeon.player.exhaustPile.size() * this.magicNumber;
     super.applyPowers();
+    if (this.block == this.baseDamage) {
+      this.isBlockModified = false;
+    }
   }
 
   @Override
