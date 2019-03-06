@@ -1,7 +1,7 @@
 {
   "MiniHakkero": {
     "NAME": "Mini-Hakkero",
-    "FLAVOR": "Un mini four à huit trigramme, un cadeau de Rinosuke lorsque Marisa à quitter ses parents.",
+    "FLAVOR": "Un mini four à huit trigrammes, un cadeau de Rinosuke lorsque Marisa a quitté ses parents.",
     "DESCRIPTIONS": [
       "Lorsque vous jouez une carte, gagnez #b1  #yCharge ."
     ]
@@ -10,75 +10,75 @@
     "NAME": "Hakkero enchanté",
     "FLAVOR": "Sa puissance de feu est à un autre niveau, mais est-ce que c'est bon d'utiliser un outil enchanté ?",
     "DESCRIPTIONS": [
-      "Remplacez #rMini-Hakkero . NL Lorsque vous jouez une carte ou attaquez, gagnez #b1 #yCharge ."
+      "Remplacez #rMini-Hakkero . NL Lorsque vous jouez une carte ou que vous êtes attaqué, gagnez #b1 #yCharge ."
     ]
   },
   "MagicArmor": {
     "NAME": "Bouclier de magie noire",
-    "FLAVOR": "En fait je n'ai aucune idée de ce que c'est mais depuis que le designer l'a mit dans les plans.. Le voici.-programmeur",
+    "FLAVOR": "En fait je n'ai aucune idée de ce que c'est mais depuis que le designer l'a mis dans les plans.. Le voici.-programmeur",
     "DESCRIPTIONS": [
-      "Lorsque vous piochez un statut ou une malédiction, gain 5 Block ."
+      "Lorsque vous piochez un statut ou une malédiction, gagnez 5 Block ."
     ]
   },
   "MagicBroom": {
-    "NAME": "Balais Magique",
+    "NAME": "Balais magique",
     "FLAVOR": "Marisa voyage toujours sur son balais volant.",
     "DESCRIPTIONS": [
-      "A chaques fois que vous jouez #b3 cartes qui coûte 0, piochez 1 carte."
+      "À chaque fois que vous jouez #b3 cartes qui coûtent 0, piochez 1 carte."
     ]
   },
   "AmpWand": {
-    "NAME": "Baquette amplifiante",
+    "NAME": "Baguette amplifiante",
     "FLAVOR": "Une baguette qui ne semble pas utilisée régulièrement.",
     "DESCRIPTIONS": [
-      "A chaques fois que vous enclenchez 3 effet #yAmplifier, gagnez [E]  [E] ."
+      "À chaque fois que vous enclenchez 3 effets #yAmplifier, gagnez [E]  [E] ."
     ]
   },
   "RampagingMagicTools": {
-    "NAME": "Outil Magique Déchainé",
-    "FLAVOR": " Cela fait si longtemps depuis que quelqu'un les a utilisés. Qui sait ce qui pourrait ce passer ? ",
+    "NAME": "Outil magique déchaîné",
+    "FLAVOR": "Cela fait si longtemps que personne ne les a utilisés. Qui sait ce qui pourrait se passer ? ",
     "DESCRIPTIONS": [
-      "Gagnez [E] au début de chaque tours. NL Appliquer un debuff/buff aléatoire ( #b2 #yFrêle , #b2 #yFaiblesse , #b2 #yVulnérabilité , #b3 #yPoison , #b8 #yCharge ) à vous même au début de chaques tours."
+      "Gagnez [E] au début de chaque tour. NL Applique un debuff/buff aléatoire ( #b2 #yFrêle , #b2 #yFaiblesse , #b2 #yVulnérabilité , #b3 #yPoison , #b8 #yCharge ) à vous même au début de chaque tour."
     ]
   },
   "ExperimentalFamiliar": {
     "NAME": "Familier experimental",
-    "FLAVOR": "Un familier ressemble juste à une orbe brillante. Pas vraiment puissant, mais cela va surement beaucoup vous aider.",
+    "FLAVOR": "Un familier qui ressemble juste à une orbe brillante. Pas vraiment puissant, mais cela va surement beaucoup vous aider.",
     "DESCRIPTIONS": [
-      "Au début de chaques tours, ajoutez 1 #yÉtincelle à votre main. NL Au début de chaques combats, vous pouvez choisir #b1 jusqu'à #b3 cartes aléatoires. Elle coûte 0 ce tour."
+      "Au début de chaque tour, ajoutez 1 #yÉtincelle à votre main. NL Au début de chaque combat, vous pouvez choisir #b1 jusqu'à #b3 cartes aléatoires. Elle(s) coûte(nt) 0 ce tour."
     ]
   },
   "BreadOfAWashokuLover": {
     "NAME": "Pain d'amour du Washoku",
     "FLAVOR": "\" Peux-tu te souvenir combien de tranches de pain tu as mangé jusqu'ici ?\"\"13. Je préfère la nourriture japonaise.\"",
     "DESCRIPTIONS": [
-      "Soigne 1 PV lorsque vous épuisez un #yStatut ou une #yMalédiction. NL Lorsque vous l'activez 13 fois, vous gagnez #b13 PV max, et cette relique devient inactive."
+      "Soigne 1 PV lorsque vous épuisez un #yStatut ou une #yMalédiction. NL Lorsque vous l'activez 13 fois, vous gagnez #b13 PV max et cette relique devient inactive."
     ]
   },
   "SimpleLauncher": {
     "NAME": "Lanceur simple",
-    "FLAVOR": "Une lampe de poche est une lampe de poche, peu importe comment on l'appelle...",
+    "FLAVOR": "Une lampe de poche est une lampe de poche : peu importe comment on l'appelle...",
     "DESCRIPTIONS": [
-      "Réduis votre seuil de consommation de #yCharge de #b8 à #b6 ."
+      "Réduit votre seuil de consommation de #yCharge de #b8 à #b6 ."
     ]
   },
   "HandmadeGrimoire": {
     "NAME": "Grimoire fait main",
-    "FLAVOR": "Un cahier plein de notes d'éxpériences et de recettes de matériaux magiques; à quel point Marisa a-t-elle développée sa magie ?",
+    "FLAVOR": "Un cahier plein de notes d'éxpériences et de recettes de matériaux magiques ; à quel point Marisa a-t-elle développée sa magie ?",
     "DESCRIPTIONS": [
-      "Au début du combat, pour chaques lot de 15 cartes dans votre deck, gagnez [E] et piochez une carte."
+      "Au début du combat, pour chaque lot de 15 cartes dans votre deck, gagnez [E] et piochez une carte."
     ]
   },
   "ShroomBag": {
     "NAME": "Sac de champignons",
-    "FLAVOR": "Toutes les sorcières ont un enthousiasme anormal pouur les champignons... Ou est-ce juste Marisa...?",
+    "FLAVOR": "Toutes les sorcières ont un enthousiasme anormal pour les champignons... Ou est-ce juste Marisa...?",
     "DESCRIPTIONS": [
-      "Lorsque obtenu, obtenez 2 #yParasite. Les cartes parasites peuvent-être jouées. Jouer un #yParasite vous soigneza #b3 PV et épuisera la carte."
+      "Lorsqu'obtenu, obtenez 2 #yParasite. Les cartes parasites peuvent-être jouées. Jouer un #yParasite vous soignera #b3 PV et épuisera la carte."
     ]
   },
   "Cape": {
     "NAME": "Cape",
-    "FLAVOR": "Marisa prends toujours ce qu'elle veut, et cette cape l'aidera surement à le faire.",
+    "FLAVOR": "Marisa prends toujours ce qu'elle veut, et cette cape l'aidera sûrement à le faire.",
     "DESCRIPTIONS": [
       "Lorsque vous entrez dans un magasin, gagnez des récompenses de combat aléatoires.",
       " utilisation(s) restante(s). NL Vous pouvez prendre le premier élément du magasin gratuitement."
@@ -86,7 +86,7 @@
   },
   "SproutingBranch": {
     "NAME": "Branche qui pousse",
-    "FLAVOR": "La branche morte reviens à la vie dans les mains de Marisa, Poétique ~.",
+    "FLAVOR": "La branche morte revient à la vie dans les mains de Marisa, Poétique ~.",
     "DESCRIPTIONS": [
       "Au début du combat, gagnez #b5 #yRegen ."
     ]
@@ -95,21 +95,21 @@
     "NAME": "Baguette d'amplification",
     "FLAVOR": "Une baguette qui ne semble pas être utilisée régulièrement.",
     "DESCRIPTIONS": [
-      "Lorsque vous enclenchez un effet #yAmplifier , Gagnez #b4  #yArmure ."
+      "Lorsque vous enclenchez un effet #yAmplifier , gagnez #b4  #yArmure ."
     ]
   },
   "CatCart": {
-    "NAME": "Cat Cart",
-    "FLAVOR": "When you fall in battle,your loyal kitties will bring you back to life with this.",
+    "NAME": "Carte chat",
+    "FLAVOR": "Si vous tombez au combat, vos loyaux chatons vous ramèneront à la vie avec cet objet.",
     "DESCRIPTIONS": [
-      "Gain 1 charge when you climb a floor.When you would die,consume all charges and heal #g5 hp for each of them."
+      "Gagnez une charge quand vous montez un palier. Quand vous devriez mourrir, consomme toutes les charges et soigne #g5 PV pour chacune."
     ]
   },
   "BigShroomBag": {
-    "NAME": "Big Shroom Bag",
-    "FLAVOR": "A large version of shroom bag.",
+    "NAME": "Gros sac de jardinage",
+    "FLAVOR": "Une version large du sac de jardinage.",
     "DESCRIPTIONS": [
-      "Replaces #rShroom #rBag . NL Parasite cards can now be played. Playing a #yParasite will heal #b5 HP and Exhausts the card."
+      "Remplace #rShroom #rBag . NL Les cartes parasite peuvent maintenant être jouées. Jouer un #yParasite restaure #b5 PV et épuise la carte."
     ]
   },
   "WWWWWWWWWWWW": {
