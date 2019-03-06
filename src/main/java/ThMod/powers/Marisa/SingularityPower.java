@@ -30,7 +30,7 @@ public class SingularityPower
     this.amount = amount;
     this.type = AbstractPower.PowerType.BUFF;
     updateDescription();
-    this.img = new Texture("img/powers/darkness.png");
+    this.img = new Texture("img/powers/singularity.png");
   }
 
   public void updateDescription() {

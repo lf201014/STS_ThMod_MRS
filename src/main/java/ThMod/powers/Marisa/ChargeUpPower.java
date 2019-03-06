@@ -48,8 +48,10 @@ public class ChargeUpPower
 
   @Override
   public void stackPower(int stackAmount) {
-    if (ExhaustionCheck()) {
-      return;
+    if (stackAmount > 0) {
+      if (ExhaustionCheck()) {
+        return;
+      }
     }
     this.fontScale = 8.0F;
     this.amount += stackAmount;

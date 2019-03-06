@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 public class MeteoricShowerAction extends AbstractGameAction {
 
@@ -20,13 +21,15 @@ public class MeteoricShowerAction extends AbstractGameAction {
   private AbstractPlayer p;
   private int num;
   private int dmg;
+  private boolean f2p;
 
-  public MeteoricShowerAction(int number, int damage) {
+  public MeteoricShowerAction(int number, int damage, boolean freeToPlay) {
     this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
     this.p = AbstractDungeon.player;
     this.duration = Settings.ACTION_DUR_FAST;
     this.num = number;
     this.dmg = damage;
+    this.f2p = freeToPlay;
   }
 
   public void update() {
@@ -60,6 +63,9 @@ public class MeteoricShowerAction extends AbstractGameAction {
             )
         );
       }
+    }
+    if (!this.f2p) {
+      p.energy.use(EnergyPanel.totalCount);
     }
     tickDuration();
   }

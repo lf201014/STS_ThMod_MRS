@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FlightPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import org.apache.logging.log4j.Logger;
 
 public class ZombieFairy extends AbstractMonster {
@@ -25,8 +26,9 @@ public class ZombieFairy extends AbstractMonster {
   private static final int HP_A = 14;
   private static final int HP_A_ = 18;
   private static final int DMG = 8;
+  private static final int DMG_MULTI = 6;
   private static final int BLOCK = 4;
-  private static final int BLOCK_UPG = 10;
+  private static final int BLOCK_UPG = 8;
   private static final byte POWER_UP = 3;
   public int turnNum = 0;
   private static final String MODEL_ATLAS = "img/monsters/ZombieFairy/ZombieFairy.atlas";
@@ -40,6 +42,7 @@ public class ZombieFairy extends AbstractMonster {
       this.setHp(HP, HP_);
     }
     this.damage.add(new DamageInfo(this, DMG));
+    this.damage.add(new DamageInfo(this, DMG_MULTI));
 
     loadAnimation(MODEL_ATLAS, MODEL_JSON, 3.0F);
     AnimationState.TrackEntry e = this.state.setAnimation(0, "newAnimation", true);
@@ -69,19 +72,27 @@ public class ZombieFairy extends AbstractMonster {
                 + " ; target dead or escaped : "
                 + (p.isDeadOrEscaped())
         );
-        AbstractDungeon.actionManager.addToBottom(
-            new DamageAction(
-                p
-                , this.damage.get(0)
-            )
-        );
+
         if (this.turnNum >= POWER_UP) {
           AbstractDungeon.actionManager.addToBottom(
               new DamageAction(
                   p
-                  , this.damage.get(0)
+                  , this.damage.get(1)
               )
           );
+          AbstractDungeon.actionManager.addToBottom(
+              new DamageAction(
+                  p
+                  , this.damage.get(1)
+              )
+          );
+          AbstractDungeon.actionManager.addToBottom(
+              new DamageAction(
+                  p
+                  , this.damage.get(1)
+              )
+          );
+        } else {
           AbstractDungeon.actionManager.addToBottom(
               new DamageAction(
                   p
@@ -91,14 +102,17 @@ public class ZombieFairy extends AbstractMonster {
         }
         break;
       case 2:
-        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
           int block = BLOCK;
           if (this.turnNum >= 3) {
             block = BLOCK_UPG;
           }
-          if (!m.isDying) {
+          if (!m.isDeadOrEscaped()) {
             AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(m, this, block)
+            );
+            AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(m, null, new StrengthPower(m, 1), 1)
             );
           }
         }
@@ -140,15 +154,15 @@ public class ZombieFairy extends AbstractMonster {
   }
 
   private void setAttackAction() {
-    if (this.turnNum < 3) {
+    if (this.turnNum < 2) {
       setMove((byte) 1, Intent.ATTACK_DEBUFF, DMG);
     } else {
-      setMove((byte) 1, Intent.ATTACK_DEBUFF, DMG, 3, true);
+      setMove((byte) 1, Intent.ATTACK_DEBUFF, DMG_MULTI, 3, true);
     }
   }
 
   private void setDefendAction() {
-    setMove((byte) 2, Intent.DEFEND);
+    setMove((byte) 2, Intent.DEFEND_BUFF);
   }
 
   public void revive() {
