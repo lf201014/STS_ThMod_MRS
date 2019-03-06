@@ -302,3 +302,14 @@ v0.14.23 2/13/2019
 v0.14.24 2/14/2019
 *Fix a enemy-related bug
 *Slightly buff Orin
+
+v0.14.25 3/7/2019
+*Update illustration for cards : Polaris Unique, Energy Recoil,Orbital
+*Update icons for powers : Event Horizon, Satellite Illusion, Singularity
+*Fix a enemy-related bug
+*Now player will not encounter event Black Cat if she/he has relic Cat Cart(Perhaps)
+*Now Mysterious Beam will not be added by the effect of Mysterious Beam
+*Refract out-dated codes
+*Update Korean texts(Github user : Katinor)
+*Update French texts(Thanks to Github user : didydidy)
+*Update support for Googly Eye(Github user:KAMAQUEEN)
