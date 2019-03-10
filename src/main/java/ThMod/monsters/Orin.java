@@ -52,16 +52,16 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   private boolean form1 = true;
   private boolean att = true;
   private boolean firstTurn = true;
-  private static final int STAGE_1_HP = 76;
+  private static final int STAGE_1_HP = 68;
   private static final int S_1_HP = 82;
-  private static final int STAGE_2_HP = 208 + 90;
+  private static final int STAGE_2_HP = 208 + 40;
   private static final int S_2_HP = 215 + 100;
-  private static final int STR = 4;
+  private static final int STR = 3;
   private static final int STR_A = 5;
   private static final int DOUBLE_TAP = 10;
-  private static final int CAT_TAP = 7;
+  private static final int CAT_TAP = 6;
   private static final int CAT_TAP_A = 8;
-  private static final int HELL_FIRE = 5;
+  private static final int HELL_FIRE = 4;
   private static final int HELL_FIRE_A = 6;
   private static final int DEBUFF = 2;
   private static final int DEBUFF_A = 3;
@@ -70,12 +70,14 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   private static final int SUMMON_THRESHOLD = 2;
   private static final int EXECUTE = 8;
   private static final int EXECUTE_A = 10;
-  private static final int EXECUTE_THRESHOLD = 6;
+  private static final int EXECUTE_THRESHOLD = 8;
+  private static final int EXECUTE_THRESHOLD_A = 6;
   private int doubleTap;
   private int catTap;
   private int hellFireDmg;
   private int strength;
   private int debuff;
+  private int exc;
   private int executeDmg;
   private int turnCount = 0;
   private static final String tempImgUrl = "img/monsters/Orin/Orin_.png";
@@ -98,15 +100,21 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
     if (AbstractDungeon.ascensionLevel >= 3) {
       this.catTap = CAT_TAP_A;
       this.hellFireDmg = HELL_FIRE_A;
-      this.strength = STR_A;
-      this.debuff = DEBUFF_A;
       this.executeDmg = EXECUTE_A;
     } else {
       this.catTap = CAT_TAP;
       this.hellFireDmg = HELL_FIRE;
+      this.executeDmg = EXECUTE;
+    }
+    if (AbstractDungeon.ascensionLevel >= 18){
+      this.strength = STR_A;
+      this.debuff = DEBUFF_A;
+      this.exc = EXECUTE_THRESHOLD_A;
+    } else
+    {
       this.strength = STR;
       this.debuff = DEBUFF;
-      this.executeDmg = EXECUTE;
+      this.exc = EXECUTE_THRESHOLD;
     }
     this.damage.add(new DamageInfo(this, this.catTap));
     this.damage.add(new DamageInfo(this, this.hellFireDmg));
@@ -351,7 +359,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
     if (!AbstractDungeon.player.hasPower("Wraith")) {
       return false;
     } else {
-      return AbstractDungeon.player.getPower("Wraith").amount > EXECUTE_THRESHOLD;
+      return AbstractDungeon.player.getPower("Wraith").amount > this.exc;
     }
   }
 

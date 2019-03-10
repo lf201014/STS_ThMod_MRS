@@ -93,7 +93,7 @@ public class ManaRampageAction
       }
     }
 
-    if (this.f2p) {
+    if (!this.f2p) {
       p.energy.use(EnergyPanel.totalCount);
     }
   }
