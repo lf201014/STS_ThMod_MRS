@@ -73,7 +73,7 @@
     "NAME": "Shroom Bag",
     "FLAVOR": "All witches have an abnormal ethusiasm for mushrooms... Or is it just Marisa...?",
     "DESCRIPTIONS": [
-      "Upon pickup, obtain 2 #yParasite. Parasite cards can now be played. Playing a #yParasite will heal #b3 HP and Exhausts the card."
+      "Upon pickup, obtain 2 #yParasite. Parasite cards can now be played. Playing a #yParasite will heal #b2 HP and draw a card, then Exhausts it."
     ]
   },
   "Cape": {
@@ -109,7 +109,7 @@
     "NAME": "Big Shroom Bag",
     "FLAVOR": "A large version of shroom bag.",
     "DESCRIPTIONS": [
-      "Replaces #rShroom #rBag . NL Parasite cards can now be played. Playing a #yParasite will heal #b5 HP and Exhausts the card."
+      "Replaces #rShroom #rBag . NL Parasite cards can now be played. Playing a #yParasite will heal #b3 HP and draw a card, then Exhausts it."
     ]
   },
   "WWWWWWWWWWWW": {

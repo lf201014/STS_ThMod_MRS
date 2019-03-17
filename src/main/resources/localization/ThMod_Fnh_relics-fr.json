@@ -73,7 +73,7 @@
     "NAME": "Sac de champignons",
     "FLAVOR": "Toutes les sorcières ont un enthousiasme anormal pour les champignons... Ou est-ce juste Marisa...?",
     "DESCRIPTIONS": [
-      "Lorsqu'obtenu, obtenez 2 #yParasite. Les cartes parasites peuvent-être jouées. Jouer un #yParasite vous soignera #b3 PV et épuisera la carte."
+      "Lorsqu'obtenu, obtenez 2 #yParasite. Les cartes parasites peuvent-être jouées. Jouer un #yParasite vous soignera #b2 PV et épuisera la carte."
     ]
   },
   "Cape": {
@@ -109,7 +109,7 @@
     "NAME": "Gros sac de jardinage",
     "FLAVOR": "Une version large du sac de jardinage.",
     "DESCRIPTIONS": [
-      "Remplace #rShroom #rBag . NL Les cartes parasite peuvent maintenant être jouées. Jouer un #yParasite restaure #b5 PV et épuise la carte."
+      "Remplace #rShroom #rBag . NL Les cartes parasite peuvent maintenant être jouées. Jouer un #yParasite restaure #b3 PV et épuise la carte."
     ]
   },
   "WWWWWWWWWWWW": {
