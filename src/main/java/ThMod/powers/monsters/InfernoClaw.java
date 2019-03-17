@@ -1,6 +1,7 @@
 package ThMod.powers.monsters;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
@@ -40,7 +41,7 @@ public class InfernoClaw
   public void onInflictDamage(DamageInfo info, int damageAmount, AbstractCreature target) {
     if (damageAmount > 0 && info.type != DamageType.THORNS) {
       AbstractDungeon.actionManager.addToBottom(
-          new MakeTempCardInDrawPileAction(new Burn(), 1, true, true)
+          new MakeTempCardInDiscardAction(new Burn(), 1)
       );
     }
 

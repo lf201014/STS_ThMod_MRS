@@ -313,3 +313,8 @@ v0.14.25 3/7/2019
 *Update Korean texts(Github user : Katinor)
 *Update French texts(Thanks to Github user : didydidy)
 *Update support for Googly Eye(Github user:KAMAQUEEN)
+
+v0.14.26 3/10/2019
+*Update illustration for card : Galactic Halo
+*Fix the bug that Mana Rampage doesn't consume energy properly
+*Slightly nerf Orin( Perhaps )
