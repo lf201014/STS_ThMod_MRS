@@ -3,6 +3,7 @@ package ThMod.patches;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -28,10 +29,10 @@ public class ParasitePatch {
         int heal_amt;
         if (AbstractDungeon.player.hasRelic("BigShroomBag")) {
           r = p.getRelic("BigShroomBag");
-          heal_amt = 5;
+          heal_amt = 3;
         } else {
           r = p.getRelic("ShroomBag");
-          heal_amt = 3;
+          heal_amt = 2;
         }
 
         r.flash();
@@ -41,6 +42,9 @@ public class ParasitePatch {
         _inst.exhaust = true;
         AbstractDungeon.actionManager.addToBottom(
             new HealAction(p, p, heal_amt)
+        );
+        AbstractDungeon.actionManager.addToBottom(
+            new DrawCardAction(p,1)
         );
         return SpireReturn.Return(null);
       }

@@ -73,7 +73,7 @@
     "NAME": "茸鞄",
     "FLAVOR": "全ての魔女はきのこに異常な熱意を持っている… いや、魔理沙だけか？",
     "DESCRIPTIONS": [
-      "獲得時、 #y寄生 #b2 枚を得る。 #y寄生 がプレイできるようになる。 #y寄生 をプレイすると、HPを #b3 回復し、 廃棄する。"
+      "獲得時、 #y寄生 #b2 枚を得る。 #y寄生 がプレイできるようになる。 #y寄生 をプレイすると、HPを #b2 回復し、 廃棄する。"
     ]
   },
   "Cape": {
@@ -109,7 +109,7 @@
     "NAME": "Big Shroom Bag",
     "FLAVOR": "A large version of shroom bag.",
     "DESCRIPTIONS": [
-      "Replaces #rShroom #rBag . NL Parasite cards can now be played. Playing a #yParasite will heal #b5 HP and Exhausts the card."
+      "Replaces #rShroom #rBag . NL Parasite cards can now be played. Playing a #yParasite will heal #b3 HP and Exhausts the card."
     ]
   },
   "WWWWWWWWWWWW": {

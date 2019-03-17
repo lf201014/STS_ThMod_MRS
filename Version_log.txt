@@ -302,3 +302,27 @@ v0.14.23 2/13/2019
 v0.14.24 2/14/2019
 *Fix a enemy-related bug
 *Slightly buff Orin
+
+v0.14.25 3/7/2019
+*Update illustration for cards : Polaris Unique, Energy Recoil,Orbital
+*Update icons for powers : Event Horizon, Satellite Illusion, Singularity
+*Fix a enemy-related bug
+*Now player will not encounter event Black Cat if she/he has relic Cat Cart(Perhaps)
+*Now Mysterious Beam will not be added by the effect of Mysterious Beam
+*Refract out-dated codes
+*Update Korean texts(Github user : Katinor)
+*Update French texts(Thanks to Github user : didydidy)
+*Update support for Googly Eye(Github user:KAMAQUEEN)
+
+v0.14.26 3/10/2019
+*Update illustration for card : Galactic Halo
+*Fix the bug that Mana Rampage doesn't consume energy properly
+*Slightly nerf Orin( Perhaps )
+
+v0.14.27 3/17/2019
+*Update illustration for card : Dark Spark
+*Mysterious Beam : cost reduced to 0
+*Master Spark : damage reduced by 1( 9(12)/16(21) -> 8(11)/15(20) )
+*Shroom Bag : hp recovery for playing Parasite : 3->2 ; now playing Parasite will draw a card;
+*Big Shroom Bag : hp recovery for playing Parasite : 5->3 ; now playing Parasite will draw a card;
+*Slightly buffed Orin and ZombieFairy

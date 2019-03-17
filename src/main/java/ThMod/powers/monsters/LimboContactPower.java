@@ -61,6 +61,7 @@ public class LimboContactPower
             p, null, new WraithPower(p, 1), 1
         )
     );
+    /*
     for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
       if (!m.isDeadOrEscaped()) {
         AbstractDungeon.actionManager.addToBottom(
@@ -68,5 +69,6 @@ public class LimboContactPower
         );
       }
     }
+    */
   }
 }

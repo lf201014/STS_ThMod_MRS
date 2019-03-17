@@ -25,7 +25,7 @@ public class MysteriousBeam
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   public static final String IMG_PATH = "img/cards/MysteriousBeam.png";
 
-  private static final int COST = 1;
+  private static final int COST = 0;
 
   public MysteriousBeam() {
     super(
