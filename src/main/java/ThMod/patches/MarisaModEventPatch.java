@@ -6,6 +6,7 @@ import ThMod.ThMod;
 
 import ThMod.characters.Marisa;
 import ThMod.event.Mushrooms_MRS;
+import ThMod.event.OrinTheCat;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -67,7 +68,10 @@ public class MarisaModEventPatch {
       }
       return _retVal;
       */
-      if ((_retVal instanceof Mushrooms_MRS) && (AbstractDungeon.floorNum <= 6)) {
+      if (
+          ((_retVal instanceof Mushrooms_MRS) && (AbstractDungeon.floorNum <= 6)) ||
+          ((_retVal instanceof OrinTheCat) && (AbstractDungeon.player.hasRelic("CatCart")))
+      ) {
         return AbstractDungeon.getEvent(AbstractDungeon.eventRng);
       } else {
         return _retVal;

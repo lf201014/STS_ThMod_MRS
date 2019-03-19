@@ -44,7 +44,7 @@ public class NonDirectionalLaser
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-    AbstractDungeon.actionManager.addToBottom(
+    AbstractDungeon.actionManager.addToTop(
         new DamageAllEnemiesAction(
             p,
             multiDamage,
@@ -53,7 +53,7 @@ public class NonDirectionalLaser
         )
     );
 
-    AbstractDungeon.actionManager.addToBottom(
+    AbstractDungeon.actionManager.addToTop(
         new DamageRandomEnemyAction(
             new DamageInfo(p, this.damage, this.damageTypeForTurn),
             AbstractGameAction.AttackEffect.SLASH_VERTICAL

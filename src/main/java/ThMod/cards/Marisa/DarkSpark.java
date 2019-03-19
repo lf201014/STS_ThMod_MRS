@@ -22,7 +22,7 @@ public class DarkSpark
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-  public static final String IMG_PATH = "img/cards/temp/DarkSpark.png";
+  public static final String IMG_PATH = "img/cards/darkSpark.png";
 
   private static final int COST = 2;
   private static final int ATK_DMG = 14;

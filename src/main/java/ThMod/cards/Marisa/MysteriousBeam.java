@@ -25,7 +25,7 @@ public class MysteriousBeam
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   public static final String IMG_PATH = "img/cards/MysteriousBeam.png";
 
-  private static final int COST = 1;
+  private static final int COST = 0;
 
   public MysteriousBeam() {
     super(
@@ -61,9 +61,10 @@ public class MysteriousBeam
   public void use(AbstractPlayer p, AbstractMonster m) {
 
     AbstractCard c =
-        AbstractDungeon.returnTrulyRandomCardInCombat(
-            AbstractCard.CardType.ATTACK
-        ).makeCopy();
+        AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK).makeCopy();
+    while (c instanceof MysteriousBeam){
+      c = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK).makeCopy();
+    }
     if (this.upgraded) {
       c.upgrade();
     }

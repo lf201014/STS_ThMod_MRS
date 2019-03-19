@@ -106,10 +106,10 @@
     ]
   },
   "BigShroomBag": {
-    "NAME": "Big Shroom Bag",
-    "FLAVOR": "A large version of shroom bag.",
+    "NAME": "大蘑菇袋",
+    "FLAVOR": "一个更大的蘑菇袋。",
     "DESCRIPTIONS": [
-      "Replaces #rShroom #rBag . NL Parasite cards can now be played. Playing a #yParasite will heal #b3 HP and Exhausts the card."
+      "取代 #r蘑菇袋 NL 可以將 #y寄生 打出，打出后將其 #y消耗 並回复 #b3 点生命同时抽一张卡。"
     ]
   },
   "WWWWWWWWWWW": {

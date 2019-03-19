@@ -1,6 +1,8 @@
 package ThMod.cards.Marisa;
 
-import ThMod.action.ManaRampAction;
+import ThMod.action.ManaRampageAction;
+import ThMod.patches.AbstractCardEnum;
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -8,9 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-
-import ThMod.patches.AbstractCardEnum;
-import basemod.abstracts.CustomCard;
 
 public class ManaRampage extends CustomCard {
 
@@ -47,13 +46,14 @@ public class ManaRampage extends CustomCard {
 
     if (cnt > 0) {
       AbstractDungeon.actionManager.addToBottom(
-          new ManaRampAction(cnt, this.upgraded)
+          new ManaRampageAction(cnt, this.upgraded, this.freeToPlayOnce)
       );
     }
-
+/*
     if (!this.freeToPlayOnce) {
       p.energy.use(EnergyPanel.totalCount);
     }
+    */
   }
 
   public AbstractCard makeCopy() {

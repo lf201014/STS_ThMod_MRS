@@ -1,8 +1,7 @@
 package ThMod.action.deprecated;
 
+import ThMod.ThMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.utility.UnlimboAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
@@ -11,52 +10,50 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import ThMod.ThMod;
-import java.util.ArrayList;
-
 @Deprecated
-public class ManaRampageAction
+public class ManaRampAction
     extends AbstractGameAction {
 
   private boolean upgraded;
-  private int amount;
+  private int number;
   private AbstractMonster target;
-  private ArrayList<AbstractCard> list = new ArrayList<>();
+  private AbstractCard card;
+  private boolean f2p;
   AbstractPlayer p;
 
-  public ManaRampageAction(int amount, boolean upgraded) {
+  public ManaRampAction(int number, boolean upgraded, boolean freeToPlay) {
     this.duration = Settings.ACTION_DUR_FAST;
     this.upgraded = upgraded;
-    this.amount = amount;
+    this.number = number;
     this.p = AbstractDungeon.player;
-    for (int i = 0; i < this.amount; i++) {
-      AbstractCard tmp = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
-      if (upgraded) {
-        tmp.upgrade();
-      }
-      list.add(tmp);
+    this.f2p = freeToPlay;
+    card = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
+    if (upgraded) {
+      card.upgrade();
     }
     ThMod.logger.info(
-        "ManaRampageAction : Initialize complete ; card number :" +
-            amount +
+        "ManaRampAction : Initialization complete ; card number :" +
+            number +
+            " ; card : " +
+            card.name +
             " ; upgraded : " +
             upgraded
     );
   }
 
   public void update() {
-    if (list.isEmpty()) {
+    number--;
+    if (number < 0) {
       this.isDone = true;
+      ThMod.logger.info("ManaRampAction : done : all out");
       return;
     }
 
-    AbstractCard card = list.get(0);
-    list.remove(0);
     target = AbstractDungeon.getMonsters().getRandomMonster(true);
 
     if (target == null) {
       this.isDone = true;
-      ThMod.logger.info("ManaRampageAction : done");
+      ThMod.logger.info("ManaRampAction : done : no target");
       return;
     }
     AbstractDungeon.player.limbo.group.add(card);
@@ -68,28 +65,34 @@ public class ManaRampageAction
     card.purgeOnUse = true;
     card.targetAngle = 0.0F;
     card.drawScale = 0.12F;
+    //card.dontTriggerOnUseCard = true;
     ThMod.logger.info(
-        "ManaRampageAction : card : " +
+        "ManaRampAction : card : " +
             card.cardID +
             " ; target : " +
             target.id
     );
-    /*
-    if (!card.canUse(AbstractDungeon.player, this.target)) {
-      AbstractDungeon.actionManager.addToTop(new UnlimboAction(card));
-    } else */
-    {
-      card.applyPowers();
-      AbstractDungeon.actionManager.currentAction = null;
-      AbstractDungeon.actionManager.addToTop(this);
-      AbstractDungeon.actionManager.cardQueue.add(
-          new CardQueueItem(card, this.target)
+    card.applyPowers();
+    AbstractDungeon.actionManager.currentAction = null;
+    AbstractDungeon.actionManager.addToTop(this);
+    AbstractDungeon.actionManager.cardQueue.add(
+        new CardQueueItem(card, this.target)
+    );
+    if (number > 0) {
+      AbstractDungeon.actionManager.addToBottom(
+          new ManaRampAction(number, upgraded, f2p)
       );
-      if (!Settings.FAST_MODE) {
-        AbstractDungeon.actionManager.addToTop(new WaitAction(Settings.ACTION_DUR_MED));
-      } else {
-        AbstractDungeon.actionManager.addToTop(new WaitAction(Settings.ACTION_DUR_FASTER));
-      }
     }
+    if (!this.f2p) {
+      p.energy.use(1);
+    }
+    /*
+    if (!Settings.FAST_MODE) {
+      AbstractDungeon.actionManager.addToTop(new WaitAction(Settings.ACTION_DUR_MED));
+    } else {
+      AbstractDungeon.actionManager.addToTop(new WaitAction(Settings.ACTION_DUR_FASTER));
+    }
+    */
+    this.isDone = true;
   }
 }

@@ -52,15 +52,15 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   private boolean form1 = true;
   private boolean att = true;
   private boolean firstTurn = true;
-  private static final int STAGE_1_HP = 76;
+  private static final int STAGE_1_HP = 68;
   private static final int S_1_HP = 82;
-  private static final int STAGE_2_HP = 208;
-  private static final int S_2_HP = 215;
+  private static final int STAGE_2_HP = 208 + 40;
+  private static final int S_2_HP = 215 + 100;
   private static final int STR = 4;
   private static final int STR_A = 5;
   private static final int DOUBLE_TAP = 10;
-  private static final int CAT_TAP = 7;
-  private static final int CAT_TAP_A = 8;
+  private static final int CAT_TAP = 5;
+  private static final int CAT_TAP_A = 6;
   private static final int HELL_FIRE = 5;
   private static final int HELL_FIRE_A = 6;
   private static final int DEBUFF = 2;
@@ -70,12 +70,18 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   private static final int SUMMON_THRESHOLD = 2;
   private static final int EXECUTE = 8;
   private static final int EXECUTE_A = 10;
+  private static final int EXECUTE_THRESHOLD = 8;
+  private static final int EXECUTE_THRESHOLD_A = 6;
+  private static final int BLOCK = 8;
+  private static final int BLOCK_UPG = 12;
   private int doubleTap;
   private int catTap;
   private int hellFireDmg;
   private int strength;
   private int debuff;
+  private int exc;
   private int executeDmg;
+  private int blc;
   private int turnCount = 0;
   private static final String tempImgUrl = "img/monsters/Orin/Orin_.png";
   private static final String MODEL_HUMANOID_ATLAS = "img/monsters/Orin/Orin.atlas";
@@ -94,18 +100,25 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
       setHp(STAGE_1_HP);
     }
     this.doubleTap = DOUBLE_TAP;
+    this.blc = BLOCK;
     if (AbstractDungeon.ascensionLevel >= 3) {
       this.catTap = CAT_TAP_A;
       this.hellFireDmg = HELL_FIRE_A;
-      this.strength = STR_A;
-      this.debuff = DEBUFF_A;
       this.executeDmg = EXECUTE_A;
     } else {
       this.catTap = CAT_TAP;
       this.hellFireDmg = HELL_FIRE;
+      this.executeDmg = EXECUTE;
+    }
+    if (AbstractDungeon.ascensionLevel >= 18){
+      this.strength = STR_A;
+      this.debuff = DEBUFF_A;
+      this.exc = EXECUTE_THRESHOLD_A;
+    } else
+    {
       this.strength = STR;
       this.debuff = DEBUFF;
-      this.executeDmg = EXECUTE;
+      this.exc = EXECUTE_THRESHOLD;
     }
     this.damage.add(new DamageInfo(this, this.catTap));
     this.damage.add(new DamageInfo(this, this.hellFireDmg));
@@ -180,7 +193,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
             )
         );
         AbstractDungeon.actionManager.addToBottom(
-            new GainBlockAction(this, this, this.catTap)
+            new GainBlockAction(this, this, this.blc)
         );
         break;
       case 2:
@@ -197,13 +210,11 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
       case 3:
         //hell fire
         //missing vfx
-
         AbstractDungeon.actionManager.addToBottom(
             new VFXAction(
                 this,
                 new IntenseZoomEffect(this.hb.cX, this.hb.cY, true), 0.05F, true)
         );
-
         AbstractDungeon.actionManager.addToBottom(
             new ChangeStateAction(this, "TRANSFORM")
         );
@@ -225,7 +236,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
             )
         );
         AbstractDungeon.actionManager.addToBottom(
-            new GainBlockAction(this, this, this.doubleTap)
+            new GainBlockAction(this, this, this.blc)
         );
         break;
       case 5:
@@ -320,11 +331,12 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   }
 
   private void setSummonAction() {
-    logger.info("Orin : setSummonAction : firstTurn : ");/*
+    logger.info("Orin : setSummonAction : firstTurn : ");
+    /*
     if (this.firstTurn) {
       setMove((byte) 7, Intent.UNKNOWN);
     } else
-      */
+    */
     {
       setMove((byte) 8, Intent.UNKNOWN);
     }
@@ -342,7 +354,6 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
         ++aliveCount;
       }
     }
-
     return aliveCount;
   }
 
@@ -350,7 +361,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
     if (!AbstractDungeon.player.hasPower("Wraith")) {
       return false;
     } else {
-      return AbstractDungeon.player.getPower("Wraith").amount >= 10;
+      return AbstractDungeon.player.getPower("Wraith").amount > this.exc;
     }
   }
 
@@ -363,6 +374,9 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
             num
     );
     if (this.form1) {
+      if (this.halfDead){
+        return;
+      }
       turnCount++;
       switch (turnCount) {
         case 1:
@@ -376,6 +390,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
           return;
         default:
           logger.info("Orin : form 1 :getMove : error : turnCount :" + turnCount);
+          setMultiAttackAction();
           break;
       }
       /*
@@ -474,6 +489,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   public void damage(DamageInfo info) {
     super.damage(info);
     if ((this.currentHealth <= 0) && (!this.halfDead)) {
+      logger.info("Orin : damage : catForm defeated,transforming");
       if (AbstractDungeon.getCurrRoom().cannotLose) {
         this.halfDead = true;
       }
@@ -505,6 +521,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
       } else {
         this.maxHealth = STAGE_2_HP;
       }
+      this.blc = BLOCK_UPG;
       if ((Settings.isEndless) && (AbstractDungeon.player.hasBlight("ToughEnemies"))) {
         float mod = AbstractDungeon.player.getBlight("ToughEnemies").effectFloat();
         this.maxHealth = ((int) (this.maxHealth * mod));
@@ -530,7 +547,6 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
             new SummonFairyAction(this)
         );
       }
-
       if (att) {
         for (int i = 0; i < 6; i++) {
           AbstractDungeon.actionManager.addToTop(
@@ -543,7 +559,6 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
           );
         }
       }
-
         /*
       case "ATTACK_1":
         this.state.setAnimation(0, "Attack_1", false);
