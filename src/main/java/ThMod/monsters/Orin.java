@@ -30,6 +30,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
@@ -54,31 +55,35 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   private boolean firstTurn = true;
   private static final int STAGE_1_HP = 68;
   private static final int S_1_HP = 82;
-  private static final int STAGE_2_HP = 208 + 40;
-  private static final int S_2_HP = 215 + 100;
-  private static final int STR = 4;
+  private static final int STAGE_2_HP = 216;
+  private static final int S_2_HP = 260;
+  private static final int STR = 3;
   private static final int STR_A = 5;
-  private static final int DOUBLE_TAP = 10;
-  private static final int CAT_TAP = 5;
-  private static final int CAT_TAP_A = 6;
-  private static final int HELL_FIRE = 5;
-  private static final int HELL_FIRE_A = 6;
-  private static final int DEBUFF = 2;
-  private static final int DEBUFF_A = 3;
+  private static final int DOUBLE_TAP = 5;
+  private static final int DOUBLE_TAP_A = 6;
+  private static final int CAT_TAP = 4;
+  private static final int CAT_TAP_A = 5;
+  private static final int HELL_FIRE = 4;
+  private static final int HELL_FIRE_A = 5;
+  private static final int WEAK = 1;
+  private static final int WEAK_A = 2;
+  private static final int WRAITH = 2;
+  //private static final int WRAITH_A = 2;
   private static final int SUMMON = 2;
   private static final int SUMMON_FIRST = 4;
   private static final int SUMMON_THRESHOLD = 2;
-  private static final int EXECUTE = 8;
-  private static final int EXECUTE_A = 10;
+  private static final int EXECUTE = 6;
+  private static final int EXECUTE_A = 6;
   private static final int EXECUTE_THRESHOLD = 8;
   private static final int EXECUTE_THRESHOLD_A = 6;
-  private static final int BLOCK = 8;
+  //private static final int BLOCK = 8;
   private static final int BLOCK_UPG = 12;
   private int doubleTap;
   private int catTap;
   private int hellFireDmg;
   private int strength;
-  private int debuff;
+  private int weak;
+  private int wraith;
   private int exc;
   private int executeDmg;
   private int blc;
@@ -99,25 +104,27 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
     } else {
       setHp(STAGE_1_HP);
     }
-    this.doubleTap = DOUBLE_TAP;
-    this.blc = BLOCK;
+    //this.doubleTap = DOUBLE_TAP;
+    //this.blc = BLOCK;
+    this.wraith = WRAITH;
     if (AbstractDungeon.ascensionLevel >= 3) {
       this.catTap = CAT_TAP_A;
       this.hellFireDmg = HELL_FIRE_A;
       this.executeDmg = EXECUTE_A;
+      this.doubleTap = DOUBLE_TAP_A;
     } else {
       this.catTap = CAT_TAP;
       this.hellFireDmg = HELL_FIRE;
       this.executeDmg = EXECUTE;
+      this.doubleTap = DOUBLE_TAP;
     }
-    if (AbstractDungeon.ascensionLevel >= 18){
+    if (AbstractDungeon.ascensionLevel >= 18) {
       this.strength = STR_A;
-      this.debuff = DEBUFF_A;
+      this.weak = WEAK_A;
       this.exc = EXECUTE_THRESHOLD_A;
-    } else
-    {
+    } else {
       this.strength = STR;
-      this.debuff = DEBUFF;
+      this.weak = WEAK;
       this.exc = EXECUTE_THRESHOLD;
     }
     this.damage.add(new DamageInfo(this, this.catTap));
@@ -130,13 +137,6 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
     loadAnimation(MODEL_CAT_ATLAS, MODEL_CAT_JSON, 3.0f);
     AnimationState.TrackEntry e = this.state.setAnimation(0, "newAnimation", true);
     e.setTime(e.getEndTime() * MathUtils.random());
-    /*
-    this.stateData.setMix("Idle", "Sumon", 0.1F);
-    this.stateData.setMix("Sumon", "Idle", 0.1F);
-    this.stateData.setMix("Hurt", "Idle", 0.1F);
-    this.stateData.setMix("Idle", "Hurt", 0.1F);
-    this.stateData.setMix("Attack", "Idle", 0.1F);
-    */
   }
 
   @Override
@@ -235,8 +235,22 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
                 , AttackEffect.SLASH_DIAGONAL
             )
         );
+        /*
         AbstractDungeon.actionManager.addToBottom(
             new GainBlockAction(this, this, this.blc)
+        );
+        */
+        AbstractDungeon.actionManager.addToBottom(
+            new ApplyPowerAction(
+                p,
+                this,
+                new WeakPower(
+                    p,
+                    this.weak,
+                    true
+                ),
+                this.weak
+            )
         );
         break;
       case 5:
@@ -255,7 +269,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
         //debuff
         //missing vfx
         AbstractDungeon.actionManager.addToBottom(
-            new OrinsDebuffAction(this.debuff, this)
+            new OrinsDebuffAction(this.wraith, this)
         );
         break;
       case 7:
@@ -374,7 +388,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
             num
     );
     if (this.form1) {
-      if (this.halfDead){
+      if (this.halfDead) {
         return;
       }
       turnCount++;

@@ -326,3 +326,9 @@ v0.14.27 3/17/2019
 *Shroom Bag : hp recovery for playing Parasite : 3->2 ; now playing Parasite will draw a card;
 *Big Shroom Bag : hp recovery for playing Parasite : 5->3 ; now playing Parasite will draw a card;
 *Slightly buffed Orin and ZombieFairy
+
+v0.14.28 4/6/2019
+*Update illustration for cards : Guiding Star, Star Barrage, MilkyWay, Shooting Echo, SuperNova
+*Big Shroom Bag : number of cards to draw when playing Parasite : 1 -> 2;
+*Cat Cart : Heal per charge : 5 -> 4;
+*Lower the Hp of Orin, reduce the damage of Orin and Zombie Fairies ; Slightly adjust the action of Orin;

@@ -25,8 +25,8 @@ public class ZombieFairy extends AbstractMonster {
   private static final int HP_ = 16;
   private static final int HP_A = 14;
   private static final int HP_A_ = 18;
-  private static final int DMG = 6;
-  private static final int DMG_A = 8;
+  private static final int DMG = 4;
+  private static final int DMG_A = 5;
   private static final int DMG_MULTI = 6;
   private static final int DMG_MULTI_A = 8;
   private static final int BLOCK = 4;
