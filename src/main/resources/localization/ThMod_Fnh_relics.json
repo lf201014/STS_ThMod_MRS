@@ -102,14 +102,14 @@
     "NAME": "Cat Cart",
     "FLAVOR": "When you fall in battle,your loyal kitties will bring you back to life with this.",
     "DESCRIPTIONS": [
-      "Gain 1 charge when you climb a floor.When you would die,consume all charges and heal #g5 hp for each of them."
+      "Gain 1 charge when you climb a floor.When you would die,consume all charges and heal #g4 hp for each of them."
     ]
   },
   "BigShroomBag": {
     "NAME": "Big Shroom Bag",
     "FLAVOR": "A large version of shroom bag.",
     "DESCRIPTIONS": [
-      "Replaces #rShroom #rBag . NL Parasite cards can now be played. Playing a #yParasite will heal #b3 HP and draw a card, then Exhausts it."
+      "Replaces #rShroom #rBag . NL Parasite cards can now be played. Playing a #yParasite will heal #b3 HP and draw #b2 card, then Exhausts it."
     ]
   },
   "WWWWWWWWWWWW": {
