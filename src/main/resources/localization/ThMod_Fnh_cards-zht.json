@@ -21,7 +21,7 @@
   },
   "DarkSpark": {
     "NAME": "暗色火花",
-    "DESCRIPTION": "消耗 手牌中所有非攻擊牌。對所有敵人造成 !D! 點傷害",
+    "DESCRIPTION": "消耗 手牌中所有非攻擊牌。對所有敵人造成两次 !D! 點傷害",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   },
   "DeepEcoloBomb": {

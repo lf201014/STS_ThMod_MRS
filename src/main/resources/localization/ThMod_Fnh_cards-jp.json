@@ -21,7 +21,7 @@
   },
   "DarkSpark": {
     "NAME": "ダークスパーク",
-    "DESCRIPTION": "「アタック」以外の手札を廃棄する。 NL 敵全体に !D! ダメージを与える ",
+    "DESCRIPTION": "「アタック」以外の手札を廃棄する。 NL 敵全体に二回 !D! ダメージを与える ",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   },
   "DeepEcoloBomb": {
