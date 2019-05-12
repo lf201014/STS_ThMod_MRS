@@ -21,7 +21,7 @@
   },
   "DarkSpark": {
     "NAME": "暗色火花",
-    "DESCRIPTION": " 消耗 手牌中所有非攻击牌。对所有敌人造成 !D! 点伤害。",
+    "DESCRIPTION": " 消耗 手牌中所有非攻击牌。对所有敌人造成两次 !D! 点伤害。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   },
   "DeepEcoloBomb": {
@@ -172,7 +172,7 @@
   },
   "BlazeAway": {
     "NAME": "连续发射",
-    "DESCRIPTION": "将你本回合最后使用过的攻击卡的复制加入手牌。使其本回合内费用变为0。 NL 消耗 。",
+    "DESCRIPTION": "打出本回合最后使用过的攻击卡的 !M! 次。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "将你本回合最后使用过的攻击卡的两张复制加入手牌。使其本回合内费用变为0。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       " NL （最后使用的攻击卡 : ",
@@ -312,7 +312,7 @@
   "SuperNova": {
     "NAME": "超新星",
     "DESCRIPTION": "不再受到 灼伤 的伤害。 NL 每 消耗 一张 灼伤 ，获得一点 力量 。 NL 在回合结束时 消耗 所有手牌。",
-    "UPGRADE_DESCRIPTION": "不再受到 灼伤 的伤害。 NL 每 消耗 一张 诅咒 或 状态 ，获得一点 力量 。 NL 在回合结束时 消耗 所有手牌。"
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 不再受到 灼伤 的伤害。 NL 每 消耗 一张 灼伤 ，获得一点 力量 。 NL 在回合结束时 消耗 所有手牌。"
   },
   "OneTimeOff": {
     "NAME": "一回休",

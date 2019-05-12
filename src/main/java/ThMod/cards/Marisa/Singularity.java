@@ -31,7 +31,7 @@ public class Singularity extends CustomCard {
         DESCRIPTION,
         AbstractCard.CardType.POWER,
         AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.UNCOMMON,
+        CardRarity.RARE,
         AbstractCard.CardTarget.SELF
     );
     this.magicNumber = this.baseMagicNumber = STC;
