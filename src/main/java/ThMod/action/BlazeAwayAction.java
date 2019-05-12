@@ -19,9 +19,8 @@ public class BlazeAwayAction
   private AbstractCard card;
   AbstractPlayer p;
 
-  public BlazeAwayAction(int amount, AbstractCard card) {
+  public BlazeAwayAction(AbstractCard card) {
     this.duration = Settings.ACTION_DUR_FAST;
-    this.amount = amount;
     this.p = AbstractDungeon.player;
     if (card.type == CardType.ATTACK) {
       this.card = card;
@@ -29,18 +28,14 @@ public class BlazeAwayAction
       this.isDone = true;
     }
     ThMod.logger.info(
-        "BlazeAwayAction : Initialize complete ; number :" +
-            amount +
-            " ; card : " +
+        "BlazeAwayAction : Initialize complete ; card : " +
             card.name
     );
   }
 
   public void update() {
 
-    AbstractMonster target;
-
-    target = AbstractDungeon.getMonsters().getRandomMonster(true);
+    AbstractMonster target = AbstractDungeon.getMonsters().getRandomMonster(true);
 /*
     if (target == null) {
       this.isDone = true;
@@ -63,10 +58,6 @@ public class BlazeAwayAction
             " ; target : " +
             target.id
     );
-    /*
-    if (!card.canUse(AbstractDungeon.player, this.target)) {
-      AbstractDungeon.actionManager.addToTop(new UnlimboAction(card));
-    } else */
 
     card.applyPowers();
     AbstractDungeon.actionManager.currentAction = null;
@@ -81,11 +72,7 @@ public class BlazeAwayAction
       AbstractDungeon.actionManager.addToTop(new WaitAction(Settings.ACTION_DUR_FASTER));
     }
 
-    if (this.amount>1){
-      AbstractDungeon.actionManager.addToBottom(
-          new BlazeAwayAction(amount--,this.card)
-      );
-    }
+    this.isDone = true;
   }
 
 }

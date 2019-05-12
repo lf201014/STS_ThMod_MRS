@@ -338,6 +338,7 @@ v0.14.28 4/6/2019
 v0.14.29 5/12/2019
 *Update illustration for cards : Final Spark ,Absolute Magnitude ,Exhaustion ,Wraith;
 *Fix the bug that the damage of White Dwarf not caculated correctly;
+*Singularity : Rarity : Uncommon -> Rare;
 *Starlight Typhoon : Cost : 2 -> 1;
 *Supernova : Now upgrading it grants Innate,rather than reduces its cost from 3 to 2;
 *Escape Velocity : Cost : 1 -> 2;Now upgrading it reduces its cost from 2 to 1 rather than grants Innate;

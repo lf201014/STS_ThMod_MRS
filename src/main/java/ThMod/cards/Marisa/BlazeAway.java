@@ -69,8 +69,9 @@ public class BlazeAway extends CustomCard {
     if (lastAttack != null) {
       ThMod.logger.info("BlazeAway : last attack :" + lastAttack.cardID);
       AbstractCard card = lastAttack.makeStatEquivalentCopy();
-      if (card.costForTurn>=0)
+      if (card.costForTurn >= 0) {
         card.setCostForTurn(0);
+      }
       ThMod.logger.info(
           "BlazeAway : card :" + card.cardID
               + " ; baseD :" + card.baseDamage
@@ -82,9 +83,11 @@ public class BlazeAway extends CustomCard {
               + " ; C : " + card.cost
               + " ; CFT : " + card.costForTurn
       );
-      AbstractDungeon.actionManager.addToBottom(
-          new BlazeAwayAction( this.magicNumber,card)
-      );
+      for (int i = 0; i < this.magicNumber; i++) {
+        AbstractDungeon.actionManager.addToBottom(
+            new BlazeAwayAction(card)
+        );
+      }
 
     } else {
       ThMod.logger.info("BlazeAway : error : last attack is null ");
