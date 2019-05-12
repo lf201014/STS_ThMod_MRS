@@ -332,3 +332,9 @@ v0.14.28 4/6/2019
 *Big Shroom Bag : number of cards to draw when playing Parasite : 1 -> 2;
 *Cat Cart : Heal per charge : 5 -> 4;
 *Lower the Hp of Orin, reduce the damage of Orin and Zombie Fairies ; Slightly adjust the action of Orin;
+*Update Korean texts(Github user : Katinor)
+*Update support for Googly Eye(Github user:KAMAQUEEN)
+
+v0.14.29 5/12/2019
+*Update illustration for cards : Final Spark ,Absolute Magnitude ,Exhaustion ,Wraith
+*

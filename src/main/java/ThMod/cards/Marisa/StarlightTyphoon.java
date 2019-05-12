@@ -22,7 +22,7 @@ public class StarlightTyphoon extends AmplifiedAttack {
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   private static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-  private static final int COST = 2;
+  private static final int COST = 1;
   private static final int MULT = 2;
   private static final int UPG_MULT = 1;
   public int counter = 0;

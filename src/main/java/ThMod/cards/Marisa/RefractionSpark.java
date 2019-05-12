@@ -27,7 +27,7 @@ public class RefractionSpark
   private static final int COST = 1;
   private static final int ATK_DMG = 4;
   private static final int UPG_DMG = 1;
-  private static final int AMP_DMG = 2;
+  private static final int AMP_DMG = 3;
   private static final int UPG_AMP = 1;
   private static final int AMP = 1;
 

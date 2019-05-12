@@ -172,7 +172,7 @@
   },
   "BlazeAway": {
     "NAME": "連續發射",
-    "DESCRIPTION": "複製 1 張本回合最後打出的攻擊牌到手牌，該牌在本回合耗能變為0。 NL 消耗",
+    "DESCRIPTION": "打出本回合最後打出的攻擊牌 !M! 次。 NL 消耗",
     "UPGRADE_DESCRIPTION": "複製 2 張本回合最後打出的攻擊牌到手牌，該牌在本回合耗能變為0。 NL 消耗",
     "EXTENDED_DESCRIPTION": [
       " NL （最後打出的攻擊牌: ",

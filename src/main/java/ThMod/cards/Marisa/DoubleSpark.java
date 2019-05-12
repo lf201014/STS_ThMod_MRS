@@ -29,7 +29,7 @@ public class DoubleSpark
   public static final String IMG_PATH = "img/cards/DoubleSpark.png";
 
   private static final int COST = 1;
-  private static final int ATK_DMG = 5;
+  private static final int ATK_DMG = 6;
   private static final int UPG_DMG = 2;
 
   public DoubleSpark() {

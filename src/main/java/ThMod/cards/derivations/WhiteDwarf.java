@@ -65,7 +65,7 @@ public class WhiteDwarf extends AmplifiedAttack {
   public void calculateCardDamage(AbstractMonster mo) {
     AbstractPlayer player = AbstractDungeon.player;
     this.ampNumber = (int) (Math.floor(player.discardPile.size() * this.magn));
-    super.applyPowers();
+    super.calculateCardDamage(mo);
   }
 
   public boolean canUse(AbstractPlayer p, AbstractMonster m) {
