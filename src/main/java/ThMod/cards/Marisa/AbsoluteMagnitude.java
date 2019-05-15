@@ -1,6 +1,7 @@
 package ThMod.cards.Marisa;
 
 import ThMod.abstracts.AmplifiedAttack;
+import ThMod.patches.AbstractCardEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,8 +11,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import basemod.abstracts.CustomCard;
-import ThMod.patches.AbstractCardEnum;
 
 public class AbsoluteMagnitude
     extends AmplifiedAttack {
@@ -22,7 +21,7 @@ public class AbsoluteMagnitude
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
-  public static final String IMG_PATH = "img/cards/temp/AbsoMagni.png";
+  public static final String IMG_PATH = "img/cards/absMagni.png";
   private static final int COST = 2;
   private static final float ATK_MULT = 2F;
   private static final float ATK_MULT_UPG = 3F;

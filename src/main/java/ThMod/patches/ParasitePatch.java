@@ -27,12 +27,15 @@ public class ParasitePatch {
       if ((AbstractDungeon.player.hasRelic("ShroomBag")) || (AbstractDungeon.player.hasRelic("BigShroomBag"))) {
         AbstractRelic r;
         int heal_amt;
+        int draw;
         if (AbstractDungeon.player.hasRelic("BigShroomBag")) {
           r = p.getRelic("BigShroomBag");
           heal_amt = 3;
+          draw = 2;
         } else {
           r = p.getRelic("ShroomBag");
           heal_amt = 2;
+          draw = 1;
         }
 
         r.flash();
@@ -44,7 +47,7 @@ public class ParasitePatch {
             new HealAction(p, p, heal_amt)
         );
         AbstractDungeon.actionManager.addToBottom(
-            new DrawCardAction(p,1)
+            new DrawCardAction(p,draw)
         );
         return SpireReturn.Return(null);
       }

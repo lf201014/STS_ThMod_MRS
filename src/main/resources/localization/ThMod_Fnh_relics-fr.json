@@ -102,7 +102,7 @@
     "NAME": "Carte chat",
     "FLAVOR": "Si vous tombez au combat, vos loyaux chatons vous ramèneront à la vie avec cet objet.",
     "DESCRIPTIONS": [
-      "Gagnez une charge quand vous montez un palier. Quand vous devriez mourrir, consomme toutes les charges et soigne #g5 PV pour chacune."
+      "Gagnez une charge quand vous montez un palier. Quand vous devriez mourrir, consomme toutes les charges et soigne #g4 PV pour chacune."
     ]
   },
   "BigShroomBag": {

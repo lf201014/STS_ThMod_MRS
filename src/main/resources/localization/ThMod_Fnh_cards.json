@@ -21,7 +21,7 @@
   },
   "DarkSpark": {
     "NAME": "Dark Spark",
-    "DESCRIPTION": "Exhaust all non-Attack cards in your hand. NL Deal !D! damage to ALL enemies.",
+    "DESCRIPTION": "Exhaust all non-Attack cards in your hand. NL Deal !D! damage to ALL enemies twice.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   },
   "DeepEcoloBomb": {
@@ -168,7 +168,7 @@
   },
   "BlazeAway": {
     "NAME": "Blaze Away",
-    "DESCRIPTION": "Add a copy of the last Attack you played this turn to your hand. NL It costs 0 this turn. NL Exhaust.",
+    "DESCRIPTION": "Play the last Attack you played this turn !M! time(s). NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Add 2 copies of the last Attack you played this turn to your hand. NL They cost 0 this turn. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (Last Attack : ",
@@ -313,7 +313,7 @@
   "SuperNova": {
     "NAME": "Supernova",
     "DESCRIPTION": "No longer take damage from Burn. Whenever you Exhaust a Burn, gain 1 Strength. NL Exhaust your hand at the end of each turn.",
-    "UPGRADE_DESCRIPTION": "No longer take damage from Burn. Whenever you Exhaust a Curse or Status, gain 1 Strength. NL Exhaust your hand at the end of each turn."
+    "UPGRADE_DESCRIPTION": " Innate. NL No longer take damage from Burn. Whenever you Exhaust a Burn, gain 1 Strength. NL Exhaust your hand at the end of each turn."
   },
   "OneTimeOff": {
     "NAME": "One Time Off",

@@ -12,7 +12,7 @@ public class CatCart extends CustomRelic {
   public static final String ID = "CatCart";
   private static final String IMG = "img/relics/CatCart.png";
   private static final String IMG_OTL = "img/relics/outline/CatCart.png";
-  private static final int HEAL_PER_CHARGE = 5;
+  private static final int HEAL_PER_CHARGE = 4;
 
   public CatCart() {
     super(

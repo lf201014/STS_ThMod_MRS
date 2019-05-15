@@ -25,8 +25,8 @@ public class DarkSpark
   public static final String IMG_PATH = "img/cards/darkSpark.png";
 
   private static final int COST = 2;
-  private static final int ATK_DMG = 14;
-  private static final int UPG_DMG = 4;
+  private static final int ATK_DMG = 7;
+  private static final int UPG_DMG = 3;
 
   public DarkSpark() {
     super(
@@ -49,6 +49,14 @@ public class DarkSpark
   public void use(AbstractPlayer p, AbstractMonster m) {
     AbstractDungeon.actionManager.addToBottom(
         new ExhaustAllNonAttackAction()
+    );
+    AbstractDungeon.actionManager.addToBottom(
+        new DamageAllEnemiesAction(
+            p,
+            this.multiDamage,
+            this.damageTypeForTurn,
+            AbstractGameAction.AttackEffect.NONE
+        )
     );
     AbstractDungeon.actionManager.addToBottom(
         new DamageAllEnemiesAction(
