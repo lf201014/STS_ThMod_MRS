@@ -21,7 +21,7 @@
   },
   "DarkSpark": {
     "NAME": "暗色火花",
-    "DESCRIPTION": "消耗 手牌中所有非攻擊牌。對所有敵人造成两次 !D! 點傷害",
+    "DESCRIPTION": "消耗 手牌中所有非攻擊牌。對所有敵人造成兩次 !D! 點傷害",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   },
   "DeepEcoloBomb": {
@@ -312,7 +312,7 @@
   "SuperNova": {
     "NAME": "超新星",
     "DESCRIPTION": "不再受到 灼傷 的傷害。 NL 每 消耗 1張 灼傷 ，獲得1點 力量 。 NL 在回合結束時 消耗 所有手牌",
-    "UPGRADE_DESCRIPTION": "不再受到 灼傷 的傷害。 NL 每 消耗 1張 詛咒 或 狀態 ，獲得1點 力量 。 NL 在回合結束時 消耗 所有手牌"
+    "UPGRADE_DESCRIPTION": "固有 。 NL 不再受到 灼傷 的傷害。 NL 每 消耗 1張 灼傷 ，獲得1點 力量 。 NL 在回合結束時 消耗 所有手牌"
   },
   "OneTimeOff": {
     "NAME": "一回休",
