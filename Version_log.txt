@@ -349,3 +349,10 @@ v0.14.29 5/12/2019
 *Final Spark : Cost : 8 -> 7;
 *Blaze Away : Rework : Uncommon ; Cost : 1 ; Play the last Attack you played this turn ( twice ).Exhaust.
 *Update support for Googly Eye(Github user:KAMAQUEEN)
+
+v0.14.30 4/28/2019
+*Blaze away : No longer Exhaust ;
+*Fix the bug cause the game crush when entering ? room in act 1 while the language is Traditional Chinese( due to in correct localizat*ion index id ) ;
+*(Hopefullly)Fix the bug that ManaRampage may target dead enemy , causing the energy wasted ;
+*Update Korean texts(Github user : Katinor)
+*Update support for Googly Eye(Github user:KAMAQUEEN)

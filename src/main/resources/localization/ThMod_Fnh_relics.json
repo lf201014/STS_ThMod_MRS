@@ -71,7 +71,7 @@
   },
   "ShroomBag": {
     "NAME": "Shroom Bag",
-    "FLAVOR": "All witches have an abnormal ethusiasm for mushrooms... Or is it just Marisa...?",
+    "FLAVOR": "All witches have an abnormal enthusiasm for mushrooms... Or is it just Marisa...?",
     "DESCRIPTIONS": [
       "Upon pickup, obtain 2 #yParasite. Parasite cards can now be played. Playing a #yParasite will heal #b2 HP and draw a card, then Exhausts it."
     ]

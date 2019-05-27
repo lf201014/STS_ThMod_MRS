@@ -17,21 +17,15 @@ public class ManaRampageAction
     extends AbstractGameAction {
 
   private boolean f2p;
-  private ArrayList<AbstractCard> list = new ArrayList<>();
   AbstractPlayer p;
+  boolean upgraded;
 
   public ManaRampageAction(int amount, boolean upgraded, boolean freeToPlay) {
     this.duration = Settings.ACTION_DUR_FAST;
     this.amount = amount;
     this.f2p = freeToPlay;
     this.p = AbstractDungeon.player;
-    for (int i = 0; i < this.amount; i++) {
-      AbstractCard tmp = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
-      if (upgraded) {
-        tmp.upgrade();
-      }
-      list.add(tmp);
-    }
+    this.upgraded = upgraded;
     ThMod.logger.info(
         "ManaRampageAction : Initialize complete ; card number :" +
             amount +
@@ -42,60 +36,16 @@ public class ManaRampageAction
 
   public void update() {
 
-    int amount;
-    AbstractMonster target;
-
-    if (list.isEmpty()) {
-      this.isDone = true;
-      return;
-    }
-
-    AbstractCard card = list.get(0);
-    list.remove(0);
-    target = AbstractDungeon.getMonsters().getRandomMonster(true);
-/*
-    if (target == null) {
-      this.isDone = true;
-      ThMod.logger.info("ManaRampageAction : done");
-      return;
-    }
-    */
-    AbstractDungeon.player.limbo.group.add(card);
-    card.current_x = (Settings.WIDTH / 2.0F);
-    card.current_y = (Settings.HEIGHT / 2.0F);
-    card.target_x = (Settings.WIDTH / 2.0F - 300.0F * Settings.scale);
-    card.target_y = (Settings.HEIGHT / 2.0F);
-    card.freeToPlayOnce = true;
-    card.purgeOnUse = true;
-    card.targetAngle = 0.0F;
-    card.drawScale = 0.12F;
-    ThMod.logger.info(
-        "ManaRampageAction : card : " +
-            card.cardID +
-            " ; target : " +
-            target.id
-    );
-    /*
-    if (!card.canUse(AbstractDungeon.player, this.target)) {
-      AbstractDungeon.actionManager.addToTop(new UnlimboAction(card));
-    } else */
-    {
-      card.applyPowers();
-      AbstractDungeon.actionManager.currentAction = null;
-      AbstractDungeon.actionManager.addToTop(this);
-      AbstractDungeon.actionManager.cardQueue.add(
-          new CardQueueItem(card, target)
+    for (int i =0;i<amount;i++){
+      AbstractDungeon.actionManager.addToBottom(
+          new PlayManaRampageCardAction(upgraded)
       );
-      if (!Settings.FAST_MODE) {
-        AbstractDungeon.actionManager.addToTop(new WaitAction(Settings.ACTION_DUR_MED));
-      } else {
-        AbstractDungeon.actionManager.addToTop(new WaitAction(Settings.ACTION_DUR_FASTER));
-      }
     }
 
     if (!this.f2p) {
       p.energy.use(EnergyPanel.totalCount);
     }
+    this.isDone = true;
   }
 
 }
