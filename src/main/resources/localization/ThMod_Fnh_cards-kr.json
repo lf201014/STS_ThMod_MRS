@@ -168,8 +168,8 @@
   },
   "BlazeAway": {
     "NAME": "블레이즈 어웨이",
-    "DESCRIPTION": "이번 턴에 마지막으로 사용한 공격 카드를 !M! 회 사용합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "이번 턴에 가장 최근에 사용한 공격 카드를 2 장 복사합니다. NL 이 턴 동안 복사한 카드의 비용이 0 이 됩니다. NL 소멸.",
+    "DESCRIPTION": "이번 턴에 마지막으로 사용한 공격 카드를 !M! 회 사용합니다.",
+    "UPGRADE_DESCRIPTION": "이번 턴에 가장 최근에 사용한 공격 카드를 2 장 복사합니다. NL 이 턴 동안 복사한 카드의 비용이 0 이 됩니다.",
     "EXTENDED_DESCRIPTION": [
       " NL (사용할 카드 : ",
       " ).",

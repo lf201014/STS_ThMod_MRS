@@ -30,6 +30,11 @@ public class ShroomBag extends CustomRelic {
   }
 
   public AbstractRelic makeCopy() {
+    if (AbstractDungeon.player != null){
+      if (AbstractDungeon.player.hasRelic("ShroomBag")){
+        return new BigShroomBag();
+      }
+    }
     return new ShroomBag();
   }
 
