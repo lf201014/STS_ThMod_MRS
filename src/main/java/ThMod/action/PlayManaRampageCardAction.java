@@ -12,8 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class PlayManaRampageCardAction  extends AbstractGameAction {
 
-  private AbstractCard card;
-  boolean upgraded;
+  private boolean upgraded;
 
   PlayManaRampageCardAction(boolean upgraded){
     this.duration = Settings.ACTION_DUR_FAST;
@@ -23,7 +22,7 @@ public class PlayManaRampageCardAction  extends AbstractGameAction {
   public void update() {
 
     target = AbstractDungeon.getMonsters().getRandomMonster(true);
-    card = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
+    AbstractCard card = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
 
     if (upgraded){
       card.upgrade();

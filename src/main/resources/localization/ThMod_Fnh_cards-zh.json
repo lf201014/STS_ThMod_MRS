@@ -9,7 +9,7 @@
   },
   "AsteroidBelt": {
     "NAME": "小行星带",
-    "DESCRIPTION": "获得 !B!  格挡 。 NL 增幅 [E]  :下回合开始时获得 !B! 格挡。"
+    "DESCRIPTION": "获得 !B!  格挡 。 NL 增幅  [E]  :下回合开始时获得 !B! 格挡。"
   },
   "BigCrunch": {
     "NAME": "大坍缩",
