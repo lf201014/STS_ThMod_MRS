@@ -357,3 +357,10 @@ v0.14.30 4/28/2019
 *Update Korean texts(Github user : Katinor)
 *Update support for Googly Eye(Github user:KAMAQUEEN)
 *Update Traditional Chinese texts(GitHub user : rainfoxest)
+
+v0.14.31 8/1/2019
+*Update illustration for cards : Millisecond Pulsars ,Black Flare Star ,White Dwarf;
+*Adapt to new version of base game;
+*Add a checkbox in mod config panel which allows player to choose if encounter the Black Cat event when playing other characters;
+*Fix the bug : Cat Cart not revive the player;
+*Fix the bug : Starlight Typhoon counter does not work correctly;

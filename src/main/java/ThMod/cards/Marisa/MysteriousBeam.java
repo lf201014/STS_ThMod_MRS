@@ -39,6 +39,7 @@ public class MysteriousBeam
         AbstractCard.CardRarity.COMMON,
         AbstractCard.CardTarget.ENEMY
     );
+    this.baseDamage =0;
   }
 
   @Override
@@ -73,7 +74,7 @@ public class MysteriousBeam
     );
     c.applyPowers();
 
-    this.baseDamage = c.damage;
+    this.baseDamage += c.damage;
     this.calculateCardDamage(m);
 
     AbstractDungeon.actionManager.addToBottom(
