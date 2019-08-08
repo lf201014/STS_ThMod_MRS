@@ -1,58 +1,12 @@
 package ThMod;
 
 import static ThMod.patches.AbstractCardEnum.MARISA_COLOR;
-import static ThMod.patches.ThModClassEnum.MARISA;
 import static ThMod.patches.CardTagEnum.SPARK;
+import static ThMod.patches.ThModClassEnum.MARISA;
 
 import ThMod.action.SparkCostAction;
-import ThMod.cards.Marisa.AlicesGift;
-import ThMod.cards.Marisa.DC;
-import ThMod.cards.Marisa.EnergyRecoil;
-import ThMod.cards.Marisa.ManaRampage;
-import ThMod.cards.Marisa.OneTimeOff;
-import ThMod.cards.Marisa.SprinkleStarSeal;
-import ThMod.cards.derivations.Exhaustion_MRS;
-import ThMod.cards.derivations.Wraith;
-import ThMod.event.Mushrooms_MRS;
-import ThMod.event.OrinTheCat;
-import ThMod.monsters.Orin;
-import ThMod.monsters.ZombieFairy;
-import ThMod.potions.ShroomBrew;
-import ThMod.relics.BewitchedHakkero;
-import ThMod.relics.BigShroomBag;
-import ThMod.relics.CatCart;
-import basemod.helpers.RelicType;
-import com.badlogic.gdx.graphics.Texture;
-import com.google.gson.Gson;
-import com.megacrit.cardcrawl.dungeons.Exordium;
-import com.megacrit.cardcrawl.dungeons.TheBeyond;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.localization.Keyword;
-import com.megacrit.cardcrawl.localization.PotionStrings;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import java.nio.charset.StandardCharsets;
-
-import java.util.ArrayList;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Color;
-import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardHelper;
-import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.localization.RelicStrings;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-
 import ThMod.cards.Marisa.AbsoluteMagnitude;
+import ThMod.cards.Marisa.AlicesGift;
 import ThMod.cards.Marisa.AsteroidBelt;
 import ThMod.cards.Marisa.BigCrunch;
 import ThMod.cards.Marisa.BinaryStars;
@@ -62,13 +16,16 @@ import ThMod.cards.Marisa.CasketOfStar;
 import ThMod.cards.Marisa.ChargeUpSpray;
 import ThMod.cards.Marisa.ChargingUp;
 import ThMod.cards.Marisa.CollectingQuirk;
+import ThMod.cards.Marisa.DC;
 import ThMod.cards.Marisa.DarkMatter;
 import ThMod.cards.Marisa.DarkSpark;
 import ThMod.cards.Marisa.DeepEcologicalBomb;
 import ThMod.cards.Marisa.Defend_MRS;
 import ThMod.cards.Marisa.DoubleSpark;
 import ThMod.cards.Marisa.DragonMeteor;
+import ThMod.cards.Marisa.EarthLightRay;
 import ThMod.cards.Marisa.EnergyFlow;
+import ThMod.cards.Marisa.EnergyRecoil;
 import ThMod.cards.Marisa.EscapeVelocity;
 import ThMod.cards.Marisa.EventHorizon;
 import ThMod.cards.Marisa.FairyDestructionRay;
@@ -84,6 +41,7 @@ import ThMod.cards.Marisa.MachineGunSpark;
 import ThMod.cards.Marisa.MagicAbsorber;
 import ThMod.cards.Marisa.MagicChant;
 import ThMod.cards.Marisa.ManaConvection;
+import ThMod.cards.Marisa.ManaRampage;
 import ThMod.cards.Marisa.MasterSpark;
 import ThMod.cards.Marisa.MaximisePower;
 import ThMod.cards.Marisa.MeteoricShower;
@@ -92,6 +50,7 @@ import ThMod.cards.Marisa.MillisecondPulsars;
 import ThMod.cards.Marisa.MysteriousBeam;
 import ThMod.cards.Marisa.NonDirectionalLaser;
 import ThMod.cards.Marisa.Occultation;
+import ThMod.cards.Marisa.OneTimeOff;
 import ThMod.cards.Marisa.OortCloud;
 import ThMod.cards.Marisa.OpenUniverse;
 import ThMod.cards.Marisa.Orbital;
@@ -107,6 +66,7 @@ import ThMod.cards.Marisa.ShootTheMoon;
 import ThMod.cards.Marisa.ShootingEcho;
 import ThMod.cards.Marisa.Singularity;
 import ThMod.cards.Marisa.SporeBomb;
+import ThMod.cards.Marisa.SprinkleStarSeal;
 import ThMod.cards.Marisa.StarBarrage;
 import ThMod.cards.Marisa.StarDustReverie;
 import ThMod.cards.Marisa.StarlightTyphoon;
@@ -120,25 +80,38 @@ import ThMod.cards.Marisa.UpSweep;
 import ThMod.cards.Marisa.WitchLeyline;
 import ThMod.cards.Marisa.WitchOfGreed;
 import ThMod.cards.Marisa._6A;
-import ThMod.cards.Marisa.EarthLightRay;
 import ThMod.cards.derivations.BlackFlareStar;
+import ThMod.cards.derivations.Exhaustion_MRS;
 import ThMod.cards.derivations.GuidingStar;
 import ThMod.cards.derivations.Spark;
 import ThMod.cards.derivations.WhiteDwarf;
+import ThMod.cards.derivations.Wraith;
 import ThMod.characters.Marisa;
+import ThMod.event.Mushrooms_MRS;
+import ThMod.event.OrinTheCat;
+import ThMod.monsters.Orin;
+import ThMod.monsters.ZombieFairy;
 import ThMod.patches.AbstractCardEnum;
+import ThMod.potions.ShroomBrew;
 import ThMod.powers.Marisa.GrandCrossPower;
 import ThMod.relics.AmplifyWand;
+import ThMod.relics.BewitchedHakkero;
+import ThMod.relics.BigShroomBag;
 import ThMod.relics.BreadOfAWashokuLover;
-import ThMod.relics.MagicBroom;
+import ThMod.relics.CatCart;
 import ThMod.relics.ExperimentalFamiliar;
 import ThMod.relics.HandmadeGrimoire;
+import ThMod.relics.MagicBroom;
 import ThMod.relics.MiniHakkero;
 import ThMod.relics.RampagingMagicTools;
 import ThMod.relics.ShroomBag;
 import ThMod.relics.SimpleLauncher;
 import ThMod.relics.SproutingBranch;
 import basemod.BaseMod;
+import basemod.IUIElement;
+import basemod.ModLabeledToggleButton;
+import basemod.ModPanel;
+import basemod.helpers.RelicType;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditKeywordsSubscriber;
@@ -151,6 +124,36 @@ import basemod.interfaces.PostDrawSubscriber;
 import basemod.interfaces.PostDungeonInitializeSubscriber;
 import basemod.interfaces.PostExhaustSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
+import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.google.gson.Gson;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.dungeons.TheBeyond;
+import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.localization.Keyword;
+import com.megacrit.cardcrawl.localization.PotionStrings;
+import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.Properties;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @SpireInitializer
 public class ThMod implements PostExhaustSubscriber,
@@ -228,6 +231,9 @@ public class ThMod implements PostExhaustSubscriber,
 
   public static int typhoonCounter = 0;
 
+  public static boolean isCatEventEnabled;
+  private Properties marisaModDefaultProp = new Properties();
+
   //public static boolean OrinEvent = false;
 
   private ArrayList<AbstractCard> cardsToAdd = new ArrayList<>();
@@ -291,6 +297,11 @@ public class ThMod implements PostExhaustSubscriber,
         logger.info("ThMod.Amplified : Sufficient energy ,adding and returning true;");
         card.costForTurn += AMP;
         res = true;
+        if (card.costForTurn >0){
+          logger.info("ThMod.Amplified : False instance of 0 cost card,decreasing typhoon counter.");
+          typhoonCounter--;
+          logger.info("current Typhoon Counter : "+typhoonCounter);
+        }
       }
     }
 
@@ -357,6 +368,14 @@ public class ThMod implements PostExhaustSubscriber,
         ENERGY_ORB_CC_PORTRAIT,
         CARD_ENERGY_ORB
     );
+    marisaModDefaultProp.setProperty("isCatEventEnabled", "TRUE");
+    try {
+      final SpireConfig config = new SpireConfig("vexMod", "vexModConfig", marisaModDefaultProp);
+      config.load();
+      isCatEventEnabled = config.getBool("isCatEventEnabled");
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
 
   public void receiveEditCharacters() {
@@ -623,7 +642,40 @@ public class ThMod implements PostExhaustSubscriber,
 
   @Override
   public void receivePostInitialize() {
-    // TODO Auto-generated method stub
+
+    logger.info("Adding badge, configs,event and potion");
+
+    final ModPanel settingsPanel = new ModPanel();
+    String labelText;
+    if (Settings.language == Settings.GameLanguage.ZHS) {
+      labelText = "\u4f7f\u7528\u5176\u4ed6\u89d2\u8272\u65f6\u662f\u5426\u5f00\u542f\u9ed1\u732b\u4e8b\u4ef6\uff1f";
+    } else {
+      labelText = "Enable Black Cat event when playing other characters?";
+    }
+    final ModLabeledToggleButton enableBlackCatButton =
+        new ModLabeledToggleButton(
+            labelText,
+            350.0f,
+            700.0f,
+            Settings.CREAM_COLOR,
+            FontHelper.charDescFont,
+            isCatEventEnabled,
+            settingsPanel,
+            label -> {
+            },
+            button -> {
+              isCatEventEnabled = button.enabled;
+              try {
+                final SpireConfig config = new SpireConfig("vexMod", "vexModConfig",
+                    marisaModDefaultProp);
+                config.setBool("enablePlaceholder", isCatEventEnabled);
+                config.save();
+              } catch (Exception e) {
+                e.printStackTrace();
+              }
+            });
+    settingsPanel.addUIElement(enableBlackCatButton);
+
     BaseMod.addEvent(Mushrooms_MRS.ID, Mushrooms_MRS.class, Exordium.ID);
     BaseMod.addEvent(OrinTheCat.ID, OrinTheCat.class, TheBeyond.ID);
 /*
@@ -661,7 +713,7 @@ public class ThMod implements PostExhaustSubscriber,
         "MarisaMod",
         "Flynn , Hell , Hohner_257 , Samsara",
         "A Mod of the poor blonde girl from Touhou Project(",
-        null
+        settingsPanel
     );
   }
 

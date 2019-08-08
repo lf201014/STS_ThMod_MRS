@@ -18,7 +18,7 @@ public class BlackFlareStar extends CustomCard {
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-  public static final String IMG_PATH = "img/cards/pride.png";
+  public static final String IMG_PATH = "img/cards/Marisa/BlackFlareStar.png";
   private static final int COST = 0;
   private static final int BLC_AMT = 4;
   private static final int UPG_BLC = 1;

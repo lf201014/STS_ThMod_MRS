@@ -70,7 +70,8 @@ public class MarisaModEventPatch {
       */
       if (
           ((_retVal instanceof Mushrooms_MRS) && (AbstractDungeon.floorNum <= 6)) ||
-          ((_retVal instanceof OrinTheCat) && (AbstractDungeon.player.hasRelic("CatCart")))
+          ((_retVal instanceof OrinTheCat) && (AbstractDungeon.player.hasRelic("CatCart")))||
+              ((_retVal instanceof  OrinTheCat)&&(!(AbstractDungeon.player instanceof Marisa))&&(!ThMod.isCatEventEnabled))
       ) {
         return AbstractDungeon.getEvent(AbstractDungeon.eventRng);
       } else {
