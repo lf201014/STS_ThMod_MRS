@@ -1,4 +1,4 @@
-package ThMod.cards.Marisa;
+package ThMod.cards.deprecated;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;

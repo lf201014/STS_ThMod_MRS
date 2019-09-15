@@ -40,7 +40,8 @@ public class Strike_MRS
         CardRarity.BASIC,
         CardTarget.ENEMY
     );
-    this.tags.add(BaseModCardTags.BASIC_STRIKE);
+    //this.tags.add(BaseModCardTags.BASIC_STRIKE);
+    this.tags.add(AbstractCard.CardTags.STARTER_STRIKE);
     this.tags.add(SPARK);
     this.baseDamage = ATTACK_DMG;
   }

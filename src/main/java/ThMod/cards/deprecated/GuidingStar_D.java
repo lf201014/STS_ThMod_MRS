@@ -1,7 +1,8 @@
-package ThMod.cards.derivations;
+package ThMod.cards.deprecated;
 
+import ThMod.patches.AbstractCardEnum;
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.ShuffleAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,10 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import basemod.abstracts.CustomCard;
-import ThMod.patches.AbstractCardEnum;
-
-public class GuidingStar extends CustomCard {
+public class GuidingStar_D extends CustomCard {
 
   public static final String ID = "GuidingStar";
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -24,26 +22,19 @@ public class GuidingStar extends CustomCard {
   private static final int COST = 1;
   private static final int UPG_COST = 0;
 
-  public GuidingStar() {
+  public GuidingStar_D() {
     super(
         ID,
         NAME,
         IMG_PATH,
         COST,
         DESCRIPTION,
-        AbstractCard.CardType.SKILL,
+        CardType.SKILL,
         AbstractCardEnum.MARISA_DERIVATIONS,
-        AbstractCard.CardRarity.SPECIAL,
-        AbstractCard.CardTarget.SELF
+        CardRarity.SPECIAL,
+        CardTarget.SELF
     );
     this.exhaust = true;
-    this.retain = true;
-  }
-
-  @Override
-  public void applyPowers() {
-    super.applyPowers();
-    this.retain = true;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
@@ -74,14 +65,8 @@ public class GuidingStar extends CustomCard {
 	    */
   }
 
-  public void triggerAtStartOfTurn() {
-    AbstractDungeon.actionManager.addToBottom(
-        new GainEnergyAction(1)
-    );
-  }
-
   public AbstractCard makeCopy() {
-    return new GuidingStar();
+    return new GuidingStar_D();
   }
 
   public void upgrade() {

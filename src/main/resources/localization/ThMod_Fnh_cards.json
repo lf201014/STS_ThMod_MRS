@@ -21,7 +21,7 @@
   },
   "DarkSpark": {
     "NAME": "Dark Spark",
-    "DESCRIPTION": "Exhaust all non-Attack cards in your hand. NL Deal !D! damage to ALL enemies twice.",
+    "DESCRIPTION": "Exhaust all non-Attack cards in your hand. NL Deal !D! damage to ALL enemies twice.  NL This card can be upgraded multiple times.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   },
   "DeepEcoloBomb": {
@@ -143,7 +143,7 @@
   },
   "GuidingStar": {
     "NAME": "Guiding Star",
-    "DESCRIPTION": "Shuffle a copy of this card into your draw pile. NL Shuffle your discard pile into your draw pile. NL Exhaust.",
+    "DESCRIPTION": "Retain .  NL  If the card is in your hand at the start of turn,gain  [E]  .",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "OrrerysSun": {
@@ -207,7 +207,7 @@
   },
   "ShootingEcho": {
     "NAME": "Shooting Echo",
-    "DESCRIPTION": " Exhaust a random card. Add a Shooting Echo to your hand. NL Deal !D! damage. NL Exhaust.",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card.  NL If the card you exhaust is Burn ,Deal !D! damage again.",
     "UPGRADE_DESCRIPTION": "Exhaust a card. Add an Upgraded Shooting Echo to your hand. NL Deal !D! damage. NL Exhaust."
   },
   "EnergyFlow": {
@@ -302,8 +302,8 @@
   },
   "MagicChant": {
     "NAME": "Magic Chant",
-    "DESCRIPTION": "Choose up to !M! cards to Upgrade and Retain this turn.",
-    "UPGRADE_DESCRIPTION": "Retain. Choose !M! to retain this turn. Reduce the cost of the chosen cards by 1 next turn."
+    "DESCRIPTION": "Choose a card in your draw pile,add it to your hand and upgrade it. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "Choose a card in your draw pile,add it to your hand and upgrade it."
   },
   "UnstableBomb": {
     "NAME": "Unstable Bomb",
@@ -360,7 +360,7 @@
   },
   "ManaConvection": {
     "NAME": "Mana Convection",
-    "DESCRIPTION": "Draw !M! cards. Exhaust 2 cards. NL If you have 8 or more Charge-up, lose 8 Charge-up and gain  [E]  [E]  .",
+    "DESCRIPTION": "Exhaust up to !M! cards,gain  [E]  for each card exhausted. NL Exhaust .",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ManaRampage": {
@@ -478,6 +478,11 @@
   "Wraith": {
     "NAME": "Wraith",
     "DESCRIPTION": "Unplayable. NL At the end of your turn, gain 1 Wraith .",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "Acceleration": {
+    "NAME": "Acceleration",
+    "DESCRIPTION": "Draw !M! cards,add a Burn to your hand.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "WWWWWWWWWWWWWW": {

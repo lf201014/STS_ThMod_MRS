@@ -22,8 +22,8 @@ public class _6A
   public static final String IMG_PATH = "img/cards/6A.png";
   private static final int COST = 1;
   private static final int ATTACK_DMG = 4;
-  //private static final int UPGRADE_PLUS_DMG = 1;
-  private static final int UPG_COST = 0;
+  private static final int UPGRADE_PLUS_DMG = 2;
+  //private static final int UPG_COST = 0;
 
   public _6A() {
     super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -49,8 +49,8 @@ public class _6A
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      //upgradeDamage(UPGRADE_PLUS_DMG);
-      upgradeBaseCost(UPG_COST);
+      upgradeDamage(UPGRADE_PLUS_DMG);
+      //upgradeBaseCost(UPG_COST);
     }
   }
 }

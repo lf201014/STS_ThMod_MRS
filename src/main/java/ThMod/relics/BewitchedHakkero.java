@@ -1,19 +1,17 @@
 package ThMod.relics;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
+import static ThMod.patches.CardTagEnum.SPARK;
 
 import ThMod.ThMod;
 import ThMod.powers.Marisa.ChargeUpPower;
 import basemod.abstracts.CustomRelic;
-import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class BewitchedHakkero extends CustomRelic {
 
@@ -52,19 +50,25 @@ public class BewitchedHakkero extends CustomRelic {
     ThMod.logger.info(
         "BewitchedHakkero : Applying ChargeUpPower for using card : " + card.cardID
     );
+    int amt = 1;
+    if (card.hasTag(SPARK)) {
+      amt++;
+    }
     AbstractDungeon.actionManager.addToTop(
         new ApplyPowerAction(
             AbstractDungeon.player,
             AbstractDungeon.player,
-            new ChargeUpPower(AbstractDungeon.player, 1),
-            1
+            new ChargeUpPower(AbstractDungeon.player, amt),
+            amt
         )
     );
+
     AbstractDungeon.actionManager.addToBottom(
         new RelicAboveCreatureAction(AbstractDungeon.player, this)
     );
   }
 
+  /*
   @Override
   public int onAttacked(DamageInfo info, int damageAmount) {
     if (
@@ -86,7 +90,7 @@ public class BewitchedHakkero extends CustomRelic {
     }
     return damageAmount;
   }
-
+*/
   /*
   @Override
   public void atTurnStartPostDraw() {

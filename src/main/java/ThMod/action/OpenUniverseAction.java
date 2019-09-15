@@ -30,7 +30,7 @@ public class OpenUniverseAction
     ThMod.logger.info("OpenUniverseAction : generating cards");
 
     for (int i = 0; i < 5; i++) {
-      AbstractCard card = AbstractDungeon.returnTrulyRandomCardInCombat();
+      AbstractCard card = ThMod.getRandomMarisaCard();
 
       int rand = 20;
       if (this.upgraded){

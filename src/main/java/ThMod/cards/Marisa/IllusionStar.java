@@ -1,5 +1,6 @@
 package ThMod.cards.Marisa;
 
+import ThMod.ThMod;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.PutOnDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -43,7 +44,7 @@ public class IllusionStar extends CustomCard {
   public void use(AbstractPlayer p, AbstractMonster m) {
     for (int i = 0; i < this.magicNumber; i++) {
 
-      AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat();
+      AbstractCard c = ThMod.getRandomMarisaCard();
 
       AbstractDungeon.actionManager.addToBottom(
           new MakeTempCardInHandAction(c, 1)

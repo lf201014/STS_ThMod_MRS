@@ -49,7 +49,7 @@ public class StarDustReverieAction
 
     for (int i = 0; i < cnt; i++) {
 
-      AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat();
+      AbstractCard c = ThMod.getRandomMarisaCard();
 
       ThMod.logger.info("StarDustReverieAction : adding " + c.cardID);
 

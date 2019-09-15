@@ -21,7 +21,7 @@
   },
   "DarkSpark": {
     "NAME": "暗色火花",
-    "DESCRIPTION": " 消耗 手牌中所有非攻击牌。对所有敌人造成两次 !D! 点伤害。",
+    "DESCRIPTION": " 消耗 手牌中所有非攻击牌。对所有敌人造成两次 !D! 点伤害。 NL 此卡可被多次 升级 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   },
   "DeepEcoloBomb": {
@@ -147,7 +147,7 @@
   },
   "GuidingStar": {
     "NAME": "北极星",
-    "DESCRIPTION": "将此卡的一张复制加入抽牌堆。 NL 将你的弃牌堆洗入你的抽牌堆。 NL  消耗 。",
+    "DESCRIPTION": "保留 。 NL 若回合开始时此卡在你手中，获得  [E]  。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "OrrerysSun": {
@@ -211,7 +211,7 @@
   },
   "ShootingEcho": {
     "NAME": "流星共鸣",
-    "DESCRIPTION": " 消耗 一张随机手牌，然后将一张 流星共鸣 加入手中。 NL 造成 !D! 点伤害。 NL  消耗 。",
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL  消耗 一张手牌。 NL 若消耗的牌是 灼伤 则再造成 !D! 点伤害。",
     "UPGRADE_DESCRIPTION": " 消耗 一张手牌，然后将一张 升级 过的 流星共鸣 加入手中。 NL 造成 !D! 点伤害。 NL  消耗 。"
   },
   "EnergyFlow": {
@@ -301,8 +301,8 @@
   },
   "MagicChant": {
     "NAME": "咏唱",
-    "DESCRIPTION": "选择最多 !M! 张卡 升级 并 保留 到下一回合。",
-    "UPGRADE_DESCRIPTION": " 保留 。选择 !M! 张卡 保留 到下一回合。所选卡牌在下回合 费用 减少1 。"
+    "DESCRIPTION": "从抽牌堆选择一张卡加入手牌并将其 升级 。  消耗 。",
+    "UPGRADE_DESCRIPTION": "从抽牌堆选择一张卡加入手牌并将其 升级 。"
   },
   "UnstableBomb": {
     "NAME": "不稳定爆弹",
@@ -358,7 +358,7 @@
   },
   "ManaConvection": {
     "NAME": "魔力对流",
-    "DESCRIPTION": "抽 !M! 张卡，然后消耗2张卡。 NL 如果你的 蓄力 层数大于或等于8层，则消耗8层蓄力，获得  [E]  [E] 。",
+    "DESCRIPTION": "消耗最多 !M! 张卡，每消耗一张获得  [E]  。  消耗 。",
     "UPGRADE_DESCRIPTION": "抽 !M! 张卡，然后消耗2张卡。 NL 如果你的 蓄力 层数大于或等于8层，则消耗6层蓄力，获得  [E]  [E] 。"
   },
   "ManaRampage": {
@@ -476,6 +476,11 @@
   "Wraith": {
     "NAME": "怨灵",
     "DESCRIPTION": " 不能被打出 。 NL 在你的回合结束时，获得1层 怨灵 。",
+    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "Acceleration": {
+    "NAME": "加速",
+    "DESCRIPTION": "抽 !M! 张卡,将一张 灼伤 加入手牌。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   }
 }
