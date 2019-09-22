@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 
 import ThMod.ThMod;
 
+@Deprecated
 public class MagicChantAction_D extends AbstractGameAction{
 	private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("RetainCardsAction");
 	public static final String[] TEXT = uiStrings.TEXT;

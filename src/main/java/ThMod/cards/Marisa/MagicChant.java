@@ -19,6 +19,7 @@ public class MagicChant extends CustomCard {
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   private static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   private static final int COST = 1;
+  private static final int COST_UPG = 0;
   private static final int RTN = 2;
   //private static final int UPG_RTN = 1;
 
@@ -49,11 +50,11 @@ public class MagicChant extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      this.exhaust = false;
-      //upgradeBaseCost(0);
+      //this.exhaust = false;
+      upgradeBaseCost(COST_UPG);
       //upgradeMagicNumber(UPG_RTN);
-      this.rawDescription = DESCRIPTION_UPG;
-      initializeDescription();
+      //this.rawDescription = DESCRIPTION_UPG;
+      //initializeDescription();
     }
   }
 }

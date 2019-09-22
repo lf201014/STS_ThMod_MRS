@@ -41,9 +41,7 @@ public class Wraith
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-    if ((!this.dontTriggerOnUseCard) && (p.hasRelic("Blue Candle"))) {
-      useBlueCandle(p);
-    } else {
+    if (this.dontTriggerOnUseCard) {
       AbstractDungeon.actionManager.addToTop(
           new ApplyPowerAction(
               AbstractDungeon.player,

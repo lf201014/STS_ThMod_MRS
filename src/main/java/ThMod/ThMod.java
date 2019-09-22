@@ -56,7 +56,6 @@ import ThMod.cards.Marisa.OortCloud;
 import ThMod.cards.Marisa.OpenUniverse;
 import ThMod.cards.Marisa.Orbital;
 import ThMod.cards.Marisa.OrrerysSun;
-import ThMod.cards.deprecated.PolarisUnique;
 import ThMod.cards.Marisa.PowerUp;
 import ThMod.cards.Marisa.PropBag;
 import ThMod.cards.Marisa.PulseMagic;

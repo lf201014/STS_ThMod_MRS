@@ -37,7 +37,7 @@ public class BinaryStars extends CustomCard {
         AbstractCard.CardRarity.RARE,
         AbstractCard.CardTarget.SELF
     );
-    this.exhaust = true;
+    //this.exhaust = true;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {

@@ -3,6 +3,7 @@ package ThMod.action;
 import ThMod.ThMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
@@ -19,14 +20,12 @@ public class ShootingEchoAction extends AbstractGameAction {
   private static final UIStrings uiStrings = CardCrawlGame.languagePack
       .getUIString("ExhaustAction");
   public static final String[] TEXT = uiStrings.TEXT;
-  private int dmg;
-  AbstractMonster target;
   AbstractPlayer player;
+  private AbstractCard card;
   private DamageType damageTypeForTurn;
 
-  public ShootingEchoAction(int damage, AbstractMonster m) {
-    this.dmg = damage;
-    this.target = m;
+  public ShootingEchoAction(AbstractCard card) {
+    this.card = card;
     this.player = AbstractDungeon.player;
     this.damageTypeForTurn = DamageType.NORMAL;
     this.duration = Settings.ACTION_DUR_FAST;
@@ -46,11 +45,7 @@ public class ShootingEchoAction extends AbstractGameAction {
         AbstractCard c = player.hand.getTopCard();
         if (c instanceof Burn) {
           AbstractDungeon.actionManager.addToBottom(
-              new DamageAction(
-                  target,
-                  new DamageInfo(this.player, this.dmg, this.damageTypeForTurn),
-                  AttackEffect.FIRE
-              )
+              new DiscardToHandAction(card)
           );
         }
         this.player.hand.moveToExhaustPile(c);
@@ -66,20 +61,21 @@ public class ShootingEchoAction extends AbstractGameAction {
     }
 
     if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
+      boolean found = false;
       for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group){
-
         if (c instanceof Burn) {
-          AbstractDungeon.actionManager.addToBottom(
-              new DamageAction(
-                  target,
-                  new DamageInfo(this.player, this.dmg, this.damageTypeForTurn),
-                  AttackEffect.FIRE
-              )
-          );
+          if (!found){
+            found = true;
+            AbstractDungeon.actionManager.addToBottom(
+                new DiscardToHandAction(card)
+            );
+          }
         }
         this.player.hand.moveToExhaustPile(c);
       }
 
+      AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
+      AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();
       AbstractDungeon.gridSelectScreen.selectedCards.clear();
       AbstractDungeon.player.hand.refreshHandLayout();
       this.isDone = true;

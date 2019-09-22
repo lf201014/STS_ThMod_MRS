@@ -23,7 +23,7 @@ public class IllusionStar extends CustomCard {
   public static final String IMG_PATH = "img/cards/IllusionStar_V2.png";
   private static final int COST = 0;
   private static final int CARD_PRINT = 2;
-  //private static final int UPG_CARD_PRINT = 1;
+  private static final int UPG_CARD_PRINT = 1;
 
   public IllusionStar() {
     super(
@@ -62,10 +62,10 @@ public class IllusionStar extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      //upgradeMagicNumber(UPG_CARD_PRINT);
-      this.exhaust = false;
-      this.rawDescription = DESCRIPTION_UPG;
-      initializeDescription();
+      upgradeMagicNumber(UPG_CARD_PRINT);
+      //this.exhaust = false;
+      //this.rawDescription = DESCRIPTION_UPG;
+      //initializeDescription();
     }
   }
 }

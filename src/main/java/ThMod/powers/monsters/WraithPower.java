@@ -32,7 +32,7 @@ public class WraithPower
   public void atStartOfTurnPostDraw() {
     this.flash();
     AbstractDungeon.actionManager.addToBottom(
-        new ExhaustAction(AbstractDungeon.player, AbstractDungeon.player, 1, true)
+        new ExhaustAction( 1, true)
     );
     this.amount --;
     if (this.amount <= 0) {

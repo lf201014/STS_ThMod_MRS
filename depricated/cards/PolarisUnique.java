@@ -16,6 +16,7 @@ import ThMod.cards.derivations.GuidingStar;
 import ThMod.patches.AbstractCardEnum;
 import ThMod.powers.Marisa.PolarisUniquePower;
 
+@Deprecated
 public class PolarisUnique extends CustomCard {
 
   public static final String ID = "PolarisUnique";

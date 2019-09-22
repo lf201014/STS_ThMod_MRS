@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import ThMod.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
+@Deprecated
 public class ManaConvection_D extends CustomCard {
 
   public static final String ID = "ManaConvection_D";

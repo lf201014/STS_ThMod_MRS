@@ -26,8 +26,9 @@ public class WitchLeyline
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String IMG_PATH = "img/cards/leyline.png";
   private static final int COST = 0;
-  private static final int ATTACK_DMG = 12;
+  private static final int ATTACK_DMG = 10;
   private static final int UPGRADE_PLUS_DMG = 4;
+  private static final int BURN = 1;
 
   public WitchLeyline() {
     super(
@@ -43,6 +44,7 @@ public class WitchLeyline
     );
 
     this.baseDamage = ATTACK_DMG;
+    this.magicNumber = this.baseMagicNumber = BURN;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
@@ -61,7 +63,7 @@ public class WitchLeyline
     );
 
     AbstractDungeon.actionManager.addToBottom(
-        new MakeTempCardInHandAction(new Burn(), 2)
+        new MakeTempCardInHandAction(new Burn(), this.magicNumber)
     );
   }
 

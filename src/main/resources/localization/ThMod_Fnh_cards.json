@@ -21,7 +21,7 @@
   },
   "DarkSpark": {
     "NAME": "Dark Spark",
-    "DESCRIPTION": "Exhaust all non-Attack cards in your hand. NL Deal !D! damage to ALL enemies twice.  NL This card can be upgraded multiple times.",
+    "DESCRIPTION": " NL Deal !D! damage to ALL enemies twice.  NL This card can be upgraded multiple times.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   },
   "DeepEcoloBomb": {
@@ -148,7 +148,7 @@
   },
   "OrrerysSun": {
     "NAME": "Orrerys Sun",
-    "DESCRIPTION": "Whenever Charge-up is consumed, deal !M! damage to ALL enemies.",
+    "DESCRIPTION": "Whenever Charge-up is consumed, gain !M! block .",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ChargingUp": {
@@ -183,7 +183,7 @@
   },
   "StarlightTyphoon": {
     "NAME": "Starlight Typhoon",
-    "DESCRIPTION": "Deal damage equal to !M! times the number of cards that cost 0 you played this combat to ALL enemies.",
+    "DESCRIPTION": " Exhaust ALL non-Attack cards in your hand. Add the same number of Sparks to your hand.",
     "UPGRADE_DESCRIPTION": " Exhaust ALL non-Attack cards in your hand. Add the same number of upgraded Sparks to your hand.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !B! damage.)",
@@ -207,7 +207,7 @@
   },
   "ShootingEcho": {
     "NAME": "Shooting Echo",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card.  NL If the card you exhaust is Burn ,Deal !D! damage again.",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card.  NL If the card you exhaust is Burn ,put this card back to your hand.",
     "UPGRADE_DESCRIPTION": "Exhaust a card. Add an Upgraded Shooting Echo to your hand. NL Deal !D! damage. NL Exhaust."
   },
   "EnergyFlow": {
@@ -222,7 +222,7 @@
   },
   "WitchLeyline": {
     "NAME": "Witch Leyline",
-    "DESCRIPTION": "Deal !D! damage. Add 2 Burns to your hand.",
+    "DESCRIPTION": "Deal !D! damage. Add !M! Burns to your hand.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "JA": {
@@ -380,8 +380,8 @@
   },
   "BinaryStars": {
     "NAME": "Binary Stars",
-    "DESCRIPTION": "Choose to add either Black Flare Star or White Dwarf to your hand. Exhaust. NL Amplify  [E]  : Add both to your hand instead.",
-    "UPGRADE_DESCRIPTION": "Choose to add and upgrade either Black Flare Star or White Dwarf to your hand. Exhaust. NL Amplify  [E]  : Add both to your hand instead."
+    "DESCRIPTION": "Choose to add either Black Flare Star or White Dwarf to your hand. NL Amplify  [E]  : Add both to your hand instead.",
+    "UPGRADE_DESCRIPTION": "Choose to add and upgrade either Black Flare Star or White Dwarf to your hand. NL Amplify  [E]  : Add both to your hand instead."
   },
   "CollectingQuirk": {
     "NAME": "Collecting Quirk",
@@ -399,12 +399,12 @@
   },
   "PropBag": {
     "NAME": "Portable Prop Bag",
-    "DESCRIPTION": "Randomly get either Orichalcum, Amplification Wand or Art Of War. NL Lose that relic when the battle ends. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": " Innate. NL Randomly get either Orichalcum, Amplification Wand or Art Of War. NL Lose that relic when the battle ends. NL Exhaust."
+    "DESCRIPTION": " Innate. NL Randomly get either Orichalcum, Amplification Wand or Art Of War. NL Lose that relic when the battle ends. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Innate. NL Randomly get either Orichalcum, Amplification Wand or Art Of War. NL Lose that relic when the battle ends."
   },
   "BlackFlareStar": {
     "NAME": "Black Flare Star",
-    "DESCRIPTION": "Can only be played when you have 4 or more cards in your hand. NL Discard any number of cards from your hand and gain !B! Block for each.",
+    "DESCRIPTION": "Can only be played when you have 4 or more cards in your hand. Exhaust . NL Discard any number of cards from your hand and gain !B! Block for each.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
     "EXTENDED_DESCRIPTION": [
       "I don't have 4 cards in my hand.",
@@ -413,8 +413,8 @@
   },
   "WhiteDwarf": {
     "NAME": "White Dwarf",
-    "DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. NL Deal !B! damage (1.5 × size of your discard pile). Add 2 Burns to your hand.",
-    "UPGRADE_DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. NL Deal !B! damage (2 × size of your discard pile). Add 2 Burns to your hand.",
+    "DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. Exhaust . NL Deal !B! damage (2 × size of your discard pile). Add 2 Burns to your hand.",
+    "UPGRADE_DESCRIPTION": "Can only be played when you have 4 or less cards in your hand. Exhaust . NL Deal !B! damage (3 × size of your discard pile). Add 2 Burns to your hand.",
     "EXTENDED_DESCRIPTION": [
       "I have more than 4 cards in my hand.",
       ""
@@ -482,8 +482,8 @@
   },
   "Acceleration": {
     "NAME": "Acceleration",
-    "DESCRIPTION": "Draw !M! cards,add a Burn to your hand.",
-    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+    "DESCRIPTION": "Draw 1 cards. NL Amplify  [E] : Draw !M! cards.",
+    "UPGRADE_DESCRIPTION": "Retain . NL Draw !M! cards. NL Amplify  [E] : Draw !M! cards."
   },
   "WWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",

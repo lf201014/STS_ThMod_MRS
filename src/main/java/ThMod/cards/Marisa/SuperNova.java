@@ -21,7 +21,10 @@ public class SuperNova extends CustomCard {
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   public static final String IMG_PATH = "img/cards/SuperNova.png";
-  private static final int COST = 3;
+  private static final int COST = 2;
+  private static final int STACK = 1;
+  private static final int STACK_UPG = 1;
+
 
   public SuperNova() {
     super(
@@ -35,7 +38,8 @@ public class SuperNova extends CustomCard {
         AbstractCard.CardRarity.RARE,
         AbstractCard.CardTarget.SELF
     );
-    this.tags.add(BaseModCardTags.FORM);
+    //this.tags.add(BaseModCardTags.FORM);
+    this.magicNumber = this.baseMagicNumber = STACK;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
@@ -50,8 +54,8 @@ public class SuperNova extends CustomCard {
             p,
             p,
             //new SuperNovaPower(p, 1, this.upgraded),
-            new SuperNovaPower(p,1,false),
-            1
+            new SuperNovaPower(p,this.magicNumber),
+            this.magicNumber
         )
     );
   }
@@ -64,8 +68,9 @@ public class SuperNova extends CustomCard {
     if (!this.upgraded) {
       upgradeName();
       //upgradeBaseCost(2);
-      this.isInnate = true;
-      this.rawDescription = DESCRIPTION_UPG;
+      upgradeMagicNumber(STACK_UPG);
+      //this.isInnate = true;
+      //this.rawDescription = DESCRIPTION_UPG;
       initializeDescription();
     }
   }

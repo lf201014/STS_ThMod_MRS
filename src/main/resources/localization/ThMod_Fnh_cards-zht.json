@@ -21,7 +21,7 @@
   },
   "DarkSpark": {
     "NAME": "暗色火花",
-    "DESCRIPTION": "消耗 手牌中所有非攻擊牌。對所有敵人造成兩次 !D! 點傷害。 NL 此卡可被多次 升級 。",
+    "DESCRIPTION": "對所有敵人造成兩次 !D! 點傷害。 NL 此卡可被多次 升級 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   },
   "DeepEcoloBomb": {
@@ -152,7 +152,7 @@
   },
   "OrrerysSun": {
     "NAME": "太陽儀",
-    "DESCRIPTION": "每當使用掉 蓄力 的層數，對所有敵人造成 !M! 點傷害",
+    "DESCRIPTION": "每當使用掉 蓄力 的層數，獲得 !M! 點格擋",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ChargingUp": {
@@ -187,8 +187,8 @@
   },
   "StarlightTyphoon": {
     "NAME": "星光颱風",
-    "DESCRIPTION": "對所有敵人造成本場戰鬥中打出0耗能的牌 !M! 倍的傷害",
-    "UPGRADE_DESCRIPTION": " Exhaust ALL non-Attack cards in your hand. Add the same number of upgraded Sparks to your hand",
+    "DESCRIPTION": "消耗手牌中所有非攻擊卡，並將等量 火花 加入手牌",
+    "UPGRADE_DESCRIPTION": "消耗手牌中所有非攻擊卡，並將等量 升級 過的 火花 加入手牌",
     "EXTENDED_DESCRIPTION": [
       " NL ( !B! 點傷害)",
       ""
@@ -211,7 +211,7 @@
   },
   "ShootingEcho": {
     "NAME": "流星共鳴",
-    "DESCRIPTION": " 造成 !D! 點傷害。 NL  消耗 一張手卡。 NL 若消耗的是 灼傷 則再造成 !D! 點傷害。",
+    "DESCRIPTION": " 造成 !D! 點傷害。 NL  消耗 一張手卡。 NL 若消耗的是 灼傷 則此卡返回手牌",
     "UPGRADE_DESCRIPTION": "消耗 1張手牌，增加1張 已升級 流星共鳴 到手牌。 NL 造成 !D! 點傷害。 NL 消耗"
   },
   "EnergyFlow": {
@@ -226,7 +226,7 @@
   },
   "WitchLeyline": {
     "NAME": "魔女射線",
-    "DESCRIPTION": "造成 !D! 點傷害，增加2張 灼傷 到手牌",
+    "DESCRIPTION": "造成 !D! 點傷害，增加 !M! 張 灼傷 到手牌",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "JA": {
@@ -378,8 +378,8 @@
   },
   "BinaryStars": {
     "NAME": "雙星",
-    "DESCRIPTION": "從 黑耀星 和 白矮星 中選擇其中1張牌加入手牌。 消耗 。 NL 增幅 [E] :將2張都加入手牌",
-    "UPGRADE_DESCRIPTION": "從 已升級 的 黑耀星 和 白矮星 中選擇其中1張牌加入手牌。 消耗 。 NL 增幅 [E] :將2張都加入手牌"
+    "DESCRIPTION": "從 黑耀星 和 白矮星 中選擇其中1張牌加入手牌 。 NL 增幅 [E] :將2張都加入手牌",
+    "UPGRADE_DESCRIPTION": "從 已升級 的 黑耀星 和 白矮星 中選擇其中1張牌加入手牌 。 NL 增幅 [E] :將2張都加入手牌"
   },
   "CollectingQuirk": {
     "NAME": "收集癖",
@@ -397,12 +397,12 @@
   },
   "PropBag": {
     "NAME": "便攜道具包",
-    "DESCRIPTION": "獲得奧利哈鋼、孫子兵法或增幅魔杖其中一個遺物。 NL 戰鬥結束後失去該遺物。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "固有 。獲得奧利哈鋼、孫子兵法或增幅魔杖其中一個遺物。 NL 戰鬥結束後失去該遺物。 NL 消耗"
+    "DESCRIPTION": "固有 。 NL 獲得奧利哈鋼、孫子兵法或增幅魔杖其中一個遺物。 NL 戰鬥結束後失去該遺物。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 獲得奧利哈鋼、孫子兵法或增幅魔杖其中一個遺物。 NL 戰鬥結束後失去該遺物。"
   },
   "BlackFlareStar": {
     "NAME": "黑耀星",
-    "DESCRIPTION": "手牌數大於等於 4 時才能打出。 NL 丟棄任意張牌，每丟棄1張獲得 !B! 格擋",
+    "DESCRIPTION": "手牌數大於等於 4 時才能打出。 NL 丟棄任意張牌，每丟棄1張獲得 !B! 格擋 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
     "EXTENDED_DESCRIPTION":[
       "手牌數小於 4",
@@ -411,8 +411,8 @@
   },
   "WhiteDwarf": {
     "NAME": "白矮星",
-    "DESCRIPTION": "手牌數小於等於4時才能打出。 NL 造成 !B! 傷害 (棄牌堆牌數之1.5倍)。增加2張 灼傷 到手牌",
-    "UPGRADE_DESCRIPTION": "手牌數小於等於4時才能打出。 NL 造成 !B! 傷害 (棄牌堆牌數之2倍)。增加2張 灼傷 到手牌",
+    "DESCRIPTION": "手牌數小於等於4時才能打出。 消耗 。 NL 造成 !B! 傷害 (棄牌堆牌數之1.5倍)。增加2張 灼傷 到手牌",
+    "UPGRADE_DESCRIPTION": "手牌數小於等於4時才能打出。 消耗 。 NL 造成 !B! 傷害 (棄牌堆牌數之2倍)。增加2張 灼傷 到手牌",
     "EXTENDED_DESCRIPTION":[
       "手牌數大於 4",
       ""
@@ -480,7 +480,7 @@
   },
   "Acceleration": {
     "NAME": "加速",
-    "DESCRIPTION": "抽 !M! 張卡,將一張 灼傷 加入手卡。",
-    "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+    "DESCRIPTION": "抽 1 張卡。 NL 增幅 [E] : 抽 !M! 張卡 ",
+    "UPGRADE_DESCRIPTION": "保留。 NL 抽 !M! 張卡。 NL 增幅 [E] : 抽 !M! 張卡 "
   }
 }

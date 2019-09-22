@@ -51,9 +51,11 @@ public class DarkSpark
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
+    /*
     AbstractDungeon.actionManager.addToBottom(
         new ExhaustAllNonAttackAction()
     );
+    */
     AbstractDungeon.actionManager.addToBottom(
         new DamageAllEnemiesAction(
             p,

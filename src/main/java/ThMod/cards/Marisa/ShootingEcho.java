@@ -27,7 +27,7 @@ public class ShootingEcho
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   public static final String IMG_PATH = "img/cards/echo.png";
   private static final int COST = 1;
-  private static final int ATTACK_DMG = 7;
+  private static final int ATTACK_DMG = 10;
   private static final int UPGRADE_PLUS_DMG = 4;
 
   public ShootingEcho() {
@@ -48,7 +48,7 @@ public class ShootingEcho
 
   public void use(AbstractPlayer p, AbstractMonster m) {
 
-    AbstractDungeon.actionManager.addToTop(
+    addToTop(
         new DamageAction(
             m,
             new DamageInfo(p, this.damage, this.damageTypeForTurn),
@@ -56,8 +56,8 @@ public class ShootingEcho
         )
     );
 
-    AbstractDungeon.actionManager.addToTop(
-        new ShootingEchoAction(this.damage,m)
+    addToBot(
+        new ShootingEchoAction(this)
     );
   }
 
