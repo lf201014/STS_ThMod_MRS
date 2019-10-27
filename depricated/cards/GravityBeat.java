@@ -1,13 +1,9 @@
 package ThMod.cards.Marisa;
 
-import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiwordKeywords.InitializeDescription;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -24,14 +20,12 @@ public class GravityBeat extends CustomCard {
   private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardStrings.NAME;
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-  public static final String[] EX_DESC = cardStrings.EXTENDED_DESCRIPTION;
   public static final String IMG_PATH = "img/cards/GravityBeat.png";
-  private static final int COST = 1;
-  private static final int ATTACK_DMG = 8;
+  private static final int COST = 2;
+  private static final int ATTACK_DMG = 9;
   private static final int UPGRADE_PLUS_DMG = 3;
-  private static final int DIVIDER = 10;
-  //private static final int WK = 2;
-  //private static final int UPG_WK = 1;
+  private static final int WK = 2;
+  private static final int UPG_WK = 1;
 
   public GravityBeat() {
     super(
@@ -42,28 +36,16 @@ public class GravityBeat extends CustomCard {
         DESCRIPTION,
         AbstractCard.CardType.ATTACK,
         AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.COMMON,
-        CardTarget.ENEMY
+        AbstractCard.CardRarity.UNCOMMON,
+        AbstractCard.CardTarget.ALL_ENEMY
     );
 
-    //this.isMultiDamage = true;
+    this.isMultiDamage = true;
     this.baseDamage = this.damage = ATTACK_DMG;
-    //this.magicNumber = this.baseMagicNumber = WK;
-  }
-
-  @Override
-  public void applyPowers() {
-    super.applyPowers();
-    if (AbstractDungeon.player != null) {
-      this.magicNumber = this.baseMagicNumber = AbstractDungeon.player.masterDeck.size() / DIVIDER;
-      this.rawDescription = DESCRIPTION + EX_DESC[0] + this.magicNumber + EX_DESC[1];
-      initializeDescription();
-    }
+    this.magicNumber = this.baseMagicNumber = WK;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-
-/*
     AbstractDungeon.actionManager.addToBottom(
         new DamageAllEnemiesAction(
             p,
@@ -72,6 +54,7 @@ public class GravityBeat extends CustomCard {
             AttackEffect.SLASH_DIAGONAL
         )
     );
+
     if (!AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
       for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
         AbstractDungeon.actionManager.addToBottom(
@@ -86,19 +69,6 @@ public class GravityBeat extends CustomCard {
         );
       }
     }
-    */
-
-    for (int i = 0; i < this.magicNumber; i++) {
-      if (!m.isDeadOrEscaped()) {
-        addToBot(
-            new DamageAction(
-                m,
-                new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                AttackEffect.BLUNT_LIGHT
-            )
-        );
-      }
-    }
   }
 
   public AbstractCard makeCopy() {
@@ -108,7 +78,7 @@ public class GravityBeat extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      //upgradeMagicNumber(UPG_WK);
+      upgradeMagicNumber(UPG_WK);
       upgradeDamage(UPGRADE_PLUS_DMG);
     }
   }

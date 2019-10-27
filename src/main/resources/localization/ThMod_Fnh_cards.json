@@ -54,7 +54,11 @@
   },
   "GravityBeat": {
     "NAME": "Gravity Beat",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Weak to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage for every 10 cards in your master deck.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " time(s))."
+    ]
   },
   "IllusionStar": {
     "NAME": "Illusion Star",
@@ -312,7 +316,7 @@
   },
   "SuperNova": {
     "NAME": "Supernova",
-    "DESCRIPTION": "No longer take damage from Burn. Whenever you Exhaust a Burn, gain 1 Strength. NL Exhaust your hand at the end of each turn.",
+    "DESCRIPTION": "No longer take damage from Burn. Whenever you Exhaust a Burn, gain !M! Strength. NL Exhaust your hand at the end of each turn.",
     "UPGRADE_DESCRIPTION": " Innate. NL No longer take damage from Burn. Whenever you Exhaust a Burn, gain 1 Strength. NL Exhaust your hand at the end of each turn."
   },
   "OneTimeOff": {
@@ -399,7 +403,7 @@
   },
   "PropBag": {
     "NAME": "Portable Prop Bag",
-    "DESCRIPTION": " Innate. NL Randomly get either Orichalcum, Amplification Wand or Art Of War. NL Lose that relic when the battle ends. NL Exhaust.",
+    "DESCRIPTION": " Innate. NL Randomly get a relic. NL Lose the relic(s) when the battle ends. NL Exhaust.",
     "UPGRADE_DESCRIPTION": " Innate. NL Randomly get either Orichalcum, Amplification Wand or Art Of War. NL Lose that relic when the battle ends."
   },
   "BlackFlareStar": {

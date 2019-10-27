@@ -26,8 +26,8 @@ public class FairyDestructionRay extends CustomCard {
   private static final int AMP = 2;
   private static final int ATTACK_DMG = 5;
   private static final int UPGRADE_PLUS_DMG = 3;
-  private static final int DIASPORA = 18;
-  private static final int UPG_DIASPORA = 7;
+  private static final int DIASPORA = 17;
+  private static final int UPG_DIASPORA = 5;
 
   public FairyDestructionRay() {
     super(

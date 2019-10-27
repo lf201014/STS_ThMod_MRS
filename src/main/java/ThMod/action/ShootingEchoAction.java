@@ -2,10 +2,8 @@ package ThMod.action;
 
 import ThMod.ThMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,7 +11,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class ShootingEchoAction extends AbstractGameAction {
 
@@ -61,15 +58,20 @@ public class ShootingEchoAction extends AbstractGameAction {
     }
 
     if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
-      boolean found = false;
+      card.returnToHand = false;
       for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group){
         if (c instanceof Burn) {
-          if (!found){
-            found = true;
+            /*
             AbstractDungeon.actionManager.addToBottom(
                 new DiscardToHandAction(card)
             );
-          }
+            */
+            card.returnToHand = true;
+            /*
+            addToBot(
+                new RefreshHandAction()
+            );
+            */
         }
         this.player.hand.moveToExhaustPile(c);
       }

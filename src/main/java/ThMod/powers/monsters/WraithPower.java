@@ -31,9 +31,7 @@ public class WraithPower
   @Override
   public void atStartOfTurnPostDraw() {
     this.flash();
-    AbstractDungeon.actionManager.addToBottom(
-        new ExhaustAction( 1, true)
-    );
+        addToBot(new ExhaustAction(1, true, false, false));
     this.amount --;
     if (this.amount <= 0) {
       AbstractDungeon.actionManager.addToBottom(

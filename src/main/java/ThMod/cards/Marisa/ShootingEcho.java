@@ -1,5 +1,6 @@
 package ThMod.cards.Marisa;
 
+import ThMod.action.RefreshHandAction;
 import ThMod.action.ShootingEchoAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
@@ -58,6 +59,10 @@ public class ShootingEcho
 
     addToBot(
         new ShootingEchoAction(this)
+    );
+
+    addToBot(
+        new RefreshHandAction()
     );
   }
 

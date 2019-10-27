@@ -20,6 +20,8 @@ public class PropBag extends CustomCard {
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   private static final int COST = 0;
+  private static final int PRODUCE = 1;
+  private static final int PRODUCE_UPG = 1;
 
   public PropBag() {
     super(
@@ -35,12 +37,16 @@ public class PropBag extends CustomCard {
     );
     this.exhaust = true;
     this.isInnate = true;
+    this.magicNumber = this.baseMagicNumber = PRODUCE;
+
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
-    AbstractDungeon.actionManager.addToBottom(
-        new PropBagAction()
-    );
+    for (int i = 0; i < this.magicNumber; i++) {
+      AbstractDungeon.actionManager.addToBottom(
+          new PropBagAction()
+      );
+    }
   }
 
   public AbstractCard makeCopy() {
@@ -51,8 +57,9 @@ public class PropBag extends CustomCard {
     if (!this.upgraded) {
       upgradeName();
       //this.isInnate = true;
-      this.exhaust = false;
-      this.rawDescription = DESCRIPTION_UPG;
+      //this.exhaust = false;
+      //this.rawDescription = DESCRIPTION_UPG;
+      upgradeMagicNumber(PRODUCE_UPG);
       initializeDescription();
     }
   }

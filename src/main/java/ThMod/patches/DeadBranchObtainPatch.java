@@ -1,5 +1,6 @@
 package ThMod.patches;
 
+import ThMod.ThMod;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
@@ -16,7 +17,7 @@ public class DeadBranchObtainPatch {
 
     @SpirePrefixPatch
     public static SpireReturn<AbstractRelic> Prefix(AbstractRelic _inst) {
-      if ((AbstractDungeon.player instanceof Marisa)) {
+      if ((AbstractDungeon.player instanceof Marisa)&&(!ThMod.isDeadBranchEnabled)) {
         return SpireReturn.Return(new SproutingBranch());
       }
       return SpireReturn.Continue();

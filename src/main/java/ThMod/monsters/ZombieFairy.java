@@ -27,10 +27,10 @@ public class ZombieFairy extends AbstractMonster {
   private static final int HP_A_ = 18;
   private static final int DMG = 4;
   private static final int DMG_A = 5;
-  private static final int DMG_MULTI = 6;
-  private static final int DMG_MULTI_A = 8;
-  private static final int BLOCK = 4;
-  private static final int BLOCK_A = 5;
+  private static final int DMG_MULTI = 4;
+  private static final int DMG_MULTI_A = 5;
+  private static final int BLOCK = 7;
+  private static final int BLOCK_A = 10;
   private static final int BLOCK_UPG = 12;
   private static final int BLOCK_UPG_A = 15;
   private static final int POWER_UP = 3;
@@ -121,18 +121,22 @@ public class ZombieFairy extends AbstractMonster {
       case 2:
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
           int block = this.block;
+          /*
           int str = STR;
           if (this.turnNum >= 3) {
             block = this.block_upg;
             str = STR_UPG;
           }
+          */
           if (!m.isDeadOrEscaped()) {
             AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(m, this, block)
             );
+            /*
             AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(m, null, new StrengthPower(m, str), str)
             );
+            */
           }
         }
         break;
@@ -165,10 +169,15 @@ public class ZombieFairy extends AbstractMonster {
   protected void getMove(int num) {
     ThMod.logger.info("ZombieFairy : GetMove : num : " + num + " ; turnNum : " + turnNum);
     this.turnNum++;
-    if (num <= 50) {
-      setAttackAction();
+    if (this.turnNum < 3) {
+
+      if (num <= 50) {
+        setAttackAction();
+      } else {
+        setDefendAction();
+      }
     } else {
-      setDefendAction();
+      setAttackAction();
     }
   }
 

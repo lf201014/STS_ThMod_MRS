@@ -37,6 +37,7 @@ public class BlackFlareStar extends CustomCard {
         AbstractCard.CardTarget.SELF
     );
     this.baseBlock = BLC_AMT;
+    this.exhaust = true;
   }
 
   public boolean canUse(AbstractPlayer p, AbstractMonster m) {

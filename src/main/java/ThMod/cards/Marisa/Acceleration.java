@@ -39,14 +39,14 @@ public class Acceleration extends CustomCard {
     this.baseMagicNumber = DRAW;
     this.magicNumber = this.baseMagicNumber;
   }
-
+/*
   public void applyPowers(){
     super.applyPowers();
     if (this.upgraded){
       this.retain = true;
     }
   }
-
+*/
   public void use(AbstractPlayer p, AbstractMonster m){
     AbstractDungeon.actionManager.addToTop(
         new DrawCardAction(p,DRAW)

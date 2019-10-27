@@ -98,6 +98,7 @@ import ThMod.relics.AmplifyWand;
 import ThMod.relics.BewitchedHakkero;
 import ThMod.relics.BigShroomBag;
 import ThMod.relics.BreadOfAWashokuLover;
+import ThMod.relics.Cape;
 import ThMod.relics.CatCart;
 import ThMod.relics.ExperimentalFamiliar;
 import ThMod.relics.HandmadeGrimoire;
@@ -136,6 +137,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.core.Settings.GameLanguage;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
@@ -235,6 +237,7 @@ public class ThMod implements PostExhaustSubscriber,
   public static int typhoonCounter = 0;
 
   public static boolean isCatEventEnabled;
+  public static boolean isDeadBranchEnabled;
   private Properties marisaModDefaultProp = new Properties();
 
   //public static boolean OrinEvent = false;
@@ -446,6 +449,12 @@ public class ThMod implements PostExhaustSubscriber,
         new BigShroomBag(),
         MARISA_COLOR
     );
+/*
+    BaseMod.addRelicToCustomPool(
+        new Cape(),
+        MARISA_COLOR
+    );
+*/
     BaseMod.addRelic(
         new CatCart(),
         RelicType.SHARED
@@ -670,6 +679,12 @@ public class ThMod implements PostExhaustSubscriber,
     } else {
       labelText = "Enable Black Cat event when playing other characters?";
     }
+    String labelText_branch;
+    if (Settings.language == GameLanguage.ZHS){
+      labelText_branch = "\u4f7f\u7528\u539f\u7248\u7684\u6811\u679d";
+    }else{
+      labelText_branch = "Don't replace Dead Branch?";
+    }
     final ModLabeledToggleButton enableBlackCatButton =
         new ModLabeledToggleButton(
             labelText,
@@ -684,7 +699,7 @@ public class ThMod implements PostExhaustSubscriber,
             button -> {
               isCatEventEnabled = button.enabled;
               try {
-                final SpireConfig config = new SpireConfig("vexMod", "vexModConfig",
+                final SpireConfig config = new SpireConfig("MarisaMod", "MarisaModCongfig",
                     marisaModDefaultProp);
                 config.setBool("enablePlaceholder", isCatEventEnabled);
                 config.save();
@@ -692,7 +707,30 @@ public class ThMod implements PostExhaustSubscriber,
                 e.printStackTrace();
               }
             });
+    final ModLabeledToggleButton enableDeadBranchButton =
+        new ModLabeledToggleButton(
+            labelText_branch,
+            350.0f,
+            600.0f,
+            Settings.CREAM_COLOR,
+            FontHelper.charDescFont,
+            isDeadBranchEnabled,
+            settingsPanel,
+            label -> {
+            },
+            button -> {
+              isCatEventEnabled = button.enabled;
+              try {
+                final SpireConfig config = new SpireConfig("MarisaMod", "MarisaModCongfig",
+                    marisaModDefaultProp);
+                config.setBool("enablePlaceholder", isDeadBranchEnabled);
+                config.save();
+              } catch (Exception e) {
+                e.printStackTrace();
+              }
+            });
     settingsPanel.addUIElement(enableBlackCatButton);
+    settingsPanel.addUIElement(enableDeadBranchButton);
 
     BaseMod.addEvent(Mushrooms_MRS.ID, Mushrooms_MRS.class, Exordium.ID);
     BaseMod.addEvent(OrinTheCat.ID, OrinTheCat.class, TheBeyond.ID);
@@ -838,7 +876,7 @@ public class ThMod implements PostExhaustSubscriber,
     if (rng == 15) {
       card = new GuidingStar();
     } else {
-      card = AbstractDungeon.returnTrulyRandomCardInCombat();
+      card = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
     }
     return card;
   }

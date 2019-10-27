@@ -58,7 +58,11 @@
   },
   "GravityBeat": {
     "NAME": "重力一擊",
-    "DESCRIPTION": "對所有敵人造成 !D! 點傷害。 NL 給予 !M! 層 虛弱"
+    "DESCRIPTION": "你的卡組每有10張卡，造成 !D! 點傷害",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " 次)."
+    ]
   },
   "IllusionStar": {
     "NAME": "幻像之星",
@@ -311,7 +315,7 @@
   },
   "SuperNova": {
     "NAME": "超新星",
-    "DESCRIPTION": "不再受到 灼傷 的傷害。 NL 每 消耗 1張 灼傷 ，獲得1點 力量 。 NL 在回合結束時 消耗 所有手牌",
+    "DESCRIPTION": "不再受到 灼傷 的傷害。 NL 每 消耗 1張 灼傷 ，獲得 !M! 點 力量 。 NL 在回合結束時 消耗 所有手牌",
     "UPGRADE_DESCRIPTION": "固有 。 NL 不再受到 灼傷 的傷害。 NL 每 消耗 1張 灼傷 ，獲得1點 力量 。 NL 在回合結束時 消耗 所有手牌"
   },
   "OneTimeOff": {
@@ -397,7 +401,7 @@
   },
   "PropBag": {
     "NAME": "便攜道具包",
-    "DESCRIPTION": "固有 。 NL 獲得奧利哈鋼、孫子兵法或增幅魔杖其中一個遺物。 NL 戰鬥結束後失去該遺物。 NL 消耗",
+    "DESCRIPTION": "固有 。 NL 獲得 !M! 個隨機遺物。 NL 戰鬥結束後失去。 NL 消耗",
     "UPGRADE_DESCRIPTION": "固有 。 NL 獲得奧利哈鋼、孫子兵法或增幅魔杖其中一個遺物。 NL 戰鬥結束後失去該遺物。"
   },
   "BlackFlareStar": {

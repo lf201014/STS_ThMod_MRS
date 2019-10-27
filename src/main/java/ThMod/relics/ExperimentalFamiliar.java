@@ -48,7 +48,7 @@ public class ExperimentalFamiliar extends CustomRelic {
         new RelicAboveCreatureAction(AbstractDungeon.player, this)
     );
     AbstractDungeon.actionManager.addToBottom(
-        new DiscoveryAction(null)
+        new DiscoveryAction()
     );
   }
 }

@@ -26,7 +26,7 @@ public class DarkSpark
 
   private static final int COST = 2;
   private static final int ATK_DMG = 6;
-  private static final int UPG_DMG = 2;
+  private static final int UPG_DMG = 3;
 
   public DarkSpark(){
     this(0);
@@ -84,7 +84,7 @@ public class DarkSpark
   }
 
   public void upgrade() {
-    upgradeDamage(UPG_DMG + this.timesUpgraded);
+    upgradeDamage(UPG_DMG);
     this.timesUpgraded += 1;
     this.upgraded = true;
     this.name = (cardStrings.NAME + "+" + this.timesUpgraded);
