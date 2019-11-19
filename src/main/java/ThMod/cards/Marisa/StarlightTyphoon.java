@@ -39,7 +39,7 @@ public class StarlightTyphoon extends AmplifiedAttack {
         DESCRIPTION,
         CardType.SKILL,
         AbstractCardEnum.MARISA_COLOR,
-        CardRarity.RARE,
+        CardRarity.UNCOMMON,
         CardTarget.NONE
     );
   }

@@ -36,7 +36,7 @@ public class PropBag extends CustomCard {
         AbstractCard.CardTarget.SELF
     );
     this.exhaust = true;
-    this.isInnate = true;
+    //this.isInnate = true;
     this.magicNumber = this.baseMagicNumber = PRODUCE;
 
   }
@@ -56,10 +56,10 @@ public class PropBag extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       upgradeName();
-      //this.isInnate = true;
+      this.isInnate = true;
       //this.exhaust = false;
-      //this.rawDescription = DESCRIPTION_UPG;
-      upgradeMagicNumber(PRODUCE_UPG);
+      this.rawDescription = DESCRIPTION_UPG;
+      //upgradeMagicNumber(PRODUCE_UPG);
       initializeDescription();
     }
   }

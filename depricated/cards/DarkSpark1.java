@@ -2,14 +2,18 @@ package ThMod.cards.Marisa;
 
 import static ThMod.patches.CardTagEnum.SPARK;
 
-import ThMod.action.DarkSparkAction;
-import ThMod.patches.AbstractCardEnum;
-import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.unique.ExhaustAllNonAttackAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import ThMod.patches.AbstractCardEnum;
+import basemod.abstracts.CustomCard;
 
 public class DarkSpark
     extends CustomCard {
@@ -21,12 +25,14 @@ public class DarkSpark
   public static final String IMG_PATH = "img/cards/darkSpark.png";
 
   private static final int COST = 2;
-  private static final int ATK_DMG = 7;
-  //private static final int UPG_DMG = 3;
-  private static final int EXHAUST_COUNT = 5;
-  private static final int COUNT_UPG = 3;
+  private static final int ATK_DMG = 6;
+  private static final int UPG_DMG = 3;
 
-  public DarkSpark() {
+  public DarkSpark(){
+    this(0);
+  }
+
+  public DarkSpark(int timeUpgraded) {
     super(
         ID,
         NAME,
@@ -42,7 +48,6 @@ public class DarkSpark
     this.tags.add(SPARK);
     this.baseDamage = ATK_DMG;
     this.isMultiDamage = true;
-    this.magicNumber = this.baseMagicNumber = EXHAUST_COUNT;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
@@ -51,7 +56,6 @@ public class DarkSpark
         new ExhaustAllNonAttackAction()
     );
     */
-    /*
     AbstractDungeon.actionManager.addToBottom(
         new DamageAllEnemiesAction(
             p,
@@ -67,21 +71,23 @@ public class DarkSpark
             this.damageTypeForTurn,
             AbstractGameAction.AttackEffect.NONE
         )
-    );*/
-    for (int i =0;i<this.magicNumber;i++){
-      addToBot(new DarkSparkAction(this.multiDamage,this.damageType));
-    }
+    );
+  }
+
+  public boolean canUpgrade()
+  {
+    return true;
   }
 
   public AbstractCard makeCopy() {
-    return new DarkSpark();
+    return new DarkSpark(timesUpgraded);
   }
 
   public void upgrade() {
-    //upgradeDamage(UPG_DMG);
-    upgradeName();
-    upgradeMagicNumber(COUNT_UPG);
+    upgradeDamage(UPG_DMG);
+    this.timesUpgraded += 1;
     this.upgraded = true;
-    initializeDescription();
+    this.name = (cardStrings.NAME + "+" + this.timesUpgraded);
+    initializeTitle();
   }
 }

@@ -21,7 +21,7 @@
   },
   "DarkSpark": {
     "NAME": "暗色火花",
-    "DESCRIPTION": "对所有敌人造成两次 !D! 点伤害。 NL 此卡可被多次 升级 。",
+    "DESCRIPTION": " 消耗 你抽牌堆顶的 !M! 张卡，其中每有一张 攻击 卡 ，对所有敌人造成 !D! 点伤害。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   },
   "DeepEcoloBomb": {
@@ -58,7 +58,7 @@
   },
   "GravityBeat": {
     "NAME": "重力一击",
-    "DESCRIPTION": "你的卡组每有10张卡， !D! 点伤害。",
+    "DESCRIPTION": "你的卡组每有 !B! 张卡， !D! 点伤害。抽一张卡。",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " 次)."
@@ -402,7 +402,7 @@
   "PropBag": {
     "NAME": "便携道具包",
     "DESCRIPTION": " 固有 。 NL 给与你 !M! 个随机 遗物 。 NL 战斗结束后失去。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 从 奥利哈钢、孙子兵法和增幅魔杖中给与你一个随机 遗物 。 NL 战斗结束后失去该 遗物 。"
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 给与你 !M! 个随机 遗物 。 NL 战斗结束后失去。 NL 消耗 。"
   },
   "BlackFlareStar": {
     "NAME": "黑耀星",
@@ -484,7 +484,7 @@
   },
   "Acceleration": {
     "NAME": "加速",
-    "DESCRIPTION": "抽 1 张卡。 NL 增幅 [E] ：抽 !M! 张卡。",
+    "DESCRIPTION": "抽取你抽牌堆顶上的 !B! 张卡。 NL 增幅 [E] ：抽 !M! 张卡。",
     "UPGRADE_DESCRIPTION": "保留 。 NL 抽 !M! 张卡。 NL 增幅 [E] ：抽 !M! 张卡。"
   }
 }

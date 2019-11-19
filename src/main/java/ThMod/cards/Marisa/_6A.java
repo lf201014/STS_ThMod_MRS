@@ -21,7 +21,7 @@ public class _6A
   public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   public static final String IMG_PATH = "img/cards/6A.png";
   private static final int COST = 1;
-  private static final int ATTACK_DMG = 4;
+  private static final int ATTACK_DMG = 5;
   private static final int UPGRADE_PLUS_DMG = 2;
   //private static final int UPG_COST = 0;
 

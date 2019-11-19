@@ -92,7 +92,9 @@ import ThMod.event.OrinTheCat;
 import ThMod.monsters.Orin;
 import ThMod.monsters.ZombieFairy;
 import ThMod.patches.AbstractCardEnum;
+import ThMod.potions.BottledSpark;
 import ThMod.potions.ShroomBrew;
+import ThMod.potions.StarNLove;
 import ThMod.powers.Marisa.GrandCrossPower;
 import ThMod.relics.AmplifyWand;
 import ThMod.relics.BewitchedHakkero;
@@ -159,6 +161,7 @@ import java.util.Properties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+@SuppressWarnings("Duplicates")
 @SpireInitializer
 public class ThMod implements PostExhaustSubscriber,
     PostBattleSubscriber,
@@ -707,6 +710,7 @@ public class ThMod implements PostExhaustSubscriber,
                 e.printStackTrace();
               }
             });
+
     final ModLabeledToggleButton enableDeadBranchButton =
         new ModLabeledToggleButton(
             labelText_branch,
@@ -729,6 +733,7 @@ public class ThMod implements PostExhaustSubscriber,
                 e.printStackTrace();
               }
             });
+
     settingsPanel.addUIElement(enableBlackCatButton);
     settingsPanel.addUIElement(enableDeadBranchButton);
 
@@ -746,6 +751,24 @@ public class ThMod implements PostExhaustSubscriber,
         Color.LIME.cpy(),
         Color.OLIVE,
         "ShroomBrew",
+        MARISA
+    );
+
+    BaseMod.addPotion(
+        StarNLove.class,
+        Color.BLUE.cpy(),
+        Color.YELLOW.cpy(),
+        Color.NAVY,
+        "StarNLove",
+        MARISA
+    );
+
+    BaseMod.addPotion(
+        BottledSpark.class,
+        Color.BLUE.cpy(),
+        Color.YELLOW.cpy(),
+        Color.NAVY,
+        "BottledSpark",
         MARISA
     );
     /*

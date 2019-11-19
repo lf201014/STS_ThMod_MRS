@@ -21,7 +21,7 @@
   },
   "DarkSpark": {
     "NAME": "Dark Spark",
-    "DESCRIPTION": " NL Deal !D! damage to ALL enemies twice.  NL This card can be upgraded multiple times.",
+    "DESCRIPTION": "Exhaust top !M! cards of your draw pile,deal !D! damage to ALL enemies for each Attack Exhausted.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   },
   "DeepEcoloBomb": {
@@ -54,7 +54,7 @@
   },
   "GravityBeat": {
     "NAME": "Gravity Beat",
-    "DESCRIPTION": "Deal !D! damage for every 10 cards in your master deck.",
+    "DESCRIPTION": "Deal !D! damage for every !B! cards in your master deck.Draw a card.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " time(s))."
@@ -403,8 +403,8 @@
   },
   "PropBag": {
     "NAME": "Portable Prop Bag",
-    "DESCRIPTION": " Innate. NL Randomly get a relic. NL Lose the relic(s) when the battle ends. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": " Innate. NL Randomly get either Orichalcum, Amplification Wand or Art Of War. NL Lose that relic when the battle ends."
+    "DESCRIPTION": "Obtain a random relic. NL Lose the relic when the battle ends. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Innate. NL Obtain a random relic. NL Lose the relic when the battle ends. NL Exhaust."
   },
   "BlackFlareStar": {
     "NAME": "Black Flare Star",
@@ -486,7 +486,7 @@
   },
   "Acceleration": {
     "NAME": "Acceleration",
-    "DESCRIPTION": "Draw 1 cards. NL Amplify  [E] : Draw !M! cards.",
+    "DESCRIPTION": "Draw top !B! cards in your draw pile. NL Amplify  [E] : Draw top !M! cards in your draw pile.",
     "UPGRADE_DESCRIPTION": "Retain . NL Draw !M! cards. NL Amplify  [E] : Draw !M! cards."
   },
   "WWWWWWWWWWWWWW": {
