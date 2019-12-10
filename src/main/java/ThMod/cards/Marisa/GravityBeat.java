@@ -95,10 +95,10 @@ public class GravityBeat extends CustomCard {
             )
         );
       }
+      addToBot(
+          new DrawCardAction(1)
+      );
     }
-    addToBot(
-        new DrawCardAction(1)
-    );
   }
 
   public AbstractCard makeCopy() {

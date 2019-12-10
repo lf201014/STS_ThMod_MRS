@@ -54,7 +54,7 @@
   },
   "GravityBeat": {
     "NAME": "Gravity Beat",
-    "DESCRIPTION": "Deal !D! damage for every !B! cards in your master deck.Draw a card.",
+    "DESCRIPTION": "Deal !D! damage and draw a card for every !B! cards in your master deck.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " time(s))."

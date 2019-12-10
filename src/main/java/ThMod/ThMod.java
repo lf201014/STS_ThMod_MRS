@@ -175,7 +175,7 @@ public class ThMod implements PostExhaustSubscriber,
     EditKeywordsSubscriber,
     OnPowersModifiedSubscriber,
     PostDrawSubscriber,
-    PostEnergyRechargeSubscriber{
+    PostEnergyRechargeSubscriber {
 
   public static final Logger logger = LogManager.getLogger(ThMod.class.getName());
 
@@ -291,7 +291,7 @@ public class ThMod implements PostExhaustSubscriber,
 
     boolean res = false;
     if ((p.hasPower("MilliPulsaPower")) || (p.hasPower("PulseMagicPower"))
-        || (card.freeToPlayOnce)) {
+        || (card.freeToPlayOnce) || (card.purgeOnUse)) {
       logger.info(
           "ThMod.Amplified :Free Amplify tag detected,returning true : Milli :"
               + (p.hasPower("MilliPulsaPower"))
@@ -299,6 +299,8 @@ public class ThMod implements PostExhaustSubscriber,
               + (p.hasPower("PulseMagicPower"))
               + " ; Free2Play :"
               + card.freeToPlayOnce
+              + " ; purge on use :"
+              + card.purgeOnUse
       );
       res = true;
     } else {
@@ -519,10 +521,10 @@ public class ThMod implements PostExhaustSubscriber,
   }
 
   @Override
-  public void receivePostEnergyRecharge(){
-    if (!AbstractDungeon.player.hand.isEmpty()){
-      for (AbstractCard c:AbstractDungeon.player.hand.group){
-        if (c instanceof GuidingStar){
+  public void receivePostEnergyRecharge() {
+    if (!AbstractDungeon.player.hand.isEmpty()) {
+      for (AbstractCard c : AbstractDungeon.player.hand.group) {
+        if (c instanceof GuidingStar) {
           AbstractDungeon.actionManager.addToBottom(
               new GainEnergyAction(1)
           );
@@ -683,9 +685,9 @@ public class ThMod implements PostExhaustSubscriber,
       labelText = "Enable Black Cat event when playing other characters?";
     }
     String labelText_branch;
-    if (Settings.language == GameLanguage.ZHS){
+    if (Settings.language == GameLanguage.ZHS) {
       labelText_branch = "\u4f7f\u7528\u539f\u7248\u7684\u6811\u679d";
-    }else{
+    } else {
       labelText_branch = "Don't replace Dead Branch?";
     }
     final ModLabeledToggleButton enableBlackCatButton =

@@ -58,7 +58,7 @@
   },
   "GravityBeat": {
     "NAME": "重力一擊",
-    "DESCRIPTION": "你的卡組每有 !B! 張卡，造成 !D! 點傷害。抽一张卡。",
+    "DESCRIPTION": "你的卡組每有 !B! 張卡，造成 !D! 點傷害并抽一张卡。",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " 次)."
@@ -401,8 +401,8 @@
   },
   "PropBag": {
     "NAME": "便攜道具包",
-    "DESCRIPTION": "獲得 !M! 個隨機遺物。 NL 戰鬥結束後失去。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 獲得 !M! 個隨機遺物。 NL 戰鬥結束後失去。 NL 消耗"
+    "DESCRIPTION": "獲得 !M! 個隨機罕见 遺物 。 NL 戰鬥結束後失去。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 獲得 !M! 個隨機罕见 遺物 。 NL 戰鬥結束後失去。 NL 消耗"
   },
   "BlackFlareStar": {
     "NAME": "黑耀星",

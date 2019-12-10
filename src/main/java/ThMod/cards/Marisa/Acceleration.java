@@ -52,10 +52,7 @@ public class Acceleration extends CustomCard {
     }
   */
   @Override
-  public void applyPowers() {
-    super.applyPowers();
-    this.isBlockModified = false;
-    this.block = this.baseBlock;
+  protected void applyPowersToBlock() {
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
