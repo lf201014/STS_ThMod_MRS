@@ -317,7 +317,7 @@
   "SuperNova": {
     "NAME": "Supernova",
     "DESCRIPTION": "No longer take damage from Burn. Whenever you Exhaust a Burn, gain !M! Strength. NL Exhaust your hand at the end of each turn.",
-    "UPGRADE_DESCRIPTION": " Innate. NL No longer take damage from Burn. Whenever you Exhaust a Burn, gain 1 Strength. NL Exhaust your hand at the end of each turn."
+    "UPGRADE_DESCRIPTION": " Innate. NL No longer take damage from Burn. Whenever you Exhaust a Burn, gain !M! Strength. NL Exhaust your hand at the end of each turn."
   },
   "OneTimeOff": {
     "NAME": "One Time Off",

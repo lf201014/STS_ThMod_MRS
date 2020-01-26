@@ -21,7 +21,7 @@
   },
   "DarkSpark": {
     "NAME": "다크 스파크",
-    "DESCRIPTION": "손에 있는 공격 카드를 제외한 모든 카드를 소멸시킵니다. NL 적 전체에게 피해를 !D! 줍니다.",
+    "DESCRIPTION": "뽑을 카드 더미 맨 위의 !M! 장의 카드를 소멸 시킵니다. 소멸한 카드가 공격 카드일 때 마다 적 전체에게 피해를 !D! 줍니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   },
   "DeepEcoloBomb": {
@@ -54,7 +54,11 @@
   },
   "GravityBeat": {
     "NAME": "그래비티 비트",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 주고 약화를 !M! 부여합니다."
+    "DESCRIPTION": "내 덱의 카드 !B!장 마다 피해를 !D! 주고 카드를 1 장 뽑습니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " 번 발동합니다.)."
+    ]
   },
   "IllusionStar": {
     "NAME": "일루전 스타",
@@ -123,7 +127,7 @@
   },
   "UltraShortWave": {
     "NAME": "얼티밋 쇼트웨이브",
-    "DESCRIPTION": "[E] 를 !B! 얻고 충전 을 !M! 얻습니다. 이번 전투에서 이 카드의 효과를 1 씩 증가시킵니다.",
+    "DESCRIPTION": "[E] 를 !B! 얻고 충전을 !M! 얻습니다. 이번 전투에서 이 카드의 효과를 1 씩 증가시킵니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "MillisecondPulsars": {
@@ -143,12 +147,12 @@
   },
   "GuidingStar": {
     "NAME": "길잡이 별",
-    "DESCRIPTION": "이 카드를 복사하여 뽑을 카드 더미에 섞어 넣습니다. NL 버린 카드 더미를 뽑을 카드 더미에 넣고 섞습니다.  NL 소멸.",
+    "DESCRIPTION": "보존. NL 턴 시작시 이 카드가 손에 있다면 [E] 를 얻습니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "OrrerysSun": {
     "NAME": "모형 태양",
-    "DESCRIPTION": "충전이 발동할 때마다, 적 전체에게 피해를 !M! 줍니다.",
+    "DESCRIPTION": "충전이 발동할 때마다, 방어도를 !0M! 얻습니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ChargingUp": {
@@ -207,7 +211,7 @@
   },
   "ShootingEcho": {
     "NAME": "슈팅 에코",
-    "DESCRIPTION": "무작위 카드 1 장을 소멸시킵니다. 슈팅 에코 카드를 1 장 얻습니다. NL 피해를 !D! 줍니다. NL 소멸.",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 소멸 시킵니다. 소멸한 카드가 화상일 경우 이 카드를 손으로 다시 가져옵니다.",
     "UPGRADE_DESCRIPTION": "카드 1 장을 선택해 소멸시킵니다. 강화된 슈팅 에코 카드를 1 장 얻습니다. NL 피해를 !D! 줍니다. NL 소멸."
   },
   "EnergyFlow": {
@@ -222,7 +226,7 @@
   },
   "WitchLeyline": {
     "NAME": "위치 레이라인",
-    "DESCRIPTION": "피해를 !D! 줍니다. 화상 카드를 2 장 얻습니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. 화상 카드를 !M! 장 얻습니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "JA": {
@@ -302,8 +306,8 @@
   },
   "MagicChant": {
     "NAME": "마법 노래",
-    "DESCRIPTION": "선택한 카드 !M! 개를 강화하고 이번 턴만 보존합니다.",
-    "UPGRADE_DESCRIPTION": "보존. 선택한 카드 !M! 개를 이번 턴만 보존합니다. 선택한 카드의 비용을 다음 턴까지 1 감소시킵니다."
+    "DESCRIPTION": "뽑을 카드 더미에서 카드 1장을 골라 강화한 후 손으로 가져옵니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "뽑을 카드 더미에서 카드 1장을 골라 강화한 후 손으로 가져옵니다."
   },
   "UnstableBomb": {
     "NAME": "불안정 광선",
@@ -312,8 +316,8 @@
   },
   "SuperNova": {
     "NAME": "초신성",
-    "DESCRIPTION": "더 이상 화상 카드의 피해를 받지 않습니다. 화상 카드가 소멸 될 때마다 힘을 1 얻습니다. NL 턴이 끝나면 손에 있는 카드가 소멸됩니다.",
-    "UPGRADE_DESCRIPTION": "더 이상 화상 카드의 피해를 받지 않습니다. 저주 또는 상태이상 카드가 소멸 될 때마다 힘을 1 얻습니다. NL 턴이 끝나면 손에 있는 카드가 소멸 됩니다."
+    "DESCRIPTION": "더 이상 화상 카드의 피해를 받지 않습니다. 화상 카드가 소멸 될 때마다 힘을 !M! 얻습니다. NL 턴이 끝나면 손에 있는 카드가 소멸됩니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 더 이상 화상 카드의 피해를 받지 않습니다. 화상 카드가 소멸 될 때마다 힘을 !M! 얻습니다. NL 턴이 끝나면 손에 있는 카드가 소멸 됩니다."
   },
   "OneTimeOff": {
     "NAME": "잠깐의 휴식",
@@ -346,7 +350,7 @@
   },
   "EnergyRecoil": {
     "NAME": "에너지 반동",
-    "DESCRIPTION": "현재의 충전 만큼 방어도를 얻습니다.",
+    "DESCRIPTION": "현재의 충전만큼 방어도를 얻습니다.",
     "UPGRADE_DESCRIPTION": "현재의 충전 + 3 만큼 방어도를 얻습니다.",
     "EXTENDED_DESCRIPTION":[
       " NL (방어도를 ",
@@ -360,7 +364,7 @@
   },
   "ManaConvection": {
     "NAME": "마나 전달",
-    "DESCRIPTION": "카드를 !M! 뽑습니다. 카드를 2 장 선택해 소멸시킵니다. NL 충전이 8 이상이면, 충전을 8 잃고 [E] [E] 를 얻습니다.",
+    "DESCRIPTION": "원하는 만큼 최대 !M! 장 선택해 소멸 시키고, 소멸한 카드 수 만큼 [E]를 얻습니다. 소멸.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ManaRampage": {
@@ -380,8 +384,8 @@
   },
   "BinaryStars": {
     "NAME": "쌍성",
-    "DESCRIPTION": "블랙 플레어 스타 또는 화이트 드워프 카드를 선택해 얻습니다. 소멸. NL 증폭 [E] : 2 개의 카드를 모두 얻습니다.",
-    "UPGRADE_DESCRIPTION": "강화된 블랙 플레어 스타 또는 화이트 드워프 카드를 선택해 얻습니다. 소멸. NL 증폭 [E] : 2 개의 카드를 모두 얻습니다."
+    "DESCRIPTION": "블랙 플레어 스타 또는 화이트 드워프 카드를 선택해 얻습니다. NL 증폭 [E] : 2 개의 카드를 모두 얻습니다.",
+    "UPGRADE_DESCRIPTION": "강화된 블랙 플레어 스타 또는 화이트 드워프 카드를 선택해 얻습니다. NL 증폭 [E] : 2 개의 카드를 모두 얻습니다."
   },
   "CollectingQuirk": {
     "NAME": "골동품 수집",
@@ -398,13 +402,13 @@
     "UPGRADE_DESCRIPTION": "카드를 1 장 소멸시킵니다. 대상에게 포션을 사용합니다. NL 포션의 효과는 소멸시킨 카드의 종류 에 따라 정해집니다. NL 소멸."
   },
   "PropBag": {
-    "NAME": "휴대용 가방",
-    "DESCRIPTION": "오리하르콘, 증폭 지팡이, 병법서 중 하나를 얻습니다. NL 유물은 전투가 끝나면 사라집니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": " 선천성. NL 오리하르콘, 증폭 지팡이, 병법서 중 하나를 얻습니다. NL 유물은 전투가 끝나면 사라집니다. NL 소멸."
+    "NAME": "휴대용 소품가방",
+    "DESCRIPTION": "무작위 유물을 얻습니다. NL 유물은 전투가 끝나면 사라집니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": " 선천성. NL 무작위 유물을 얻습니다. NL 유물은 전투가 끝나면 사라집니다. NL 소멸."
   },
   "BlackFlareStar": {
     "NAME": "블랙 플레어 스타",
-    "DESCRIPTION": "카드가 4 장 이상일 때 사용할 수 있습니다. NL 원하는 만큼 카드를 버리고 버린 카드 1 장당 방어도를 !B! 얻습니다.",
+    "DESCRIPTION": "카드가 4 장 이상일 때 사용할 수 있습니다. NL 원하는 만큼 카드를 버리고 버린 카드 1 장당 방어도를 !B! 얻습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
     "EXTENDED_DESCRIPTION":[
       "적어도 내 손에 카드가 4장 필요해.",
@@ -413,8 +417,8 @@
   },
   "WhiteDwarf": {
     "NAME": "화이트 드워프",
-    "DESCRIPTION": "카드가 4 장 이하일때 사용할 수 있습니다. NL 피해를 !B! 줍니다 (버린 카드 더미 x 1.5). 화상 카드 2 장을 얻습니다.",
-    "UPGRADE_DESCRIPTION": "카드가 4 장 이하일때 사용할 수 있습니다. NL 피해를 !B! 줍니다 (버린 카드 더미 x 2). 화상 카드 2 장을 얻습니다.",
+    "DESCRIPTION": "카드가 4 장 이하일때 사용할 수 있습니다. NL 피해를 !B! 줍니다 (버린 카드 더미 x 2). 화상 카드 2 장을 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "카드가 4 장 이하일때 사용할 수 있습니다. NL 피해를 !B! 줍니다 (버린 카드 더미 x 3). 화상 카드 2 장을 얻습니다. NL 소멸.",
     "EXTENDED_DESCRIPTION":[
       "카드가 손에 너무 많아. 4장보다 적어야 가능해.",
       ""
@@ -457,12 +461,12 @@
   },
   "Exhaustion_MRS": {
     "NAME": "고갈",
-    "DESCRIPTION": "사용 불가. NL 이 카드가 손에 있으면 충전 을 얻거나 발동할 수 없습니다.",
+    "DESCRIPTION": "사용 불가. NL 이 카드가 손에 있으면 충전을 얻거나 발동할 수 없습니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "UltimateShortwave": {
     "NAME": "얼티밋 쇼트웨이브",
-    "DESCRIPTION": "[E] 를 !B! 얻고 충전 을 !M! 얻습니다. 이번 전투동안 이 카드로 얻는 충전이 !D! 증가하고 얻는 [E] 가 1 증가합니다.",
+    "DESCRIPTION": "[E] 를 !B! 얻고 충전을 !M! 얻습니다. 이번 전투동안 이 카드로 얻는 충전이 !D! 증가하고 얻는 [E] 가 1 증가합니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "NebulaRing": {
@@ -479,6 +483,11 @@
     "NAME": "망령",
     "DESCRIPTION": "사용 불가. NL 턴이 끝나면 망령 을 1 얻습니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "Acceleration": {
+    "NAME": "가속",
+    "DESCRIPTION": "카드를 !B! 장 뽑습니다. NL 증폭 [E] : 대신 카드를 !M!장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "보존. 카드를 !M! 장 뽑습니다. NL 증폭 [E] : 대신 카드를 !M!장 뽑습니다."
   },
   "WWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",
