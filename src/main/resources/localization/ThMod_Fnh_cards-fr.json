@@ -21,7 +21,7 @@
   },
   "DarkSpark": {
     "NAME": "Étincelle sombre",
-    "DESCRIPTION": "Épuisez toutes les cartes de votre main (sauf Attaques). NL Infligez !D! dégâts à TOUS les ennemis.",
+    "DESCRIPTION": "Exhaust top !M! cards of your draw pile,deal !D! damage to ALL enemies for each Attack Exhausted.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   },
   "DeepEcoloBomb": {
@@ -54,7 +54,11 @@
   },
   "GravityBeat": {
     "NAME": "Battement de gravité",
-    "DESCRIPTION": "Infligez !D! dégâts et appliquez !M! faiblesse à TOUS les ennemis."
+    "DESCRIPTION": "Deal !D! damage and draw a card for every !B! cards in your master deck.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " time(s))."
+    ]
   },
   "IllusionStar": {
     "NAME": "Étoile illusoire",
@@ -143,12 +147,12 @@
   },
   "GuidingStar": {
     "NAME": "Étoile guidante",
-    "DESCRIPTION": "Ajoutez une copie de cette carte à votre pioche. NL Mélangez les cartes de votre défausse à votre pioche. NL Épuisement.",
+    "DESCRIPTION": "Retain .  NL  If the card is in your hand at the start of turn,gain  [E]  .",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "OrrerysSun": {
     "NAME": "Soleil planétaire",
-    "DESCRIPTION": "Quand une charge est consumée, infligez !M! dégâts à TOUS les ennemis.",
+    "DESCRIPTION": "Whenever Charge-up is consumed, gain !M! block .",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ChargingUp": {
@@ -207,8 +211,8 @@
   },
   "ShootingEcho": {
     "NAME": "Écho de tir",
-    "DESCRIPTION": " Épuisez une carte au hasard. Ajoutez un Écho de tir à votre main. NL Infligez !D! dégâts. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Épuisez une carte. Ajoutez un Écho de tir à votre main. NL Infligez !D! dégâts. NL Épuisement."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card.  NL If the card you exhaust is Burn ,put this card back to your hand.",
+    "UPGRADE_DESCRIPTION": "Exhaust a card. Add an Upgraded Shooting Echo to your hand. NL Deal !D! damage. NL Exhaust."
   },
   "EnergyFlow": {
     "NAME": "Flux d'énergie",
@@ -222,7 +226,7 @@
   },
   "WitchLeyline": {
     "NAME": "Ligne de sorcière",
-    "DESCRIPTION": "Infligez !D! dégâts. Ajoutez 2 brûlures à votre main.",
+    "DESCRIPTION": "Infligez !D! dégâts. Ajoutez !M! brûlures à votre main.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "JA": {
@@ -302,8 +306,8 @@
   },
   "MagicChant": {
     "NAME": "Chant magique",
-    "DESCRIPTION": "Choisissez !M! cartes à améliorer et conservez les ce tour.",
-    "UPGRADE_DESCRIPTION": "Conservez. Choisissez !M! à conserver ce tour. Réduit le coût de la carte choisie de 1 le prochain tour."
+    "DESCRIPTION": "Choose a card in your draw pile,add it to your hand and upgrade it. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "Choose a card in your draw pile,add it to your hand and upgrade it."
   },
   "UnstableBomb": {
     "NAME": "Bombe instable",
@@ -312,8 +316,8 @@
   },
   "SuperNova": {
     "NAME": "Supernova",
-    "DESCRIPTION": "Vous ne prenez plus de dégâts des brûlures. Lorsque vous Épuisez une brûlure, gagnez 1 de force. NL Épuisez votre main à la fin de chaque tour.",
-    "UPGRADE_DESCRIPTION": "Vous ne prenez plus de dégâts des brûlures. Lorsque vous Épuisez une malédiction ou un statut, gagnez 1 de force. NL Épuisez votre main à la fin de chaque tour."
+    "DESCRIPTION": "No longer take damage from Burn. Whenever you Exhaust a Burn, gain !M! Strength. NL Exhaust your hand at the end of each turn.",
+    "UPGRADE_DESCRIPTION": " Innate. NL No longer take damage from Burn. Whenever you Exhaust a Burn, gain !M! Strength. NL Exhaust your hand at the end of each turn."
   },
   "OneTimeOff": {
     "NAME": "Temps d'arrêt",
@@ -360,7 +364,7 @@
   },
   "ManaConvection": {
     "NAME": "Convection de mana",
-    "DESCRIPTION": "Piochez !M! cartes. Épuisez 2 cartes. NL Si vous avez 8 charges ou plus, perdez 8 charges et gagnez [E]  [E]  .",
+    "DESCRIPTION": "Exhaust up to !M! cards,gain  [E]  for each card exhausted. NL Exhaust .",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ManaRampage": {
@@ -380,8 +384,8 @@
   },
   "BinaryStars": {
     "NAME": "Étoiles binaires",
-    "DESCRIPTION": "Choisissez d'ajouter soit un Trou noir, soit une Naine blanche à votre main. Épuisement. NL Amplifier  [E]  : Ajoutez les deux cartes dans votre main.",
-    "UPGRADE_DESCRIPTION": "Choisissez d'ajoutez soit un Trou noir amélioré, soit une Naine blanche améliorée à votre main. Épuisement. NL Amplifier  [E]  : Ajoutez les deux cartes dans votre main."
+    "DESCRIPTION": "Choisissez d'ajouter soit un Trou noir, soit une Naine blanche à votre main. NL Amplifier  [E]  : Ajoutez les deux cartes dans votre main.",
+    "UPGRADE_DESCRIPTION": "Choisissez d'ajoutez soit un Trou noir amélioré, soit une Naine blanche améliorée à votre main. NL Amplifier  [E]  : Ajoutez les deux cartes dans votre main."
   },
   "CollectingQuirk": {
     "NAME": "Collection bizarre",
@@ -399,12 +403,12 @@
   },
   "PropBag": {
     "NAME": "Sac d'objets portable",
-    "DESCRIPTION": "Obtenez aléatoirement Orichalque, Batôn d'amplification ou l'Art de la guerre. NL Perdez cette relique à la fin du combat. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Inné. NL Obtenez aléatoirement Orichalque, Batôn d'amplification ou l'Art de la guerre. NL Perdez cette relique à la fin du combat. NL Épuisement."
+    "DESCRIPTION": "Obtain a random relic. NL Lose the relic when the battle ends. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Innate. NL Obtain a random relic. NL Lose the relic when the battle ends. NL Exhaust."
   },
   "BlackFlareStar": {
     "NAME": "Trou noir",
-    "DESCRIPTION": "Peut seulement être jouée lorsque vous avez 4 cartes ou plus dans votre main. NL Défaussez n'importe quel nombre de cartes dans votre main et gagnez !B! d'Armure par carte défaussée.",
+    "DESCRIPTION": "Peut seulement être jouée lorsque vous avez 4 cartes ou plus dans votre main. NL Défaussez n'importe quel nombre de cartes dans votre main et gagnez !B! d'Armure par carte défaussée. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
     "EXTENDED_DESCRIPTION":[
       "Je n'ai pas 4 cartes en main.",
@@ -413,8 +417,8 @@
   },
   "WhiteDwarf": {
     "NAME": "Naine blanche",
-    "DESCRIPTION": "Peut seulement être jouée lorsque vous avez 4 cartes ou moins dans votre main. NL Infligez !B! dégâts (1.5 × la taille de votre défausse). Ajoutez 2 brûlures à votre main.",
-    "UPGRADE_DESCRIPTION": "Peut seulement être jouée lorsque vous avez 4 cartes ou moins dans votre main. NL Infligez !B! dégâts (2 × la taille de votre défausse). Ajoutez 2 brûlures à votre main.",
+    "DESCRIPTION": "Peut seulement être jouée lorsque vous avez 4 cartes ou moins dans votre main. NL Infligez !B! dégâts (2 × la taille de votre défausse). Ajoutez 2 brûlures à votre main. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Peut seulement être jouée lorsque vous avez 4 cartes ou moins dans votre main. NL Infligez !B! dégâts (3 × la taille de votre défausse). Ajoutez 2 brûlures à votre main. NL Épuisement.",
     "EXTENDED_DESCRIPTION":[
       "J'ai plus de 4 cartes en main.",
       ""
@@ -479,6 +483,11 @@
     "NAME": "Spectre",
     "DESCRIPTION": "Injouable. NL À la fin de votre tour, gagnez 1 Spectre .",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "Acceleration": {
+    "NAME": "Acceleration",
+    "DESCRIPTION": "Draw top !B! cards in your draw pile. NL Amplify  [E] : Draw top !M! cards in your draw pile.",
+    "UPGRADE_DESCRIPTION": "Retain . NL Draw !M! cards. NL Amplify  [E] : Draw !M! cards."
   },
   "WWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",

@@ -54,7 +54,7 @@
   },
   "GravityBeat": {
     "NAME": "그래비티 비트",
-    "DESCRIPTION": "내 덱의 카드 !B!장 마다 피해를 !D! 주고 카드를 1 장 뽑습니다.",
+    "DESCRIPTION": "내 덱의 카드 !B! 장 마다 피해를 !D! 주고 카드를 1 장 뽑습니다.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " 번 발동합니다.)."
@@ -152,7 +152,7 @@
   },
   "OrrerysSun": {
     "NAME": "모형 태양",
-    "DESCRIPTION": "충전이 발동할 때마다, 방어도를 !0M! 얻습니다.",
+    "DESCRIPTION": "충전이 발동할 때마다, 방어도를 !M! 얻습니다.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ChargingUp": {

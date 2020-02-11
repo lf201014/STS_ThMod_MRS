@@ -10,7 +10,7 @@
     "NAME": "妖器「ミニ八卦炉」",
     "FLAVOR": "妖器と化したミニ八卦炉はこれまでにない威力を出すが、安全かどうかは分からない……",
     "DESCRIPTIONS": [
-      " #rミニ八卦炉 と置き換える。 NL カードをプレイしたり、ダメージをうけるたび、 #yチャージ  #b1 を得る。"
+      "Replaces #rMini-Hakkero . NL Whenever you play a card , gain #b1 #yCharge-up . NL gain 1 more if it is a #ySpark card."
     ]
   },
   "MagicArmor": {
