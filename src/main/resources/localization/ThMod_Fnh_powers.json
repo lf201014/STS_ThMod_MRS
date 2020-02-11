@@ -26,7 +26,7 @@
   "IllusionStarPower": {
     "NAME": "Illusion Star",
     "DESCRIPTIONS": [
-      "At the start of your turn , transform  #b",
+      "At the start of your turn , transform #b",
       "card(s) of your hand."
     ]
   },
@@ -40,21 +40,21 @@
   "SatellIllusPower": {
     "NAME": "Satellite Illusion",
     "DESCRIPTIONS": [
-      "When you use a card that doesn't exist in your master deck,draw  #b",
+      "When you use a card that doesn't exist in your master deck,draw #b",
       " card."
     ]
   },
   "TempStrength": {
     "NAME": "Temproy Strength",
     "DESCRIPTIONS": [
-      "Your next blow deals additional  #b",
+      "Your next blow deals additional #b",
       " damage."
     ]
   },
   "TempStrengthLoss": {
     "NAME": "Temproy Strength Loss",
     "DESCRIPTIONS": [
-      "The damage of this creature is lowered by  #b",
+      "The damage of this creature is lowered by #b",
       " this turn."
     ]
   },
@@ -68,9 +68,9 @@
   "ChargeUpPower": {
     "NAME": "Charge Up",
     "DESCRIPTIONS": [
-      "You have  #b",
+      "You have #b",
       " stacks of #yCharge-up ",
-      "granting you  #b",
+      "granting you #b",
       " times damage."
     ]
   },
@@ -83,35 +83,35 @@
   "OrrerysSunPower": {
     "NAME": "Orrerys Sun",
     "DESCRIPTIONS": [
-      "Whenever you consume #yCharge-up, deal  #b",
-      " damage to all enemies."
+      "Whenever you consume #yCharge-up, Gain #b",
+      " block."
     ]
   },
   "Charged": {
     "NAME": "Charged!",
     "DESCRIPTIONS": [
-      "Your next blow will do  #b",
+      "Your next blow will do #b",
       " times damage"
     ]
   },
   "BlazeAwayPower": {
     "NAME": "Blaze Away",
     "DESCRIPTIONS": [
-      "Will add  #b",
+      "Will add #b",
       " copy(copies) of the next attack card you use."
     ]
   },
   "MPPower": {
     "NAME": "Max Power",
     "DESCRIPTIONS": [
-      "Your damage is multipled by  #b",
+      "Your damage is multipled by #b",
       " this turn."
     ]
   },
   "EnergyFlowPower": {
     "NAME": "Energy Flow",
     "DESCRIPTIONS": [
-      "At the end of your turn, gain  #b",
+      "At the end of your turn, gain #b",
       " #yCharge-up ."
     ]
   },
@@ -132,14 +132,14 @@
   "WitchOfGreedGold": {
     "NAME": "Witch Of Greed",
     "DESCRIPTIONS": [
-      "At the end of combat, gain  #b",
+      "At the end of combat, gain #b",
       " gold ."
     ]
   },
   "WitchOfGreedPotion": {
     "NAME": "Witch Of Greed",
     "DESCRIPTIONS": [
-      "At the end of combat, obtain  #b",
+      "At the end of combat, obtain #b",
       " random potion."
     ]
   },
@@ -160,36 +160,36 @@
   "SuperNovaPower": {
     "NAME": "SuperNova",
     "DESCRIPTIONS": [
-      "When you #yExhaust a #yBurn ,Gain  #b",
-      "When you #yExhaust a #yCurse or a #Status ,Gain  #b",
+      "When you #yExhaust a #yBurn ,Gain #b",
+      "When you #yExhaust a #yBurn ,Gain #b",
       " #yStrength . NL You no longer take damage from #yBurn . NL #yExhaust you hand when your turn ends."
     ]
   },
   "CasketOfStarPlusPower": {
     "NAME": "Casket Of Star",
     "DESCRIPTIONS": [
-      "Add  #b",
+      "Add #b",
       " #yupgraded #ySpark to your hand whenever you gain #yBlock ."
     ]
   },
   "CasketOfStarPower": {
     "NAME": "Casket Of Star",
     "DESCRIPTIONS": [
-      "Add  #b",
+      "Add #b",
       " #ySpark to your hand whenever you gain #yBlock ."
     ]
   },
   "GalacticHaloPower": {
     "NAME": "Galactic Halo",
     "DESCRIPTIONS": [
-      "At the end of your turn,gain  #b",
+      "At the end of your turn,gain #b",
       " #yblock for each #yAttack you played this turn."
     ]
   },
   "ManaRampagePower": {
     "NAME": "Mana Rampage",
     "DESCRIPTIONS": [
-      "Your next #yAttack will be played  #b",
+      "Your next #yAttack will be played #b",
       " extra times this turn."
     ]
   },
@@ -203,28 +203,28 @@
   "UltraShortWavePower": {
     "NAME": "Ultimate ShortWave",
     "DESCRIPTIONS": [
-      "Your #yUltimate #yShortWave's effect is #yAmplified  #b",
+      "Your #yUltimate #yShortWave's effect is #yAmplified #b",
       " times."
     ]
   },
   "DarkSparkPower": {
     "NAME": "Dark Spark",
     "DESCRIPTIONS": [
-      "Each card with 'Spark' in its name you play will grant you  #b",
+      "Each card with 'Spark' in its name you play will grant you #b",
       " additional #yCharge-up this turn."
     ]
   },
   "MagicChantPower": {
     "NAME": "Magic Chant",
     "DESCRIPTIONS": [
-      "Reduce the cost of  #b",
+      "Reduce the cost of #b",
       " next turn."
     ]
   },
   "SatelIllusPower": {
     "NAME": "Satellite Illusion",
     "DESCRIPTIONS": [
-      "During your turn,when the number of cards in your draw pile increases, gain  #b",
+      "During your turn,when the number of cards in your draw pile increases, gain #b",
       " [E] ."
     ]
   },

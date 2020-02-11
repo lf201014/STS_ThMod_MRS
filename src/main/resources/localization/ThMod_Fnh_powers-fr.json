@@ -26,7 +26,7 @@
   "IllusionStarPower": {
     "NAME": "Étoile illusoire",
     "DESCRIPTIONS": [
-      "Au debut de votre tour , transformez  #b",
+      "Au debut de votre tour , transformez #b",
       "carte(s) de votre main."
     ]
   },
@@ -47,7 +47,7 @@
   "TempStrength": {
     "NAME": "Force temporaire",
     "DESCRIPTIONS": [
-      "Votre prochaine explosion cause  #b",
+      "Votre prochaine explosion cause #b",
       " dégât(s) additionnels."
     ]
   },
@@ -68,9 +68,9 @@
   "ChargeUpPower": {
     "NAME": "Charge",
     "DESCRIPTIONS": [
-      "Vous avez  #b",
+      "Vous avez #b",
       " #yCharge ",
-      "vous donnant  #b",
+      "vous donnant #b",
       " fois de dégâts."
     ]
   },
@@ -83,8 +83,8 @@
   "OrrerysSunPower": {
     "NAME": "Soleil planétaire",
     "DESCRIPTIONS": [
-      "Lorsque vous consommez une #yCharge, infligez  #b",
-      " à TOUS les ennemis."
+      "Lorsque vous consommez une #yCharge, gagnez #b",
+      " #yArmure."
     ]
   },
   "Charged": {
@@ -104,7 +104,7 @@
   "MPPower": {
     "NAME": "Puissance maximale",
     "DESCRIPTIONS": [
-      "Vos dégâts sont multipliés par  #b",
+      "Vos dégâts sont multipliés par #b",
       " ce tour."
     ]
   },
@@ -132,14 +132,14 @@
   "WitchOfGreedGold": {
     "NAME": "Sorcière de la cupidité",
     "DESCRIPTIONS": [
-      "À la fin du combat, gagnez  #b",
+      "À la fin du combat, gagnez #b",
       " or."
     ]
   },
   "WitchOfGreedPotion": {
     "NAME": "Sorcière de la cupidité",
     "DESCRIPTIONS": [
-      "À la fin du combat, obtenez  #b",
+      "À la fin du combat, obtenez #b",
       " potion(s) aléatoire(s)."
     ]
   },
@@ -160,8 +160,8 @@
   "SuperNovaPower": {
     "NAME": "SuperNova",
     "DESCRIPTIONS": [
-      "Lorsque vous #yExhaust une #yBrûlure , gagnez  #b",
-      "Lorsque vous #yExhaust une #yMalédiction or un #Statut , gagnez  #b",
+      "Lorsque vous #yExhaust une #yBrûlure , gagnez #b",
+      "Lorsque vous #yExhaust une #yBrûlure , gagnez #b",
       " #yStrength . NL Vous ne prenez plus de dégâts des #yBrûlure . NL #yExhaust votre main lorsque votre tour se termine."
     ]
   },
@@ -175,21 +175,21 @@
   "CasketOfStarPower": {
     "NAME": "Cercueil d'étoiles",
     "DESCRIPTIONS": [
-      "Ajoutez  #b",
+      "Ajoutez #b",
       " #ySpark à votre main lorsque vous gagnez de l'#yArmure ."
     ]
   },
   "GalacticHaloPower": {
     "NAME": "Halo galactique",
     "DESCRIPTIONS": [
-      "À la fin du tour, gagnez  #b",
+      "À la fin du tour, gagnez #b",
       " #yArmure pour chaque #yAttaque que vous avez joué ce tour."
     ]
   },
   "ManaRampagePower": {
     "NAME": "Déchainement de man",
     "DESCRIPTIONS": [
-      "Votre prochaine #yAttaque sera jouée  #b",
+      "Votre prochaine #yAttaque sera jouée #b",
       " fois supplémentaires ce tour."
     ]
   },
@@ -203,7 +203,7 @@
   "UltraShortWavePower": {
     "NAME": "ondes-Courtes ultimes",
     "DESCRIPTIONS": [
-      "Votre effet #yOndes-Courtes #yUltimes est #yAmplifier  #b",
+      "Votre effet #yOndes-Courtes #yUltimes est #yAmplifier #b",
       " fois."
     ]
   },
@@ -224,7 +224,7 @@
   "SatelIllusPower": {
     "NAME": "Illusion Satellite",
     "DESCRIPTIONS": [
-      "Pendant ce tour, lorsque le nombre de cartes dans votre pioche augmente, gagnez  #b",
+      "Pendant ce tour, lorsque le nombre de cartes dans votre pioche augmente, gagnez #b",
       " [B] ."
     ]
   },
