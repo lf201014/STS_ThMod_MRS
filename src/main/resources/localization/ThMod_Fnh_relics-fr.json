@@ -10,7 +10,7 @@
     "NAME": "Hakkero enchanté",
     "FLAVOR": "Sa puissance de feu est à un autre niveau, mais est-ce que c'est bon d'utiliser un outil enchanté ?",
     "DESCRIPTIONS": [
-      "Remplacez #rMini-Hakkero . NL Lorsque vous jouez une carte ou que vous êtes attaqué, gagnez #b1 #yCharge ."
+      "Replaces #rMini-Hakkero . NL Whenever you play a card , gain #b1 #yCharge-up . NL gain 1 more if it is a #ySpark card."
     ]
   },
   "MagicArmor": {

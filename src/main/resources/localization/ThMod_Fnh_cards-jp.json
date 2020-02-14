@@ -21,7 +21,7 @@
   },
   "DarkSpark": {
     "NAME": "ダークスパーク",
-    "DESCRIPTION": "「アタック」以外の手札を廃棄する。 NL 敵全体に二回 !D! ダメージを与える ",
+    "DESCRIPTION": "Exhaust top !M! cards of your draw pile,deal !D! damage to ALL enemies for each Attack Exhausted.",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   },
   "DeepEcoloBomb": {
@@ -54,7 +54,11 @@
   },
   "GravityBeat": {
     "NAME": "グラビティビート",
-    "DESCRIPTION": "敵全体に !D! ダメージ と 脱力 !M! を与える。"
+    "DESCRIPTION": "Deal !D! damage and draw a card for every !B! cards in your master deck.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " time(s))."
+    ]
   },
   "IllusionStar": {
     "NAME": "イリュージョンスター",
@@ -143,12 +147,12 @@
   },
   "GuidingStar": {
     "NAME": " ガイディングスター ",
-    "DESCRIPTION": "このカードの複製を山札に加える。 NL 捨て札すべてを山札に戻す。  NL 廃棄 。",
+    "DESCRIPTION": "Retain .  NL  If the card is in your hand at the start of turn,gain  [E]  .",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "OrrerysSun": {
     "NAME": "オーレリーズサン",
-    "DESCRIPTION": " チャージ が使用されるたび、敵全体に !M! ダメージを与える。",
+    "DESCRIPTION": "Whenever Charge-up is consumed, gain !M! block .",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ChargingUp": {
@@ -207,8 +211,8 @@
   },
   "ShootingEcho": {
     "NAME": "シューティングエコー",
-    "DESCRIPTION": " カードを1枚 廃棄 する。 シューティングエコー を 1 枚手札に加える。 NL !D! ダメージを与える。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "カードを1枚 廃棄 する。 シューティングエコー + を 1 枚手札に加える。 NL !D! ダメージを与える。 NL 廃棄 。"
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card.  NL If the card you exhaust is Burn ,put this card back to your hand.",
+    "UPGRADE_DESCRIPTION": "Exhaust a card. Add an Upgraded Shooting Echo to your hand. NL Deal !D! damage. NL Exhaust."
   },
   "EnergyFlow": {
     "NAME": "エナジーフロー",
@@ -222,7 +226,7 @@
   },
   "WitchLeyline": {
     "NAME": "ウィッチレイライン",
-    "DESCRIPTION": "!D! ダメージを与える。 手札に 火傷 を 2 枚加える。",
+    "DESCRIPTION": "!D! ダメージを与える。 手札に 火傷 を !M! 枚加える。",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "JA": {
@@ -302,8 +306,8 @@
   },
   "MagicChant": {
     "NAME": "魔術詠唱",
-    "DESCRIPTION": "!M! 枚のカードを アップグレード し、1ターン 保留 する。",
-    "UPGRADE_DESCRIPTION": "保留 。 !M! 枚のカードを アップグレード し、1ターン 保留 する。次のターンまで、カードのコストを 1 減らす。"
+    "DESCRIPTION": "Choose a card in your draw pile,add it to your hand and upgrade it. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "Choose a card in your draw pile,add it to your hand and upgrade it."
   },
   "UnstableBomb": {
     "NAME": "産廃ボム",
@@ -312,8 +316,8 @@
   },
   "SuperNova": {
     "NAME": "スーパーノヴァ",
-    "DESCRIPTION": "火傷 によるダメージを受けなくなる。 火傷 を 廃棄 するたび, 筋力 1 を得る。 NL ターン終了時手札を 廃棄 する。",
-    "UPGRADE_DESCRIPTION": "天賦 。 NL 火傷 によるダメージを受けなくなる。 火傷 を 廃棄 するたび, 筋力 1 を得る。 NL ターン終了時手札を 廃棄 する。"
+    "DESCRIPTION": "No longer take damage from Burn. Whenever you Exhaust a Burn, gain !M! Strength. NL Exhaust your hand at the end of each turn.",
+    "UPGRADE_DESCRIPTION": " Innate. NL No longer take damage from Burn. Whenever you Exhaust a Burn, gain !M! Strength. NL Exhaust your hand at the end of each turn."
   },
   "OneTimeOff": {
     "NAME": "1回休み",
@@ -360,7 +364,7 @@
   },
   "ManaConvection": {
     "NAME": "魔力対流",
-    "DESCRIPTION": "カードを !M! 枚引く。 カードを 2 枚 廃棄 する。 NL チャージが 8 以上の場合、チャージを 8 失い、  [E]  [E]  を得る。",
+    "DESCRIPTION": "Exhaust up to !M! cards,gain  [E]  for each card exhausted. NL Exhaust .",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
   },
   "ManaRampage": {
@@ -380,8 +384,8 @@
   },
   "BinaryStars": {
     "NAME": "バイナリスター",
-    "DESCRIPTION": "手札に ブラックフレアスター か ホワイトドワーフ のどちらかを加える。 廃棄 。 NL 増幅  [E]  : 両方を加える。",
-    "UPGRADE_DESCRIPTION": "手札に ブラックフレアスター + か ホワイトドワーフ + のどちらかを加える。 廃棄 。 NL 増幅  [E]  : 両方を加える。"
+    "DESCRIPTION": "手札に ブラックフレアスター か ホワイトドワーフ のどちらかを加える。 NL 増幅[E]  : 両方を加える。",
+    "UPGRADE_DESCRIPTION": "手札に ブラックフレアスター + か ホワイトドワーフ + のどちらかを加える。 NL 増幅[E]  : 両方を加える。"
   },
   "CollectingQuirk": {
     "NAME": "收集癖",
@@ -399,12 +403,12 @@
   },
   "PropBag": {
     "NAME": "携帯道具袋",
-    "DESCRIPTION": "オリハルコン、孫子兵法、増幅の杖のいずれかを取得する。戦闘終了時、取得したレリックを失う。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": " 天賦 。 オリハルコン、孫子兵法、増幅の杖のいずれかを取得する。戦闘終了時、取得したレリックを失う。 NL 廃棄 。"
+    "DESCRIPTION": "Obtain a random relic. NL Lose the relic when the battle ends. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Innate. NL Obtain a random relic. NL Lose the relic when the battle ends. NL Exhaust."
   },
   "BlackFlareStar": {
     "NAME": "ブラックフレアスター",
-    "DESCRIPTION": "手札が4枚以上の時のみプレイ可能。 NL 手札のカードを任意の枚数捨て、捨てた枚数の !B! 倍の ブロック を得る。",
+    "DESCRIPTION": "手札が4枚以上の時のみプレイ可能。 NL 手札のカードを任意の枚数捨て、捨てた枚数の !B! 倍の ブロック を得る。 NL 廃棄",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW",
     "EXTENDED_DESCRIPTION": [
       "手札が4枚以上無い。",
@@ -413,8 +417,8 @@
   },
   "WhiteDwarf": {
     "NAME": "ホワイトドワーフ",
-    "DESCRIPTION": "手札が4枚以下の時のみプレイ可能。 NL !B!  ダメージを与える (1。5 × 捨て札の枚数)。手札に 火傷 を 2 枚加える。",
-    "UPGRADE_DESCRIPTION": "手札が4枚以下の時のみプレイ可能。 NL !B! ダメージを与える (2 × 捨て札の枚数)。手札に 火傷 を 2 枚加える。",
+    "DESCRIPTION": "手札が4枚以下の時のみプレイ可能。 NL !B!  ダメージを与える (2 × 捨て札の枚数)。手札に 火傷 を 2 枚加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "手札が4枚以下の時のみプレイ可能。 NL !B! ダメージを与える (3 × 捨て札の枚数)。手札に 火傷 を 2 枚加える。 NL 廃棄",
     "EXTENDED_DESCRIPTION": [
       "手札が4枚以下ではない",
       ""
@@ -479,6 +483,11 @@
     "NAME": "Wraith",
     "DESCRIPTION": "Unplayable. NL At the end of your turn, gain 1 Wraith .",
     "UPGRADE_DESCRIPTION": "WWWWWWWWWWW"
+  },
+  "Acceleration": {
+    "NAME": "Acceleration",
+    "DESCRIPTION": "Draw top !B! cards in your draw pile. NL Amplify  [E] : Draw top !M! cards in your draw pile.",
+    "UPGRADE_DESCRIPTION": "Retain . NL Draw !M! cards. NL Amplify  [E] : Draw !M! cards."
   },
   "WWWWWWWWWWWWWW": {
     "NAME": "WWWWWWWWWWW",

@@ -7,6 +7,20 @@
       "공격 : 공포 포션 ; NL 스킬 : 약화 포션 ; NL 파워 : 중독 포션 ; NL 상태이상 : 화염 포션 ; NL 저주 : 연막탄."
     ]
   },
+  "BottledSpark": {
+    "NAME": "병 속의 스파크",
+    "DESCRIPTIONS": [
+      "#y스파크 를 #b",
+      "  장 손으로 가져옵니다."
+    ]
+  },
+  "StarNLove": {
+    "NAME": "별과 사랑",
+    "DESCRIPTIONS": [
+      "#y충전 을 #",
+      "얻습니다. 이번 턴 동안 증폭이 추가 에너지를 사용하지 않습니다."
+    ]
+  },
   "WWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [
