@@ -27,7 +27,7 @@ public class DarkMatter extends CustomCard {
   public static final String DESCRIPTION_UPG = cardStrings.UPGRADE_DESCRIPTION;
   public static final String IMG_PATH = "img/cards/DarkMatter.png";
   private static final int COST = 0;
-  private static final int BLC_GAIN = 4;
+  private static final int BLC_GAIN = 5;
   private static final int UPG_BLC = 2;
 
   public DarkMatter() {

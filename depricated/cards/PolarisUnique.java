@@ -1,4 +1,4 @@
-package ThMod.cards.Marisa;
+package ThMod.cards.deprecated;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
@@ -16,6 +16,7 @@ import ThMod.cards.derivations.GuidingStar;
 import ThMod.patches.AbstractCardEnum;
 import ThMod.powers.Marisa.PolarisUniquePower;
 
+@Deprecated
 public class PolarisUnique extends CustomCard {
 
   public static final String ID = "PolarisUnique";

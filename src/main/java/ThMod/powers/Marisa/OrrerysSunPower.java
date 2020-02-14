@@ -2,6 +2,7 @@ package ThMod.powers.Marisa;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -30,9 +31,14 @@ public class OrrerysSunPower extends AbstractPower {
 
   public void onSpecificTrigger() {
     flash();
+    /*
     AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(null,
         DamageInfo.createDamageMatrix(this.amount, true), DamageInfo.DamageType.THORNS,
         AbstractGameAction.AttackEffect.FIRE));
+        */
+    AbstractDungeon.actionManager.addToBottom(
+        new GainBlockAction(this.owner, this.owner, this.amount)
+    );
   }
 
   public void updateDescription() {

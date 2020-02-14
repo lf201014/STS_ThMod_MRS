@@ -6,6 +6,7 @@ import static ThMod.patches.ThModClassEnum.MARISA;
 
 import ThMod.action.SparkCostAction;
 import ThMod.cards.Marisa.AbsoluteMagnitude;
+import ThMod.cards.Marisa.Acceleration;
 import ThMod.cards.Marisa.AlicesGift;
 import ThMod.cards.Marisa.AsteroidBelt;
 import ThMod.cards.Marisa.BigCrunch;
@@ -55,7 +56,6 @@ import ThMod.cards.Marisa.OortCloud;
 import ThMod.cards.Marisa.OpenUniverse;
 import ThMod.cards.Marisa.Orbital;
 import ThMod.cards.Marisa.OrrerysSun;
-import ThMod.cards.Marisa.PolarisUnique;
 import ThMod.cards.Marisa.PowerUp;
 import ThMod.cards.Marisa.PropBag;
 import ThMod.cards.Marisa.PulseMagic;
@@ -92,12 +92,15 @@ import ThMod.event.OrinTheCat;
 import ThMod.monsters.Orin;
 import ThMod.monsters.ZombieFairy;
 import ThMod.patches.AbstractCardEnum;
+import ThMod.potions.BottledSpark;
 import ThMod.potions.ShroomBrew;
+import ThMod.potions.StarNLove;
 import ThMod.powers.Marisa.GrandCrossPower;
 import ThMod.relics.AmplifyWand;
 import ThMod.relics.BewitchedHakkero;
 import ThMod.relics.BigShroomBag;
 import ThMod.relics.BreadOfAWashokuLover;
+import ThMod.relics.Cape;
 import ThMod.relics.CatCart;
 import ThMod.relics.ExperimentalFamiliar;
 import ThMod.relics.HandmadeGrimoire;
@@ -108,7 +111,6 @@ import ThMod.relics.ShroomBag;
 import ThMod.relics.SimpleLauncher;
 import ThMod.relics.SproutingBranch;
 import basemod.BaseMod;
-import basemod.IUIElement;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.helpers.RelicType;
@@ -122,6 +124,7 @@ import basemod.interfaces.OnPowersModifiedSubscriber;
 import basemod.interfaces.PostBattleSubscriber;
 import basemod.interfaces.PostDrawSubscriber;
 import basemod.interfaces.PostDungeonInitializeSubscriber;
+import basemod.interfaces.PostEnergyRechargeSubscriber;
 import basemod.interfaces.PostExhaustSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
 import com.badlogic.gdx.Gdx;
@@ -131,9 +134,12 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.core.Settings.GameLanguage;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
@@ -155,6 +161,7 @@ import java.util.Properties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+@SuppressWarnings("Duplicates")
 @SpireInitializer
 public class ThMod implements PostExhaustSubscriber,
     PostBattleSubscriber,
@@ -167,7 +174,8 @@ public class ThMod implements PostExhaustSubscriber,
     OnCardUseSubscriber,
     EditKeywordsSubscriber,
     OnPowersModifiedSubscriber,
-    PostDrawSubscriber {
+    PostDrawSubscriber,
+    PostEnergyRechargeSubscriber {
 
   public static final Logger logger = LogManager.getLogger(ThMod.class.getName());
 
@@ -188,7 +196,7 @@ public class ThMod implements PostExhaustSubscriber,
   private static final String POWER_CC_PORTRAIT = "img/1024/bg_power_MRS.png";
   private static final String ENERGY_ORB_CC_PORTRAIT = "img/1024/cardOrb.png";
 
-  public static final Color STARLIGHT = CardHelper.getColor(0f, 10f, 125.0f);
+  public static final Color STARLIGHT = CardHelper.getColor(0, 10, 125);
   public static final String CARD_ENERGY_ORB = "img/UI/energyOrb.png";
 
   private static final String MY_CHARACTER_BUTTON = "img/charSelect/MarisaButton.png";
@@ -232,6 +240,7 @@ public class ThMod implements PostExhaustSubscriber,
   public static int typhoonCounter = 0;
 
   public static boolean isCatEventEnabled;
+  public static boolean isDeadBranchEnabled;
   private Properties marisaModDefaultProp = new Properties();
 
   //public static boolean OrinEvent = false;
@@ -282,7 +291,7 @@ public class ThMod implements PostExhaustSubscriber,
 
     boolean res = false;
     if ((p.hasPower("MilliPulsaPower")) || (p.hasPower("PulseMagicPower"))
-        || (card.freeToPlayOnce)) {
+        || (card.freeToPlayOnce) || (card.purgeOnUse)) {
       logger.info(
           "ThMod.Amplified :Free Amplify tag detected,returning true : Milli :"
               + (p.hasPower("MilliPulsaPower"))
@@ -290,6 +299,8 @@ public class ThMod implements PostExhaustSubscriber,
               + (p.hasPower("PulseMagicPower"))
               + " ; Free2Play :"
               + card.freeToPlayOnce
+              + " ; purge on use :"
+              + card.purgeOnUse
       );
       res = true;
     } else {
@@ -297,10 +308,11 @@ public class ThMod implements PostExhaustSubscriber,
         logger.info("ThMod.Amplified : Sufficient energy ,adding and returning true;");
         card.costForTurn += AMP;
         res = true;
-        if (card.costForTurn >0){
-          logger.info("ThMod.Amplified : False instance of 0 cost card,decreasing typhoon counter.");
+        if (card.costForTurn > 0) {
+          logger
+              .info("ThMod.Amplified : False instance of 0 cost card,decreasing typhoon counter.");
           typhoonCounter--;
-          logger.info("current Typhoon Counter : "+typhoonCounter);
+          logger.info("current Typhoon Counter : " + typhoonCounter);
         }
       }
     }
@@ -442,6 +454,12 @@ public class ThMod implements PostExhaustSubscriber,
         new BigShroomBag(),
         MARISA_COLOR
     );
+/*
+    BaseMod.addRelicToCustomPool(
+        new Cape(),
+        MARISA_COLOR
+    );
+*/
     BaseMod.addRelic(
         new CatCart(),
         RelicType.SHARED
@@ -499,6 +517,20 @@ public class ThMod implements PostExhaustSubscriber,
       AbstractDungeon.actionManager.addToTop(
           new SparkCostAction()
       );
+    }
+  }
+
+  @Override
+  public void receivePostEnergyRecharge() {
+    if (!AbstractDungeon.player.hand.isEmpty()) {
+      for (AbstractCard c : AbstractDungeon.player.hand.group) {
+        if (c instanceof GuidingStar) {
+          AbstractDungeon.actionManager.addToBottom(
+              new GainEnergyAction(1)
+          );
+          c.flash();
+        }
+      }
     }
   }
 
@@ -652,6 +684,12 @@ public class ThMod implements PostExhaustSubscriber,
     } else {
       labelText = "Enable Black Cat event when playing other characters?";
     }
+    String labelText_branch;
+    if (Settings.language == GameLanguage.ZHS) {
+      labelText_branch = "\u4f7f\u7528\u539f\u7248\u7684\u6811\u679d";
+    } else {
+      labelText_branch = "Don't replace Dead Branch?";
+    }
     final ModLabeledToggleButton enableBlackCatButton =
         new ModLabeledToggleButton(
             labelText,
@@ -666,7 +704,7 @@ public class ThMod implements PostExhaustSubscriber,
             button -> {
               isCatEventEnabled = button.enabled;
               try {
-                final SpireConfig config = new SpireConfig("vexMod", "vexModConfig",
+                final SpireConfig config = new SpireConfig("MarisaMod", "MarisaModCongfig",
                     marisaModDefaultProp);
                 config.setBool("enablePlaceholder", isCatEventEnabled);
                 config.save();
@@ -674,7 +712,32 @@ public class ThMod implements PostExhaustSubscriber,
                 e.printStackTrace();
               }
             });
+
+    final ModLabeledToggleButton enableDeadBranchButton =
+        new ModLabeledToggleButton(
+            labelText_branch,
+            350.0f,
+            600.0f,
+            Settings.CREAM_COLOR,
+            FontHelper.charDescFont,
+            isDeadBranchEnabled,
+            settingsPanel,
+            label -> {
+            },
+            button -> {
+              isCatEventEnabled = button.enabled;
+              try {
+                final SpireConfig config = new SpireConfig("MarisaMod", "MarisaModCongfig",
+                    marisaModDefaultProp);
+                config.setBool("enablePlaceholder", isDeadBranchEnabled);
+                config.save();
+              } catch (Exception e) {
+                e.printStackTrace();
+              }
+            });
+
     settingsPanel.addUIElement(enableBlackCatButton);
+    settingsPanel.addUIElement(enableDeadBranchButton);
 
     BaseMod.addEvent(Mushrooms_MRS.ID, Mushrooms_MRS.class, Exordium.ID);
     BaseMod.addEvent(OrinTheCat.ID, OrinTheCat.class, TheBeyond.ID);
@@ -690,6 +753,24 @@ public class ThMod implements PostExhaustSubscriber,
         Color.LIME.cpy(),
         Color.OLIVE,
         "ShroomBrew",
+        MARISA
+    );
+
+    BaseMod.addPotion(
+        StarNLove.class,
+        Color.BLUE.cpy(),
+        Color.YELLOW.cpy(),
+        Color.NAVY,
+        "StarNLove",
+        MARISA
+    );
+
+    BaseMod.addPotion(
+        BottledSpark.class,
+        Color.BLUE.cpy(),
+        Color.YELLOW.cpy(),
+        Color.NAVY,
+        "BottledSpark",
         MARISA
     );
     /*
@@ -785,6 +866,7 @@ public class ThMod implements PostExhaustSubscriber,
     cardsToAdd.add(new UltraShortWave());
     cardsToAdd.add(new ManaRampage());
     cardsToAdd.add(new BinaryStars());
+    cardsToAdd.add(new Acceleration());
 
     cardsToAdd.add(new WitchOfGreed());
     cardsToAdd.add(new SatelliteIllusion());
@@ -794,7 +876,7 @@ public class ThMod implements PostExhaustSubscriber,
     cardsToAdd.add(new EventHorizon());
     cardsToAdd.add(new Singularity());
     cardsToAdd.add(new CasketOfStar());
-    cardsToAdd.add(new PolarisUnique());
+    //cardsToAdd.add(new PolarisUnique());
     cardsToAdd.add(new EscapeVelocity());
     cardsToAdd.add(new MillisecondPulsars());
     cardsToAdd.add(new SuperNova());
@@ -811,6 +893,17 @@ public class ThMod implements PostExhaustSubscriber,
   class Keywords {
 
     Keyword[] keywords;
+  }
+
+  public static AbstractCard getRandomMarisaCard() {
+    AbstractCard card;
+    int rng = AbstractDungeon.miscRng.random(0, 100);
+    if (rng == 15) {
+      card = new GuidingStar();
+    } else {
+      card = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
+    }
+    return card;
   }
 	/*
 

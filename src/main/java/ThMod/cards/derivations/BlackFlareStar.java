@@ -21,7 +21,7 @@ public class BlackFlareStar extends CustomCard {
   public static final String IMG_PATH = "img/cards/Marisa/BlackFlareStar.png";
   private static final int COST = 0;
   private static final int BLC_AMT = 4;
-  private static final int UPG_BLC = 1;
+  private static final int UPG_BLC = 2;
   private static final int HAND_REQ = 4;
 
   public BlackFlareStar() {
@@ -37,6 +37,7 @@ public class BlackFlareStar extends CustomCard {
         AbstractCard.CardTarget.SELF
     );
     this.baseBlock = BLC_AMT;
+    this.exhaust = true;
   }
 
   public boolean canUse(AbstractPlayer p, AbstractMonster m) {

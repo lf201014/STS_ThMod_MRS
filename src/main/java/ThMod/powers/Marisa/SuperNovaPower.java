@@ -23,9 +23,8 @@ public class SuperNovaPower extends AbstractPower {
   public static final String NAME = powerStrings.NAME;
   public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
   private AbstractPlayer p;
-  public boolean upgraded = false;
 
-  public SuperNovaPower(AbstractCreature owner, int amount, boolean upgraded) {
+  public SuperNovaPower(AbstractCreature owner, int amount) {
     this.name = NAME;
     this.ID = POWER_ID;
     this.owner = owner;
@@ -34,7 +33,6 @@ public class SuperNovaPower extends AbstractPower {
     updateDescription();
     this.img = new Texture("img/powers/impulse.png");
     this.p = AbstractDungeon.player;
-    this.upgraded = upgraded;
   }
 
   public void atEndOfTurn(boolean isPlayer) {
@@ -44,17 +42,11 @@ public class SuperNovaPower extends AbstractPower {
         AbstractDungeon.actionManager.addToBottom(
             new ExhaustSpecificCardAction(c, this.p.hand));
       }
-
     }
   }
 
   public void onExhaust(AbstractCard card) {
-    boolean apply;
-    if (this.upgraded) {
-      apply = ((card.type == CardType.CURSE) || (card.type == CardType.STATUS));
-    } else {
-      apply = (card instanceof Burn);
-    }
+    boolean apply = (card instanceof Burn);
     if (apply) {
       AbstractDungeon.actionManager.addToBottom(
           new ApplyPowerAction(p, p, new StrengthPower(p, this.amount), this.amount));
@@ -97,11 +89,7 @@ public class SuperNovaPower extends AbstractPower {
   }
 
   public void updateDescription() {
-    if (upgraded) {
-      this.description = (DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
-    } else {
       this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2]);
-    }
   }
 
 }

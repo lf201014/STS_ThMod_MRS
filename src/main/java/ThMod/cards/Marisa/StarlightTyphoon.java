@@ -2,8 +2,11 @@ package ThMod.cards.Marisa;
 
 import ThMod.ThMod;
 import ThMod.abstracts.AmplifiedAttack;
+import ThMod.cards.derivations.Spark;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -34,55 +37,34 @@ public class StarlightTyphoon extends AmplifiedAttack {
         IMG_PATH,
         COST,
         DESCRIPTION,
-        CardType.ATTACK,
+        CardType.SKILL,
         AbstractCardEnum.MARISA_COLOR,
         CardRarity.UNCOMMON,
-        CardTarget.ALL_ENEMY
+        CardTarget.NONE
     );
-    this.magicNumber = this.baseMagicNumber = MULT;
-    this.damage = this.baseDamage = 0;
-    this.isMultiDamage = true;
-  }
-
-  @Override
-  public void applyPowers() {
-    /*
-    counter = 0;
-    for (AbstractCard c:AbstractDungeon.actionManager.cardsPlayedThisCombat){
-      if ((c.costForTurn == 0) || (c.costForTurn <= -2)){
-        counter ++;
-      }
-    }
-    */
-    counter = ThMod.typhoonCounter;
-
-    this.ampNumber = this.magicNumber * counter;
-    this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
-    initializeDescription();
-    super.applyPowers();
-  }
-
-  public void onMoveToDiscard() {
-    this.rawDescription = DESCRIPTION;
-    initializeDescription();
-  }
-
-  @Override
-  public void calculateCardDamage(AbstractMonster mo) {
-    super.calculateCardDamage(mo);
-    this.rawDescription = DESCRIPTION;
-    this.rawDescription += EXTENDED_DESCRIPTION[0];
-    initializeDescription();
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
+    int cnt = 0;
+    ThMod.logger.info("StarlightTyphoon : onUse");
+    for (AbstractCard c : p.hand.group) {
+      if ((c.type != CardType.ATTACK) && (c != this)) {
+        ThMod.logger.info("StarlightTyphoon : exahsting : " + c.name);
+        AbstractDungeon.actionManager.addToTop(
+            new ExhaustSpecificCardAction(c, p.hand, true)
+        );
+        cnt++;
+        ThMod.logger.info("StarlightTyphoon : counter : " + cnt);
+      }
+    }
+
+    ThMod.logger.info("StarlightTyphoon : adding Spark : counter : " + cnt);
+    AbstractCard c = new Spark();
+    if (this.upgraded) {
+      c.upgrade();
+    }
     AbstractDungeon.actionManager.addToBottom(
-        new DamageAllEnemiesAction(
-            p,
-            this.multiAmpDamage,
-            this.damageTypeForTurn,
-            AttackEffect.FIRE
-        )
+        new MakeTempCardInHandAction(c, cnt)
     );
   }
 
@@ -94,6 +76,8 @@ public class StarlightTyphoon extends AmplifiedAttack {
     if (!this.upgraded) {
       upgradeName();
       upgradeMagicNumber(UPG_MULT);
+      this.rawDescription = DESCRIPTION_UPG;
+      initializeDescription();
     }
   }
 }

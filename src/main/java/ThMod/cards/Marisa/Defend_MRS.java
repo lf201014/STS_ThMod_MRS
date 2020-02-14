@@ -34,7 +34,8 @@ public class Defend_MRS extends CustomCard {
         AbstractCard.CardRarity.BASIC,
         AbstractCard.CardTarget.SELF
     );
-    this.tags.add(BaseModCardTags.BASIC_DEFEND);
+    //this.tags.add(BaseModCardTags.BASIC_DEFEND);
+    this.tags.add(AbstractCard.CardTags.STARTER_DEFEND);
     this.baseBlock = BLOCK_AMT;
   }
 

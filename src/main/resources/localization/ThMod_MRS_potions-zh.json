@@ -7,6 +7,20 @@
       "攻击：恐惧药水； NL 技能：虚弱药水； NL 能力：毒素药水； NL 状态：火焰药水； NL 诅咒：烟雾弹 。"
     ]
   },
+  "BottledSpark": {
+    "NAME": "瓶装火花",
+    "DESCRIPTIONS": [
+      "将 #b",
+      " 张 #y火花 加入手牌。"
+    ]
+  },
+  "StarNLove": {
+    "NAME": "恋星魔药",
+    "DESCRIPTIONS": [
+      "获得 #",
+      " 层 #y蓄力 ，本回合增幅不需额外支付费用。"
+    ]
+  },
   "WWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [

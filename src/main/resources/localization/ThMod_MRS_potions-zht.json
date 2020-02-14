@@ -7,6 +7,20 @@
       "攻擊：恐懼藥水 NL 技能：虛弱藥水 NL 能力：毒素藥水 NL 狀態 ：火焰藥水 NL 詛咒 ：煙霧彈"
     ]
   },
+  "BottledSpark": {
+    "NAME": "Bottled Spark",
+    "DESCRIPTIONS": [
+      "Add #b",
+      " #ySpark to your hand."
+    ]
+  },
+  "StarNLove": {
+    "NAME": "Star & Love",
+    "DESCRIPTIONS": [
+      "You do not need to pay extra Cost for Amplify effect.Gain #",
+      " #yCharge-up."
+    ]
+  },
   "WWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [

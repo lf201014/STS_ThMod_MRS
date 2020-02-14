@@ -63,6 +63,8 @@ public class MeteoricShowerAction extends AbstractGameAction {
             )
         );
       }
+      AbstractDungeon.gridSelectScreen.selectedCards.clear();
+      AbstractDungeon.player.hand.refreshHandLayout();
     }
     if (!this.f2p) {
       p.energy.use(EnergyPanel.totalCount);

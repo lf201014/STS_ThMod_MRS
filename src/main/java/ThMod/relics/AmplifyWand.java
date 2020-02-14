@@ -20,7 +20,7 @@ public class AmplifyWand extends CustomRelic {
         ID,
         ImageMaster.loadImage(IMG),
         ImageMaster.loadImage(IMG_OTL),
-        RelicTier.RARE,
+        RelicTier.UNCOMMON,
         LandingSound.FLAT
     );
   }

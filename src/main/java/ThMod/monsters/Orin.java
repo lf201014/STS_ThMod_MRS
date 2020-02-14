@@ -55,8 +55,8 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   private boolean firstTurn = true;
   private static final int STAGE_1_HP = 68;
   private static final int S_1_HP = 82;
-  private static final int STAGE_2_HP = 216;
-  private static final int S_2_HP = 260;
+  private static final int STAGE_2_HP = 272;
+  private static final int S_2_HP = 328;
   private static final int STR = 3;
   private static final int STR_A = 5;
   private static final int DOUBLE_TAP = 5;
@@ -76,6 +76,8 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   private static final int EXECUTE_A = 6;
   private static final int EXECUTE_THRESHOLD = 8;
   private static final int EXECUTE_THRESHOLD_A = 6;
+  private static final int QUAD_DMG = 3;
+  private static final int QUAD_DMG_A = 4;
   //private static final int BLOCK = 8;
   private static final int BLOCK_UPG = 12;
   private int doubleTap;
@@ -86,6 +88,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
   private int wraith;
   private int exc;
   private int executeDmg;
+  private int quad;
   private int blc;
   private int turnCount = 0;
   private static final String tempImgUrl = "img/monsters/Orin/Orin_.png";
@@ -122,15 +125,18 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
       this.strength = STR_A;
       this.weak = WEAK_A;
       this.exc = EXECUTE_THRESHOLD_A;
+      this.quad = QUAD_DMG_A;
     } else {
       this.strength = STR;
       this.weak = WEAK;
       this.exc = EXECUTE_THRESHOLD;
+      this.quad = QUAD_DMG;
     }
     this.damage.add(new DamageInfo(this, this.catTap));
     this.damage.add(new DamageInfo(this, this.hellFireDmg));
     this.damage.add(new DamageInfo(this, this.doubleTap));
     this.damage.add(new DamageInfo(this, this.executeDmg));
+    this.damage.add(new DamageInfo(this,this.quad));
 
     this.type = AbstractMonster.EnemyType.ELITE;
 
@@ -192,9 +198,11 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
                 , AbstractGameAction.AttackEffect.NONE
             )
         );
+        /*
         AbstractDungeon.actionManager.addToBottom(
             new GainBlockAction(this, this, this.blc)
         );
+        */
         break;
       case 2:
         //buff
@@ -259,7 +267,7 @@ public class Orin extends AbstractMonster/* implements BaseMod.GetMonster */ {
           AbstractDungeon.actionManager.addToBottom(
               new DamageAction(
                   p
-                  , this.damage.get(1)
+                  , this.damage.get(4)
                   , AttackEffect.FIRE
               )
           );

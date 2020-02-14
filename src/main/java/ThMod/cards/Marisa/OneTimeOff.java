@@ -1,8 +1,6 @@
 package ThMod.cards.Marisa;
 
-import ThMod.cards.deprecated.MoraleDepletion;
 import ThMod.powers.Marisa.OneTimeOffPlusPower;
-import ThMod.powers.Marisa.OneTimeOffPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

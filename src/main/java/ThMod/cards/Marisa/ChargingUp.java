@@ -23,7 +23,7 @@ public class ChargingUp extends CustomCard {
   private static final int COST = 1;
   private static final int STC = 5;
   //private static final int AMP = 1;
-  private static final int UPG_STC = 2;
+  private static final int UPG_STC = 3;
 
   public ChargingUp() {
     super(

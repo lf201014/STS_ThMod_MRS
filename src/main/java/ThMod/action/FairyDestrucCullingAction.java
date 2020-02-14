@@ -1,12 +1,9 @@
 package ThMod.action;
 
-import ThMod.ThMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
+import com.megacrit.cardcrawl.actions.watcher.JudgementAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class FairyDestrucCullingAction extends AbstractGameAction {
 
@@ -25,6 +22,8 @@ public class FairyDestrucCullingAction extends AbstractGameAction {
       return;
     }
     for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+      addToBot(new JudgementAction(m, this.threshold));
+        /*
       if (m.currentHealth <= this.threshold) {
         if (m.hasPower("Intangible")) {
           ThMod.logger.info("FairyDestrucCullingAction : Intangible detected : " + m.id);
@@ -48,6 +47,7 @@ public class FairyDestrucCullingAction extends AbstractGameAction {
             )
         );
       }
+        */
     }
     if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
       AbstractDungeon.actionManager.clearPostCombatActions();

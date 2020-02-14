@@ -1,9 +1,6 @@
 package ThMod.cards.Marisa;
 
-import ThMod.action.ConsumeChargeUpAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import ThMod.action.ManaConvectionAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -24,9 +21,6 @@ public class ManaConvection extends CustomCard {
   private static final int COST = 1;
   private static final int DRAW = 2;
   private static final int UPG_DRAW = 1;
-  private static final int EXHT = 2;
-  private static final int ENEG_GAIN = 2;
-  private static final int CHRG_DRAIN = 8;
 
   public ManaConvection() {
     super(
@@ -37,37 +31,18 @@ public class ManaConvection extends CustomCard {
         DESCRIPTION,
         AbstractCard.CardType.SKILL,
         AbstractCardEnum.MARISA_COLOR,
-        AbstractCard.CardRarity.COMMON,
+        AbstractCard.CardRarity.UNCOMMON,
         AbstractCard.CardTarget.SELF
     );
     this.magicNumber = this.baseMagicNumber = DRAW;
+    this.exhaust = true;
 
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
     AbstractDungeon.actionManager.addToBottom(
-        new DrawCardAction(p, this.magicNumber)
+        new ManaConvectionAction(this.magicNumber)
     );
-    AbstractDungeon.actionManager.addToBottom(
-        new ExhaustAction(p, p, EXHT, false)
-    );
-
-    int drain = CHRG_DRAIN;
-    int ene_gain = ENEG_GAIN;
-    if (p.hasRelic("SimpleLauncher")) {
-      drain = 6;
-    }
-
-    if (p.hasPower("ChargeUpPower")) {
-      if (p.getPower("ChargeUpPower").amount >= drain) {
-        AbstractDungeon.actionManager.addToBottom(
-            new GainEnergyAction(ene_gain)
-        );
-        AbstractDungeon.actionManager.addToBottom(
-            new ConsumeChargeUpAction(drain)
-        );
-      }
-    }
   }
 
   public AbstractCard makeCopy() {

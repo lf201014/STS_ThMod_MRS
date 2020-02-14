@@ -27,8 +27,8 @@ public class WhiteDwarf extends AmplifiedAttack {
   private static final int COST = 0;
   private static final int ATTACK_DMG = 0;
   private static final int HAND_REQ = 4;
-  private static final float MULTIPLIER = 1.5f;
-  private static final float MULTIPLIER_UPG = 2.0f;
+  private static final float MULTIPLIER = 2f;
+  private static final float MULTIPLIER_UPG = 3f;
 
   private float magn = MULTIPLIER;
 
@@ -46,7 +46,7 @@ public class WhiteDwarf extends AmplifiedAttack {
     );
 
     this.baseDamage = this.damage = ATTACK_DMG;
-
+    this.exhaust = true;
   }
 
   @Override

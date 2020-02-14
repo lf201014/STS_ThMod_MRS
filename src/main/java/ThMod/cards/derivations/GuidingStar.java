@@ -1,6 +1,7 @@
 package ThMod.cards.derivations;
 
 import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.ShuffleAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -36,6 +37,13 @@ public class GuidingStar extends CustomCard {
         AbstractCard.CardTarget.SELF
     );
     this.exhaust = true;
+    this.retain = true;
+  }
+
+  @Override
+  public void applyPowers() {
+    super.applyPowers();
+    this.retain = true;
   }
 
   public void use(AbstractPlayer p, AbstractMonster m) {
@@ -64,6 +72,12 @@ public class GuidingStar extends CustomCard {
 			r.onShuffle();
 	    }   
 	    */
+  }
+
+  public void triggerAtStartOfTurn() {
+    AbstractDungeon.actionManager.addToBottom(
+        new GainEnergyAction(1)
+    );
   }
 
   public AbstractCard makeCopy() {
