@@ -45,14 +45,14 @@
     ]
   },
   "TempStrength": {
-    "NAME": "Temproy Strength",
+    "NAME": "Temporary Strength",
     "DESCRIPTIONS": [
       "Your next blow deals additional  #b",
       " damage."
     ]
   },
   "TempStrengthLoss": {
-    "NAME": "Temproy Strength Loss",
+    "NAME": "Temporary Strength Loss",
     "DESCRIPTIONS": [
       "The damage of this creature is lowered by  #b",
       " this turn."
@@ -123,7 +123,7 @@
     ]
   },
   "SingularityPower": {
-    "NAME": "Singualrity",
+    "NAME": "Singularity",
     "DESCRIPTIONS": [
       "Whenever you play a card that costs 0 , a random #yAttack in your hand deals #b",
       " additional damage this combat."
@@ -194,7 +194,7 @@
     ]
   },
   "PropBagPower": {
-    "NAME": "Portable Prop Bagr",
+    "NAME": "Portable Prop Bag",
     "DESCRIPTIONS": [
       "When the battle ends,you'll lose  #y",
       "."
