@@ -7,6 +7,20 @@
       "공격 : 공포 포션 ; NL 스킬 : 약화 포션 ; NL 파워 : 중독 포션 ; NL 상태이상 : 화염 포션 ; NL 저주 : 연막탄."
     ]
   },
+  "BottledSpark": {
+    "NAME": "병속에 스파크",
+    "DESCRIPTIONS": [
+      "Add #b",
+      " #ySpark to your hand."
+    ]
+  },
+  "StarNLove": {
+    "NAME": "별과 사랑",
+    "DESCRIPTIONS": [
+      "You do not need to pay extra Cost for Amplify effect.Gain #",
+      " #yCharge-up."
+    ]
+  },
   "WWWWWW": {
     "NAME": "WWWWWWWWWWW",
     "DESCRIPTIONS": [
